@@ -1,0 +1,25 @@
+aside {
+	background-color: green;
+}
+
+#logo {
+	display: block;
+	margin: 0 auto;
+}
+
+#div-legenda {
+	background-color: #d4d4d4;
+	padding: 15px;
+}
+
+#div-legenda ul {
+	list-style: none;
+}
+
+.lista-itens {
+	list-style: none;
+}
+
+#lista-passos li {
+	margin-bottom: 1em;	
+}
