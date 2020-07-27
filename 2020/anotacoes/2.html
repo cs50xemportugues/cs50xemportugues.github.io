@@ -1,0 +1,788 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)https://cs50.harvard.edu/summer/2020/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta property="og:description" content="Introduction to the intellectual enterprises of computer science and the art of programming. This course teaches students how to think algorithmically and solve problems efficiently. Topics include abstraction, algorithms, data structures, encapsulation, resource management, security, and software engineering. Languages include C, Python, and SQL plus HTML, CSS, and JavaScript. Problem sets inspired by the arts, humanities, social sciences, and sciences. Course culminates in a final project.">
+
+<meta property="og:image" content=""><meta property="og:title" content="CS50"><link href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821" rel="icon">
+
+<!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+<link href="../../arquivos/all.min.css" rel="stylesheet">
+
+<link href="../../arquivos/page.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="../../arquivos/personalizado.css">
+
+<!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+<script src="../../arquivos/jquery.min.js"></script>
+<script src="../../arquivos/popper.min.js"></script>
+<script src="../../arquivos/bootstrap.min.js"></script>
+
+<!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+<script src="../../arquivos/moment.min.js"></script>
+<script src="../../arquivos/moment-timezone-with-data.min.js"></script>
+<script src="../../arquivos/luxon.min.js"></script>
+
+<!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+<script src="../../arquivos/algoliasearchLite.min.js"></script>
+<script src="../../arquivos/instantsearch.production.min.js"></script>
+
+<script src="../../arquivos/jekyll-theme-cs50.js"></script>
+
+<title>CS50 em Português</title>
+</head>
+
+    <body>
+
+        
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+                <aside class="col-md">
+ 
+                    <header><h1 data-id="this-is-cs50"><a href="https://cs50emportugues.github.io/2020/">Este é o CS50</a></h1>
+
+<p><a href="https://cs50.harvard.edu/">O curso da Universidade de Harvard em Português!</a><br>
+2020</p></header>
+
+                    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside &gt; nav" data-toggle="collapse">
+                        Menu
+                    </button>
+
+                    <nav class="collapse d-md-block" id="nav"><hr>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/semanas/0/">Semana 0</a> Scratch <strong class="text-white">😺</strong></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/semanas/1/">Semana 1</a> Linguagem C</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/semanas/2/">Semana 2</a> Vetores</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/semanas/3/">Semana 3</a> Algoritmos</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/semanas/4/">Semana 4</a> Memória <strong class="text-white">🧠</strong></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/semanas/5/">Semana 5</a> Estruturas de Dados</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/semanas/6/">Semana 6</a> Python <strong class="text-white">🐍</strong></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/semanas/7/">Semana 7</a> SQL</li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/semanas/8/">Semana 8</a> Informação</li>
+</ul>
+                        
+<ul>
+  <li data-marker="*"><a href="https://cs50emportugues.github.io/2020/especializacoes">Especializações</a></li>
+  <li data-marker="*"><a href="https://cs50emportugues.github.io/2020/projetofinal">Projeto Final</a></li>
+</ul>
+
+<hr>
+
+<ul class="fa-ul">
+  <li data-marker="*" class="small"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/guia.pdf">Guia Rápido de Inicialização</a></li>
+</ul>
+
+<hr>
+
+<ul class="fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/perguntasfrequentes">Perguntas Frequentes</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/atendimento">Atendimento aos Alunos</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/problemas">Listas de Problemas</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/secoes">Seções</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/equipe">Equipe</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50emportugues.github.io/2020/curriculo">Currículo do Curso</a></li>
+</ul>
+
+<hr>
+
+<ul class="small fa-ul">
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://ide.cs50.io/">CS50 IDE</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://sqlitebrowser.org/">Navegador de Banco de Dados para o SQLite</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://man.cs50.io/">Manual CS50</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://docs.python.org/3.7/search.html">Documentação Python</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://stackoverflow.com/search">Stack Overflow</a></li>
+  <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="https://cs50.readthedocs.io/style/c/">Guia de Estilo</a></li>
+</ul>
+
+<hr>
+
+<p style="font-size: initial"><a href="https://cs50emportugues.github.io/2020/obrigado">Agradecemos</a> à todos os ex-alunos e amigos do CS50</p></nav>
+
+                    <footer></footer>
+
+                </aside>
+
+                <main class="col-md markdown-body" style="margin-bottom: 286px;">
+                  
+<h1 class="no_toc" id="lecture-2">Lecture 2</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#compiling" id="markdown-toc-compiling">Compiling</a></li>
+  <li><a href="#debugging" id="markdown-toc-debugging">Debugging</a></li>
+  <li><a href="#help50-and-printf" id="markdown-toc-help50-and-printf">help50 and printf</a></li>
+  <li><a href="#debug50" id="markdown-toc-debug50">debug50</a></li>
+  <li><a href="#check50-and-style50" id="markdown-toc-check50-and-style50">check50 and style50</a></li>
+  <li><a href="#data-types" id="markdown-toc-data-types">Data Types</a></li>
+  <li><a href="#memory" id="markdown-toc-memory">Memory</a></li>
+  <li><a href="#arrays" id="markdown-toc-arrays">Arrays</a></li>
+  <li><a href="#strings" id="markdown-toc-strings">Strings</a></li>
+  <li><a href="#command-line-arguments" id="markdown-toc-command-line-arguments">Command-line arguments</a></li>
+  <li><a href="#readability" id="markdown-toc-readability">Readability</a></li>
+  <li><a href="#encryption" id="markdown-toc-encryption">Encryption</a></li>
+</ul>
+
+<h2 id="compiling">Compiling</h2>
+
+<ul>
+  <li data-marker="*">Last time, we learned to write our first program in C. We learned the syntax for the <code class="highlighter-rouge">main</code> function in our program, the <code class="highlighter-rouge">printf</code> function for printing to the terminal, how to create strings with double quotes, and how to include <code class="highlighter-rouge">stdio.h</code> for the <code class="highlighter-rouge">printf</code> function.</li>
+  <li data-marker="*">Then, we compiled it with <code class="highlighter-rouge">clang hello.c</code> to be able to run <code class="highlighter-rouge">./a.out</code> (the default name), and then <code class="highlighter-rouge">clang -o hello hello.c</code> (passing in a command-line argument for the output’s name) to be able to run <code class="highlighter-rouge">./hello</code>.</li>
+  <li data-marker="*">If we wanted to use CS50’s library, via <code class="highlighter-rouge">#include &lt;cs50.h&gt;</code>, for strings and the <code class="highlighter-rouge">get_string</code> function, we also have to add a flag: <code class="highlighter-rouge">clang -o hello hello.c -lcs50</code>. The <code class="highlighter-rouge">-l</code> flag links the <code class="highlighter-rouge">cs50</code> file, which is already installed in the CS50 Sandbox, and includes prototypes, or definitions of strings and <code class="highlighter-rouge">get_string</code> (among more) that our program can then refer to and use.</li>
+  <li data-marker="*">We write our source code in C, but need to compile it to machine code, in binary, before our computers can run it.
+    <ul>
+      <li data-marker="*"><code class="highlighter-rouge">clang</code> is the compiler, and <code class="highlighter-rouge">make</code> is a utility that helps us run <code class="highlighter-rouge">clang</code> without having to indicate all the options manually.</li>
+    </ul>
+  </li>
+  <li data-marker="*">“Compiling” source code into machine code is actually made up of smaller steps:
+    <ul>
+      <li data-marker="*">preprocessing</li>
+      <li data-marker="*">compiling</li>
+      <li data-marker="*">assembling</li>
+      <li data-marker="*">linking</li>
+    </ul>
+  </li>
+  <li data-marker="*"><strong>Preprocessing</strong> involves looking at lines that start with a <code class="highlighter-rouge">#</code>, like <code class="highlighter-rouge">#include</code>, before everything else. For example, <code class="highlighter-rouge">#include &lt;cs50.h&gt;</code> will tell <code class="highlighter-rouge">clang</code> to look for that header file first, since it contains content that we want to include in our program. Then, <code class="highlighter-rouge">clang</code> will essentially replace the contents of those header files into our program.</li>
+  <li data-marker="*">For example …
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Name: "</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">… will be preprocessed into:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="nf">get_string</span><span class="p">(</span><span class="n">string</span> <span class="n">prompt</span><span class="p">);</span>
+<span class="kt">int</span> <span class="nf">printf</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">format</span><span class="p">,</span> <span class="p">...);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Name: "</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*"><strong>Compiling</strong> takes our source code, in C, and converts it to assembly code, which looks like this:
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>...
+main:                         # @main
+    .cfi_startproc
+# BB#0:
+    pushq    %rbp
+.Ltmp0:
+    .cfi_def_cfa_offset 16
+.Ltmp1:
+    .cfi_offset %rbp, -16
+    movq    %rsp, %rbp
+.Ltmp2:
+    .cfi_def_cfa_register %rbp
+    subq    $16, %rsp
+    xorl    %eax, %eax
+    movl    %eax, %edi
+    movabsq    $.L.str, %rsi
+    movb    $0, %al
+    callq    get_string
+    movabsq    $.L.str.1, %rdi
+    movq    %rax, -8(%rbp)
+    movq    -8(%rbp), %rsi
+    movb    $0, %al
+    callq    printf
+    ...
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">These instructions are lower-level and is closer to the binary instructions that a computer’s CPU can directly understand. They generally operate on bytes themselves, as opposed to abstractions like variable names.</li>
+    </ul>
+  </li>
+  <li data-marker="*">The next step is to take the assembly code and translate it to instructions in binary by <strong>assembling</strong> it. The instructions in binary are called <strong>machine code</strong>, which a computer’s CPU can run directly.</li>
+  <li data-marker="*">The last step is <strong>linking</strong>, where the contents of previously compiled libraries that we want to link, like <code class="highlighter-rouge">cs50.c</code>, are actually combined with the binary of our program. So we end up with one binary file, <code class="highlighter-rouge">a.out</code> or <code class="highlighter-rouge">hello</code>, that is the compiled version of <code class="highlighter-rouge">hello.c</code>, <code class="highlighter-rouge">cs50.c</code>, and <code class="highlighter-rouge">printf.c</code>.</li>
+</ul>
+
+<h2 id="debugging">Debugging</h2>
+
+<ul>
+  <li data-marker="*">Bugs are mistakes in programs that we didn’t intend to make. And debugging is the process of finding and fixing bugs.</li>
+</ul>
+
+<h2 id="help50-and-printf">help50 and printf</h2>
+
+<ul>
+  <li data-marker="*">Let’s say we wrote this program, <code class="highlighter-rouge">buggy0.c</code>:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We see an error (in red), when we try to <code class="highlighter-rouge">make</code> this program, that we are <code class="highlighter-rouge">implicitly declaring library function 'printf'</code>. We don’t really understand this, so we can run <code class="highlighter-rouge">help50 make buggy0</code>, which will tell us, at the end, that we might have forgotten to write <code class="highlighter-rouge">#include &lt;stdio.h&gt;</code>, which contains <code class="highlighter-rouge">printf</code>.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can try this again with <code class="highlighter-rouge">buggy1.c</code>:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"What's your name?</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We see a lot of errors, and even the first one doesn’t seem to make much sense. So we can again run <code class="highlighter-rouge">help50 make buggy1</code>, which will hint to us that we need <code class="highlighter-rouge">cs50.h</code> since <code class="highlighter-rouge">string</code> isn’t defined.</li>
+    </ul>
+  </li>
+  <li data-marker="*">To clear the terminal window (so that we can see just the output of whatever we want to run next), we can press <code class="highlighter-rouge">control + L</code>, or type in <code class="highlighter-rouge">clear</code> as a command to the terminal window.</li>
+  <li data-marker="*">Let’s look at <code class="highlighter-rouge">buggy2.c</code>:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"#</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Hmm, we intended to only see 10 <code class="highlighter-rouge">#</code>s, but there are 11. If we didn’t know what the problem is (since our program is compiling without any errors, and we now have a logical error), we could add another print line to help us:
+        <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="mi">10</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"i is now %i: "</span><span class="p">,</span> <span class="n">i</span><span class="p">);</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"#</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+      </li>
+      <li data-marker="*">Now, we see that <code class="highlighter-rouge">i</code> started at 0 and continued until it was 10, but we should have it stop once it’s at 10, with <code class="highlighter-rouge">i &lt; 10</code> instead of <code class="highlighter-rouge">i &lt;= 10</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="debug50">debug50</h2>
+
+<ul>
+  <li data-marker="*">Today we’ll also take a look at CS50 IDE, which is like the CS50 Sandbox, but with more features. It is an online development environment, with a code editor and a terminal window, but also tools for debugging and collaborating:<br>
+<img src="cs50_ide.png" alt="browser window with CS50 IDE, code editor on top with buggy2.c, terminal window on bottom"></li>
+  <li data-marker="*">In the CS50 IDE, we’ll have another tool, <code class="highlighter-rouge">debug50</code>, to help us debug programs.</li>
+  <li data-marker="*">We’ll open <code class="highlighter-rouge">buggy2.c</code> and try to <code class="highlighter-rouge">make buggy2</code>. But we saved <code class="highlighter-rouge">buggy2.c</code> into a folder called <code class="highlighter-rouge">src2</code>, so we need to run <code class="highlighter-rouge">cd src2</code> to change our directory to the right one. And CS50 IDE’s terminal will remind us what directory we’re in, with a prompt like <code class="highlighter-rouge">~/src/ $</code>. (The <code class="highlighter-rouge">~</code> indicates the default, or home directory.)</li>
+  <li data-marker="*">Instead of using <code class="highlighter-rouge">printf</code>, we can also debug our program interactively. We can add a <em>breakpoint</em>, or an indicator for a line of code where the debugger should pause our program. For example, we can click to the left of line 5 of our code, and a red circle will appear:<br>
+<img src="breakpoint.png" alt="code editor with red icon next to line 5 of code"></li>
+  <li data-marker="*">Now, if we run <code class="highlighter-rouge">debug50 ./buggy2</code>, we’ll see the debugger panel open on the right:<br>
+<img src="debugger_panel.png" alt="debugger panel with controls, variables"></li>
+  <li data-marker="*">We see that the variable we made, <code class="highlighter-rouge">i</code>, is under the <code class="highlighter-rouge">Local Variables</code> section, and see that there’s a value of <code class="highlighter-rouge">0</code>.</li>
+  <li data-marker="*">Our breakpoint has paused our program after line 5, to just before line 7, since it’s the first line of code that can run. To continue, we have a few controls in the debugger panel. The blue triangle will continue our program until we reach another breakpoint or the end of our program. The curved arrow to its right will “step over” the line, running it and pausing our program again immediately after.</li>
+  <li data-marker="*">So, we’ll use the curved arrow to run the next line, and see what changes after. We’re at the <code class="highlighter-rouge">printf</code> line, and pressing the curved arrow again, we see a single <code class="highlighter-rouge">#</code> printed to our terminal window. With another click of the arrow, we see the value of <code class="highlighter-rouge">i</code> on the right change to <code class="highlighter-rouge">1</code>. And we can keep clicking the arrow to watch our program run, one line at a time.</li>
+  <li data-marker="*">To exit the debugger, we can press <code class="highlighter-rouge">control + C</code> to stop the program.</li>
+  <li data-marker="*">We can save lots of time in the future by investing a little bit now to learn how to use <code class="highlighter-rouge">debug50</code>!</li>
+</ul>
+
+<h2 id="check50-and-style50">check50 and style50</h2>
+
+<ul>
+  <li data-marker="*">We can run a command like <code class="highlighter-rouge">check50 cs50/problems/hello</code>, where <code class="highlighter-rouge">check50</code> is a program that will follow instructions identified by the argument <code class="highlighter-rouge">cs50/problems/hello</code> to upload, run, and test our program on CS50’s servers. This will check our program for correctness.
+    <ul>
+      <li data-marker="*">When writing software in the real world, developers will generally write their own tests to ensure their code works as they expect, especially as more features are added to the same code.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><code class="highlighter-rouge">style50</code> is another program that will check our code for aesthetic issues, such as whitespace, such that our code is more readable and maintainable. For example, we might be missing indentation. And the <a href="https://cs50.readthedocs.io/style/c/">Style Guide</a> will include more explanations for what we expect.</li>
+  <li data-marker="*">We can even use rubber duck debugging, a method where we explain what we’re trying to do to a rubber duck, such that we realize what we’re trying to do and what we should fix.</li>
+  <li data-marker="*">We also want to write our code with good design, where we not only solve the problem correctly but well, where we make reasonable choices for how our program runs, and make tradeoffs between time, development cost, and memory.</li>
+</ul>
+
+<h2 id="data-types">Data Types</h2>
+
+<ul>
+  <li data-marker="*">In C, we have different types of variables we can use for storing data:
+    <ul>
+      <li data-marker="*">bool   1 byte</li>
+      <li data-marker="*">char   1 byte</li>
+      <li data-marker="*">int    4 bytes</li>
+      <li data-marker="*">float  4 bytes</li>
+      <li data-marker="*">long   8 bytes</li>
+      <li data-marker="*">double 8 bytes</li>
+      <li data-marker="*">string ? bytes</li>
+    </ul>
+  </li>
+  <li data-marker="*">Each of these types take up a certain number of bytes per variable we create, and the sizes above are what the sandbox, IDE, and most likely your computer uses for each type in C.</li>
+</ul>
+
+<h2 id="memory">Memory</h2>
+
+<ul>
+  <li data-marker="*">Inside our computers, we have chips called RAM, random-access memory, that stores data for short-term use. We might save a program or file to our hard drive (or SSD) for long-term storage, but when we open it, it gets copied to RAM first. Though RAM is much smaller, and temporary (until the power is turned off), it is much faster.</li>
+  <li data-marker="*">We can think of bytes, stored in RAM, as though they were in a grid:<br>
+<img src="ram.png" alt="computer chip with grid overlaid">
+    <ul>
+      <li data-marker="*">In reality, there are millions or billions of bytes per chip.</li>
+    </ul>
+  </li>
+  <li data-marker="*">In C, when we create a variable of type <code class="highlighter-rouge">char</code>, which will be sized one byte, it will physically be stored in one of those boxes in RAM. An integer, with 4 bytes, will take up four of those boxes.</li>
+  <li data-marker="*">And each of these boxes is labeled with some number, or address, from 0, to 1, to 2, and so on.</li>
+</ul>
+
+<h2 id="arrays">Arrays</h2>
+
+<ul>
+  <li data-marker="*">Let’s say we wanted to store three variables:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="kt">char</span> <span class="n">c1</span> <span class="o">=</span> <span class="sc">'H'</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">c2</span> <span class="o">=</span> <span class="sc">'I'</span><span class="p">;</span>
+    <span class="kt">char</span> <span class="n">c3</span> <span class="o">=</span> <span class="sc">'!'</span><span class="p">;</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"%c %c %c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">c1</span><span class="p">,</span> <span class="n">c2</span><span class="p">,</span> <span class="n">c3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Notice that we use single quotes to indicate a literal character, and double quotes for multiple characters together in a string.</li>
+      <li data-marker="*">We can compile and run this, to see <code class="highlighter-rouge">H I !</code>.</li>
+    </ul>
+  </li>
+  <li data-marker="*">And we know characters are just numbers, so if we change our string formatting to be <code class="highlighter-rouge">printf("%i %i %i\n", c1, c2, c3);</code>, we can see the numeric values of each char printed: <code class="highlighter-rouge">72 73 33</code>.
+    <ul>
+      <li data-marker="*">We can explicitly convert, or cast, each character to an int before we use it, with <code class="highlighter-rouge">(int) c1</code>, but our compiler can implicitly do that for us.</li>
+    </ul>
+  </li>
+  <li data-marker="*">And in memory, we might have three boxes, labeled <code class="highlighter-rouge">c1</code>, <code class="highlighter-rouge">c2</code>, and <code class="highlighter-rouge">c3</code> somehow, each of which representing a byte of binary with the values of each variable.</li>
+  <li data-marker="*">Let’s look at <code class="highlighter-rouge">scores0.c</code>:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Scores</span>
+    <span class="kt">int</span> <span class="n">score1</span> <span class="o">=</span> <span class="mi">72</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">score2</span> <span class="o">=</span> <span class="mi">73</span><span class="p">;</span>
+    <span class="kt">int</span> <span class="n">score3</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+
+    <span class="c1">// Print average</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Average: %i</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="p">(</span><span class="n">score1</span> <span class="o">+</span> <span class="n">score2</span> <span class="o">+</span> <span class="n">score3</span><span class="p">)</span> <span class="o">/</span> <span class="mi">3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We can print the average of three numbers, but now we need to make one variable for every score we want to include, and we can’t easily use them later.</li>
+    </ul>
+  </li>
+  <li data-marker="*">It turns out, in memory, we can store variables one after another, back-to-back. And in C, a list of variables stored, one after another in a contiguous chunk of memory, is called an <strong>array</strong>.</li>
+  <li data-marker="*">For example, we can use <code class="highlighter-rouge">int scores[3];</code> to declare an array of 3 integers.</li>
+  <li data-marker="*">And we can assign and use variables in an array with:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Scores</span>
+    <span class="kt">int</span> <span class="n">scores</span><span class="p">[</span><span class="mi">3</span><span class="p">];</span>
+    <span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">72</span><span class="p">;</span>
+    <span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">73</span><span class="p">;</span>
+    <span class="n">scores</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+
+    <span class="c1">// Print average</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Average: %i</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">scores</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="mi">3</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Notice that arrays are zero-indexed, meaning that the first element, or value, has index 0.</li>
+    </ul>
+  </li>
+  <li data-marker="*">And we repeated the value 3, representing the length of our array, in two different places. So we can use a constant, or fixed value, to indicate it should always be the same in both places:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="k">const</span> <span class="kt">int</span> <span class="n">N</span> <span class="o">=</span> <span class="mi">3</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Scores</span>
+    <span class="kt">int</span> <span class="n">scores</span><span class="p">[</span><span class="n">N</span><span class="p">];</span>
+    <span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="mi">72</span><span class="p">;</span>
+    <span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="mi">73</span><span class="p">;</span>
+    <span class="n">scores</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="mi">33</span><span class="p">;</span>
+
+    <span class="c1">// Print average</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Average: %i</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="p">(</span><span class="n">scores</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">+</span> <span class="n">scores</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">+</span> <span class="n">scores</span><span class="p">[</span><span class="mi">2</span><span class="p">])</span> <span class="o">/</span> <span class="n">N</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We can use the <code class="highlighter-rouge">const</code> keyword to tell the compiler that the value of <code class="highlighter-rouge">N</code> should never be changed by our program. And by convention, we’ll place our declaration of the variable outside of the <code class="highlighter-rouge">main</code> function and capitalize its name, which isn’t necessary for the compiler but shows other humans that this variable is a constant and makes it easy to see from the start.</li>
+    </ul>
+  </li>
+  <li data-marker="*">With an array, we can collect our scores in a loop, and access them later in a loop, too:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="kt">float</span> <span class="nf">average</span><span class="p">(</span><span class="kt">int</span> <span class="n">length</span><span class="p">,</span> <span class="kt">int</span> <span class="n">array</span><span class="p">[]);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Get number of scores</span>
+    <span class="kt">int</span> <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"Scores:  "</span><span class="p">);</span>
+
+    <span class="c1">// Get scores</span>
+    <span class="kt">int</span> <span class="n">scores</span><span class="p">[</span><span class="n">n</span><span class="p">];</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">scores</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"Score %i: "</span><span class="p">,</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Print average</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Average: %.1f</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">average</span><span class="p">(</span><span class="n">n</span><span class="p">,</span> <span class="n">scores</span><span class="p">));</span>
+<span class="p">}</span>
+
+<span class="kt">float</span> <span class="nf">average</span><span class="p">(</span><span class="kt">int</span> <span class="n">length</span><span class="p">,</span> <span class="kt">int</span> <span class="n">array</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">sum</span> <span class="o">+=</span> <span class="n">array</span><span class="p">[</span><span class="n">i</span><span class="p">];</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span> <span class="n">sum</span> <span class="o">/</span> <span class="p">(</span><span class="kt">float</span><span class="p">)</span> <span class="n">length</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">First, we’ll ask the user for the number of scores they have, create an array with enough <code class="highlighter-rouge">int</code>s for the number of scores they have, and use a loop to collect all the scores.</li>
+      <li data-marker="*">Then we’ll write a helper function, <code class="highlighter-rouge">average</code>, to return a <code class="highlighter-rouge">float</code>, or a decimal value. We’ll pass in the length and an array of <code class="highlighter-rouge">int</code>s (which could be any size), and use another loop inside our helper function to add up the values into a sum. We use <code class="highlighter-rouge">(float)</code> to cast both <code class="highlighter-rouge">sum</code> and <code class="highlighter-rouge">length</code> into floats, so the result we get from dividing the two is also a float.</li>
+      <li data-marker="*">Finally, when we print the result we get, we use <code class="highlighter-rouge">%.1f</code> to show just one place after the decimal.</li>
+    </ul>
+  </li>
+  <li data-marker="*">In memory, our array is now stored like this, where each value takes up not one but four bytes:<br>
+<img src="memory_with_array.png" alt="grid with 72 labeled score1, 73 labeled score2, 33 labeled score3, each of which takes up four boxes, and many empty boxes following"></li>
+</ul>
+
+<h2 id="strings">Strings</h2>
+
+<ul>
+  <li data-marker="*">Strings are actually just arrays of characters. If we had a string <code class="highlighter-rouge">s</code>, each character can be accessed with <code class="highlighter-rouge">s[0]</code>, <code class="highlighter-rouge">s[1]</code>, and so on.</li>
+  <li data-marker="*">And it turns out that a string ends with a special character, ‘\0’, or a byte with all bits set to 0. This character is called the null character, or null terminating character. So we actually need four bytes to store our string “HI!”:<br>
+<img src="memory_with_string.png" alt="grid with H labeled s[0], I labeled s[1], ! labeled s[2], \0 labeled s[3], each of which takes up one box, and many empty boxes following"></li>
+  <li data-marker="*">Now let’s see what four strings in an array might look like:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">names</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+<span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">=</span> <span class="s">"EMMA"</span><span class="p">;</span>
+<span class="n">names</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="o">=</span> <span class="s">"RODRIGO"</span><span class="p">;</span>
+<span class="n">names</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span> <span class="o">=</span> <span class="s">"BRIAN"</span><span class="p">;</span>
+<span class="n">names</span><span class="p">[</span><span class="mi">3</span><span class="p">]</span> <span class="o">=</span> <span class="s">"DAVID"</span><span class="p">;</span>
+
+<span class="n">printf</span><span class="p">(</span><span class="s">"%s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">]);</span>
+<span class="n">printf</span><span class="p">(</span><span class="s">"%c%c%c%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">],</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">],</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">2</span><span class="p">],</span> <span class="n">names</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">3</span><span class="p">]);</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We can print the first value in <code class="highlighter-rouge">names</code> as a string, or we can get the first string, and get each individual character in that string by using <code class="highlighter-rouge">[]</code> again. (We can think of it as <code class="highlighter-rouge">(names[0])[0]</code>, though we don’t need the parentheses.)</li>
+      <li data-marker="*">And though we know that the first name had four characters, <code class="highlighter-rouge">printf</code> probably used a loop to look at each character in the string, printing them one at a time until it reached the null character that marks the end of the string. And in fact, we can print <code class="highlighter-rouge">names[0][4]</code> as an <code class="highlighter-rouge">int</code> with <code class="highlighter-rouge">%i</code>, and see a <code class="highlighter-rouge">0</code> being printed.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can visualize each character with its own label in memory:<br>
+<img src="memory_with_string_array.png" alt="grid with E labeled names[0][0], M labeled names[0][1], and so on, until names[3][5] with a \0, each of which takes up one box, and empty boxes following"></li>
+  <li data-marker="*">We can try experimenting with <code class="highlighter-rouge">string0.c</code>:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Input:  "</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Output: "</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We can use the condition <code class="highlighter-rouge">s[i] != '\0'</code>, where we can check the current character and only print it if it’s not the null character.</li>
+      <li data-marker="*">We can also use the length of the string, but first, we need a new library, <code class="highlighter-rouge">string.h</code>, for <code class="highlighter-rouge">strlen</code>, which tells us the length of a string.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can improve the design of our program. <code class="highlighter-rouge">string0</code> was a bit inefficient, since we check the length of the string, after each character is printed, in our condition. But since the length of the string doesn’t change, we can check the length of the string once:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Input: "</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Output:</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%c</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Now, at the start of our loop, we initialize both an <code class="highlighter-rouge">i</code> and <code class="highlighter-rouge">n</code> variable, and remember the length of our string in <code class="highlighter-rouge">n</code>. Then, we can check the values each time, without having to actually calculate the length of the string.</li>
+      <li data-marker="*">And we did need to use a little more memory for <code class="highlighter-rouge">n</code>, but this saves us some time with not having to check the length of the string each time.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can now combine what we’ve seen, to write a program that can capitalize letters:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Before: "</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"After:  "</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&gt;=</span> <span class="sc">'a'</span> <span class="o">&amp;&amp;</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;=</span> <span class="sc">'z'</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">-</span> <span class="mi">32</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="k">else</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">First, we get a string <code class="highlighter-rouge">s</code>. Then, for each character in the string, if it’s lowercase (its value is between that of <code class="highlighter-rouge">a</code> and <code class="highlighter-rouge">z</code>), we convert it to uppercase. Otherwise, we just print it.</li>
+      <li data-marker="*">We can convert a lowercase letter to its uppercase equivalent, by subtracting the difference between their ASCII values. (We know that lowercase letters have a higher ASCII value than uppercase letters, and the difference is conveniently the same between the same letters, so we can subtract that difference to get an uppercase letter from a lowercase letter.)</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can use the <a href="https://man.cs50.io/"><strong>man pages</strong></a>, or programmer’s manual, to find library functions that we can use to accomplish the same thing:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Before: "</span><span class="p">);</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"After:  "</span><span class="p">);</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">n</span> <span class="o">=</span> <span class="n">strlen</span><span class="p">(</span><span class="n">s</span><span class="p">);</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">n</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"%c"</span><span class="p">,</span> <span class="n">toupper</span><span class="p">(</span><span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]));</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">From searching the man pages, we see <code class="highlighter-rouge">toupper()</code> is a function, among others, from a library called <code class="highlighter-rouge">ctype</code>, that we can use.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="command-line-arguments">Command-line arguments</h2>
+
+<ul>
+  <li data-marker="*">We’ve used programs like <code class="highlighter-rouge">make</code> and <code class="highlighter-rouge">clang</code>, which take in extra words after their name in the command line. It turns out that programs of our own, can also take in <strong>command-line arguments</strong>.</li>
+  <li data-marker="*">In <code class="highlighter-rouge">argv.c</code>, we change what our <code class="highlighter-rouge">main</code> function looks like:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">string</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">==</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="p">}</span>
+    <span class="k">else</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"hello, world</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*"><code class="highlighter-rouge">argc</code> and <code class="highlighter-rouge">argv</code> are two variables that our <code class="highlighter-rouge">main</code> function will now get, when our program is run from the command line. <code class="highlighter-rouge">argc</code> is the argument count, or number of arguments, and <code class="highlighter-rouge">argv</code> is an array of strings that are the arguments. And the first argument, <code class="highlighter-rouge">argv[0]</code>, is the name of our program (the first word typed, like <code class="highlighter-rouge">./hello</code>). In this example, we check if we have two arguments, and print out the second one if so.</li>
+      <li data-marker="*">For example, if we run <code class="highlighter-rouge">./argv David</code>, we’ll get <code class="highlighter-rouge">hello, David</code> printed, since we typed in <code class="highlighter-rouge">David</code> as the second word in our command.</li>
+    </ul>
+  </li>
+  <li data-marker="*">It turns out that we can indicate errors in our program by returning a value from our <code class="highlighter-rouge">main</code> function (as implied by the <code class="highlighter-rouge">int</code> before our <code class="highlighter-rouge">main</code> function). By default, our <code class="highlighter-rouge">main</code> function returns <code class="highlighter-rouge">0</code> to indicate nothing went wrong, but we can write a program to return a different value:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="n">string</span> <span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">argc</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"missing command-line argument</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+        <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]);</span>
+    <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">The return value of <code class="highlighter-rouge">main</code> in our program is called an exit code.</li>
+    </ul>
+  </li>
+  <li data-marker="*">As we write more complex programs, error codes like this can help us determine what went wrong, even if it’s not visible or meaningful to the user</li>
+</ul>
+
+<h2 id="readability">Readability</h2>
+
+<ul>
+  <li data-marker="*">Now that we know how to work with strings in our programs, we can analyze paragraphs of text for their level of readability, based on factors like how long and complicated the words and sentences are.</li>
+</ul>
+
+<h2 id="encryption">Encryption</h2>
+
+<ul>
+  <li data-marker="*">If we wanted to send a message to someone, we might want to <strong>encrypt</strong>, or somehow scramble that message so that it would be hard for others to read. The original message, or input to our algorithm, is called <strong>plaintext</strong>, and the encrypted message, or output, is called <strong>ciphertext</strong>.</li>
+  <li data-marker="*">A message like <code class="highlighter-rouge">HI!</code> could be converted to ASCII, <code class="highlighter-rouge">72 73 33</code>. But anyone would be able to convert that back to letters.</li>
+  <li data-marker="*">An encryption algorithm generally requires another input, in addition to the plaintext. A <strong>key</strong> is needed, and sometimes it is simply a number, that is kept secret. With the key, plaintext can be converted, via some algorith, to ciphertext, and vice versa.</li>
+  <li data-marker="*">For example, if we wanted to send a message like <code class="highlighter-rouge">I  L O V E  Y O U</code>, we can first convert it to ASCII: <code class="highlighter-rouge">73  76 79 86 69  89 79 85</code>. Then, we can encrypt it with a key of just <code class="highlighter-rouge">1</code> and a simple algorithm, where we just add the key to each value: <code class="highlighter-rouge">74  77 80 87 70  90 80 86</code>. Then, someone converting that ASCII back to text will see <code class="highlighter-rouge">J  M P W F  Z P V</code>. To decrypt this, someone will need to know the key.</li>
+  <li data-marker="*">We’ll apply these concepts in our problem set!</li>
+</ul>
+
+                	
+               
+				</main>
+
+			</div>
+
+		</div>
+
+        <!--
+        <div aria-hidden="true" aria-labelledby="searchTitle" class="markdown-body modal" id="search" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="pr-3 w-100" id="searchbox"></div>
+                        <button class="btn btn-secondary btn-lg" data-dismiss="modal" type="button">Fechar</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="hits"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        
+        
+<script>
+
+    // Before shwoing searchbox
+    $('#search').on('show.bs.modal', function (e) {
+
+        // Client
+        const searchClient = algoliasearch('5RYPGI69HZ', '53d709e59d833870a6886f6fcf0b0bfe');
+        const search = instantsearch({
+            indexName: 'cs50-2020-summer',
+            searchClient: searchClient,
+            searchFunction: function(helper) { // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/js/#handling-empty-queries
+                const hits = $('#hits');
+                if (helper.state.query === '') {
+                    hits.hide();
+                    return;
+                }
+                helper.search();
+                hits.show();
+            }
+        });
+
+        // searchBox
+        // https://www.algolia.com/doc/api-reference/widgets/search-box/js/
+        search.addWidget(
+            instantsearch.widgets.searchBox({
+                container: '#searchbox',
+                cssClasses: {
+                    input: 'form-control'
+                },
+                placeholder: 'Search',
+                showLoadingIndicator: false,
+                showReset: false,
+                showSubmit: false
+            })
+        );
+
+        // hits
+        // https://www.algolia.com/doc/api-reference/widgets/hits/js/
+        search.addWidget(
+            instantsearch.widgets.hits({
+                container: '#hits',
+                templates: {
+                    item: function(hit) {
+
+                        // url
+                        if (window.baseurl) {
+                            var url = window.baseurl + hit.url;
+                        }
+                        else {
+                            var url = hit.url;
+                        }
+                        if (hit.anchor) {
+                            url += '#' + hit.anchor;
+                        }
+
+                        // title
+                        if (hit._highlightResult && hit._highlightResult.headings) {
+                            var title = hit._highlightResult.headings[hit._highlightResult.headings.length - 1].value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var title = hit._highlightResult.title.value;
+                        }
+                        else if (hit.headings) {
+                            var title = hit.headings[hit.headings.length - 1].value;
+                        }
+                        else if (hit.title) {
+                            var title = hit.title;
+                        }
+                        else {
+                            var title = url;
+                        }
+
+                        // content
+                        if (hit._highlightResult && hit._highlightResult.content) {
+                            var content = hit._highlightResult.content.value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var content = hit._highlightResult.title.value;
+                        }
+                        else {
+                            var content = hit.excerpt_text;
+                        }
+
+                        // Template for hit
+                        return '<h2 class="font-weight-bold h3 mb-0">' +
+                               '<a href="' + url + '">' +
+                               title +
+                               '</a>' +
+                               '</h2>' +
+                               '<p class="mb-0">' +
+                               '<a class="text-muted" href="' + url + '">' +
+                               url +
+                               '</a>' +
+                               '</p>' +
+                               '<p>' + 
+                               content +
+                               '</p>';
+                    }
+                }
+            })
+        );
+
+        // poweredBy
+        search.addWidget(
+            instantsearch.widgets.poweredBy({
+                container: '#search .modal-footer'
+            })
+        );
+
+        // Let user start searching
+        search.start();
+
+        // Resize form
+        $(window).trigger('resize');
+    });
+
+    // After showing searchbox
+    $('#search').on('shown.bs.modal', function (e) {
+        $('#searchbox input[type=search]').focus();
+    });
+
+</script>
+        
+
+</body>
+</html>
