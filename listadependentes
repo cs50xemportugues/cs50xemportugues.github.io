@@ -18,3 +18,22 @@ Seções
 
 Página da lista de problemas 0:
 	1. Adicionar o link para o Scratch Studio contendo os exemplos da Aula 0
+
+
+Página de Guia de Estilo:
+	1. Criar a página com estilo e sidebar igual ao do site padrão
+
+
+Sidebar:
+	1. Reorganizar a segunda seção da sidebar para que a ordem dos links seja:
+
+		Currículo do Curso
+		Equipe
+		Perguntas Frequentes
+		Tutorias
+		Listas de Problemas
+		Seções
+ 
+
+Problema César:
+	1. Adicionar link para pdf dos slides no primeiro parágrafo da seção pseudocódigo que cita o pseudocódigo para encontrar João Silva
