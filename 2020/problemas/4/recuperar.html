@@ -34,14 +34,14 @@
 
     <body>
 
-        
+
 
         <div class="container-fluid">
 
             <div class="row">
 
                 <aside class="col-md">
- 
+
                     <header><h1 data-id="this-is-cs50"><a href="https://cs50xemportugues.github.io/">Este é o CS50x</a></h1>
 
 <p><a href="https://cs50.harvard.edu/">O curso da Universidade de Harvard em Português!</a><br>
@@ -64,7 +64,7 @@
   <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="../../semanas/7">Semana 7</a> SQL</li>
   <li data-marker="*"><span class="fa-li"><i class="fas fa-circle"></i></span><a href="../../semanas/8">Semana 8</a> Informação</li>
 </ul>
-                        
+
 <ul>
   <li data-marker="*"><a href="../../especializacoes">Especializações</a></li>
   <li data-marker="*"><a href="../../projetofinal">Projeto Final</a></li>
@@ -111,121 +111,134 @@
 
 
 
-<h1 id="recover">Recover</h1>
+<h1 id="recover">Recuperar</h1>
 
-<p>Implement a program that recovers JPEGs from a forensic image, per the below.</p>
+<p>Implemente um programa que recupera imagens, em formato JPEG, a partir de um arquivo forense, como exemplificado abaixo.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./recover card.raw
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./recuperar cartao.raw
 </code></pre></div></div>
 
-<h2 id="background">Background</h2>
+<h2 id="background">Entendendo o problema</h2>
 
-<p>In anticipation of this problem, we spent the past several days taking photos of people we know, all of which were saved on a digital camera as JPEGs on a memory card. (Okay, it’s possible we actually spent the past several days on Facebook instead.) Unfortunately, we somehow deleted them all! Thankfully, in the computer world, “deleted” tends not to mean “deleted” so much as “forgotten.” Even though the camera insists that the card is now blank, we’re pretty sure that’s not quite true. Indeed, we’re hoping (er, expecting!) you can write a program that recovers the photos for us!</p>
+<p>Antes de publicar este problema, nós passamos os últimos dias tirando fotos das pessoas que nós conhecemos, que foram salvas em uma câmera digital, em formato JPEG, no cartão de memória. Infelizmente, nós deletamos todas as imagens! Felizmente, no mundo da computação, "deletado" não significa necessariamente "deletado", mas sim "esquecido". Ainda que a câmera insista que o cartão de memória esteja vazio, nós temos certeza que isso não é verdade. E portanto, nós desejamos (e esperamos) que você escreva um programa que recupere as fotos para nós!</p>
 
-<p>Even though JPEGs are more complicated than BMPs, JPEGs have “signatures,” patterns of bytes that can distinguish them from other file formats. Specifically, the first three bytes of JPEGs are</p>
+<p>Ainda que imagens em formato JPEG sejam mais complicadas do que imagens em formato BMP, imagens em formato JPEG possuem "assinaturas", sequências de bytes que as diferenciam de outros formatos de arquivo. Para sermos mais específicos, os primeiros três bytes de uma imagem JPEG são</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>0xff 0xd8 0xff
 </code></pre></div></div>
 
-<p>from first byte to third byte, left to right. The fourth byte, meanwhile, is either <code class="highlighter-rouge">0xe0</code>, <code class="highlighter-rouge">0xe1</code>, <code class="highlighter-rouge">0xe2</code>, <code class="highlighter-rouge">0xe3</code>, <code class="highlighter-rouge">0xe4</code>, <code class="highlighter-rouge">0xe5</code>, <code class="highlighter-rouge">0xe6</code>, <code class="highlighter-rouge">0xe7</code>, <code class="highlighter-rouge">0xe8</code>, <code class="highlighter-rouge">0xe9</code>, <code class="highlighter-rouge">0xea</code>, <code class="highlighter-rouge">0xeb</code>, <code class="highlighter-rouge">0xec</code>, <code class="highlighter-rouge">0xed</code>, <code class="highlighter-rouge">0xee</code>, or <code class="highlighter-rouge">0xef</code>. Put another way, the fourth byte’s first four bits are <code class="highlighter-rouge">1110</code>.</p>
+<p>do primeiro ao terceiro byte, da esquerda para a direita. O quarto byte, por outro lado, é <code class="highlighter-rouge">0xe0</code>, <code class="highlighter-rouge">0xe1</code>, <code class="highlighter-rouge">0xe2</code>, <code class="highlighter-rouge">0xe3</code>, <code class="highlighter-rouge">0xe4</code>, <code class="highlighter-rouge">0xe5</code>, <code class="highlighter-rouge">0xe6</code>, <code class="highlighter-rouge">0xe7</code>, <code class="highlighter-rouge">0xe8</code>, <code class="highlighter-rouge">0xe9</code>, <code class="highlighter-rouge">0xea</code>, <code class="highlighter-rouge">0xeb</code>, <code class="highlighter-rouge">0xec</code>, <code class="highlighter-rouge">0xed</code>, <code class="highlighter-rouge">0xee</code>, ou <code class="highlighter-rouge">0xef</code>. Em outras palavras, os primeiros quatro bits do quarto byte são  <code class="highlighter-rouge">1110</code>.</p>
 
-<p>Odds are, if you find this pattern of four bytes on media known to store photos (e.g., my memory card), they demarcate the start of a JPEG. To be fair, you might encounter these patterns on some disk purely by chance, so data recovery isn’t an exact science.</p>
+<p>Se você encontrar esta sequência de quatro bytes em um dispositivo usado para armazenar imagens (um cartão de memória, por exemplo), é provável que eles indiquem o início de uma imagem em formato JPEG. Na realidade, pode ser que você encontre essa sequência de bytes em algum dispositivo de armazenamento por acaso, portanto, recuperação de dados não é uma ciência exata.</p>
 
-<p>Fortunately, digital cameras tend to store photographs contiguously on memory cards, whereby each photo is stored immediately after the previously taken photo. Accordingly, the start of a JPEG usually demarks the end of another. However, digital cameras often initialize cards with a FAT file system whose “block size” is 512 bytes (B). The implication is that these cameras only write to those cards in units of 512 B. A photo that’s 1 MB (i.e., 1,048,576 B) thus takes up 1048576 ÷ 512 = 2048 “blocks” on a memory card. But so does a photo that’s, say, one byte smaller (i.e., 1,048,575 B)! The wasted space on disk is called “slack space.” Forensic investigators often look at slack space for remnants of suspicious data.</p>
+<p>Felizmente, câmeras digitais tendem a armazenar fotos em cartões de memória de forma contínua, onde cada foto é armazenada imediatamente após a última foto tirada. Consequentemente, o início de uma imagem JPEG normalmente indica o fim de outra imagem. Entretanto, câmeras digitais normalmente inicializam cartões de memória usando um sistema de armazenamento do tipo FAT, onde cada "bloco de armazenamento" é igual a 512 bytes (B). Isso significa que essas câmeras só escrevem nesses cartões em unidades de 512 B. Uma foto cujo tamanho é igual a 1 MB (ou seja, 1 048 576 B) ocupa 1048576 ÷ 512 = 2048 "blocos" em um cartão de memória. Entretanto, uma foto cujo tamanho é 1 byte a menos (1 048 575 B) ocupa a mesma quantidade de "blocos"! O espaço desperdiçado na memória é chamado de slack space, que podemos traduzir como "espaço vazio". Investigadores forênse costumam analizar o slack space para encontrar resquícios de dados suspeitos.</p>
 
-<p>The implication of all these details is that you, the investigator, can probably write a program that iterates over a copy of my memory card, looking for JPEGs’ signatures. Each time you find a signature, you can open a new file for writing and start filling that file with bytes from my memory card, closing that file only once you encounter another signature. Moreover, rather than read my memory card’s bytes one at a time, you can read 512 of them at a time into a buffer for efficiency’s sake. Thanks to FAT, you can trust that JPEGs’ signatures will be “block-aligned.” That is, you need only look for those signatures in a block’s first four bytes.</p>
+<p>O que todos esses detalhes significam é que você, o investigador, pode escrever um programa que percorre uma cópia de um cartão de memória, procurando por assinaturas de formato JPEG. Cada vez que você encontrar uma assinatura, você pode abrir um novo arquivo em modo de escrita e preencher esse arquivo recentemente criado com os bytes do cartão de memória, e fechando esse arquivo assim que você encontrar outra assinatura. Além disso, ao invés de ler os bytes do cartão de memória um de cada vez, você pode copiar 512 desses bytes para um buffer (espaço de armazenamento temporário) por questão de eficiência. Graças ao sistema de armazenamento FAT, você pode confiar que as assinaturas de uma imagem JPEG estarão "alinhadas ao bloco". Isso quer dizer que você só precisa procurar por essas assinaturas nos primeiros quatro bytes de um bloco.</p>
 
-<p>Realize, of course, that JPEGs can span contiguous blocks. Otherwise, no JPEG could be larger than 512 B. But the last byte of a JPEG might not fall at the very end of a block. Recall the possibility of slack space. But not to worry. Because this memory card was brand-new when I started snapping photos, odds are it’d been “zeroed” (i.e., filled with 0s) by the manufacturer, in which case any slack space will be filled with 0s. It’s okay if those trailing 0s end up in the JPEGs you recover; they should still be viewable.</p>
+<p>Obviamente, imagens em formato JPEG podem ocupar vários blocos de armazenamento contíguos, caso contrário, nenhuma imagem em formato JPEG seria maior do que 512 bytes. Mas pode ser que o último byte de uma imagem JPEG não esteja armazenado exatamente no fim do bloco. Lembre-se da possibilidade de haver slack space, que traduzimos como “espaço vazio” ou “espaço desperdiçado”. Mas não se preocupe. Por conta do fato que este cartão de memória era novo quando eu comecei a tirar fotos, é provável que ele foi "zerado" (preenchido com zeros e uns) pelo fabricante, o que significa que todos os "espaços desperdiçados" foram preenchidos com zeros. Não tem problema se esses zeros "sobrando" forem incluídos nas imagens JPEG que você recuperar. Eles certamente ainda serão visíveis.</p>
 
-<p>Now, I only have one memory card, but there are a lot of you! And so I’ve gone ahead and created a “forensic image” of the card, storing its contents, byte after byte, in a file called <code class="highlighter-rouge">card.raw</code>. So that you don’t waste time iterating over millions of 0s unnecessarily, I’ve only imaged the first few megabytes of the memory card. But you should ultimately find that the image contains 50 JPEGs.</p>
+<p>De qualquer maneira, eu só tenho um cartão de memória, mas existem muitas pessoas fazendo o curso CS50! E portanto, eu criei uma “imagem forense” do cartão de memória, armazenando todo seu conteúdo, byte por byte, em um arquivo chamado <code class="highlighter-rouge">cartao.raw</code>. Para que você não perca tempo percorrendo milhões de 0s desnecessariamente, eu só copiei os primeiros megabytes do cartão de memória. Mas você verá que a cópia possui 50 imagens em formato JPEG.</p>
 
-<h2 id="getting-started">Getting Started</h2>
+<h2 id="getting-started">Começando</h2>
 
-<p>Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own CS50 IDE. Log into <a href="https://cs50.io/">CS50 IDE</a> and then, in a terminal window, execute each of the below.</p>
+<p>Você deve baixar o “código de distribuição” (código inicial) para seu CS50 IDE. Entre no <a href="https://cs50.io/">CS50 IDE</a> usando sua conta GitHub, e em seguida, na janela do terminal, siga as instruções abaixo.</p>
 
 <ol>
-  <li>Execute <code class="highlighter-rouge">cd</code> to ensure that you’re in <code class="highlighter-rouge">~/</code> (i.e., your home directory).</li>
-  <li>If you haven’t already, execute <code class="highlighter-rouge">mkdir pset4</code> to make (i.e., create) a directory called <code class="highlighter-rouge">pset4</code> in your home directory.</li>
-  <li>Execute <code class="highlighter-rouge">cd pset4</code> to change into (i.e., open) your <code class="highlighter-rouge">pset4</code> directory.</li>
-  <li>Execute <code class="highlighter-rouge">wget https://cdn.cs50.net/2019/fall/psets/4/recover/recover.zip</code> to download a (compressed) ZIP file with this problem’s distribution.</li>
-  <li>Execute <code class="highlighter-rouge">unzip recover.zip</code> to uncompress that file.</li>
-  <li>Execute <code class="highlighter-rouge">rm recover.zip</code> followed by <code class="highlighter-rouge">yes</code> or <code class="highlighter-rouge">y</code> to delete that ZIP file.</li>
-  <li>Execute <code class="highlighter-rouge">ls</code>. You should see a directory called <code class="highlighter-rouge">recover</code>, which was inside of that ZIP file.</li>
-  <li>Execute <code class="highlighter-rouge">cd recover</code> to change into that directory.</li>
-  <li>Execute <code class="highlighter-rouge">ls</code>. You should see this problem’s distribution, including <code class="highlighter-rouge">card.raw</code> and <code class="highlighter-rouge">recover.c</code>.</li>
+	<li>Execute <code class="highlighter-rouge">cd</code> para garantir que você está localizado em <code class="highlighter-rouge">~/</code>/ (diretório inicial).</li>
+
+	<li>Execute <code class="highlighter-rouge">mkdir problemas4</code> para criar um diretório chamado <code class="highlighter-rouge">problemas4</code> localizado no seu diretório inicial.</li>
+
+	<li>Execute <code class="highlighter-rouge">cd problemas4</code> para entrar no diretório <code class="highlighter-rouge">problemas4</code>.</li>
+
+	<li>Execute <code class="highlighter-rouge">wget https://cs50xemportugues.github.io/2020/problemas/4/recuperar/recuperar.zip</code> para baixar um arquivo ZIP (um arquivo compactado) com o código de distribuição deste problema.</li>
+
+	<li>Execute <code class="highlighter-rouge">unzip recuperar.zip</code> para descompactar esse arquivo.</li>
+
+	<li>Execute <code class="highlighter-rouge">rm recuperar.zip</code> seguido de <code class="highlighter-rouge">yes</code> ou <code class="highlighter-rouge">y</code> para deletar esse arquivo ZIP.</li>
+
+	<li>Execute <code class="highlighter-rouge">ls</code>. Você verá um diretório chamado <code class="highlighter-rouge">recuperar</code>, que estava dentro daquele arquivo ZIP.</li>
+
+	<li>Execute <code class="highlighter-rouge">cd recuperar</code> para entrar nesse diretório.</li>
+
+	<li>Execute <code class="highlighter-rouge">ls</code>. Você verá os arquivos de distribuição deste problema, incluindo <code class="highlighter-rouge">cartao.raw</code> e <code class="highlighter-rouge">recuperar.c</code>.</li>
 </ol>
 
-<h2 id="specification">Specification</h2>
+<h2 id="specification">Especificação</h2>
 
-<p>Implement a program called <code class="highlighter-rouge">recover</code> that recovers JPEGs from a forensic image.</p>
+<p>Implemente um programa chamado <code class="highlighter-rouge">recuperar	</code> que recupera imagens em formato JPEG a partir de uma “imagem forense”.</p>
 
 <ul>
-  <li data-marker="*">Implement your program in a file called <code class="highlighter-rouge">recover.c</code> in a directory called <code class="highlighter-rouge">recover</code>.</li>
-  <li data-marker="*">Your program should accept exactly one command-line argument, the name of a forensic image from which to recover JPEGs.</li>
-  <li data-marker="*">If your program is not executed with exactly one command-line argument, it should remind the user of correct usage, and <code class="highlighter-rouge">main</code> should return <code class="highlighter-rouge">1</code>.</li>
-  <li data-marker="*">If the forensic image cannot be opened for reading, your program should inform the user as much, and <code class="highlighter-rouge">main</code> should return <code class="highlighter-rouge">1</code>.</li>
-  <li data-marker="*">Your program, if it uses <code class="highlighter-rouge">malloc</code>, must not leak any memory.</li>
+	<li data-marker="*">Implemente seu programa em um arquivo chamado <code class="highlighter-rouge">recuperar.c</code> localizado em um diretório chamado <code class="highlighter-rouge">recuperar</code>.</li>
+	<li data-marker="*">Seu programa deve aceitar exatamente um argumento de linha de comando, que no caso será o nome de uma imagem forense, a partir da qual você recuperará as imagens em formato JPEG.</li>
+	<li data-marker="*">Se seu programa não for executado exatamente com um argumento de linha de comando, ele deve alertar o usuário do uso correto, e em seguida <code class="highlighter-rouge">main</code> deve retornar <code class="highlighter-rouge">1</code>.</li>
+	<li data-marker="*">Se a imagem forense (<code class="highlighter-rouge">cartao.raw</code>) não puder ser aberta em modo leitura, seu progama deve informar ao usuário, e em seguida <code class="highlighter-rouge">main</code> deve retornar <code class="highlighter-rouge">1</code>.</li>
+	<li data-marker="*">Se seu programa usar a função <code class="highlighter-rouge">malloc</code>, ele não pode vazar nenhuma quantidade de memória.</li>
 </ul>
 
-<h2 id="walkthrough">Walkthrough</h2>
+<h2 id="walkthrough">Passo a Passo</h2>
 
 <div class="border embed-responsive embed-responsive-16by9" data-video="">
     <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/ooL0r_8N9ms?modestbranding=1&amp;rel=0&amp;showinfo=0"></iframe>
 </div>
 
-<h2 id="usage">Usage</h2>
+<h2 id="usage">Uso correto</h2>
 
-<p>Your program should behave per the examples below.</p>
+<p>Seu programa deve se comportar como os exemplos abaixo.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./recover
-Usage: ./recover image
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./recuperar
+Uso correto: ./recuperar imagem
 </code></pre></div></div>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./recover card.raw
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./recuperar cartao.raw
 </code></pre></div></div>
 
-<h2 id="hints">Hints</h2>
+<h2 id="hints">Dicas</h2>
 
-<p>Keep in mind that you can open <code class="highlighter-rouge">card.raw</code> programmatically with <code class="highlighter-rouge">fopen</code>, as with the below, provided <code class="highlighter-rouge">argv[1]</code> exists.</p>
+<p>Lembre-se que você pode abrir o arquivo <code class="highlighter-rouge">cartao.raw</code> usando a função <code class="highlighter-rouge">fopen</code>, como mostrado abaixo, desde que <code class="highlighter-rouge">argv[1]</code> exista.</p>
 
-<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">FILE</span> <span class="o">*</span><span class="n">file</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"r"</span><span class="p">);</span>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">FILE</span> <span class="o">*</span><span class="n">arquivo</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"r"</span><span class="p">);</span>
 </code></pre></div></div>
-<p>When executed, your program should recover every one of the JPEGs from <code class="highlighter-rouge">card.raw</code>, storing each as a separate file in your current working directory. Your program should number the files it outputs by naming each <code class="highlighter-rouge">###.jpg</code>, where <code class="highlighter-rouge">###</code> is three-digit decimal number from <code class="highlighter-rouge">000</code> on up. (Befriend <a href="https://man.cs50.io/3/sprintf"><code class="highlighter-rouge">sprintf</code></a>.) You need not try to recover the JPEGs’ original names. To check whether the JPEGs your program spit out are correct, simply double-click and take a look! If each photo appears intact, your operation was likely a success!</p>
 
-<p>Odds are, though, the JPEGs that the first draft of your code spits out won’t be correct. (If you open them up and don’t see anything, they’re probably not correct!) Execute the command below to delete all JPEGs in your current working directory.</p>
+<p>Quando executado, seu programa deve recuperar cada uma das imagens em formato JPEG do arquivo <code class="highlighter-rouge">cartao.raw</code>, armazenando cada imagem como sendo arquivos únicos no seu diretório atual. Seu programa deve numerar os arquivos criados nomeando cada um <code class="highlighter-rouge">###.jpg</code>, onde <code class="highlighter-rouge">###</code> é um número decimal com 3 dígitos de <code class="highlighter-rouge">000</code> adiante. (Para isso, use a função <code class="highlighter-rouge">sprintf</code>.) Você não precisa tentar recuperar os nomes originais das imagens. Para checar se as imagens em formato JPEG que seu programa criar estão corretas, simplesmente clique duas vezes para abri-las e dar uma olhada! Se cada foto parecer estar intacta, sua operação certamente foi um sucesso!</p>
+
+<p>Entretanto, é provável que as primeiras imagens em formato JPEG que seu programa criar não estarão corretas. (Se você abri-las e não ver nada, elas certamente não estão corretas!) Execute o programa abaixo para deletar todas as imagens JPEG no seu diretório atual.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rm *.jpg
 </code></pre></div></div>
 
-<p>If you’d rather not be prompted to confirm each deletion, execute the command below instead.</p>
+<p>Se você não quiser que o terminal te peça para confirmar cada remoção, execute o comando abaixo.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ rm -f *.jpg
 </code></pre></div></div>
 
-<p>Just be careful with that <code class="highlighter-rouge">-f</code> switch, as it “forces” deletion without prompting you.</p>
+<p>Mas tome cuidado com a flag <code class="highlighter-rouge">-f</code>, por que ela “força” a remoção do arquivo sem confirmar com você.</p>
 
-<p>If you’d like to create a new type to store a byte of data, you can do so via the below, which defines a new type called <code class="highlighter-rouge">BYTE</code> to be a <code class="highlighter-rouge">uint8_t</code> (a type defined in <code class="highlighter-rouge">stdint.h</code>, representing an 8-bit unsigned integer).</p>
+<p>Se você quiser criar um novo tipo de dado para armazenar um byte, você pode fazer isso com a linha mostrada abaixo, que define um novo tipo chamado <code class="highlighter-rouge">BYTE</code> que é um <code class="highlighter-rouge">uint8_t</code> (um tipo definido em code class="highlighter-rouge">stdint.h</code> que representa um inteiro sem sinal de 8 bits).</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>typedef uint8_t BYTE;
 </code></pre></div></div>
 
-<p>Keep in mind, too, that you can read data from a file using <a href="https://man.cs50.io/3/fread"><code class="highlighter-rouge">fread</code></a>, which will read data from a file into a location in memory and return the number of items successfully read from the file.</p>
+<p>Lembre-se que você pode ler dados de um arquivo usando a função <code class="highlighter-rouge">fread</code>, que lerá dados de um arquivo e os armazenará em algum local de memória e retornará o número de itens lidos do arquivo com sucesso.</p>
 
-<h2 id="testing">Testing</h2>
+<h2 id="testing">Como Testar Seu Código</h2>
 
-<p>Execute the below to evaluate the correctness of your code using <code class="highlighter-rouge">check50</code>. But be sure to compile and test it yourself as well!</p>
+<p>Execute a linha abaixo para avaliar a correção do seu código usando a ferramenta <code class="highlighter-rouge">check50</code>. Não se esqueça de compilar e testar o código você também!</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50/problems/2020/x/recover
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50xemportugues/problemas/2020/recuperar
 </code></pre></div></div>
 
-<p>Execute the below to evaluate the style of your code using <code class="highlighter-rouge">style50</code>.</p>
+<p>Execute a linha abaixo para avaliar o estilo do seu código usando a ferramenta <code class="highlighter-rouge">style50</code>.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 recover.c
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 recuperar.c
 </code></pre></div></div>
 
-<h2 id="how-to-submit">How to Submit</h2>
+<h2>Como Adaptar Seu Código</h2>
 
-<p>Execute the below, logging in with your GitHub username and password when prompted. For security, you’ll see asterisks (<code class="highlighter-rouge">*</code>) instead of the actual characters in your password.</p>
+<p>TODO</p>
+
+<h2 id="how-to-submit">Como Enviart</h2>
+
+<p>Execute a linha abaixo, em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/recover
 </code></pre></div></div>
@@ -238,8 +251,8 @@ Usage: ./recover image
 
 
 
-   	
-               
+
+
 				</main>
 
 			</div>
@@ -263,8 +276,8 @@ Usage: ./recover image
             </div>
         </div>
         -->
-        
-        
+
+
 <script>
 
     // Before shwoing searchbox
@@ -359,7 +372,7 @@ Usage: ./recover image
                                url +
                                '</a>' +
                                '</p>' +
-                               '<p>' + 
+                               '<p>' +
                                content +
                                '</p>';
                     }
@@ -387,7 +400,7 @@ Usage: ./recover image
     });
 
 </script>
-        
+
 
 </body>
 </html>
