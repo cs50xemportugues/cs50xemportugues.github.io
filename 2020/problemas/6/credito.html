@@ -110,62 +110,73 @@
 
 
 
-n<h1 id="credit">Credit</h1>
+n<h1 id="credit">Crédito</h1>
 
-<p>Implement a program that determines whether a provided credit card number is valid according to Luhn’s algorithm.</p>
+<p>Implemente um programa que determina se um número de cartão de crédito informado pelo usuário é válido de acordo com o algoritmo de Luhn.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python credit.py
-Number: 378282246310005
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python credito.py
+Número: 378282246310005
 AMEX
 </code></pre></div></div>
 
-<h2 id="specification">Specification</h2>
+<h2 id="specification">Especificação</h2>
 
 <ul>
-  <li data-marker="*">In <code class="highlighter-rouge">credit.py</code> in <code class="highlighter-rouge">~/pset6/credit/</code>, write a program that prompts the user for a credit card number and then reports (via <code class="highlighter-rouge">print</code>) whether it is a valid American Express, MasterCard, or Visa card number, exactly as you did in <a href="../../1/">Problem Set 1</a>, except that your program this time should be written (a) in Python and (b) in CS50 IDE.</li>
-  <li data-marker="*">So that we can automate some tests of your code, we ask that your program’s last line of output be <code class="highlighter-rouge">AMEX\n</code> or <code class="highlighter-rouge">MASTERCARD\n</code> or <code class="highlighter-rouge">VISA\n</code> or <code class="highlighter-rouge">INVALID\n</code>, nothing more, nothing less.</li>
-  <li data-marker="*">For simplicity, you may assume that the user’s input will be entirely numeric (i.e., devoid of hyphens, as might be printed on an actual card).</li>
-  <li data-marker="*">Best to use <code class="highlighter-rouge">get_int</code> or <code class="highlighter-rouge">get_string</code> from CS50’s library to get users’ input, depending on how you to decide to implement this one.</li>
+  <li data-marker="*">Escreva, em um arquivo chamado <code class="highlighter-rouge">credito.py</code> em um diretório <code class="highlighter-rouge">~/problemas6/credito/</code>, um programa que pede ao usuário para informar um número de cartão de crédito e em seguida informa (através da função <code class="highlighter-rouge">print</code>) se o número é um número de cartão de crédito válido da American Express, da MasterCard, ou da Vida, exatamente como você fez na <a href="../../1/">Lista de Problemas 1</a>, exceto pelo fato que seu programa desta vez deve ser escrito em Python.</li>
+
+  <li data-marker="*">Para que possamos automatizar alguns testes no seu código, nós pedimos que a última linha que seu programa imprimir seja <code class="highlighter-rouge">AMEX\n</code> ou <code class="highlighter-rouge">MASTERCARD\n</code> ou <code class="highlighter-rouge">VISA\n</code> ou <code class="highlighter-rouge">INVÁLIDO\n</code>, nada mais, nada menos.</li>
+
+  <li data-marker="*">Para propósitos de simplicidade, você pode considerar que a entrada de dados do usuário será inteiramente numérica (ou seja, sem hífens, que normalmente são imprimidos juntos dos números em cartões reais).</li>
+  
+  <li data-marker="*">Nós recomendamos que você use a função <code class="highlighter-rouge">get_int</code> ou <code class="highlighter-rouge">get_string</code> da biblioteca CS50 para receber a entrada de dados do usuário, dependendo de como você decidir implementar este programa.</li>
 </ul>
 
-<h2 id="usage">Usage</h2>
+<h2 id="usage">Uso</h2>
 
-<p>Your program should behave per the example below.</p>
+<p>Seu programa deve se comportar como mostrado abaixo.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python credit.py
-Number: 378282246310005
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python credito.py
+Número: 378282246310005
 AMEX
 </code></pre></div></div>
 
-<h2 id="testing">Testing</h2>
+<h2 id="testing">Testando</h2>
 
-<p>No <code class="highlighter-rouge">check50</code> for this problem, but be sure to test your code for each of the following.</p>
+<p>Não há <code class="highlighter-rouge">check50</code> para este problema, mas não se esqueça de testar seu código das seguintes maneiras.</p>
+
 
 <ul>
-  <li data-marker="*">Run your program as <code class="highlighter-rouge">python credit.py</code>, and wait for a prompt for input. Type in <code class="highlighter-rouge">378282246310005</code> and press enter. Your program should output <code class="highlighter-rouge">AMEX</code>.</li>
-  <li data-marker="*">Run your program as <code class="highlighter-rouge">python credit.py</code>, and wait for a prompt for input. Type in <code class="highlighter-rouge">371449635398431</code> and press enter. Your program should output <code class="highlighter-rouge">AMEX</code>.</li>
-  <li data-marker="*">Run your program as <code class="highlighter-rouge">python credit.py</code>, and wait for a prompt for input. Type in <code class="highlighter-rouge">5555555555554444</code> and press enter. Your program should output <code class="highlighter-rouge">MASTERCARD</code>.</li>
-  <li data-marker="*">Run your program as <code class="highlighter-rouge">python credit.py</code>, and wait for a prompt for input. Type in <code class="highlighter-rouge">5105105105105100</code> and press enter. Your program should output <code class="highlighter-rouge">MASTERCARD</code>.</li>
-  <li data-marker="*">Run your program as <code class="highlighter-rouge">python credit.py</code>, and wait for a prompt for input. Type in <code class="highlighter-rouge">4111111111111111</code> and press enter. Your program should output <code class="highlighter-rouge">VISA</code>.</li>
-  <li data-marker="*">Run your program as <code class="highlighter-rouge">python credit.py</code>, and wait for a prompt for input. Type in <code class="highlighter-rouge">4012888888881881</code> and press enter. Your program should output <code class="highlighter-rouge">VISA</code>.</li>
-  <li data-marker="*">Run your program as <code class="highlighter-rouge">python credit.py</code>, and wait for a prompt for input. Type in <code class="highlighter-rouge">1234567890</code> and press enter. Your program should output <code class="highlighter-rouge">INVALID</code>.</li>
+    <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python credito.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">378282246310005</code> e aperte Enter. Seu programa deve imprimir <code class="highlighter-rouge">AMEX</code>.</li>
+
+    <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python credito.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">371449635398431</code> e aperte Enter. Seu programa deve imprimir <code class="highlighter-rouge">AMEX</code>.</li>
+
+    <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python credito.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">5555555555554444</code> e aperte Enter. Seu programa deve imprimir <code class="highlighter-rouge">MASTERCARD</code>.</li>
+    
+    <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python credito.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">5105105105105100</code> e aperte Enter. Seu programa deve imprimir <code class="highlighter-rouge">MASTERCARD</code>.</li>
+    
+    <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python credito.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">4111111111111111</code> e aperte Enter. Seu programa deve imprimir <code class="highlighter-rouge">VISA</code>.</li>
+    
+    <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python credito.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">4012888888881881</code> e aperte Enter. Seu programa deve imprimir <code class="highlighter-rouge">VISA</code>.</li>
+    
+    <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python credito.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">1234567890</code> e aperte Enter. Seu programa deve imprimir <code class="highlighter-rouge">INVÁLIDO</code>.</li>
+    
 </ul>
 
-<h2 id="how-to-submit">How to Submit</h2>
 
-<p>Execute the below, logging in with your GitHub username and password when prompted. For security, you’ll see asterisks (<code class="highlighter-rouge">*</code>) instead of the actual characters in your password.</p>
+<h2>Como Adaptar Seu Código Antes de Enviar</h2>
+<p>TODO</p>
+
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+<p>Execute a linha abaixo, em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/sentimental/credit
 </code></pre></div></div>
 
 
-
-
-
-
-
-   	
-               
 				</main>
 
 			</div>
