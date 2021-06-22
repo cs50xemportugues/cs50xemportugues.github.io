@@ -108,102 +108,136 @@
 
                 <main class="col-md markdown-body" style="margin-bottom: 286px;">
 
-<h1 id="readability">Readability</h1>
+<h1 id="readability">Legibilidade</h1>
 
-<p>Implement a program that computes the approximate grade level needed to comprehend some text, per the below.</p>
+<p>Implemente um programa que calcula o nível escolar aproximado necessário para compreender um texto, como mostrado abaixo</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./readability
-Text: Congratulations! Today is your day. You're off to Great Places! You're off and away!
-Grade 3
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: Parabéns! Hoje é seu dia. Você realizará grandes coisas! Você está pronto para começar!
+Nível 3
 </code></pre></div></div>
 
-<h2 id="reading-levels">Reading Levels</h2>
+<h2 id="reading-levels">Níveis de Leitura</h2>
 
-<p>According to <a href="https://www.scholastic.com/teachers/teaching-tools/collections/guided-reading-book-lists-for-every-level.html">Scholastic</a>, E.B. White’s “Charlotte’s Web” is between a second and fourth grade reading level, and Lois Lowry’s “The Giver” is between an eighth grade reading level and a twelfth grade reading level. What does it mean, though, for a book to be at a “fourth grade reading level”?</p>
+<p>De acordo com alguns especialistas, o livro "Charlotte's Web", do autor E.B. White, está entre os níveis escolares 2 e 4, e o livro "The Giver", do autor Lois Lawry, está entre os níveis escolares 8 e 12. Entretanto, o que significa um livro estar no "nível escolar 4"?</p>
 
-<p>Well, in many cases, a human expert might read a book and make a decision on the grade for which they think the book is most appropriate. But you could also imagine an algorithm attempting to figure out what the reading level of a text is.</p>
+<p>Bem, em muitos casos, um especialista lê um livro e decide a qual nível esse livro é mais apropriado. Mas nós poderíamos imaginar também um algoritmo que tenta descobrir qual é o nível de leitura de um texto.</p>
 
-<p>So what sorts of traits are characteristic of higher reading levels? Well, longer words probably correlate with higher reading levels. Likewise, longer sentences probably correlate with higher reading levels, too. A number of “readability tests” have been developed over the years, to give a formulaic process for computing the reading level of a text.</p>
+<p>Portanto, que tipo de aspectos são caracteristicas de níveis de leitura mais altos? Bem, palavras longas provavelmente estão relacionadas com níveis de leitura mais altos. De forma semelhante, frases mais longas provavelmente estão relacionadas com níveis de leitura mais altos. Vários "testes de legibilidade" foram desenvolvidos ao longo dos anos, para criar um processo formal para calcular o nível de leitura de um texto.</p>
 
-<p>One such readability test is the Coleman-Liau index. The Coleman-Liau index of a text is designed to output what (U.S.) grade level is needed to understand the text. The formula is:</p>
+<p>Um desses testes de legibilidade é o índice Coleman-Liau. O índice Coleman-Liau foi criado para calcular qual nível escolar é necessário para entender um texto. A fórmula é:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>index = 0.0588 * L - 0.296 * S - 15.8
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>index = 0.0588 * L - 0.296 * F - 15.8
 </code></pre></div></div>
 
-<p>Here, <code class="highlighter-rouge">L</code> is the average number of letters per 100 words in the text, and <code class="highlighter-rouge">S</code> is the average number of sentences per 100 words in the text.</p>
 
-<p>Let’s write a program called <code class="highlighter-rouge">readability</code> that takes a text and determines its reading level. For example, if user types in a line from Dr. Seuss:</p>
+<p>Neste caso, <code class="highlighter-rouge">L</code> é o número médio de letras a cada 100 palavras no texto, e <code class="highlighter-rouge">F</code> é o número médio de frases a cada 100 palavras no atexto.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./readability
-Text: Congratulations! Today is your day. You're off to Great Places! You're off and away!
-Grade 3
+
+<p>Vamos escrever um programa chamado <code class="highlighter-rouge">legibilidade</code> que recebe um texto e determina qual é seu nível de leitura. Por exemplo, se o usuário digitar uma frase do livro "NOME DO LIVRO":</p>
+
+
+
+
+
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: TEXTO TEXTO TEXTO TEXTO TEXTO
+Nível X
 </code></pre></div></div>
 
-<p>The text the user inputted has 65 letters, 4 sentences, and 14 words. 65 letters per 14 words is an average of about 464.29 letters per 100 words. And 4 sentences per 14 words is an average of about 28.57 sentences per 100 words. Plugged into the Coleman-Liau formula, and rounded to the nearest whole number, we get an answer of 3: so this passage is at a third grade reading level.</p>
+<p>O texto inserido pelo usuário possui X letras, Y frases, e Z palavras. X letras a cada Z palavras é igual a uma média de [464.29] letras a cada 100 palavras. E Y frases a cada Z palavras é igual a uma média de [28.57] frases a cada 100 palavras. Quando inserimos esses dados na fórmula Coleman-Liau, e após arredondar para o número inteiro mais próximo, a fórmula gera como resultado o valor 3, portanto, este trecho está no terceiro nível escolar de leitura.</p>
 
-<p>Let’s try another one:</p>
+<p>Vamos testar outra passagem:</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./readability
-Text: Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.
-Grade 5
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: Harry Potter era um menino bastante fora do comum em muitas coisas. Para começar, ele detestava as férias de verão mais do que qualquer outra época do ano. Depois, ele realmente queria fazer seus deveres de casa mas era obrigado a fazê-los escondido, na calada da noite. E, além de tudo, também era bruxo.
+Nível 8
 </code></pre></div></div>
 
-<p>This text has 214 letters, 4 sentences, and 56 words. That comes out to about 382.14 letters per 100 words, and 7.14 sentences per 100 words. Plugged into the Coleman-Liau formula, we get a fifth grade reading level.</p>
+<p>Este texto possui 235 letras, 4 frases, e 54 palavras. Isso equivale a aproximadamente 435.18 letras a cada 100 palavras, e 7.4 frases a cada 100 palavras. Quando inserimos esses dados na fórmula Coleman/Liau, dá como resultado o oitavo nível escolar de leitura.</p>
 
-<p>As the average number of letters and words per sentence increases, the Coleman-Liau index gives the text a higher reading level. If you were to take this paragraph, for instance, which has longer words and sentences than either of the prior two examples, the formula would give the text an eleventh grade reading level.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./readability
-Text: As the average number of letters and words per sentence increases, the Coleman-Liau index gives the text a higher reading level. If you were to take this paragraph, for instance, which has longer words and sentences than either of the prior two examples, the formula would give the text an eleventh grade reading level.
-Grade 11
+<p>A medida que o número de letras e palavras por frase aumenta, o índice Coleman-Liau classifica o texto com um nível de leitura maior. Se fossemos analizar este parágrafo, por exemplo, que possui palavras e frases mais longas do que os dois exemplos anteriores, a fórmula classificaria o texto como estando no décimo primeiro nível escolar de leitura.</p>
+
+
+
+
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: A medida que o número de letras e palavras por frase aumenta, o índice Coleman-Liau classifica o texto com um nível de leitura maior. Se fossemos analizar este parágrafo, por exemplo, que possui palavras e frases mais longas do que os dois exemplos anteriores, a fórmula classificaria o texto como estando no décimo primeiro nível escolar de leitura.
+Nível 11
 </code></pre></div></div>
 
-<h2 id="specification">Specification</h2>
+<h2 id="specification">Especificação</h2>
 
-<p>Design and implement a program, <code class="highlighter-rouge">readability</code>, that computes the Coleman-Liau index of the text.</p>
+<p>Projete e implemente um programa, chamado <code class="highlighter-rouge">legibilidade</code>, que calcula o índice Coleman-Liau de um texto.</p>
+
 
 <ul>
-  <li data-marker="*">Implement your program in a file called <code class="highlighter-rouge">readability.c</code> in a <code class="highlighter-rouge">~/pset2/readability</code> directory.</li>
-  <li data-marker="*">Your program must prompt the user for a <code class="highlighter-rouge">string</code> of text (using <code class="highlighter-rouge">get_string</code>).</li>
-  <li data-marker="*">Your program should count the number of letters, words, and sentences in the text. You may assume that a letter is any lowercase character from <code class="highlighter-rouge">a</code> to <code class="highlighter-rouge">z</code> or any uppercase character from <code class="highlighter-rouge">A</code> to <code class="highlighter-rouge">Z</code>, any sequence of characters separated by spaces should count as a word, and that any occurrence of a period, exclamation point, or question mark indicates the end of a sentence.</li>
-  <li data-marker="*">Your program should print as output <code class="highlighter-rouge">"Grade X"</code> where <code class="highlighter-rouge">X</code> is the grade level computed by the Coleman-Liau formula, rounded to the nearest integer.</li>
-  <li data-marker="*">If the resulting index number is 16 or higher (equivalent to or greater than a senior undergraduate reading level), your program should output <code class="highlighter-rouge">"Grade 16+"</code> instead of giving the exact index number. If the index number is less than 1, your program should output <code class="highlighter-rouge">"Before Grade 1"</code>.</li>
+  <li data-marker="*">Implemente seu programa em um arquivo chamado <code class="highlighter-rouge">legibilidade.c</code>, em um diretório chamado <code class="highlighter-rouge">~/problemas2/legibilidade</code>.</li>
+
+
+  <li data-marker="*">Seu programa deve pedir ao usuário informar um texto (usando a função <code class="highlighter-rouge">get_string</code>).</li>
+  
+
+  <li data-marker="*">Seu programa deve contar o número de letras, palavras, e frases em um texto. Você pode supor que uma letra é qualquer caractere minúsculo de <code class="highlighter-rouge">a</code> até <code class="highlighter-rouge">z</code ou qualquer caractere maiúsculo de <code class="highlighter-rouge">A</code> até <code class="highlighter-rouge">Z</code>, que qualquer sequência de caracteres separada por espaços equivale a uma palavra, e que qualquer aparição de ponto final, ponto de exclamação, ou ponto de interrogação indica o fim de uma frase.</li>
+  
+
+  <li data-marker="*">Seu programa deve imprimir como saída de dados <code class="highlighter-rouge">"Nível X"</code>, onde <code class="highlighter-rouge">X</code> é o nível escolar calculado pela fórmula Coleman-Liau, arredondado para o inteiro mais próximo..</li>
+  
+
+  <li data-marker="*">Se o índice calculado for 16 ou maior (equivalente ou maior do que um nível de leitura de um aluno veterano de faculdade), seu programa deve imprimir <code class="highlighter-rouge">"Nível 16+"</code> ao invés de informar o índice exato. Se o índice for menor do que 1, seu programa deve imprimir <code class="highlighter-rouge">"Antes do Nível 1"</code>.</li>
 </ul>
 
-<h3 id="getting-user-input">Getting User Input</h3>
+<h3 id="getting-user-input">Recebendo Dados do Usuário</h3>
 
-<p>Let’s first write some C code that just gets some text input from the user, and prints it back out. Specifically, write code in a new file called <code class="highlighter-rouge">readability.c</code> such that when the user runs the program, they are prompted with <code class="highlighter-rouge">"Text: "</code> to enter some text.</p>
+<p>Primeiramente, vamos escrever um pouco de código para receber dados do usuário, e imprimir de volta na tela. Mais especificamente, escrever código em um arquivo chamado <code class="highlighter-rouge">legibilidade.c</code>, de forma que quando o usuário executar o programa, o programa exibirá a mensagem <code class="highlighter-rouge">"Texto: "</code> para que o usuário digite algum texto.</p>
 
-<p>The behavior of the resulting program should be like the below.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./readability
-Text: In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
-In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.
+<p>O comportamento do programa deve ser como mostrado abaixo.</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: A dúvida é autora das insônias mais cruéis. Ao passo que, inversamente, uma boa e sólida certeza vale como um barbitúrico irresistível.
+A dúvida é autora das insônias mais cruéis. Ao passo que, inversamente, uma boa e sólida certeza vale como um barbitúrico irresistível.
 </code></pre></div></div>
 
-<h3 id="letters">Letters</h3>
 
-<p>Now that you’ve collected input from the user, let’s begin to analyze that input by first counting the number of letters that show up in the text. Modify <code class="highlighter-rouge">readability.c</code> so that, instead of printing out the literal text itself, it instead prints out a count of the number of letters in the text.</p>
+<h3 id="letters">Letras</h3>
 
-<p>The behavior of the resulting program should be like the below.</p>
+<p>Agora que você recebeu dados do usuário, vamos começar a analizar essa entrada de dados contando o número de letras que aparecem no texto. Modifique <code class="highlighter-rouge">legibilidade.c</code> para que, ao invés de imprimir o texto em si, ele imprima o número de letras no texto.</p>
 
-<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./readability
-Text: Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice "without pictures or conversation?"
-235 letter(s)
+<p>O comportamento do programa deve ser como mostrado abaixo.</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: Alice estava começando a se cansar de ficar sentada ao lado da irmã à beira do lago, sem ter nada para fazer: uma ou duas vezes ela tinha espiado no livro que a irmã estava lendo, mas o livro não tinha desenhos, nem diálogos. “E de que serve um livro”, pensou Alice, “sem desenhos ou diálogos?”
+220 letra(s)
 </code></pre></div></div>
 
-<p>Letters can be any uppercase or lowercase alphabetic characters, but shouldn’t include any punctuation, digits, or other symbols.</p>
 
-<p>You can reference <a href="https://man.cs50.io/">https://man.cs50.io/</a> for standard library functions that may help you here! You may also find that writing a separate function, like <code class="highlighter-rouge">count_letters</code>, may be useful to keep your code organized.</p>
+<p>Letras podem ser qualquer caractere alfabético maiúsculo ou minúsculo, mas não deve incluir nenhuma pontuação, dígitos, ou outros símbolos.</p>
 
-<h3 id="words">Words</h3>
 
-<p>The Coleman-Liau index cares not only about the number of letters, but also the number of words in a sentence. For the purpose of this problem, we’ll consider any sequence of characters separated by a space to be a word (so a hyphenated word like <code class="highlighter-rouge">"sister-in-law"</code> should be considered one word, not three).</p>
+<p>Você pode consultar o manual <a href="https://cs50xemportugues.github.io/manual">https://cs50xemportugues.github.io/manual/</a> para encontrar funções que possam te ajudar! Você também pode escrever uma função você mesmo, chamada de <code class="highlighter-rouge">contar_letras</code>, por exemplo, que seja útil e te ajude a manter o código organizado.</p>
 
-<p>Modify <code class="highlighter-rouge">readability.c</code> so that, in addition to printing out the number of letters in the text, also prints out the number of words in the text.</p>
 
-<p>You may assume that a sentence will not start or end with a space, and you may assume that a sentence will not have multiple spaces in a row.</p>
+<h3>Palavras</h3>
 
-<p>The behavior of the resulting program should be like the below.</p>
+
+<p>O índice Coleman-Liau se importa não somente com o número de letras, mas também o número de palavras em uma frase. Para o propósito deste problema, nós vamos considerar qualquer sequência de caracteres separada por um espaço como sendo uma palavra (portanto uma palavra contendo hífen, como por exemplo <code class="highlighter-rouge">"guarda-chuva"</code>, deve ser considerado uma palavra, e não duas).</p>
+
+<p>Modifique <code class="highlighter-rouge">legibilidade.c</code> de forma que, além de imprimir o número de letras no texto, também imprima o número de palavras no texto.</p>
+
+<p>Você pode considerar que uma frase não começará ou terminará em espaço e você pode considerar que uma frase não terá vários espaços seguidos.</p>
+
+<p>O comportamento do programa deve ser como mostrado abaixo.</p>
+
+
 
 <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./readability
 Text: It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.
