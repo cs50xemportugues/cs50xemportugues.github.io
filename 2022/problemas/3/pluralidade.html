@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+
+<!-- saved from url=(0037)https://cs50.harvard.edu/summer/2020/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta property="og:description" content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final.">
+
+<meta property="og:image" content=""><meta property="og:title" content="CS50"><link href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821" rel="icon">
+
+<!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+<script src="https://kit.fontawesome.com/df44463090.js" crossorigin="anonymous"></script>
+
+<link href="/static/css/all.min.css" rel="stylesheet">
+
+<link href="/static/css/page.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="/static/css/personalizado.css">
+
+<!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+<script src="/static/js/moment.min.js"></script>
+<script src="/static/js/moment-timezone-with-data.min.js"></script>
+<script src="/static/js/luxon.min.js"></script>
+
+<!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+<script src="/static/js/algoliasearchLite.min.js"></script>
+<script src="/static/js/instantsearch.production.min.js"></script>
+<script src="/static/js/jekyll-theme-cs50.js"></script>
+
+<title>CS50x em Português</title>
+
+</head>
+
+<body>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+            <aside class="col-md">
+ 
+    <header>
+        <h1 data-id="this-is-cs50">
+            <a href="/2022/index.html">Este é o CS50x</a>
+        </h1>
+
+        <p><a href="https://cs50.harvard.edu/">O curso da Universidade de Harvard em Português!</a><br>2021</p>
+    </header>
+
+    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside &gt; nav" data-toggle="collapse">
+        Menu
+    </button>
+
+    <nav class="collapse d-md-block" id="nav">
+    
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/0.html">Semana 0 <span class="semana-titulo">Scratch <strong class="text-white">😺</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/1.html">Semana 1 <span class="semana-titulo">Linguagem C</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/2.html">Semana 2 <span class="semana-titulo">Vetores</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/3.html">Semana 3 <span class="semana-titulo">Algoritmos</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/4.index.html">Semana 4 <span class="semana-titulo">Memória <strong class="text-white">🧠</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/5.html">Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/6.html">Semana 6 <span class="semana-titulo">Python <strong class="text-white">🐍</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/7.html">Semana 7 <span class="semana-titulo">SQL</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/8.html">Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/9.html">Semana 9 <span class="semana-titulo">Flask</span></a>
+            </li>
+        </ul>
+                                
+        <ul>
+            <li data-marker="*">
+                <a href="/2022/especializacoes.html">Especializações</a>
+            </li>
+            <li data-marker="*">
+                <a href="/2022/projeto_final.html">Projeto Final</a>
+            </li>
+        </ul>
+
+        <!--
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*" class="small">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="guia.pdf">Guia Rápido de Inicialização</a>
+            </li>
+        </ul>-->
+
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/perguntas_frequentes.html">Perguntas Frequentes</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/tutorias.html">Tutorias</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/problemas/index.html">Listas de Problemas</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/secoes.html">Seções</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/equipe.html">Equipe</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/curriculo.html">Currículo do Curso</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul class="small fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://ide.cs50.io/">CS50 IDE</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://sqlitebrowser.org/">Navegador para SQLite</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://adminer.cs50.net/">Navegador para PostgreSQL</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://docs.python.org/pt-br/3/search.html">Documentação Python</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://stackoverflow.com/search">Stack Overflow</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/guiadeestilo.html">Guia de Estilo</a>
+            </li>-->
+        </ul>
+
+        <hr>
+
+        <p style="font-size: initial">
+            <a href="/2022/obrigado.html">Agradecemos</a> à todos os ex-alunos e amigos do CS50
+        </p>
+    </nav>
+
+    <footer></footer>
+</aside>
+
+            <main class="col-md markdown-body" style="margin-bottom: 286px;">
+            
+
+
+<h1 id="plurality">Pluralidade</h1>
+
+<p>Implemente um programa que execute uma eleição em formato pluralidade, como mostrado abaixo.</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./pluralidade Ana Bruno Carlos
+Número de eleitores: 4
+Voto: Ana
+Voto: Bruno
+Voto: Carlos
+Voto: Ana
+Ana
+</code></pre></div></div>
+
+<h2 id="background">Entendendo o Problema</h2>
+
+<p>Processos eleitorais existem nas mais variadas formas. No Reino Unido, o <a href="https://pt.wikipedia.org/wiki/Primeiro-ministro_do_Reino_Unido">Primeiro Ministro</a> é oficialmente escolhido pelo monarca, que normalmente escolhe o lider do partido político que ganhou mais cadeiras na Câmara dos Comuns (o parlamento). Os Estados Unidos usam um sistema de <a href="https://pt.wikipedia.org/wiki/Col%C3%A9gio_eleitoral_dos_Estados_Unidos">Colégio Eleitoral</a> com várias etapas onde os cidadãos votam em como cada estado alocar "Delegados" que depois elegem o Presidente.</p>
+
+<p>Talvez o jeito mais simples de se fazer uma eleição seja através de um método chamado de "sistema de pluralidade de votos", que por sinal é o tipo de eleição usada no Brasil. No sistema de pluralidade de votos, cada eleitor tem direito de votar em um candidato. No fim da eleição, o candidato que possuir o maior número de votos é declarado o vencedor da eleição.</p>
+
+<h2 id="getting-started">Começando</h2>
+
+<p>Siga os passos abaixo para baixar o "código de distribuição" (código inicial) no seu CS50 IDE. Acesse o <a href="https://ide.cs50.io/">CS50 IDE</a> e em seguida, na janela do terminal, execute os passos abaixo.</p>
+
+
+<ul>
+  <li data-marker="*">Execute o comando <code class="highlighter-rouge">cd</code> para garantir que você está em <code class="highlighter-rouge">~/</code> (seu diretório inicial).</li>
+  <li data-marker="*">Execute o comando <code class="highlighter-rouge">mkdir problemas3</code> para criar um diretório chamado <code class="highlighter-rouge">problemas3</code> no seu diretório inicial.</li>
+  <li data-marker="*">Execute o comando <code class="highlighter-rouge">cd problemas3</code> para abrir esse diretório.</li>
+  <li data-marker="*">Execute o comando <code class="highlighter-rouge">mkdir pluralidade</code> para criar um diretório chamado <code class="highlighter-rouge">pluralidade</code> dentro do diretório <code class="highlighter-rouge">problemas3</code>.</li>
+  <li data-marker="*">Execute o comando <code class="highlighter-rouge">cd pluralidade</code> para abrir esse diretório.</li>
+  <li data-marker="*">Execute o comando <code class="highlighter-rouge">wget https://cs50xemportugues.github.io/2020/problemas/3/pluralidade/pluralidade.c</code> para baixar o código de distribuição deste problema.</li>
+  <li data-marker="*">Execute o comando <code class="highlighter-rouge">ls</code> para ver o código de distribuição deste problema, em um arquivo chamado <code class="highlighter-rouge">pluralidade.c</code>.</li>
+</ul>
+
+<h2 id="understanding">Entendendo o Problema</h2>
+
+<p>Vamos dar uma olhada no arquivo <code class="highlighter-rouge">pluralidade.c</code> para entender o código de distribuição que nós providenciamos para você.</p>
+
+<p>A linha <code class="highlighter-rouge">#define MAX 9</code> significa que <code class="highlighter-rouge">MAX</code> é uma constante (cujo valor é <code class="highlighter-rouge">9</code>) que pode ser usada no programa. Esta constante representa o número máximo de candidatos que a eleição pode ter.</p>
+
+<p>Em seguida, o arquivo define uma estrutura (<code class="highlighter-rouge">struct</code>) chamada <code class="highlighter-rouge">candidato</code>. Cada <code class="highlighter-rouge">candidato</code> possui dois campos: uma <code class="highlighter-rouge">string</code> chamada <code class="highlighter-rouge">nome</code> reprensentando o nome do candidato, e um <code class="highlighter-rouge">int</code> chamado <code class="highlighter-rouge">votos</code> representando o número de votos que o candidato tem. Em seguida, o arquivo define um vetor de <code class="highlighter-rouge">candidatos</code> global, onde cada elemento do vetor é um <code class="highlighter-rouge">candidato</code>.</p>
+
+<p>Agora, vamos dar uma olhada na função <code class="highlighter-rouge">main</code>. Tente encontrar as linhas de código onde o programa define uma variável global chamada <code class="highlighter-rouge">numero_candidatos</code> representando o número de <code class="highlighter-rouge">candidatos</code> na eleição, copiar os argumentos de linha de comando para o vetor candidatos, e pede ao usuário para digitar o número de eleitores. Em seguida, o programa permite que cada eleitor digite o seu voto (consegue ver como?), chamando a função v<code class="highlighter-rouge">voto</code> para cada candidato que for votado. Por fim, a função <code class="highlighter-rouge">main</code> chama a função <code class="highlighter-rouge">imprimir_vencedor</code> para imprimir o vencedor (ou vencedores) da eleição.</p>
+
+<p>Entretanto, se você ler o arquivo mais a fundo, você perceberá que as funções <code class="highlighter-rouge">voto</code> e <code class="highlighter-rouge">imprimir_vencedor</code> estão vazias. É sua tarefa implementá-las!</p>
+
+
+
+<h2 id="specification">Especificação</h2>
+
+<p>Complete a implementação do programa <code class="highlighter-rouge">pluralidade.c</code> de forma que o programa simule uma eleição em formato pluralidade.</p>
+
+<ul>
+  <li data-marker="*">Complete a função <code class="highlighter-rouge">voto</code>
+    <ul>
+      <li data-marker="*">a função <code class="highlighter-rouge">voto</code> recebe um único argumento, uma <code class="highlighter-rouge">string</code> chamada <code class="highlighter-rouge">nome</code>, que representa o nome do candidato para o qual o voto foi dado.</li>
+      <li data-marker="*">Se <code class="highlighter-rouge">nome</code> for igual ao nome de um dos candidatos na eleição, atualize o número de votos daquele candidato para registrar o novo voto. A função <code class="highlighter-rouge">voto</code> neste caso deve retornar <code class="highlighter-rouge">true</code> (verdadeiro) para indicar que o voto foi executado com sucesso.</li>
+      <li data-marker="*">Se <code class="highlighter-rouge">nome</code> não for igual ao nome de nenhum dos candidatos da eleição, nenhum dos números de votos dos candidatos deve ser alterado, e a função <code class="highlighter-rouge">voto</code> deve retornar <code class="highlighter-rouge">false</code> (falso) para indicar que o voto é inválido.</li>
+      <li data-marker="*">Você pode considerar que não haverá dois candidados com o mesmo nome.</li>
+
+
+    
+    </ul>
+  </li>
+  <li data-marker="*">Complete a função <code class="highlighter-rouge">imprimir_vencedor</code>
+    <ul>
+      <li data-marker="*">A função deve imprimir o nome do candidato que recebeu mais votos na eleição, e em seguida imprimir uma nova linha.</li>
+      <li data-marker="*">É possível que a eleição termine em um empate caso mais de um candidato tenha o número máximo de votos. Nesse caso, você deve imprimir os nomes de todos os candidatos vencedores, cada um em uma linha diferente.</li>
+    </ul>
+  </li>
+</ul>
+
+<p>Você não deve modificar mais nada no arquivo <code class="highlighter-rouge">pluralidade.c</code>, a não ser as implementações das funções <code class="highlighter-rouge">voto</code> e <code class="highlighter-rouge">imprimir_vencedor</code> (e a inclusão de arquivos-cabeçalho adicionais, caso você queira).</p>
+
+
+
+<h2 id="usage">Uso correto</h2>
+
+<p>Seu programa deve se comportar como nos exemplos abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./pluralidade Ana Bruno
+Número de eleitores: 3
+Voto: Ana
+Voto: Bruno
+Voto: Ana
+Ana
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./pluralidade Ana Bruno
+Números de eleitores: 3
+Voto: Ana
+Voto: Carlos
+Voto inválido.
+Voto: Ana
+Ana
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./pluralidade Ana Bruno Carlos
+Número de eleitores: 5
+Voto: Ana
+Voto: Carlos
+Voto: Bruno
+Voto: Bruno
+Voto: Ana
+Ana
+Bruno
+</code></pre></div></div>
+
+<h2 id="walkthrough">Passo a Passo</h2>
+
+<div class="border embed-responsive embed-responsive-16by9" data-video="">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/ftOapzDjEb8?modestbranding=1&amp;rel=0&amp;showinfo=0"></iframe>
+</div>
+
+<h2 id="testing">Como Testar Seu Código</h2>
+
+<p>Teste seu código para garantir que ele possa...</p>
+
+<ul>
+  <li data-marker="*">Executar uma eleição com qualquer quantidade de candidatos (até o máximo (<code class="highlighter-rouge">MAX</code>) de <code class="highlighter-rouge">9</code>)</li>
+  <li data-marker="*">Registrar um voto através do nome do candidato</li>
+  <li data-marker="*">Lidar com votos inválidos para candidatos que não estão concorrendo</li>
+  <li data-marker="*">Imprimir o nome do vencedor da eleição caso haja apenas um</li>
+  <li data-marker="*">Imprimir os nomes dos vencedores da eleição caso haja múltiplos vencedores</li>
+</ul>
+
+<p>Execute a linha abaixo para avaliar a correção do seu código usando a ferramenta <code class="highlighter-rouge">check50</code>. Não se esqueça de compilar e testar o código você também!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50xemportugues/problemas/2021/pluralidade
+</code></pre></div></div>
+
+<p>Execute a linha abaixo para avaliar o estilo do seu código usando a ferramenta <code class="highlighter-rouge">style50</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 pluralidade.c
+</code></pre></div></div>
+
+<h2>Como Adaptar Seu Código Antes de Enviar</h2>
+
+<p>TODO</p>
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+<p>Execute a linha abaixo, e em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2021/x/plurality
+</code></pre></div></div>   	
+               
+
+
+            </main>
+
+			</div>
+
+		</div>
+
+        <!--
+        <div aria-hidden="true" aria-labelledby="searchTitle" class="markdown-body modal" id="search" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="pr-3 w-100" id="searchbox"></div>
+                        <button class="btn btn-secondary btn-lg" data-dismiss="modal" type="button">Fechar</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="hits"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        
+        
+<script>
+
+    // Before shwoing searchbox
+    $('#search').on('show.bs.modal', function (e) {
+
+        // Client
+        const searchClient = algoliasearch('5RYPGI69HZ', '53d709e59d833870a6886f6fcf0b0bfe');
+        const search = instantsearch({
+            indexName: 'cs50-2020-summer',
+            searchClient: searchClient,
+            searchFunction: function(helper) { // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/js/#handling-empty-queries
+                const hits = $('#hits');
+                if (helper.state.query === '') {
+                    hits.hide();
+                    return;
+                }
+                helper.search();
+                hits.show();
+            }
+        });
+
+        // searchBox
+        // https://www.algolia.com/doc/api-reference/widgets/search-box/js/
+        search.addWidget(
+            instantsearch.widgets.searchBox({
+                container: '#searchbox',
+                cssClasses: {
+                    input: 'form-control'
+                },
+                placeholder: 'Search',
+                showLoadingIndicator: false,
+                showReset: false,
+                showSubmit: false
+            })
+        );
+
+        // hits
+        // https://www.algolia.com/doc/api-reference/widgets/hits/js/
+        search.addWidget(
+            instantsearch.widgets.hits({
+                container: '#hits',
+                templates: {
+                    item: function(hit) {
+
+                        // url
+                        if (window.baseurl) {
+                            var url = window.baseurl + hit.url;
+                        }
+                        else {
+                            var url = hit.url;
+                        }
+                        if (hit.anchor) {
+                            url += '#' + hit.anchor;
+                        }
+
+                        // title
+                        if (hit._highlightResult && hit._highlightResult.headings) {
+                            var title = hit._highlightResult.headings[hit._highlightResult.headings.length - 1].value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var title = hit._highlightResult.title.value;
+                        }
+                        else if (hit.headings) {
+                            var title = hit.headings[hit.headings.length - 1].value;
+                        }
+                        else if (hit.title) {
+                            var title = hit.title;
+                        }
+                        else {
+                            var title = url;
+                        }
+
+                        // content
+                        if (hit._highlightResult && hit._highlightResult.content) {
+                            var content = hit._highlightResult.content.value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var content = hit._highlightResult.title.value;
+                        }
+                        else {
+                            var content = hit.excerpt_text;
+                        }
+
+                        // Template for hit
+                        return '<h2 class="font-weight-bold h3 mb-0">' +
+                               '<a href="' + url + '">' +
+                               title +
+                               '</a>' +
+                               '</h2>' +
+                               '<p class="mb-0">' +
+                               '<a class="text-muted" href="' + url + '">' +
+                               url +
+                               '</a>' +
+                               '</p>' +
+                               '<p>' + 
+                               content +
+                               '</p>';
+                    }
+                }
+            })
+        );
+
+        // poweredBy
+        search.addWidget(
+            instantsearch.widgets.poweredBy({
+                container: '#search .modal-footer'
+            })
+        );
+
+        // Let user start searching
+        search.start();
+
+        // Resize form
+        $(window).trigger('resize');
+    });
+
+    // After showing searchbox
+    $('#search').on('shown.bs.modal', function (e) {
+        $('#searchbox input[type=search]').focus();
+    });
+
+</script>
+</body>
+</html>

@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<!-- saved from url=(0037)https://cs50.harvard.edu/summer/2020/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta property="og:description" content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final.">
+
+<meta property="og:image" content=""><meta property="og:title" content="CS50"><link href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821" rel="icon">
+
+<!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+<script src="https://kit.fontawesome.com/df44463090.js" crossorigin="anonymous"></script>
+
+<link href="/static/css/all.min.css" rel="stylesheet">
+
+<link href="/static/css/page.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="/static/css/personalizado.css">
+
+<!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+<script src="/static/js/moment.min.js"></script>
+<script src="/static/js/moment-timezone-with-data.min.js"></script>
+<script src="/static/js/luxon.min.js"></script>
+
+<!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+<script src="/static/js/algoliasearchLite.min.js"></script>
+<script src="/static/js/instantsearch.production.min.js"></script>
+<script src="/static/js/jekyll-theme-cs50.js"></script>
+
+<title>CS50x em Português</title>
+
+</head>
+
+<body>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+            <aside class="col-md">
+ 
+    <header>
+        <h1 data-id="this-is-cs50">
+            <a href="/2022/index.html">Este é o CS50x</a>
+        </h1>
+
+        <p><a href="https://cs50.harvard.edu/">O curso da Universidade de Harvard em Português!</a><br>2021</p>
+    </header>
+
+    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside &gt; nav" data-toggle="collapse">
+        Menu
+    </button>
+
+    <nav class="collapse d-md-block" id="nav">
+    
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/0.html">Semana 0 <span class="semana-titulo">Scratch <strong class="text-white">😺</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/1.html">Semana 1 <span class="semana-titulo">Linguagem C</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/2.html">Semana 2 <span class="semana-titulo">Vetores</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/3.html">Semana 3 <span class="semana-titulo">Algoritmos</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/4.index.html">Semana 4 <span class="semana-titulo">Memória <strong class="text-white">🧠</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/5.html">Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/6.html">Semana 6 <span class="semana-titulo">Python <strong class="text-white">🐍</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/7.html">Semana 7 <span class="semana-titulo">SQL</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/8.html">Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/9.html">Semana 9 <span class="semana-titulo">Flask</span></a>
+            </li>
+        </ul>
+                                
+        <ul>
+            <li data-marker="*">
+                <a href="/2022/especializacoes.html">Especializações</a>
+            </li>
+            <li data-marker="*">
+                <a href="/2022/projeto_final.html">Projeto Final</a>
+            </li>
+        </ul>
+
+        <!--
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*" class="small">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="guia.pdf">Guia Rápido de Inicialização</a>
+            </li>
+        </ul>-->
+
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/perguntas_frequentes.html">Perguntas Frequentes</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/tutorias.html">Tutorias</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/problemas/index.html">Listas de Problemas</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/secoes.html">Seções</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/equipe.html">Equipe</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/curriculo.html">Currículo do Curso</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul class="small fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://ide.cs50.io/">CS50 IDE</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://sqlitebrowser.org/">Navegador para SQLite</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://adminer.cs50.net/">Navegador para PostgreSQL</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://docs.python.org/pt-br/3/search.html">Documentação Python</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://stackoverflow.com/search">Stack Overflow</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/guiadeestilo.html">Guia de Estilo</a>
+            </li>-->
+        </ul>
+
+        <hr>
+
+        <p style="font-size: initial">
+            <a href="/2022/obrigado.html">Agradecemos</a> à todos os ex-alunos e amigos do CS50
+        </p>
+    </nav>
+
+    <footer></footer>
+</aside>
+
+            <main class="col-md markdown-body" style="margin-bottom: 286px;">
+            
+
+<h1 id="readability">Legibilidade</h1>
+
+<p>Implemente um programa que calcula o nível escolar aproximado necessário para compreender um texto, como mostrado abaixo</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: Parabéns! Hoje é seu dia. Você realizará grandes coisas! Você está pronto para começar!
+Nível 3
+</code></pre></div></div>
+
+<h2 id="reading-levels">Níveis de Leitura</h2>
+
+<p>De acordo com alguns especialistas, o livro "Charlotte's Web", do autor E.B. White, está entre os níveis escolares 2 e 4, e o livro "The Giver", do autor Lois Lawry, está entre os níveis escolares 8 e 12. Entretanto, o que significa um livro estar no "nível escolar 4"?</p>
+
+<p>Bem, em muitos casos, um especialista lê um livro e decide a qual nível esse livro é mais apropriado. Mas nós poderíamos imaginar também um algoritmo que tenta descobrir qual é o nível de leitura de um texto.</p>
+
+<p>Portanto, que tipo de aspectos são caracteristicas de níveis de leitura mais altos? Bem, palavras longas provavelmente estão relacionadas com níveis de leitura mais altos. De forma semelhante, frases mais longas provavelmente estão relacionadas com níveis de leitura mais altos. Vários "testes de legibilidade" foram desenvolvidos ao longo dos anos, para criar um processo formal para calcular o nível de leitura de um texto.</p>
+
+<p>Um desses testes de legibilidade é o índice Coleman-Liau. O índice Coleman-Liau foi criado para calcular qual nível escolar é necessário para entender um texto. A fórmula é:</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>index = 0.0588 * L - 0.296 * F - 15.8
+</code></pre></div></div>
+
+
+<p>Neste caso, <code class="highlighter-rouge">L</code> é o número médio de letras a cada 100 palavras no texto, e <code class="highlighter-rouge">F</code> é o número médio de frases a cada 100 palavras no atexto.</p>
+
+
+<p>Vamos escrever um programa chamado <code class="highlighter-rouge">legibilidade</code> que recebe um texto e determina qual é seu nível de leitura. Por exemplo, se o usuário digitar uma frase do livro "NOME DO LIVRO":</p>
+
+
+
+
+
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: TEXTO TEXTO TEXTO TEXTO TEXTO
+Nível X
+</code></pre></div></div>
+
+<p>O texto inserido pelo usuário possui X letras, Y frases, e Z palavras. X letras a cada Z palavras é igual a uma média de [464.29] letras a cada 100 palavras. E Y frases a cada Z palavras é igual a uma média de [28.57] frases a cada 100 palavras. Quando inserimos esses dados na fórmula Coleman-Liau, e após arredondar para o número inteiro mais próximo, a fórmula gera como resultado o valor 3, portanto, este trecho está no terceiro nível escolar de leitura.</p>
+
+<p>Vamos testar outra passagem:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: Harry Potter era um menino bastante fora do comum em muitas coisas. Para começar, ele detestava as férias de verão mais do que qualquer outra época do ano. Depois, ele realmente queria fazer seus deveres de casa mas era obrigado a fazê-los escondido, na calada da noite. E, além de tudo, também era bruxo.
+Nível 8
+</code></pre></div></div>
+
+<p>Este texto possui 235 letras, 4 frases, e 54 palavras. Isso equivale a aproximadamente 435.18 letras a cada 100 palavras, e 7.4 frases a cada 100 palavras. Quando inserimos esses dados na fórmula Coleman/Liau, dá como resultado o oitavo nível escolar de leitura.</p>
+
+
+<p>A medida que o número de letras e palavras por frase aumenta, o índice Coleman-Liau classifica o texto com um nível de leitura maior. Se fossemos analizar este parágrafo, por exemplo, que possui palavras e frases mais longas do que os dois exemplos anteriores, a fórmula classificaria o texto como estando no décimo primeiro nível escolar de leitura.</p>
+
+
+
+
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: A medida que o número de letras e palavras por frase aumenta, o índice Coleman-Liau classifica o texto com um nível de leitura maior. Se fossemos analizar este parágrafo, por exemplo, que possui palavras e frases mais longas do que os dois exemplos anteriores, a fórmula classificaria o texto como estando no décimo primeiro nível escolar de leitura.
+Nível 11
+</code></pre></div></div>
+
+<h2 id="specification">Especificação</h2>
+
+<p>Projete e implemente um programa, chamado <code class="highlighter-rouge">legibilidade</code>, que calcula o índice Coleman-Liau de um texto.</p>
+
+
+<ul>
+  <li data-marker="*">Implemente seu programa em um arquivo chamado <code class="highlighter-rouge">legibilidade.c</code>, em um diretório chamado <code class="highlighter-rouge">~/problemas2/legibilidade</code>.</li>
+
+
+  <li data-marker="*">Seu programa deve pedir ao usuário informar um texto (usando a função <code class="highlighter-rouge">get_string</code>).</li>
+  
+
+  <li data-marker="*">Seu programa deve contar o número de letras, palavras, e frases em um texto. Você pode supor que uma letra é qualquer caractere minúsculo de <code class="highlighter-rouge">a</code> até <code class="highlighter-rouge">z</code ou qualquer caractere maiúsculo de <code class="highlighter-rouge">A</code> até <code class="highlighter-rouge">Z</code>, que qualquer sequência de caracteres separada por espaços equivale a uma palavra, e que qualquer aparição de ponto final, ponto de exclamação, ou ponto de interrogação indica o fim de uma frase.</li>
+  
+
+  <li data-marker="*">Seu programa deve imprimir como saída de dados <code class="highlighter-rouge">"Nível X"</code>, onde <code class="highlighter-rouge">X</code> é o nível escolar calculado pela fórmula Coleman-Liau, arredondado para o inteiro mais próximo..</li>
+  
+
+  <li data-marker="*">Se o índice calculado for 16 ou maior (equivalente ou maior do que um nível de leitura de um aluno veterano de faculdade), seu programa deve imprimir <code class="highlighter-rouge">"Nível 16+"</code> ao invés de informar o índice exato. Se o índice for menor do que 1, seu programa deve imprimir <code class="highlighter-rouge">"Antes do Nível 1"</code>.</li>
+</ul>
+
+<h3 id="getting-user-input">Recebendo Dados do Usuário</h3>
+
+<p>Primeiramente, vamos escrever um pouco de código para receber dados do usuário, e imprimir de volta na tela. Mais especificamente, escrever código em um arquivo chamado <code class="highlighter-rouge">legibilidade.c</code>, de forma que quando o usuário executar o programa, o programa exibirá a mensagem <code class="highlighter-rouge">"Texto: "</code> para que o usuário digite algum texto.</p>
+
+
+<p>O comportamento do programa deve ser como mostrado abaixo.</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: A dúvida é autora das insônias mais cruéis. Ao passo que, inversamente, uma boa e sólida certeza vale como um barbitúrico irresistível.
+A dúvida é autora das insônias mais cruéis. Ao passo que, inversamente, uma boa e sólida certeza vale como um barbitúrico irresistível.
+</code></pre></div></div>
+
+
+<h3 id="letters">Letras</h3>
+
+<p>Agora que você recebeu dados do usuário, vamos começar a analizar essa entrada de dados contando o número de letras que aparecem no texto. Modifique <code class="highlighter-rouge">legibilidade.c</code> para que, ao invés de imprimir o texto em si, ele imprima o número de letras no texto.</p>
+
+<p>O comportamento do programa deve ser como mostrado abaixo.</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: Alice estava começando a se cansar de ficar sentada ao lado da irmã à beira do lago, sem ter nada para fazer: uma ou duas vezes ela tinha espiado no livro que a irmã estava lendo, mas o livro não tinha desenhos, nem diálogos. “E de que serve um livro”, pensou Alice, “sem desenhos ou diálogos?”
+220 letra(s)
+</code></pre></div></div>
+
+
+<p>Letras podem ser qualquer caractere alfabético maiúsculo ou minúsculo, mas não deve incluir nenhuma pontuação, dígitos, ou outros símbolos.</p>
+
+
+<p>Você pode consultar o manual <a href="https://cs50xemportugues.github.io/manual">https://cs50xemportugues.github.io/manual/</a> para encontrar funções que possam te ajudar! Você também pode escrever uma função você mesmo, chamada de <code class="highlighter-rouge">contar_letras</code>, por exemplo, que seja útil e te ajude a manter o código organizado.</p>
+
+
+<h3>Palavras</h3>
+
+
+<p>O índice Coleman-Liau se importa não somente com o número de letras, mas também o número de palavras em uma frase. Para o propósito deste problema, nós vamos considerar qualquer sequência de caracteres separada por um espaço como sendo uma palavra (portanto uma palavra contendo hífen, como por exemplo <code class="highlighter-rouge">"guarda-chuva"</code>, deve ser considerado uma palavra, e não duas).</p>
+
+<p>Modifique <code class="highlighter-rouge">legibilidade.c</code> de forma que, além de imprimir o número de letras no texto, também imprima o número de palavras no texto.</p>
+
+<p>Você pode considerar que uma frase não começará ou terminará em espaço e você pode considerar que uma frase não terá vários espaços seguidos.</p>
+
+<p>O comportamento do programa deve ser como mostrado abaixo.</p>
+
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Texto: Era um dia frio e ensolarado de abril, e os relógios batiam treze horas. Winston Smith, o queixo fincado no peito numa tentativa de fugir ao vento impiedoso, esgueirou-se rápido pelas portas de vidro da Mansão Vitória; não porém com rapidez suficiente para evitar que o acompanhasse uma onda de pó áspero.
+248 letra(s)
+53 palavra(s)
+</code></pre></div></div>
+
+<h3 id="sentences">Sentenças</h3>
+
+<p>A última coisa que compõe a fórmula Coleman-Liau, além do número de letras e palavras, é o número de sentenças. Determinar o número de frases é complicado. Você pode primeiro imaginar que uma sentença é simplesmente uma sequência de caracteres que terminam em um ponto, mas uma sentença, é claro, pode terminar com um ponto de exclamação ou ponto de interrogação. Mas nem todos os pontos significam necessariamente que uma sentença terminou. Considere, por exemplo, a sentença abaixo.</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Mr. and Mrs. Dursley, of number four Privet Drive, were proud to say that they were perfectly normal, thank you very much.
+</code></pre></div></div>
+
+
+
+<p>Isto é uma única sentença, mas existem três pontos! Para este problema, nós vamos pedir que você ignore essa sutileza: você deve considerar qualquer sequência de caracteres que terminam em um <code class="highlighter-rouge">.</code> ou um <code class="highlighter-rouge">!</code> ou um <code class="highlighter-rouge">?</code> como sendo uma sentença (portanto, para a "sentença" acima, você pode considerar como sendo três sentenças). Na prática, detectar os limites de sentenças precisa ser feito de forma mais inteligente, mas nós não vamos nos preocupar com isso agora.</p>
+
+<p>Modifique <code class="highlighter-rouge">legibilidade.c</code> de forma que o programa agora também imprima o número de sentenças no texto.</p>
+
+<p>O comportamento do programa deve ser como abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./legibilidade
+Text: When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh.
+295 letra(s)
+70 palavra(s)
+3 sentença(s)
+</code></pre></div></div>
+
+
+
+<h3 id="putting-it-all-together">Finalizando</h3>
+
+<p>Agora é hora de juntar todas as peças e finalizar a resolução do problema! Lembre-se que o índice Coleman-Liau é calculado usando a fórmula:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>indice = 0.0588 * L - 0.296 * S - 15.8
+</code></pre></div></div>
+
+<p>onde <code class="highlighter-rouge">L</code> é a média de letras a cada 100 palavras no texto, e <code class="highlighter-rouge">S</code> é a média de sentenças a cada 100 palavras no texto.</p>
+
+<p>Modifique o programa <code class="highlighter-rouge">legibilidade.c</code> de maneira que ao invés de imprimir o número de letras, palavras, e sentenças, o programa imprime o nível escolar indicado pelo índice Coleman-Liau (por exemplo, <code class="highlighter-rouge">"Nível 2"</code> ou <code class="highlighter-rouge">"Nível 8"</code>). Não se esqueça de arredondar o resultado para o número inteiro mais próximo!</p>
+
+<p>Se o índice resultante for 16 ou maior (equivalente ou maior que um nível de leitura de estudante de ensino superior), seu programa deve imprimir <code class="highlighter-rouge">"Nível 16+"</code> ao invés do número do índice exato. Se o número do índice for menor do que 1, se programa deve imprimir <code class="highlighter-rouge">"Antes do Nível 1"</code>.</p>
+
+
+
+<details>
+    <summary>Dicas/summary>
+    <ul>
+  <li data-marker="*">
+    <p>Lembre-se que a biblioteca <code class="highlighter-rouge">math.h</code> declara uma função chamada <code class="highlighter-rouge">round</code> que pode ser útil neste problema.</p>
+  </li>
+  <li data-marker="*">
+    <p>Lembre-se que quando estiver dividindo valores do tipo <code class="highlighter-rouge">int</code> na linguagem C, o resultado também será um <code class="highlighter-rouge">int</code>, e que qualquer resto de divisão (ou seja, os dígitos depois do ponto decimal) é descartado. Em outras palavras, o resultado será "truncado". Você deve converter um ou mais valores para o tipo de dado <code class="highlighter-rouge">float</code> antes de fazer divisão quando estiver calculando <code class="highlighter-rouge">L</code> e <code class="highlighter-rouge">S</code>!</p>
+  </li>
+</ul>
+</details>
+
+<h2 id="walkthrough">Passo a passo</h2>
+
+<div class="border embed-responsive embed-responsive-16by9" data-video="">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/nif3h2ggrOU?modestbranding=1&amp;rel=0&amp;showinfo=0"></iframe>
+</div>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>Perceba que ainda que o passo a passo ilustre que as palavras possam ser separadas por mais de um espaço, você pode considerar, seguindo as especificações acima, que nenhuma sentença terá mais do que um espaço em sequência.</p>
+</div>
+
+<h2 id="how-to-test-your-code">Como Testar Seu Código</h2>
+
+<p>Tente executar seu programa com os seguintes textos.</p>
+
+<ul>
+  <li data-marker="*"><code class="highlighter-rouge">One fish. Two fish. Red fish. Blue fish.</code> (Antes do Nível 1)</li>
+  <li data-marker="*"><code class="highlighter-rouge">Would you like them here or there? I would not like them here or there. I would not like them anywhere.</code> (Nível 2)</li>
+  <li data-marker="*"><code class="highlighter-rouge">Congratulations! Today is your day. You're off to Great Places! You're off and away!</code> (Nível 3)</li>
+  <li data-marker="*"><code class="highlighter-rouge">Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.</code> (Nível 5)</li>
+  <li data-marker="*"><code class="highlighter-rouge">In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</code> (Nível 7)</li>
+  <li data-marker="*"><code class="highlighter-rouge">Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice "without pictures or conversation?"</code> (Nível 8)</li>
+  <li data-marker="*"><code class="highlighter-rouge">When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh.</code> (Nível 8)</li>
+  <li data-marker="*"><code class="highlighter-rouge">There are more things in Heaven and Earth, Horatio, than are dreamt of in your philosophy.</code> (Nível 9)</li>
+  <li data-marker="*"><code class="highlighter-rouge">It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.</code> (Nível 10)</li>
+  <li data-marker="*"><code class="highlighter-rouge">A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains.</code> (Nível 16+)</li>
+</ul>
+
+<p>Execute a linha abaixo para avaliar a correção do seu código usando a ferramenta <code class="highlighter-rouge">check50</code>. Não se esqueça de compilar e testar o código você também!</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50xemportugues/problemas/2022/legibilidade
+</code></pre></div></div>
+
+<p>Execute a linha abaixo para avaliar o estilo do seu código usando a ferramenta <code class="highlighter-rouge">style50</code>.</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 legibilidade.c
+</code></pre></div></div>
+
+<h2>Como Adaptar Seu Código Antes de Enviar</h2>
+
+<p>TODO</p>
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+<p>Execute a linha abaixo, e em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2022/x/plurality
+</code></pre></div></div>   	
+               
+
+
+            </main>
+
+			</div>
+
+		</div>
+
+        <!--
+        <div aria-hidden="true" aria-labelledby="searchTitle" class="markdown-body modal" id="search" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="pr-3 w-100" id="searchbox"></div>
+                        <button class="btn btn-secondary btn-lg" data-dismiss="modal" type="button">Fechar</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="hits"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        
+        
+<script>
+
+    // Before shwoing searchbox
+    $('#search').on('show.bs.modal', function (e) {
+
+        // Client
+        const searchClient = algoliasearch('5RYPGI69HZ', '53d709e59d833870a6886f6fcf0b0bfe');
+        const search = instantsearch({
+            indexName: 'cs50-2020-summer',
+            searchClient: searchClient,
+            searchFunction: function(helper) { // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/js/#handling-empty-queries
+                const hits = $('#hits');
+                if (helper.state.query === '') {
+                    hits.hide();
+                    return;
+                }
+                helper.search();
+                hits.show();
+            }
+        });
+
+        // searchBox
+        // https://www.algolia.com/doc/api-reference/widgets/search-box/js/
+        search.addWidget(
+            instantsearch.widgets.searchBox({
+                container: '#searchbox',
+                cssClasses: {
+                    input: 'form-control'
+                },
+                placeholder: 'Search',
+                showLoadingIndicator: false,
+                showReset: false,
+                showSubmit: false
+            })
+        );
+
+        // hits
+        // https://www.algolia.com/doc/api-reference/widgets/hits/js/
+        search.addWidget(
+            instantsearch.widgets.hits({
+                container: '#hits',
+                templates: {
+                    item: function(hit) {
+
+                        // url
+                        if (window.baseurl) {
+                            var url = window.baseurl + hit.url;
+                        }
+                        else {
+                            var url = hit.url;
+                        }
+                        if (hit.anchor) {
+                            url += '#' + hit.anchor;
+                        }
+
+                        // title
+                        if (hit._highlightResult && hit._highlightResult.headings) {
+                            var title = hit._highlightResult.headings[hit._highlightResult.headings.length - 1].value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var title = hit._highlightResult.title.value;
+                        }
+                        else if (hit.headings) {
+                            var title = hit.headings[hit.headings.length - 1].value;
+                        }
+                        else if (hit.title) {
+                            var title = hit.title;
+                        }
+                        else {
+                            var title = url;
+                        }
+
+                        // content
+                        if (hit._highlightResult && hit._highlightResult.content) {
+                            var content = hit._highlightResult.content.value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var content = hit._highlightResult.title.value;
+                        }
+                        else {
+                            var content = hit.excerpt_text;
+                        }
+
+                        // Template for hit
+                        return '<h2 class="font-weight-bold h3 mb-0">' +
+                               '<a href="' + url + '">' +
+                               title +
+                               '</a>' +
+                               '</h2>' +
+                               '<p class="mb-0">' +
+                               '<a class="text-muted" href="' + url + '">' +
+                               url +
+                               '</a>' +
+                               '</p>' +
+                               '<p>' + 
+                               content +
+                               '</p>';
+                    }
+                }
+            })
+        );
+
+        // poweredBy
+        search.addWidget(
+            instantsearch.widgets.poweredBy({
+                container: '#search .modal-footer'
+            })
+        );
+
+        // Let user start searching
+        search.start();
+
+        // Resize form
+        $(window).trigger('resize');
+    });
+
+    // After showing searchbox
+    $('#search').on('shown.bs.modal', function (e) {
+        $('#searchbox input[type=search]').focus();
+    });
+
+</script>
+</body>
+</html>

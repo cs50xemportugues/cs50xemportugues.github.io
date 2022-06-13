@@ -1,0 +1,493 @@
+<!DOCTYPE html>
+
+<!-- saved from url=(0037)https://cs50.harvard.edu/summer/2020/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta property="og:description" content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final.">
+
+<meta property="og:image" content=""><meta property="og:title" content="CS50"><link href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821" rel="icon">
+
+<!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+<script src="https://kit.fontawesome.com/df44463090.js" crossorigin="anonymous"></script>
+
+<link href="/static/css/all.min.css" rel="stylesheet">
+
+<link href="/static/css/page.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="/static/css/personalizado.css">
+
+<!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+<script src="/static/js/moment.min.js"></script>
+<script src="/static/js/moment-timezone-with-data.min.js"></script>
+<script src="/static/js/luxon.min.js"></script>
+
+<!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+<script src="/static/js/algoliasearchLite.min.js"></script>
+<script src="/static/js/instantsearch.production.min.js"></script>
+<script src="/static/js/jekyll-theme-cs50.js"></script>
+
+<title>CS50x em Português</title>
+
+</head>
+
+<body>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+            <aside class="col-md">
+ 
+    <header>
+        <h1 data-id="this-is-cs50">
+            <a href="/2022/index.html">Este é o CS50x</a>
+        </h1>
+
+        <p><a href="https://cs50.harvard.edu/">O curso da Universidade de Harvard em Português!</a><br>2021</p>
+    </header>
+
+    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside &gt; nav" data-toggle="collapse">
+        Menu
+    </button>
+
+    <nav class="collapse d-md-block" id="nav">
+    
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/0.html">Semana 0 <span class="semana-titulo">Scratch <strong class="text-white">😺</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/1.html">Semana 1 <span class="semana-titulo">Linguagem C</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/2.html">Semana 2 <span class="semana-titulo">Vetores</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/3.html">Semana 3 <span class="semana-titulo">Algoritmos</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/4.index.html">Semana 4 <span class="semana-titulo">Memória <strong class="text-white">🧠</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/5.html">Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/6.html">Semana 6 <span class="semana-titulo">Python <strong class="text-white">🐍</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/7.html">Semana 7 <span class="semana-titulo">SQL</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/8.html">Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/9.html">Semana 9 <span class="semana-titulo">Flask</span></a>
+            </li>
+        </ul>
+                                
+        <ul>
+            <li data-marker="*">
+                <a href="/2022/especializacoes.html">Especializações</a>
+            </li>
+            <li data-marker="*">
+                <a href="/2022/projeto_final.html">Projeto Final</a>
+            </li>
+        </ul>
+
+        <!--
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*" class="small">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="guia.pdf">Guia Rápido de Inicialização</a>
+            </li>
+        </ul>-->
+
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/perguntas_frequentes.html">Perguntas Frequentes</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/tutorias.html">Tutorias</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/problemas/index.html">Listas de Problemas</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/secoes.html">Seções</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/equipe.html">Equipe</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/curriculo.html">Currículo do Curso</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul class="small fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://ide.cs50.io/">CS50 IDE</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://sqlitebrowser.org/">Navegador para SQLite</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://adminer.cs50.net/">Navegador para PostgreSQL</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://docs.python.org/pt-br/3/search.html">Documentação Python</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://stackoverflow.com/search">Stack Overflow</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/guiadeestilo.html">Guia de Estilo</a>
+            </li>-->
+        </ul>
+
+        <hr>
+
+        <p style="font-size: initial">
+            <a href="/2022/obrigado.html">Agradecemos</a> à todos os ex-alunos e amigos do CS50
+        </p>
+    </nav>
+
+    <footer></footer>
+</aside>
+
+            <main class="col-md markdown-body" style="margin-bottom: 286px;">
+            
+
+
+
+<h1 id="dna">DNA</h1>
+
+<p>Implement a program that identifies a person based on their DNA, per the below.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python dna.py databases/large.csv sequences/5.txt
+Lavender
+</code></pre></div></div>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Here’s how to download this problem into your own CS50 IDE. Log into <a href="https://ide.cs50.io/">CS50 IDE</a> and then, in a terminal window, execute each of the below.</p>
+
+<ul>
+  <li data-marker="*">Execute <code class="highlighter-rouge">cd</code> to ensure that you’re in <code class="highlighter-rouge">~/</code> (i.e., your home directory, aka <code class="highlighter-rouge">~</code>).</li>
+  <li data-marker="*">If you haven’t already, execute <code class="highlighter-rouge">mkdir pset6</code> to make (i.e., create) a directory called <code class="highlighter-rouge">pset6</code> in your home directory.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">cd pset6</code> to change into (i.e., open) that directory.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">wget https://cdn.cs50.net/2019/fall/psets/6/dna/dna.zip</code> to download a (compressed) ZIP file with this problem’s distribution.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">unzip dna.zip</code> to uncompress that file.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">rm dna.zip</code> followed by <code class="highlighter-rouge">yes</code> or <code class="highlighter-rouge">y</code> to delete that ZIP file.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">ls</code>. You should see a directory called <code class="highlighter-rouge">dna</code>, which was inside of that ZIP file.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">cd dna</code> to change into that directory.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">ls</code>. You should see a directory of sample <code class="highlighter-rouge">databases</code> and a directory of sample <code class="highlighter-rouge">sequences</code>.</li>
+</ul>
+
+<h2 id="background">Background</h2>
+
+<p>DNA, the carrier of genetic information in living things, has been used in criminal justice for decades. But how, exactly, does DNA profiling work? Given a sequence of DNA, how can forensic investigators identify to whom it belongs?</p>
+
+<p>Well, DNA is really just a sequence of molecules called nucleotides, arranged into a particular shape (a double helix). Each nucleotide of DNA contains one of four different bases: adenine (A), cytosine (C), guanine (G), or thymine (T). Every human cell has billions of these nucleotides arranged in sequence. Some portions of this sequence (i.e. genome) are the same, or at least very similar, across almost all humans, but other portions of the sequence have a higher genetic diversity and thus vary more across the population.</p>
+
+<p>One place where DNA tends to have high genetic diversity is in Short Tandem Repeats (STRs). An STR is a short sequence of DNA bases that tends to repeat consecutively numerous times at specific locations inside of a person’s DNA. The number of times any particular STR repeats varies a lot among individuals. In the DNA samples below, for example, Alice has the STR <code class="highlighter-rouge">AGAT</code> repeated four times in her DNA, while Bob has the same STR repeated five times.</p>
+
+<p><img src="strs.png" alt="Sample STRs"></p>
+
+<p>Using multiple STRs, rather than just one, can improve the accuracy of DNA profiling. If the probability that two people have the same number of repeats for a single STR is 5%, and the analyst looks at 10 different STRs, then the probability that two DNA samples match purely by chance is about 1 in 1 quadrillion (assuming all STRs are independent of each other). So if two DNA samples match in the number of repeats for each of the STRs, the analyst can be pretty confident they came from the same person. CODIS, The FBI’s <a href="https://www.fbi.gov/services/laboratory/biometric-analysis/codis/codis-and-ndis-fact-sheet">DNA database</a>, uses 20 different STRs as part of its DNA profiling process.</p>
+
+<p>What might such a DNA database look like? Well, in its simplest form, you could imagine formatting a DNA database as a CSV file, wherein each row corresponds to an individual, and each column corresponds to a particular STR.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>name,AGAT,AATG,TATC
+Alice,28,42,14
+Bob,17,22,19
+Charlie,36,18,25
+</code></pre></div></div>
+
+<p>The data in the above file would suggest that Alice has the sequence <code class="highlighter-rouge">AGAT</code> repeated 28 times consecutively somewhere in her DNA, the sequence <code class="highlighter-rouge">AATG</code> repeated 42 times, and <code class="highlighter-rouge">TATC</code> repeated 14 times. Bob, meanwhile, has those same three STRs repeated 17 times, 22 times, and 19 times, respectively. And Charlie has those same three STRs repeated 36, 18, and 25 times, respectively.</p>
+
+<p>So given a sequence of DNA, how might you identify to whom it belongs? Well, imagine that you looked through the DNA sequence for the longest consecutive sequence of repeated <code class="highlighter-rouge">AGAT</code>s and found that the longest sequence was 17 repeats long. If you then found that the longest sequence of <code class="highlighter-rouge">AATG</code> is 22 repeats long, and the longest sequence of <code class="highlighter-rouge">TATC</code> is 19 repeats long, that would provide pretty good evidence that the DNA was Bob’s. Of course, it’s also possible that once you take the counts for each of the STRs, it doesn’t match anyone in your DNA database, in which case you have no match.</p>
+
+<p>In practice, since analysts know on which chromosome and at which location in the DNA an STR will be found, they can localize their search to just a narrow section of DNA. But we’ll ignore that detail for this problem.</p>
+
+<p>Your task is to write a program that will take a sequence of DNA and a CSV file containing STR counts for a list of individuals and then output to whom the DNA (most likely) belongs.</p>
+
+<h2 id="specification">Specification</h2>
+
+<p>In a file called <code class="highlighter-rouge">dna.py</code> in <code class="highlighter-rouge">~/pset6/dna/</code>, implement a program that identifies to whom a sequence of DNA belongs.</p>
+
+<ul>
+  <li data-marker="*">The program should require as its first command-line argument the name of a CSV file containing the STR counts for a list of individuals and should require as its second command-line argument the name of a text file containing the DNA sequence to identify.
+    <ul>
+      <li data-marker="*">If your program is executed with the incorrect number of command-line arguments, your program should print an error message of your choice (with <code class="highlighter-rouge">print</code>). If the correct number of arguments are provided, you may assume that the first argument is indeed the filename of a valid CSV file, and that the second argument is the filename of a valid text file.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Your program should open the CSV file and read its contents into memory.
+    <ul>
+      <li data-marker="*">You may assume that the first row of the CSV file will be the column names. The first column will be the word <code class="highlighter-rouge">name</code> and the remaining columns will be the STR sequences themselves.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Your program should open the DNA sequence and read its contents into memory.</li>
+  <li data-marker="*">For each of the STRs (from the first line of the CSV file), your program should compute the longest run of consecutive repeats of the STR in the DNA sequence to identify.</li>
+  <li data-marker="*">If the STR counts match exactly with any of the individuals in the CSV file, your program should print out the name of the matching individual.
+    <ul>
+      <li data-marker="*">You may assume that the STR counts will not match more than one individual.</li>
+      <li data-marker="*">If the STR counts do not match exactly with any of the individuals in the CSV file, your program should print <code class="highlighter-rouge">"No match"</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="walkthrough">Walkthrough</h2>
+
+<div class="border embed-responsive embed-responsive-16by9" data-video="">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/j84b_EgntcQ?modestbranding=1&amp;rel=0&amp;showinfo=0"></iframe>
+</div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Your program should behave per the example below:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python dna.py databases/large.csv sequences/5.txt
+Lavender
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python dna.py
+Usage: python dna.py data.csv sequence.txt
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python dna.py data.csv
+Usage: python dna.py data.csv sequence.txt
+</code></pre></div></div>
+
+<h2 id="hints">Hints</h2>
+
+<ul>
+  <li data-marker="*">You may find Python’s <a href="https://docs.python.org/3/library/csv.html"><code class="highlighter-rouge">csv</code></a> module helpful for reading CSV files into memory. You may want to take advantage of either <a href="https://docs.python.org/3/library/csv.html#csv.reader"><code class="highlighter-rouge">csv.reader</code></a> or <a href="https://docs.python.org/3/library/csv.html#csv.DictReader"><code class="highlighter-rouge">csv.DictReader</code></a>.</li>
+  <li data-marker="*">The <a href="https://docs.python.org/3.3/tutorial/inputoutput.html#reading-and-writing-files"><code class="highlighter-rouge">open</code></a> and <a href="https://docs.python.org/3.3/tutorial/inputoutput.html#methods-of-file-objects"><code class="highlighter-rouge">read</code></a> functions may prove useful for reading text files into memory.</li>
+  <li data-marker="*">Consider what data structures might be helpful for keeping tracking of information in your program. A <a href="https://docs.python.org/3/tutorial/introduction.html#lists"><code class="highlighter-rouge">list</code></a> or a <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries"><code class="highlighter-rouge">dict</code></a> may prove useful.</li>
+</ul>
+
+<h2 id="testing">Testing</h2>
+
+<p>No <code class="highlighter-rouge">check50</code> for this problem, but be sure to test your code for each of the following.</p>
+
+<ul>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/small.csv sequences/1.txt</code>. Your program should output <code class="highlighter-rouge">Bob</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/small.csv sequences/2.txt</code>. Your program should output <code class="highlighter-rouge">No match</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/small.csv sequences/3.txt</code>. Your program should output <code class="highlighter-rouge">No match</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/small.csv sequences/4.txt</code>. Your program should output <code class="highlighter-rouge">Alice</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/5.txt</code>. Your program should output <code class="highlighter-rouge">Lavender</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/6.txt</code>. Your program should output <code class="highlighter-rouge">Luna</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/7.txt</code>. Your program should output <code class="highlighter-rouge">Ron</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/8.txt</code>. Your program should output <code class="highlighter-rouge">Ginny</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/9.txt</code>. Your program should output <code class="highlighter-rouge">Draco</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/10.txt</code>. Your program should output <code class="highlighter-rouge">Albus</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/11.txt</code>. Your program should output <code class="highlighter-rouge">Hermione</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/12.txt</code>. Your program should output <code class="highlighter-rouge">Lily</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/13.txt</code>. Your program should output <code class="highlighter-rouge">No match</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/14.txt</code>. Your program should output <code class="highlighter-rouge">Severus</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/15.txt</code>. Your program should output <code class="highlighter-rouge">Sirius</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/16.txt</code>. Your program should output <code class="highlighter-rouge">No match</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/17.txt</code>. Your program should output <code class="highlighter-rouge">Harry</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/18.txt</code>. Your program should output <code class="highlighter-rouge">No match</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/19.txt</code>. Your program should output <code class="highlighter-rouge">Fred</code>.</li>
+  <li data-marker="*">Run your program as <code class="highlighter-rouge">python dna.py databases/large.csv sequences/20.txt</code>. Your program should output <code class="highlighter-rouge">No match</code>.</li>
+</ul>
+
+<h2 id="how-to-submit">How to Submit</h2>
+
+<p>Execute the below, logging in with your GitHub username and password when prompted. For security, you’ll see asterisks (<code class="highlighter-rouge">*</code>) instead of the actual characters in your password.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/dna
+</code></pre></div></div>
+
+
+
+            </main>
+
+			</div>
+
+		</div>
+
+        <!--
+        <div aria-hidden="true" aria-labelledby="searchTitle" class="markdown-body modal" id="search" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="pr-3 w-100" id="searchbox"></div>
+                        <button class="btn btn-secondary btn-lg" data-dismiss="modal" type="button">Fechar</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="hits"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        
+        
+<script>
+
+    // Before shwoing searchbox
+    $('#search').on('show.bs.modal', function (e) {
+
+        // Client
+        const searchClient = algoliasearch('5RYPGI69HZ', '53d709e59d833870a6886f6fcf0b0bfe');
+        const search = instantsearch({
+            indexName: 'cs50-2020-summer',
+            searchClient: searchClient,
+            searchFunction: function(helper) { // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/js/#handling-empty-queries
+                const hits = $('#hits');
+                if (helper.state.query === '') {
+                    hits.hide();
+                    return;
+                }
+                helper.search();
+                hits.show();
+            }
+        });
+
+        // searchBox
+        // https://www.algolia.com/doc/api-reference/widgets/search-box/js/
+        search.addWidget(
+            instantsearch.widgets.searchBox({
+                container: '#searchbox',
+                cssClasses: {
+                    input: 'form-control'
+                },
+                placeholder: 'Search',
+                showLoadingIndicator: false,
+                showReset: false,
+                showSubmit: false
+            })
+        );
+
+        // hits
+        // https://www.algolia.com/doc/api-reference/widgets/hits/js/
+        search.addWidget(
+            instantsearch.widgets.hits({
+                container: '#hits',
+                templates: {
+                    item: function(hit) {
+
+                        // url
+                        if (window.baseurl) {
+                            var url = window.baseurl + hit.url;
+                        }
+                        else {
+                            var url = hit.url;
+                        }
+                        if (hit.anchor) {
+                            url += '#' + hit.anchor;
+                        }
+
+                        // title
+                        if (hit._highlightResult && hit._highlightResult.headings) {
+                            var title = hit._highlightResult.headings[hit._highlightResult.headings.length - 1].value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var title = hit._highlightResult.title.value;
+                        }
+                        else if (hit.headings) {
+                            var title = hit.headings[hit.headings.length - 1].value;
+                        }
+                        else if (hit.title) {
+                            var title = hit.title;
+                        }
+                        else {
+                            var title = url;
+                        }
+
+                        // content
+                        if (hit._highlightResult && hit._highlightResult.content) {
+                            var content = hit._highlightResult.content.value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var content = hit._highlightResult.title.value;
+                        }
+                        else {
+                            var content = hit.excerpt_text;
+                        }
+
+                        // Template for hit
+                        return '<h2 class="font-weight-bold h3 mb-0">' +
+                               '<a href="' + url + '">' +
+                               title +
+                               '</a>' +
+                               '</h2>' +
+                               '<p class="mb-0">' +
+                               '<a class="text-muted" href="' + url + '">' +
+                               url +
+                               '</a>' +
+                               '</p>' +
+                               '<p>' + 
+                               content +
+                               '</p>';
+                    }
+                }
+            })
+        );
+
+        // poweredBy
+        search.addWidget(
+            instantsearch.widgets.poweredBy({
+                container: '#search .modal-footer'
+            })
+        );
+
+        // Let user start searching
+        search.start();
+
+        // Resize form
+        $(window).trigger('resize');
+    });
+
+    // After showing searchbox
+    $('#search').on('shown.bs.modal', function (e) {
+        $('#searchbox input[type=search]').focus();
+    });
+
+</script>
+</body>
+</html>

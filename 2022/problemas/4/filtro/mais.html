@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+
+<!-- saved from url=(0037)https://cs50.harvard.edu/summer/2020/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta property="og:description" content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final.">
+
+<meta property="og:image" content=""><meta property="og:title" content="CS50"><link href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821" rel="icon">
+
+<!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+<script src="https://kit.fontawesome.com/df44463090.js" crossorigin="anonymous"></script>
+
+<link href="/static/css/all.min.css" rel="stylesheet">
+
+<link href="/static/css/page.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="/static/css/personalizado.css">
+
+<!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+<script src="/static/js/moment.min.js"></script>
+<script src="/static/js/moment-timezone-with-data.min.js"></script>
+<script src="/static/js/luxon.min.js"></script>
+
+<!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+<script src="/static/js/algoliasearchLite.min.js"></script>
+<script src="/static/js/instantsearch.production.min.js"></script>
+<script src="/static/js/jekyll-theme-cs50.js"></script>
+
+<title>CS50x em Português</title>
+
+</head>
+
+<body>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+            <aside class="col-md">
+ 
+    <header>
+        <h1 data-id="this-is-cs50">
+            <a href="/2022/index.html">Este é o CS50x</a>
+        </h1>
+
+        <p><a href="https://cs50.harvard.edu/">O curso da Universidade de Harvard em Português!</a><br>2021</p>
+    </header>
+
+    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside &gt; nav" data-toggle="collapse">
+        Menu
+    </button>
+
+    <nav class="collapse d-md-block" id="nav">
+    
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/0.html">Semana 0 <span class="semana-titulo">Scratch <strong class="text-white">😺</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/1.html">Semana 1 <span class="semana-titulo">Linguagem C</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/2.html">Semana 2 <span class="semana-titulo">Vetores</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/3.html">Semana 3 <span class="semana-titulo">Algoritmos</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/4.index.html">Semana 4 <span class="semana-titulo">Memória <strong class="text-white">🧠</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/5.html">Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/6.html">Semana 6 <span class="semana-titulo">Python <strong class="text-white">🐍</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/7.html">Semana 7 <span class="semana-titulo">SQL</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/8.html">Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/9.html">Semana 9 <span class="semana-titulo">Flask</span></a>
+            </li>
+        </ul>
+                                
+        <ul>
+            <li data-marker="*">
+                <a href="/2022/especializacoes.html">Especializações</a>
+            </li>
+            <li data-marker="*">
+                <a href="/2022/projeto_final.html">Projeto Final</a>
+            </li>
+        </ul>
+
+        <!--
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*" class="small">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="guia.pdf">Guia Rápido de Inicialização</a>
+            </li>
+        </ul>-->
+
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/perguntas_frequentes.html">Perguntas Frequentes</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/tutorias.html">Tutorias</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/problemas/index.html">Listas de Problemas</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/secoes.html">Seções</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/equipe.html">Equipe</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/curriculo.html">Currículo do Curso</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul class="small fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://ide.cs50.io/">CS50 IDE</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://sqlitebrowser.org/">Navegador para SQLite</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://adminer.cs50.net/">Navegador para PostgreSQL</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://docs.python.org/pt-br/3/search.html">Documentação Python</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://stackoverflow.com/search">Stack Overflow</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/guiadeestilo.html">Guia de Estilo</a>
+            </li>-->
+        </ul>
+
+        <hr>
+
+        <p style="font-size: initial">
+            <a href="/2022/obrigado.html">Agradecemos</a> à todos os ex-alunos e amigos do CS50
+        </p>
+    </nav>
+
+    <footer></footer>
+</aside>
+
+            <main class="col-md markdown-body" style="margin-bottom: 286px;">
+            
+
+<h1 id="filter">Filter</h1>
+
+<p>Implement a program that applies filters to BMPs, per the below.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./filter -r image.bmp reflected.bmp
+</code></pre></div></div>
+
+<h2 id="background">Background</h2>
+
+<h3 id="bitmaps">Bitmaps</h3>
+
+<p>Perhaps the simplest way to represent an image is with a grid of pixels (i.e., dots), each of which can be of a different color. For black-and-white images, we thus need 1 bit per pixel, as 0 could represent black and 1 could represent white, as in the below.</p>
+
+<p><img src="bitmap.png" alt="a simple bitmap"></p>
+
+<p>In this sense, then, is an image just a bitmap (i.e., a map of bits). For more colorful images, you simply need more bits per pixel. A file format (like <a href="https://en.wikipedia.org/wiki/BMP_file_format">BMP</a>, <a href="https://en.wikipedia.org/wiki/JPEG">JPEG</a>, or <a href="https://en.wikipedia.org/wiki/Portable_Network_Graphics">PNG</a>) that supports “24-bit color” uses 24 bits per pixel. (BMP actually supports 1-, 4-, 8-, 16-, 24-, and 32-bit color.)</p>
+
+<p>A 24-bit BMP uses 8 bits to signify the amount of red in a pixel’s color, 8 bits to signify the amount of green in a pixel’s color, and 8 bits to signify the amount of blue in a pixel’s color. If you’ve ever heard of RGB color, well, there you have it: red, green, blue.</p>
+
+<p>If the R, G, and B values of some pixel in a BMP are, say, <code class="highlighter-rouge">0xff</code>, <code class="highlighter-rouge">0x00</code>, and <code class="highlighter-rouge">0x00</code> in hexadecimal, that pixel is purely red, as <code class="highlighter-rouge">0xff</code> (otherwise known as <code class="highlighter-rouge">255</code> in decimal) implies “a lot of red,” while <code class="highlighter-rouge">0x00</code> and <code class="highlighter-rouge">0x00</code> imply “no green” and “no blue,” respectively.</p>
+
+<h3 id="a-bitmap-more-technical">A Bit(map) More Technical</h3>
+
+<p>Recall that a file is just a sequence of bits, arranged in some fashion. A 24-bit BMP file, then, is essentially just a sequence of bits, (almost) every 24 of which happen to represent some pixel’s color. But a BMP file also contains some “metadata,” information like an image’s height and width. That metadata is stored at the beginning of the file in the form of two data structures generally referred to as “headers,” not to be confused with C’s header files. (Incidentally, these headers have evolved over time. This problem uses the latest version of Microsoft’s BMP format, 4.0, which debuted with Windows 95.)</p>
+
+<p>The first of these headers, called <code class="highlighter-rouge">BITMAPFILEHEADER</code>, is 14 bytes long. (Recall that 1 byte equals 8 bits.) The second of these headers, called <code class="highlighter-rouge">BITMAPINFOHEADER</code>, is 40 bytes long. Immediately following these headers is the actual bitmap: an array of bytes, triples of which represent a pixel’s color. However, BMP stores these triples backwards (i.e., as BGR), with 8 bits for blue, followed by 8 bits for green, followed by 8 bits for red. (Some BMPs also store the entire bitmap backwards, with an image’s top row at the end of the BMP file. But we’ve stored this problem set’s BMPs as described herein, with each bitmap’s top row first and bottom row last.) In other words, were we to convert the 1-bit smiley above to a 24-bit smiley, substituting red for black, a 24-bit BMP would store this bitmap as follows, where <code class="highlighter-rouge">0000ff</code> signifies red and <code class="highlighter-rouge">ffffff</code> signifies white; we’ve highlighted in red all instances of <code class="highlighter-rouge">0000ff</code>.</p>
+
+<p><img src="red_smile.png" alt="red smile"></p>
+
+<p>Because we’ve presented these bits from left to right, top to bottom, in 8 columns, you can actually see the red smiley if you take a step back.</p>
+
+<p>To be clear, recall that a hexadecimal digit represents 4 bits. Accordingly, <code class="highlighter-rouge">ffffff</code> in hexadecimal actually signifies <code class="highlighter-rouge">111111111111111111111111</code> in binary.</p>
+
+<p>Notice that you could represent a bitmap as a 2-dimensional array of pixels: where the image is an array of rows, each row is an array of pixels. Indeed, that’s how we’ve chosen to represent bitmap images in this problem.</p>
+
+<h3 id="image-filtering">Image Filtering</h3>
+
+<p>What does it even mean to filter an image? You can think of filtering an image as taking the pixels of some original image, and modifying each pixel in such a way that a particular effect is apparent in the resulting image.</p>
+
+<h4 id="grayscale">Grayscale</h4>
+
+<p>One common filter is the “grayscale” filter, where we take an image and want to convert it to black-and-white. How does that work?</p>
+
+<p>Recall that if the red, green, and blue values are all set to <code class="highlighter-rouge">0x00</code> (hexadecimal for <code class="highlighter-rouge">0</code>), then the pixel is black. And if all values are set to <code class="highlighter-rouge">0xff</code> (hexadecimal for <code class="highlighter-rouge">255</code>), then the pixel is white. So long as the red, green, and blue values are all equal, the result will be varying shades of gray along the black-white spectrum, with higher values meaning lighter shades (closer to white) and lower values meaning darker shades (closer to black).</p>
+
+<p>So to convert a pixel to grayscale, we just need to make sure the red, green, and blue values are all the same value. But how do we know what value to make them? Well, it’s probably reasonable to expect that if the original red, green, and blue values were all pretty high, then the new value should also be pretty high. And if the original values were all low, then the new value should also be low.</p>
+
+<p>In fact, to ensure each pixel of the new image still has the same general brightness or darkness as the old image, we can take the average of the red, green, and blue values to determine what shade of grey to make the new pixel.</p>
+
+<p>If you apply that to each pixel in the image, the result will be an image converted to grayscale.</p>
+
+<h4 id="reflection">Reflection</h4>
+
+<p>Some filters might also move pixels around. Reflecting an image, for example, is a filter where the resulting image is what you would get by placing the original image in front of a mirror. So any pixels on the left side of the image should end up on the right, and vice versa.</p>
+
+<p>Note that all of the original pixels of the original image will still be present in the reflected image, it’s just that those pixels may have rearranged to be in a different place in the image.</p>
+
+<h4 id="blur">Blur</h4>
+
+<p>There are a number of ways to create the effect of blurring or softening an image. For this problem, we’ll use the “box blur,” which works by taking each pixel and, for each color value, giving it a new value by averaging the color values of neighboring pixels.</p>
+
+<p>Consider the following grid of pixels, where we’ve numbered each pixel.</p>
+
+<p><img src="grid.png" alt="a grid of pixels"></p>
+
+<p>The new value of each pixel would be the average of the values of all of the pixels that are within 1 row and column of the original pixel (forming a 3x3 box). For example, each of the color values for pixel 6 would be obtained by averaging the original color values of pixels 1, 2, 3, 5, 6, 7, 9, 10, and 11 (note that pixel 6 itself is included in the average). Likewise, the color values for pixel 11 would be be obtained by averaging the color values of pixels 6, 7, 8, 10, 11, 12, 14, 15 and 16.</p>
+
+<p>For a pixel along the edge or corner, like pixel 15, we would still look for all pixels within 1 row and column: in this case, pixels 10, 11, 12, 14, 15, and 16.</p>
+
+<h4 id="edges">Edges</h4>
+
+<p>In artificial intelligence algorithms for image processing, it is often useful to detect edges in an image: lines in the image that create a boundary between one object and another. One way to achieve this effect is by applying the <a href="https://en.wikipedia.org/wiki/Sobel_operator">Sobel operator</a> to the image.</p>
+
+<p>Like image blurring, edge detection also works by taking each pixel, and modifying it based on the 3x3 grid of pixels that surrounds that pixel. But instead of just taking the average of the nine pixels, the Sobel operator computes the new value of each pixel by taking a weighted sum of the values for the surrounding pixels. And since edges between objects could take place in both a vertical and a horizontal direction, you’ll actually compute two weighted sums: one for detecting edges in the x direction, and one for detecting edges in the y direction. In particular, you’ll use the following two “kernels”:</p>
+
+<p><img src="sobel.png" alt="Sobel kernels"></p>
+
+<p>How to interpret these kernels? In short, for each of the three color values for each pixel, we’ll compute two values <code class="highlighter-rouge">Gx</code> and <code class="highlighter-rouge">Gy</code>. To compute <code class="highlighter-rouge">Gx</code> for the red channel value of a pixel, for instance, we’ll take the original red values for the nine pixels that form a 3x3 box around the pixel, multiply them each by the corresponding value in the <code class="highlighter-rouge">Gx</code> kernel, and take the sum of the resulting values.</p>
+
+<p>Why these particular values for the kernel? In the <code class="highlighter-rouge">Gx</code> direction, for instance, we’re multiplying the pixels to the right of the target pixel by a positive number, and multiplying the pixels to the left of the target pixel by a negative number. When we take the sum, if the pixels on the right are a similar color to the pixels on the left, the result will be close to 0 (the numbers cancel out). But if the pixels on the right are very different from the pixels on the left, then the resulting value will be very positive or very negative, indicating a change in color that likely is the result of a boundary between objects. And a similar argument holds true for calculating edges in the <code class="highlighter-rouge">y</code> direction.</p>
+
+<p>Using these kernels, we can generate a <code class="highlighter-rouge">Gx</code> and <code class="highlighter-rouge">Gy</code> value for each of the red, green, and blue channels for a pixel. But each channel can only take on one value, not two: so we need some way to combine <code class="highlighter-rouge">Gx</code> and <code class="highlighter-rouge">Gy</code> into a single value. The Sobel filter algorithm combines <code class="highlighter-rouge">Gx</code> and <code class="highlighter-rouge">Gy</code> into a final value by calculating the square root of <code class="highlighter-rouge">Gx^2 + Gy^2</code>. And since channel values can only take on integer values from 0 to 255, be sure the resulting value is rounded to the nearest integer and capped at 255!</p>
+
+<p>And what about handling pixels at the edge, or in the corner of the image? There are many ways to handle pixels at the edge, but for the purposes of this problem, we’ll ask you to treat the image as if there was a 1 pixel solid black border around the edge of the image: therefore, trying to access a pixel past the edge of the image should be treated as a solid black pixel (values of 0 for each of red, green, and blue). This will effectively ignore those pixels from our calculations of <code class="highlighter-rouge">Gx</code> and <code class="highlighter-rouge">Gy</code>.</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>Here’s how to download this problem’s “distribution code” (i.e., starter code) into your own CS50 IDE. Log into <a href="https://ide.cs50.io/">CS50 IDE</a> and then, in a terminal window, execute each of the below.</p>
+
+<ul>
+  <li data-marker="*">Execute <code class="highlighter-rouge">cd</code> to ensure that you’re in <code class="highlighter-rouge">~/</code> (i.e., your home directory).</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">mkdir pset4</code> to make (i.e., create) a directory called <code class="highlighter-rouge">pset4</code> in your home directory.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">cd pset4</code> to change into (i.e., open) that directory.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">wget https://cdn.cs50.net/2019/fall/psets/4/filter/more/filter.zip</code> to download a (compressed) ZIP file with this problem’s distribution.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">unzip filter.zip</code> to uncompress that file.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">rm filter.zip</code> followed by <code class="highlighter-rouge">yes</code> or <code class="highlighter-rouge">y</code> to delete that ZIP file.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">ls</code>. You should see a directory called <code class="highlighter-rouge">filter</code>, which was inside of that ZIP file.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">cd filter</code> to change into that directory.</li>
+  <li data-marker="*">Execute <code class="highlighter-rouge">ls</code>. You should see this problem’s distribution, including <code class="highlighter-rouge">bmp.h</code>, <code class="highlighter-rouge">filter.c</code>, <code class="highlighter-rouge">helpers.h</code>, <code class="highlighter-rouge">helpers.c</code>, and <code class="highlighter-rouge">Makefile</code>. You’ll also see a directory called <code class="highlighter-rouge">images</code>, with some sample Bitmap images.</li>
+</ul>
+
+<h2 id="understanding">Understanding</h2>
+
+<p>Let’s now take a look at some of the files provided to you as distribution code to get an understanding for what’s inside of them.</p>
+
+<h3 id="bmph"><code class="highlighter-rouge">bmp.h</code></h3>
+
+<p>Open up <code class="highlighter-rouge">bmp.h</code> (as by double-clicking on it in the file browser) and have a look.</p>
+
+<p>You’ll see definitions of the headers we’ve mentioned (<code class="highlighter-rouge">BITMAPINFOHEADER</code> and <code class="highlighter-rouge">BITMAPFILEHEADER</code>). In addition, that file defines <code class="highlighter-rouge">BYTE</code>, <code class="highlighter-rouge">DWORD</code>, <code class="highlighter-rouge">LONG</code>, and <code class="highlighter-rouge">WORD</code>, data types normally found in the world of Windows programming. Notice how they’re just aliases for primitives with which you are (hopefully) already familiar. It appears that <code class="highlighter-rouge">BITMAPFILEHEADER</code> and <code class="highlighter-rouge">BITMAPINFOHEADER</code> make use of these types.</p>
+
+<p>Perhaps most importantly for you, this file also defines a <code class="highlighter-rouge">struct</code> called <code class="highlighter-rouge">RGBTRIPLE</code> that, quite simply, “encapsulates” three bytes: one blue, one green, and one red (the order, recall, in which we expect to find RGB triples actually on disk).</p>
+
+<p>Why are these <code class="highlighter-rouge">struct</code>s useful? Well, recall that a file is just a sequence of bytes (or, ultimately, bits) on disk. But those bytes are generally ordered in such a way that the first few represent something, the next few represent something else, and so on. “File formats” exist because the world has standardized what bytes mean what. Now, we could just read a file from disk into RAM as one big array of bytes. And we could just remember that the byte at <code class="highlighter-rouge">array[i]</code> represents one thing, while the byte at <code class="highlighter-rouge">array[j]</code> represents another. But why not give some of those bytes names so that we can retrieve them from memory more easily? That’s precisely what the structs in <code class="highlighter-rouge">bmp.h</code> allow us to do. Rather than think of some file as one long sequence of bytes, we can instead think of it as a sequence of <code class="highlighter-rouge">struct</code>s.</p>
+
+<h3 id="filterc"><code class="highlighter-rouge">filter.c</code></h3>
+
+<p>Now, let’s open up <code class="highlighter-rouge">filter.c</code>. This file has been written already for you, but there are a couple important points worth noting here.</p>
+
+<p>First, notice the definition of <code class="highlighter-rouge">filters</code> on line 11. That string tells the program what the allowable command-line arguments to the program are: <code class="highlighter-rouge">b</code>, <code class="highlighter-rouge">e</code>, <code class="highlighter-rouge">g</code>, and <code class="highlighter-rouge">r</code>. Each of them specifies a different filter that we might apply to our images: blur, edge detection, grayscale, and reflection.</p>
+
+<p>The next several lines open up an image file, make sure it’s indeed a BMP file, and read all of the pixel information into a 2D array called <code class="highlighter-rouge">image</code>.</p>
+
+<p>Scroll down to the <code class="highlighter-rouge">switch</code> statement that begins on line 102. Notice that, depending on what <code class="highlighter-rouge">filter</code> we’ve chosen, a different function is called: if the user chooses filter <code class="highlighter-rouge">b</code>, the program calls the <code class="highlighter-rouge">blur</code> function; if <code class="highlighter-rouge">e</code>, then <code class="highlighter-rouge">edges</code> is called; if <code class="highlighter-rouge">g</code>, then <code class="highlighter-rouge">grayscale</code> is called; and if <code class="highlighter-rouge">r</code>, then <code class="highlighter-rouge">reflect</code> is called. Notice, too, that each of these functions take as arguments the height of the image, the width of the image, and the 2D array of pixels.</p>
+
+<p>These are the functions you’ll (soon!) implement. As you might imagine, the goal is for each of these functions to edit the 2D array of pixels in such a way that the desired filter is applied to the image.</p>
+
+<p>The remaining lines of the program take the resulting <code class="highlighter-rouge">image</code> and write them out to a new image file.</p>
+
+<h3 id="helpersh"><code class="highlighter-rouge">helpers.h</code></h3>
+
+<p>Next, take a look at <code class="highlighter-rouge">helpers.h</code>. This file is quite short, and just provides the function prototypes for the functions you saw earlier.</p>
+
+<p>Here, take note of the fact that each function takes a 2D array called <code class="highlighter-rouge">image</code> as an argument, where <code class="highlighter-rouge">image</code> is an array of <code class="highlighter-rouge">height</code> many rows, and each row is itself another array of <code class="highlighter-rouge">width</code> many <code class="highlighter-rouge">RGBTRIPLE</code>s. So if <code class="highlighter-rouge">image</code> represents the whole picture, then <code class="highlighter-rouge">image[0]</code> represents the first row, and <code class="highlighter-rouge">image[0][0]</code> represents the pixel in the upper-left corner of the image.</p>
+
+<h3 id="helpersc"><code class="highlighter-rouge">helpers.c</code></h3>
+
+<p>Now, open up <code class="highlighter-rouge">helpers.c</code>. Here’s where the implementation of the functions declared in <code class="highlighter-rouge">helpers.h</code> belong. But note that, right now, the implementations are missing! This part is up to you.</p>
+
+<h3 id="makefile"><code class="highlighter-rouge">Makefile</code></h3>
+
+<p>Finally, let’s look at <code class="highlighter-rouge">Makefile</code>. This file specifies what should happen when we run a terminal command like <code class="highlighter-rouge">make filter</code>. Whereas programs you may have written before were confined to just one file, <code class="highlighter-rouge">filter</code> seems to use multiple files: <code class="highlighter-rouge">filter.c</code>, <code class="highlighter-rouge">bmp.h</code>, <code class="highlighter-rouge">helpers.h</code>, and <code class="highlighter-rouge">helpers.c</code>. So we’ll need to tell <code class="highlighter-rouge">make</code> how to compile this file.</p>
+
+<p>Try compiling <code class="highlighter-rouge">filter</code> for yourself by going to your terminal and running</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ make filter
+</code></pre></div></div>
+
+<p>Then, you can run the program by running:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./filter -g images/yard.bmp out.bmp
+</code></pre></div></div>
+
+<p>which takes the image at <code class="highlighter-rouge">images/yard.bmp</code>, and generates a new image called <code class="highlighter-rouge">out.bmp</code> after running the pixels through the <code class="highlighter-rouge">grayscale</code> function. <code class="highlighter-rouge">grayscale</code> doesn’t do anything just yet, though, so the output image should look the same as the original yard.</p>
+
+<h2 id="specification">Specification</h2>
+
+<p>Implement the functions in <code class="highlighter-rouge">helpers.c</code> such that a user can apply grayscale, reflection, blur, or edge detection filters to their images.</p>
+
+<ul>
+  <li data-marker="*">The function <code class="highlighter-rouge">grayscale</code> should take an image and turn it into a black-and-white version of the same image.</li>
+  <li data-marker="*">The <code class="highlighter-rouge">reflect</code> function should take an image and reflect it horizontally.</li>
+  <li data-marker="*">The <code class="highlighter-rouge">blur</code> function should take an image and turn it into a box-blurred version of the same image.</li>
+  <li data-marker="*">The <code class="highlighter-rouge">edges</code> function should take an image and highlight the edges between objects, according to the Sobel operator.</li>
+</ul>
+
+<p>You should not modify any of the function signatures, nor should you modify any other files other than <code class="highlighter-rouge">helpers.c</code>.</p>
+
+<h2 id="walkthrough">Walkthrough</h2>
+
+<div class="border embed-responsive embed-responsive-16by9" data-video="">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/vsOsctDernw?modestbranding=1&amp;rel=0&amp;showinfo=1&amp;list=PLhQjrBD2T382OwvMbZuaMGtD9wZkhnhYj"></iframe>
+</div>
+
+<h2 id="usage">Usage</h2>
+
+<p>Your program should behave per the examples below.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./filter -g infile.bmp outfile.bmp
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./filter -r infile.bmp outfile.bmp
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./filter -b infile.bmp outfile.bmp
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./filter -e infile.bmp outfile.bmp
+</code></pre></div></div>
+
+<h2 id="hints">Hints</h2>
+
+<ul>
+  <li data-marker="*">The values of a pixel’s <code class="highlighter-rouge">rgbtRed</code>, <code class="highlighter-rouge">rgbtGreen</code>, and <code class="highlighter-rouge">rgbtBlue</code> components are all integers, so be sure to round any floating-point numbers to the nearest integer when assigning them to a pixel value!</li>
+</ul>
+
+<h2 id="testing">Testing</h2>
+
+<p>Be sure to test all of your filters on the sample bitmap files provided!</p>
+
+<p>Execute the below to evaluate the correctness of your code using <code class="highlighter-rouge">check50</code>. But be sure to compile and test it yourself as well!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50/problems/2020/x/filter/more
+</code></pre></div></div>
+
+<p>Execute the below to evaluate the style of your code using <code class="highlighter-rouge">style50</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 helpers.c
+</code></pre></div></div>
+
+<h2 id="how-to-submit">How to Submit</h2>
+
+<p>Execute the below, logging in with your GitHub username and password when prompted. For security, you’ll see asterisks (<code class="highlighter-rouge">*</code>) instead of the actual characters in your password.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/filter/more
+</code></pre></div></div>
+
+
+
+
+            </main>
+
+			</div>
+
+		</div>
+
+        <!--
+        <div aria-hidden="true" aria-labelledby="searchTitle" class="markdown-body modal" id="search" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="pr-3 w-100" id="searchbox"></div>
+                        <button class="btn btn-secondary btn-lg" data-dismiss="modal" type="button">Fechar</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="hits"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        
+        
+<script>
+
+    // Before shwoing searchbox
+    $('#search').on('show.bs.modal', function (e) {
+
+        // Client
+        const searchClient = algoliasearch('5RYPGI69HZ', '53d709e59d833870a6886f6fcf0b0bfe');
+        const search = instantsearch({
+            indexName: 'cs50-2020-summer',
+            searchClient: searchClient,
+            searchFunction: function(helper) { // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/js/#handling-empty-queries
+                const hits = $('#hits');
+                if (helper.state.query === '') {
+                    hits.hide();
+                    return;
+                }
+                helper.search();
+                hits.show();
+            }
+        });
+
+        // searchBox
+        // https://www.algolia.com/doc/api-reference/widgets/search-box/js/
+        search.addWidget(
+            instantsearch.widgets.searchBox({
+                container: '#searchbox',
+                cssClasses: {
+                    input: 'form-control'
+                },
+                placeholder: 'Search',
+                showLoadingIndicator: false,
+                showReset: false,
+                showSubmit: false
+            })
+        );
+
+        // hits
+        // https://www.algolia.com/doc/api-reference/widgets/hits/js/
+        search.addWidget(
+            instantsearch.widgets.hits({
+                container: '#hits',
+                templates: {
+                    item: function(hit) {
+
+                        // url
+                        if (window.baseurl) {
+                            var url = window.baseurl + hit.url;
+                        }
+                        else {
+                            var url = hit.url;
+                        }
+                        if (hit.anchor) {
+                            url += '#' + hit.anchor;
+                        }
+
+                        // title
+                        if (hit._highlightResult && hit._highlightResult.headings) {
+                            var title = hit._highlightResult.headings[hit._highlightResult.headings.length - 1].value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var title = hit._highlightResult.title.value;
+                        }
+                        else if (hit.headings) {
+                            var title = hit.headings[hit.headings.length - 1].value;
+                        }
+                        else if (hit.title) {
+                            var title = hit.title;
+                        }
+                        else {
+                            var title = url;
+                        }
+
+                        // content
+                        if (hit._highlightResult && hit._highlightResult.content) {
+                            var content = hit._highlightResult.content.value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var content = hit._highlightResult.title.value;
+                        }
+                        else {
+                            var content = hit.excerpt_text;
+                        }
+
+                        // Template for hit
+                        return '<h2 class="font-weight-bold h3 mb-0">' +
+                               '<a href="' + url + '">' +
+                               title +
+                               '</a>' +
+                               '</h2>' +
+                               '<p class="mb-0">' +
+                               '<a class="text-muted" href="' + url + '">' +
+                               url +
+                               '</a>' +
+                               '</p>' +
+                               '<p>' + 
+                               content +
+                               '</p>';
+                    }
+                }
+            })
+        );
+
+        // poweredBy
+        search.addWidget(
+            instantsearch.widgets.poweredBy({
+                container: '#search .modal-footer'
+            })
+        );
+
+        // Let user start searching
+        search.start();
+
+        // Resize form
+        $(window).trigger('resize');
+    });
+
+    // After showing searchbox
+    $('#search').on('shown.bs.modal', function (e) {
+        $('#searchbox input[type=search]').focus();
+    });
+
+</script>
+</body>
+</html>

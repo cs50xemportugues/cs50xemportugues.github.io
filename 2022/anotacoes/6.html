@@ -1,0 +1,871 @@
+<!DOCTYPE html>
+
+<!-- saved from url=(0037)https://cs50.harvard.edu/summer/2020/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no"><meta property="og:description" content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final.">
+
+<meta property="og:image" content=""><meta property="og:title" content="CS50"><link href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821" rel="icon">
+
+<!-- https://fontawesome.com/how-to-use/on-the-web/referencing-icons/basic-use -->
+<script src="https://kit.fontawesome.com/df44463090.js" crossorigin="anonymous"></script>
+
+<link href="/static/css/all.min.css" rel="stylesheet">
+
+<link href="/static/css/page.css" rel="stylesheet">
+
+<link rel="stylesheet" type="text/css" href="/static/css/personalizado.css">
+
+<!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+<script src="/static/js/jquery.min.js"></script>
+<script src="/static/js/popper.min.js"></script>
+<script src="/static/js/bootstrap.min.js"></script>
+
+<!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+<script src="/static/js/moment.min.js"></script>
+<script src="/static/js/moment-timezone-with-data.min.js"></script>
+<script src="/static/js/luxon.min.js"></script>
+
+<!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+<script src="/static/js/algoliasearchLite.min.js"></script>
+<script src="/static/js/instantsearch.production.min.js"></script>
+<script src="/static/js/jekyll-theme-cs50.js"></script>
+
+<title>CS50x em Português</title>
+
+</head>
+
+<body>
+
+        <div class="container-fluid">
+
+            <div class="row">
+
+            <aside class="col-md">
+ 
+    <header>
+        <h1 data-id="this-is-cs50">
+            <a href="/2022/index.html">Este é o CS50x</a>
+        </h1>
+
+        <p><a href="https://cs50.harvard.edu/">O curso da Universidade de Harvard em Português!</a><br>2021</p>
+    </header>
+
+    <button aria-controls="nav" aria-expanded="false" class="btn btn-sm collapsed d-md-none" data-target="aside &gt; nav" data-toggle="collapse">
+        Menu
+    </button>
+
+    <nav class="collapse d-md-block" id="nav">
+    
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/0.html">Semana 0 <span class="semana-titulo">Scratch <strong class="text-white">😺</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/1.html">Semana 1 <span class="semana-titulo">Linguagem C</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/2.html">Semana 2 <span class="semana-titulo">Vetores</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/3.html">Semana 3 <span class="semana-titulo">Algoritmos</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/4.index.html">Semana 4 <span class="semana-titulo">Memória <strong class="text-white">🧠</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/5.html">Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/6.html">Semana 6 <span class="semana-titulo">Python <strong class="text-white">🐍</strong></span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/7.html">Semana 7 <span class="semana-titulo">SQL</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/8.html">Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/semanas/9.html">Semana 9 <span class="semana-titulo">Flask</span></a>
+            </li>
+        </ul>
+                                
+        <ul>
+            <li data-marker="*">
+                <a href="/2022/especializacoes.html">Especializações</a>
+            </li>
+            <li data-marker="*">
+                <a href="/2022/projeto_final.html">Projeto Final</a>
+            </li>
+        </ul>
+
+        <!--
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*" class="small">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="guia.pdf">Guia Rápido de Inicialização</a>
+            </li>
+        </ul>-->
+
+        <hr>
+
+        <ul class="fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/perguntas_frequentes.html">Perguntas Frequentes</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/tutorias.html">Tutorias</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/problemas/index.html">Listas de Problemas</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/secoes.html">Seções</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/equipe.html">Equipe</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/curriculo.html">Currículo do Curso</a>
+            </li>
+        </ul>
+
+        <hr>
+
+        <ul class="small fa-ul">
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://ide.cs50.io/">CS50 IDE</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://sqlitebrowser.org/">Navegador para SQLite</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://adminer.cs50.net/">Navegador para PostgreSQL</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://docs.python.org/pt-br/3/search.html">Documentação Python</a>
+            </li>
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://stackoverflow.com/search">Stack Overflow</a>
+            </li>
+            <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="/2022/guiadeestilo.html">Guia de Estilo</a>
+            </li>-->
+        </ul>
+
+        <hr>
+
+        <p style="font-size: initial">
+            <a href="/2022/obrigado.html">Agradecemos</a> à todos os ex-alunos e amigos do CS50
+        </p>
+    </nav>
+
+    <footer></footer>
+</aside>
+
+            <main class="col-md markdown-body" style="margin-bottom: 286px;">
+            
+
+<h1 class="no_toc" id="lecture-6">Lecture 6</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#python-basics" id="markdown-toc-python-basics">Python Basics</a></li>
+  <li><a href="#examples" id="markdown-toc-examples">Examples</a></li>
+  <li><a href="#more-features" id="markdown-toc-more-features">More features</a></li>
+  <li><a href="#files" id="markdown-toc-files">Files</a></li>
+  <li><a href="#new-features" id="markdown-toc-new-features">New features</a></li>
+</ul>
+
+<h2 id="python-basics">Python Basics</h2>
+
+<ul>
+  <li data-marker="*">Today we’ll learn a new programming language called Python, and remember that one of the overall goals of the course is not learning any particular languages, but how to program in general.</li>
+  <li data-marker="*">Source code in Python looks a lot simpler than C, but is capable of solving problems in fields like data science. In fact, to print “hello, world”, all we need to write is:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"hello, world"</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Notice that, unlike in C, we don’t need to import a standard library, declare a <code class="language-plaintext highlighter-rouge">main</code> function, specify a newline in the <code class="language-plaintext highlighter-rouge">print</code> function, or use semicolons.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Python is an interpreted language, which means that we actually run another program (an interpreter) that reads our source code and runs it top to bottom. For example, we can save the above as <code class="language-plaintext highlighter-rouge">hello.py</code>, and run the command <code class="language-plaintext highlighter-rouge">python hello.py</code> to run our code, without having to compile it.</li>
+  <li data-marker="*">We can get strings from a user:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">answer</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"What's your name?</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"hello, "</span> <span class="o">+</span> <span class="n">answer</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We create a variable called <code class="language-plaintext highlighter-rouge">answer</code>, without specifying the type (the interpreter determins that from context for us), and we can easily combine two strings with the <code class="language-plaintext highlighter-rouge">+</code> operator before we pass it into <code class="language-plaintext highlighter-rouge">print</code>.</li>
+      <li data-marker="*">We can also pass in multiple arguments to <code class="language-plaintext highlighter-rouge">print</code>, with <code class="language-plaintext highlighter-rouge">print("hello,", answer)</code>, and it will automatically join them with spaces for us too.</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">print</code> also accepts format strings like <code class="language-plaintext highlighter-rouge">f"hello, {answer}"</code>, which substitutes variables inside curly braces into a string.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can create variables with just <code class="language-plaintext highlighter-rouge">counter = 0</code>. To increment a variable, we can use <code class="language-plaintext highlighter-rouge">counter = counter + 1</code> or <code class="language-plaintext highlighter-rouge">counter += 1</code>.</li>
+  <li data-marker="*">Conditions look like:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is less than y"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is greater than y"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is equal to y"</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Unlike in C and JavaScript (whereby braces <code class="language-plaintext highlighter-rouge">{</code> <code class="language-plaintext highlighter-rouge">}</code> are used to indicate blocks of code), the exact indentation of each line is what determines the level of nesting in Python.</li>
+      <li data-marker="*">And instead of <code class="language-plaintext highlighter-rouge">else if</code>, we just say <code class="language-plaintext highlighter-rouge">elif</code>.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Boolean expressions are slightly different, too:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"hello, world"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We can write a loop with a variable:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">i</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="k">while</span> <span class="n">i</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"cough"</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">-=</span> <span class="mi">1</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We can also use a <code class="language-plaintext highlighter-rouge">for</code> loop, where we can do something for each element in a list:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="p">[</span><span class="mi">0</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">]:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"cough"</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Lists in Python are like arrays in C, but they can grow and shrink easily with the interpreter managing the implementation and memory for us.</li>
+      <li data-marker="*">This <code class="language-plaintext highlighter-rouge">for</code> loop will set the variable <code class="language-plaintext highlighter-rouge">i</code> to the first element, <code class="language-plaintext highlighter-rouge">0</code>, run, then to the second element, <code class="language-plaintext highlighter-rouge">1</code>, run, and so on.</li>
+      <li data-marker="*">And we can use a special function, <code class="language-plaintext highlighter-rouge">range</code>, to get some number of values, as in <code class="language-plaintext highlighter-rouge">for i in range(3)</code>. This will give us <code class="language-plaintext highlighter-rouge">0</code>, <code class="language-plaintext highlighter-rouge">1</code>, and <code class="language-plaintext highlighter-rouge">2</code>, for a total of thee values.</li>
+    </ul>
+  </li>
+  <li data-marker="*">In Python, there are many data types:
+    <ul>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">bool</code>, <code class="language-plaintext highlighter-rouge">True</code> or <code class="language-plaintext highlighter-rouge">False</code></li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">float</code>, real numbers</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">int</code>, integers</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">str</code>, strings</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">range</code>, sequence of numbers</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">list</code>, sequence of mutable values, that we can change or add or remove</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">tuple</code>, sequence of immutable values, that we can’t change</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">dict</code>, collection of key/value pairs, like a hash table</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">set</code>, collection of unique values</li>
+    </ul>
+  </li>
+  <li data-marker="*"><a href="https://docs.python.org">docs.python.org</a> is the official source of documentation, but Google and StackOverflow will also have helpful resources when we need to figure out how to do something in Python. In fact, programmers in the real world rarely know everything in the documentation, but rather how to find what they need when they need it.</li>
+</ul>
+
+<h2 id="examples">Examples</h2>
+
+<ul>
+  <li data-marker="*">We can blur an image with:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">PIL</span> <span class="kn">import</span> <span class="n">Image</span><span class="p">,</span> <span class="n">ImageFilter</span>
+
+<span class="n">before</span> <span class="o">=</span> <span class="n">Image</span><span class="p">.</span><span class="nb">open</span><span class="p">(</span><span class="s">"bridge.bmp"</span><span class="p">)</span>
+<span class="n">after</span> <span class="o">=</span> <span class="n">before</span><span class="p">.</span><span class="nb">filter</span><span class="p">(</span><span class="n">ImageFilter</span><span class="p">.</span><span class="n">BLUR</span><span class="p">)</span>
+<span class="n">after</span><span class="p">.</span><span class="n">save</span><span class="p">(</span><span class="s">"out.bmp"</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">In Python, we include other libraries with <code class="language-plaintext highlighter-rouge">import</code>, and here we’ll <code class="language-plaintext highlighter-rouge">import</code> the <code class="language-plaintext highlighter-rouge">Image</code> and <code class="language-plaintext highlighter-rouge">ImageFilter</code> names from the <code class="language-plaintext highlighter-rouge">PIL</code> library.</li>
+      <li data-marker="*">It turns out, if we look for documention for the <code class="language-plaintext highlighter-rouge">PIL</code> library, we can use the next three lines of code to open an image called <code class="language-plaintext highlighter-rouge">bridge.bmp</code>, run a blur filter on it, and save it to a file called <code class="language-plaintext highlighter-rouge">out.bmp</code>.</li>
+      <li data-marker="*">And we can run this with <code class="language-plaintext highlighter-rouge">python blur.py</code> after saving to a file called <code class="language-plaintext highlighter-rouge">blur.py</code>.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can implement a dictionary with:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">check</span><span class="p">(</span><span class="n">word</span><span class="p">):</span>
+    <span class="k">if</span> <span class="n">word</span><span class="p">.</span><span class="n">lower</span><span class="p">()</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="bp">False</span>
+
+<span class="k">def</span> <span class="nf">load</span><span class="p">(</span><span class="n">dictionary</span><span class="p">):</span>
+    <span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="n">dictionary</span><span class="p">,</span> <span class="s">"r"</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">line</span> <span class="ow">in</span> <span class="nb">file</span><span class="p">:</span>
+        <span class="n">words</span><span class="p">.</span><span class="n">add</span><span class="p">(</span><span class="n">line</span><span class="p">.</span><span class="n">rstrip</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">))</span>
+    <span class="nb">file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+    <span class="k">return</span> <span class="bp">True</span>
+
+<span class="k">def</span> <span class="nf">size</span><span class="p">():</span>
+    <span class="k">return</span> <span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">unload</span><span class="p">():</span>
+    <span class="k">return</span> <span class="bp">True</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">First, we create a new set called <code class="language-plaintext highlighter-rouge">words</code>. Then, for <code class="language-plaintext highlighter-rouge">check</code>, we can just ask ` <code class="language-plaintext highlighter-rouge">if word.lower() in words</code>. For <code class="language-plaintext highlighter-rouge">load</code>, we open the file and use <code class="language-plaintext highlighter-rouge">words.add</code> to add each line to our set. For <code class="language-plaintext highlighter-rouge">size</code>, we can use <code class="language-plaintext highlighter-rouge">len</code> to count the number of elements in our set, and finally, for <code class="language-plaintext highlighter-rouge">unload</code>, we don’t have to do anything!</li>
+    </ul>
+  </li>
+  <li data-marker="*">It turns out, even though implementing a program in Python is simpler for us, the running time of our program in Python is slower than our program in C since our interpreter has to do more work for us. So, depending on our goals, we’ll also have to consider the tradeoff of human time of writing a program that’s more efficient, versus the running time of the program.</li>
+  <li data-marker="*">In Python, we can too include the CS50 library, but our syntax will be:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_string</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Notice that we specify the functions we want to use.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Now we can get strings from a user:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_string</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"What's your name?:</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"hello, "</span> <span class="o">+</span> <span class="n">s</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We can substitute expressions into our format strings, too:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_int</span>
+
+<span class="n">age</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"What's your age?</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"You are at least </span><span class="si">{</span><span class="n">age</span> <span class="o">*</span> <span class="mi">365</span><span class="si">}</span><span class="s"> days old."</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">And we can demonstrate conditions:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_int</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"x: "</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"y: "</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is less than y"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="n">y</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is greater than y"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"x is equal to y"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">To check conditions, we can say:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_string</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Do you agree?</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="s">"Y"</span> <span class="ow">or</span> <span class="n">s</span> <span class="o">==</span> <span class="s">"y"</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Agreed."</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">s</span> <span class="o">==</span> <span class="s">"N"</span> <span class="ow">or</span> <span class="n">s</span> <span class="o">==</span> <span class="s">"n"</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Not agreed."</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Python doesn’t have chars, so we can check them as strings directly.</li>
+      <li data-marker="*">We can also say <code class="language-plaintext highlighter-rouge">if s in ["Y", "y"]:</code>, or <code class="language-plaintext highlighter-rouge">if s.lower() in ["y"]:</code>. It turns out that strings in Python are like structs in C, where we have not only variables but functions that we can call. For example, given a string <code class="language-plaintext highlighter-rouge">s</code>, we can call its <code class="language-plaintext highlighter-rouge">lower</code> function with <code class="language-plaintext highlighter-rouge">s.lower()</code> to get the lowercase version of the string.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can improve versions of <code class="language-plaintext highlighter-rouge">cough</code>, too:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">print</span><span class="p">(</span><span class="s">"cough"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"cough"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"cough"</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We don’t need to declare a <code class="language-plaintext highlighter-rouge">main</code> function, so we just write the same line of code three times.</li>
+    </ul>
+  </li>
+  <li data-marker="*">But we can do better:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="n">cough</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">cough</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"cough"</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Notice that we don’t need to specify the return type of a new function, which we can define with <code class="language-plaintext highlighter-rouge">def</code>.</li>
+      <li data-marker="*">But this causes an error when we try to run it: <code class="language-plaintext highlighter-rouge">NameError: name 'cough' is not defined</code>. It turns out that we need to define our function before we use it, so we can either move our definition of <code class="language-plaintext highlighter-rouge">cough</code> to the top, or create a main function:
+        <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="n">cough</span><span class="p">()</span>
+
+<span class="k">def</span> <span class="nf">cough</span><span class="p">():</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"cough"</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
+</code></pre></div>        </div>
+      </li>
+      <li data-marker="*">Now, by the time we actually call our <code class="language-plaintext highlighter-rouge">main</code> function, the <code class="language-plaintext highlighter-rouge">cough</code> function will have been read by our interpreter.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Our functions can take inputs, too:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">cough</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">cough</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"cough"</span><span class="p">)</span>
+
+<span class="n">main</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We can define a function to get a positive integer:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_int</span>
+
+<span class="k">def</span> <span class="nf">main</span><span class="p">():</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="n">get_positive_int</span><span class="p">()</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+
+<span class="k">def</span> <span class="nf">get_positive_int</span><span class="p">():</span>
+    <span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+        <span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"Positive Integer: "</span><span class="p">)</span>
+        <span class="k">if</span> <span class="n">n</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="k">break</span>
+    <span class="k">return</span> <span class="n">n</span>
+
+<span class="n">main</span><span class="p">()</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Since there is no do-while loop in Python as there is in C, we have a <code class="language-plaintext highlighter-rouge">while</code> loop that will go on infinitely, but we use <code class="language-plaintext highlighter-rouge">break</code> to end the loop as soon as <code class="language-plaintext highlighter-rouge">n &gt; 0</code>. Then, our function will just <code class="language-plaintext highlighter-rouge">return n</code>.</li>
+      <li data-marker="*">Notice that variables in Python have function scope by default, meaning that <code class="language-plaintext highlighter-rouge">n</code> can be initialized within a loop, but still be accessible later in the function.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can print out a row of question marks on the screen:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">4</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"?"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">When we print each block, we don’t want the automatic new line, so we can pass a parameter, or named argument, to the <code class="language-plaintext highlighter-rouge">print</code> function. Here, we say <code class="language-plaintext highlighter-rouge">end=""</code> to specify that nothing should be printed at the end of our string. Then, after we print our row, we can call <code class="language-plaintext highlighter-rouge">print</code> to get a new line.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can also “multiply” a string and print that directly with: <code class="language-plaintext highlighter-rouge">print("?" * 4)</code>.</li>
+  <li data-marker="*">We can print a column with a loop:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"#"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">And without a loop: <code class="language-plaintext highlighter-rouge">print("#\n" * 3, end="")</code>.</li>
+  <li data-marker="*">We can implement nested loops:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">3</span><span class="p">):</span>
+        <span class="k">print</span><span class="p">(</span><span class="s">"#"</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+    <span class="k">print</span><span class="p">()</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We don’t need to use the <code class="language-plaintext highlighter-rouge">get_string</code> function from the CS50 library, since we can use the <code class="language-plaintext highlighter-rouge">input</code> function built into Python to get a string from the user. But if we want another type of data, like an integer, from the user, we’ll need to cast it with <code class="language-plaintext highlighter-rouge">int()</code>.</li>
+  <li data-marker="*">But our program will crash if the string isn’t convertable to an integer, so we can use <code class="language-plaintext highlighter-rouge">get_string</code> which will just ask again.</li>
+  <li data-marker="*">In Python, trying to get an integer overflow actually won’t work:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">time</span> <span class="kn">import</span> <span class="n">sleep</span>
+
+<span class="n">i</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="k">while</span> <span class="bp">True</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+    <span class="n">sleep</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+    <span class="n">i</span> <span class="o">*=</span> <span class="mi">2</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We call the <code class="language-plaintext highlighter-rouge">sleep</code> function to pause our program for a second between each iteration.</li>
+      <li data-marker="*">This will continue until the integer can no longer fit in your computer’s memory.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Floating-point imprecision, too, can be prevented by libraries that can represent decimal numbers with as many bits as are needed.</li>
+  <li data-marker="*">We can make a list:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">scores</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">72</span><span class="p">)</span>
+<span class="n">scores</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">73</span><span class="p">)</span>
+<span class="n">scores</span><span class="p">.</span><span class="n">append</span><span class="p">(</span><span class="mi">33</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Average: </span><span class="si">{</span><span class="nb">sum</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span> <span class="o">/</span> <span class="nb">len</span><span class="p">(</span><span class="n">scores</span><span class="p">)</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">With <code class="language-plaintext highlighter-rouge">append</code>, we can add items to our list, using it like a linked list.</li>
+      <li data-marker="*">We can also declare a list with some values like <code class="language-plaintext highlighter-rouge">scores = [72, 73, 33]</code>.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can iterate over each character in a string:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_string</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Input:  "</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Output: "</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">c</span> <span class="ow">in</span> <span class="n">s</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">c</span><span class="p">,</span> <span class="n">end</span><span class="o">=</span><span class="s">""</span><span class="p">)</span>
+<span class="k">print</span><span class="p">()</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Python will get each character in the string for us.</li>
+    </ul>
+  </li>
+  <li data-marker="*">To make a string uppercase, too, we can just call <code class="language-plaintext highlighter-rouge">s.upper()</code> to get the uppercase version of the entire string, without having to iterate over each character ourselves.</li>
+</ul>
+
+<h2 id="more-features">More features</h2>
+
+<ul>
+  <li data-marker="*">We can take command-line arguments with:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">argv</span><span class="p">)):</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="n">i</span><span class="p">])</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Since <code class="language-plaintext highlighter-rouge">argv</code> is a list of strings, we can use <code class="language-plaintext highlighter-rouge">len()</code> to get its length, and <code class="language-plaintext highlighter-rouge">range()</code> for a range of values that we can use as an index for each element in the list.</li>
+    </ul>
+  </li>
+  <li data-marker="*">But we can also let Python iterate over the list for us:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span>
+
+<span class="k">for</span> <span class="n">arg</span> <span class="ow">in</span> <span class="n">argv</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="n">arg</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We can return exit codes when our program exits, too:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">sys</span> <span class="kn">import</span> <span class="n">argv</span><span class="p">,</span> <span class="nb">exit</span>
+
+<span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">argv</span><span class="p">)</span> <span class="o">!=</span> <span class="mi">2</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"missing command-line argument"</span><span class="p">)</span>
+    <span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"hello, </span><span class="si">{</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We import the <code class="language-plaintext highlighter-rouge">exit</code> function, and call it with the code we want our program to exit with.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can implement linear search by just checking each element in a list:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">names</span> <span class="o">=</span> <span class="p">[</span><span class="s">"EMMA"</span><span class="p">,</span> <span class="s">"RODRIGO"</span><span class="p">,</span> <span class="s">"BRIAN"</span><span class="p">,</span> <span class="s">"DAVID"</span><span class="p">]</span>
+
+<span class="k">if</span> <span class="s">"EMMA"</span> <span class="ow">in</span> <span class="n">names</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Found"</span><span class="p">)</span>
+    <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Not found"</span><span class="p">)</span>
+<span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">If we have a dictionary, a set of key:value pairs, we can also check each key:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">sys</span>
+
+<span class="n">people</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s">"EMMA"</span><span class="p">:</span> <span class="s">"617-555-0100"</span><span class="p">,</span>
+    <span class="s">"RODRIGO"</span><span class="p">:</span> <span class="s">"617-555-0101"</span><span class="p">,</span>
+    <span class="s">"BRIAN"</span><span class="p">:</span> <span class="s">"617-555-0102"</span><span class="p">,</span>
+    <span class="s">"DAVID"</span><span class="p">:</span> <span class="s">"617-555-0103"</span>
+<span class="p">}</span>
+
+<span class="k">if</span> <span class="s">"EMMA"</span> <span class="ow">in</span> <span class="n">people</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Found </span><span class="si">{</span><span class="n">people</span><span class="p">[</span><span class="s">'EMMA'</span><span class="p">]</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+    <span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="s">"Not found"</span><span class="p">)</span>
+<span class="n">sys</span><span class="p">.</span><span class="nb">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Notice that we can get the value of of a particular key in a dictionary with <code class="language-plaintext highlighter-rouge">people['EMMA']</code>. Here, we use single quotes (both single and double quotes are allowed, as long they match for a string) to differentiate the inner string from the outer string.</li>
+      <li data-marker="*">And we declare dictionaries with curly braces, <code class="language-plaintext highlighter-rouge">{}</code>, and lists with brackets <code class="language-plaintext highlighter-rouge">[]</code>.</li>
+    </ul>
+  </li>
+  <li data-marker="*">In Python, we can compare strings directly with just <code class="language-plaintext highlighter-rouge">==</code>:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_string</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"s: "</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"t: "</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">s</span> <span class="o">==</span> <span class="n">t</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Same"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Different"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Copying strings, too, works without any extra work from us:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_string</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"s: "</span><span class="p">)</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">s</span>
+
+<span class="n">t</span> <span class="o">=</span> <span class="n">t</span><span class="p">.</span><span class="n">capitalize</span><span class="p">()</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"s: </span><span class="si">{</span><span class="n">s</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"t: </span><span class="si">{</span><span class="n">t</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Swapping two variables can also be done by assigning both values at the same time:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"x is </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s">, y is </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+<span class="n">x</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="n">y</span><span class="p">,</span> <span class="n">x</span>
+<span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"x is </span><span class="si">{</span><span class="n">x</span><span class="si">}</span><span class="s">, y is </span><span class="si">{</span><span class="n">y</span><span class="si">}</span><span class="s">"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="files">Files</h2>
+
+<ul>
+  <li data-marker="*">Let’s open a CSV file:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">csv</span>
+<span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_string</span>
+
+<span class="nb">file</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s">"phonebook.csv"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">)</span>
+
+<span class="n">name</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Name: "</span><span class="p">)</span>
+<span class="n">number</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Number: "</span><span class="p">)</span>
+
+<span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="p">.</span><span class="n">writer</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+<span class="n">writer</span><span class="p">.</span><span class="n">writerow</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">number</span><span class="p">))</span>
+
+<span class="nb">file</span><span class="p">.</span><span class="n">close</span><span class="p">()</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">It turns out that Python also has a <code class="language-plaintext highlighter-rouge">csv</code> package (library) that helps us work with CSV files, so after we open the file for appending, we can call <code class="language-plaintext highlighter-rouge">csv.writer</code> to create a <code class="language-plaintext highlighter-rouge">writer</code> from the file and then <code class="language-plaintext highlighter-rouge">writer.writerow</code> to write a row. With the inner parentheses, we’re creating a tuple with the values we want to write, so we’re actually passing in a single argument that has all the values for our row.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can use the <code class="language-plaintext highlighter-rouge">with</code> keyword, which will helpfully close the file for us:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+<span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s">"phonebook.csv"</span><span class="p">,</span> <span class="s">"a"</span><span class="p">)</span> <span class="k">as</span> <span class="nb">file</span><span class="p">:</span>
+    <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="p">.</span><span class="n">writer</span><span class="p">(</span><span class="nb">file</span><span class="p">)</span>
+    <span class="n">writer</span><span class="p">.</span><span class="n">writerow</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="n">number</span><span class="p">))</span>
+</code></pre></div>    </div>
+  </li>
+</ul>
+
+<h2 id="new-features">New features</h2>
+
+<ul>
+  <li data-marker="*">A feature of Python that C does not have is <strong>regular expressions</strong>, or patterns against which we can match strings. For example, its syntax includes:
+    <ul>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">.</code>, for any character</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">.*</code>, for 0 or more characters</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">.+</code>, for 1 or more characters</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">?</code>, for something optional</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">^</code>, for start of input</li>
+      <li data-marker="*"><code class="language-plaintext highlighter-rouge">$</code>, for end of input</li>
+    </ul>
+  </li>
+  <li data-marker="*">For example, we can match strings with:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">cs50</span> <span class="kn">import</span> <span class="n">get_string</span>
+
+<span class="n">s</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Do you agree?</span><span class="se">\n</span><span class="s">"</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">"^y(es)?$"</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">IGNORECASE</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Agreed."</span><span class="p">)</span>
+<span class="k">elif</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">"^no?$"</span><span class="p">,</span> <span class="n">s</span><span class="p">,</span> <span class="n">re</span><span class="p">.</span><span class="n">IGNORECASE</span><span class="p">):</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Not agreed."</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">First, we need the <code class="language-plaintext highlighter-rouge">re</code> package, or library, for regular expressions.</li>
+      <li data-marker="*">Then, for <code class="language-plaintext highlighter-rouge">y</code> or <code class="language-plaintext highlighter-rouge">yes</code>, we have the regular expression <code class="language-plaintext highlighter-rouge">^y(es)?$</code>. We want to make sure that the string starts with <code class="language-plaintext highlighter-rouge">y</code>, and optionally has <code class="language-plaintext highlighter-rouge">es</code> immediately after the <code class="language-plaintext highlighter-rouge">y</code>, and then ends.</li>
+      <li data-marker="*">Similarly, for <code class="language-plaintext highlighter-rouge">n</code> and <code class="language-plaintext highlighter-rouge">no</code>, we want our string to start, have the letter <code class="language-plaintext highlighter-rouge">n</code>, and optionally the letter <code class="language-plaintext highlighter-rouge">o</code> next, and then end. The regular expression for that would be <code class="language-plaintext highlighter-rouge">^no?$</code>.</li>
+      <li data-marker="*">We pass in another argument, <code class="language-plaintext highlighter-rouge">re.IGNORECASE</code>, to ignore the casing of the letters in the string.</li>
+      <li data-marker="*">If neither regular expression matches, we wouldn’t print anything.</li>
+    </ul>
+  </li>
+  <li data-marker="*">On our own Mac or PC, we can open a terminal after installing Python, and use the microphone to convert our speech to text:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">speech_recognition</span>
+
+<span class="n">recognizer</span> <span class="o">=</span> <span class="n">speech_recognition</span><span class="p">.</span><span class="n">Recognizer</span><span class="p">()</span>
+<span class="k">with</span> <span class="n">speech_recognition</span><span class="p">.</span><span class="n">Microphone</span><span class="p">()</span> <span class="k">as</span> <span class="n">source</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Say something!"</span><span class="p">)</span>
+    <span class="n">audio</span> <span class="o">=</span> <span class="n">recognizer</span><span class="p">.</span><span class="n">listen</span><span class="p">(</span><span class="n">source</span><span class="p">)</span>
+
+<span class="k">print</span><span class="p">(</span><span class="s">"Google Speech Recognition thinks you said:"</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">recognizer</span><span class="p">.</span><span class="n">recognize_google</span><span class="p">(</span><span class="n">audio</span><span class="p">))</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">It turns out that there’s another library we can download, called <code class="language-plaintext highlighter-rouge">speech_recognition</code>, that can listen to audio and convert it to a string.</li>
+    </ul>
+  </li>
+  <li data-marker="*">And now, we can match on the audio to print something else:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">recognizer</span><span class="p">.</span><span class="n">recognize_google</span><span class="p">(</span><span class="n">audio</span><span class="p">)</span>
+
+<span class="c1"># Respond to speech
+</span><span class="k">if</span> <span class="s">"hello"</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hello to you too!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="s">"how are you"</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"I am well, thanks!"</span><span class="p">)</span>
+<span class="k">elif</span> <span class="s">"goodbye"</span> <span class="ow">in</span> <span class="n">words</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Goodbye to you too!"</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Huh?"</span><span class="p">)</span>
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We can even use regular expressions, to match on part of a string:
+    <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="p">...</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">recognizer</span><span class="p">.</span><span class="n">recognize_google</span><span class="p">(</span><span class="n">audio</span><span class="p">)</span>
+
+<span class="n">matches</span> <span class="o">=</span> <span class="n">re</span><span class="p">.</span><span class="n">search</span><span class="p">(</span><span class="s">"my name is (.*)"</span><span class="p">,</span> <span class="n">words</span><span class="p">)</span>
+<span class="k">if</span> <span class="n">matches</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="sa">f</span><span class="s">"Hey, </span><span class="si">{</span><span class="n">matches</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="si">}</span><span class="s">."</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="k">print</span><span class="p">(</span><span class="s">"Hey, you."</span><span class="p">)</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Here, we can get all the characters after <code class="language-plaintext highlighter-rouge">my name is </code> with <code class="language-plaintext highlighter-rouge">.*</code>, and print it out.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We run <a href="https://cdn.cs50.net/2019/fall/lectures/6/src6/6/faces/">detect.py and faces.py</a>, which finds each face (or even a specific face) in a photo.</li>
+  <li data-marker="*"><a href="https://cdn.cs50.net/2019/fall/lectures/6/src6/6/qr/">qr.py</a> will also generate a QR code to a particular URL.</li>
+</ul>
+
+
+            </main>
+
+			</div>
+
+		</div>
+
+        <!--
+        <div aria-hidden="true" aria-labelledby="searchTitle" class="markdown-body modal" id="search" role="dialog" tabindex="-1">
+            <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="pr-3 w-100" id="searchbox"></div>
+                        <button class="btn btn-secondary btn-lg" data-dismiss="modal" type="button">Fechar</button>
+                    </div>
+                    <div class="modal-body">
+                        <div id="hits"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+        -->
+        
+        
+<script>
+
+    // Before shwoing searchbox
+    $('#search').on('show.bs.modal', function (e) {
+
+        // Client
+        const searchClient = algoliasearch('5RYPGI69HZ', '53d709e59d833870a6886f6fcf0b0bfe');
+        const search = instantsearch({
+            indexName: 'cs50-2020-summer',
+            searchClient: searchClient,
+            searchFunction: function(helper) { // https://www.algolia.com/doc/guides/building-search-ui/going-further/conditional-display/js/#handling-empty-queries
+                const hits = $('#hits');
+                if (helper.state.query === '') {
+                    hits.hide();
+                    return;
+                }
+                helper.search();
+                hits.show();
+            }
+        });
+
+        // searchBox
+        // https://www.algolia.com/doc/api-reference/widgets/search-box/js/
+        search.addWidget(
+            instantsearch.widgets.searchBox({
+                container: '#searchbox',
+                cssClasses: {
+                    input: 'form-control'
+                },
+                placeholder: 'Search',
+                showLoadingIndicator: false,
+                showReset: false,
+                showSubmit: false
+            })
+        );
+
+        // hits
+        // https://www.algolia.com/doc/api-reference/widgets/hits/js/
+        search.addWidget(
+            instantsearch.widgets.hits({
+                container: '#hits',
+                templates: {
+                    item: function(hit) {
+
+                        // url
+                        if (window.baseurl) {
+                            var url = window.baseurl + hit.url;
+                        }
+                        else {
+                            var url = hit.url;
+                        }
+                        if (hit.anchor) {
+                            url += '#' + hit.anchor;
+                        }
+
+                        // title
+                        if (hit._highlightResult && hit._highlightResult.headings) {
+                            var title = hit._highlightResult.headings[hit._highlightResult.headings.length - 1].value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var title = hit._highlightResult.title.value;
+                        }
+                        else if (hit.headings) {
+                            var title = hit.headings[hit.headings.length - 1].value;
+                        }
+                        else if (hit.title) {
+                            var title = hit.title;
+                        }
+                        else {
+                            var title = url;
+                        }
+
+                        // content
+                        if (hit._highlightResult && hit._highlightResult.content) {
+                            var content = hit._highlightResult.content.value;
+                        }
+                        else if (hit._highlightResult && hit._highlightResult.title) {
+                            var content = hit._highlightResult.title.value;
+                        }
+                        else {
+                            var content = hit.excerpt_text;
+                        }
+
+                        // Template for hit
+                        return '<h2 class="font-weight-bold h3 mb-0">' +
+                               '<a href="' + url + '">' +
+                               title +
+                               '</a>' +
+                               '</h2>' +
+                               '<p class="mb-0">' +
+                               '<a class="text-muted" href="' + url + '">' +
+                               url +
+                               '</a>' +
+                               '</p>' +
+                               '<p>' + 
+                               content +
+                               '</p>';
+                    }
+                }
+            })
+        );
+
+        // poweredBy
+        search.addWidget(
+            instantsearch.widgets.poweredBy({
+                container: '#search .modal-footer'
+            })
+        );
+
+        // Let user start searching
+        search.start();
+
+        // Resize form
+        $(window).trigger('resize');
+    });
+
+    // After showing searchbox
+    $('#search').on('shown.bs.modal', function (e) {
+        $('#searchbox input[type=search]').focus();
+    });
+
+</script>
+</body>
+</html>
