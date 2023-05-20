@@ -1,0 +1,202 @@
+<aside class="col-md" style="background-color: {{config['ASIDE_BG_COLOR']}}">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="{{ url_for('cs50x.index') }}">{{config['LANGUAGE_MENU'].title}}</a>
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x"
+        >{{config['LANGUAGE_MENU'].intro}}</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week0') }}"
+          >{{config['LANGUAGE_MENU'].week}} 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week1') }}"
+          >{{config['LANGUAGE_MENU'].week}} 1 <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week2') }}"
+          >{{config['LANGUAGE_MENU'].week}} 2 <span class="semana-titulo">{{config['LANGUAGE_MENU'].week2}}</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week3') }}"
+          >{{config['LANGUAGE_MENU'].week}} 3 <span class="semana-titulo">{{config['LANGUAGE_MENU'].week3}}</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week4') }}"
+          >{{config['LANGUAGE_MENU'].week}} 4 <span class="semana-titulo">{{config['LANGUAGE_MENU'].week4}}</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week5') }}"
+          >{{config['LANGUAGE_MENU'].week}} 5 <span class="semana-titulo">{{config['LANGUAGE_MENU'].week5}}</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week6') }}"
+          >{{config['LANGUAGE_MENU'].week}} 6 <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week7') }}"
+          >{{config['LANGUAGE_MENU'].week}} 7 <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week8') }}"
+          >{{config['LANGUAGE_MENU'].week}} 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week9') }}"
+          >{{config['LANGUAGE_MENU'].week}} 9 <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.weeks.week10') }}"
+          >{{config['LANGUAGE_MENU'].week}} 10 <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="{{ url_for('cs50x.weeks.cybersecurity') }}"
+          >{{config['LANGUAGE_MENU'].cybersecurity}}</a
+        >
+      </li>
+    </ul>
+
+    <ul>
+      <li data-marker="*">
+        <a href="{{ url_for('cs50x.seminars') }}">{{config['LANGUAGE_MENU'].seminars}}</a>
+      </li>
+      <li data-marker="*">
+        <a href="{{ url_for('cs50x.project') }}">{{config['LANGUAGE_MENU'].final_project}}</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.honesty') }}"
+          >{{config['LANGUAGE_MENU'].honesty}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.certificate') }}"
+          >{{config['LANGUAGE_MENU'].certificate}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.faqs') }}"
+          >{{config['LANGUAGE_MENU'].faqs}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.staff') }}">{{config['LANGUAGE_MENU'].staff}}</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.syllabus') }}">{{config['LANGUAGE_MENU'].syllabus}}</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Gradebook</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://code.cs50.io/">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/">{{config['LANGUAGE_MENU'].sqlite_browser}}</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/">{{config['LANGUAGE_MENU'].adminer}}</a>
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >{{config['LANGUAGE_MENU'].python_documentation}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://stackoverflow.com/search">Stack Overflow</a>
+      </li>
+
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="{{ url_for('cs50x.thanks') }}">{{config['LANGUAGE_MENU'].thanks}}</a></p>
+  </nav>
+
+  <footer></footer>
+</aside>

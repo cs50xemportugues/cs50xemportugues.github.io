@@ -1,0 +1,51 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+<h1 id="hello">Olá</h1>
+
+<p>Implemente um programa que diz "olá" para o usuário, como mostrado abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python ola.py
+Qual é seu nome?
+Ramon
+olá, Ramon
+</code></pre></div></div>
+
+<h2 id="specification">Especificação</h2>
+
+<p>Escreva, em um arquivo chamado <code class="highlighter-rouge">ola.py</code> no diretório <code class="highlighter-rouge">~/problemas6/ola</code>, um programa que pergunta ao usuário pelo seu nome, e em seguida imprime <code class="highlighter-rouge">olá, Fulano</code>, onde <code class="highlighter-rouge">Fulano</code> é o nome digitado pelo usuário, exatamente como você fez na <a href="../../1/">Lista de Problemas 1</a>, exceto que seu programa desta vez deve ser escrito em Python.</p>
+
+<h2 id="usage">Uso</h2>
+
+<p>Seu programa deve se comportar como mostrado abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ python ola.py
+Qual é seu nome?
+David
+olá, David
+</code></pre></div></div>
+
+<h2 id="testing">Testando</h2>
+
+<p>Não há <code class="highlighter-rouge">check50</code> para este problema, mas não se esqueça de testar seu código das seguintes maneiras.</p>
+
+<ul>
+  <li data-marker="*">Execute seu programa com python <code class="highlighter-rouge">python ola.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">David</code> e aperte Enter. Seu programa deve imprimir <code class="highlighter-rouge">olá, David</code>.</li>
+
+  <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python ola.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">Ricardo</code> e aperte Enter. Seu programa deve imprimir <code class="highlighter-rouge">olá, Ricardo</code>.</li>
+</ul>
+
+<h2>Como Adaptar Seu Código Antes de Enviar</h2>
+
+<p>TODO</p>
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+
+<p>Execute a linha abaixo, em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/sentimental/hello
+</code></pre></div></div>
+
+{% endblock %}

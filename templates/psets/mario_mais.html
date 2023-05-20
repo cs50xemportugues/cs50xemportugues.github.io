@@ -1,0 +1,151 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+
+<h1 id="mario">Mario</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>If you already started to work on Problem Set 1 in CS50 Lab, you may <a href="https://lab.cs50.io/cs50/labs/2020/x/mario/more/">continue working on it</a> there. If you’re just now starting to work in this problem, be sure to use CS50 IDE instead by following the instructions below!</p>
+</div>
+
+<h2 id="world-1-1">Mundo 1-1</h2>
+
+<p>Próximo ao início do Mundo 1-1 no jogo Super Mario Brothers, da Nintendo, Mario precisa pular pirâmides de blocos adjacentes, como mostrado abaixo.</p>
+
+<p><img src="pyramids.png" alt="screenshot of Mario jumping over adjacent pyramids"></p>
+
+<p>Vamos recriar essas pirâmides na linguage C, porém com texto, usando o símbolo cerquilha (<code class="highlighter-rouge">#</code>) para representar os blocos, como mostrado abaixo. Cada símbolo cerquilha possui uma altura maior do que sua largura, portanto as pirâmides terão suas alturas relativamente maiores do que suas larguras.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>   #  #
+  ##  ##
+ ###  ###
+####  ####
+</code></pre></div></div>
+
+<p>O programa que nós vamos escrever se chamará <code class="highlighter-rouge">mario</code>. E nele, nós vamos permitir que o usuário decida o quão altas serão as pirâmides ao pedi-lo por um inteiro positivo entre 1 e 8, incluso.</p>
+
+
+<p>Caso o usuário digite <code class="highlighter-rouge">8</code>, o programa deve funcionar da seguinte maneira:</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 8
+       #  #
+      ##  ##
+     ###  ###
+    ####  ####
+   #####  #####
+  ######  ######
+ #######  #######
+########  ########
+
+</code></pre></div></div>
+
+
+<p>Caso o usuário digite <code class="highlighter-rouge">4</code>, o programa deve funcionar da seguinte maneira:</p>
+
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 4
+   #  #
+  ##  ##
+ ###  ###
+####  ####
+</code></pre></div></div>
+
+
+<p>Caso o usuário digite <code class="highlighter-rouge">2</code>, o programa deve funcionar da seguinte maneira:</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 2
+ #  #
+##  ##
+</code></pre></div></div>
+
+<p>E caso o usuário digite <code class="highlighter-rouge">1</code>, o programa deve funcionar da seguinte maneira:</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 1
+#  #
+</code></pre></div></div>
+
+<p>Se, por acaso, o usuário não digitar um inteiro positivo entre 1 e 8, incluso, o programa deve continuar pedindo ao usuário até que ele coopere:</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: -1
+Altura: 0
+Altura: 42
+Altura: 50
+Altura: 4
+   #  #
+  ##  ##
+ ###  ###
+####  ####
+</code></pre></div></div>
+
+<p>Perceba que a largura do "espaço" entre as pirâmides é igual a largura de duas cerquilhas, independentemente da altura das pirâmides.</p>
+
+
+<p>Crie um novo diretório chamado <code class="highlighter-rouge">mario</code> dentro do seu diretorio <code class="highlighter-rouge">problemas1</code> executando a linha abaixo</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/ $ mkdir ~/problemas1/mario
+</code></pre></div></div>
+
+<p>Crie um novo arquivo chamado <code class="highlighter-rouge">mario.c</code> dentro do seu diretório <code class="highlighter-rouge">mario</code>. Modifique o programa <code class="highlighter-rouge">mario.c</code> de forma que ele execute como prescrito.</p>
+
+
+<h3 id="walkthrough">Passo a Passo</h3>
+
+<div class="border embed-responsive embed-responsive-16by9" data-video="">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/FzN9RAjYG_Q?modestbranding=1&amp;rel=0&amp;showinfo=0"></iframe>
+</div>
+
+<h3 id="how-to-test-your-code">Como Testar Seu Código</h3>
+
+<p>Seu código funciona como prescrito quando você digita</p>
+
+<ul>
+  <li data-marker="*"><code class="highlighter-rouge">-1</code> (ou outros números negativos)?</li>
+  <li data-marker="*"><code class="highlighter-rouge">0</code>?</li>
+  <li data-marker="*"><code class="highlighter-rouge">1</code> até <code class="highlighter-rouge">8</code>?</li>
+  <li data-marker="*"><code class="highlighter-rouge">9</code> ou outros números positivos?</li>
+  <li data-marker="*">letras ou palavras?</li>
+  <li data-marker="*">nenhuma entrada de dado, quando você só aperta Enter?</li>
+</ul>
+
+
+<p>Você pode executar a linha abaixo para avaliar a correção do seu código usando a ferramenta <code class="highlighter-rouge">check50</code>. Não se esqueça de compilar e testar o programa você também!</p>
+
+
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50xemportugues/problemas/2020/x/mario/mais
+</code></pre></div></div>
+
+<p>Execute o comando abaixo para avaliar o estilo do seu código usando a ferramenta <code class="highlighter-rouge">style50</code>.</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 mario.c
+</code></pre></div></div>
+
+<h2>Como Adaptar Seu Código Antes de Enviar</h2>
+
+<p>TODO</p>
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+
+<p>Execute a linha abaixo, e em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/mario/more
+</code></pre></div></div>
+    	
+
+{% endblock %}

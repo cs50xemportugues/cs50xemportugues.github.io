@@ -1,0 +1,39 @@
+Now, access points, what our access points? Well, access points you're probably pretty familiar with from actually connecting to the internet. That's the network that you choose, the home or your work network or what have you. 
+
+And I'm generalizing the concept of an access point here for purposes of this video. But there are actually a lot of things that can be rolled up into access points. There are concepts of routers, which is sort of a general term that we use. 
+
+But there are also switches and things actually called access points that are separate from this general concept of an access point. But basically what happens is with IPv4, I said we have this concept of private addresses, right? And instead of every machine having a unique IP address, which we have run out of, because we're over 4 billion devices trying to connect to the internet, what we do is instead assign an IP address to a router. That router or access point just in your home, for example. 
+
+And the router's job as to sort of act as a traffic cop, allowing everybody who's connected to that router to use the same IP address to get out. Does that make sense? So everybody at your home has a private IP address. They can't connect to the internet, or the internet rather can't speak to them, through that private address. They can only speak to them through the address in the router. And it's the router's job to take information that you're sending the router and direct it to the correct place and for information that's coming into the router for the router to send it to you. 
+
+So the routers are really the devices here-- particularly a router in your home, the most common sort of usage case for most people-- that has the public IP address. That's the device that's connected to the internet. And you connect to the router to have information flow through it on your behalf. 
+
+As I said, a modern home network, the router and switch and access point are all kind of bundled up into a single device. Sometimes a modem is bundled in there as well. That's usually just called a router. But it's really all of those things together. 
+
+Large scale business networks or so-called Wide Area Networks, WANS, actually keep these devices separate. They have a switch. They have routers. They have multiple access points. 
+
+For example, at a university you'll see things that look like so-called routers mounted are all around campus. Those are all access points that flow into routers, switches, et cetera, to pass information along. Because these networks are so big that one single access point can't cover its large area. 
+
+And so these large networks, business networks, et cetera, split these into separate devices, so the network and scale and grow if needed. So again, somewhere between us and the internet, we have an access point. And that's what we connect to. And through there, we can get to the internet. As I said at the beginning of this video, this is not a course on networking. So this is not the entire story. And I've kind of glossed over it. And maybe I've left you even a little bit confused as to what some of these things are. But that's OK. 
+
+We don't need the whole story. It's enough for us to know moving forward just basically a little bit about how the internet works. So what we know is we have these private networks at our house. 
+
+And we connect to a router. And that router is connected to the internet at large. But what is the internet at large? I keep saying this, but what is it? 
+
+Well, it's really just all these individual networks at my house, and at your house, and at every other house, that are connected together. It's an interconnected network, an inter-net. So instead of thinking about the internet as this giant cloud, this ethereal thing that exists out there, it's really just a connection among all of these networks. 
+
+So here we go. We have our local network. And we're not the only person probably on our local network trying to use the internet. There's probably several of us trying to get in. 
+
+And we're not the only network that exists in the world, right? There are other networks, too, that are trying to connect to the internet. But the internet is not, again, a separate entity. 
+
+It's just a set of rules that allow these networks, these small networks, the blue, the purple, and the red network here, to communicate with each other. So there's no thing they're all connecting to. They're all just connected to each other, right? 
+
+And so somewhere on these networks exists the services that we actually want. So maybe in the blue network is where Google lives. And in the purple network is where Facebook lives. And in the red network, well, maybe that's where all those cats are. 
+
+And so if we want to get information about cats, we just traverse this chain of networks to get the information we want. And here, I've represented the network as all being able to talk to each other. And we can only talk to the network. But the network can't talk back to us. 
+
+But that's not true either, right? This is all a two-way street. Information can flow through networks back and forth. 
+
+How does it do that? Well, the internet's really a system of protocols. And we're going to start talking about what those protocols are in future videos. 
+
+But again, the internet is not a separate thing. It's a set of rules that defines how networks communicate, these small networks, these local network that we're used to, the people in our house, the people at our school, the people at our job, all sharing a network. And how these networks interconnect and talk to each other, that's actually what the internet's all about. So let's, in a future video, talk about some of the protocols that comprise the internet to hopefully give you a bit more of a well-rounded understanding. I'm Doug Lloyd. This is CS50.

@@ -1,0 +1,126 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+<h1 id="mario">Mario</h1>
+
+<p><img src="pyramid.png" alt="screenshot of Mario jumping up pyramid"></p>
+
+<p>Implemente um programa que imprime metade de uma pirâmide com uma altura específica, como mostrado abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 4
+   #
+  ##
+ ###
+####
+</code></pre></div></div>
+
+<h2 id="specification">Especificação</h2>
+
+<ul>
+    
+
+  <li data-marker="*">Escreva, em um arquivo chamado <code class="highlighter-rouge">mario.py</code> em um diretório <code class="highlighter-rouge"></code>~/problemas6/mario/menos</code>, um programa que recria a metade de uma pirâmide usando cerquilhas (<code class="highlighter-rouge">#</code>) como sendo os blocos, exatamente como vocês fez na <a href="../../../1/">Lista de Problemas 1</a>, exceto pelo fato de que seu programa desta vez deve ser escrito em Python.</li>
+
+  
+  <li data-marker="*">Para tornar as coisas mais interessantes, primeiro peça ao usuário para informar a altura da meia-pirâmide usando a função <code class="highlighter-rouge">get_int</code>, que deve ser um inteiro positivo entre <code class="highlighter-rouge">1</code> e <code class="highlighter-rouge">8</code>, incluso.</li>
+
+
+  <li data-marker="*">Se o usuário não digitar um inteiro positivo que não seja maior que <code class="highlighter-rouge">8</code>, o programa deve pedir ao usuário para informar a altura novamente.</li>
+
+
+  <li data-marker="*">Em seguida, o programa deve criar, com a ajuda da função <code class="highlighter-rouge">print</code> e de uma ou mais estruturas de repetição, a meia-pirãmide desejada.</li>
+
+  <li data-marker="*">Tenha atenção para alinhar o canto inferior esquerdo da meia-pirâmide com o lado esquerdo da janela do terminal.</li>
+</ul>
+
+<h2 id="usage">Uso</h2>
+
+<p>Seu programa deve se comportar como mostrado abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 4
+   #
+  ##
+ ###
+####
+</code></pre></div></div>
+
+<h2 id="testing">Testando</h2>
+
+<p>Não há <code class="highlighter-rouge">check50</code> para este problema, mas não se esqueça de testar seu código das seguintes maneiras.</p>
+
+<ul>
+  <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python mario.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">-1</code> e aperte Enter. Seu programa deve rejeitar esta entrada de dados como sendo inválida, e pedir ao usuário para digitar outro número.</li>
+
+  <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python mario.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">0</code> e aperte Enter. Seu programa deve rejeitar esta entrada de dados como sendo inválida, e pedir ao usuário para digitar outro número.</li>
+
+  <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python mario.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">1</code> e aperte Enter. Seu programa deve gerar a saída de dados abaixo. Não se esqueça de alinhar a pirâmide com o canto inferior esquerdo do terminal, e de não haver espaços extras no fim de cada linha.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#
+</code></pre></div></div>
+
+
+
+
+
+<ul>
+  <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python mario.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">2</code> e aperte Enter. Seu programa deve gerar a saída de dados abaixo. Não se esqueça de alinhar a pirâmide com o canto inferior esquerdo do terminal, e de não haver espaços extras no fim de cada linha.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> #
+##
+</code></pre></div></div>
+
+
+
+<ul>
+  <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python mario.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">8</code> e aperte Enter. Seu programa deve gerar a saída de dados abaixo. Não se esqueça de alinhar a pirâmide com o canto inferior esquerdo do terminal, e de não haver espaços extras no fim de cada linha.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       #
+      ##
+     ###
+    ####
+   #####
+  ######
+ #######
+########
+</code></pre></div></div>
+
+
+
+<ul>
+  <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python mario.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">9</code> e aperte Enter. Seu programa deve rejeitar esta entrada de dados como sendo inválida, e pedir ao usuário para digitar outro número. Em seguida, digite <code class="highlighter-rouge">2</code> e aperte Enter. Seu programa deve gerar a saída de dados abaixo. Não se esqueça de alinhar a pirâmide com o canto inferior esquerdo do terminal, e de não haver espaços extras no fim de cada linha.</li>
+</ul>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code> #
+##
+</code></pre></div></div>
+
+
+
+<ul>
+  <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python mario.py</code>, e aguarde o programa te pedir por entrada de dados. Digite <code class="highlighter-rouge">foo</code> e aperte Enter. Seu programa deve rejeitar esta entrada de dados como sendo inválida, e pedir ao usuário para digitar outro número.</li>
+
+
+  <li data-marker="*">Execute seu programa com <code class="highlighter-rouge">python mario.py</code>, e aguarde o programa te pedir por entrada de dados. Não digite nada e aperte Enter. Seu programa deve rejeitar esta entrada de dados como sendo inválida, e pedir ao usuário para digitar outro número.</li>
+</ul>
+
+
+
+<h2>Como Adaptar Seu Código Antes de Enviar</h2>
+<p>TODO</p>
+
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+<p>Execute a linha abaixo, em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2021...
+</code></pre></div></div>
+
+
+{% endblock %}

@@ -1,0 +1,318 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+<h1 id="caesar">César</h1>
+
+<p>Implemente um programa que criptografa mensagens usando a cifra de César, como mostrado abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 13
+texto claro:  BOM DIA
+texto cifrado: OBZ QVN
+</code></pre></div></div>
+
+<h2 id="background">Entendendo o Problema</h2>
+
+<p>César (sim, Júlio César do antigo Império Romano) supostamente costumava "criptografar" (codificar) mensagens confidenciais trocando cada letra da mensagem um número de "casas". Por exemplo, ele escrevia A como sendo B, B como sendo C, C como sendo D, ..., e, para conectar alfabeticamente, Z como sendo A. E portanto, para dizer BOM DIA para alguém, César escreveria CPN EJB. Ao receberem mensagens de César, as pessoas contactadas teriam que "descriptografar" as mensagens trocando cada letra um número de casas na direção inversa.</p>
+
+<p>Este "sistema de criptográfico" funcionava somente se apenas César e os contactados soubessem um segredo, neste caso, o número de casas que César trocou as letras (1, por exemplo). Não é uma técnica segura para padrões modernos, mas, se você for a primeira pessoa no mundo a fazer isso, bem seguro, né?!</p>
+
+<p>Texto não criptografado é geralmente chamado <em>texto claro</em>. Texto criptografado é geralmente chamado de <em>texto cifrado</em>. E o segredo usado (número de posições que letras são modificadas) é chamado de <em>chave</em>.</p>
+
+<p>Para podermos visualizar melhor, vamos ver como criptografar <code class="highlighter-rouge">BOM DIA</code> usando a chave com valor 1 resulta em <code class="highlighter-rouge">CPN EJB</code>:</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>texto claro</th>
+      <th>B</th>
+      <th>O</th>
+      <th>M</th>
+      <th>D</th>
+      <th>I</th>
+      <th>A</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>+ chave</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <td>= texto cifrado</td>
+      <td>C</td>
+      <td>O</td>
+      <td>N</td>
+      <td>E</td>
+      <td>J</td>
+      <td>B</td>
+    </tr>
+  </tbody>
+</table>
+
+<p>Para sermos mais específicos, o algoritmo de César encripta mensagens "alterando" cada letra um número <em>k</em> de posições. E para sermos mais precisos, se <em>t</em> for um texto claro (mensagem não criptografada), <em>t<sub>i</sub></em> for o caractere número <em>i</em> no texto <em>t</em>, e <em>k</em> for a chave secreta (um inteiro positivo), logo, cada letra, que chamaremos de <em>c<sub>i</sub></em>, do texto cifrado, que chamaremos de <em>c</em>, seria computada da seguinte maneira</p>
+
+<p>c<sub>i</sub> = (t<sub>i</sub> + k) % 26</p>
+
+<p>onde <code class="highlighter-rouge">% 26</code> significa "resto da divisão por 26." Esta fórmula pode fazer o algoritmo parecer mais complicado do que ele realmente é, mas isto é simplesmente uma maneira concisa de expressar o algoritmo corretamente. Para propósitos didáticos, pense no A (ou a) como sendo 0, B (ou b) como sendo 1, ..., H (ou h) como sendo 7, I (ou i) como sendo 8, ..., e Z (ou z) como sendo 25. Suponhamos que César queira dizer "OI" para alguém de forma confidencial, usando, desta vez, uma chave, que chamaremos de <em>k</em>, com valor 3. E portanto, o texto claro dele, que chamaremos de <em>t</em>, é Oi. E neste caso, o primeiro caractere do texto claro dele, <em>t<sub>0</sub></em>, é O (ou 14), e o segundo caractere do texto claro dele, <em>t<sub>1</sub></em>, é i (ou 8). O primeiro caractere do texto cifrado, <em>c<sub>0</sub></em>, será R, e o segundo caractere do texto cifrado, <em>c<sub>1</sub></em>, será L. Você consegue entender porque?</p>
+
+<p>Vamos escrever um programa chamado <code class="highlighter-rouge">cesar</code> que nos permite criptografar mensagens usando a cifra de César. No momento que o usuário executar o programa, ele deve decidir, através de um argumento de linha de comando, qual será a chave usada na mensagem secreta que eles informarão durante a execução. Você não deve necessariamente supor que a chave do usuário será um número. Entretanto, você pode considerar que, se é um número, então é um inteiro positivo.</p>
+
+<p>Aqui estão alguns exemplos de como o programa deve funcionar. Por exemplo, se o usuário definir a chave como sendo <code class="highlighter-rouge">1</code> e o texto claro como sendo <code class="highlighter-rouge">BOM DIA</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 1
+texto claro:  BOM DIA
+texto cifrado: CPN EJB
+</code></pre></div></div>
+
+<p>O programa deve se comportar assim, se o usuário definir a chave como sendo <code class="highlighter-rouge">13</code> e o texto claro como sendo <code class="highlighter-rouge">ola, mundo</code>:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 13
+texto claro: ola, mundo
+texto cifrado: byn, zhaqb
+</code></pre></div></div>
+
+<p>Perceba que nem a vírgula nem o espaço serão alterados pela cifra. Modifique apenas os caracteres alfabéticos!</p>
+
+<p>Que tal mais um exemplo? Se o usuário novamente definir a chave como sendo <code class="highlighter-rouge">13</code> e informar um texto claro mais complexo, é assim que o programa deve funcionar:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 13
+texto claro: vamos viajar para Feu Rosa hoje
+texto cifrado: inzbf ivnwne cnen Srh Ebfn ubwr
+</code></pre></div></div>
+
+<p>Perceba que as letras maiúsculas da mensagem original foram preservadas. Letras minúsculas permanecem minúsculas e letras maiúsculas permanecem maiúsculas.</p>
+
+<p>E se o usuário não quiser cooperar?</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar OI
+Uso correto: ./cesar chave
+</code></pre></div></div>
+
+<p>Ou não quiser mesmo cooperar?</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar
+Uso correto: ./cesar chave
+</code></pre></div></div>
+
+<p>Ou então...</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 1 2 3
+Uso correto: ./cesar chave
+</code></pre></div></div>
+
+<h2 id="specification">Especificação</h2>
+
+<p>Projete e implemente um programa, chamado <code class="highlighter-rouge">cesar</code> (sem acento), que criptografa mensagens usando a cifra de César.</p>
+
+
+<ul>
+  <li data-marker="*">Implemente seu programa em um arquivo chamado <code class="highlighter-rouge">cesar.c</code>, em um diretório chamado <code class="highlighter-rouge">~/problemas2/cesar</code></li>
+
+  <li data-marker="*">Seu programa deve aceitar um único argumento de linha de comando, e que deve ser um inteiro não negativo. Vamos chamá-lo de <em>k</em> por propósitos didáticos.</li>
+
+  <li data-marker="*">Se seu programa for executado sem nenhum argumento de linha de comando ou com mais de um argumento de linha de comando, o seu programa deve imprimir uma mensagem de erro da sua preferência (usando <code class="highlighter-rouge">printf</code>) e retornar imediatamente, a partir da função <code class="highlighter-rouge">main</code>, o valor <code class="highlighter-rouge">1</code> (que tende a indicar um erro).</li>
+
+  <li data-marker="*">Se qualquer dos caracteres do argumento de linha de comando não for um dígito decimal, seu programa deve imprimir a mensagem <code class="highlighter-rouge">Uso correto: ./cesar chave</code> e retornar, a partir da função <code class="highlighter-rouge">main</code>, o valor <code class="highlighter-rouge">1</code>.</li>
+
+  <li data-marker="*">Não presuma que <em>k</em> será menor ou igual a 26. Seu programa deve funcionar para todos os valores inteiros não negativos menores do que 2^31 - 26. Em outras palavras, você não precisa se preocupar se seu programa vai gerar erros caso seu usuário escolha um valor para <em>k</em> que seja alto demais ou quase alto demais para caber em um <code class="highlighter-rouge">int</code>. (Lembre-se que um <code class="highlighter-rouge">int</code> pode transbordar.) Mas, ainda que <em>k</em> seja maior do que 26, caracteres alfabéticos na entrada de dados do seu programa devem continuar sendo caracteres alfabéticos na saída de dados do seu programa. Por exemplo, se <em>k</em> for 27, <code class="highlighter-rouge">A</code> não deve se tornar <code class="highlighter-rouge">[</code>, ainda que <code class="highlighter-rouge">[</code> esteja 27 posições após <code class="highlighter-rouge">A</code> na tabela ASCII, como mostrado em http://www.asciichart.com/[asciichart.com]; <code class="highlighter-rouge">A</code> deve se tornar <code class="highlighter-rouge">B</code>, considerando que <code class="highlighter-rouge">B</code> está 27 posições após o <code class="highlighter-rouge">A</code>, considerando que o alfabeto esteja "conectado" de <code class="highlighter-rouge">Z</code> para <code class="highlighter-rouge">A</code>.</li>
+
+  <li data-marker="*">Seu programa deve imprimir <code class="highlighter-rouge">texto claro:</code> (sem uma nova linha) e em seguida pedir para o usuário informar uma <code class="highlighter-rouge">string</code> (que é a mensagem a ser criptografada), usando <code class="highlighter-rouge">get_string</code>.</li>
+
+  <li data-marker="*">Após receber o texto claro, seu programa deve imprimir <code class="highlighter-rouge">texto cifrado:</code> (sem uma nova linha) seguido do texto cifrado correspondente ao texto claro, com cada caractere alfabético no texto claro "alterado" em um número <em>k</em> de posições; caracteres não alfabéticos devem ser imprimidos sem modificações.</li>
+
+  <li data-marker="*">Seu programa deve preservar letras maiúsculas e minúsculas: letras maiúsculas, ainda que alteradas, devem permanecer maiúsculas, e letras minúsculas, ainda que alteradas, devem permanecer minúsculas.</li>
+
+  <li data-marker="*">Depois de imprimir o texto cifrado, você deve imprimir uma nova linha. Seu programa deve finalizar retornando o valor <code class="highlighter-rouge">0</code> a partir da função <code class="highlighter-rouge">main</code>.</li>
+</ul>
+
+<p>Como começar? Vamos abordar este problema um passo de cada vez.</p>
+
+<h3 id="pseudocode">Pseudocódigo</h3>
+
+<p>Primeiro, vamos escrever um pseudocódigo que implemente este programa, mesmo que não tenhamos (ainda) certeza de como escrever isso em código. Não existe uma maneira correta de escrever pseudocógido, mas frases curtas em portuguẽs já são suficientes. Lembre-se de como escrevemos pseudocódigo para <a href="">encontrar João Silva</a>. É provável que seu pseudocódigo usará (ou implicará o uso) de uma ou mais funções, condições, expressões Booleanas, repetições, e/ou variáveis.</p>
+
+<details>
+    <summary>Dica</summary>
+    <p>Existe mais de uma maneira de fazer isto, e aqui está uma!</p>
+
+<ol>
+  <li>Cheque se o programa foi executado com um argumento de linha de comando</li>
+  <li>Percorra o argumento informado para garantir que todos os caracteres são dígitos (número de 0 a 9)</li>
+  <li>Converta esse argumento de linha de comando de <code class="highlighter-rouge">string</code> para <code class="highlighter-rouge">int</code></li>
+  <li>Peça ao usuário para informar o texto claro</li>
+  <li>Percorra cada caractere no texto claro:
+    <ol>
+      <li>Se o caractere for uma letra maiúscula, modifique a letra usando a chave, mantendo a letra na forma maiúscula, em seguida imprima o caractere modificado</li>
+      <li>Se o caractere for uma letra minúscula, modifique a letra, usando a chave, mantendo a letra na forma minúscula, em seguida imprima o caractere modificado</li>
+      <li>Se o caractere não for uma letra, imprima o caractere sem modificar</li>
+    </ol>
+  </li>
+  <li>Imprima uma nova linha</li>
+</ol>
+
+<p>Não tem problema alterar seu pseudocódigo depois de ver este aqui, você só não pode copiar e colar este pseudocódigo no seu arquivo!</p>
+</details>
+
+<h3 id="counting-command-line-arguments">Contando Argumentos de Linha de Comando</h3>
+
+<p>Qualquer que seja seu pseudocódigo, vamos primeiro escrever apenas o código em linguagem C que checa se o programa foi executado com um único argumento de linha de comando antes de adicionar funcionalidades extras.</p>
+
+<p>Em um novo arquivo chamado <code class="highlighter-rouge">cesar.c</code>, escreva código de forma que: caso o usuário tenha informado exatamente um argumento de linha de comando, o programa imprime <code class="highlighter-rouge">Sucesso</code>. Se o usuário não informar um argumento de linha de comando, ou se o usuário informar dois ou mais, o programa imprime <code class="highlighter-rouge">Uso correto: ./cesar chave</code>. Lembre-se, considerando que esta chave está vindo de um argumento de linha de comando no tempo durante o tempo de execução, e não através de <code class="highlighter-rouge">get_string</code>, nós não temos a oportunidade de pedir ao usuário novamente. O comportamento do programa resultante deve ser como mostrado abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 20
+Sucesso
+</code></pre></div></div>
+
+<p>ou</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar
+Uso correto: ./cesar chave
+</code></pre></div></div>
+
+<p>ou</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 1 2 3
+Uso correto: ./cesar chave
+</code></pre></div></div>
+
+<details>
+    <summary>Dicas</summary>
+    <ul>
+  <li data-marker="*">Lembre-se que você pode compilar seu programa com <code class="highlighter-rouge">make</code>.</li>
+  <li data-marker="*">Lembre-se que você pode imprimir com <code class="highlighter-rouge">printf</code>.</li>
+  <li data-marker="*">Lembre-se que <code class="highlighter-rouge">argc</code> e <code class="highlighter-rouge">argv</code> dão informação sobre o que foi inserido na linha de comando.</li>
+  <li data-marker="*">Lembre-se que o nome do programa em si (neste caso, <code class="highlighter-rouge">./cesar</code>) está armazenado em <code class="highlighter-rouge">argv[0]</code>.</li>
+</ul>
+</details>
+
+<h3 id="accessing-the-key">Acessando a Chave</h3>
+
+<p>Agora que seu programa está (assim esperamos!) aceitando entrada de dados como prescrito, é hora do próximo passo.</p>
+
+<p>Lembre-se que no nosso programa, nós devemos nos proteger contra usuários que tecnicamente informam um único argumento de linha de comando (a chave), mas que informam algo que não é realmente um inteiro, por exeplo:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar xyz
+</code></pre></div></div>
+
+<p>Antes de começarmos a analizar a chave para a validarmos, vamos garantir que conseguimos ler o argumento de linha de comando. Portanto, modifique o programa <code class="highlighter-rouge">cesar.c</code> de forma que ele não apenas checa se o usuário informou apenas um argumento de linha de comando, mas que após verificar isso, o programa imprime esse único argumento de linha de comando. Portanto, o comportamento do programa tem que ser algo assim:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 20
+Sucesso
+20
+</code></pre></div></div>
+
+<details>
+    <summary>Dicas</summary>
+    <ul>
+  <li data-marker="*">Lembre-se que <code class="highlighter-rouge">argc</code> e <code class="highlighter-rouge">argv</code> dão informação sobre o que foi inserido na linha de comando.</li>
+  <li data-marker="*">Lembre-se que <code class="highlighter-rouge">argv</code> é um array de strings.</li>
+  <li data-marker="*">Lembre-se que com <code class="highlighter-rouge">printf</code>, nós podemos imprimir uma string usando <code class="highlighter-rouge">%s</code> como substituto.</li>
+  <li data-marker="*">Lembre-se que cientistas da computação gostam de começar a contar a partir de 0.</li>
+  <li data-marker="*">Lembre-se que nós podemos acessar elementos individuais de um array, tal como com <code class="highlighter-rouge">argv</code> usando colchetes, como por exemplo: <code class="highlighter-rouge">argv[0]</code>.</li>
+</ul>
+</details>
+
+<h3 id="validating-the-key">Validando a Chave</h3>
+
+<p>Agora que você sabe como ler a chave, é hora de analizá-la. Modifique <code class="highlighter-rouge">cesar.c</code> de forma que ao invés de imprimir o argumento de linha de comando informado, seu programa checa se cada caractere nesse argumento de linha de comando é um dígito decimal (um número de <code class="highlighter-rouge">0</code> a <code class="highlighter-rouge">9</code>)  e, caso algum deles não seja, finalize o programa depois de imprimir a mensagem <code class="highlighter-rouge">Uso correto: ./cesar chave</code>. Mas se o argumento consistir somente de dígitos (caracteres númericos), você deve converter essa string (lembre-se que <code class="highlighter-rouge">argv</code> é um array de strings, ainda que essas strings aparentem ser números) em um inteiro, e imprima esse <em>inteiro</em>, usando <code class="highlighter-rouge">%i</code> junto com <code class="highlighter-rouge">printf</code>. Portanto, o comportamento do programa deve ser algo assim:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 20
+Sucesso
+20
+</code></pre></div></div>
+
+<p>ou</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 20x
+Uso correto: ./cesar chave
+</code></pre></div></div>
+
+<details>
+    <summary>Dicas</summary>
+    <ul>
+  <li data-marker="*">Lembre-se que <code class="highlighter-rouge">argv</code> é um array de strings.</li>
+  <li data-marker="*">Lembre-se que uma string é um array de <code class="highlighter-rouge">char</code>s (caracteres).</li>
+  <li data-marker="*">Lembre-se que o arquivo cabeçalho <code class="highlighter-rouge">string.h</code> contém várias funções úteis para se trabalhar com strings.</li>
+  <li data-marker="*">Lembre-se que nós podemos usar uma estrutura de repetição para percorrer cada caractere em uma string caso saibamos seu comprimento.</li>
+  <li data-marker="*">Lembre-se que o arquivo cabeçalho <code class="highlighter-rouge">ctype.h</code> contém várias funções úteis que nós dão informações sobre caracteres.</li>
+  <li data-marker="*">Lembre-se que nós podemos retornar (usando o comando <code class="highlighter-rouge">return</code>) um valor diferente de zero a partir da função <code class="highlighter-rouge">main</code> para indicar que nosso programa não finalizou corretamente.</li>
+  <li data-marker="*">Lembre-se que com <code class="highlighter-rouge">printf</code> nós podemos imprimir um inteiro usando <code class="highlighter-rouge">%i</code> como substituto.</li>
+  <li data-marker="*">Lembre-se que a função <code class="highlighter-rouge">atoi</code> converte uma string que se parece com um número nesse mesmo número (ou seja, converte uma string que possui apenas caracteres numéricos no número representado por essa sequência de caracteres numéricos).</li>
+</ul>
+</details>
+
+<h3 id="peeking-underneath-the-hood">Espiando por Debaixo dos Panos</h3>
+
+<p>Como seres humanos, é fácil para nós entender intuitivamente a fórmula descrita acima, visto que podemos dizer que "H + 1 = I". Mas um computador consegue entender essa mesma lógica? Vamos descobrir. Por agora, nós vamos ignorar temporariamente a chave que o usuário informou e ao invés disso, vamos pedir para o usuário informar uma mensagem secreta, e em seguida, vamos tentar modificar todos os caracteres da mensagem em um número 1 de posições.</p>
+
+<p>Extenda a funcionalidade do programa <code class="highlighter-rouge">cesar.c</code> de forma que, após validar a chave, nós pedimos ao usuário para informar uma string, e em seguida, modificamos todos os caracteres em um número 1 de posições, imprimindo, por fim, o resultado. Nós também podemos remover a linha de código que escrevemos anteriormente que imprimia <code class="highlighter-rouge">Sucesso</code>. Dito isto, o programa pode se comportar da seguinte maneira:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./cesar 1
+texto claro:  bom dia
+teto cifrado: cpn ejb
+</code></pre></div></div>
+
+<details>
+    <summary>Dicas</summary>
+    <ul>
+  <li data-marker="*">Tente percorrer cada caractere no texto claro e literalmente adicionar 1 à ele, e em seguida imprimi-lo.</li>
+  <li data-marker="*">Se <code class="highlighter-rouge">c</code> for uma variável do tipo <code class="highlighter-rouge">char</code> na linguagem C, o que acontece quando você executa <code class="highlighter-rouge">printf("%c", c + 1)</code>?</li>
+</ul>
+</details>
+
+<h3 id="your-turn">Sua Vez</h3>
+
+<p>Agora é hora de combinar tudo! Ao invés de modificar os caracteres um número c de posições, altere o programa <code class="highlighter-rouge">cesar.c</code> de forma que ele modifique os caracteres pelo valor da chave informada pelo usuário. E não se esqueça de preservar o aspecto maiúsculo e minúsculo das letras. Letras maiúsculas devem permanecer maiúsculas, letras minúsculas devem permanecer minúsculas, e caracteres que não sejam alfabeticos devam permanecer inalterados.</p>
+
+<details>
+    <summary>Dicas</summary>
+    <ul>
+  <li data-marker="*">É bom usar o operador módulo (que calcula o resto de divisão), <code class="highlighter-rouge">%</code>, para lidar com a "conexão" de Z para A! Mas como?</li>
+  <li data-marker="*">As coisas ficam um pouco confusas se tentarmos modificar <code class="highlighter-rouge">Z</code> ou <code class="highlighter-rouge">z</code> em 1 posição usando a técnica da seção anterior.</li>
+  <li data-marker="*">As coisas também ficam um pouco confusas se tentarmos modificar sinais de pontuação usando essa técnica.</li>
+  <li data-marker="*">Lembre-se que ASCII mapeia todos os caracteres imprimíveis para números.</li>
+  <li data-marker="*">Lembre-se que o valor ASCII da letra <code class="highlighter-rouge">A</code> é 65. O valor ASCII da letra <code class="highlighter-rouge">a</code>, por outro lado, é 97.</li>
+  <li data-marker="*">Se você não estiver vendo nenhuma saída de dados quando você chama a função <code class="highlighter-rouge">printf</code>, é provável que seja por que você esteja imprimindo caracteres fora da extensão ASCII válida, que vai de 0 a 127. Tente primeiro imprimir os caracteres como números (usando <code class="highlighter-rouge">%i</code> ao inviés de <code class="highlighter-rouge">%c</code>) para ver quais valores você está imprimindo, para ter certeza que você está imprimindo apenas caracteres válidos!</li>
+</ul>
+</details>
+
+<h2 id="walkthrough">Passo a Passo</h2>
+
+<div class="border embed-responsive embed-responsive-16by9" data-video="">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/V2uusmv2wxI?modestbranding=1&amp;rel=0&amp;showinfo=0"></iframe>
+</div>
+
+<h2 id="how-to-test-your-code">Como Testar Seu Código</h2>
+
+<p>Execute a linha abaixo para avaliar a correção do seu código usando a ferramenta <code class="highlighter-rouge">check50</code>. Não se esqueça de compilar e testar o código você também!</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50xemportugues/problemas/2020/cesar
+</code></pre></div></div>
+
+<p>Execute a linha abaixo para avaliar o estilo do seu código usando a ferramenta <code class="highlighter-rouge">style50</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 cesar.c
+</code></pre></div></div>
+
+<h2>Como Adaptar Seu Código Antes de Enviar</h2>
+
+<p>TODO</p>
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+<p>Execute a linha abaixo, e em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/caesar
+</code></pre></div></div>    	
+               
+
+{% endblock %}

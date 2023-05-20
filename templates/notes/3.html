@@ -1,0 +1,715 @@
+{% extends 'layout.html' %}
+
+
+{% block conteudo %}
+
+<h1 class="no_toc" id="lecture-3">Lecture 3</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#searching" id="markdown-toc-searching">Searching</a></li>
+  <li><a href="#big-o" id="markdown-toc-big-o">Big O</a></li>
+  <li><a href="#linear-search" id="markdown-toc-linear-search">Linear search</a></li>
+  <li><a href="#structs" id="markdown-toc-structs">Structs</a></li>
+  <li><a href="#sorting" id="markdown-toc-sorting">Sorting</a></li>
+  <li><a href="#selection-sort" id="markdown-toc-selection-sort">Selection sort</a></li>
+  <li><a href="#recursion" id="markdown-toc-recursion">Recursion</a></li>
+  <li><a href="#merge-sort" id="markdown-toc-merge-sort">Merge sort</a></li>
+</ul>
+
+<h2 id="searching">Searching</h2>
+
+<ul>
+  <li data-marker="*">Last time, we talked about memory in a computer, or RAM, and how our data can be stored as individual variables or as arrays of many items, or elements.</li>
+  <li data-marker="*">We can think of an array with a number of items as a row of lockers, where a computer can only open one locker to look at an item, one at a time.</li>
+  <li data-marker="*">For example, if we want to check whether a number is in an array, with an algorithm that took in an array as input and produce a boolean as a result, we might:
+    <ul>
+      <li data-marker="*">look in each locker, or at each element, one at a time, from the beginning to the end.
+        <ul>
+          <li data-marker="*">This is called <strong>linear search</strong>, where we move in a line, since our array isn’t sorted.</li>
+        </ul>
+      </li>
+      <li data-marker="*">start in the middle and move left or right depending on what we’re looking for, if our array of items is sorted.
+        <ul>
+          <li data-marker="*">This is called <strong>binary search</strong>, since we can divide our problem in two with each step, like what David did with the phone book in week 0.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*">We might write pseudocode for linear search with:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>For i from 0 to n–1
+    If i'th element is 50
+        Return true
+Return false
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We can label each of <code class="language-plaintext highlighter-rouge">n</code> lockers from <code class="language-plaintext highlighter-rouge">0</code> to <code class="language-plaintext highlighter-rouge">n–1</code>, and check each of them in order.</li>
+    </ul>
+  </li>
+  <li data-marker="*">For binary search, our algorithm might look like:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If no items
+    Return false
+If middle item is 50
+    Return true
+Else if 50 &lt; middle item
+    Search left half
+Else if 50 &gt; middle item
+    Search right half
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Eventually, we won’t have any parts of the array left (if the item we want wasn’t in it), so we can return <code class="language-plaintext highlighter-rouge">false</code>.</li>
+      <li data-marker="*">Otherwise, we can search each half depending on the value of the middle item.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="big-o">Big O</h2>
+
+<ul>
+  <li data-marker="*">In week 0, we saw different types of algorithms and their running times:
+<img src="running_time.png" alt="chart with: &quot;size of problem&quot; as x–axis; &quot;time to solve&quot; as y–axis; red, steep straight line from origin to top of graph labeled &quot;n&quot;; yellow, less steep straight line from origin to top of graph labeled &quot;n/2&quot;; green, curved line that gets less and less steep from origin to right of graph labeled &quot;log_2 n&quot;"></li>
+  <li data-marker="*">The more formal way to describe this is with big <em>O</em> notation, which we can think of as “on the order of”. For example, if our algorithm is linear search, it will take approximately <em>O</em>(<em>n</em>) steps, “on the order of <em>n</em>”. In fact, even an algorithm that looks at two items at a time and takes <em>n</em>/2 steps has <em>O</em>(<em>n</em>). This is because, as <em>n</em> gets bigger and bigger, only the largest term, <em>n</em>, matters.</li>
+  <li data-marker="*">Similarly, a logarithmic running time is <em>O</em>(log <em>n</em>), no matter what the base is, since this is just an approximation of what happens with <em>n</em> is very large.</li>
+  <li data-marker="*">There are some common running times:
+    <ul>
+      <li data-marker="*"><em>O</em>(<em>n</em><sup>2</sup>)</li>
+      <li data-marker="*"><em>O</em>(<em>n</em> log <em>n</em>)</li>
+      <li data-marker="*"><em>O</em>(<em>n</em>)
+        <ul>
+          <li data-marker="*">(linear search)</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(log <em>n</em>)
+        <ul>
+          <li data-marker="*">(binary search)</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(1)</li>
+    </ul>
+  </li>
+  <li data-marker="*">Computer scientists might also use big Ω, big Omega notation, which is the lower bound of number of steps for our algorithm. (Big <em>O</em> is the upper bound of number of steps, or the worst case, and typically what we care about more.) With linear search, for example, the worst case is <em>n</em> steps, but the best case is 1 step since our item might happen to be the first item we check. The best case for binary search, too, is 1 since our item might be in the middle of the array.</li>
+  <li data-marker="*">And we have a similar set of the most common big Ω running times:
+    <ul>
+      <li data-marker="*">Ω(<em>n</em><sup>2</sup>)</li>
+      <li data-marker="*">Ω(<em>n</em> log <em>n</em>)</li>
+      <li data-marker="*">Ω(<em>n</em>)
+        <ul>
+          <li data-marker="*">(counting the number of items)</li>
+        </ul>
+      </li>
+      <li data-marker="*">Ω(log <em>n</em>)</li>
+      <li data-marker="*">Ω(1)
+        <ul>
+          <li data-marker="*">(linear search, binary search)</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="linear-search">Linear search</h2>
+
+<ul>
+  <li data-marker="*">Let’s take a look at <code class="language-plaintext highlighter-rouge">numbers.c</code>:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// An array of numbers</span>
+    <span class="kt">int</span> <span class="n">numbers</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="mi">4</span><span class="p">,</span> <span class="mi">8</span><span class="p">,</span> <span class="mi">15</span><span class="p">,</span> <span class="mi">16</span><span class="p">,</span> <span class="mi">23</span><span class="p">,</span> <span class="mi">42</span><span class="p">};</span>
+
+    <span class="c1">// Search for 50</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">6</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="mi">50</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"Found</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Not found</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Here we initialize an array with some values, and we check the items in the array one at a time, in order.</li>
+      <li data-marker="*">And in each case, depending on whether the value was found or not, we can return an exit code of either 0 (for success) or 1 (for failure).</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can do the same for names:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// An array of names</span>
+    <span class="n">string</span> <span class="n">names</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"EMMA"</span><span class="p">,</span> <span class="s">"RODRIGO"</span><span class="p">,</span> <span class="s">"BRIAN"</span><span class="p">,</span> <span class="s">"DAVID"</span><span class="p">};</span>
+
+    <span class="c1">// Search for EMMA</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s">"EMMA"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"Found</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Not found</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We can’t compare strings directly, since they’re not a simple data type but rather an array of many characters, and we need to compare them differently. Luckily, the <code class="language-plaintext highlighter-rouge">string</code> library has a <code class="language-plaintext highlighter-rouge">strcmp</code> function which compares strings for us and returns <code class="language-plaintext highlighter-rouge">0</code> if they’re the same, so we can use that.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Let’s try to implement a phone book with the same ideas:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+</span>
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">names</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"EMMA"</span><span class="p">,</span> <span class="s">"RODRIGO"</span><span class="p">,</span> <span class="s">"BRIAN"</span><span class="p">,</span> <span class="s">"DAVID"</span><span class="p">};</span>
+    <span class="n">string</span> <span class="n">numbers</span><span class="p">[]</span> <span class="o">=</span> <span class="p">{</span><span class="s">"617–555–0100"</span><span class="p">,</span> <span class="s">"617–555–0101"</span><span class="p">,</span> <span class="s">"617–555–0102"</span><span class="p">,</span> <span class="s">"617–555–0103"</span><span class="p">};</span>
+
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">names</span><span class="p">[</span><span class="n">i</span><span class="p">],</span> <span class="s">"EMMA"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"Found %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">numbers</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Not found</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We’ll use strings for phone numbers, since they might include formatting or be too long for a number.</li>
+      <li data-marker="*">Now, if the name at a certain index in the <code class="language-plaintext highlighter-rouge">names</code> array matches who we’re looking for, we’ll return the phone number in the <code class="language-plaintext highlighter-rouge">numbers</code> array, at the same index. But that means we need to particularly careful to make sure that each number corresponds to the name at each index, especially if we add or remove names and numbers.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="structs">Structs</h2>
+
+<ul>
+  <li data-marker="*">It turns out that we can make our own custom data types called <strong>structs</strong>:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+</span>
+<span class="k">typedef</span> <span class="k">struct</span>
+<span class="p">{</span>
+    <span class="n">string</span> <span class="n">name</span><span class="p">;</span>
+    <span class="n">string</span> <span class="n">number</span><span class="p">;</span>
+<span class="p">}</span>
+<span class="n">person</span><span class="p">;</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="n">person</span> <span class="n">people</span><span class="p">[</span><span class="mi">4</span><span class="p">];</span>
+
+    <span class="n">people</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">name</span> <span class="o">=</span> <span class="s">"EMMA"</span><span class="p">;</span>
+    <span class="n">people</span><span class="p">[</span><span class="mi">0</span><span class="p">].</span><span class="n">number</span> <span class="o">=</span> <span class="s">"617–555–0100"</span><span class="p">;</span>
+
+    <span class="n">people</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">name</span> <span class="o">=</span> <span class="s">"RODRIGO"</span><span class="p">;</span>
+    <span class="n">people</span><span class="p">[</span><span class="mi">1</span><span class="p">].</span><span class="n">number</span> <span class="o">=</span> <span class="s">"617–555–0101"</span><span class="p">;</span>
+
+    <span class="n">people</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">name</span> <span class="o">=</span> <span class="s">"BRIAN"</span><span class="p">;</span>
+    <span class="n">people</span><span class="p">[</span><span class="mi">2</span><span class="p">].</span><span class="n">number</span> <span class="o">=</span> <span class="s">"617–555–0102"</span><span class="p">;</span>
+
+    <span class="n">people</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">name</span> <span class="o">=</span> <span class="s">"DAVID"</span><span class="p">;</span>
+    <span class="n">people</span><span class="p">[</span><span class="mi">3</span><span class="p">].</span><span class="n">number</span> <span class="o">=</span> <span class="s">"617–555–0103"</span><span class="p">;</span>
+
+    <span class="c1">// Search for EMMA</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">if</span> <span class="p">(</span><span class="n">strcmp</span><span class="p">(</span><span class="n">people</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">name</span><span class="p">,</span> <span class="s">"EMMA"</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"Found %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">people</span><span class="p">[</span><span class="n">i</span><span class="p">].</span><span class="n">number</span><span class="p">);</span>
+            <span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"Not found</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="k">return</span> <span class="mi">1</span><span class="p">;</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">We can think of structs as containers, inside of which are multiple other data types.</li>
+      <li data-marker="*">Here, we create our own type with a struct called <code class="language-plaintext highlighter-rouge">person</code>, which will have a <code class="language-plaintext highlighter-rouge">string</code> called <code class="language-plaintext highlighter-rouge">name</code> and a <code class="language-plaintext highlighter-rouge">string</code> called <code class="language-plaintext highlighter-rouge">number</code>. Then, we can create an array of these struct types and initialize the values inside each of them, using a new syntax, <code class="language-plaintext highlighter-rouge">.</code>, to access the properties of each <code class="language-plaintext highlighter-rouge">person</code>.</li>
+      <li data-marker="*">In our loop, we can now be more certain that the <code class="language-plaintext highlighter-rouge">number</code> corresponds to the <code class="language-plaintext highlighter-rouge">name</code> since they are from the same <code class="language-plaintext highlighter-rouge">person</code> element.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="sorting">Sorting</h2>
+
+<ul>
+  <li data-marker="*">If our input is an unsorted list of numbers, there are many algorithms we could use to produce an output of a sorted list.</li>
+  <li data-marker="*">With eight volunteers on the stage with the following numbers, we might consider swapping pairs of numbers next to each other as a first step.</li>
+  <li data-marker="*">Our volunteers start in the following random order:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6 3 8 5 2 7 4 1
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We look at the first two numbers, and swap them so they are in order:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6 3 8 5 2 7 4 1
+– –
+3 6 8 5 2 7 4 1
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">The next pair, <code class="language-plaintext highlighter-rouge">6</code> and <code class="language-plaintext highlighter-rouge">8</code>, are in order, so we don’t need to swap them.</li>
+  <li data-marker="*">The next pair, <code class="language-plaintext highlighter-rouge">8</code> and <code class="language-plaintext highlighter-rouge">5</code>, need to be swapped:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 6 8 5 2 7 4 1
+    – –
+3 6 5 8 2 7 4 1
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We continue until we reach the end of the list:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 6 5 2 8 7 4 1
+        – –
+3 6 5 2 7 8 4 1
+          – –
+3 6 5 2 7 4 8 1
+            – –
+3 6 5 2 7 4 1 8
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Our list isn’t sorted yet, but we’re slightly closer to the solution because the biggest value, <code class="language-plaintext highlighter-rouge">8</code>, has been shifted all the way to the right.</li>
+  <li data-marker="*">We repeat this with another pass through the list:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>3 6 5 2 7 4 1 8
+– –
+3 6 5 2 7 4 1 8
+  – –
+3 5 6 2 7 4 1 8
+    – –
+3 5 2 6 7 4 1 8
+      – –
+3 5 2 6 7 4 1 8
+        – –
+3 5 2 6 4 7 1 8
+            – –
+3 5 2 6 4 1 7 8
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Note that we didn’t need to swap the 3 and 6, or the 6 and 7.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Now, the next biggest value, <code class="language-plaintext highlighter-rouge">7</code>, moved all the way to the right. If we repeat this, more and more of the list becomes sorted, and pretty quickly we have a fully sorted list.</li>
+  <li data-marker="*">This algorithm is called <strong>bubble sort</strong>, where large values “bubble” to the right. The pseudocode for this might look like:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Repeat n–1 times
+    For i from 0 to n–2
+        If i'th and i+1'th elements out of order
+            Swap them
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Since we are comparing the <code class="language-plaintext highlighter-rouge">i'th</code> and <code class="language-plaintext highlighter-rouge">i+1'th</code> element, we only need to go up to <em>n</em> – 2 for <code class="language-plaintext highlighter-rouge">i</code>. Then, we swap the two elements if they’re out of order.</li>
+      <li data-marker="*">And we can stop after we’ve made <em>n</em> – 1 passes, since we know the largest n–1 elements will have bubbled to the right.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We have <em>n</em> – 2 steps for the inner loop, and <em>n</em> – 1 loops, so we get <em>n</em><sup>2</sup> – 3<em>n</em> + 2 steps total. But the largest factor, or dominant term, is <em>n</em><sup>2</sup>, as <code class="language-plaintext highlighter-rouge">n</code> gets larger and larger, so we can say that bubble sort is <em>O</em>(<em>n</em><sup>2</sup>).</li>
+  <li data-marker="*">We’ve seen running times like the following, and so even though binary search is much faster than linear search, it might not be worth the one–time cost of sorting the list first, unless we do lots of searches over time:
+    <ul>
+      <li data-marker="*"><em>O</em>(<em>n</em><sup>2</sup>)
+        <ul>
+          <li data-marker="*">bubble sort</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(<em>n</em> log <em>n</em>)</li>
+      <li data-marker="*"><em>O</em>(<em>n</em>)
+        <ul>
+          <li data-marker="*">linear search</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(log <em>n</em>)
+        <ul>
+          <li data-marker="*">binary search</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(1)</li>
+    </ul>
+  </li>
+  <li data-marker="*">And Ω for bubble sort is still <em>n</em><sup>2</sup>, since we still check each pair of elements for <em>n</em> – 1 passes.</li>
+</ul>
+
+<h2 id="selection-sort">Selection sort</h2>
+
+<ul>
+  <li data-marker="*">We can take another approach with the same set of numbers:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6 3 8 5 2 7 4 1
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">First, we’ll look at each number, and remember the smallest one we’ve seen. Then, we can swap it with the first number in our list, since we know it’s the smallest:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>6 3 8 5 2 7 4 1
+–             –
+1 3 8 5 2 7 4 6
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Now we know at least the first element of our list is in the right place, so we can look for the smallest element among the rest, and swap it with the next unsorted element (now the second element):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1 3 8 5 2 7 4 6
+  –     –
+1 2 8 5 3 7 4 6
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We can repeat this over and over, until we have a sorted list.</li>
+  <li data-marker="*">This algorithm is called <strong>selection sort</strong>, and we might write pseudocode like this:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>For i from 0 to n–1
+    Find smallest item between i'th item and last item
+    Swap smallest item with i'th item
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">With big <em>O</em> notation, we still have running time of <em>O</em>(<em>n</em><sup>2</sup>), since we were looking at roughly all <em>n</em> elements to find the smallest, and making <em>n</em> passes to sort all the elements.</li>
+  <li data-marker="*">More formally, we can use some formulas to show that the biggest factor is indeed <em>n</em><sup>2</sup>:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>n + (n – 1) + (n – 2) + ... + 1
+n(n + 1)/2
+(n^2 + n)/2
+n^2/2 + n/2
+O(n^2)
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">So it turns out that selection sort is fundamentally about the same as bubble sort in running time:
+    <ul>
+      <li data-marker="*"><em>O</em>(<em>n</em><sup>2</sup>)
+        <ul>
+          <li data-marker="*">bubble sort, selection sort</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(<em>n</em> log <em>n</em>)</li>
+      <li data-marker="*"><em>O</em>(<em>n</em>)
+        <ul>
+          <li data-marker="*">linear search</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(log <em>n</em>)
+        <ul>
+          <li data-marker="*">binary search</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(1)</li>
+    </ul>
+  </li>
+  <li data-marker="*">The best case, Ω, is also <em>n</em><sup>2</sup>.</li>
+  <li data-marker="*">We can go back to bubble sort and change its algorithm to be something like this, which will allow us to stop early if all the elements are sorted:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Repeat until no swaps
+    For i from 0 to n–2
+        If i'th and i+1'th elements out of order
+            Swap them
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Now, we only need to look at each element once, so the best case is now Ω(<em>n</em>):
+        <ul>
+          <li data-marker="*">Ω(<em>n</em><sup>2</sup>)
+            <ul>
+              <li data-marker="*">selection sort</li>
+            </ul>
+          </li>
+          <li data-marker="*">Ω(<em>n</em> log <em>n</em>)</li>
+          <li data-marker="*">Ω(<em>n</em>)
+            <ul>
+              <li data-marker="*">bubble sort</li>
+            </ul>
+          </li>
+          <li data-marker="*">Ω(log <em>n</em>)</li>
+          <li data-marker="*">Ω(1)
+            <ul>
+              <li data-marker="*">linear search, binary search</li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*">We look at a visualization online <a href="https://www.cs.usfca.edu/~galles/visualization/ComparisonSort.html">comparing sorting algorithms</a> with animations for how the elements move within arrays for both bubble sort and selection sort.</li>
+</ul>
+
+<h2 id="recursion">Recursion</h2>
+
+<ul>
+  <li data-marker="*">Recall that in week 0, we had pseudocode for finding a name in a phone book, where we had lines telling us to “go back” and repeat some steps:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If Smith is on page
+5      Call Mike
+6  Else if Smith is earlier in book
+7      Open to middle of left half of book
+8      **Go back to line 3**
+9  Else if Smith is later in book
+10     Open to middle of right half of book
+11     **Go back to line 3**
+12 Else
+13     Quit
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We could instead just repeat our entire algorithm on the half of the book we have left:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If Smith is on page
+5      Call Mike
+6  Else if Smith is earlier in book
+7      **Search left half of book**
+8
+9  Else if Smith is later in book
+10     **Search right half of book**
+11
+12 Else
+13     Quit
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">This seems like a cyclical process that will never end, but we’re actually dividing the problem in half each time, and stopping once there’s no more book left.</li>
+    </ul>
+  </li>
+  <li data-marker="*"><strong>Recursion</strong> occurs when a function or algorithm refers to itself, as in the new pseudocode above.</li>
+  <li data-marker="*">In week 1, too, we implemented a “pyramid” of blocks in the following shape:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#
+##
+###
+####
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">And we might have had iterative code like this:
+        <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(</span><span class="kt">int</span> <span class="n">h</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Get height of pyramid</span>
+    <span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"Height: "</span><span class="p">);</span>
+
+    <span class="c1">// Draw pyramid</span>
+    <span class="n">draw</span><span class="p">(</span><span class="n">height</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(</span><span class="kt">int</span> <span class="n">h</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Draw pyramid of height h</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;=</span> <span class="n">h</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">j</span> <span class="o">=</span> <span class="mi">1</span><span class="p">;</span> <span class="n">j</span> <span class="o">&lt;=</span> <span class="n">i</span><span class="p">;</span> <span class="n">j</span><span class="o">++</span><span class="p">)</span>
+        <span class="p">{</span>
+            <span class="n">printf</span><span class="p">(</span><span class="s">"#"</span><span class="p">);</span>
+        <span class="p">}</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>        </div>
+        <ul>
+          <li data-marker="*">Here, we use <code class="language-plaintext highlighter-rouge">for</code> loops to print each block in each row.</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*">But notice that a pyramid of height 4 is actually a pyramid of height 3, with an extra row of 4 blocks added on. And a pyramid of height 3 is a pyramid of height 2, with an extra row of 3 blocks. A pyramid of height 2 is a pyramid of height 1, with an extra row of 2 blocks. And finally, a pyramid of height 1 is just a pyramid of height 0, or nothing, with another row of a single block added on.</li>
+  <li data-marker="*">With this idea in mind, we can write:
+    <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+</span>
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(</span><span class="kt">int</span> <span class="n">h</span><span class="p">);</span>
+
+<span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// Get height of pyramid</span>
+    <span class="kt">int</span> <span class="n">height</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">"Height: "</span><span class="p">);</span>
+
+    <span class="c1">// Draw pyramid</span>
+    <span class="n">draw</span><span class="p">(</span><span class="n">height</span><span class="p">);</span>
+<span class="p">}</span>
+
+<span class="kt">void</span> <span class="nf">draw</span><span class="p">(</span><span class="kt">int</span> <span class="n">h</span><span class="p">)</span>
+<span class="p">{</span>
+    <span class="c1">// If nothing to draw</span>
+    <span class="k">if</span> <span class="p">(</span><span class="n">h</span> <span class="o">==</span> <span class="mi">0</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="k">return</span><span class="p">;</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Draw pyramid of height h - 1</span>
+    <span class="n">draw</span><span class="p">(</span><span class="n">h</span> <span class="o">-</span> <span class="mi">1</span><span class="p">);</span>
+
+    <span class="c1">// Draw one more row of width h</span>
+    <span class="k">for</span> <span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">h</span><span class="p">;</span> <span class="n">i</span><span class="o">++</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="n">printf</span><span class="p">(</span><span class="s">"#"</span><span class="p">);</span>
+    <span class="p">}</span>
+    <span class="n">printf</span><span class="p">(</span><span class="s">"</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="p">}</span>
+</code></pre></div>    </div>
+    <ul>
+      <li data-marker="*">Now, our <code class="language-plaintext highlighter-rouge">draw</code> function first calls itself <strong>recursively</strong>, drawing a pyramid of height <code class="language-plaintext highlighter-rouge">h - 1</code>. But even before that, we need to stop if <code class="language-plaintext highlighter-rouge">h</code> is 0, since there won’t be anything left to drawn.</li>
+      <li data-marker="*">After, we draw the next row, or a row of width <code class="language-plaintext highlighter-rouge">h</code>.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="merge-sort">Merge sort</h2>
+
+<ul>
+  <li data-marker="*">We can take the idea of recusion to sorting, with another algorithm called merge sort. The pseudocode might look like:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>If only one item
+  Return
+Else
+    Sort left half of items
+    Sort right half of items
+    Merge sorted halves
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We’ll best see this in practice with an unsorted list:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7 4 5 2 6 3 8 1
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">First, we’ll sort the left half (the first four elements):
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7 4 5 2 | 6 3 8 1
+– – – –
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Well, to sort that, we need to sort the left half of the left half first:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7 4 | 5 2 | 6 3 8 1
+– –
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Now, we have just one item, <code class="language-plaintext highlighter-rouge">7</code>, in the left half, and one item, <code class="language-plaintext highlighter-rouge">4</code>, in the right half. So we’ll merge that together, by taking the smallest item from each list first:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – | 5 2 | 6 3 8 1
+4 7
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">And now we go back to the right half of the left half, and sort it:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – | – – | 6 3 8 1
+4 7 | 2 5
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Now, both halves of the left half are sorted, so we can merge the two of them together. We look at the start of each list, and take <code class="language-plaintext highlighter-rouge">2</code> since it’s smaller than <code class="language-plaintext highlighter-rouge">4</code>. Then, we take <code class="language-plaintext highlighter-rouge">4</code>, since it’s now the smallest item at the front of both lists. Then, we take <code class="language-plaintext highlighter-rouge">5</code>, and finally, <code class="language-plaintext highlighter-rouge">7</code>, to get:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | 6 3 8 1
+– – – –
+2 4 5 7
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We now sort the right half the same way. First, the left half of the right half:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – | 8 1
+– – – – | 3 6 |
+2 4 5 7
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Then, the right half of the right half:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – | – –
+– – – – | 3 6 | 1 8
+2 4 5 7
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">We can merge the right half together now:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – – –
+– – – – | – – – –
+2 4 5 7 | 1 3 6 8
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">And finally, we can merge both halves of the whole list, following the same steps as before. Notice that we don’t need to check all the elements of each half to find the smallest, since we know that each half is already sorted. Instead, we just take the smallest element of the two at the start of each half:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – – –
+– – – – | – – – –
+2 4 5 7 | – 3 6 8
+1
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – – –
+– – – – | – – – –
+– 4 5 7 | – 3 6 8
+1 2
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – – –
+– – – – | – – – –
+– 4 5 7 | – – 6 8
+1 2 3
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – – –
+– – – – | – – – –
+– – 5 7 | – – 6 8
+1 2 3 4
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – – –
+– – – – | – – – –
+– – – 7 | – – 6 8
+1 2 3 4   5
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – – –
+– – – – | – – – –
+– – – 7 | – – – 8
+1 2 3 4   5 6
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – – –
+– – – – | – – – –
+– – – – | – – – 8
+1 2 3 4   5 6 7
+</code></pre></div>    </div>
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>– – – – | – – – –
+– – – – | – – – –
+– – – – | – – – –
+1 2 3 4   5 6 7 8
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">It took a lot of steps, but it actually took fewer steps than the other algorithms we’ve seen so far. We broke our list in half each time, until we were “sorting” eight lists with one element each:
+    <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>7 | 4 | 5 | 2 | 6 | 3 | 8 | 1
+4   7 | 2   5 | 3   6 | 1   8
+2   4   5   7 | 1   3   6   8
+1   2   3   4   5   6   7   8
+</code></pre></div>    </div>
+  </li>
+  <li data-marker="*">Since our algorithm divided the problem in half each time, its running time is logarithmic with <em>O</em>(log <em>n</em>). And after we sorted each half (or half of a half), we needed to merge together all the elements, with <em>n</em> steps since we had to look at each element once.</li>
+  <li data-marker="*">So our total running time is <em>O</em>(<em>n</em> log <em>n</em>):
+    <ul>
+      <li data-marker="*"><em>O</em>(<em>n</em><sup>2</sup>)
+        <ul>
+          <li data-marker="*">bubble sort, selection sort</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(<em>n</em> log <em>n</em>)
+        <ul>
+          <li data-marker="*">merge sort</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(<em>n</em>)
+        <ul>
+          <li data-marker="*">linear search</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(log <em>n</em>)
+        <ul>
+          <li data-marker="*">binary search</li>
+        </ul>
+      </li>
+      <li data-marker="*"><em>O</em>(1)</li>
+    </ul>
+  </li>
+  <li data-marker="*">Since log <em>n</em> is greater than 1 but less than <em>n</em>, <em>n</em> log <em>n</em> is in between <em>n</em> (times 1) and <em>n</em><sup>2</sup>.</li>
+  <li data-marker="*">The best case, Ω, is still <em>n</em> log <em>n</em>, since we still sort each half first and then merge them together:
+    <ul>
+      <li data-marker="*">Ω(<em>n</em><sup>2</sup>)
+        <ul>
+          <li data-marker="*">selection sort</li>
+        </ul>
+    </li>
+      <li data-marker="*">Ω(<em>n</em> log <em>n</em>)
+        <ul>
+          <li data-marker="*">merge sort</li>
+        </ul>
+      </li>
+      <li data-marker="*">Ω(<em>n</em>)
+        <ul>
+          <li data-marker="*">bubble sort</li>
+        </ul>
+      </li>
+      <li data-marker="*">Ω(log <em>n</em>)</li>
+      <li data-marker="*">Ω(1)
+        <ul>
+          <li data-marker="*">linear search, binary search</li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*">Finally, there is another notation, Θ, Theta, which we use to describe running times of algorithms if the upper bound and lower bound is the same. For example, merge sort has Θ(<em>n</em> log <em>n</em>) since the best and worst case both require the same number of steps. And selection sort has Θ(<em>n</em><sup>2</sup>).</li>
+  <li data-marker="*">We look at a <a href="https://www.youtube.com/watch?v=ZZuD6iUe3Pc">final visualization</a> of sorting algorithms with a larger number of inputs, running at the same time.</li>
+</ul>
+
+
+{% endblock %}
+

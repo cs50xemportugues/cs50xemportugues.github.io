@@ -1,0 +1,33 @@
+By now you know a lot about arrays, and you know a lot about linked lists. And we've discuss the pros and cons, we've discussed that linked lists can get bigger and smaller, but they take up more size. Arrays are much more straightforward to use, but they're restrictive in as much as we have to set the size of the array at the very beginning and then we're stuck with it. 
+
+But that's, we've pretty much exhausted all of our topics about linked lists and arrays. Or have we? Maybe we can do something even more creative. And that sort of lends the idea of a hash table. 
+
+So in a hash table we're going to try combine an array with a linked list. We're going to take the advantages of the array, like random access, being able to just go to array element 4 or array element 8 without having to iterate across. That's pretty fast, right? 
+
+But we also want to have our data structure be able to grow and shrink. We don't need, we don't want to be restricted. And we want to be able to add and remove things very easily, which if you recall, is very complex with an array. And we can call this new thing a hash table. 
+
+And if implemented correctly, we're sort of taking the advantages of both data structures you've already seen, arrays and linked lists. 
+
+Well an average insertion into a hash table can start to get close to constant time. And deletion can get close to constant time. And lookup can get close to constant time. That's-- we don't have a data structure yet that can do that, and so this already sounds like a pretty great thing. We've really mitigated the disadvantages of each on its own. 
+
+To get this performance upgrade though, we need to rethink how we add data into the structure. Specifically we want the data itself to tell us where it should go in the structure. And if we then need to see if it's in the structure, if we need to find it, we want to look at the data again and be able to effectively, using the data, randomly access it. Just by looking at the data we should have an idea of where exactly we're going to find it in the hash table. 
+
+Now the downside of a hash table is that they're really pretty bad at ordering or sorting data. And in fact, if you start to use them to order or sort data you lose all of the advantages you previously had in terms of insertion and deletion. The time becomes closer to theta of n, and we've basically regressed into a linked list. And so we only want to use hash tables if we don't care about whether data is sorted. For the context in which you'll use them in CS50 you probably don't care that the data is sorted. 
+
+So a hash table is a combination of two distinct pieces with which we're familiar. The first is a function, which we usually call a hash function. And that hash function is going to return some non-negative integer, which we usually call a hashcode, OK? The second piece is an array, which is capable of storing data of the type we want to place into the data structure. We'll hold off on the linked list element for now and just start with the basics of a hash table to get your head around it, and then we'll maybe blow your mind a little bit when we combine arrays and link lists together. 
+
+The basic idea though is we take some data. We run that data through the hash function. And so the data is processed and it spits out a number, OK? And then with that number we just store the data we want to store in the array at that location. So for example we have maybe this hash table of strings. It's got 10 elements in it, so we can fit 10 strings in it. 
+
+Let's say we want to hash John. So John as the data we want to insert into this hash table somewhere. Where do we put it? Well typically with an array so far we probably would put it in array location 0. But now we have this new hash function. 
+
+And let's say that we run John through this hash function and it's spits out 4. Well that's where we're going to want to put John. We want to put John in array location 4, because if we hash John again-- let's say later we want to search and see if John exists in this hash table-- all we need to do is run it through the same hash function, get the number 4 out, and be able to find John immediately in our data structure. That's pretty good. 
+
+Let's say we now do this again, we want to hash Paul. We want to add Paul into this hash table. Let's say that this time we run Paul through the hash function, the hashcode that is generated is 6. Well now we can put Paul in the array location 6. And if we need to look up whether Paul is in this hash table, all we need to do is run Paul through the hash function again and we're going to get 6 out again. 
+
+And then we just look at array location 6. Is Paul there? If so, he's in the hash table. Is Paul not there? He's not in the hash table. It's pretty straightforward. 
+
+Now how do you define a hash function? Well there's really no limit to the number of possible hash functions. In fact there's a number of really, really good ones on the internet. There's a number of really, really bad ones on the internet. It's also pretty easy to write a bad one. 
+
+So what makes up a good hash function, right? Well a good hash function should use only the data being hashed, and all of the data being hashed. So we don't want to use anything-- we don't incorporate anything else other than the data. And we want to use all of the data. We don't want to just use a piece of it, we want to use all of it. A hash function should also be deterministic. What does that mean? Well it means that every time we pass the exact same piece of data into the hash function we always get the same hashcode out. If I pass John into the hash function I get out 4. I should be able to do that 10,000 times and I'll always get 4. So no random numbers effectively can be involved in our hash tables-- in our hash functions. 
+
+A hash function should also uniformly distribute data. If every time you run data through the hash function you get the hashcode 0, that's probably not so great, right? You probably want to big a range of hash codes. Also things can be spread out throughout the table. And also it would be great if really similar data, like John and Jonathan, maybe were spread out to weigh different locations in the hash table. That would be a nice advantage.

@@ -1,0 +1,263 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+
+<h1 id="mario">Mario</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>Se você já começou a resolver a Lista de Problemas 1 no CS50 Lab, você pode continuar resolvendo o problema lá. Se você estiver começando a resolver este problema agora, use o CS50 IDE e siga as instruções abaixo!</p>
+</div>
+
+<h2 id="world-1-1">Mundo 1-1</h2>
+
+<p>Próximo ao fim do Mundo 1-1 no jogo Super Mario Brothers, da Nintendo, Mario precisa subir uma pirâmide de blocos alinhados à direita, como mostrado abaixo..</p>
+
+<p><img src="pyramid.png" alt="screenshot of Mario jumping up a right-aligned pyramid"></p>
+
+<p>Vamos recriar essa pirâmide usando a linguagem C, porém com texto, usando o símbolo cerquilha, também chamado de jogo-da-velha ou hash (<code class="highlighter-rouge">#</code>), como mostrado abaixo. Cada cerquilha possui altura maior do que largura, por isso, a pirâmide em si possui uma altura maior do que sua largura.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>       #
+      ##
+     ###
+    ####
+   #####
+  ######
+ #######
+########
+</code></pre></div></div>
+
+<p>O programa que nós vamos escrever se chamará <code class="highlighter-rouge">mario</code>. E vamos deixar o usuário decidir o quão alta será a pirâmide, pedindo para ele informar um inteiro positivo entre 1 e 8, incluso.</p>
+
+<p>Abaixo está a forma como o programa deve funcionar caso o usuário digite <code class="highlighter-rouge">8</code> quando for pedido:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 8
+       #
+      ##
+     ###
+    ####
+   #####
+  ######
+ #######
+########
+</code></pre></div></div>
+
+
+<p>Se o usuário digitar <code class="highlighter-rouge">4</code>, o programa deve funcionar como mostrado abaixo:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 4
+   #
+  ##
+ ###
+####
+</code></pre></div></div>
+
+<p>Se o usuário digitar <code class="highlighter-rouge">2</code>, o programa deve funcionar como mostrado abaixo:</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 2
+ #
+##
+</code></pre></div></div>
+
+<p>E se o usuário digitar <code class="highlighter-rouge">1</code>, o programa deve funcionar como mostrado abaixo:</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: 1
+#
+</code></pre></div></div>
+
+<p>Se o usuário não informar um inteiro positivo entre 1 e 8, incluso, o programa deve pedir ao usuário por um inteiro positivo novamente, até que o usuário decida cooperar:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: -1
+Altura: 0
+Altura: 42
+Altura: 50
+Altura: 4
+   #
+  ##
+ ###
+####
+</code></pre></div></div>
+
+<p>Como começar? Vamos abordar este problema um passo de cada vez.</p>
+
+<div class="border embed-responsive embed-responsive-16by9" data-video="">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/NAs4FIWkJ4s?modestbranding=1&amp;rel=0&amp;showinfo=0"></iframe>
+</div>
+
+<h2 id="pseudocode">Pseudocódigo</h2>
+
+<p>Primeiro, vamos criar um novo diretório (uma pasta) chamado <code class="highlighter-rouge">mario</code> dentro do diretório <code class="highlighter-rouge">problemas1</code>, executando a seguinte linha</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/ $ mkdir ~/problemas1/mario
+</code></pre></div></div>
+
+<p>Adicione um arquivo chamado <code class="highlighter-rouge">pseudocodigo.txt</code> dentro do diretório <code class="highlighter-rouge">mario</code>.</p>
+
+<p>Escreva dentro de <code class="highlighter-rouge">pseudocodigo.txt</code> um pouco de pseudocódigo que implementa este programa, ainda que você não saiba (ainda) como escrever em linguagem C. Não existe uma maneira correta de escrever pseudocódigo, mas frases curtas em português já são o suficiente. Lembre-se de como nós escrevemos o pseudocódigo para <a href="https://docs.google.com/presentation/d/1OQ4RjVmtdBELov6iVKQh6unh4qRkJsYvXHloPSuDE7o/edit?usp=sharing">encontrar João Silva</a>. É provável que seu pseudocódigo usará (ou implicará o uso de) uma ou mais funções, condições, expressões Booleanas, repetições, e/ou variáveis.</p>
+
+
+
+<details>
+    <summary>Spoiler</summary>
+    <p>Existe mais de uma maneira de escrever o pseudocódigo, e aqui está uma!</p>
+
+<ol>
+  <li>Peça ao usuário para informar a altura</li>
+  <li>Se altura for menor do que 1 ou maior do que 8 (ou se não for um número inteiro), volte para o passo 1</li>
+  <li>Repita de 1 até altura:
+    <ol>
+      <li>Na repetição <em>i</em>, imprime um número <em>i</em> de cerquilhas (#) e depois uma nova linha (\n)</li>
+    </ol>
+  </li>
+</ol>
+
+<p>Não tem problema alterar seu pseudocódigo depois de ver este aqui, você só não pode copiar e colar este pseudocódigo no seu arquivo!</p>
+</details>
+
+<h2 id="prompting-for-input">Pedindo Entrada de Dados</h2>
+
+<p>Qualquer que seja seu pseudocódigo, vamos primeiro escrever somente o código em linguagem C que pede ao usuário (e pede novamente, se necessário) por entrada de dados. Crie um novo arquivo chamado <code class="highlighter-rouge">mario.c</code> dentro do seu diretório <code class="highlighter-rouge">mario</code>.</p>
+
+<p>Agora, modifique o programa <code class="highlighter-rouge">mario.c</code> de maneira que ele peça ao usuário para informar a altura da pirâmide, armazenando o dado informado pelo usuário em uma variável, e pedindo novamente caso a entrada de dado do usuário não seja um inteiro positivo entre 1 e 8, incluso. Em seguida, simplesmente imprima o valor dessa variável, dessa forma confirmando (para si mesmo) que você de fato armazenou a entrada de dado do usuário corretamente, como mostrado abaixo.</p>
+
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./mario
+Altura: -1
+Altura: 0
+Altura: 42
+Altura: 50
+Altura: 4
+Armazenado: 4
+</code></pre></div></div>
+
+<details>
+    <summary>Dicas</summary>
+    <ul>
+  <li data-marker="*">Lembre-se que você pode compilar seu programa com <code class="highlighter-rouge">make</code>.</li>
+  <li data-marker="*">Lembre-se que você pode imprimir o valor de um <code class="highlighter-rouge">int</code> com <code class="highlighter-rouge">printf</code> usando <code class="highlighter-rouge">%i</code>.</li>
+  <li data-marker="*">Lembre-se que você pode receber um inteiro do usuário com a função <code class="highlighter-rouge">get_int</code>.</li>
+  <li data-marker="*">Lembre-se que a função<code class="highlighter-rouge">get_int</code> está declarada no arquivo <code class="highlighter-rouge">cs50.h</code>.</li>
+  <li data-marker="*">RLembre-se que na aula nós pedimos ao usuário por um inteiro positivo no programa <code class="highlighter-rouge">positivo.c</code>.</li>
+</ul>
+</details>
+
+<h2 id="building-the-opposite">Construindo o Oposto</h2>
+
+<p>Agora que seu programa está recebendo entrada de dados corretamente (assim esperamos), é hora de irmos para o próximo passo.</p>
+
+<p>Acontece que é mais fácil construir uma pirâmide alinhada à esquerda do que à direita, como mostrado abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>#
+##
+###
+####
+#####
+######
+#######
+########
+</code></pre></div></div>
+
+<p>Portanto, vamos construir uma pirâmide alinhada à esquerda primeiro e depois, quando essa estiver funcionando, vamos construir uma alinhada à direita.</p>
+
+<p>Modifique o programa <code class="highlighter-rouge">mario.c</code> de forma que ao invés de simplesmente imprimir a entrada de dados do usuário, o programa imprima uma pirâmide alinhada à esquerda de altura igual ao número informado pelo usuário.</p>
+
+
+<details>
+    <summary>Dicas</summary>
+    <ul>
+  <li data-marker="*">Lembre-se que a cerquilha (#) é um caractere como qualquer outro, portanto você pode imprimi-lo usando <code class="highlighter-rouge">printf</code>.</li>
+  <li>Assim como Scratch possui o bloco "repita", a linguagem C possui a repetição <a href="https://docs.google.com/presentation/d/1oBOUhxdqFdy_J2TMAnerFaw1VxXH3vEQJoIV0UscPKY/edit?usp=sharing"><code class="highlighter-rouge">for</code></a>, com a qual você pode repetir um bloco de comandos um número de vezes. Talvez, em cada repetição <em>i</em>, você possa imprimir um número <em>i</em> de cerquilhas.</li>
+  <li data-marker="*">
+    <p>Você pode "aninhar" repetições, iterando com uma variável (<code class="highlighter-rouge">i</code>, por exemplo) na repetição exterior e com outra variável (<code class="highlighter-rouge">j</code>, por exemplo) na repetição interior. Por exemplo, aqui está o algoritmo que você poderia usar para imprimir um quadrado de altura e largura <code class="highlighter-rouge">n</code>. Obviamente, não é um quadrado que você precisa imprimir para resolver este problema.</p>
+
+    <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>  for (int i = 0; i &lt; n; i++)
+  {
+      for (int j = 0; j &lt; n; j++)
+      {
+          printf("#");
+      }
+      printf("\n");
+  }
+</code></pre></div>    </div>
+  </li>
+</ul>
+</details>
+
+<h2 id="right-aligning-with-dots">Alinhando à Direita com Pontos</h2>
+
+<p>Vamos alinhar a pirâmida à direita empurrando as cerquilhas para o lado direito imprimindo pontos antes das cerquilhas, como mostrado abaixo. </p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.......#
+......##
+.....###
+....####
+...#####
+..######
+.#######
+########
+</code></pre></div></div>
+
+<p>Modifique o programa <code class="highlighter-rouge">mario.c</code> de maneira que ele faça exatamente isso!</p>
+
+
+<details>
+    <summary>Dica</summary>
+    <p>Perceba que o número de pontos necessários em cada linha é o "oposto" do número de cerquilhas daquela linha. Para uma pirâmide de altura 8, a primeira linha possui apenas 1 cerquilha e 7 pontos. A linha da base, por outro lado, possui 8 cerquilhas e 0 pontos. Usando qual fórmula (aritmética, para sermos precisos) você poderia imprimir a quantidade correta de pontos?</p>
+</details>
+
+<h3 id="how-to-test-your-code">Como Testar Seu Código</h3>
+
+<p>Seu programa funciona como prescrito quando você digita</p>
+
+<ul>
+  <li data-marker="*"><code class="highlighter-rouge">-1</code> (ou outros números negativos)?</li>
+  <li data-marker="*"><code class="highlighter-rouge">0</code>?</li>
+  <li data-marker="*"><code class="highlighter-rouge">1</code> até <code class="highlighter-rouge">8</code>?</li>
+  <li data-marker="*"><code class="highlighter-rouge">9</code> ou outros números positivos?</li>
+  <li data-marker="*">letras ou palavras?</li>
+  <li data-marker="*">nenhuma entrada de dado, quando você só aperta Enter?</li>
+</ul>
+
+<h2 id="removing-the-dots">Removendo os Pontos</h2>
+
+<p>Tudo o que resta agora é um acabamento final! Modifique <code class="highlighter-rouge">mario.c</code> de tal maneira que ele imprima espaços ao invés de pontos!</p>
+
+<h3 id="how-to-test-your-code-1">Como Testar Seu Código</h3>
+
+<p>Execute a linha abaixo para avaliar a correção do seu código usando a ferramenta <code class="highlighter-rouge">check50</code>. Não se esqueça de compilar e testar o programa você também!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50emportugues/problemas/2020/mario/menos
+</code></pre></div></div>
+
+<p>Execute a linha abaixo para avaliar o estilo do seu código usando a ferramenta  <code class="highlighter-rouge">style50</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 mario.c
+</code></pre></div></div>
+
+<details>
+    <summary>Dica</summary>
+    <p>Um espaço é simplesmente um pressionamento da barra de espaço do seu teclado, assim como um ponto é simplesmente o pressionamento dessa tecla! Lembre-se que <code class="highlighter-rouge">printf</code> exige que você envolva ambos caracteres com aspas duplas!</p>
+</details>
+
+<h2 id="how-to-submit">Como Adaptar Seu Código Antes de Enviar</h2>
+
+<p>TODO</p>
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+<p>Execute a linha abaixo, e em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/mario/less
+</code></pre></div></div>
+    	
+
+{% endblock %}

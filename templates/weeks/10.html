@@ -1,0 +1,34 @@
+{% extends 'layout.html' %} 
+
+{% block conteudo %}
+
+{% from "weeks/pset_item_macro.html" import pset_item with context %}
+{% from "weeks/notes_item_macro.html" import notes_item with context %}
+{% from "weeks/lab_item_macro.html" import lab_item with context %}
+
+<h1>
+  {{week_page.week}} {{week.number}}
+  <small class="text-muted">{{week.name}}</small>
+</h1>
+
+<p>Precision. Unicode: Emoji, Code Points, ZWJ.</p>
+
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/iXG0sXlzuF0?screen=UT_GGK4bQEY"></iframe>
+
+<ul>
+  <li data-marker="-">Lecture
+    <ul>
+      {{ notes_item(title=week_page.notes, number=week.number) }}
+      <li data-marker="+">Slides
+        <ul>
+          <li data-marker="*"><a href="">Google Slides</a></li>
+          <li data-marker="*"><a href="">PDF</a></li>
+        </ul>
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*"><a href="{{url_for('cs50x.seminars')}}">Seminars</a></li>
+  <li data-marker="*"><a href="{{url_for('cs50x.project')}}">Final Project</a></li>
+</ul>
+
+{% endblock %}

@@ -1,0 +1,43 @@
+Neste laboratório, sua tarefa será escrever um programa para simular o crescimento populacional. Vamos imaginar que temos uma população de animais, uma população de lhama, por exemplo. Todos os anos, perdemos alguns animais dessa população à medida que as lhama mais velhas morrem. Mas também ganhamos alguns animais nessa população à medida que novas lhama são nascidas.
+
+Podemos modelar este tipo de crescimento populacional usando uma fórmula matemática. Assumamos, por exemplo, que todos os anos, se tivermos uma população de n lhama, ganhamos n divididos por 3 lhama e perdemos n dividido por 4 lhama. Então, em uma população de 12 lhama, por exemplo, no próximo ano, ganharíamos 12 dividido por 3 ou quatro novas lhama. E perderíamos em 12 dividido por 4, ou seja, três lhama, nesse caso.
+
+Dado esse cenário, podemos nos perguntar uma pergunta. Por exemplo, poderíamos perguntar, quantos anos levaria para ir de 20 lhama em uma população para 30 lhama em uma população? Por exemplo, agora temos 20 lhama nesta população. Mas depois de um ano, ganharíamos 20 dividido por 3 lhama.
+
+Agora, observe aqui que 20 não divide uniformemente em três. E como resultado, precisamos apenas truncar o que viria após a vírgula. A resposta real será de seis e alguma coisa. Mas como não podemos ter uma fração de um animal, simplesmente truncaremos o que vem após a vírgula e diremos que estamos ganhando seis lhama.
+
+E perderíamos 20 dividido por 4, que é igual a cinco lhama. Então, depois de um ano, agora teríamos 21 lhama. Podemos, então, repetir o processo e considerar o que pode acontecer no próximo ano.
+
+No próximo ano, ganharíamos 21 dividido por 3, ou seja, sete lhama. E perderíamos 21 dividido por 4, truncando o que está após a vírgula, perdendo cinco lhama. Significando que temos uma mudança líquida de duas lhama. O que significa que, depois de dois anos, agora temos 23 lhama.
+
+Depois do próximo ano, ganharíamos sete lhama, perderíamos cinco, para um novo total de 25 lhama após três anos. No próximo ano, ganharíamos oito lhama e perderíamos seis, para um novo total de 27 lhama após quatro anos. E então, no quinto ano, ganharíamos nove lhama e perderíamos seis para um total agora de 30 lhama após cinco anos.
+
+Então, a resposta para a pergunta, quantos anos seriam necessários para passar de uma população de 20 lhama para uma população de 30 lhama, é de cinco anos. Agora, fizemos toda essa matemática manualmente. Mas sua tarefa agora é escrever um programa em C que possa fazer esse cálculo para nós.
+
+O programa funcionará da seguinte forma. Na linha de comando, você executará um programa. E, nesse ponto, seu programa deve solicitar ao usuário um tamanho de população inicial. Você pode digitar um tamanho de população inicial de 100, por exemplo. Em seguida, seu programa deve solicitar ao usuário um tamanho de população final. E o usuário digitará outro tamanho, digamos 200, por exemplo.
+
+Em seguida, seu programa deve descobrir quantos anos levaria para levar a população de lhama do tamanho inicial para o tamanho final e, em seguida, imprimir esse número de anos. Então, neste caso, nosso programa imprimiria anos: 9 porque levaria nove anos para levar a população de 100 para 200.
+
+Resumindo, aqui está o que você precisa fazer. Primeiro, comece solicitando ao usuário o tamanho da população inicial de sua população de lhama. E você deve verificar se a entrada do usuário é pelo menos nove. O tamanho da população precisa ser pelo menos nove para que possamos realmente começar a crescer essa população de lhama.
+
+Portanto, se o usuário digitar um número menor que nove, você deve continuar pedindo ao usuário que digite um número novamente até que ele lhe dê um número que seja pelo menos nove.
+
+Em seguida, você deve solicitar ao usuário o tamanho da população final, aqui verificando se a entrada do usuário é pelo menos tão grande quanto o tamanho inicial. Não faria sentido, por exemplo, imaginar que a população passaria de uma população de 100 para uma população de 50 porque a população sempre crescerá. Portanto, você vai querer ter certeza de que o tamanho final da população é maior ou igual ao tamanho inicial da população. Se o usuário tentar digitar um tamanho de população final menor que o tamanho de população inicial, seu programa deve continuamente pedir ao usuário que digite outro tamanho de população final até que eles lhe forneçam um que seja pelo menos o tamanho da população inicial.
+
+Depois disso, seu programa deverá calcular quantos anos seriam necessários para levar a população do tamanho inicial para o tamanho final, lembrando que a cada ano vamos adicionar n divididos por 3 de lhama, se houver n lhama no início. E vamos perder n divididos por 4 lhama. E, como antes, como não podemos ter frações de uma lhama, se qualquer um desses cálculos resultar em algo após a vírgula, você vai truncar ou ignorar o que vem após a vírgula ao fazer sua matemática. Finalmente, depois de feito o cálculo, você vai imprimir o número de anos necessários. Imprimindo anos: e, em seguida, %i, em que %i é substituído por um número inteiro que você especifica após uma vírgula. E aqui estamos dizendo para imprimir o valor do número de anos como inteiro para mostrar ao usuário.
+
+À medida que você começa a trabalhar neste problema, algumas estratégias podem ser úteis. Uma é um loop do...while, um tipo de loop que permite que você solicite ao usuário uma ou mais vezes algo, neste caso. Então, no loop que você está vendo aqui, começamos declarando uma variável chamada n. E então, dentro de um loop, solicitamos ao usuário um número inteiro positivo, armazenando esse inteiro dentro de n.
+
+Mas vamos manter repetindo esse loop enquanto n for menor que 1. Significando que, se o usuário não digitar um número inteiro positivo, solicitaremos que ele digite novamente. Você não vai usar exatamente este código dentro do seu laboratório, mas pode usar algo semelhante, tanto ao solicitar o tamanho da população inicial, para garantir que o tamanho da população inicial seja pelo menos nove, quanto ao solicitar o tamanho da população final para garantir que o tamanho final da população seja pelo menos tão grande quanto o tamanho inicial da população.
+
+Também pode ser útil atualizar uma variável à medida que você trabalha neste laboratório. Você pode querer atualizar repetidamente a variável do tamanho da população, por exemplo, para adicionar novas lhama e se livrar de lhama mais velhas. Você pode fazer isso usando uma fórmula como esta. Se você tiver uma variável chamada n, dentro da qual está sua população atual, poderá atualizar o valor de n para o próximo ano usando uma linha que diz que n é igual a n mais n sobre 3, o número de lhama que estamos adicionando, menos n dividido por 4, o número de lhama que estamos perdendo naquele ano específico.
+
+E, finalmente, depois que você concluiu o cálculo, pode imprimir uma variável usando a função printf, dizendo printf anos:, e, em seguida, %i, onde % i vai substituir um inteiro. Qual inteiro? Aquele que você especifica após uma vírgula. E aqui estamos dizendo para imprimir o valor de n como inteiro para mostrar ao usuário.
+
+Agora, dê uma olhada no código de distribuição que lhe damos como ponto de partida para este problema. Aqui, no population.c, já incluímos cs50.h e stdio.h para você. E, em seguida, dando a você uma função principal com alguns "to dos" para começar.
+
+Você vai primeiro solicitar o tamanho inicial, depois solicitar o tamanho n. Em seguida, calcular quantos anos levará para atingir aquele valor limite do tamanho inicial para o tamanho n. E, em seguida, finalmente, depois de fazer esse cálculo, imprimir o número de anos necessários para levá-lo do início para o final.
+
+Depois de escrever todas essas peças, você deve ser capaz de compilar seu programa e depois executá-lo, dando ao seu programa um tamanho de população inicial e um tamanho de população final. E, em seguida, o seu programa deve ser capaz de dizer quanto tempo levará para chegar do ponto A ao ponto B.
+
+Meu nome é Brian. E este foi o crescimento populacional.

@@ -1,0 +1,35 @@
+Le tri par sélection est un algorithme qui, comme on peut s'y attendre, trie un ensemble d'éléments. Et un algorithme est un rappel étape par étape d'instructions pour accomplir une tâche. 
+
+Dans le tri par sélection, l'idée de base est de trouver le plus petit élément non trié et de l'ajouter à la fin de la liste triée. Ce qui construit efficacement une liste triée, un élément à la fois. En le réduisant en pseudocode, nous pourrions énoncer cet algorithme comme suit: répétez cela jusqu'à ce qu'il ne reste plus d'éléments non triés. Recherchez dans les données non triées pour trouver la plus petite valeur, puis échangez la plus petite valeur avec le premier élément de la partie non triée. 
+
+Cela peut aider à visualiser cela, donc regardons cela. Ceci, je soutiens, est un tableau non trié et je l'ai indiqué en indiquant que tous les éléments sont colorés en rouge, ils ne sont pas encore triés. C'est toute la partie non triée du tableau. 
+
+Par conséquent, répétons les étapes du tri par sélection pour trier ce tableau. Nous allons donc répéter jusqu'à ce qu'il ne reste plus d'éléments non triés. Nous allons rechercher dans les données pour trouver la plus petite valeur, puis échanger cette valeur avec le premier élément de la partie non triée. 
+
+Actuellement, tout le tableau est la partie non triée. Tous les éléments rouges ne sont pas triés. Nous recherchons donc et trouvons la plus petite valeur. Nous commençons au début, nous allons jusqu'à la fin, nous trouvons que la plus petite valeur est un. C'est la première partie. Et puis la deuxième partie, échanger cette valeur avec le premier élément de la partie non triée, ou le premier élément rouge. 
+
+Dans ce cas, ce serait cinq, donc nous échangeons un et cinq. Lorsque nous faisons cela, nous pouvons voir visuellement que nous avons déplacé l'élément de valeur la plus petite du tableau au tout début. Triant effectivement cet élément. 
+
+Nous pouvons donc confirmer et déclarer que un est trié. Nous allons indiquer la partie triée de notre tableau en la colorant en bleu. 
+
+Maintenant, nous répétons simplement le processus. Nous recherchons dans la partie non triée du tableau pour trouver le plus petit élément. Dans ce cas, c'est deux. 
+
+Nous échangeons cela avec le premier élément de la partie non triée. Dans ce cas, deux est également le premier élément de la partie non triée. Nous échangeons donc deux avec lui-même, ce qui laisse vraiment deux là où il est et il est trié. En continuant, nous cherchons pour trouver le plus petit élément, c'est trois. Nous l'échangeons avec le premier élément, qui est cinq. Et maintenant, trois est trié. 
+
+Nous cherchons à nouveau et trouvons que le plus petit élément est quatre. Nous l'échangeons avec le premier élément de la partie non triée et maintenant quatre est trié. 
+
+Nous trouvons que cinq est le plus petit élément. Nous l'échangeons avec le premier élément de la partie non triée. Et maintenant, cinq est trié. 
+
+Enfin, notre partie non triée ne consiste qu'en un seul élément, nous cherchons donc et trouvons que six est le plus petit et en fait, le seul élément. Et nous pouvons donc affirmer qu'il est trié. Maintenant, nous avons transformé notre tableau en étant complètement non trié en rouge, à complètement trié en bleu, en utilisant le tri par sélection. 
+
+Quel est le pire scénario ici? Eh bien, dans le pire des cas absolu, nous devons passer en revue tous les éléments du tableau pour trouver le plus petit élément non trié et nous devons répéter ce processus n fois. Une fois pour chaque élément du tableau car nous ne trions qu'un élément à la fois dans cet algorithme. 
+
+Quel est le meilleur scénario? Eh bien, c'est exactement la même chose, non? Nous devons en fait parcourir chaque élément du tableau pour confirmer qu'il est, en fait, l'élément le plus petit. 
+
+Donc, dans le pire des cas, nous devons répéter un processus n fois, une fois pour chacun des n éléments. Et dans le meilleur des cas, nous devons faire de même. 
+
+Ainsi, pensons à notre boîte à outils de complexité computationnelle, quel est, selon vous, le temps d'exécution le pire des cas pour le tri par sélection? Quel est, selon vous, le temps d'exécution le meilleur des cas pour le tri par sélection? 
+
+Avez-vous deviné que c'est Big O de n carré et Big Omega de n carré? Vous auriez raison. Ce sont en fait les temps d'exécution les pire et meilleur des cas pour le tri par sélection. 
+
+Je suis Doug Lloyd. C'est CS50.

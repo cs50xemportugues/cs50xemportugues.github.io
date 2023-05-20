@@ -1,0 +1,25 @@
+So let's take a look at a couple of common HTML tags. And we'll jump and take a look at what these tags will also render as by looking at some files in my IDE. So here are three very basic tags for tweaking the visual appearance of text. There's B tags, I tags, and U tags. And respectively what they do is render the text between them in bold, italics, and underlining. So let's see what that would look like on an actual web page in my IDE. 
+
+So here in my IDE I have a file called BIU dot HTML. BIU dot HTML just being bold, italics, underlining. I'll open it up. 
+
+And we'll see that here I have this text is B tags bold. This text is I tags italic. And this text is U tags underlined. What is this going to look like? Well again, all I have to do is go over here to my browser, my file browser, click Preview, and this is what comes up. 
+
+The text in between the B tags is indeed now bold. The text in between the I tags is indeed now italic. And the text in between the U tags is indeed now underlined.
+
+So that's pretty good. We now know how to make text look a little more fancy or draw emphasis to certain things. Another couple of common tags here are paragraph tags, P, and header tags, which I've rendered here as HX. 
+
+These P tags, these paragraph tags, break your text up into paragraphs. It's not enough to just hit Enter and leave spaces, because a computer is only going to do what you tell it to do and it ignores white space for the most part. So we can't just hit Enter and expect our computer to interpret that we want to start a new paragraph. We have to very explicitly say this is one paragraph-- this is another-- by enclosing each in a set of P tags. 
+
+And we also have these options for H tags, these header tags. We have six different levels of headers, one, two, three, four, five, and six, which are progressively larger and larger headers. And they get smaller and smaller and smaller and smaller. So we have a top level header, a second level header, and so on, and so on. 
+
+Let's take a look at maybe some P tags and some header tags in action on a web page. So here in my IDE I have a file called PH dot HTML, PH being paragraphs and header tags. Open that up. There's a lot going on here because I've put some lorem ipsum, some just random text in here. So I'll zoom out a little bit because there's so much going on. But notice that I have at the very top here I have an H1, a level one, header tag. Then I have a paragraph, which is just a bunch of random text-- lorem ipsum-- just default standard filling in text. So I have two paragraphs inside of that level one header and then down below I have a level two header here on line 24, a second level header, and another two paragraphs. Well what does this look like if I view it in my preview? Let's see. 
+
+So notice that the first level header here is actually quite a bit bigger than the second level header. So we used H1 tags. And notice that the P tags allow us to break things out into paragraphs. If we had gotten rid of those P tags and actually just put Enters or Returns in between what we hoped would be the different paragraphs, they would all just slam together and it wouldn't have this nice paragraph separation with space above and below. And so that's what paragraph tags and header tags are commonly used to do to draw attention to portions of our web page in that way. 
+
+Next up are some tags that we use to build lists on our web page. So we have unordered lists-- ULs-- which are just bulleted lists, ordered list which are numbered-- OLs-- and inside of either one of those we need to have sets of how to indicate list items, LI. And so we have open UL tag and we put items inside of it. And then when we're done with that, we can close the UL tag. 
+
+And similarly we can have an ordered or numbered list and put list items inside of that. So let's take a look at a couple of lists and what they would render as on CS50 IDE. So I have here in my IDE a file called lists dot HTML. Let's take a look. 
+
+And notice here I have an unordered list with five things in it. And then I have an ordered list, and I've changed the tag a little bit, right? I've said start equals six. It turns out with an ordered list I can set the starting point wherever I want-- by default it will be one-- by just adding this so-called attribute to my OL tag. And so this list will start counting at six. So the elements of that numbered list should be six, seven, eight, nine, ten, because there are five elements in the list, as opposed to one, two, three, four, five, which would be the case if I had said OL without specifying the start attribute. 
+
+So we'll just preview this so you can get a sense for what's going on here. And there we go. There's my list. The first five elements are unordered or bulleted lists. And the next five elements are a separate ordered list starting from six. So that's how we can build lists using HTML.

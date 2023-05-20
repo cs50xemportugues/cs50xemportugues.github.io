@@ -1,0 +1,31 @@
+So we've been inching closer and closer that holy grail of data structures, one that we can insert into, delete from, and look up in constant time. Right. That's sort of the goal. We want to be able to do things very, very quickly. 
+
+Have we found it here when we're talking about tries? Well, let's take a look. So we've seen several different data structures that handle the mapping of so-called key-value pairs, mapping some piece of data to some other piece of data so we know where to find information in the structure. 
+
+So for array, for example, the key is the element index or array location 0 or array 1 and so on. And the value is the data that exists at that location. So what is stored in array 0? What is stored in array 1 versus just 0 and 1, which would be the keys. 
+
+With a hash table it's sort of the same idea. With a hash table, we have this hash function that generates hash codes. So the key is the hash code of the data. And the value, particularly we talked about chaining in the video on hash tables, is that linked list of data that hashes to that hashcode. Right. What about another approach this method, though? What about a method where the key is guaranteed to be unique, unlike a hash table, where we could end up with two pieces of data having the same hashcode. And then we have to deal with that by either probing or more preferably chaining to fix that problem. 
+
+So now we can guarantee that our key will be unique. And what if our value was just something as easy as true and false that tells us whether or not that piece of information exists in the structure? A Boolean could be as simple as a bit. Realistically it's probably a byte more likely than a bit. But that's a lot smaller than storing maybe a 50-character string, for example. 
+
+So tries, similar to hash tables, which combine arrays and linked list, tries combine arrays, structures, and pointers together to store data in an interesting way that's pretty different from anything we've seen so far. Now we use the data as a roadmap to navigate this data structure. And if we can follow the roadmap, if we can follow the data from beginning to end, we'll know whether that data exist in the trie. 
+
+And if we can't follow the map from meaning to end at all, the data can't exist. Again, the keys here are guaranteed to be unique. And so unlike a hash table, we'll never have to deal with collisions here. And no two pieces of data have exactly the same roadmap unless that data is identical. 
+
+If we insert John, then we search for John. That's two identical pieces of data, right, we're looking through. But otherwise, any two pieces of data are guaranteed to have unique roadmaps through this data structure. And we're going to take a look at a visual of this in just a moment. 
+
+We'll do this by trying to create a new data structure, mapping the following key value pairs. In this case, we're not going to use something as simple as a Boolean. We actually will store the string. And that string is going to be the name of a university. 
+
+And the key is going to be the year when that university was founded. All years for universities are going to be four digits. And so we'll use those four digits to navigate through this data structure. And we'll see, again, how we do that in just a second. 
+
+At the end of the path, we'll see the name of the university that corresponds to that key, those four digits. The basic idea behind a trie is we have a central route. So think about it like a tree. And this is similar in spelling and in concept to a tree. Generally when we think about trees in the real world, they have a root that's in the ground and they grow upward and they have branches and they have leaves. And basically the idea of a trie is exactly the same, except that root is anchored somewhere in the sky. And the leaves are at the bottom. 
+
+So it's kind of like taking a tree and just flipping it upside down. But there are still branches. And those would be our pathways, those will be our connections from the root to the leaves. In this case, those paths, those branches are labeled with digits that tell us which way to go from where we are. 
+
+If we see a 0, we go down this branch, if we see a 1, we go down this branch, and so and so on. Well, what does this mean? Well, that means that at every junction point and every node in the middle and every branch, there are 10 possible places that we can go. So there are 10 pointers from every location. 
+
+And this is where tries can get a little bit intimidating for somebody who's doesn't have a lot of experience in computer science before. But tries are really pretty awesome. And if you have the chance to work with them and you're willing to dig-in and experiment with them, they're really quite interesting data structures to work with. If we want to insert an element into the trie, all we need to do is build the correct path from the root to the leaf. Here's what every step along the way might look like. We're going to define a new data structure for a new node called a trie. 
+
+And inside of that data structure there are two pieces. We're going to store the name of a university. And we're going to store an array of pointers to other nodes of the same type. So, again, this is that sort of concept of everywhere we are, we at 10 possible places we can go. If we see a 0, we go down this branch. If we see a 1, this branch, and so on and so on and so on. If we say 9, we go down this branch. So at every junction point, we can go 10 possible places. So every node has to contain 10 pointers to other nodes, to 10 other nodes. 
+
+And the data we're storing is just the name of the university.

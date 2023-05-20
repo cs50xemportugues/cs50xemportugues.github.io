@@ -1,0 +1,31 @@
+Another thing you might want to do with HTML is build a table of information of rows and columns to present information in a particularly organized way. To do this with HTML we can have a table definition beginning open bracket table. And then inside of that table we might have a set of rows, TR tags to indicate each row. And then TD tags go inside of TR tags to specify a column within a row. 
+
+Why is it called TD and not TC? Well, TD stands for table data. Usually you're putting your information there. So that's why it's TD and not TC. It's a little bit confusing. 
+
+So you have table tags and inside of your table tags you have a number of rows, TRs. And inside each row you have TDs for the number of columns that you want to have in that particular row. Let's take a look at a very simple table over in CS50 IDE. 
+
+So I have here a file called table dot HTML. Let's have a look at what that looks like. There's a lot going on here but if you notice I have a table open. I'm starting the definition with table. And then in my first row I apparently have four columns, one, two, three, four. And then I'm done with that row. 
+
+Then I start another row and do two, four, six, eight. Finish that row. Do another row, three, six, nine, 12. And then a last row, four, eight, 12, and though it's a little cut off here, 16. 
+
+I finished that row. I finished the table. And then I'm done with my HTML. What does this look like? Well, it's not really much to see. I've clearly organized my information in a somewhat more organized way. But it's not super pretty here. And we're going to deal with that when we talk about CSS. We'll revisit this idea of what we do to make a table-- maybe format it a little bit better? But I do still have four rows, each of which has four columns, and really what this amounts to is a very simple four by four multiplication table. 
+
+Just a few more tags we'll talk about. Let's talk about the concept of an HTML form. So you may have seen this in the context of logging into a web page. Usually you type in your user name. You type in your password, and you're good to go. That would be the beginning of a form. 
+
+Skipping over div a second. We also have inputs which kind of fit inside of forms. These are the elements that you're actually typing into, or the radio buttons you're ticking, or the check boxes that you're ticking off. So these go inside of forms. And they comprise basically each row of the form if your form is formatted well. Then there's this concept of a div, which doesn't really fit in any particular category of tags like the ones I've been doing previously. It just sort of demarcates the beginning of some arbitrary division-- div-- of the page. There's no visual break. There's no line. It's not set off as a separate chunk automatically. You'd have to style it that way to do that. 
+
+It just sort of says I want a piece of space on my web page, and I'm just going to call it this division of my page. We can put stuff inside of divs, and in fact, when we head over to IDE in a second, we'll see that I'm putting my form inside of a div. 
+
+So I have here in my IDE a file called div form dot HTML. Let's open it up. Notice that like I said, div is kind of arbitrary. Right? It doesn't really mean anything. So I have an arbitrary first division of my page. And then instead of another div later on, starting on line eight, I have this form. And inside of the form I have a number of inputs, fields of the form. So I have a field whose name is A-- which doesn't really mean anything right now-- that apparently takes text, another one that takes a password, another that's a Radio button, another that's a check box, and another that's a Submit button. Well, what does this all actually look like? Well, let's take a look. We'll open it up in our preview window. Notice that this arbitrary first division-- there's no visual separation here. It didn't really do anything, right? 
+
+And then I have my form. And I didn't do any special formatting. So the form is just one big row of information. If I had formatted my form differently, I might have it line by line by line. But I didn't do any styling. Again, we're not talking about CSS here. We're just talking about HTML. 
+
+Well in my text form I can type-- remember that forms of type text so I can put my name. And in my password I can type my password. And because that field is of type password, you don't know what my password is. It's all dots. 
+
+I can also choose to tick off a radio button or tick off a check box. Or I could submit my form. And I didn't do anything, so when I submit my form, the page just refreshes. But I could perhaps configure my Submit button to do something else. And we'll see what we can do with that in a future video on PHP. But this builds a very simple form that we can use to have users interact and submit information to our website. 
+
+One last comment before we move on to some other tags are to take a look at this input tag one more time. Notice that I've highlighted the ends of the tag in red. Every other tag we've seen so far has had a beginning and an end, an opening tag and a closing tag. 
+
+But an input tag doesn't. There's no text that goes in between input tags. All of the information we're intending to convey is bound up as part of the attributes of that input. Notice we have input name equals x. Type equals y. That's really all the information we need. 
+
+This is called a self closing tag. It doesn't require an opening and a close because all of the information is contained inside the tag and its attributes. So sometimes you'll see this, too. So just be aware that if you have a tag that is entirely self-contained, it opens and closes itself with the open angle bracket on the left and the slash angle bracket on the right. We'll see another one of those right now with image tags as well. 

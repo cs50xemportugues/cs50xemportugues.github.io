@@ -1,0 +1,23 @@
+So as I said, we had about 4 billion. But that's not going to be good enough, right? And so the way that it has been decided there we're going to deal with this is to make longer IP addresses. Instead of 32-bit addresses, we're going to have 128-bit addresses. So instead of 4 billion addresses, we're going to have that huge number of addresses, which is 340 billion billion billion billion, so a lot of IP addresses. 
+
+And this new scheme is called IPv6 is commonly how it's referred. The old scheme being IPv4. It's a bit of a problem in that this problem has been known about for a really long time. 
+
+And you'll see this a lot in the context of computers and computing. We're good at anticipating problems. But we're bad at dealing with them even though we know about them. So IPv6 has been around for a while. And only in the last couple years have we actually started phasing in these IPv6 addresses to phase out the IPv4 addresses. But some places do have them. And they look similar to a regular IP address. But they are a lot longer. 
+
+So instead of now having four clusters of 8 bytes for your address, we now have eight clusters of 16 bytes. And 8 times 16 is 128. And we represent these in the less conventional hexadecimal form. Because having 16-bit numbers means that instead of being a range of 0 to 255, We'd have a range of 0 to 65,535. 
+
+And so having a bunch of those stuck together would be very difficult to read. And so we usually use hex just out of convenience. And so a typical IPv6 address might look something like this. 
+
+It's certainly a lot longer than the IPv4 address we've seen before. But this would be a valid IPv6 address. This one is also about IPv6 address. 
+
+This one happens to belong to Google. And notice there's a bunch of zeros there. Sometimes these addresses can get so long. And since we're still pretty early in IPv6, sometimes there can be big chunks of zeros in there that we don't need. 
+
+If you're reading this out loud, it's 2001.4860.4860.0.0.0.0.8844. It's kind of a lot, right? So if you see a bunch of zeros, you might sometimes see an IPv6 address like this, where they omit the zeros and use a double colon instead. This is OK, though. Because we know that there are supposed to be eight distinct chunks. And so by implication, we see four. So we know that there must be four sets of zeros like this, that fill it in. 
+
+So sometimes, you might see an IPv6 address not having eight separated chunks like we do here. You might see it looking like this. And that just means that everything you don't see in between where that double colon is is just zero separated. 
+
+So, OK. We know a little bit more about IP addresses now. But how do we get them? We can't just pick the one we want. If we did that, we might end up fighting somebody for the same IP address. Or somebody might have chosen it previously. If we try and take it, we're going to run into a bit of a problem. And so we can't just pick the IP address that we want. 
+
+So the way that we get an IP address is somewhere between our computer and the internet, that big internet out there, there's something called a DHCP server, a Dynamic Host Configuration Protocol server. It's a big mouthful of text. But really all it does is it assigns you an IP address. 
+
+Your DHCP server has a list of addresses that it can validly assign. And it gives you one. That's pretty much all there is to it. Now before DHCP, this task of assigning addresses fell to a system administrator. So an actual person would have to manually assign your computer and address when you connected to a network. So DHCP just sort of automates this process of giving you an IP address. But that's how you get it. It's just a program running somewhere between you and the internet that has a bank of IP addresses that it can give out. And when you connect to the network, it gives you one. So let's revisit this diagram. Somewhere between you and the internet, there's a DHCP server. OK. So that's good.

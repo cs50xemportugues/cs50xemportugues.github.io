@@ -1,0 +1,104 @@
+{% extends 'layout.html' %} {% block conteudo %}
+
+<h1 id="problem-set-6">Lista de Problemas 6</h1>
+
+<h2 id="what-to-do">O que fazer</h2>
+
+<ol>
+  <li>
+    Envie <a href="{{ url_for('cs50x.psets.python_hello') }}">Olá</a> em
+    Python
+  </li>
+  <li>
+    Envie um dos dois:
+    <ul>
+      <li data-marker="*">
+        <a href="{{ url_for('cs50x.psets.python_mario_less') }}"
+          >esta versão de Mario</a
+        >
+        em Python, caso você esteja menos confortável
+      </li>
+      <li data-marker="*">
+        <a href="{{ url_for('cs50x.psets.python_mario_more') }}"
+          >esta versão de Mario</a
+        >
+        em Python, caso você esteja mais confortável
+      </li>
+    </ul>
+  </li>
+  <li>
+    Envie um dos dois:
+    <ul>
+      <li data-marker="*">
+        <a href="{{ url_for('cs50x.psets.python_cash') }}">Dinheiro</a>
+        em Python, caso você esteja menos confortável
+      </li>
+      <li data-marker="*">
+        <a href="{{ url_for('cs50x.psets.python_credit') }}">Crédito</a> em
+        Python, caso você esteja mais confortável
+      </li>
+    </ul>
+  </li>
+  <li>
+    Envie
+    <a href="{{ url_for('cs50x.psets.python_readability') }}"
+      >Legibilidade</a
+    >
+    em Python
+  </li>
+  <li>Envie <a href="{{ url_for('cs50x.psets.dna') }}">DNA</a> em Python</li>
+</ol>
+
+<p>
+  Se você enviar as soluções de ambas versões do problema Marios, nós vamos
+  registrar apenas a pontuação mais alta dos dois. Se você enviar as soluções
+  dos problemas Dinheiro e Crédito, nós vamos registrar apenas a pontuação mais
+  alta dos dois.
+</p>
+
+<h2 id="when-to-do-it">Quando fazer</h2>
+
+<p>Até 23:59 horas de 31 de Dezembro de 2023</p>
+
+<h2 id="advice">Dica</h2>
+
+<ul>
+  <li data-marker="*">
+    Teste alguns dos programas que Ramon mostrou na aula, usando o código fonte
+    da <a href="{{ url_for('cs50x.weeks.week6') }}">Semana 6</a>.
+  </li>
+</ul>
+
+<h2 id="academic-honesty">Honestidade Academica</h2>
+
+<ul>
+  <li data-marker="*">
+    For Hello, Mario, Cash, Credit, and Readability, it is
+    <strong>reasonable</strong> to look at your own implementations thereof in
+    C.
+  </li>
+  <li data-marker="*">
+    It is <strong>not reasonable</strong> to look at others’ implementations of
+    the same <em>in Python</em>.
+  </li>
+  <li data-marker="*">
+    Insofar as a goal of these problems is to teach you how to teach yourself a
+    new language, keep in mind that these acts are not only
+    <strong>reasonable</strong>, per the syllabus, but encouraged toward that
+    end:
+    <ul>
+      <li data-marker="*">
+        Incorporating a few lines of code that you find online or elsewhere into
+        your own code, provided that those lines are not themselves solutions to
+        assigned problems and that you cite the lines’ origins.
+      </li>
+      <li data-marker="*">
+        Turning to the web or elsewhere for instruction beyond the course’s own,
+        for references, and for solutions to technical difficulties, but not for
+        outright solutions to problem set’s problems or your own final project.
+      </li>
+    </ul>
+  </li>
+</ul>
+
+{% endblock %}

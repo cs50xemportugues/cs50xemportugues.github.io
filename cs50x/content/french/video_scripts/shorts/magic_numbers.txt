@@ -1,0 +1,41 @@
+D'accord. Un sujet un peu étrange, non? Les nombres magiques. De quoi parle-t-il quand il parle de nombres magiques? Eh bien, certains des programmes que nous avons écrits dans CS50 jusqu'à présent ont eu des nombres étranges jetés dedans. Peut-être pour des raisons que nous ne comprenons pas entièrement maintenant. Par exemple, dans le problème Mario, nous avons limité la hauteur de la pyramide à 23. Nous avons explicitement dit que vous ne pouvez pas aller plus haut que 23.
+
+Mais que signifie 23? Eh bien, si vous lisez attentivement le cahier des charges, vous avez peut-être vu que la raison pour laquelle nous l'avons limité à 23 est que la hauteur standard d'une fenêtre de terminal est de 24. Et donc si nous avons une pyramide plus haute que cela, elle pourrait faire cette chose étrange où elle s'exécute hors de l'écran. Et vous savez, que cela signifie-t-il dans ce contexte, non?
+
+La signification de 23 est-elle immédiatement évidente pour quelqu'un qui regarde votre programme et qui a peut-être une taille différente de fenêtre de terminal? Probablement pas. Cela semble donc être une mauvaise habitude en général d'écrire des constantes dans votre code. En le faisant, lorsqu'une constante est réellement écrite dans votre code, elle est parfois appelée utilisation de nombres magiques, ce que nous voulons généralement essayer d'éviter.
+
+Par exemple, jetons un coup d'œil à cette simple fonction ici. Évidemment, il n'y a pas de type de données en C appelé carte ou jeu de cartes. Alors ne vous inquiétez pas. C'est un peu de pseudocode mélangé ici. C'est une fonction appelée deal card qui prend apparemment un jeu de cartes comme paramètre et me renvoie une seule carte.
+
+Et je fais quelque chose ici où j'ai une boucle qui s'exécute de 0 à 52, et je distribue une carte. Eh bien, nous avons un nombre magique ici, non? Voyez-vous quel est le nombre magique? Ou plus important encore, voyez-vous quel est le problème ici? Surtout si c'est juste une fonction dans son propre fichier dans un dossier qui contient une multitude de fichiers différents, chacun effectuant une autre chose sur un jeu de cartes. Peut-être les mélange-t-il ou distribue-t-il une main de cinq cartes au lieu d'une seule carte.
+
+Voyez-vous quel est le problème ici? Voyez-vous le nombre magique que j'ai injecté dans le code? C'est 52, non.
+
+Intuitivement, vous savez probablement que la taille standard d'un jeu de cartes contient 52 cartes. Mais dans notre programme, il flotte juste là-dedans. Tout à coup, il y a un 52.
+
+Une façon de résoudre ce problème consiste à faire ceci. Nous appelons très explicitement maintenant la taille du jeu de 52. Cela donne un peu plus de signification intuitive quand dans la boucle for plus tard, nous disons ensuite que i est inférieur à la taille du jeu. Cela semble juste mieux que de dire 52. En général, il est donc plutôt mauvais d'écrire des nombres constants dans votre code. En le faisant, lorsqu'une constante est réellement écrite dans votre code, elle est parfois appelée utilisation de nombres magiques, ce que nous voulons généralement éviter.
+
+C fournit ce qu'on appelle une directive de préprocesseur, également appelée macro, pour créer des constantes symboliques. Et en fait, vous avez déjà vu une directive de préprocesseur, même si vous ne l'avez pas entendue appelée comme ça avec #include. C'est un autre exemple de macro ou de directive de préprocesseur.
+
+La méthode pour créer des constantes symboliques, ou donner un nom à une constante pour qu'elle ait plus de signification, est la suivante. #define, nom, remplacement. Info importante ici, ne mettez pas de point-virgule à la fin de vos #defines. Donc c'est #define, nom, remplacement.
+
+Lorsque votre programme est compilé, ce qui se passe en réalité, c'est que le compilateur va parcourir votre code et remplacer chaque instance du mot "nom" par ce que vous avez mis en remplacement. De manière analogue, si #include est un peu similaire à copier-coller, alors #define est un peu similaire à trouver et remplacer, si vous avez déjà utilisé cette fonctionnalité dans un programme de traitement de texte, par exemple.
+
+Par exemple, si je #define pi comme 3,14159265, si vous êtes meilleur en mathématiques et que vous voyez soudain 3,14159265 voler dans votre code, vous savez probablement qu'il parle de pi. Mais peut-être pouvons-nous lui donner un peu plus de signification symbolique. Et nous pouvons plutôt dire #define pi comme cette succession de chiffres que je ne vais pas continuer à lire à maintes reprises.
+
+Et ce qui va se passer alors au moment de la compilation, c'est que le programme va d'abord parcourir et chaque fois qu'il verra la lettre P majuscule, la lettre I majuscule, il la remplacera littéralement par 3,14 et ainsi de suite, afin que vous n'ayez pas à le taper à chaque fois tandis que votre programme a toujours la fonctionnalité que vous attendez, car vous travaillez avec la manipulation, la multiplication, la division, etc. par pi.
+
+Vous n'êtes pas limité à cette substitution pour les nombres uniquement. Par exemple, je pourrais #define course comme la chaîne CS50. Dans ce cas, lorsque le programme est compilé, #define parcourra le code, remplacera chaque fois qu'il voit "course" par la chaîne CS50.
+
+Vous remarquerez également ici que je #define fréquemment toutes mes constantes symboliques définies, pour ainsi dire, sont toujours en majuscules. C'est une convention. Ce n'est pas obligatoire. La raison pour laquelle les gens utilisent généralement tous les majuscules lorsqu'ils définissent est simplement de bien faire comprendre que cet élément particulier de mon code est une constante définie. Si c'était en minuscules, il est possible qu'il pourrait être confondu avec une variable. Et ce n'est probablement pas une bonne chose à faire.
+
+Cette solution particulière est bien meilleure que les précédentes. Si je #define d'abord la taille du jeu de 52, maintenant mon utilisation de 52 ou de la taille du jeu ici est beaucoup plus intuitive et beaucoup plus sûre. Vous ne pouvez pas manipuler une constante. Vous ne pouvez pas dire 52 plus plus. Cela ne va pas le convertir en 53. Vous ne pouvez pas changer 52 en quelque chose.
+
+Vous pouvez changer une variable dont la valeur est 52, ce qui était la première solution avant. Et vous pourriez augmenter cette variable à 53. Mais vous ne pouvez pas dire 52 plus plus et avoir cela se transformer soudainement en 53. 52 est toujours 52. Et donc vous ne pouvez pas inadvertance changer la taille du jeu ici en le manipulant.
+
+Un autre bon effet secondaire de cela est que savez-vous que tous les pays du monde n'utilisent pas un jeu de cartes de taille 52? Par exemple, c'est très courant en Allemagne d'utiliser une taille de jeu de 32, où ils retirent certaines des cartes de faible valeur. Et dans ce cas, je voulais porter ma suite de fonctions qui traitent la manipulation de cartes en Allemagne. Dans le premier cas que nous avons montré, j'aurais dû remplacer toutes les instances de 52 dans mon code par 32.
+
+Mais ici, si je #define deck size comme 32 dès le haut de mon code, si j'ai besoin de le changer, je peux simplement aller changer cette seule chose. Recompiler mon code, et tout à coup cela se propage. En fait, nous pouvons changer la taille du jeu de cartes à n'importe quelle valeur que nous voulons.
+
+Puis-je vous intéresser à une partie de jeu de cartes de taille de deck? 
+
+Je suis Doug Lloyd. Et c'est CS50.

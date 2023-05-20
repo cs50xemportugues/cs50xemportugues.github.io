@@ -1,0 +1,107 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+<h1 id="cash">Dinheiro</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>If you already started to work on Problem Set 1 in CS50 Lab, you may <a href="https://lab.cs50.io/cs50/labs/2020/x/cash/">continue working on it</a> there. If you’re just now starting to work in this problem, be sure to use CS50 IDE instead by following the instructions below!</p>
+</div>
+
+<h2 id="greedy-algorithms">Algoritmos Gananciosos</h2>
+
+<!-- http://mypieceofthe31415927.blogspot.com/2014/04/whats-wrong-with-these-us-coins.html -->
+<p><img src="coins.jpg" alt="US coins"></p>
+
+<p>Quando se está dando troco para um cliente, é provável que você queira minimizar o número de moedas que você vai dar para cada cliente, para que você não fique sem moedas (ou irrite o cliente!). Felizmente, a ciência da computação deu aos caixas de lojas de todo o mundo maneiras de minimizar o número de moedas dadas como troco: algoritmos gananciosos.</p>
+
+<p>Algoritmos gananciosos são mais comumente chamados de "algoritmos gulosos", entretanto, para propósitos didáticos, nós usaremos o termo algoritmo ganancioso pois este soa mais intuitivo, não apenas no contexto deste problema, que se trata de dinheiro, mas também no contexto de outros problemas que você encontrará ao longo da sua jornada.</p>
+
+<p>De acordo com o Instituto Nacional de Padrões e Tecnologia dos Estados Unidos, um algoritmo ganancioso é um algoritmo "que sempre toma a melhor solução imediata, ou local, quando se está buscando uma resposta. Algoritmos gananciosos encontram a solução geral, ou global, para algus problemas de optimização, mas pode encontrar soluções abaixo do ideal para alguns casos de outros problemas."
+</p>
+
+<p>O que isso tudo quer dizer? Bem, digamos que um caixa deva uma quantidade de troco a um cliente e que na bandeja de moedas desse caixa haja moedas de 25 centavos, 10 centavos, 5 centavos, e 1 centavo (imagine que estamos no fim dos anos 90/início dos anos 2000 😅). O problema a ser resolvido é decidir quais moedas, e que quantidade de cada, dar ao cliente como troco. Imagine um atendente de caixa "ganancioso" como sendo um que quer diminuir este problema ao máximo a cada moeda que ele retirar da bandeja. Por exemplo, se um cliente tem de receber 41 centavos de troco, a maneira de diminuir este problema ao máximo com apenas "um passo" é pegando uma moeda de 25 centavos (esse passo é o "melhor" pois nos aproxima de 0 centavos devidos ao cliente mais rápido do que qualquer outra moeda). Perceba que um passo desse "tamanho" diminui o que era um problema de 41 centavos para um problema de 16 centavos, considerando que 41 - 25 = 16. Isso significa que a quantidade de troco devido ao cliente após o primeiro passo é um problema semelhante mas menor. Para o próximo passo, é fácil perceber que pegar outra moeda de 25 centavos seria demais (considerando que o caixa não quer perder dinheiro), e portanto, nosso caixa teria que pegar uma moeda de 10 centavos, o que faria com que o problema se reduzisse à um problema de 6 centavos. Nesse ponto da história, seguindo o algoritmo ganancioso, o caixa pegaria uma moeda de 5 centavos, seguido de uma moeda de 1 centavo. E após isso, o problema estaria resolvido. O cliente receberia uma moeda de 25 centavos, uma moeda de 10 centavos, uma moeda de 5 centavos, e uma moeda de 1 centado: quatro moedas no total.</p>
+
+<p>Acontece que esta abordagem (o algoritmo) gananciosa é eficiente não apenas localmente mas também globalmente, para moedas de outros países. Isso quer dizer que, contanto que o caixa tenha quantidade suficiente de cada moeda, usando esta abordagem de maior para menor faz com que o caixa pegue o menor número de moedas possível. Mas o quão pequena seria essa quantidade de moedas? Bem, é você que nos mostrará!</p>
+
+<h2 id="implementation-details">Detalhes de Implementação</h2>
+
+<p>Implemente, em um arquivo chamado <code class="highlighter-rouge">dinheiro.c</code>, localizado em um diretório de nome <code class="highlighter-rouge">~/problemas1/dinheiro</code>, um programa que pergunta ao usuário quanto de troco o cliente precisa receber e em seguida imprime o número mínimo de moedas com as quais esse troco pode ser entregue ao cliente.</p>
+
+
+<ul>
+    <li data-marker="*">Use a função <code class="highlighter-rouge">get_float</code> para receber a entrada de dados (troco devido ao cliente) do usuário e use a função <code class="highlighter-rouge">printf</code> para gerar a saída de dados (número mínimo de moedas). Considere que as únicas moedas disponíveis são moedas de 25 centavos, 10 centavos, 5 centavos e 1 centavo.
+        <ul>
+            <li data-marker="*">Nós pedimos que você use <code class="highlighter-rouge">get_float</code> para que você possa receber o valor do troco em real e centavos, entretanto sem o símbolo do cifrão ($). Em outras palavras, se o cliente tem de receber $9.75 de troco, considere que a entrada de dados do seu programa será <code class="highlighter-rouge">9.75</code>, e não  <code class="highlighter-rouge">$9.75</code> ou <code class="highlighter-rouge">975</code>. Entretanto, se o cliente tem de receber exatamente $9, considere que a entrada de dados do seu programa será <code class="highlighter-rouge">9.00</code> ou <code class="highlighter-rouge">9</code>, mas não <code class="highlighter-rouge">$9</code> ou <code class="highlighter-rouge">900</code>. É claro que, pela natureza dos valores de ponto flutuante, seu programa poderá receber entradas de dados como <code class="highlighter-rouge">9.0</code> e <code class="highlighter-rouge">9.000</code> as well; you need not worry about checking wh, por exemplo. Você não precisa se preocupar em checar se a entrada de dados do usuário está "formatada" como um valor monetário deveria estar.</li>
+        </ul>
+    </li>
+    <li data-marker="*">Você não precisa checar se a entrada de dados do usuário é grande demais para ser armazenada em um <code class="highlighter-rouge">float</code>. Usar a função <code class="highlighter-rouge">get_float</code> fará com que a entrada de dados do usuário seja de fato um valor de ponto flutuante (ou um inteiro). Entretanto, get_float não garante que o valor informado pelo usuário não seja um número negativo.</li>
+    <li data-marker="*">Se o usuário informar um valor que seja negativo, seu programa deve pedir um valor válido ao usuário novamente, e continuar repetindo esse processo até que o usuário colabore.</li>
+    <li>Para que possamos automatizar alguns testes no seu código, garanta que a última linha da saída de dados do seu programa seja apenas o número mínimo de moedas possivel: um número inteiro seguido do caractere de nova linha (<code class="highlighter-rouge">\n</code>)</li>
+    <li data-marker="*">Tenha em mente, durante a implementação do programa, a imprecisão inerente dos valores de ponto flutuante. Lembre-se do exemplo <code class="highlighter-rouge">floats.c</code> mostrado na aula, em que mostramos o caso de que se <code class="highlighter-rouge">x</code> é <code class="highlighter-rouge">2</code> e <code class="highlighter-rouge">y</code> é <code class="highlighter-rouge">10</code>, <code class="highlighter-rouge">x / y</code> não é precisamente dois décimos! E portanto, antes de fazer alterações, você certamente precisará converter a entrada de dados do usuário de dólares para centavos (convertendo de <code class="highlighter-rouge">float</code> para <code class="highlighter-rouge">int</code>, por exemplo) para evitar pequenos erros que podem aparecer caso contrário.</li>
+
+    <li data-marker="*">
+        <p>Não se esqueça de arredondar o valor do troco para o centavo mais próximo. Para isso, use a função <code class="highlighter-rouge">round</code>, que está declarada na biblioteca <code class="highlighter-rouge">math.h</code>. Se <code class="highlighter-rouge">reais</code> for um <code class="highlighter-rouge">float</code> recebido do usuário (<code class="highlighter-rouge">0.20</code>, por exemplo), logo a linha</p>
+        <div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>int centavos = round(reais * 100);
+    </code></pre></div>    </div>
+
+        <p>converterá <code class="highlighter-rouge">0.20</code> (ou até mesmo <code class="highlighter-rouge">0.200000002980232238769531250</code>) para <code class="highlighter-rouge">20</code> corretamente.</p>
+    </li>
+</ul>
+
+<p>Seu programa deve se comportar como nos exemplos abaixo.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./dinheiro
+Troco devido: 0.41
+4
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./dinheiro
+Troco devido: -0.41
+Troco devido: foo
+Troco devido: 0.41
+4
+</code></pre></div></div>
+
+<h3 id="walkthrough">Passo a Passo</h3>
+
+<div class="border embed-responsive embed-responsive-16by9" data-video="">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/Y3nWGvqt_Cg?modestbranding=1&amp;rel=0&amp;showinfo=0"></iframe>
+</div>
+
+<h3 id="how-to-test-your-code">Como Testar Seu Código</h3>
+
+<p>Seu programa funciona como prescrito quando você digita</p>
+
+<ul>
+  <li data-marker="*"><code class="highlighter-rouge">-1.00</code> (ou outros números negativos)?</li>
+  <li data-marker="*"><code class="highlighter-rouge">0.00</code>?</li>
+  <li data-marker="*"><code class="highlighter-rouge">0.01</code> (ou outros números negativos)?</li>
+  <li data-marker="*">letras ou palavras?</li>
+  <li data-marker="*">nenhuma entrada de dado, quando você só aperta Enter?</li>
+</ul>
+
+<p>Você também pode executar a linha abaixo para avaliar a correção do seu código usando a ferramenta <code class="highlighter-rouge">check50</code>. Mas não se esqueça de compilar e testar o programa você também!</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50xemportugues/problemas/2020/dinheiro
+</code></pre></div></div>
+
+<p>Execute o comando abaixo para avaliar o estilo do seu código usando a ferramenta <code class="highlighter-rouge">style50</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 dinheiro.c
+</code></pre></div></div>
+
+<h2>Como Adaptar Seu Código Antes de Enviar</h2>
+
+<p>TODO</p>
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+<p>Execute a linha abaixo, e em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/cash
+</code></pre></div></div>
+
+
+
+{% endblock %}

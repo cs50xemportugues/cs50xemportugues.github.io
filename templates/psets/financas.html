@@ -1,0 +1,1056 @@
+{% extends 'layout.html' %} {% block conteudo %}
+
+<h1 id="c50-finance">C$50 Finance</h1>
+
+<p>
+  Implement a website via which users can “buy” and “sell” stocks, a la the
+  below.
+</p>
+
+<p><img src="finance.png" alt="C$50 Finance" /></p>
+
+<h2 id="background">Background</h2>
+
+<p>
+  If you’re not quite sure what it means to buy and sell stocks (i.e., shares of
+  a company), head
+  <a href="https://www.investopedia.com/articles/basics/06/invest1000.asp"
+    >here</a
+  >
+  for a tutorial.
+</p>
+
+<p>
+  You’re about to implement C$50 Finance, a web app via which you can manage
+  portfolios of stocks. Not only will this tool allow you to check real stocks’
+  actual prices and portfolios’ values, it will also let you buy (okay, “buy”)
+  and sell (okay, “sell”) stocks by querying
+  <a href="https://iextrading.com/developer/">IEX</a> for stocks’ prices.
+</p>
+
+<p>
+  Indeed, IEX lets you download stock quotes via their API (application
+  programming interface) using URLs like
+  <code class="language-plaintext highlighter-rouge"
+    >https://cloud-sse.iexapis.com/stable/stock/nflx/quote?token=API_KEY</code
+  >. Notice how Netflix’s symbol (NFLX) is embedded in this URL; that’s how IEX
+  knows whose data to return. That link won’t actually return any data because
+  IEX requires you to use an API key (more about that in a bit), but if it did,
+  you’d see a response in JSON (JavaScript Object Notation) format like this:
+</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>{
+  "avgTotalVolume": 4329597,
+  "calculationPrice": "tops",
+  "change": 1.21,
+  "changePercent": 0.00186,
+  "closeSource": "official",
+  "companyName": "NetFlix Inc",
+  "currency": "USD",
+  "iexAskPrice": 662.59,
+  "iexAskSize": 8080,
+  "iexBidPrice": 652.65,
+  "iexBidSize": 102,
+  "iexClose": 652.66,
+  "iexCloseTime": 1636479523133,
+  "iexLastUpdated": 1636479523133,
+  "iexMarketPercent": 0.03419734093274243,
+  "iexOpen": 652.66,
+  "iexOpenTime": 1636479523133,
+  "iexRealtimePrice": 652.66,
+  "iexRealtimeSize": 30,
+  "iexVolume": 43968,
+  "lastTradeTime": 1636479523133,
+  "latestPrice": 652.66,
+  "latestSource": "IEX real time price",
+  "latestTime": "12:38:43 PM",
+  "latestUpdate": 1636479523133,
+  "marketCap": 288341929921,
+  "openSource": "official",
+  "peRatio": 58.85,
+  "previousClose": 651.45,
+  "previousVolume": 2887523,
+  "primaryExchange": "NASDAQ",
+  "symbol": "NFLX",
+  "week52High": 690.97,
+  "week52Low": 463.41,
+  "ytdChange": 0.2066202315388457
+}
+</code></pre>
+  </div>
+</div>
+
+<p>
+  Notice how, between the curly braces, there’s a comma-separated list of
+  key-value pairs, with a colon separating each key from its value.
+</p>
+
+<p>Let’s turn our attention now to getting this problem’s distribution code!</p>
+
+<h2 id="getting-started">Getting Started</h2>
+
+<p>
+  Log into <a href="https://code.cs50.io/">code.cs50.io</a>, click on your
+  terminal window, and execute
+  <code class="language-plaintext highlighter-rouge">cd</code> by itself. You
+  should find that your terminal window’s prompt resembles the below:
+</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>$
+</code></pre>
+  </div>
+</div>
+
+<p>Next execute</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre
+      class="highlight"
+    ><code>wget https://cdn.cs50.net/2021/fall/psets/9/finance.zip
+</code></pre>
+  </div>
+</div>
+
+<p>
+  in order to download a ZIP called
+  <code class="language-plaintext highlighter-rouge">finance.zip</code> into
+  your codespace.
+</p>
+
+<p>Then execute</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>unzip finance.zip
+</code></pre>
+  </div>
+</div>
+
+<p>
+  to create a folder called
+  <code class="language-plaintext highlighter-rouge">finance</code>. You no
+  longer need the ZIP file, so you can execute
+</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>rm finance.zip
+</code></pre>
+  </div>
+</div>
+
+<p>
+  and respond with “y” followed by Enter at the prompt to remove the ZIP file
+  you downloaded.
+</p>
+
+<p>Now type</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>cd finance
+</code></pre>
+  </div>
+</div>
+
+<p>
+  followed by Enter to move yourself into (i.e., open) that directory. Your
+  prompt should now resemble the below.
+</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>finance/ $
+</code></pre>
+  </div>
+</div>
+
+<p>
+  Execute <code class="language-plaintext highlighter-rouge">ls</code> by
+  itself, and you should see a few files and folders:
+</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre
+      class="highlight"
+    ><code>app.py  finance.db  helpers.py  requirements.txt  static/  templates/
+</code></pre>
+  </div>
+</div>
+
+<p>
+  If you run into any trouble, follow these same steps again and see if you can
+  determine where you went wrong!
+</p>
+
+<h3 id="configuring">Configuring</h3>
+
+<p>
+  Before getting started on this assignment, we’ll need to register for an API
+  key in order to be able to query IEX’s data. To do so, follow these steps:
+</p>
+
+<ul>
+  <li data-marker="*">
+    Visit
+    <a href="https://iexcloud.io/cloud-login#/register/"
+      >iexcloud.io/cloud-login#/register/</a
+    >.
+  </li>
+  <li data-marker="*">
+    Select the “Individual” account type, then enter your name, email address,
+    and a password, and click “Create account”.
+  </li>
+  <li data-marker="*">
+    Once registered, scroll down to “Get started for free” and click “Select
+    Start plan” to choose the free plan.
+  </li>
+  <li data-marker="*">
+    Once you’ve confirmed your account via a confirmation email, visit
+    <a href="https://iexcloud.io/console/tokens"
+      >https://iexcloud.io/console/tokens</a
+    >.
+  </li>
+  <li data-marker="*">
+    Copy the key that appears under the <em>Token</em> column (it should begin
+    with <code class="language-plaintext highlighter-rouge">pk_</code>).
+  </li>
+  <li data-marker="*">In your terminal window, execute:</li>
+</ul>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>$ export API_KEY=value
+</code></pre>
+  </div>
+</div>
+
+<p>
+  where <code class="language-plaintext highlighter-rouge">value</code> is that
+  (pasted) value, without any space immediately before or after the
+  <code class="language-plaintext highlighter-rouge">=</code>. You also may wish
+  to paste that value in a text document somewhere, in case you need it again
+  later.
+</p>
+
+<h3 id="running">Running</h3>
+
+<p>
+  Start Flask’s built-in web server (within
+  <code class="language-plaintext highlighter-rouge">finance/</code>):
+</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>$ flask run
+</code></pre>
+  </div>
+</div>
+
+<p>
+  Visit the URL outputted by
+  <code class="language-plaintext highlighter-rouge">flask</code> to see the
+  distribution code in action. You won’t be able to log in or register, though,
+  just yet!
+</p>
+
+<p>
+  Within <code class="language-plaintext highlighter-rouge">finance/</code>, run
+  <code class="language-plaintext highlighter-rouge">sqlite3 finance.db</code>
+  to open
+  <code class="language-plaintext highlighter-rouge">finance.db</code> with
+  <code class="language-plaintext highlighter-rouge">sqlite3</code>. If you run
+  <code class="language-plaintext highlighter-rouge">.schema</code> in the
+  SQLite prompt, notice how
+  <code class="language-plaintext highlighter-rouge">finance.db</code> comes
+  with a table called
+  <code class="language-plaintext highlighter-rouge">users</code>. Take a look
+  at its structure (i.e., schema). Notice how, by default, new users will
+  receive $10,000 in cash. But if you run
+  <code class="language-plaintext highlighter-rouge">SELECT * FROM users;</code
+  >, there aren’t (yet!) any users (i.e., rows) therein to browse.
+</p>
+
+<p>
+  Another way to view
+  <code class="language-plaintext highlighter-rouge">finance.db</code> is with a
+  program called phpLiteAdmin. Click on
+  <code class="language-plaintext highlighter-rouge">finance.db</code> in your
+  codespace’s file browser, then click the link shown underneath the text
+  “Please visit the following link to authorize GitHub Preview”. You should see
+  information about the database itself, as well as a table,
+  <code class="language-plaintext highlighter-rouge">users</code>, just like you
+  saw in the
+  <code class="language-plaintext highlighter-rouge">sqlite3</code> prompt with
+  <code class="language-plaintext highlighter-rouge">.schema</code>.
+</p>
+
+<h3 id="understanding">Understanding</h3>
+
+<h4 id="apppy">
+  <code class="language-plaintext highlighter-rouge">app.py</code>
+</h4>
+
+<p>
+  Open up <code class="language-plaintext highlighter-rouge">app.py</code>. Atop
+  the file are a bunch of imports, among them CS50’s SQL module and a few helper
+  functions. More on those soon.
+</p>
+
+<p>
+  After configuring <a href="http://flask.pocoo.org/">Flask</a>, notice how this
+  file disables caching of responses (provided you’re in debugging mode, which
+  you are by default in your code50 codespace), lest you make a change to some
+  file but your browser not notice. Notice next how it configures
+  <a href="http://jinja.pocoo.org/">Jinja</a> with a custom “filter,”
+  <code class="language-plaintext highlighter-rouge">usd</code>, a function
+  (defined in
+  <code class="language-plaintext highlighter-rouge">helpers.py</code>) that
+  will make it easier to format values as US dollars (USD). It then further
+  configures Flask to store
+  <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#sessions"
+    >sessions</a
+  >
+  on the local filesystem (i.e., disk) as opposed to storing them inside of
+  (digitally signed) cookies, which is Flask’s default. The file then configures
+  CS50’s SQL module to use
+  <code class="language-plaintext highlighter-rouge">finance.db</code>.
+</p>
+
+<p>
+  Thereafter are a whole bunch of routes, only two of which are fully
+  implemented:
+  <code class="language-plaintext highlighter-rouge">login</code> and
+  <code class="language-plaintext highlighter-rouge">logout</code>. Read through
+  the implementation of
+  <code class="language-plaintext highlighter-rouge">login</code> first. Notice
+  how it uses
+  <code class="language-plaintext highlighter-rouge">db.execute</code> (from
+  CS50’s library) to query
+  <code class="language-plaintext highlighter-rouge">finance.db</code>. And
+  notice how it uses
+  <code class="language-plaintext highlighter-rouge">check_password_hash</code>
+  to compare hashes of users’ passwords. Finally, notice how
+  <code class="language-plaintext highlighter-rouge">login</code> “remembers”
+  that a user is logged in by storing his or her
+  <code class="language-plaintext highlighter-rouge">user_id</code>, an INTEGER,
+  in <code class="language-plaintext highlighter-rouge">session</code>. That
+  way, any of this file’s routes can check which user, if any, is logged in.
+  Meanwhile, notice how
+  <code class="language-plaintext highlighter-rouge">logout</code> simply clears
+  <code class="language-plaintext highlighter-rouge">session</code>, effectively
+  logging a user out.
+</p>
+
+<p>
+  Notice how most routes are “decorated” with
+  <code class="language-plaintext highlighter-rouge">@login_required</code> (a
+  function defined in
+  <code class="language-plaintext highlighter-rouge">helpers.py</code> too).
+  That decorator ensures that, if a user tries to visit any of those routes, he
+  or she will first be redirected to
+  <code class="language-plaintext highlighter-rouge">login</code> so as to log
+  in.
+</p>
+
+<p>
+  Notice too how most routes support GET and POST. Even so, most of them (for
+  now!) simply return an “apology,” since they’re not yet implemented.
+</p>
+
+<h4 id="helperspy">
+  <code class="language-plaintext highlighter-rouge">helpers.py</code>
+</h4>
+
+<p>
+  Next take a look at
+  <code class="language-plaintext highlighter-rouge">helpers.py</code>. Ah,
+  there’s the implementation of
+  <code class="language-plaintext highlighter-rouge">apology</code>. Notice how
+  it ultimately renders a template,
+  <code class="language-plaintext highlighter-rouge">apology.html</code>. It
+  also happens to define within itself another function,
+  <code class="language-plaintext highlighter-rouge">escape</code>, that it
+  simply uses to replace special characters in apologies. By defining
+  <code class="language-plaintext highlighter-rouge">escape</code> inside of
+  <code class="language-plaintext highlighter-rouge">apology</code>, we’ve
+  scoped the former to the latter alone; no other functions will be able (or
+  need) to call it.
+</p>
+
+<p>
+  Next in the file is
+  <code class="language-plaintext highlighter-rouge">login_required</code>. No
+  worries if this one’s a bit cryptic, but if you’ve ever wondered how a
+  function can return another function, here’s an example!
+</p>
+
+<p>
+  Thereafter is
+  <code class="language-plaintext highlighter-rouge">lookup</code>, a function
+  that, given a
+  <code class="language-plaintext highlighter-rouge">symbol</code> (e.g., NFLX),
+  returns a stock quote for a company in the form of a
+  <code class="language-plaintext highlighter-rouge">dict</code> with three
+  keys: <code class="language-plaintext highlighter-rouge">name</code>, whose
+  value is a <code class="language-plaintext highlighter-rouge">str</code>, the
+  name of the company;
+  <code class="language-plaintext highlighter-rouge">price</code>, whose value
+  is a <code class="language-plaintext highlighter-rouge">float</code>; and
+  <code class="language-plaintext highlighter-rouge">symbol</code>, whose value
+  is a <code class="language-plaintext highlighter-rouge">str</code>, a
+  canonicalized (uppercase) version of a stock’s symbol, irrespective of how
+  that symbol was capitalized when passed into
+  <code class="language-plaintext highlighter-rouge">lookup</code>.
+</p>
+
+<p>
+  Last in the file is
+  <code class="language-plaintext highlighter-rouge">usd</code>, a short
+  function that simply formats a
+  <code class="language-plaintext highlighter-rouge">float</code> as USD (e.g.,
+  <code class="language-plaintext highlighter-rouge">1234.56</code> is formatted
+  as <code class="language-plaintext highlighter-rouge">$1,234.56</code>).
+</p>
+
+<h4 id="requirementstxt">
+  <code class="language-plaintext highlighter-rouge">requirements.txt</code>
+</h4>
+
+<p>
+  Next take a quick look at
+  <code class="language-plaintext highlighter-rouge">requirements.txt</code>.
+  That file simply prescribes the packages on which this app will depend.
+</p>
+
+<h4 id="static">
+  <code class="language-plaintext highlighter-rouge">static/</code>
+</h4>
+
+<p>
+  Glance too at
+  <code class="language-plaintext highlighter-rouge">static/</code>, inside of
+  which is <code class="language-plaintext highlighter-rouge">styles.css</code>.
+  That’s where some initial CSS lives. You’re welcome to alter it as you see
+  fit.
+</p>
+
+<h4 id="templates">
+  <code class="language-plaintext highlighter-rouge">templates/</code>
+</h4>
+
+<p>
+  Now look in
+  <code class="language-plaintext highlighter-rouge">templates/</code>. In
+  <code class="language-plaintext highlighter-rouge">login.html</code> is,
+  essentially, just an HTML form, stylized with
+  <a href="http://getbootstrap.com/">Bootstrap</a>. In
+  <code class="language-plaintext highlighter-rouge">apology.html</code>,
+  meanwhile, is a template for an apology. Recall that
+  <code class="language-plaintext highlighter-rouge">apology</code> in
+  <code class="language-plaintext highlighter-rouge">helpers.py</code> took two
+  arguments: <code class="language-plaintext highlighter-rouge">message</code>,
+  which was passed to
+  <code class="language-plaintext highlighter-rouge">render_template</code> as
+  the value of <code class="language-plaintext highlighter-rouge">bottom</code>,
+  and, optionally,
+  <code class="language-plaintext highlighter-rouge">code</code>, which was
+  passed to
+  <code class="language-plaintext highlighter-rouge">render_template</code> as
+  the value of <code class="language-plaintext highlighter-rouge">top</code>.
+  Notice in
+  <code class="language-plaintext highlighter-rouge">apology.html</code> how
+  those values are ultimately used! And
+  <a href="https://github.com/jacebrowning/memegen">here’s why</a> 0:-)
+</p>
+
+<p>
+  Last up is
+  <code class="language-plaintext highlighter-rouge">layout.html</code>. It’s a
+  bit bigger than usual, but that’s mostly because it comes with a fancy,
+  mobile-friendly “navbar” (navigation bar), also based on Bootstrap. Notice how
+  it defines a block,
+  <code class="language-plaintext highlighter-rouge">main</code>, inside of
+  which templates (including
+  <code class="language-plaintext highlighter-rouge">apology.html</code> and
+  <code class="language-plaintext highlighter-rouge">login.html</code>) shall
+  go. It also includes support for Flask’s
+  <a
+    href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#message-flashing"
+    >message flashing</a
+  >
+  so that you can relay messages from one route to another for the user to see.
+</p>
+
+<h2 id="specification">Specification</h2>
+
+<h3 id="register">
+  <code class="language-plaintext highlighter-rouge">register</code>
+</h3>
+
+<p>
+  Complete the implementation of
+  <code class="language-plaintext highlighter-rouge">register</code> in such a
+  way that it allows a user to register for an account via a form.
+</p>
+
+<ul>
+  <li data-marker="*">
+    Require that a user input a username, implemented as a text field whose
+    <code class="language-plaintext highlighter-rouge">name</code> is
+    <code class="language-plaintext highlighter-rouge">username</code>. Render
+    an apology if the user’s input is blank or the username already exists.
+  </li>
+  <li data-marker="*">
+    Require that a user input a password, implemented as a text field whose
+    <code class="language-plaintext highlighter-rouge">name</code> is
+    <code class="language-plaintext highlighter-rouge">password</code>, and then
+    that same password again, implemented as a text field whose
+    <code class="language-plaintext highlighter-rouge">name</code> is
+    <code class="language-plaintext highlighter-rouge">confirmation</code>.
+    Render an apology if either input is blank or the passwords do not match.
+  </li>
+  <li data-marker="*">
+    Submit the user’s input via
+    <code class="language-plaintext highlighter-rouge">POST</code> to
+    <code class="language-plaintext highlighter-rouge">/register</code>.
+  </li>
+  <li data-marker="*">
+    <code class="language-plaintext highlighter-rouge">INSERT</code> the new
+    user into <code class="language-plaintext highlighter-rouge">users</code>,
+    storing a hash of the user’s password, not the password itself. Hash the
+    user’s password with
+    <a
+      href="https://werkzeug.palletsprojects.com/en/1.0.x/utils/#werkzeug.security.generate_password_hash"
+      ><code class="language-plaintext highlighter-rouge"
+        >generate_password_hash</code
+      ></a
+    >
+    Odds are you’ll want to create a new template (e.g.,
+    <code class="language-plaintext highlighter-rouge">register.html</code>)
+    that’s quite similar to
+    <code class="language-plaintext highlighter-rouge">login.html</code>.
+  </li>
+</ul>
+
+<p>
+  Once you’ve implemented
+  <code class="language-plaintext highlighter-rouge">register</code> correctly,
+  you should be able to register for an account and log in (since
+  <code class="language-plaintext highlighter-rouge">login</code> and
+  <code class="language-plaintext highlighter-rouge">logout</code> already
+  work)! And you should be able to see your rows via phpLiteAdmin or
+  <code class="language-plaintext highlighter-rouge">sqlite3</code>.
+</p>
+
+<h3 id="quote">
+  <code class="language-plaintext highlighter-rouge">quote</code>
+</h3>
+
+<p>
+  Complete the implementation of
+  <code class="language-plaintext highlighter-rouge">quote</code> in such a way
+  that it allows a user to look up a stock’s current price.
+</p>
+
+<ul>
+  <li data-marker="*">
+    Require that a user input a stock’s symbol, implemented as a text field
+    whose <code class="language-plaintext highlighter-rouge">name</code> is
+    <code class="language-plaintext highlighter-rouge">symbol</code>.
+  </li>
+  <li data-marker="*">
+    Submit the user’s input via
+    <code class="language-plaintext highlighter-rouge">POST</code> to
+    <code class="language-plaintext highlighter-rouge">/quote</code>.
+  </li>
+  <li data-marker="*">
+    Odds are you’ll want to create two new templates (e.g.,
+    <code class="language-plaintext highlighter-rouge">quote.html</code> and
+    <code class="language-plaintext highlighter-rouge">quoted.html</code>). When
+    a user visits
+    <code class="language-plaintext highlighter-rouge">/quote</code> via GET,
+    render one of those templates, inside of which should be an HTML form that
+    submits to
+    <code class="language-plaintext highlighter-rouge">/quote</code> via POST.
+    In response to a POST,
+    <code class="language-plaintext highlighter-rouge">quote</code> can render
+    that second template, embedding within it one or more values from
+    <code class="language-plaintext highlighter-rouge">lookup</code>.
+  </li>
+</ul>
+
+<h3 id="buy"><code class="language-plaintext highlighter-rouge">buy</code></h3>
+
+<p>
+  Complete the implementation of
+  <code class="language-plaintext highlighter-rouge">buy</code> in such a way
+  that it enables a user to buy stocks.
+</p>
+
+<ul>
+  <li data-marker="*">
+    Require that a user input a stock’s symbol, implemented as a text field
+    whose <code class="language-plaintext highlighter-rouge">name</code> is
+    <code class="language-plaintext highlighter-rouge">symbol</code>. Render an
+    apology if the input is blank or the symbol does not exist (as per the
+    return value of
+    <code class="language-plaintext highlighter-rouge">lookup</code>).
+  </li>
+  <li data-marker="*">
+    Require that a user input a number of shares, implemented as a text field
+    whose <code class="language-plaintext highlighter-rouge">name</code> is
+    <code class="language-plaintext highlighter-rouge">shares</code>. Render an
+    apology if the input is not a positive integer.
+  </li>
+  <li data-marker="*">
+    Submit the user’s input via
+    <code class="language-plaintext highlighter-rouge">POST</code> to
+    <code class="language-plaintext highlighter-rouge">/buy</code>.
+  </li>
+  <li data-marker="*">
+    Odds are you’ll want to call
+    <code class="language-plaintext highlighter-rouge">lookup</code> to look up
+    a stock’s current price.
+  </li>
+  <li data-marker="*">
+    Odds are you’ll want to
+    <code class="language-plaintext highlighter-rouge">SELECT</code> how much
+    cash the user currently has in
+    <code class="language-plaintext highlighter-rouge">users</code>.
+  </li>
+  <li data-marker="*">
+    Add one or more new tables to
+    <code class="language-plaintext highlighter-rouge">finance.db</code> via
+    which to keep track of the purchase. Store enough information so that you
+    know who bought what at what price and when.
+    <ul>
+      <li data-marker="*">Use appropriate SQLite types.</li>
+      <li data-marker="*">
+        Define
+        <code class="language-plaintext highlighter-rouge">UNIQUE</code> indexes
+        on any fields that should be unique.
+      </li>
+      <li data-marker="*">
+        Define (non-<code class="language-plaintext highlighter-rouge"
+          >UNIQUE</code
+        >) indexes on any fields via which you will search (as via
+        <code class="language-plaintext highlighter-rouge">SELECT</code> with
+        <code class="language-plaintext highlighter-rouge">WHERE</code>).
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*">
+    Render an apology, without completing a purchase, if the user cannot afford
+    the number of shares at the current price.
+  </li>
+  <li data-marker="*">
+    You don’t need to worry about race conditions (or use transactions).
+  </li>
+</ul>
+
+<p>
+  Once you’ve implemented
+  <code class="language-plaintext highlighter-rouge">buy</code> correctly, you
+  should be able to see users’ purchases in your new table(s) via phpLiteAdmin
+  or <code class="language-plaintext highlighter-rouge">sqlite3</code>.
+</p>
+
+<h3 id="index">
+  <code class="language-plaintext highlighter-rouge">index</code>
+</h3>
+
+<p>
+  Complete the implementation of
+  <code class="language-plaintext highlighter-rouge">index</code> in such a way
+  that it displays an HTML table summarizing, for the user currently logged in,
+  which stocks the user owns, the numbers of shares owned, the current price of
+  each stock, and the total value of each holding (i.e., shares times price).
+  Also display the user’s current cash balance along with a grand total (i.e.,
+  stocks’ total value plus cash).
+</p>
+
+<ul>
+  <li data-marker="*">
+    Odds are you’ll want to execute multiple
+    <code class="language-plaintext highlighter-rouge">SELECT</code>s. Depending
+    on how you implement your table(s), you might find
+    <a href="https://www.google.com/search?q=SQLite+GROUP+BY,">GROUP BY</a>
+    <a href="https://www.google.com/search?q=SQLite+HAVING,">HAVING</a>
+    <a href="https://www.google.com/search?q=SQLite+SUM,">SUM</a> and/or
+    <a href="https://www.google.com/search?q=SQLite+WHERE">WHERE</a> of
+    interest.
+  </li>
+  <li data-marker="*">
+    Odds are you’ll want to call
+    <code class="language-plaintext highlighter-rouge">lookup</code> for each
+    stock.
+  </li>
+</ul>
+
+<h3 id="sell">
+  <code class="language-plaintext highlighter-rouge">sell</code>
+</h3>
+
+<p>
+  Complete the implementation of
+  <code class="language-plaintext highlighter-rouge">sell</code> in such a way
+  that it enables a user to sell shares of a stock (that he or she owns).
+</p>
+
+<ul>
+  <li data-marker="*">
+    Require that a user input a stock’s symbol, implemented as a
+    <code class="language-plaintext highlighter-rouge">select</code> menu whose
+    <code class="language-plaintext highlighter-rouge">name</code> is
+    <code class="language-plaintext highlighter-rouge">symbol</code>. Render an
+    apology if the user fails to select a stock or if (somehow, once submitted)
+    the user does not own any shares of that stock.
+  </li>
+  <li data-marker="*">
+    Require that a user input a number of shares, implemented as a text field
+    whose <code class="language-plaintext highlighter-rouge">name</code> is
+    <code class="language-plaintext highlighter-rouge">shares</code>. Render an
+    apology if the input is not a positive integer or if the user does not own
+    that many shares of the stock.
+  </li>
+  <li data-marker="*">
+    Submit the user’s input via
+    <code class="language-plaintext highlighter-rouge">POST</code> to
+    <code class="language-plaintext highlighter-rouge">/sell</code>.
+  </li>
+  <li data-marker="*">
+    You don’t need to worry about race conditions (or use transactions).
+  </li>
+</ul>
+
+<h3 id="history">
+  <code class="language-plaintext highlighter-rouge">history</code>
+</h3>
+
+<p>
+  Complete the implementation of
+  <code class="language-plaintext highlighter-rouge">history</code> in such a
+  way that it displays an HTML table summarizing all of a user’s transactions
+  ever, listing row by row each and every buy and every sell.
+</p>
+
+<ul>
+  <li data-marker="*">
+    For each row, make clear whether a stock was bought or sold and include the
+    stock’s symbol, the (purchase or sale) price, the number of shares bought or
+    sold, and the date and time at which the transaction occurred.
+  </li>
+  <li data-marker="*">
+    You might need to alter the table you created for
+    <code class="language-plaintext highlighter-rouge">buy</code> or supplement
+    it with an additional table. Try to minimize redundancies.
+  </li>
+</ul>
+
+<h3 id="personal-touch">personal touch</h3>
+
+<p>Implement at least one personal touch of your choice:</p>
+
+<ul>
+  <li data-marker="*">Allow users to change their passwords.</li>
+  <li data-marker="*">Allow users to add additional cash to their account.</li>
+  <li data-marker="*">
+    Allow users to buy more shares or sell shares of stocks they already own via
+    <code class="language-plaintext highlighter-rouge">index</code> itself,
+    without having to type stocks’ symbols manually.
+  </li>
+  <li data-marker="*">
+    Require users’ passwords to have some number of letters, numbers, and/or
+    symbols.
+  </li>
+  <li data-marker="*">Implement some other feature of comparable scope.</li>
+</ul>
+
+<h2 id="walkthrough">Walkthrough</h2>
+
+<div class="ratio ratio-16x9" data-video="">
+  <iframe
+    allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+    allowfullscreen=""
+    class="border"
+    data-video=""
+    src="https://www.youtube.com/embed/7wPTAwT-6bA?modestbranding=0&amp;rel=0&amp;showinfo=0"
+  ></iframe>
+</div>
+
+<h2 id="testing">Testing</h2>
+
+<p>
+  To test your code with
+  <code class="language-plaintext highlighter-rouge">check50</code>, execute the
+  below.
+</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>$ check50 cs50/problems/2023/x/finance
+</code></pre>
+  </div>
+</div>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    Be aware that
+    <code class="language-plaintext highlighter-rouge">check50</code> will test
+    your entire program as a whole. If you run it
+    <strong>before</strong> completing all required functions, it may report
+    errors on functions that are actually correct but depend on other functions.
+  </p>
+</div>
+
+<p>Be sure to test your web app manually too, as by</p>
+
+<ul>
+  <li data-marker="*">
+    inputting alphabetical strings into forms when only numbers are expected,
+  </li>
+  <li data-marker="*">
+    inputting zero or negative numbers into forms when only positive numbers are
+    expected,
+  </li>
+  <li data-marker="*">
+    inputting floating-point values into forms when only integers are expected,
+  </li>
+  <li data-marker="*">trying to spend more cash than a user has,</li>
+  <li data-marker="*">trying to sell more shares than a user has,</li>
+  <li data-marker="*">inputting an invalid stock symbol, and</li>
+  <li data-marker="*">
+    including potentially dangerous characters like
+    <code class="language-plaintext highlighter-rouge">'</code> and
+    <code class="language-plaintext highlighter-rouge">;</code> in SQL queries.
+  </li>
+</ul>
+
+<p>
+  Execute the below to evaluate the style of your Python files using
+  <code class="language-plaintext highlighter-rouge">style50</code>.
+</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>style50 *.py
+</code></pre>
+  </div>
+</div>
+
+<h2 id="staffs-solution">Staff’s Solution</h2>
+
+<p>
+  You’re welcome to stylize your own app differently, but here’s what the
+  staff’s solution looks like!
+</p>
+
+<p><a href="https://finance.cs50.net/">https://finance.cs50.net/</a></p>
+
+<p>
+  Feel free to register for an account and play around. Do
+  <strong>not</strong> use a password that you use on other sites.
+</p>
+
+<p>It is <strong>reasonable</strong> to look at the staff’s HTML and CSS.</p>
+
+<h2 id="hints">Hints</h2>
+
+<ul>
+  <li data-marker="*">
+    To format a value as a US dollar value (with cents listed to two decimal
+    places), you can use the
+    <code class="language-plaintext highlighter-rouge">usd</code> filter in your
+    Jinja templates (printing values as
+    <code class="language-plaintext highlighter-rouge"
+      >{% raw %}{{ value | usd }}{% endraw %}</code
+    >
+    instead of
+    <code class="language-plaintext highlighter-rouge"
+      >{% raw %}{{ value }}{% endraw %}</code
+    >.
+  </li>
+  <li data-marker="*">
+    <p>
+      Within
+      <code class="language-plaintext highlighter-rouge">cs50.SQL</code> is an
+      <code class="language-plaintext highlighter-rouge">execute</code> method
+      whose first argument should be a
+      <code class="language-plaintext highlighter-rouge">str</code> of SQL. If
+      that
+      <code class="language-plaintext highlighter-rouge">str</code> contains
+      question mark parameters to which values should be bound, those values can
+      be provided as additional named parameters to
+      <code class="language-plaintext highlighter-rouge">execute</code>. See the
+      implementation of
+      <code class="language-plaintext highlighter-rouge">login</code> for one
+      such example. The return value of
+      <code class="language-plaintext highlighter-rouge">execute</code> is as
+      follows:
+    </p>
+
+    <ul>
+      <li data-marker="*">
+        If <code class="language-plaintext highlighter-rouge">str</code> is a
+        <code class="language-plaintext highlighter-rouge">SELECT</code>, then
+        <code class="language-plaintext highlighter-rouge">execute</code>
+        returns a
+        <code class="language-plaintext highlighter-rouge">list</code> of zero
+        or more
+        <code class="language-plaintext highlighter-rouge">dict</code> objects,
+        inside of which are keys and values representing a table’s fields and
+        cells, respectively.
+      </li>
+      <li data-marker="*">
+        If <code class="language-plaintext highlighter-rouge">str</code> is an
+        <code class="language-plaintext highlighter-rouge">INSERT</code>, and
+        the table into which data was inserted contains an autoincrementing
+        <code class="language-plaintext highlighter-rouge">PRIMARY KEY</code>,
+        then
+        <code class="language-plaintext highlighter-rouge">execute</code>
+        returns the value of the newly inserted row’s primary key.
+      </li>
+      <li data-marker="*">
+        If <code class="language-plaintext highlighter-rouge">str</code> is a
+        <code class="language-plaintext highlighter-rouge">DELETE</code> or an
+        <code class="language-plaintext highlighter-rouge">UPDATE</code>, then
+        <code class="language-plaintext highlighter-rouge">execute</code>
+        returns the number of rows deleted or updated by
+        <code class="language-plaintext highlighter-rouge">str</code>.
+      </li>
+    </ul>
+  </li>
+  <li data-marker="*">
+    Recall that
+    <code class="language-plaintext highlighter-rouge">cs50.SQL</code> will log
+    to your terminal window any queries that you execute via
+    <code class="language-plaintext highlighter-rouge">execute</code> (so that
+    you can confirm whether they’re as intended).
+  </li>
+  <li data-marker="*">
+    Be sure to use question mark-bound parameters (i.e., a
+    <a href="https://www.python.org/dev/peps/pep-0249/#paramstyle"
+      >paramstyle</a
+    >
+    of <code class="language-plaintext highlighter-rouge">named</code>) when
+    calling CS50’s
+    <code class="language-plaintext highlighter-rouge">execute</code> method, a
+    la <code class="language-plaintext highlighter-rouge">WHERE ?</code>. Do
+    <strong>not</strong> use f-strings,
+    <a href="https://docs.python.org/3.6/library/functions.html#format,"
+      ><code class="language-plaintext highlighter-rouge">format</code></a
+    >
+    or <code class="language-plaintext highlighter-rouge">+</code> (i.e.,
+    concatenation), lest you risk a SQL injection attack.
+  </li>
+  <li data-marker="*">
+    If (and only if) already comfortable with SQL, you’re welcome to use
+    <a href="http://docs.sqlalchemy.org/en/latest/index.html"
+      >SQLAlchemy Core</a
+    >
+    or <a href="http://flask-sqlalchemy.pocoo.org/">Flask-SQLAlchemy</a> (i.e.,
+    <a href="http://docs.sqlalchemy.org/en/latest/index.html">SQLAlchemy ORM</a
+    >) instead of
+    <code class="language-plaintext highlighter-rouge">cs50.SQL</code>.
+  </li>
+  <li data-marker="*">
+    You’re welcome to add additional static files to
+    <code class="language-plaintext highlighter-rouge">static/</code>.
+  </li>
+  <li data-marker="*">
+    Odds are you’ll want to consult
+    <a href="http://jinja.pocoo.org/docs/dev/">Jinja’s documentation</a> when
+    implementing your templates.
+  </li>
+  <li data-marker="*">
+    It is <strong>reasonable</strong> to ask others to try out (and try to
+    trigger errors in) your site.
+  </li>
+  <li data-marker="*">
+    You’re welcome to alter the aesthetics of the sites, as via
+    <ul>
+      <li data-marker="*">
+        <a href="https://bootswatch.com/">bootswatch.com</a>,
+      </li>
+      <li data-marker="*">
+        <a href="https://getbootstrap.com/docs/5.1/content/"
+          >getbootstrap.com/docs/5.1/content</a
+        >,
+      </li>
+      <li data-marker="*">
+        <a href="https://getbootstrap.com/docs/5.1/components/"
+          >getbootstrap.com/docs/5.1/components</a
+        >, and/or
+      </li>
+      <li data-marker="*"><a href="https://memegen.link/">memegen.link</a>.</li>
+    </ul>
+  </li>
+  <li data-marker="*">
+    You may find
+    <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/"
+      >Flask’s documentation</a
+    >
+    and
+    <a href="https://jinja.palletsprojects.com/en/2.11.x/templates/"
+      >Jinja’s documentation</a
+    >
+    helpful!
+  </li>
+</ul>
+
+<h2 id="faqs">FAQs</h2>
+
+<h3 id="importerror-no-module-named-application">
+  ImportError: No module named ‘application’
+</h3>
+
+<p>
+  By default,
+  <code class="language-plaintext highlighter-rouge">flask</code> looks for a
+  file called
+  <code class="language-plaintext highlighter-rouge">app.py</code> in your
+  current working directory (because we’ve configured the value of
+  <code class="language-plaintext highlighter-rouge">FLASK_APP</code>, an
+  environment variable, to be
+  <code class="language-plaintext highlighter-rouge">app.py</code>). If seeing
+  this error, odds are you’ve run
+  <code class="language-plaintext highlighter-rouge">flask</code> in the wrong
+  directory!
+</p>
+
+<h3 id="oserror-errno-98-address-already-in-use">
+  OSError: [Errno 98] Address already in use
+</h3>
+
+<p>
+  If, upon running
+  <code class="language-plaintext highlighter-rouge">flask</code>, you see this
+  error, odds are you (still) have
+  <code class="language-plaintext highlighter-rouge">flask</code> running in
+  another tab. Be sure to kill that other process, as with ctrl-c, before
+  starting
+  <code class="language-plaintext highlighter-rouge">flask</code> again. If you
+  haven’t any such other tab, execute
+  <code class="language-plaintext highlighter-rouge">fuser -k 8080/tcp</code> to
+  kill any processes that are (still) listening on TCP port 8080.
+</p>
+
+<h2 id="how-to-submit">How to Submit</h2>
+
+<p>In your terminal, execute the below to submit your work.</p>
+
+<div class="language-plaintext highlighter-rouge">
+  <div class="highlight">
+    <pre class="highlight"><code>submit50 cs50/problems/2023/x/finance
+</code></pre>
+  </div>
+</div>
+
+{% endblock %}

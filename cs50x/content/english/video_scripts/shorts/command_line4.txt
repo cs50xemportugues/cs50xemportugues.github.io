@@ -1,0 +1,21 @@
+All right. So I've copied a file, but I've done it by mistake. And now, I want to get rid of it. How do I do that? Again, if you're familiar with a GUI interface, you can right-click and just choose Delete. And it'll send it to the trash or the Recycle Bin. But at the command line, we can just type rm, for remove, and then the name of the file we want to get rid of. 
+
+Now, rm is very careful. It does a lot of double-checking, to make sure that you actually want to delete the file. It doesn't want to make any mistakes, because there's no Recycle Bin here. Once we delete a file, it's gone. And there's really no way to recover it. So we need to be pretty careful, and so rm is going to be really careful for us. 
+
+So let's go back to the IDE and get rid of that hi.txt file that I created a minute ago with copy. So we're in the IDE. And I list the contents of my directory again, just to give us some context. I mean, you can see that there's hi.txt, which I created a little while ago. Now, I want to get rid of it. How do I do it? 
+
+Again, just rm. So I can type rm hi.txt and hit Enter. And there's rm being really careful for us and making sure we actually want to delete this file. Do you really want to remove regular empty file hi.txt? That's just like an operating system, like Windows or Mac, that you might be familiar with popping up that box says are you really sure you want to do this. 
+
+I'm pretty sure I want to this, so I'm going to type, yes-- or I could also just type y-- and hit Enter. And if I list the contents of my directory again, hi.txt is gone. Not bad, right? Let's press Control L, just to get rid of all this stuff and get us back at the top of the screen. 
+
+Now, there is a way to short circuit rm, so that it doesn't ask us that question. We really know we want to get rid of that file, and we don't even want to be asked the question. How do we do that? Well, we can specify an extra flag, just like we did with cp where we could add the -r flag, to recursively copy into a directory. There's another flag for rm, which is -f, which is to force rm to do exactly what we're telling it to do. 
+
+So let's say that, now, I want to get rid of my hello.txt file. I don't want that one either. What can I do? Well, I can rm -f hello.txt. What do you think is going to happen here? It's gone. Didn't even ask me the question. And in fact, if I list the contents of my directory again, it's gone. There's no undo here. hello.txt is gone, and I wasn't even asked if I wanted to delete it. What if I want to get rid of an entire directory? The way you do that is very similar to copy. If you want to delete a directory, you don't just want to delete the directory, you want to delete everything inside of it. And so you use -r, to recursively delete a directory. 
+
+So let's rm -r pset2. I'm not actually working on pset2, so I can get rid of that directory. I hit Enter. Do I want to remove the directory, pset2? Yes, I do. And if I list the contents of my directory again, it's gone. All right? 
+
+One more variation on this theme. So I'll clear the screen again, to put everything at the top. Hit ls. Now, I want to get rid of my pset3 directory, and I really know I want to get rid of my pset3 directory. I can recursively and forcibly remove my pset3 directory. 
+
+Now, you're going to be really careful when you're using rm -rf. As you program more, it'll be something you just do really quickly. And in fact, I do it all the time. But it can lead to some disastrous consequences, if you accidentally delete the wrong thing. So I want you to be aware that this is an option available to you, but use it sparingly, and use it with caution. 
+
+I know for a fact I'm not working on my problem set 3 anymore, so I'm going to get rid of all of those files. And I know I don't want to be asked every single time if I want to delete a file, so I'm going to rm -rf pset3. Didn't even ask me if I wanted to get rid of it. I hit ls. pset3 is gone. So that's all the variations that you can use to get rid of files with rm. 

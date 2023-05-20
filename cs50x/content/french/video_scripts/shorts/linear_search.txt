@@ -1,0 +1,25 @@
+La recherche linéaire est un algorithme que nous pouvons utiliser pour trouver un élément dans un tableau. Un algorithme est un ensemble d'instructions pas à pas pour accomplir une tâche. 
+
+L'algorithme de recherche linéaire fonctionne comme suit : itérer à travers le tableau de gauche à droite, à la recherche d'un élément spécifié. 
+
+En pseudocode, qui est une version plus condensée de cette phrase, si le premier élément est celui que vous cherchez, vous pouvez vous arrêter. Sinon, passez à l'élément suivant et continuez à le faire jusqu'à ce que vous trouviez l'élément ou non. Nous pouvons donc utiliser l'algorithme de recherche linéaire, par exemple, pour trouver la valeur cible neuf dans ce tableau. Eh bien, nous commençons au début. Si c'est ce que nous cherchons, nous pouvons nous arrêter. Ce n'est pas le cas, nous ne cherchons pas le 11. Sinon, passez à l'élément suivant.
+
+Nous regardons donc 23. Est-ce que 23 est ce que nous cherchons ? Eh bien, non, donc nous passons à l'élément suivant, et ainsi de suite. Nous continuons ce processus encore et encore jusqu'à ce que nous arrivions à une situation comme celle-ci.
+
+Neuf est ce que nous cherchons, et cet élément du tableau a une valeur de neuf. Et donc, nous avons trouvé ce que nous cherchons et nous pouvons nous arrêter. La recherche linéaire est réussie.
+
+Mais que se passe-t-il si nous cherchons un élément qui n'est pas dans notre tableau ? La recherche linéaire fonctionne-t-elle toujours ? Eh bien, oui. Nous répétons donc ce processus en partant du premier élément. Si c'est ce que nous cherchons, nous pouvons nous arrêter. Ce n'est pas le cas. Sinon, nous passons à l'élément suivant.
+
+Nous pouvons continuer à répéter ce processus, examinant chaque élément à son tour, en espérant trouver le nombre 50. Mais nous ne saurons pas si nous avons trouvé le nombre 50 ou non, jusqu'à ce que nous ayons parcouru chaque élément du tableau. 
+
+Ce n'est qu'une fois que nous avons fait cela et que nous sommes venus à court que nous pouvons conclure que 50 ne se trouve pas dans le tableau. Et donc, l'algorithme de recherche linéaire, eh bien, il a échoué, pour ainsi dire. Mais pas dans le sens où il n'a pas réussi à faire ce que nous lui avons demandé de faire. 
+
+Il a échoué dans la mesure où il n'a pas trouvé 50, mais 50 n'était pas dans le tableau. Mais nous avons fouillé exhaustivement chaque élément et donc, bien que nous n'ayons rien trouvé, la recherche linéaire réussit toujours même si l'élément n'est pas dans le tableau. 
+
+Alors, quel est le pire scénario possible avec la recherche linéaire ? Eh bien, nous devons regarder chaque élément, soit parce que l'élément cible est le dernier élément du tableau, soit parce que l'élément que nous cherchons n'existe pas du tout dans le tableau. Quel est le meilleur scénario possible ? Eh bien, nous pourrions trouver l'élément immédiatement. Et combien d'éléments devons-nous regarder dans le meilleur des cas, si nous le cherchons et que nous le trouvons dès le début ? Nous pouvons immédiatement nous arrêter. 
+
+Que dit cela de la complexité de la recherche linéaire ? Eh bien, dans le pire des cas, nous devons regarder chaque élément. Et donc, cela s'exécute en O(n), dans le pire des cas. 
+
+Dans le meilleur des cas, nous allons trouver l'élément immédiatement. Et donc, cela s'exécute en omega de 1. 
+
+Je suis Doug Lloyd. Ceci est CS50.

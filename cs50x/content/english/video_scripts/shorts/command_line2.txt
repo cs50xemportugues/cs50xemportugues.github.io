@@ -1,0 +1,23 @@
+The next command you'll probably use quite a bit is cd, lowercase c, lowercase d, which is short for change directory. This allows us to do what I was talking about a second ago, which is to navigate between directories at the command line, as opposed to double-clicking on folders. So if we type cd and then the name of a directory, we can get into that directory. 
+
+As an aside, know that the name of the current directory is always dot, and the name of the directory one level above where we are now, that is the name of the folder in which our folder is, dot, dot-- or in which our folder is, is dot, dot. And if you're ever curious about the name of your directory, you can type pwd, which stands for present working directory. We'll take a look at all of these now, by heading back to the CS50 IDE. So I'm back in my workspace now. And I'll zoom-in again on the terminal, so we can take a look at moving around within the IDE. So I'm going to list the contents of my directory again, just to reground us in where we are. So if I type ls, which is for list again, I see that I can get to pset0 and pset1. Those are the directories I can get to from here. I know that, because the IDE gives me a clue by coloring them blue. 
+
+Let's say that I want to get into my pset1 directory, because I'm working on problem set 1. I can type cd-- again, short for change directory-- space, pset1. And if I hit Enter, notice what happens. It doesn't look like a lot has happened. But if you look at the prompt, it now tells me that I'm in ~/workspace/pset1. I've navigated into the pset1 folder that was within my workspace. 
+
+And if I type ls, I see some different stuff here, right? This isn't the same list that I saw before. I've navigated into pset1. And so now, when I type ls, I'm getting the context of what can I see from within the pset1 folder. 
+
+Now, I'm going to type control l, which just clears the screen. And I'm going to list the contents of the directory again, just so you can see. I just wanted to do that to clear out some of the stuff that you saw down below and to prevent this from going too far down out of range. 
+
+Now, I said earlier that, if I want to navigate to the current directory, I can type cd space dot. Hit Enter. It doesn't do anything, right? I'm changing directories to the current directory. You're not always going to find a need for a single dot, but you will occasionally. 
+
+Let's say that I want to move up one level. I want to get back to my workspace directory. I can't type cd workspace, there's no such file or directory. And the reason for that-- if I type ls one more time-- is that there is no directory called workspace inside of my pset1 directory. I'm going to clear my screen again with control l. Remember what I said earlier, though, that we can navigate back with dot, dot. That's the name of the parent directory. So if I type cd, space, dot, dot, and then hit Enter, now look at what happened. My command prompt tells me that I'm back in my ~/workspace directory. I moved up one level, thanks to dot, dot. 
+
+Now, let's say that I'm using an operating system that is Linux-based, but doesn't necessarily tell me where I am. This one happens to tell us that I'm in ~/workspace right now, right at the prompt. But I could be completely lost in a mess of folders, and I have no idea where I am and no idea where I want to get back to. There's two things that I can do. 
+
+First of all, I can figure out where I am, by typing pwd. That's my present working directory. And if I hit Enter, it tells me exactly where I am. Now /home/ubuntu is the long way of saying, tilde, which is your home directory. But it tells me that I'm in home/ubuntu/workspace, or ~/workspace. 
+
+I'm going to navigate to my pset1 directory again, and I'm going to list the contents. And I see that I have another directory there, called extras. So I'm going to cd into extras, and then I'm going to clear my screen. 
+
+So now, I'm pretty far in, right? What if I want to back to workspace immediately? There's a couple things I could do. I could type cd, dot, dot, slash, dot, dot, to move up one level and then another level. But that's kind of annoying. 
+
+So if I ever want to get back to just my home directory, tilde, I can type cd with nothing after it. Cd, Enter. And now, I'm in tilde. And if I want to get to workspace, I can just type cd workspace. And that's how you work changing directories within the CS50 IDE or any Linux operating system at the command line. All right.

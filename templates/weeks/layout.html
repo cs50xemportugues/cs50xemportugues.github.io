@@ -1,0 +1,70 @@
+{% extends 'layout.html' %} 
+
+{% block conteudo %}
+
+{% from "weeks/pset_item_macro.html" import pset_item with context %}
+{% from "weeks/notes_item_macro.html" import notes_item with context %}
+{% from "weeks/lab_item_macro.html" import lab_item with context %}
+
+{% if week.name == 'Cybersecurity' %}
+  <h1>
+    {{week.name}}
+  </h1>
+{% else %}
+  <h1>
+    {{week_page.week}} {{week.number}}
+    <small class="text-muted">{{week.name}}</small>
+  </h1>
+{% endif %}
+
+<ul>
+  <li data-marker="-">
+    {{week_page.lecture}}
+    <ul>
+      {% if week.name == 'Cybersecurity' %}
+        <li data-marker="*"><a href="{{url_for('cs50x.notes.cybersecurity')}}">{{week_page.notes}}</a></li>
+      {% else %}
+        {{ notes_item(title=week_page.notes, number=week.number) }}
+      {% endif %}
+
+      <li data-marker="+">
+        {{week_page.slides}}
+        <ul>
+          <li data-marker="*"><a href="">Google Slides</a></li>
+          <li data-marker="*"><a href="">PDF</a></li>
+        </ul>
+      </li>
+      <li data-marker="+">
+        {{week_page.source_code}}
+        <ul>
+          <li data-marker="*"><a href="">Scratch Studio</a></li>
+          <li data-marker="*"><a href="">PDF</a></li>
+          <li data-marker="*"><a href="">Zip</a></li>
+        </ul>
+      </li>
+      <li data-marker="*"><a href="">Video</a></li>
+    </ul>
+  </li>
+
+
+  {% if week.shorts %}
+  <li data-marker="-">
+    {{week_page.shorts}}
+    <ol>
+      {% for short in week.shorts %}
+      <li>
+        <a target="_blank" href="{{week.shorts[short].link}}"
+          >{{week.shorts[short].name}}</a
+        >
+      </li>
+      {% endfor %}
+    </ol>
+  </li>
+  {% endif %}
+
+  
+  {{ lab_item(title=week_page.lab, number=week.number) }} {{
+    pset_item(title=week_page.problem_set, number=week.number) }}
+</ul>
+
+{% endblock %}

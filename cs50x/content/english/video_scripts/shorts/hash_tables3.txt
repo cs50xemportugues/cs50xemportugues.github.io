@@ -1,0 +1,35 @@
+So this sort of lends to the idea of something called chaining. And this is where we're going to bring linked lists back into the picture. What if instead of storing just the data itself in the array, every element of the array could hold multiple pieces of data? Well that doesn't make sense, right? We know that an array can only hold-- each element of an array can only hold one piece of data of that data type. 
+
+But what if that data type is a linked list, right? So what if every element of the array was a pointer to the head of a linked list? And then we could build those linked lists and grow them arbitrarily, because linked lists allow us to grow and shrink a lot more flexibly than an array does. So what if we now use, we leverage this, right? We start to grow these chains out of these array locations. 
+
+Now we can fit an infinite amount of data, or not infinite, an arbitrary amount of data, into our hash table without ever running into the problem of collision. We've also eliminated clustering by doing this. And well we know that when we insert into a linked list, if you recall from our video on linked lists, singly linked lists and doubly linked lists, it's a constant time operation. We're just adding to the front. 
+
+And for look up, well we do know that look up in a linked list can be a problem, right? We have to search through it from beginning to end. There's no random access in a linked list. But if instead of having one linked list where a lookup would be O of n, we now have 10 linked lists, or 1,000 linked lists, now it's O of n divided by 10, or O of n divided by 1,000. 
+
+And while we were talking theoretically about complexity we disregard constants, in the real world these things actually matter, right? We actually will notice that this happens to run 10 times faster, or 1,000 times faster, because we're distributing one long chain across 1,000 smaller chains. And so each time we have to search through one of those chains we can ignore the 999 chains we don't care about , and just search that one. 
+
+Which is on average to be 1,000 times shorter. And so we still are sort of tending towards this average case of being constant time, but only because we are leveraging dividing by some huge constant factor. Let's see how this might actually look though. So this was the hash table we had before we declared a hash table that was capable of storing 10 strings. We're not going to do that anymore. We already know the limitations of that method. Now our hash table's going to be an array of 10 nodes, pointers to heads of linked lists. 
+
+And right now it's null. Each one of those 10 pointers is null. There's nothing in our hash table right now. 
+
+Now let's start to put some things into this hash table. And let's see how this method is going to benefit us a little bit. Let's now hash Joey. We'll will run the string Joey through a hash function and we return 6. Well what do we do now? 
+
+Well now working with linked lists, we're not working with arrays. And when we're working with linked lists we know we need to start dynamically allocating space and building chains. That's sort of how-- those are the core elements of building a linked list. So let's dynamically allocate space for Joey, and then let's add him to the chain. 
+
+So now look what we've done. When we hash Joey we got the hashcode 6. Now the pointer at array location 6 points to the head of a linked list, and right now it's the only element of a linked list. And the node in that linked list is Joey. 
+
+So if we need to look up Joey later, we just hash Joey again, we get 6 again because our hash function is deterministic. And then we start at the head of the linked list pointed to by array location 6, and we can iterate across that trying to find Joey. And if we build our hash table effectively, and our hash function effectively to distribute data well, on average each of those linked lists at every array location will be 1/10 the size of if we just had it as a single huge linked list with everything in it. 
+
+If we distribute that huge linked list across 10 linked lists each list will be 1/10 the size. And thus 10 times quicker to search through. So let's do this again. Let's now hash Ross. 
+
+And let's say Ross, when we do that the hash code we get back is 2. Well now we dynamically allocate a new node, we put Ross in that node, and we say now array location 2, instead of pointing to null, points to the head of a linked list whose only node is Ross. And we can do this one more time, we can hash Rachel and get hashcode 4. malloc a new node, put Rachel in the node, and say a array location 4 now points to the head of a linked list whose only element happens to be Rachel. 
+
+OK but what happens if we have a collision? Let's see how we handle collisions using the separate chaining method. Let's hash Phoebe. We get the hashcode 6. In our previous example we were just storing the strings in the array. This was a problem. 
+
+We don't want to clobber Joey, and we've already seen that we can get some clustering problems if we try and step through and probe. But what if we just kind of treat this the same way, right? It's just like adding an element to the head of a linked list. Let's just malloc space for Phoebe. 
+
+We'll say Phoebe's next pointer points to the old head of the linked list, and then 6 just points to the new head of the linked list. And now look, we've changed Phoebe in. We can now store two elements with hashcode 6, and we don't have any problems. 
+
+That's pretty much all there is to chaining. And chaining is definitely the method that's going to be most effective for you if you are storing data in a hash table. But this combination of arrays and linked lists together to form a hash table really dramatically improves your ability to store large amounts of data, and very quickly and efficiently search through that data. 
+
+There's still one more data structure out there that might even be a bit better in terms of guaranteeing that our insertion, deletion, and look up times are even faster. And we'll see that in a video on tries. I'm Doug Lloyd, this is CS50. 

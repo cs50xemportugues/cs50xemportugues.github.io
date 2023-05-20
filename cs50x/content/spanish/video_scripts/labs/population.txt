@@ -1,0 +1,43 @@
+En este laboratorio, tu tarea consistirá en escribir un programa para simular el crecimiento de una población. Imaginemos que tenemos una población de animales, una población de llamas, por ejemplo. Cada año perdemos algunos animales de esa población a medida que las llamas mayores mueren. Pero también ganamos algunos animales en esa población cuando nacen nuevas llamas.
+
+Podemos modelar este tipo de crecimiento de población usando una fórmula matemática. Supongamos, por ejemplo, que cada año, si tenemos una población de n llamas, ganamos n dividido por 3 llamas y perdemos n dividido por 4 llamas. Entonces, en una población de 12 llamas, por ejemplo, en el siguiente año, ganaríamos 12 dividido por 3, o cuatro nuevas llamas. Y perderíamos 12 dividido por 4, o perderíamos tres llamas, en ese caso.
+
+Dado este marco, podríamos hacernos una pregunta. Por ejemplo, podríamos preguntarnos, ¿cuántos años se necesitarían para pasar de 20 llamas en una población a 30 llamas en una población? Ahora mismo, por ejemplo, tenemos 20 llamas en esta población. Pero después de un año ganaríamos 20 dividido por 3 llamas.
+
+Ahora, aquí debemos notar que 20 no se divide exactamente por tres. Y como resultado, necesitamos simplemente truncar lo que vendría después del decimal. La respuesta real va a ser seis punto algo. Pero como no podemos tener una fracción de un animal, vamos a truncar cualquier cosa que esté después del decimal y decir que estamos ganando seis llamas.
+
+Y vamos a perder 20 dividido por 4, lo que nos da cinco llamas. Entonces, después de un año, ahora tendremos 21 llamas. Luego podemos repetir el proceso y considerar lo que podría suceder en el próximo año.
+
+En el próximo año, ganaríamos 21 dividido por 3, o siete llamas. Y perderíamos 21 dividido por 4, truncando lo que está después del decimal, perdiendo cinco llamas. Lo que significa que tenemos un cambio neto de dos llamas. Lo que significa que después de dos años, ahora tenemos 23 llamas.
+
+Después del siguiente año, ganaríamos siete llamas, perderíamos cinco, para un total nuevo de 25 llamas después de tres años. En el siguiente año, ganaríamos ocho llamas y perderíamos seis, para un nuevo total de 27 llamas después de cuatro años. Y luego en el quinto año, ganaríamos nueve llamas y perderíamos seis para un total ahora de 30 llamas después de cinco años.
+
+Entonces, la respuesta a la pregunta, ¿cuántos años se necesitarían para pasar de una población de 20 llamas a una población de 30 llamas es cinco años? Ahora hemos completado todas las matemáticas manualmente. Pero tu tarea ahora será escribir un programa en C que pueda hacer ese cálculo por nosotros.
+
+El programa funcionará así. En la línea de comando, vas a ejecutar un programa, ./population. Y en ese punto, tu programa debería pedir al usuario un tamaño de población inicial. Podrías escribir el tamaño de población inicial de 100, por ejemplo. Luego, tu programa debería solicitar al usuario un tamaño de población final. Y el usuario escribirá otro tamaño de población, digamos 200, por ejemplo.
+
+Luego, tu programa debería averiguar cuántos años se necesitan para llevar la población de llamas desde el tamaño inicial hasta el tamaño final, y luego imprimir ese número de años. Entonces, en este caso, nuestro programa imprimiría años: 9 porque tomaría nueve años llevar la población de 100 a 200.
+
+Entonces, para resumir, esto es lo que debes hacer. Primero, comienza solicitando al usuario el tamaño de población inicial de tu población de llamas. Y debes verificar que la entrada del usuario sea al menos nueve. El tamaño de la población debe ser al menos nueve para que podamos comenzar a hacer crecer esta población de llamas.
+
+Entonces, si el usuario escribe un número menor a nueve, debes seguir pidiéndole al usuario que escriba un número nuevamente hasta que te dé un número que sea al menos nueve.
+
+Luego, debes solicitar al usuario el tamaño final de la población, asegurándote de que la entrada del usuario sea al menos tan grande como el tamaño inicial. No tendría sentido, por ejemplo, imaginar que la población pasara de una población de 100 a una población de 50 porque la población siempre va a estar creciendo. Entonces, querrás asegurarte de que el tamaño final de la población sea mayor o igual al tamaño inicial de la población. Si el usuario intenta escribir un tamaño final de población que es menor que el tamaño inicial de la población, entonces tu programa debería seguir pidiéndole al usuario que escriba otro tamaño final de población hasta que proporcione uno que sea al menos el tamaño inicial de la población.
+
+Después de eso, tu programa deberá calcular cuántos años serían necesarios para llevar la población desde el tamaño inicial hasta el tamaño final, recordando que cada año vamos a agregar n dividido por tres llamas, si hay n llamas para comenzar. Y vamos a perder n dividido por cuatro llamas. Y como antes, como no podemos tener fracciones de una llama, si alguno de esos cálculos termina con algo después del decimal, vas a truncar o ignorar lo que viene después del decimal cuando hagas tus matemáticas. Finalmente, después de haber hecho ese cálculo, imprimirás el número de años requeridos. Imprimiendo años: y luego el número de años que se requerirían para llevar la población hasta ese tamaño final de población.
+
+Al empezar a trabajar en este problema, hay algunas estrategias que podrían resultar útiles. Uno es un bucle do-while, un tipo de bucle que te permite pedir al usuario una o más veces algo, en este caso. Entonces, en el bucle que estás viendo aquí, comenzamos declarando una variable llamada n. Y luego, dentro de un bucle, pedimos al usuario un número entero positivo, almacenando ese entero dentro de n.
+
+Pero vamos a seguir repitiendo ese bucle mientras n sea menor que 1. Lo que significa que si el usuario no escribe un entero positivo, entonces volveremos a pedirle al usuario. No usarás este código exacto dentro de tu laboratorio pero podrías usar algo similar, tanto cuando estás pidiendo el tamaño de población inicial para asegurarte de que el tamaño de población inicial sea al menos nueve, como también cuando solicites el tamaño final de población para asegurarte de que el tamaño final de población sea al menos tan grande como el tamaño inicial de la población.
+
+También podría resultar útil actualizar una variable mientras trabajas en este laboratorio. Podrías querer actualizar repetidamente tu variable de tamaño de población, por ejemplo, para agregar nuevas llamas y deshacerte de llamas mayores. Podrías hacerlo utilizando una fórmula como esta. Si tienes una variable llamada n dentro de la cual se encuentra tu población actual, puedes actualizar el valor de n para el próximo año usando una línea que dice n = n + n/3, la cantidad de llamas que estamos sumando, menos n/4, la cantidad de llamas que estamos perdiendo en ese año en particular.
+
+Y finalmente, una vez que hayas completado el cálculo, puedes imprimir una variable utilizando la función printf, diciendo printf años: y luego %i, donde %i va a representar un entero. ¿Qué entero? Bueno, eso lo especificas después de una coma. Y aquí estamos diciendo, imprime el valor de n como el entero a imprimir al usuario.
+
+Ahora veamos el código de distribución que te damos como punto de partida para este problema. Aquí en population.c, ya hemos incluido cs50.h y stdio.h para ti. Y luego, te estamos dando una función principal con algunos to-dos para empezar.
+
+Primero, pedirás el tamaño inicial, luego pedirás el tamaño final. Luego calcularás cuántos años se necesitan para alcanzar ese valor umbral desde el tamaño inicial hasta el tamaño final. Y luego, una vez que hayas hecho ese cálculo, imprimirás el número de años que se requerirían para llevarte del inicio al final.
+
+Una vez que hayas escrito todas esas piezas, deberías poder compilar tu programa y luego ejecutarlo, dándole a tu programa un tamaño de población inicial y un tamaño de población final. Y luego, tu programa debería poder decirte cuánto tiempo llevará pasar de un punto A a un punto B.
+
+Mi nombre es Brian. Y este fue el crecimiento de la población.

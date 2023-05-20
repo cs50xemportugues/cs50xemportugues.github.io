@@ -1,0 +1,27 @@
+So that's inserting things into the trie. Now we want to search for things. How do we search for things in the trie? Well, it's pretty much the same idea. Now we just use the digits of the key to see if we can navigate from the root to where we want to go in the trie. 
+
+If we hit a dead end at any point, then we know that that element can't exists or else that path would have already been cleared. If we make it all the way to the end, all we need to do is look down and see if that's the element we're looking for. If it is, success. If it's not, fail. 
+
+So let's search for Harvard in this trie. We start at the root. And, again, we're going to create a traversal pointer to do our moves for us. From the root we know that the first place we need to go is 1, can we do that? Yes, we can. If safely exists. We can go there. 
+
+Now, the next place we need to go is 6. Does the 6 path exist from here? Yeah, it does. We can go down the 6 path. And we end up here. 
+
+Can we go down the 3 path from here? Well, as it turns out, yes, that exists too. And can we get on the 6 path from here? Yes, we can. 
+
+We haven't quite answered the question yet. There's still one more step, which is now we need to look down and see if that's actually-- if we're looking for Harvard, is that what we find after we exhaust the key? In the example we're using here, the years are always four digits. But you might be using the example where you are storing a dictionary of words. 
+
+And so instead of having 10 pointers for my location, you might have 26. One for each letter of the alphabet. And there are some words like bat, which is a subset of batch, for example. And so even if you get to the end of the key and you look down, you might not see what you're looking for. 
+
+So you always have to traverse the entire path and then if you were successfully able to traverse the entire path, look down and do one final confirmation. Is that what I'm looking for? Well, I look down after starting at the top and going 1636. I look down. I see Harvard. So, yes, I succeeded. What if what I'm looking for isn't in the trie, though. What if I'm looking for Princeton, which was founded in 1746. And so 1746 becomes my key to navigate through the trie. Well, I start at the root. And the first place I want to goes down the 1 path. Can I do it? Yes, I can. 
+
+Can I go down the 7 path from there? Yeah, I can. That exists too. But can I go down the 4 path from here? That's like asking the question, can I proceed down that little square that I've highlighted in yellow? There's nothing there. Right. 
+
+There's no way forward down the 4 path. If Princeton was in this trie, that 4 would have been cleared for us already. And so at this point we've reached a dead end. We can't go any further. And so we can say, definitively, no. Princeton does not exist in this trie. 
+
+So what does this all mean? Right. There's a lot going on here. There's pointers all over the place. And, as you can see just from the diagram, there's a lot of nodes that are kind of flying around. But notice every time we wanted to check whether something was in the trie, we only had to make 4 moves. 
+
+Every time we wanted to insert something in the trie, we have to make 4 moves, possibly mallocing some stuff along the way. But as we saw when we inserted Dartmouth into the trie, sometimes some of the path might already be cleared for us. And so as our trie gets bigger and bigger, we have do less work every time to insert new things because we've already built a lot of the intermediate branches along the way. If we only ever have to look at 4 things, 4 is just a constant. We really are kind of approaching constant time insertion and constant time lookup. The tradeoff, of course, being that this trie, as you can probably tell, is huge. Each one of these nodes takes up a lot of space. 
+
+But that's the tradeoff. If we want really quick insertion, really quick deletion, and really quick lookup, we have to have a lot of data flying around. We have to set aside a lot of space and memory for that data structure to exist. 
+
+And so that's the tradeoff. But it looks like we might have found it. We might have found that holy grail of data structures with quick insertion, deletion, and lookup. And maybe this will be an appropriate data structure to use for whatever information we're trying to store. I'm Doug Lloyd, this is cs50. 

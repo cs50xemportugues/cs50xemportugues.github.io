@@ -1,0 +1,33 @@
+If you've been watching these videos in the order which we recommend, we're about to undergo bit of a culture shift. Because now, we're going to start talking about the internet and web technologies. So up until now, we've really been doing a lot of C. And when we've been running our programs, we have been running them from the command line. That's pretty much how the users have been interacting with the programs that we write. They pick something to prompt, something happens in the terminal window, and then it's done. 
+
+Sometimes you might have persistent data that remains afterwards. But that's pretty much it. It's at the command line. It's the only way the user can interact. From this point forward, we're going to start transitioning so that the users can interact with our websites. So we're going to be writing websites, which aren't written in C, but are written in a variety of other programming languages, including PHP, and it's sort of helper languages, HTML, CSS, and the like. So we're going to start talking about those things. 
+
+Before we get into web programming itself, I think it's probably a good idea to take a step back and talk about how computers and humans interact over the web. So this video is really a primer, a basic guide, to the internet. Now, the caveat here is the CS50 is not a networking class. So what we're going to be talking about here is pretty high level. We're not going to get into any low level details of how all this stuff works. If you're interested in that, I'd strongly recommend taking a class on computer networking. And we might even tell white lie or two just for the purposes of making the general understanding clear. 
+
+So with that said, let's talk about how we interact with the internet. So here we are. Here's us. We're pretty looking forward to getting onto the internet, which as we all know, is chock full of cats. 
+
+Now do we just connect to the internet like this? Well, probably not. Intuitively, you know that, say for example, when you change your Wi-Fi network on your computer, you don't see one called internet unless that just so happens to be the name of your local Wi-Fi. Right? 
+
+It's usually something like home. Or if you're at work, it might be the name of your company. There's not just one option called internet. And so something or some things exist in between when we want to connect to the internet. What are some of those things? Well, we're going to talk about that. We're also going to talk about some of the important things we need in order to be able to connect to the internet. And the first of these things is an IP address. So you've probably heard the term IP address before. What does it mean? Well, an IP address is basically a unique identifier of your computer on a network. Just like every home or office has a unique address to which one could send a mail. 
+
+Similarly, every computer if it wants to receive data or send data, needs to have a unique address. So that when information is sent or received, it's being sent from or received to the correct location. This addressing scheme, as I said, is called IP addressing. IP is stands for Internet Protocol, which we'll talk about again shortly. 
+
+Now, what does IP addressing look like? Well, the scheme basically was, when it was first implemented, to give every computer a unique 32-bit address. That's a lot of bits. That's 4 billion addresses. 
+
+And generally, instead of using hexadecimal notation, which we've used previously in the context of pointers in C to talk about addresses, we usually represent IP addresses in a little bit more of a human friendly way, representing them as four clusters of 8 bits represented as decimal numbers. Because humans don't frequently speak hexadecimal, unless you're programming. But people who use the internet aren't necessarily programmers. 
+
+And so making it easy and accessible for them to be able to talk about what their IP address is in case they maybe need to call up somebody to troubleshoot something, it's better to make it in the more common conventional decimal number format. And so an IP address just looks pretty much like this, w.x.y.z, where each one of those letters represents a non-negative value in the range of 0 to 255. Recall that an 8-bit number can hold 256 distinct values. 
+
+And so that's why our range is 0 to 255. And we have four clusters of 8 bits for a grand total of 32 bits. And so an IP address might look something like this. This is sort of a generic default IP address, 123.45.67.89. All of them are in the range of 0 to 255, so that's a valid IP address. 
+
+Here at Harvard University, all of our IP addresses start with 140.247. That's just the way that the IP addresses in this geographic area have been assigned. And so this might be an IP address that might exist here at Harvard. 
+
+So as I said, if every IP address is 32 bits, we have about 4 billion to give out, a little more than 4 billion. But we can kind of see a problem, right? What's the world population right now? 
+
+Well, it's somewhere north of 7 billion people. And in the Western world at least, most people have more than one device capable of internet connectivity. I have one right here. And I have another one in my pocket. And I have one back in my office. 
+
+And so that's three. And that doesn't even count the ones that I have at home, too. And so that's kind of a problem, right? We have at least 7 billion people and only 4 billion addresses. 
+
+And every device is supposed to be uniquely identified. We have developed some workarounds to deal with this problem, something called a private IP address, which we're not going to get into in this video. But basically, it allows further the web, the internet, to kind of fake out a little bit that you have a unique address by having private addresses and then funneling them through one single address, which is shared by many different computers. 
+
+But that's really not a long term fix. Even that fixed isn't going to last forever. And so we need to have a different way of dealing with this.

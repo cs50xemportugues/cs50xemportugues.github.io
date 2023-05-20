@@ -1,0 +1,35 @@
+Neste laboratório, sua tarefa será escrever um programa que calcula a pontuação de palavras em um jogo de Scrabble e compara a pontuação de duas palavras. Scrabble é um jogo em que o objetivo é formar palavras com letras, onde cada letra é designada a um determinado valor em pontos.
+
+As letras comuns, como A, E e I, valem apenas 1 ponto. As letras um pouco menos comuns, como B, C ou M, valem 3 pontos. E as letras raras, como Q e Z, valem ainda mais pontos - 10 pontos, neste caso. Existe uma tabela completa que mostra, para qualquer letra do alfabeto, quantos pontos essa letra vale.
+
+Usando essa atribuição de pontos, podemos pegar uma palavra e descobrir quantos pontos ela vale. Para a palavra "Scrabble", por exemplo, sabemos que S vale 1 ponto, C vale 3 pontos, e assim por diante, e podemos somar todos esses valores para descobrir que a palavra "Scrabble" vale 14 pontos. E depois que tivermos essa habilidade, podemos comparar duas palavras para descobrir qual delas vale mais.
+
+Se eu comparasse a palavra "computer" com a palavra "science", por exemplo, descobriria que "computer" vale 14 pontos em um jogo de Scrabble e "science" vale 11 pontos em um jogo de Scrabble, então entre as duas palavras, "computer" venceria. Sua tarefa agora é escrever um programa em C que possa fazer essa comparação para você - pegando duas palavras e determinando qual delas seria a vencedora em um jogo de Scrabble.
+
+Seu programa vai funcionar assim. Na linha de comando, você executaria o programa ./scrabble. Seu programa então pedirá uma palavra do jogador 1, e o jogador 1 digitaria uma palavra - por exemplo, a palavra "computer". E então seu programa pediria para o jogador 2 digitar uma palavra, e o jogador 2 poderia digitar uma palavra - por exemplo, "science".
+
+Seu programa deve então pegar essas duas palavras, olhar cada letra e determinar quanto cada letra vale e, usando essa informação, determinar qual das duas palavras terá uma pontuação mais alta em um jogo de Scrabble. Neste caso, a palavra do jogador 1, "computer", tem uma pontuação mais alta, então seu programa imprimirá algo como "Jogador 1 vence!".
+
+Agora, como exatamente seu programa vai determinar quantos pontos uma palavra específica vale? Bem, no código de distribuição que fornecemos a você - que vamos dar uma olhada em breve - fornecemos uma matriz de inteiros, chamada POINTS, em todas as letras maiúsculas, e aqui está uma matriz de 26 inteiros, cada um representando a pontuação Scrabble para uma determinada letra - em ordem alfabética.
+
+E como isso é uma matriz, podemos entrar nessa matriz usando colchetes para obter acesso a uma determinada pontuação para uma determinada letra. Por exemplo, se quisermos descobrir quantos pontos vale a letra A - a primeira letra do alfabeto - usaríamos POINTS colchete 0 para obter acesso ao primeiro elemento na matriz, lembrando que o primeiro elemento em uma matriz é o elemento no índice 0.
+
+Se quisesse descobrir quantos pontos vale a letra B, poderia usar POINTS colchete 1 para obter acesso ao número 3 - o valor da letra B. Da mesma forma, POINTS colchete 2 me daria acesso ao valor da letra C, até POINTS colchete 25, que me daria acesso ao último elemento nesta matriz, que neste caso é 10, o valor para a letra Z.
+
+Com isso em mente, vamos dar uma olhada no restante do código de distribuição que fornecemos a você para este laboratório. Aqui, em scrabble.c, você notará que, depois de incluir cs50.h e stdio.h, temos essa matriz de pontos que tem todos os valores de pontos para cada uma das letras do alfabeto em ordem alfabética, e então, dentro da função principal, já escrevemos algum código para você. E sua tarefa será apenas completar esta função.
+
+Começamos usando get_string para solicitar ao usuário uma palavra do jogador 1, armazenando isso dentro da palavra 1, e fazendo o mesmo para o jogador 2 - get_string para o jogador 2, armazenando qualquer que seja a string que o usuário digita como palavra 2. Depois disso, pontuamos ambas as palavras chamando essa função compute_score, primeiro na palavra 1 e, em seguida, chamando a mesma função na palavra 2.
+
+Ainda não vimos essa função, mas implementar essa função ficará a seu critério. E vamos salvar o resultado dessa função dentro das variáveis score 1 e score 2. Restará a você imprimir o vencedor entre o jogador 1 e o jogador 2 - comparar esses dois valores, score 1 e score 2, e imprimir que o jogador 1 vence, ou o jogador 2 vence, ou, no caso de ambas as palavras terem a mesma pontuação, imprimir que é um empate.
+
+A outra parte deste programa que você precisará escrever é esta função compute_score. Esta função recebe uma palavra como entrada, que é do tipo string, e retorna um inteiro, representando a pontuação para aquela palavra específica. E você provavelmente vai querer calcular essa pontuação iterando por todas as letras da palavra e, para cada uma dessas letras, descobrir quantos pontos aquela letra vale.
+
+Então, resumindo, aqui está o que você precisará fazer. Primeiro, complete a função compute_score, retornando o número de pontos que seria dado a qualquer palavra específica. Ao fazer isso, você vai querer ignorar outros caracteres que não sejam letras.
+
+No Scrabble, apenas as letras A a Z realmente contam para pontuação, então se o usuário incluir pontuação ou espaços dentro do texto que ele escrever, você deve ignorar esses outros caracteres e considerar apenas as letras ao determinar a pontuação. Sua função também deve ser case-insensitive. Ou seja, independentemente se o caractere é uma letra maiúscula ou minúscula, você deve ser capaz de atribuir a essa letra um determinado número de pontos. Tanto o A maiúsculo quanto o a minúsculo valem 1 ponto, por exemplo.
+
+Depois de completar a função compute_score, você deve então completar a função principal, comparando esses dois valores, score 1 e score 2, e, em seguida, imprimindo ou que o jogador 1 vence, ou o jogador 2 vence, ou empate, dependendo de como esses dois valores se comparam entre si.
+
+Depois de implementar essas etapas, você então deve ser capaz de executar seu programa Scrabble, fornecer uma palavra para o jogador 1 e fornecer uma palavra para o jogador 2, e seu programa deve ser capaz de dizer qual dessas duas palavras valeria mais em um jogo de Scrabble.
+
+Meu nome é Brian, e este foi Scrabble.

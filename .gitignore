@@ -1,0 +1,9 @@
+venv/
+.venv/
+*.pyc
+
+build
+
+__pycache__
+.env
+files_that_cant_be_translated_in_one_prompt.txt

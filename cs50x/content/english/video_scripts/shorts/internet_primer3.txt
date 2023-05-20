@@ -1,0 +1,27 @@
+Now, let's talk about DNS. So we've talked although these IP addresses. And we know that if we're going to uniquely identify a device on the internet, it has to have a unique address. 
+
+And we could visit that address if we wanted to. But you've probably never typed in something like 192.168.1.0 into your browser, right? You don't type in numbers into your browser. You usually type in human readable names like google.com or cs50.harvard.edu, right? 
+
+Those aren't IP addresses, though. So exists this service called the Domain Name System, DNS, that translates IP addresses to human comprehensible words or phrases that are much more memorable than remembering a set of four numbers or, soon, a set of eight hexadecimal numbers. That would be really challenging, right? 
+
+Think about before the days of cell phones. You had your memorize your friend's phone numbers. It might have gotten tough after a little while. And similarly, if you want to visit a bunch of websites, you probably don't want to remember a bunch of numbers. You'd rather remember a bunch of words. 
+
+So this mapping, this translating, of sets of numbers to human readable names kind of makes DNS the yellow pages of the web. And you can think about it as if it's just a huge list running from 0.0.0.0 all the way down to 255.255.255.255, which would be the highest possible-- that's the full range from 0s to 255s of all 4 billion-ish IPv4 addresses. I made up the ones on the top and the bottom. But the one in the middle there is actually an IP address. So if we visited 74.125.202.138, apparently that translates to that site there, io-- what the heck is that? Well, not every name that maps is actually clear what it is, right? 
+
+So sometimes somebody who owns an IP address might name their host something that they're actually not. For example, that IP address if you went there, is actually just google.com. But Google has a lot of different servers. 
+
+And they can't call them all google.com. So they have their own internal system for translating google.com to whatever server actually is connected to that IP address. And then there's another system that exists between to translate that gobbledygook here to google.com. But we won't get into that. 
+
+And similarly for IPv6s, we're also going to have a yellow pages that'll be a lot bigger. And similarly, in the middle there-- it was tough to find an IPv6 address that was legitimate. But I found one for Google. 
+
+But it's Google's Irish website. But if you went to that IPv6 address, if your browser was IPv6 capable, that would bring you to Google's Irish homepage. So there you go. 
+
+But this isn't entirely true, right? This the system seems cumbersome, right? If there's a huge list of 4 billion things to have to look up, that's pretty big. There's no yellow pages of the world, right? If you still get the yellow pages delivered to you-- I got mine the other day, and I just recycled it. But if you do get the yellow pages delivered to you, you don't get a book that's every phone number that exists on the planet, right? You get a list of the local phone numbers, the ones you're most likely to call. 
+
+And that's actually what DNS is. If you think about it, DNS is really the local yellow pages. And large DNS servers like google.coms, they are actually just more like libraries that have a copy of all of the local yellow pages or all of the local DNS records. So there's really no one repository of the full DNS of the internet, just like there's no one yellow pages of the world. 
+
+There are all these local small scale DNSs that exist out there. And there are services that aggregate them together. But they depend on those smaller DNS systems updating their information, so that they have the most accurate information. 
+
+So again, this analogy is large aggregating DNS systems are like libraries that have a copy of every yellow pages of the world. They don't themselves update those books. They depend on the books coming in, so they can update the information if they need it. 
+
+So the DNS system is not a giant block. It's decentralized across many, many servers. So now we know that somewhere between us and the internet there exists a DNS server as well as a DHCP server. 

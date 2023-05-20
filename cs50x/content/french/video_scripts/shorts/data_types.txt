@@ -1,0 +1,9 @@
+Très bien. Parlons maintenant d'une autre chose qui est assez unique à C : les types de données et les variables. Quand je dis unique à C, je veux vraiment dire que si vous êtes programmeur depuis très longtemps, vous n'avez probablement pas travaillé avec des types de données si vous avez utilisé des langages de programmation modernes. Les langages modernes comme PHP et JavaScript, que nous verrons également un peu plus tard dans le cours, ne nécessitent pas que vous spécifiiez le type de données d'une variable lorsque vous l'utilisez.
+
+Vous la déclarez et commencez à l'utiliser. Si c'est un entier, il sait que c'est un entier. Si c'est un caractère, il sait que c'est un caractère. Si c'est un mot, il sait que c'est une chaîne de caractères, comme on l'appelle.
+
+Mais en C, qui est un langage plus ancien, nous devons spécifier le type de données de chaque variable que nous créons la première fois que nous utilisons cette variable. C est livré avec quelques types de données intégrés. Et nous allons nous familiariser avec certains d'entre eux. Ensuite, nous parlerons également un peu des types de données que nous avons écrits pour vous, afin que vous puissiez les utiliser dans CS50.
+
+Le premier est l'entier. Le type de données int est utilisé pour les variables qui stockeront des valeurs entières, comme 1, 2, 3, -1, 2, 3, etc. Les entiers, ce qui est quelque chose à garder à l'esprit pour le quiz, occupent toujours quatre octets de mémoire, ce qui équivaut à 32 bits. Il y a huit bits dans un octet.
+
+Cela signifie que la plage de valeurs qu'un entier peut stocker est limitée par ce qui peut entrer dans 32 bits d'informations. Maintenant, comme il s'avère, il a été décidé il y a longtemps que nous diviserions cette plage de 32 bits en entiers négatifs et positifs, chacun

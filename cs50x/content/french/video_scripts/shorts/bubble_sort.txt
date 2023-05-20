@@ -1,0 +1,35 @@
+D'accord, donc le tri à bulles est un algorithme que vous pouvez utiliser pour trier un ensemble d'éléments. Regardons comment cela fonctionne.
+
+L'idée de base derrière le tri à bulles est la suivante. Nous voulons généralement déplacer les éléments de valeur plus élevée vers la droite et les éléments de valeur inférieure vers la gauche, comme nous nous y attendons. Nous voulons que les éléments les plus petits soient au début et les éléments les plus grands à la fin.
+
+Comment faisons-nous cela? Eh bien, en pseudocode, nous pourrions dire: "définissons un compteur d'échange sur une valeur différente de zéro". Nous verrons pourquoi nous faisons cela dans un instant. Ensuite, nous répétons le processus suivant jusqu'à ce que le compteur d'échange soit de 0 ou que nous ne fassions aucun échange du tout.
+
+Réinitialisez le compteur d'échange à 0 s'il n'est pas déjà à 0. Ensuite, regardez chaque paire d'éléments adjacents. Si ces deux éléments ne sont pas dans l'ordre, échangez-les et ajoutez 1 au compteur d'échange. Si vous y réfléchissez avant de le visualiser, vous remarquerez que cela déplacera les éléments de valeur inférieure vers la gauche et les éléments de valeur supérieure vers la droite, faisant effectivement ce que nous voulons faire, c'est-à-dire déplacer ces groupes d'éléments de cette manière. Visualisons à quoi cela pourrait ressembler en utilisant notre tableau que nous avons utilisé pour tester ces algorithmes. Nous avons un tableau non trié ici, indiqué par tous les éléments en rouge. Et j'ai fixé mon compteur d'échange sur une valeur différente de zéro. J'ai choisi arbitrairement -1 - ce n'est pas 0. Nous voulons répéter ce processus jusqu'à ce que le compteur d'échange soit de 0. C'est pourquoi j'ai défini mon compteur d'échange sur une valeur différente de zéro, car sinon le compteur d'échange serait de 0 et nous ne commencerions même pas le processus de l'algorithme. Encore une fois, les étapes sont: réinitialiser le compteur d'échange à 0, puis regarder chaque paire d'éléments adjacents, et si elles ne sont pas dans l'ordre, échangez-les et ajoutez 1 au compteur d'échange. Commençons donc ce processus. La première chose que nous faisons est de définir le compteur d'échange à 0, puis nous commençons à regarder chaque paire adjacente.
+
+Nous commençons donc en regardant 5 et 2. Nous voyons qu'ils ne sont pas dans l'ordre et donc nous les échangeons. Et nous ajoutons 1 au compteur d'échange. Donc maintenant notre compteur d'échange est 1, et 2 et 5 ont été échangés. Maintenant, nous répétons le processus à nouveau.
+
+Nous regardons la paire adjacente suivante, 5 et 1. Ils sont également désordonnés, nous les échangeons et ajoutons 1 au compteur d'échange. Ensuite, nous regardons 5 et 3. Ils n'ont pas l'ordre, donc nous les échangeons et nous ajoutons 1 au compteur d'échange. Ensuite, nous regardons 5 et 6. Ils sont dans l'ordre, donc nous n'avons pas besoin d'échanger quoi que ce soit cette fois-ci. Ensuite, nous regardons 6 et 4. Ils sont également désordonnés, donc nous les échangeons et ajoutons 1 au compteur d'échange.
+
+Maintenant, remarquez ce qui s'est passé. Nous avons déplacé 6 tout à fait jusqu'à la fin. Donc dans le tri par sélection, si vous avez vu cette vidéo, ce que nous avons fait était de déplacer les plus petits éléments dans le tableau trié essentiellement de gauche à droite, du plus petit au plus grand. Dans le cas du tri à bulles, si nous suivons cet algorithme particulier, nous allons construire le tableau trié de droite à gauche, du plus grand au plus petit. Nous avons effectivement "bulle" 6, la plus grande valeur, tout à fait à la fin.
+
+Nous pouvons maintenant déclarer que c'est trié, et dans les futures itérations - en parcourant à nouveau le tableau - nous n'avons plus besoin de considérer 6. Nous ne devons considérer que les éléments non triés lorsque nous regardons les paires adjacentes. Nous avons donc terminé un passage par le tri à bulles. Maintenant, nous revenons à la question, répéter jusqu'à ce que le compteur d'échange soit de 0. Eh bien, le compteur d'échange est de 4, donc nous allons continuer à répéter ce processus. 
+
+Nous allons réinitialiser le compteur d'échange à 0 et regarder chaque paire adjacente. Alors nous commençons par 2 et 1 - ils sont désordonnés, nous les échangeons et ajoutons 1 au compteur d'échange. 2 et 3, tout est en ordre. Nous n'avons rien à faire. 3 et 5 sont en ordre. Nous n'avons rien à faire là-bas.
+
+5 et 4 sont désordonnés, nous devons donc les échanger et ajouter 1 au compteur d'échange. Et maintenant, nous avons déplacé 5, le prochain élément le plus grand, à la fin de la partie non triée. Nous pouvons donc maintenant appeler cette partie du tableau triée.
+
+Maintenant, vous regardez l'écran et vous pouvez probablement dire, tout comme moi, que le tableau est trié maintenant. Mais nous ne pouvons pas encore le prouver. Nous n'avons pas de garantie que c'est trié. Mais c'est là que le compteur d'échange va entrer en jeu.
+
+Nous avons terminé un passage. Le compteur d'échange est de 2. Nous allons donc répéter ce processus à nouveau, répéter jusqu'à ce que le compteur d'échange soit de 0. Réinitialisez le compteur d'échange à 0. Donc nous allons le réinitialiser.
+
+Regardez maintenant chaque paire adjacente. Tout est en ordre, 1 et 2. 2 et 3 sont en ordre. 3 et 4 sont en ordre. À ce stade, remarquez que nous avons regardé chaque paire adjacente, mais le compteur d'échange est toujours à 0.
+
+Si nous n'avons pas à échanger d'éléments, ils doivent être en ordre, par la vertu de ce processus. Et donc une efficience de ce genre, que nous aimons beaucoup en informatique, est que nous pouvons maintenant déclarer que tout le tableau doit être trié, car nous n'avons eu à échanger aucun élément. C'est très agréable.
+
+Quel est le pire scénario possible avec le tri à bulles? Dans le pire des cas, le tableau est complètement renversé, et donc nous devons faire "buller" chacun des grands éléments tout le chemin à travers le tableau. Et nous devons également faire "buller" tous les petits éléments tout le chemin à travers le tableau. Ainsi, chacun des n éléments doit se déplacer à travers tous les autres éléments n. C'est le pire cas de figure. Dans le meilleur des cas, c'est légèrement différent du tri par sélection. Le tableau est déjà trié lorsque nous commençons. Nous n'avons pas à faire d'échanges lors du premier passage. Donc nous pourrions avoir à regarder moins d'éléments, non? Nous n'avons pas à répéter ce processus plusieurs fois.
+
+Que signifie cela? Alors, quel est le pire scénario possible pour le tri à bulles, et quel est le meilleur scénario possible pour le tri à bulles? Avez-vous deviné? Dans le pire cas, vous devez parcourir les n éléments n fois. Donc le pire des cas est n carré.
+
+Si le tableau est parfaitement trié, vous ne devez regarder chaque élément qu'une seule fois. Et si le compteur d'échange est toujours à 0, vous pouvez dire que ce tableau est trié. Et donc dans le meilleur des cas, c'est en fait mieux que le tri par sélection - c'est Omega de n.
+
+Je suis Doug Lloyd. C'était CS50.

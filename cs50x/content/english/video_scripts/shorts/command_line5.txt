@@ -1,0 +1,11 @@
+The last command line command that's going to pretty useful for you is mv, which is short for move. Move Is basically equivalent to rename. It moves a file from one location to another, the source to the destination. Let's see where using a move might be handy at the terminal window. 
+
+So I'm in my pset1 directory, and I've noticed something has gone a little wrong. I was working on my greedy problem, but I accidentally named it greddy. So when I try and run it through check50, it doesn't really work. I do have a couple of options. We could do what we've done before, which is to make a copy of the file. I could copy greddy.c to greedy.c, right? Hit Enter. I see that both files are there. And then I could rm, to remove, greddy.c. That gets rid of it. So that would work, after I confirm that I want to get rid of it. And I effectively have renamed greddy.c to greedy.c. I copied it, and then removed the original. 
+
+But that's a multi-step process. And certainly, there's a better way. In fact, there is. So let's hit Control L, just to bring this back up, and list the contents of my directory again. 
+
+So let's say, oh, I made a mistake. I actually really did want to call that file greddy.c. In one fell swoop, I can type move greedy.c to greddy.c. Hit Enter. And now, I didn't have to copy and remove it, I just was able to rename it. One-stop shopping. 
+
+Now, there are a lot of other basic command line utilities that you can use with the Linux command line. And we'll be discussing a lot of them in the future in CS50. But for now, just getting your feet wet with working with this terminal environment, these five commands should get you pretty far in navigating around and working with files in your IDE or in whatever Linux-based operating system you're using. 
+
+If you're curious and you want to look ahead a little bit at some of the command line commands we'll be using in the future, here's a list of a couple of the more common ones. I'm Doug Lloyd. This is CS50. 

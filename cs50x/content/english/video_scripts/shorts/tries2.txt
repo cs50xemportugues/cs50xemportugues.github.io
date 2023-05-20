@@ -1,0 +1,47 @@
+So let's build a trie. Let's insert a couple of items into our trie. So at the very top, this is our root node. This is probably going to be something you're going to globally declare. And you're going to globally maintain a pointer to this node always. 
+
+You're going to say, root equals, and you're going to malloc yourself trie node. And you're never going to touch root again. Every time you want to start navigating through, you set another pointer equal to root, such as trav, which is the example I use in many of my videos here on stacks and queues and link lists and so on. 
+
+You set another pointer called trav for traversal. And you use trav to navigate through the data structure. So let's see how this might look. So right now, what does a node look like? Well, just as our data structure declaration indicated, we have a string, which in this case is empty. There's nothing here. 
+
+And an array of 10 pointers. And right now, we only have 1 node in this trie. There's nothing else in it. So all 10 of those pointers point to null. That's what the red indicates. 
+
+Let's insert the string Harvard. Let's insert the University of Harvard into this trie, which was founded in the year 1636. We want to use the key, 1636, to tell us where we're going to store Harvard in the trie. Now, how might we do that? 
+
+It might look something like this. We start at the root. And we have these 10 places we can go. The root is just like any other node of the trie. There are 10 places we can go from here. 
+
+Where do we probably want to go if the key is 1636? There's really two options. Right. We can build the key from right to left and start with 6. Or we could build the key from left to right and start with 1. 
+
+It's probably more intuitive as a human being to understand we'll just go left to right. And so if I want to insert Harvard into this trie, I probably want to start by starting at the root, looking at my 10 options in front of me, and saying I want to go down the 1 path. OK. 
+
+Now, 1 path is currently null. So if I want to proceed down that path to insert this element into the trie, I have to malloc a new node, have 1 point there, and then I'm good to go. 
+
+So I basically am at a point where I'm standing at the root of the tree or the trie and there are 10 branches. But each branch has a gate in front of it. Right. Because there's nothing else there's. No safe passage. That means that there's nothing down any of those branches. If I want to start building something, I want to remove the gate. I want to remove the gate in front of number 1. And I want to walk down that. And I want to build another place for me to go. 
+
+And that's what I've done here. So 1 no longer points to null. I've said it's safe to go down here now. I built another node. And when I get to that node, I have another decision to make. Where am I going to go from here? 
+
+Well, I've already gone down the 1. So now I probably want to go down the 6. Right. Again, I have 10 locations I can choose. So let's now go down number 6. So I clear the gate in front of number 6. And I walk down there. And I build another node. And I've reached another junction point. 
+
+Again, I have 10 choices for where I can go. I've moved from 1 to 6. So now I probably want to go to 3. 3, there's nowhere I can go. So I have to clear the way and build myself a new space. And then from 3, where do I want to go? I want to go down 6. 
+
+And, again, I had to clear the way to do it. So now I've used my key to insert create nodes and start to build this trie. I've started at the root. I've gone down 1636. And now I'm at the bottom there on that node. And you might be able to see it on your screen. 
+
+It's highlighted in yellow. That's where I currently am. My key is done. I've exhausted every position in my key. So I can't go any further. So at this point, all I really need to do is say, OK. It's kind of like looking down at the ground, if you're envisioning yourself as this sort of path with different connections. Sort of looking down and sort of spray painting Harvard on the ground. That's the name of this. Know that's what's at this location. If we start at the root and we go down 1 and then 6 and then 3 and then 6, where are we? Well if we look down and we see Harvard, then we know that Harvard was founded in 1636 based on the way we're implementing this data structure. So that was hopefully straightforward. We're going to do two more insertions. And hopefully it'll help to see this done twice more. 
+
+Now, let's insert another university. Let's insert Yale into this trie. Yale was founded in 1701. So we'll start at the root, as we always do. And we set a traversal pointer. We're going to use that to move through. The first thing we want to do is go down the 1 path. That's the first digit of our key. Fortunately, though, we don't have to do any work this time. The 1 path has already been cleared. I cleared it previously when I was inserting Harvard at 1636. So I can safely move down 1 and just go there. If can move down the 1. 
+
+Now, though, I want to go to 7. I cleared the way at 6. I know I can safely proceed down the 6 path. But I need to proceed on the 7 path. So what do I need to do? Well, just like before, I just need to clear the gate, get out of the way, and build a new node from the 7 path. Just like this. 
+
+So now I've moved 1 and then 7. And now notice, I'm sort of on this new subbranch. Right. Everything else from 16 on, I don't care about. I'm not doing 16 anything. I'm doing 17 stuff. 
+
+So now from 17 on, I have to sort of blaze new trails here. The next digit my key is 0. I clearly can't get anywhere. I just built this node. So I know there's no paths forward from here. So I have to make one myself. 
+
+So I malloc a new node and have 0 point there. And then one more time, I malloc a new node and have one point there. Again, I've exhausted my key, 1701. So I look down and I spray paint Yale. That's the name of this node. 
+
+And so now if I ever need to see if Yale is in this trie, I start at the root, I go down 1701, and look down. And if I see Yale spray painted onto the ground, then I know Yale exists in this trie. Let's do one more. Let's insert Dartmouth into this trie, which was founded in 1769. 
+
+Start at the root again. My first digit of my key is 1. I can safely move down that path. That already exists. The next digit of my key is 7. I can safely move down that path. It exists as well. 
+
+My next is 6. From here, from where I currently am in yellow there in that middle node, 6 is currently locked off. If I want to go down that path, I have to build it myself. So I'll malloc a new node and have 6 point there. And then, again, I'm blazing new trails here. 
+
+So I malloc a new node so that from that node-- path number 9-- and then now if I travel 1769, and I look down. There's nothing currently spray painted there. I can write Dartmouth. And I've inserted Dartmouth into the trie.

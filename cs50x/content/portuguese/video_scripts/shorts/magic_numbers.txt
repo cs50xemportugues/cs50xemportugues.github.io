@@ -1,0 +1,41 @@
+Tudo bem. Um tópico estranho, certo? Números mágicos. O que ele quer dizer quando está falando de números mágicos? Bem, alguns dos programas que escrevemos em CS50 até agora tiveram alguns números estranhos jogados dentro deles. Talvez por razões que não entendemos completamente agora. Por exemplo, no problema do Mario, nós limitamos a altura da pirâmide em 23. Explicitamente dissemos que não poderia ir mais alto que 23. 
+
+Mas o que significa 23? Bem, se você ler a especificação cuidadosamente, pode ter visto que o motivo do limite de altura em 23 é porque a altura padrão de uma janela do terminal é 24. E assim, se a pirâmide for mais alta do que isso, pode acontecer algo estranho onde ela corre para fora da tela. E sabe, o que isso significa no contexto, certo?
+
+O significado de 23 é imediatamente óbvio para alguém que olha para o seu programa e talvez tenha uma janela do terminal de tamanho diferente? Provavelmente não. Parece que é uma situação ruim, na verdade, escrever constantes no seu código. Ao fazer isso, quando você realmente escreve uma constante no seu código, às vezes a chamamos de números mágicos, que é algo que geralmente queremos evitar. 
+
+Por exemplo, vamos dar uma olhada nessa função simples aqui. Obviamente, não existe um tipo de dado em C chamado card ou deck. Então, aguente um pouco. Há um pouco de pseudocódigo misturado aqui. Essa é uma função chamada deal card que aparentemente recebe um baralho como parâmetro e produzirá para mim uma única carta. 
+
+E estou fazendo algo aqui onde tenho um loop que vai de 0 a 52, e eu dou uma carta. Bem, nós temos um número mágico aqui, certo. Você vê qual é o número mágico? Ou mais importante, você vê qual é o problema aqui? Especialmente se esta é apenas uma função em seu próprio arquivo em uma pasta que contém vários arquivos, cada um dos quais faz uma outra coisa com um baralho de cartas? 
+
+Você vê qual poderia ser o problema aqui? Você vê o número mágico que injetei no código? É 52, certo. 
+
+Intuitivamente, você provavelmente sabe, OK. Um baralho padrão de cartas tem 52 cartas. Mas em nosso programa, está apenas flutuando lá dentro. De repente, há um 52. 
+
+Uma maneira de resolver esse problema é a seguinte. Explicitamente, agora estamos chamando o tamanho do baralho de 52. Dá um pouco mais de significado intuitivo quando no loop mais tarde dizemos que i é menor que o tamanho do baralho. Parece melhor do que dizer 52. Agora, isso realmente resolve o problema. Dá um pouco de significado simbólico à constante. Mas, de fato, isso pode introduzir outro problema que talvez não seja imediatamente aparente. Mesmo se essa variável for declarada globalmente, você se lembra do que significa quando declaramos uma variável globalmente versus localmente? Mesmo se declaramos uma variável globalmente, e se houver outra função em nossa série de funções que lida com a manipulação de cartas, que inadvertidamente muda o tamanho do baralho, ou o aumenta em 1 ou diminui em 1. Isso pode ser um problema, certo? Especialmente se estivermos lidando com um conjunto de cartas onde embaralhar todo o baralho é necessário. Se o tamanho do baralho for diminuído em 1, por exemplo, para 51, nós não estamos realmente embaralhando todas as cartas possivelmente. Estamos deixando uma delas de fora. E esse valor pode ser talvez previsto ou explorado por um ator mal-intencionado. 
+
+C fornece o que é chamado de diretiva do pré-processador, que também é chamado de macro para criar constantes simbólicas. E de fato, você já viu uma diretiva de pré-processador, mesmo que não tenha ouvido falar disso, como #include. É outro exemplo de uma macro ou diretiva de pré-processador. 
+
+A maneira de criar constantes simbólicas ou dar um nome a uma constante para que ela tenha mais significado é a seguinte. #define, nome, substituição. Um importante aparte aqui é que você não deve colocar um ponto e vírgula no final de suas definições (#defines). Então é #define, nome, substituição. 
+
+Quando seu programa é compilado, o compilador na verdade vai passar por seu código e substituir toda instância da palavra "nome" com o que você colocou como substituição. Analogamente, se #include é semelhante a copiar e colar, então #define é semelhante a encontrar e substituir, se você já usou essa funcionalidade em um programa de processamento de texto, por exemplo. 
+
+Para exemplificar, se eu #define pi como 3.14159265, se você é melhor matematicamente inclinado e de repente vê 3.14159265 voando em seu código, você provavelmente sabe que está falando de pi. Mas talvez possamos dar um pouco mais de significado simbólico. E podemos em vez disso dizer #define pi como aquela série de números que eu não vou continuar lendo repetidamente. 
+
+E o que vai acontecer então na hora da compilação é que o programa vai percorrer e substituir toda vez em que vir a letra P maiúscula e a letra I maiúscula, irá literalmente substituir por 3.14 e assim por diante, para que você não precise digitá-lo toda vez enquanto seu programa ainda tem funcionalidades que você espera, porque está trabalhando com a manipulação, multiplicação, divisão, seja lá o que for por pi. 
+
+Você não está limitado a esse tipo de substituição apenas para números. Por exemplo, eu poderia #define curso como a string CS50. Neste caso, quando o programa é compilado, #define percorrerá o código, substituindo toda vez que vir "curso" pela string CS50. 
+
+Você notará que frequentemente eu #define todas as minhas constantes simbólicas definidas, por assim dizer, sempre em letras maiúsculas. É uma convenção. Não é obrigatório. A razão pela qual as pessoas geralmente usam todas letras maiúsculas quando estão #definindo é só para deixar muito claro que este elemento particular do meu código é uma constante definida. Se fosse minúsculo, é possível que pudesse ser confundido com uma variável. E isso provavelmente não é uma boa ideia. 
+
+Esta solução particular é muito melhor do que as anteriores. Se eu primeiro #define deck size como 52, agora meu uso de 52, ou tamanho do baralho, aqui é muito mais intuitivo e muito mais seguro. Você não pode manipular uma constante. Você não pode dizer 52 ++. Isso não vai transformá-lo em 53. Você não pode alterar 52 para algo. 
+
+Você pode alterar uma variável cujo valor é 52, que foi a primeira correção que tivemos antes. E você pode aumentar essa variável para 53. Mas você não pode dizer 52 ++ e de repente ter isso se tornar 52 em 53. 52 é sempre 52. E assim você não pode inadvertidamente mudar o tamanho do baralho aqui manipulando-o. 
+
+Outro bom efeito colateral disso é que você sabia que nem todos os países do mundo usam um baralho de cartas de tamanho 52? Por exemplo, é muito comum na Alemanha usar um tamanho de baralho de 32, onde eles descartam algumas das cartas de valor mais baixo. E nesse caso, se eu quisesse portar meu conjunto de funções que lidam com a manipulação de cartas para a Alemanha, poderia na primeira instância mostrada ter que ir e substituir todas as instâncias de 52 no meu código com 32. 
+
+Mas aqui, se eu #define deck size como 32 no topo do meu código, se eu precisar mudar, posso apenas ir e mudar essa única coisa. Recompilar meu código, e de repente isso se propaga através do meu sistema. Na verdade, podemos alterar o tamanho do baralho para qualquer valor que desejarmos. 
+
+Posso lhe interessar em jogar baralho? 
+
+Eu sou Doug Lloyd. E isto é o CS50."

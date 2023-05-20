@@ -1,0 +1,327 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+<h1 class="no_toc" id="lecture-0">Lecture 0</h1>
+
+<ul id="markdown-toc">
+  <li><a href="#welcome" id="markdown-toc-welcome">Welcome</a></li>
+  <li><a href="#what-is-computer-science" id="markdown-toc-what-is-computer-science">What is computer science?</a></li>
+  <li><a href="#binary" id="markdown-toc-binary">Binary</a></li>
+  <li><a href="#representing-data" id="markdown-toc-representing-data">Representing data</a></li>
+  <li><a href="#algorithms" id="markdown-toc-algorithms">Algorithms</a></li>
+  <li><a href="#pseudocode" id="markdown-toc-pseudocode">Pseudocode</a></li>
+  <li><a href="#scratch" id="markdown-toc-scratch">Scratch</a></li>
+</ul>
+
+<h2 id="welcome">Welcome</h2>
+
+<ul>
+  <li data-marker="*">When David was a first year, he was too intimidated to take any computer science courses. By the time he was a sophomore, he found the courage to take the equivalent of CS50, but only pass/fail.</li>
+  <li data-marker="*">In fact, two-thirds of CS50 students have never taken a CS course before.</li>
+  <li data-marker="*">And importantly, too:
+    <blockquote>
+      <p>what ultimately matters in this course is not so much where you end up relative to your classmates but where you end up relative to yourself when you began</p>
+    </blockquote>
+  </li>
+</ul>
+
+<h2 id="what-is-computer-science">What is computer science?</h2>
+
+<ul>
+  <li data-marker="*">Computer science is fundamentally problem-solving.</li>
+  <li data-marker="*">We can think of problem-solving as the process of taking some input (details about our problem) and generate some output (the solution to our problem). The “black box” in the middle is computer science.<br>
+<img src="input_output.png" alt="word &quot;input&quot;, arrow into box, arrow out of box, word &quot;output&quot;"></li>
+  <li data-marker="*">We need a way to represent inputs, such that we can store and work with information in a standard way.</li>
+</ul>
+
+<h2 id="binary">Binary</h2>
+
+<ul>
+  <li data-marker="*">A computer, at the lowest level, stores data in binary, a numeral system in which there are just two digits, 0 and 1.</li>
+  <li data-marker="*">When we first learned to count, we might have used one finger to represent one thing. That system is called unary. When we learned to write numbers with the digits 0 through 9, we learned to use decimal.</li>
+  <li data-marker="*">For example, we know the following represents one hundred and twenty-three.
+    <pre>1 2 3
+</pre>
+    <ul>
+      <li data-marker="*">The <code class="language-plaintext highlighter-rouge">3</code> is in the ones column, the <code class="language-plaintext highlighter-rouge">2</code> is in the tens column, and the <code class="language-plaintext highlighter-rouge">1</code> is in the hundreds column.</li>
+      <li data-marker="*">So <code class="language-plaintext highlighter-rouge">123</code> is 100×1 + 10×2 + 1×3 = 100 + 20 + 3 = 123.</li>
+      <li data-marker="*">Each place for a digit represents a power of ten, since there are ten possible digits for each place.</li>
+    </ul>
+  </li>
+  <li data-marker="*">In binary, with just two digits, we have powers of two for each place value:
+    <pre>4 2 1
+<b>0 0 0</b>
+</pre>
+    <ul>
+      <li data-marker="*">This would still be equal to 0.</li>
+    </ul>
+  </li>
+  <li data-marker="*">Now if we change the binary value to, say, <code class="language-plaintext highlighter-rouge">0 1 1</code>, the decimal value would be 3.
+    <pre>4 2 1
+<b>0 1 1</b>
+</pre>
+  </li>
+  <li data-marker="*">If we wanted to represent 8, we would need another digit:
+    <pre>8 4 2 1
+<b>1 0 0 0</b>
+</pre>
+  </li>
+  <li data-marker="*">And binary makes sense for computers because we power them with electricity, which can be either on or off, so each bit only needs to be on or off. In a computer, there are millions or billions of switches called transistors that can store electricity and represent a bit by being “on” or “off”.</li>
+  <li data-marker="*">With enough bits, or binary digits, computers can count to any number.</li>
+  <li data-marker="*">8 bits make up one <strong>byte</strong>.</li>
+</ul>
+
+<h2 id="representing-data">Representing data</h2>
+
+<ul>
+  <li data-marker="*">To represent letters, all we need to do is decide how numbers map to letters. Some humans, many years ago, collectively decided on a standard mapping called <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>. The letter “A”, for example, is the number 65, and “B” is 66, and so on. The mapping also includes punctuation and other symbols. Other characters, like letters with accent marks, and emoji, are part of a standard called <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a> that use more bits than ASCII to accommodate all these characters.
+    <ul>
+      <li data-marker="*">When we receive an emoji, our computer is actually just receiving a decimal number like <code class="language-plaintext highlighter-rouge">128514</code> (<code class="language-plaintext highlighter-rouge">11111011000000010</code> in binary, if you can read that more easily) that it then maps to the image of the emoji.</li>
+    </ul>
+  </li>
+  <li data-marker="*">An image, too, is comprised of many smaller square dots, or pixels, each of which can be represented in binary with a system called RGB, with values for red, green, and blue light in each pixel. By mixing together different amounts of each color, we can represent millions of colors:<br>
+<img src="rgb.png" alt="red square labeled with 72, green square labeled with 73, blue square labeled with 33">
+    <ul>
+      <li data-marker="*">The red, green, and blue values are combined to get a light yellow color:<br>
+<img src="rgb_combined.png" alt="light yellow square"></li>
+    </ul>
+  </li>
+  <li data-marker="*">We can see this in an emoji if we zoom in far enough:
+<img src="emoji_zoomed.png" alt="zoomed-in emoji of laughing tears of joy with squares of pixels distinguishable"></li>
+  <li data-marker="*">And computer programs know, based on the context of its code, whether the binary numbers should be interpreted as numbers, or letters, or pixels.</li>
+  <li data-marker="*">And videos are just many, many images displayed one after another, at some number of frames per second. Music, too, can be represented by the notes being played, their duration, and their volume.</li>
+</ul>
+
+<h2 id="algorithms">Algorithms</h2>
+
+<ul>
+  <li data-marker="*">So now we can represent inputs and outputs. The black box earlier will contain <em>algorithms</em>, step-by-step instructions for solving a problem:<br>
+<img src="algorithms.png" alt="box with word &quot;algorithms&quot;"></li>
+  <li data-marker="*">Let’s say we wanted to find a friend, Mike Smith, in a phone book.
+    <ul>
+      <li data-marker="*">We could start by flipping through the book, one page at a time, until we find Mike Smith or reach the end of the book.</li>
+      <li data-marker="*">We could also flip two pages at a time, but if we go too far, we’ll have to know to go back a page.</li>
+      <li data-marker="*">But an even more efficient way would be opening the phone book to the middle, decide whether Mike will be in the left half or right half of the book (because the book is alphabetized), and immediately throw away half of the problem. We can repeat this, dividing the problem in half each time. With 1024 pages to start, we would only need 10 steps of dividing in half before we have just one page remaining to check.</li>
+    </ul>
+  </li>
+  <li data-marker="*">In fact, we can represent the efficiency of each of those algorithms with a chart:<br>
+<img src="running_time.png" alt="chart with: &quot;size of problem&quot; as x-axis; &quot;time to solve&quot; as y-axis; red, steep straight line from origin to top of graph labeled &quot;n&quot;; yellow, less steep straight line from origin to top of graph labeled &quot;n/2&quot;; green, curved line that gets less and less steep from origin to right of graph labeled &quot;log n&quot;">
+    <ul>
+      <li data-marker="*">Our first solution, one page at a time, is like the red line: our time to solve increases linearly as the size of the problem increases.</li>
+      <li data-marker="*">The second solution, two pages at a time, is like the yellow line: our slope is less steep, but still linear.</li>
+      <li data-marker="*">Our final solution, is like the green line: logarithmic, since our time to solve rises more and more slowly as the size of the problem increases. In other words, if the phone book went from 1000 to 2000 pages, we would need one more step to find Mike. If the size doubled again from 2000 to 4000 pages, we would still only need one more step.</li>
+    </ul>
+  </li>
+</ul>
+
+<h2 id="pseudocode">Pseudocode</h2>
+
+<ul>
+  <li data-marker="*">We can write <em>pseudocode</em>, an informal syntax that is just a more specific version of English (or other human language) that represents our algorithm:
+    <pre>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If Smith is on page
+5      Call Mike
+6  Else if Smith is earlier in book
+7      Open to middle of left half of book
+8      Go back to line 3
+9  Else if Smith is later in book
+10     Open to middle of right half of book
+11     Go back to line 3
+12 Else
+13     Quit
+</pre>
+  </li>
+  <li data-marker="*">Some of these lines start with verbs, or actions. We’ll start calling these <em>functions</em>:
+    <pre>1  <b>Pick up</b> phone book
+2  <b>Open to</b> middle of phone book
+3  <b>Look at</b> page
+4  If Smith is on page
+5      <b>Call</b> Mike
+6  Else if Smith is earlier in book
+7      <b>Open to</b> middle of left half of book
+8      Go back to line 3
+9  Else if Smith is later in book
+10     <b>Open to</b> middle of right half of book
+11     Go back to line 3
+12 Else
+13     <b>Quit</b>
+</pre>
+  </li>
+  <li data-marker="*">We also have branches that lead to different paths, like forks in the road, which we’ll call <em>conditions</em>:
+    <pre>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  <b>If</b> Smith is on page
+5      Call Mike
+6  <b>Else if</b> Smith is earlier in book
+7      Open to middle of left half of book
+8      Go back to line 3
+9  <b>Else if</b> Smith is later in book
+10     Open to middle of right half of book
+11     Go back to line 3
+12 <b>Else</b>
+13     Quit
+</pre>
+  </li>
+  <li data-marker="*">And the questions that decide where we go are called <em>Boolean expressions</em>, which eventually result to a value of true or false:
+    <pre>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If <b>Smith is on page</b>
+5      Call Mike
+6  Else if <b>Smith is earlier in book</b>
+7      Open to middle of left half of book
+8      Go back to line 3
+9  Else if <b>Smith is later in book</b>
+10     Open to middle of right half of book
+11     Go back to line 3
+12 Else
+13     Quit
+</pre>
+  </li>
+  <li data-marker="*">Finally, we have words that lead to cycles, where we can repeat parts of our program, called <em>loops</em>:
+    <pre>1  Pick up phone book
+2  Open to middle of phone book
+3  Look at page
+4  If Smith is on page
+5      Call Mike
+6  Else if Smith is earlier in book
+7      Open to middle of left half of book
+8      <b>Go back to line 3</b>
+9  Else if Smith is later in book
+10     Open to middle of right half of book
+11     <b>Go back to line 3</b>
+12 Else
+13     Quit
+</pre>
+  </li>
+</ul>
+
+<h2 id="scratch">Scratch</h2>
+
+<ul>
+  <li data-marker="*">We can write programs with the building blocks we just discovered:
+    <ul>
+      <li data-marker="*">functions</li>
+      <li data-marker="*">conditions</li>
+      <li data-marker="*">Boolean expressions</li>
+      <li data-marker="*">loops</li>
+    </ul>
+  </li>
+  <li data-marker="*">We’ll use a graphical programming language called <a href="https://scratch.mit.edu/">Scratch</a>, where we’ll drag and drop blocks that contain instructions.</li>
+  <li data-marker="*">Later in our course, we’ll move onto textual programming languages like C, and Python, and JavaScript. All of these languages, including Scratch, has more powerful features like:
+    <ul>
+      <li data-marker="*">variables
+        <ul>
+          <li data-marker="*">the ability to store values and change them</li>
+        </ul>
+      </li>
+      <li data-marker="*">threads
+        <ul>
+          <li data-marker="*">the ability for our program to do multiple things at once</li>
+        </ul>
+      </li>
+      <li data-marker="*">events
+        <ul>
+          <li data-marker="*">the ability to respond to changes in our program or inputs</li>
+        </ul>
+      </li>
+      <li data-marker="*">…</li>
+    </ul>
+  </li>
+  <li data-marker="*">The programming environment for Scratch looks like this:<br>
+<img src="scratch.png" alt="screenshot of scratch">
+    <ul>
+      <li data-marker="*">On the left, we have puzzle pieces that represent functions or variables, or other concepts, that we can drag and drop into our instruction area in the center.</li>
+      <li data-marker="*">On the right, we have a stage that will be shown by our program to a human, where we can add or change backgrounds, characters (called sprites in Scratch), and more.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can drag a few blocks to make Scratch say “hello, world”:<br>
+<img src="hello_world.png" alt="screenshot of hello, world">
+    <ul>
+      <li data-marker="*">The “when green flag clicked” block is the start of our program, and below it we’ve snapped in a “say” block and typed in “hello, world”.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can also drag in the “ask and wait” block, with a question like “What’s your name?”, and combine it with a “say” block for the answer:<br>
+<img src="answer.png" alt="screenshot of question and answer"></li>
+  <li data-marker="*">But we didn’t wait after we said “Hello” with the first block, so we can use the “say () for () seconds” block:<br>
+<img src="wait.png" alt="screenshot of blocks with say for 2 seconds"></li>
+  <li data-marker="*">We can use the “join” block to combine two phrases so Scratch can say “hello, David”:<br>
+<img src="join.png" alt="screenshot of join">
+    <ul>
+      <li data-marker="*">Notice that we can nest instructions and variables.</li>
+    </ul>
+  </li>
+  <li data-marker="*">In fact, the “say” block itself is like an algorithm, where we provided an input of “hello, world” and it produced the output of Scratch (the cat) “saying” that phrase:<br>
+<img src="say_algorithm.png" alt="say as algorithm with &quot;hello, world&quot; as input and cat as output"></li>
+  <li data-marker="*">The “ask” block, too, takes in an input (the question we want to ask), and produces the output of the “answer” block:<br>
+<img src="ask_algorithm.png" alt="ask as algorithm with &quot;What's your name?&quot; as input and answer block as output"></li>
+  <li data-marker="*">We can then use the “answer” block along with our own text, “hello, “, as two inputs to the join algorithm …<br>
+<img src="join_algorithm.png" alt="join as algorithm with &quot;hello, &quot; and &quot;answer&quot; as input and &quot;hello, David!&quot; as output"></li>
+  <li data-marker="*">… which we pass as input again to the “say” block:<br>
+<img src="say_again.png" alt="say as algorithm with &quot;hello, David!&quot; as input and cat as output"></li>
+  <li data-marker="*">We can try to make Scratch (the name of the cat) say meow:<br>
+<img src="forever_meow.png" alt="blocks labeled &quot;forever&quot; with &quot;play sound Meow until done&quot; nested inside">
+    <ul>
+      <li data-marker="*">But when we click the green flag, we hear the meow sound over and over immediately. Our first bug, or mistake! We can add a block to wait, so the meows sound more normal.<br>
+<img src="forever_meow_wait.png" alt="blocks labeled &quot;forever&quot; with &quot;play sound Meow until done&quot; and &quot;wait 1 seconds&quot; nested inside"></li>
+    </ul>
+  </li>
+  <li data-marker="*">We can have Scratch point towards the mouse and move towards it:<br>
+<img src="point_towards.png" alt="blocks labeled &quot;forever&quot; with &quot;point towards mouse-pointer&quot; and &quot;move 10 steps&quot; nested inside"></li>
+  <li data-marker="*">We’ll look at a sheep that can count:<br>
+<img src="count.png" alt="blocks labeled &quot;set counter to 1&quot; and &quot;forever&quot; with &quot;say counter for 1 seconds&quot;, &quot;wait 1 seconds&quot;, and &quot;change counter by 1&quot; nested inside">
+    <ul>
+      <li data-marker="*">Here, <code class="language-plaintext highlighter-rouge">counter</code> is a variable, the value of which we can set, use, and change.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can also have Scratch meow if we touch it with the mouse pointer:<br>
+<img src="pet0.png" alt="blocks labeled &quot;forever&quot; with &quot;if touching mouse-pointer? then&quot; and &quot;play sound Meow until done&quot; nested inside"></li>
+  <li data-marker="*">Alternatively, we can have Scratch roar if we do:<br>
+<img src="pet1.png" alt="blocks labeled &quot;forever&quot; with &quot;if touching mouse-pointer? then&quot; and &quot;play sound roar until done&quot; nested inside, and &quot;else&quot;, &quot;play sound Meow until done&quot;, &quot;wait 1 seconds&quot;">
+    <ul>
+      <li data-marker="*">Here, we have two different branches, or conditions, that will repeat forever. If the mouse is touching it, Scratch will “roar”, otherwise it will just meow.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can make Scratch move back and forth on the screen with a few more blocks we can discover by looking around:<br>
+<img src="ouch.png" alt="blocks labeled &quot;set rotation style left-right&quot; and &quot;forever&quot; with &quot;move 10 steps&quot;, &quot;if touching edge? then&quot; and &quot;play sound ouch until done&quot;, &quot;turn 180 degrees&quot;">
+    <ul>
+      <li data-marker="*">We can even record our own sound to play.</li>
+    </ul>
+  </li>
+  <li data-marker="*">With two different “costumes,” or images of Scratch with its legs in different positions, we can even simulate an animated walking motion:<br>
+<img src="bounce.png" alt="blocks labeled &quot;set rotation style left-right&quot; and &quot;forever&quot; with &quot;move 10 steps&quot;, &quot;if touching edge? then&quot; with &quot;play sound ouch until done&quot;, &quot;turn 180 degrees&quot; nested inside, and &quot;next costume&quot;"></li>
+  <li data-marker="*">We look at another program, bark, where we can use the space bar to mute a sea lion:<br>
+<img src="bark.png" alt="blocks labeled &quot;set muted to false&quot; and &quot;forever&quot; with if key space pressed? then&quot; with &quot;if muted = true then&quot; and &quot;set muted to false&quot; and &quot;else&quot; and &quot;set muted to true&quot; nested inside, and &quot;wait 1 seconds&quot;">
+    <ul>
+      <li data-marker="*">We have a variable, <code class="language-plaintext highlighter-rouge">muted</code>, that’s <code class="language-plaintext highlighter-rouge">false</code> by default. And our program will constantly check if the space bar is pressed, and set muted to <code class="language-plaintext highlighter-rouge">false</code> if it’s <code class="language-plaintext highlighter-rouge">true</code>, or <code class="language-plaintext highlighter-rouge">true</code> if not. This way, we can toggle whether the sound plays or not, since our other set of blocks for the sea lion check the <code class="language-plaintext highlighter-rouge">muted</code> variable:<br>
+<img src="bark1.png" alt="blocks labeled &quot;forever&quot; with if muted = false then&quot; with &quot;start sound SeaLion&quot; and &quot;think hi hi hi for 2 seconds&quot; nested inside, and &quot;wait 1 seconds&quot;"></li>
+    </ul>
+  </li>
+  <li data-marker="*">With multiple sprites, or characters, we can have different sets of blocks for each of them:<br>
+<img src="marco.png" alt="blocks labeled &quot;forever&quot; with if key space pressed? then&quot; with &quot;say Marco! for 2 seconds&quot; and &quot;broadcast event&quot; nested inside">
+    <ul>
+      <li data-marker="*">For one puppet, we have these blocks that say “Marco!”, and then a “broadcast event” block. This “event” is used for our two sprites to communicate with each other, like sending a secret message. So our other puppet can just wait for this event to say “Polo!”:<br>
+<img src="polo.png" alt="blocks labeled &quot;when I receive event&quot;, &quot;say Polo! for 2 seconds&quot;"></li>
+    </ul>
+  </li>
+  <li data-marker="*">Now that we know some basics, we can think about the design, or quality of our programs. For example, we might want to have Scratch cough three times by repeating some blocks:<br>
+<img src="cough0.png" alt="blocks labeled &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;, &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;, &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;"></li>
+  <li data-marker="*">While this is correct, we can avoid repeating blocks with a loop:<br>
+<img src="cough1.png" alt="blocks labeled &quot;repeat 3&quot; with &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot; nested inside"></li>
+  <li data-marker="*">The next step is abstracting away some of our code into a function, or making it reusable in different ways. We can make a block called “cough” and put some blocks inside it:<br>
+<img src="cough_function.png" alt="two sets of blocks. the first set of blocks is: &quot;define cough&quot;, &quot;say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;. the second set is: &quot;when green flag clicked&quot;, &quot;repeat 3&quot;, &quot;cough&quot;">
+    <ul>
+      <li data-marker="*">Now, all of our sprites can use the same “cough” block, in as many places as we’d like.</li>
+    </ul>
+  </li>
+  <li data-marker="*">We can even put a number of times into our cough function, so we only need a single block to cough any number of times:<br>
+<img src="cough_function_2.png" alt="two sets of blocks. the first set of blocks is: &quot;define cough n times&quot;, &quot;repeat n&quot;, say cough for 1 seconds&quot;, &quot;wait 1 seconds&quot;. the second set is: &quot;when green flag clicked&quot;, &quot;cough 3 times&quot;"></li>
+  <li data-marker="*">We look at some examples and discuss how we might implement components of them with different sprites that follow the mouse cursor, or cause something else to happen on the stage.</li>
+  <li data-marker="*">Welcome aboard!</li>
+</ul>
+
+{% endblock %}

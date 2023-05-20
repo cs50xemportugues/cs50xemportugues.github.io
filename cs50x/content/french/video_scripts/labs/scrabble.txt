@@ -1,0 +1,35 @@
+Dans ce laboratoire, votre tâche consistera à écrire un programme qui calcule le score des mots dans un jeu de Scrabble et compare le score de deux mots l'un à l'autre. Scrabble est un jeu où vous devez former des mots à partir de lettres où chaque lettre est assignée un certain nombre de points.
+
+Les lettres courantes, comme A et E et I, ne valent qu'un point. Les lettres légèrement moins courantes, comme B, C ou M, valent 3 points. Et les lettres rares, comme Q et Z, valent encore plus de points - 10 points, dans ce cas. Et il y a toute une table ici qui vous montre, pour chaque lettre de l'alphabet, combien de points cette lettre vaut.
+
+En utilisant cet assignement de points, nous pouvons prendre un mot et calculer combien de points ce mot vaut. Pour le mot "Scrabble" par exemple, nous savons que S vaut 1 point, C vaut 3 points, et ainsi de suite. Nous pouvons ensuite additionner tous ces chiffres pour déterminer que le mot "Scrabble" vaut 14 points. Et une fois que nous avons cette capacité, nous pouvons comparer deux mots pour déterminer lequel de ces deux mots vaut le plus de points.
+
+Si je devais comparer le mot "computer" avec le mot "science", par exemple, je constaterais que "computer" vaut 14 points dans un jeu de Scrabble, et "science" vaut 11 points dans un jeu de Scrabble, de sorte que "computer" gagnerait entre ces deux mots. Votre tâche maintenant est d'écrire un programme en C qui peut faire cette comparaison pour vous: en prenant deux mots et en déterminant lequel gagnerait dans un jeu de Scrabble.
+
+Votre programme fonctionnera comme suit : À la ligne de commande, vous exécuteriez le programme ./scrabble. Votre programme demandera ensuite un mot au joueur 1, et le joueur 1 taperait un mot, par exemple le mot "computer". Puis votre programme demandera au joueur 2 de taper un mot, et le joueur 2 pourrait alors taper un mot, par exemple "science".
+
+Votre programme devrait ensuite prendre ces deux mots, regarder chaque lettre et déterminer combien chaque lettre vaut, et en utilisant ces informations, déterminer lequel des deux mots aura un score plus élevé dans un jeu de Scrabble. Dans ce cas, le mot du joueur 1, "computer", a le score le plus élevé, donc votre programme imprimera quelque chose comme "Le joueur 1 gagne !" par exemple.
+
+Maintenant, comment exactement votre programme va-t-il déterminer combien de points vaut un mot particulier ? Eh bien, dans le code de distribution que nous vous donnons, nous vous donnons un tableau d'entiers, appelé POINTS, en lettres majuscules, et ceci est un tableau de 26 entiers, chacun représentant le score de Scrabble pour une lettre particulière, par ordre alphabétique.
+
+Et parce que c'est un tableau, nous pouvons utiliser des crochets pour accéder à un score particulier pour une lettre particulière. Par exemple, si nous voulions savoir combien de points vaut la lettre A, la première lettre de l'alphabet, nous utiliserions POINTS crochets 0 pour accéder au premier élément du tableau en rappelant que le premier élément d'un tableau est l'élément à l'index 0.
+
+Si je voulais savoir combien de points vaut la lettre B, je pourrais utiliser POINTS crochets 1 pour accéder au nombre 3 - la valeur pour la lettre B. De même, POINTS crochets 2 me donnerait accès à la valeur pointue de la lettre C, jusqu'à POINTS crochets 25, qui me donnerait accès au dernier élément de ce tableau, qui dans ce cas est 10, la valeur pour la lettre Z.
+
+Avec cela à l'esprit, examinons maintenant le reste du code de distribution que nous vous donnons pour ce laboratoire. Ici, dans scrabble.c, vous remarquerez qu'après avoir inclus cs50.h et stdio.h, nous avons cette matrice de points qui a toutes les valeurs de points pour chacune des lettres de l'alphabet par ordre alphabétique, et ensuite à l'intérieur de la fonction principale, nous avons déjà écrit un peu de code pour vous. Votre tâche consiste simplement à terminer cette fonction.
+
+Nous commençons par utiliser get_string pour demander à l'utilisateur un mot du joueur 1, stockant cela à l'intérieur du mot 1, et faisant de même pour le joueur 2, obtenir la chaîne de caractères pour le joueur 2, stockant n'importe quelle chaîne que l'utilisateur saisit comme mot 2. Après cela, nous marquons les deux mots en appelant cette fonction compute_score, d'abord sur le mot 1, puis en appelant cette même fonction sur le mot 2.
+
+Nous n'avons pas encore vu cette fonction, mais sa mise en place sera à votre charge. Et nous sauvegarderons le résultat de cette fonction à l'intérieur des variables score 1 et score 2. Il est de votre responsabilité d'imprimer le vainqueur entre le joueur 1 et le joueur 2 - de comparer les deux valeurs, score 1 et score 2, et d'imprimer soit que le joueur 1 gagne, soit que le joueur 2 gagne, soit que, dans le cas où les deux mots ont le même score, d'imprimer qu'il y a une égalité.
+
+L'autre élément de ce programme que vous devrez écrire est cette fonction compute_score. Cette fonction prend en entrée un mot, qui est de type chaîne de caractères (string), et renvoie un entier, représentant le score pour ce mot particulier. Et vous voudrez probablement calculer ce score en parcourant toutes les caractères du mot, et pour chacun de ces caractères, déterminer combien de points ce caractère vaut.
+
+En résumé, voici ce que vous devrez faire. Tout d'abord, complétez la fonction compute_score, renvoyant le nombre de points qui serait donné à n'importe quel mot particulier. Pour ce faire, vous voudrez ignorer tous les caractères qui ne sont pas des lettres.
+
+Dans Scrabble, seules les lettres A à Z comptent réellement pour les points, donc si l'utilisateur inclut de la ponctuation ou des espaces à l'intérieur du texte qu'il écrit, vous devriez ignorer ces autres caractères, et ne considérer que les lettres lors de la détermination du score. Votre fonction doit également être insensible à la casse. C'est-à-dire que, indépendamment du fait que le caractère soit une lettre majuscule ou une lettre minuscule, vous devriez être en mesure d'attribuer à cette lettre un certain nombre de points. Les deux lettres majuscules A et les deux lettres minuscules a valent chacune 1 point, par exemple.
+
+Une fois que vous avez complété la fonction compute_score, vous devriez ensuite compléter la fonction principale en comparant ces deux valeurs, score 1 et score 2, et ensuite en imprimant soit que le joueur 1 gagne, soit que le joueur 2 gagne, soit qu'il y a une égalité, en fonction de la façon dont ces deux scores se comparent l'un à l'autre.
+
+Après avoir mis en œuvre ces étapes, vous devriez alors être en mesure d'exécuter votre programme Scrabble, fournir un mot pour le joueur 1, et fournir un mot pour le joueur 2, et votre programme devrait être en mesure de vous dire lequel de ces deux mots vaudrait plus de points dans un jeu de Scrabble.
+
+Je m'appelle Brian, et voilà Scrabble.

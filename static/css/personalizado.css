@@ -1,0 +1,60 @@
+pre {
+  border: 1px solid #dee2e6;
+  border-radius: 0px !important;
+}
+
+ul {
+  list-style-type: square;
+}
+
+ing {
+  display: block !important;
+}
+
+.faqs-links {
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  text-decoration-thickness: 1px;
+  text-underline-offset: 4px;
+  text-decoration: underline;
+  text-decoration-color: #a51c30;
+}
+
+.semana-titulo {
+	color: rgba(255, 255, 255, 0.5);
+}
+
+#logo {
+	display: block;
+	margin: 0 auto;
+}
+
+#div-legenda {
+	background-color: #d4d4d4;
+	padding: 15px;
+}
+
+#div-legenda ul {
+	list-style: none;
+}
+
+.lista-itens {
+	list-style: none;
+}
+
+#lista-passos li {
+	margin-bottom: 1em;	
+}
+
+
+.bg-portuguese {
+  background-color: green;
+}
+
+.bg-french {
+  background-color: blue;
+}
+
+.bg-spanish {
+  background-color: red;
+}

@@ -1,0 +1,41 @@
+Lorsque vous commencez à travailler avec des fonctions, un autre élément va devenir vraiment important à comprendre, qui est le concept de la portée des variables. Ainsi, la portée est une caractéristique d'une variable qui définit à partir de quelles fonctions cette variable peut être accédée. Il y a deux portées principales en C, les variables locales and globales. Maintenant, les variables locales ne peuvent être accédées que dans les fonctions dans lesquelles elles sont créées. Elles ne peuvent pas être accessibles par chaque autre fonction qui existe dans votre programme, seulement la fonction dans laquelle elle a été créée. Les variables globales, en revanche, peuvent être accédées par n'importe quelle fonction dans le programme, et la raison en est qu'elles ne sont créées à l'intérieur d'aucune fonction particulière. Nous les déclarons en dehors de toutes les fonctions, ce qui signifie que chaque fonction sait où elle se trouve et peut y accéder et la manipuler.
+
+Jusqu'à présent, dans le cours, vous avez travaillé exclusivement avec des variables locales. Voici un exemple de très, très simple fonction principale et d'une fonction additionnelle très simple que nous avons écrites. Dans ce cas, x, que j'ai coloré en vert juste pour souligner la localité ou la portée de cette variable, est local à la fonction triple. La fonction main ne peut pas du tout faire référence à x. Elle ne sait pas ce que c'est. Aucune autre fonction, en fait, si nous avions d'autres fonctions ici, ne pourrait faire référence à x.
+
+De même, la variable results que j'ai colorée en bleu, est locale uniquement à main. Seule la fonction main sait ce qu'est la variable results. La fonction triple ne peut pas l'utiliser.
+
+Maintenant, comme je l'ai mentionné, les variables globales existent. Si vous déclarez cette variable en dehors de toute fonction, toutes les fonctions du programme peuvent y faire référence. Dans ce cas, j'ai mis en évidence en vert une déclaration de variable globale. Dans ce cas, la variable en cours de déclaration s'appelle globale, juste pour être extrêmement clair à ce sujet. Elle est de type float. Et je lui attribue la valeur 0,5050.
+
+Vous remarquerez que dans main et dans triple, je peux faire référence à global. Et en fait, si je parcours le programme comme indiqué, la fonction main appelle d'abord triple, triple multiplie global par 3, ce qui définit sa valeur à quelque chose de 1,5, 1,51 ou quelque chose comme ça, et puis la fonction main imprime également la valeur de global. Ainsi, la fonction main n'imprimera pas 0,5050, elle imprimera global multiplié par 3, 1,51. Vous devez donc être prudent lorsque vous travaillez avec des variables globales. Bien qu'elles soient très flexibles pour pouvoir faire circuler les informations pour que chaque fonction puisse les utiliser, elles peuvent également avoir des conséquences dangereuses si une fonction change la valeur d'une variable avant que vous vous attendiez à ce qu'elle soit changée.
+
+Pourquoi cette distinction est-elle importante ? Pourquoi nous soucions-nous que certaines variables soient locales et d'autres globales ? Eh bien, pour la plupart, les variables locales en C sont ce qu'on appelle passées par valeur lorsqu'on effectue un appel de fonction. Qu'est-ce que cela signifie ?
+
+Eh bien, lorsque vous passez une variable par valeur, le destinataire, qui est un autre moyen de dire la fonction qui reçoit la variable qui est passée en entrée, ne reçoit pas réellement cette variable elle-même. Elle reçoit sa propre copie pour travailler. C'est une distinction très importante. Nous venons de voir il y a une seconde que pour les variables globales, si nous manipulons la variable globale dans une fonction, l'effet dans cette fonction se propage à toutes les autres fonctions.
+
+Mais avec les variables locales, ce n'est pas vrai. Chaque fonction lorsqu'elle reçoit une variable en entrée reçoit des copies de ces variables, pas les variables elles-mêmes. Alors, quel est l'effet secondaire de cela ? Cela signifie que la variable dans l'appelant, la fonction qui appelle la fonction, est inchangée à moins que vous ne l'écrasiez.
+
+Par exemple, dans ce code, foo n'est pas du tout modifié. Dans l'expression "int foo égale 4, appeler triple de foo, à l'intérieur de triple, nous nous attendions à ce que foo soit multiplié par 3 et renvoyé, mais il n'y a en fait aucun effet.
+
+Ici, cependant, une très subtile différence. Cela a l'effet que nous voulons. Voyez-vous pourquoi ? Nous écrasons foo dans la fonction main cette fois.
+
+Ainsi, "int foo égale 4, foo égale triple foo, lorsque nous faisons cet appel, triple reçoit sa propre copie de foo, sa propre copie du nombre 4. Elle dit de renvoyer 4 fois 3, ou le nombre de variable qui est passée multiplié par 3. Puis nous attribuons la valeur de retour de triple à nouveau à foo. Donc, cela écraserait effectivement foo. C'est la seule façon de le faire avec une variable locale. Donc, si nous ajoutons une autre ligne de code ici à la fin du main pour imprimer la valeur de foo, elle imprimerait en fait 12.
+
+La portée des variables n'est généralement pas trop problématique si vous nommez toutes vos variables différemment. Mais cela peut devenir un peu difficile si le même nom de variable apparaît dans plusieurs fonctions, ce qui arrivera souvent. Si vous travaillez un jour dans le monde réel où vous travaillez sur des programmes collaboratifs et que des personnes de différentes équipes travaillent ensemble pour écrire le même programme ou le même ensemble de programmes, elles réutiliseront fréquemment les mêmes noms de variables, surtout les plus courantes comme x, y, i, j, etc.
+
+Mais lorsque les variables ont le même nom, les problèmes de portée peuvent devenir un peu plus difficiles à gérer. Par exemple, savez-vous ce qui serait imprimé à la fin de ce programme particulier ? Prenez un instant. Interrompez la vidéo et lisez ce programme. Vous pouvez voir en haut que nous avons une déclaration de fonction pour une fonction appelée increment. Cette fonction prend un seul paramètre, un entier que nous appelons x. Et elle renvoie un entier. C'est le type de retour au début.
+
+Ensuite, nous avons main, quelques lignes de code dans main, la dernière étant une instruction d'impression. Et rappelez-vous, c'est question ici. Que sera en fait imprimé à la fin de cette fonction ? Et puis nous avons la définition de increment ci-dessous.
+
+Prenez un moment, parcourez le code, tracez les choses. Savez-vous ce qui sera imprimé à la fin de ce programme particulier ?
+
+Très bien. J'espère que vous avez pris quelques secondes pour essayer de comprendre cela. Faisons-le ensemble.
+
+J'ai rayé la déclaration d'increment en haut. C'était plutôt une distraction. Elle n'a pas sa propre variable. Elle n'a pas sa propre portée. C'est juste une déclaration de fonction, donc pour essayer de comprendre ce qui se passe dans ce programme, autant l'éviter.
+
+Maintenant, nous avons dans ce cas variables locales dans à la fois main et increment, chacune s'appelle x. Et bien sûr, le cœur de ce problème est de savoir quel x est modifié et comment il est modifié. J'ai coloré chaque instance de x qui est locale à main en rouge. Et j'ai coloré chaque instance de x qui est locale à increment en bleu.
+
+Remarquez que dans cette troisième ligne de main, y est égal à increment x, increment n'est pas en train de recevoir le x de main, ou le x en rouge. Elle reçoit une copie de celui-ci. Et elle ne va travailler qu'avec cette copie, le x bleu. Si vous êtes mathématiquement incliné, vous auriez peut-être plutôt pensé à ceci comme "x sub m" pour main et "x sub i" pour increment. Mais c'est la même idée. Les "x sub m", ou les x rouges dans la diapositive précédente, sont les variables qui sont locales à la fonction main, et les "x sub i", ou les variables bleues dans la diapositive précédente, sont les instances de x qui sont locales à increment.
+
+Alors, avez-vous été capable de deviner ce que cette fonction a imprimé à la fin ?
+
+Je suis Doug Lloyd, et c'est CS50.

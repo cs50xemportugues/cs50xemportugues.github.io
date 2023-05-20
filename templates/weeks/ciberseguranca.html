@@ -1,0 +1,75 @@
+{% extends 'layout.html' %} {% block conteudo %}
+
+<h1 id="week-0">Cibersegurança</h1>
+
+<iframe
+  allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+  allowfullscreen=""
+  class="border"
+  data-video=""
+  src="https://video.cs50.io/4zy0z5W0-w4?screen=BM5yvg_UJ-g"
+></iframe>
+
+<ul>
+  <li data-marker="-">
+    Aula
+    <ul>
+      <li data-marker="*"><a href="">Áudio</a></li>
+      <li data-marker="*">
+        <a href="{{ url_for('cs50x.notes.notes0') }}">Anotações</a>
+      </li>
+      <li data-marker="+">
+        Slides
+        <ul>
+          <li data-marker="*"><a href="">Google Slides</a></li>
+          <li data-marker="*"><a href="">PDF</a></li>
+        </ul>
+      </li>
+      <li data-marker="+">
+        Código-Fonte
+        <ul>
+          <li data-marker="*"><a href="">Scratch Studio</a></li>
+          <li data-marker="*"><a href="">Árquivo Zip</a></li>
+        </ul>
+      </li>
+      <li data-marker="+">
+        Vídeo
+        <ul>
+          <li data-marker="+">
+            CS50 Video Player
+            <ul>
+              <li data-marker="*"><a href="">HD</a></li>
+            </ul>
+          </li>
+          <li data-marker="+">
+            MP4
+            <ul>
+              <li data-marker="+">
+                SDR
+                <ul>
+                  <li data-marker="*"><a href="">360p</a></li>
+                  <li data-marker="*"><a href="">720p</a></li>
+                  <li data-marker="*"><a href="">1080p</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li data-marker="+">
+            YouTube
+            <ul>
+              <li data-marker="*"><a href="">HDR</a></li>
+              <li data-marker="*"><a href="">SDR</a></li>
+            </ul>
+          </li>
+        </ul>
+      </li>
+
+      <li data-marker="*"><a href="">Transcrição da Aula</a></li>
+    </ul>
+  </li>
+  <li data-marker="*">
+    <a href="{{ url_for('cs50x.psets.pset0') }}">Lista de Problemas 0</a>
+  </li>
+</ul>
+
+{% endblock %}

@@ -1,0 +1,28 @@
+
+Before we talk about images, we need to talk about hyperlinks. If we want our web page to be interactive and move us around, it would be nice be able to click on one of those what has typically been a blue link. This is actually how we build a hyperlink in our web page. And interestingly enough there's another HTML tag called link, which is not a hyperlink. A here stands for anchor, and that's how we indicate a hyperlink. 
+
+A href equals x means go to web page X. And everything between the open A tag and the close A tag is what's going to be that underlined blue text that looks like a link that we're familiar with. Below that we have an image tag, which is a self closing tag for displaying an image located at X. And you might be able to change that image by specifying width and height and other attributes in that dot dot dot there. 
+
+At the very bottom here we have a very interesting looking tag that doesn't have a closing tag. It's exclamation point doctype HTML. So HTML has been around since the early 1990s for building web pages, and it's gone undergone several revisions since then. Most recently in 2014 it underwent a revision called HTML5 which is now the current sort of de facto HTML standard. 
+
+To indicate that our web pages are written using HTML5, this is how we start off. It can be omitted but what that basically means is you can't use any of the tags that are HTML5 tags, those new tags. So we always start off if we're using HTML5. And all the tags we've talked about previously are not HTML5 tags. But this would indicate that HTML5 tags will be present. And so we have exclamation doctype HTML, which is at the very beginning of our HTML file, and then after that point we actually have our HTML open tag and proceed from there. 
+
+The last one is a comment tag, which looks slightly different, too. It starts off with angle bracket exclamation dash dash but no closing bracket. In between those two elements there is where you write your comments. And let's take a look at images and comments and links in CS50 IDE. 
+
+So I have here a file called image link dot HTML which I'm going to open up. And notice I've got a couple of comments here in my HTML comments. So just like in C and other programming languages, HTML just by being a markup language does have the ability to have comments. And so I'm apparently going to place a picture of Rick Astley somewhere between this div tag, this arbitrary division. Apparently that file is located at Rick dot JPEG, which if we head back over to my file tree for a second, is a file that exists in the current directory. So that's OK. I can reference it. 
+
+Then I can have internal links. So notice on line 11 here my href is hello dot HTML. So that just refers to hello dot HTML which exists in the current directory. And I can also have external links by just specifying HTTPS to indicate that I'm not talking about a file in my current directory. I'm talking about a file that exists somewhere on the internet, which I have to request using the HTTP protocol. 
+
+So let's take a look at what this page might look like and get ready for a picture of Rick Astley to show up on your screen. So I'll preview this. There's Rick Astley at the very top in this arbitrary division I put it at the top. And then down below I have my links, right? 
+
+I have a link to hello dot HTML. And if I click that, I get moved over to this page that we're very familiar with from the very beginning of our program. If I pop that page open again, if I pop image link open one more time, I can also go externally to CS50's website. And there we see-- I'll zoom out a little bit here-- we'll see CS50's website sort of embedded in the middle of our page. So I was able to make an internal link as well as an external link. 
+
+The last rule with HTML that we're going to talk about here is that your HTML should be well formed. In C we talked a lot about the various syntax of things. In HTML the syntax really revolves around tags. Every tag you open needs to be closed. And in fact, every tag you open should be closed in reverse order. 
+
+So if you open a bold tag, an italic tag, and then an underline tag to do all three to a particular set of text, you should close them in reverse order. So if you opened bold, italic, underline, you want to close underline, italic, bold. This sort of encapsulation is what keeps HTML nice and organized. 
+
+Unlike C, though, syntax errors won't actually cripple your HTML possibly. Your HTML may be not well formed but would still work. And so these errors can sort of slide by. It's up to you to really be vigilant. Sometimes they will fail but sometimes you can get away with it. 
+
+It can be a really difficult task, though, to keep track of when you opened a tag, when you closed it, especially as your HTML files get bigger and bigger. You'll want some help. And there are online validator tools that you can use to have a look at your web page and see if it's well formed HTML. And you should definitely take a look at those and start to use them as you begin doing some work with HTML, writing HTML, just so you get some good habits about organizing your HTML in a good way and good style and making sure that you're not doing anything that could create a syntax error that would cause you a bit of a problem down the road. 
+
+I'm Doug Lloyd. This is CS50. 

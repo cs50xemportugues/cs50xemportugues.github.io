@@ -1,0 +1,33 @@
+In this lab, your task is going to be to write a program that calculates the score for words in a game of Scrabble and compares the score for two words against each other. Scrabble is a game where your job is to form words made out of letters where each letter is assigned some number of points. 
+
+Common letters, like A and E and I, are only worth 1 point. Slightly less common letters, like B or C or M, are worth 3 points. And rare letters, like Q and Z, are worth even more points-- 10 points, in this case. And there's an entire table here that shows you, for any letter of the alphabet, how many points that letter is worth. 
+
+Using this assignment of points, we can take a word and figure out how many points that word is worth. For the word "Scrabble," for example, we know that S is worth 1 point, C is worth 3 points, so on and so forth, and we can add up all of those numbers to figure out that the word "Scrabble" is worth 14 points. And once we have that ability, we can then compare two words to figure out, between those two words, which word is worth more. 
+
+If I were to compare the word "computer" against the word "science," for example, I would find that "computer" is worth 14 points in a game of Scrabble, and "science" is worth 11 points in a game of Scrabble, so between those two words, "computer" would win. Your task now is to write a program in C that can do this comparison for you-- taking two words and figuring out which one would win in a game of Scrabble. 
+
+Your program will work like this. At the command line, you would run the program ./scrabble. Your program will then prompt for a word from player 1, and player 1 would type in a word-- for example, the word "computer." And then your program would prompt player 2 to type in a word, and player 2 could then type in a word-- for example, "science." 
+
+Your program should then take both of those words, looking at each letter and figuring out how much each letter is worth, and using that information to figure out which of the two words is going to have a higher score in a game of Scrabble. In this case, player 1's word, "computer," has the higher score, so your program is going to print something like "Player 1 wins!" for example. 
+
+Now, how exactly is your program going to figure out how many points a particular word is worth? Well, in the distribution code we give you-- which we'll take a look at in a moment-- we give you an array of integers, called POINTS, in all capital letters, and this here is an array of 26 integers, each one representing the Scrabble score for a particular letter-- in alphabetical order. 
+
+And because this is an array, we can index into that array using square brackets to get access to one particular score for one particular letter. For example, if we wanted to figure out how many points the letter A is worth-- the first letter of the alphabet-- we would use POINTS square bracket 0 to get access to the first element in the array, recalling that the first element in an array is the element at index 0. 
+
+If I wanted to figure out how many points the letter B is worth, I could use POINTS square bracket 1 to get access to the number 3-- the value for the letter B. Likewise, POINTS square bracket 2 would give me access to the point value of the letter C, all the way up to POINTS square bracket 25, which would give me access to the last element in this array, which in this case is 10, the value for letter Z. 
+
+With that in mind, let's now take a look at the rest of the distribution code that we give you for this lab. Here, in scrabble.c, you'll notice that after including cs50.h and stdio.h, we have this array of points that has all of the point values for each of the letters of the alphabet in alphabetical order, and then inside of the main function, we've already written some code for you. And your task is just going to be to complete this function. 
+
+We start by using get_string to prompt the user for a word from player 1, storing that inside of word 1, and likewise doing the same thing for player 2-- get_string for player 2, storing whatever string the user types in as word 2. After that, we score both words by calling this compute_score function, first on word 1, and then calling that same function on word 2. 
+
+We haven't seen that function yet, but implementing that function is going to be up to you. And we'll save the result of that function inside of the variables score 1 and score 2. Left up to you is to print out the winner between player 1 and player 2-- to compare those two values, score 1 and score 2, and to print either that player 1 wins, or player 2 wins, or, in the event that both words have the same score, to print out that it's a tie. 
+
+The other piece of this program that you'll need to write is this compute_score function. This function takes a word as input, which is of type string, and returns an int, representing the score for that particular word. And you'll likely want to compute that score by iterating over all of the characters in the word, and for each of those characters, figuring out how many points that character is worth. 
+
+So in summary, here's what you'll need to do. First, complete the compute_score function, returning the number of points that would be given to any particular word. In doing so, you'll want to ignore any non-letter characters. 
+
+In Scrabble, only the letters A through Z actually count for points, so if the user includes punctuation or spaces inside of the text they write, you should ignore those other characters, and only consider the letters when determining the score. Your function should also be case-insensitive. That is to say, regardless of whether the character is an uppercase letter or a lowercase letter, you should be able to assign that letter some number of points. Both capital A and lowercase a are each worth 1 point, for example. 
+
+After you've completed the compute_score function, you should then complete the main function by comparing those two values, score 1 and score 2, and then printing either player 1 wins, or player 2 wins, or tie, depending on how those two scores compare with each other. 
+
+After you've implemented these steps, you should then be able to run your Scrabble program, provide a word for player 1, and provide a word for player 2, and your program should be able to tell you which of those two words would be worth more in a game of Scrabble. My name is Brian, and this was Scrabble. 

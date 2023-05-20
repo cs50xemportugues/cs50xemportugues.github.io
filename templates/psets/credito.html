@@ -1,0 +1,118 @@
+{% extends 'layout.html' %}
+
+{% block conteudo %}
+
+<h1 id="credit">Crédito</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>If you already started to work on Problem Set 1 in CS50 Lab, you may <a href="https://lab.cs50.io/cs50/labs/2020/x/credit/">continue working on it</a> there. If you’re just now starting to work in this problem, be sure to use CS50 IDE instead by following the instructions below!</p>
+  <p>Se você já começou a resolver a Lista de Problemas 1 no CS50 Lab, você pode <a href="https://lab.cs50.io/cs50/labs/2020/x/credit/">continuar resolvendo o problema lá</a>. Se você estiver começando a resolver este problema agora, use o CS50 IDE e siga as instruções abaixo!</p>
+</div>
+
+<p>Um cartão de crédito (ou débito) é um cartão de plástico com o qual podemos pagar por produtos ou serviços. Imprimido nesse cartão está um número que também está armazenado em um banco de dados em algum lugar, para que quando o cartão for usado para pagar alguma coisa, a empresa do cartão de crédito saberá a quem cobrar. Existem muitas pessoas com cartão de crédito no mundo, portanto esses números são bem longos: American Expresses usa números de 15 dígitos, MasterCard usa números de 16 dígitos, e Visa usa números de 13 ou 16 dígitos. E esses são números decimais (0 até 9), não números binários, o que significa que a American Express poderia imprimir até 10^5 = 1 000 000 000 000 000 cartões únicos! (Isso equivale a, hm, um quadrilhão.)</p>
+
+<p>Na verdade, isso é um pouco de exagero, pois números de cartão de crédito possuem uma estrutura específica. Todos os números da American Express começam com 34 ou 37; a maioria dos números da MasterCard começam com 51, 52, 53, 54, ou 55 (eles também usam alguns outros números iniciais com os quais nós não vamos nos preocupar para resolver este problema); e todos os números da Visa começam com 4. Mas números de cartão de crédito também possuem uma "soma de verificação" embutida neles, uma relação matemática entre pelo menos um números e os outros. Essa soma de verificação permite que computadores (ou seres humanos que gostam de matemática) detectem erros de digitação, ou cartões fraudulentos, sem ter que consultar um banco de dados, o que pode ser um processo lento. De qualquer maneira, é claro que um matemático desonesto poderia criar um número falso que respeitaria às regras da restrição matemática, portanto uma consulta ao banco de dados ainda seria necessário para checagens mais rigorosas.</p>
+
+<h2 id="luhns-algorithm">Algoritmo de Luhn</h2>
+
+<p>Portanto, qual é a fórmula secreta? Bem, a maioria dos cartões usam um algoritmo inventado por Hans Peter Luhn, quando este trabalhava na IBM. De acordo com o algoritmo de Luhn, você pode determinar se um cartão de crédito é (sintaticamente) válido da seguinte maneira:</p>
+
+<ol>
+  <li>Multiplique dígitos alternados por 2, começando no penúltimo dígito do número, e em seguida, some os dígitos desses produtos (resultado das multiplicações).</li>
+  <li>Pegue a soma e adicione os dígitos que não foram multiplicados por 2.</li>
+  <li>Se o último dígito da soma total for um 0 (ou, se definirmos mais formalmente, se o resto da divisão por 10 da soma total for 0), o número é válido!</li>
+</ol>
+
+<p>Isso é um pouco confuso, então vamos mostrar um exemplo com o cartão Visa do Ramon: 4003600000000014.</p>
+
+<ol>
+  <li>
+    <p>Para o raciocínio ser mais fácil, vamos sublinhar os dígitos alternados, começando com o penúltimo dígito do número:</p>
+
+    <p><u>4</u>0<u>0</u>3<u>6</u>0<u>0</u>0<u>0</u>0<u>0</u>0<u>0</u>0<u>1</u>4</p>
+
+    <p>Ok, agora vamos multiplicar cada um dos dígitos sublinhados por 2:</p>
+
+    <p>1•2 + 0•2 + 0•2 + 0•2 + 0•2 + 6•2 + 0•2 + 4•2</p>
+
+    <p>Isso equivale a:</p>
+
+    <p>2 + 0 + 0 + 0 + 0 + 12 + 0 + 8</p>
+
+    <p>Agora vamos adicionar os dígitos desses produtos (atenção! Não os produtos em si):</p>
+
+    <p>2 + 0 + 0 + 0 + 0 + 1 + 2 + 0 + 8 = 13</p>
+  </li>
+  <li>
+    <p>Agora, vamos adicionar a essa soma (13) todos os dígitos que não foram multiplicados por 2 (começando do final):</p>
+
+    <p>13 + 4 + 0 + 0 + 0 + 0 + 0 + 3 + 0 = 20</p>
+  </li>
+  <li>
+    <p>Sim, o último dígito dessa soma (20) é um 0, portanto meu cartão é legítimo!</p>
+  </li>
+</ol>
+
+<p>Portanto, validar números de cartão de crédito não é difícil, mas isso se torna um pouco chato quando feito à mão. Vamos escrever um programa que faça isso!</p>
+
+<h2 id="implementation-details">Detalhes de Implementação</h2>
+
+<p>Em um arquivo chamado <code class="highlighter-rouge">credito.c</code>, em um diretório chamado <code class="highlighter-rouge">~/problemas1/credito/</code>, escreva um programa que pede ao usuário por um número de cartão de crédito, e em seguida informa (usando <code class="highlighter-rouge">printf</code>) se o número é um número de cartão válido para American Express, Master Cad, ou Visa, de acordo com as definições de cada formato. Para que possamos automatizar alguns testes no seu código, pedimos que a última linha da saída de dados do seu programa seja <code class="highlighter-rouge">AMEX\n</code> ou <code class="highlighter-rouge">MASTERCARD\n</code> ou <code class="highlighter-rouge">VISA\n</code> ou <code class="highlighter-rouge">INVÁLIDO\n</code>. Nada mais, nada menos. Para fins de simplicidade, você pode considerar que a entrada de dados do usuário será totalmente numérica (ou seja, sem hífens, como pode estar impresso em um cartão). Mas não considere que a entrada de dados do usuário poderá ser armazenada em um <code class="highlighter-rouge">int</code>! É melhor usar a função <code class="highlighter-rouge">get_long</code> da biblioteca CS50 para receber a entrada de dados do usuário. (Por que?)</p>
+
+<p>Considere o exemplo abaixo como sendo a maneira que seu programa deve se comportar quando receber um número de cartão de crédito válido (sem hífens).</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./credito
+Número: 4003600000000014
+VISA
+</code></pre></div></div>
+
+<p>De qualquer maneira, a função <code class="highlighter-rouge">get_long</code> rejeitará hífens (e outras coisas):</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./credito
+Número: 4003-6000-0000-0014
+Número: foo
+Número: 4003600000000014
+VISA
+</code></pre></div></div>
+
+<p>Mas depende de você detectar entradas de dados que não são números de cartão de crédito (um número de telefone, por exemplo), ainda que sejam numéricos:</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$ ./credito
+Número: 6176292929
+INVALID
+</code></pre></div></div>
+
+<p>Teste seu programa com várias entradas de dados diferentes, tanto válidas quanto inválidas. (Nós certamente iremos!) Aqui temos <a href="https://developer.paypal.com/docs/classic/payflow/payflow-pro/payflow-pro-testing/#credit-card-numbers-for-testing">alguns números de cartão</a> que o PayPal recomenda para testes.</p>
+
+<p>Se seu programa não se comporta corretamente com algumas entradas de dados (ou se nem mesmo compila), é hora de depurar!</p>
+
+<h3 id="walkthrough">Passo a Passo</h3>
+
+<div class="border embed-responsive embed-responsive-16by9" data-video="">
+    <iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="embed-responsive-item" src="https://www.youtube.com/embed/dF7wNjsRBjI?modestbranding=1&amp;rel=0&amp;showinfo=0"></iframe>
+</div>
+
+<h3 id="how-to-test-your-code">Como Testar Seu Código</h3>
+
+<p>Execute a linha abaixo para avaliar a correção do seu código usando a ferramenta <code class="highlighter-rouge">check50</code>. Não se esqueça de compilar e testar o código você também!</p>
+
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>check50 cs50xemportugues/problemas/2020/credito
+</code></pre></div></div>
+
+<p>Execute a linha abaixo para avaliar o estilo do seu código usando a ferramenta <code class="highlighter-rouge">style50</code>.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>style50 credito.c
+</code></pre></div></div>
+
+<h2>Como Adaptar Seu Código</h2>
+<p>TODO</p>
+
+<h2 id="how-to-submit">Como Enviar</h2>
+
+<p>Execute a linha abaixo, em seguida informe sua conta GitHub e sua senha quando o terminal pedir. Por medidas de segurança, você verá asteriscos (<code class="highlighter-rouge">*</code>) ao invés dos caracteres reais na sua senha.</p>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2020/x/credit
+</code></pre></div></div>    
+
+{% endblock %}

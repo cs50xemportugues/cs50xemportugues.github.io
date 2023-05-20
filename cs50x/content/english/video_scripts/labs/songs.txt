@@ -1,0 +1,17 @@
+In this lab, your task is going to be to write SQL queries that can answer questions about a database of songs. As part of this lab, we'll give to a sqlite database called songs.db, inside of which is information taken from Spotify about various different songs and their artists. Ultimately, the first thing you'll want to do is to understand the structure or the schema of the tables in this database. 
+
+Inside songs.db, you'll find a table called songs that has quite a few different columns. Every song has an ID, which is an INTEGER, the name of the song, which is some TEXT, artist ID, which is an INTEGER representing the artist of the song-- we'll come back to that in a moment-- and then other information about the song as well-- its danceability, its energy, its key, its loudness, as well as other properties of the song, too. 
+
+Now, let's take a look at artist ID. To represent the various different artists that songs can have, there's another table in this database called the artists table. Every artist has an ID, which is an INTEGER, and a name, which is just going to be some TEXT. And now the artist ID column of the songs table is going to be an INTEGER that corresponds to the ID of one of these artists. 
+
+So let's take a look at what this database actually looks like. Once I've downloaded the lab, in my terminal I can type sqlite3 songs.db to go ahead and open up this database. And if I wanted to, I could type .schema to get a sense for the schema of this database. I would see again, here's CREATE TABLE songs, along with all the columns for songs, as well as CREATE TABLE artists, to see all of those artists. 
+
+So if I wanted to see what the songs were, for example, I might write a query like SELECT star FROM songs, to go ahead and select all of the songs. And I would see all the songs, along with all of the columns that I have for each of those individual rows. Maybe I didn't want all of those columns. So I could filter down my results as well. I could write a query like SELECT name FROM song to just select the name column from my songs table. If I do that, then I'll only see the names of each of those songs. 
+
+Ultimately, in this lab, we're going to ask you eight different questions about this database, and your task is going to be to write queries to answer each of those questions. We've given you files in which to put those answers. For example, 1.sql is where you'll include your response to the first question, writing a SQL query here that you can use to answer a particular question. 
+
+What might those prompts be? Well, for example, in 1.sql, you're going to write a SQL query to list the names of all of the songs in the database. And that, in fact, is a query that I've just shown you-- SELECT name FROM songs. So inside of 1.sql, you would write this query, SELECT name FROM songs, as a query that you could run in order to get the names of all the songs in the database. 
+
+Ultimately, the other prompts are going to ask you for other information about the database. Maybe not just looking at the names of songs, but perhaps looking at the artists of the songs, looking at the volume of those songs, looking at their danceability, maybe other factors as well, filtering and selecting and joining tables together as needed in order to get the results you ultimately want to answer all of these questions just based on a single database. 
+
+My name is Brian, and this was Songs. 

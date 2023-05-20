@@ -1,0 +1,41 @@
+In this lab, your task is going to be to write a program to simulate population growth. Let's imagine that we have a population of animals, a population of llamas, for example. Every year, we lose some animals from that population as older llamas die. But we also gain some animals to that population as new llamas are born. 
+
+We can model this kind of population growth using a mathematical formula. Let's assume, for example, that every year, if we have a population of n llamas, we gain n divided by 3 llamas and we lose n divided by 4 llamas. So in a population of 12 llamas, for example, in the next year, we would gain 12 divided by 3, or four new llamas. And we would lose at 12 divided by 4, or losing three llamas, in that case. 
+
+Given this setup, we could ask ourselves a question. For example, we could ask, how many years would it take to go from 20 llamas in a population to 30 llamas in a population? Right now for example, we have 20 llamas in this population. But after one year we would gain 20 divided by 3 llamas. 
+
+Now notice here that 20 doesn't divide evenly into three. And as a result, we need to just truncate whatever would come after the decimal. The actual answer is going to be six point something. But because we can't have a fraction of an animal, we're just going to truncate whatever is after the decimal and say that we're gaining six llamas. 
+
+And we're going to lose 20 divided by 4, which nicely equals five llamas. So after one year, we will now have 21 llamas. We can then repeat the process and consider what might happen in the next year. 
+
+In the next year, we would gain 21 divided by 3, or seven llamas. And we would lose 21 divided by 4, truncating whatever is after the decimal, losing five llamas. Meaning we have a net change of two llamas. Which means that after two years, we now have 23 llamas. 
+
+After the next year, we would gain seven llamas, lose five, for a new total of 25 llamas after three years. In the next year, we would gain eight llamas and lose six, for a new total of 27 llamas after four years. And then in the fifth year, we would gain at nine llamas and lose six for a total now of 30 llamas after five years. 
+
+So the answer to the question, how many years would it take to go from a population of 20 llamas to a population of 30 llamas is five years. Now we did all of that math manually. But your task now is going to be to write a program in C that can do that calculation for us. 
+
+The program will work like this. At the command line, you'll run a program, ./population. And at that point, your program should prompt the user for a starting population size. You might type of starting population size of 100, for example. Then your program should prompt the user for an ending population size. And the user will type in another population size, say 200, for example. 
+
+Then your program should figure out how many years it would take to bring the population of llamas from the starting size to the ending size, and then print out that number of years. So in this case, our program would print years colon 9 because it would take nine years to bring the population from 100 to 200. 
+
+So in summary, here's what you have to do. First, start by prompting the user for the starting population size of your population of llamas. And you should check to make sure that the user's input is at least nine. The population size needs to be at least nine so that we can actually start to grow this population of llamas. 
+
+So if the user types in a number that's less than nine, you should keep re-prompting the user to type in a number again until they give you a number that's at least nine. 
+
+Next, you should prompt the user for the ending population size, here making sure that the user's input is at least as large as the starting size. It wouldn't make sense, for example, to imagine the population going from a population of 100 to a population of 50 because the population is always going to be growing. So you'll want to make sure that the end population size is greater than or equal to the starting population size. If the user tries to type in an end population size that is less than the starting population size, then your program should continually re-prompt the user to type in another ending population size until they provide you one that is at least the starting population size. 
+
+After that, your program should calculate how many years would be required to bring the population from the starting size to the ending size, recalling that every year we are going to add n divided by 3 llamas, if there are n llamas to begin with. And we're going to lose n divided by 4 llamas. And as with before, because we can't have fractions of a llama, if either of those computations ends up with something after the decimal, you're going to truncate or ignore what comes after that decimal when doing your math. Finally, after you've made that calculation, you'll print the number of years required. Printing years colon and then the number of years that would be required to bring the population up to that ending population size. 
+
+As you start working on this problem, there are a few strategies that might prove helpful. One is a do while loop, a type of loop that lets you prompt the user one or more times for something, in this case. So in the loop you're seeing here, we start by declaring a variable called n. And then inside of a loop, we prompt the user for a positive integer, storing that integer inside of n. 
+
+But we're going to keep repeating that loop as long as n is less than 1. Meaning if the user doesn't type in a positive integer, then we're going to prompt the user again. You won't use this exact code inside of your lab but you might use something similar, both when you're prompting for the starting population size to make sure that the starting population size is at least nine, and also when prompting for the end population size to make sure that the end population size is at least as large as the starting population size. 
+
+You might also find it helpful to update a variable as you go about working on this lab. You might want to repeatedly update your population size variable, for example, in order to add new llamas and get rid of older llamas. You might do that using a formula like this. If you have a variable called n inside of which is your current population, you can update the value of n for the next year using a line that says n equals n plus n over 3, the number of llamas we're adding, minus n over 4, the number of llamas that we're losing in that particular year. 
+
+And finally, once you've completed the calculation, you can print out a variable using the print f function, saying, printf years colon, and then %i, we're %i is going to stand in for an integer. Which Integer Well, that you specify after a comma. And here we're saying, print out the value of n as the integer to print to the user. 
+
+Let's now take a look at the distribution code that we give you as a starting point for this problem. Here in population.c, we've already included cs50.h and stdio.h for you. And then giving you a main function with a few to dos to get started. 
+
+You're going to first prompt for the start size, then prompt for the n size. Then calculate how many years it's going to take in order to reach that threshold value from the start size to the n size. And then finally, once you've done that computation, printing out the number of years that would be required to take you from the start to the end. 
+
+Once you've written all of those pieces, you should then be able to compile your program and then run it, giving your program a starting population size and an ending population size. And then your program should be able to tell you how long it will take to get from point A to point B. My name is Brian. And this was population growth. 

@@ -1,0 +1,37 @@
+{% macro lab_item(number, title) %} {% if number == 1 %}
+<li data-marker="*">
+  <a href="{{ url_for('cs50x.labs.lab1') }}">{{title}} {{number}} </a>
+</li>
+{% elif number == 2 %}
+<li data-marker="*">
+  <a href="{{ url_for('cs50x.labs.lab2') }}">{{title}} {{number}} </a>
+</li>
+{% elif number == 3 %}
+<li data-marker="*">
+  <a href="{{ url_for('cs50x.labs.lab3') }}">{{title}} {{number}} </a>
+</li>
+{% elif number == 4 %}
+<li data-marker="*">
+  <a href="{{ url_for('cs50x.labs.lab4') }}">{{title}} {{number}} </a>
+</li>
+{% elif number == 5 %}
+<li data-marker="*">
+  <a href="{{ url_for('cs50x.labs.lab5') }}">{{title}} {{number}} </a>
+</li>
+{% elif number == 6 %}
+<li data-marker="*">
+  <a href="{{ url_for('cs50x.labs.lab6') }}">{{title}} {{number}} </a>
+</li>
+{% elif number == 7 %}
+<li data-marker="*">
+  <a href="{{ url_for('cs50x.labs.lab7') }}">{{title}} {{number}} </a>
+</li>
+{% elif number == 8 %}
+<li data-marker="*">
+  <a href="{{ url_for('cs50x.labs.lab8') }}">{{title}} {{number}} </a>
+</li>
+{% elif number == 9 %}
+<li data-marker="*">
+  <a href="{{ url_for('cs50x.labs.lab9') }}">{{title}} {{number}} </a>
+</li>
+{% endif %} {% endmacro -%}
