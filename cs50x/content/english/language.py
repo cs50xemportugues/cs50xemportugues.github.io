@@ -278,7 +278,15 @@ cibersecurity = {
     "name": "Cybersecurity",
 }
 
-specifications_urls = {
+urls = {
+    "cybersecurity": "cybersecurity",
+    "seminars": "seminars",
+    "honesty": "honesty",
+    "certificate": "syllabus",
+    "faqs": "syllabus",
+    "staff": "syllabus",
+    "syllabus": "syllabus",
+    "project": "project",
     "hello": "hello",
     "mario_less": "mario/less",
     "mario_more": "mario/more",
@@ -301,7 +309,3 @@ specifications_urls = {
     "homepage": "homepage",
     "finance": "finance",
 }
-
-
-
-

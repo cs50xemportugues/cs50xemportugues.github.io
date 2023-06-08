@@ -74,6 +74,9 @@ Ultimately, you should submit both your `log.sql` and `answers.txt` files.
 Walkthrough
 -----------
 
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/YHhgEoJMDnU?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+
 Hints
 -----
 

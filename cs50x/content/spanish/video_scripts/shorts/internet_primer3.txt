@@ -1,0 +1,27 @@
+Ahora hablemos de DNS. Ya hemos hablado acerca de estas direcciones IP. Y sabemos que si vamos a identificar de manera única un dispositivo en Internet, tiene que tener una dirección única. 
+
+Y podríamos visitar esa dirección si quisiéramos. Pero probablemente nunca hayas escrito algo como 192.168.1.0 en tu navegador, ¿verdad? No escribes números en tu navegador. Normalmente escribes nombres legibles para humanos como google.com o cs50.harvard.edu, ¿cierto? 
+
+Sin embargo, esos no son direcciones IP. Por lo tanto, existe un servicio llamado Sistema de Direccionamiento de Nombres de Dominio, DNS (por sus siglas en inglés), que traduce direcciones IP a palabras o frases que son mucho más memorables que recordar un conjunto de cuatro números o, próximamente, un conjunto de ocho números hexadecimales. Eso sería realmente desafiante, ¿verdad? 
+
+Piensa en cómo era antes de tener teléfonos celulares. Tenías que memorizar los números de teléfono de tus amigos. Puede haber sido difícil después de un tiempo. Y de manera similar, si quieres visitar muchos sitios web, probablemente no querrás recordar una serie de números. Preferirías recordar una serie de palabras. 
+
+Por lo tanto, este proceso de asociar sets de números a nombres legibles para humanos convierte al DNS en las páginas amarillas de la web. Y puedes pensarlo como si fuera solo una enorme lista que va desde 0.0.0.0 hasta 255.255.255.255, que sería el rango completo de los 4 mil millones aproximados de direcciones IPv4 que existen. Hice algunos números aleatorios arriba y abajo. Pero el que está en el medio es en realidad una dirección IP. Por lo tanto, si visitáramos 74.125.202.138, al parecer eso se traduce a ese sitio allí, io - ¿qué es eso? Bueno, no todos los nombres que se mapean son claros en cuanto a qué son, ¿verdad? 
+
+Por lo tanto, a veces, alguien que es dueño de una dirección IP podría nombrar a su host como algo que realmente no es. Por ejemplo, esa dirección IP si entraste allí es en realidad solo google.com. Pero Google tiene muchos servidores diferentes. 
+
+Y no pueden llamarlos a todos google.com. Por lo tanto, tienen su propio sistema interno para traducir google.com a cualquier servidor que realmente esté conectado a esa dirección IP. Y luego existe otro sistema para traducir esa jerga allí a google.com. Pero no profundizaremos en eso. 
+
+Y de manera similar para IPv6, también vamos a tener unas páginas amarillas que serán mucho más grandes. Y de manera similar, en el medio haya - fue difícil encontrar una dirección IPv6 que fuera legítima. Pero encontré una para Google. 
+
+Pero es el sitio web de Google irlandés. Pero si entras a esa dirección IPv6, si tu navegador es capaz de IPv6, eso te llevará a la página de inicio de Google Irlanda. Entonces ahí lo tienes. 
+
+Pero esto no es del todo cierto, ¿verdad? Este sistema parece engorroso, ¿verdad? Si hay una lista enorme de 4 mil millones de cosas que hay que buscar, eso es bastante grande. No hay una guía telefónica del mundo, ¿verdad? Si todavía recibes la guía telefónica - yo recibí la mía el otro día, y simplemente la recicló-. Pero si recibes la guía telefónica, no obtienes un libro que contenga cada número de teléfono que existe en el planeta, ¿verdad? Obtienes una lista de los números telefónicos locales, aquellos que es más probable que llames. 
+
+Y eso es realmente lo que es DNS. Si lo piensas, DNS es realmente la guía telefónica local. Y los grandes servidores DNS como google.com, en realidad son más como bibliotecas que tienen una copia de todas las guías telefónicas locales o todos los registros locales de DNS. Por lo tanto, realmente no hay un solo depósito de todo el DNS de Internet, al igual que no hay una sola guía telefónica del mundo. 
+
+Existen todos estos pequeños sistemas DNS a pequeña escala que existen ahí afuera. Y existen servicios que los agregan juntos. Pero dependen de esos sistemas DNS más pequeños para actualizar su información, para que tengan la información más precisa. 
+
+Por lo tanto, de nuevo, esta analogía es que los sistemas grandes agregadores de DNS son como bibliotecas que tienen una copia de todas las guías telefónicas del mundo. No actualizan esos libros ellos mismos. Dependen de que los libros lleguen, para que puedan actualizar la información si la necesitan. 
+
+Por lo tanto, el sistema DNS no es un bloque gigante. Está descentralizado en muchos, muchos servidores. Por lo tanto, ahora sabemos que en algún lugar entre nosotros e internet hay un servidor DNS, así como un servidor DHCP. "

@@ -1,0 +1,123 @@
+{% extends 'layout.html' %} {% block conteudo %}
+<h1 id="problem-set-1">Conjunto de Problemas 1</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    A colaboração em conjunto nos conjuntos de problemas não é permitida, exceto no caso em que você
+    pede ajuda aos colegas e outros, desde que essa ajuda não se reduza
+    a outra pessoa fazendo seu trabalho por você, de acordo com a política do curso sobre
+    <a href="{{url_for('cs50x.honesty')}}">honestidade acadêmica</a>.
+  </p>
+
+  <p>
+    A equipe realiza auditorias aleatórias de envios ao CS50x. Alunos encontrados em
+    violação desta política serão removidos do curso. Alunos que
+    já completaram o CS50x, se forem encontrados em violação, terão o certificado CS50 deles
+    revogado permanentemente.
+  </p>
+</div>
+
+<h2 id="what-to-do">O que fazer</h2>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    Certifique-se de ter concluído o
+    <a href="{{url_for('cs50x.labs.lab1')}}">Laboratório 1</a> antes de começar este
+    conjunto de problemas.
+  </p>
+</div>
+
+<ol>
+  <li>
+    Faça login em <a href="https://code.cs50.io/">code.cs50.io</a> usando sua conta do GitHub.
+  </li>
+  <li>
+    Execute o comando <code class="language-plaintext highlighter-rouge">update50</code> na janela do terminal do seu código para garantir que seu código esteja atualizado e,
+    quando solicitado, clique em <strong>Rebuild now</strong>
+  </li>
+  <li>Envie <a href="{{url_for('cs50x.psets.hello')}}">Hello</a></li>
+  <li>
+    Envie uma das opções a seguir:
+    <ul>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.mario_less')}}"
+          >esta versão de Mario</a
+        >
+        se sentir menos confortável
+      </li>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.mario_more')}}"
+          >esta versão de Mario</a
+        >
+        se sentir mais confortável
+      </li>
+    </ul>
+  </li>
+  <li>
+    Envie uma das opções a seguir:
+    <ul>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.cash')}}">Dinheiro</a> se sentir menos
+        confortável
+      </li>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.credit')}}">Crédito</a> se sentir mais
+        confortável
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>
+  Se você enviar ambas as versões de Mario, registraremos a maior de suas duas
+  pontuações. Se você enviar ambos Cash e Credit, registraremos a maior de suas
+  pontuações.
+</p>
+
+<h2 id="when-to-do-it">Quando fazer</h2>
+
+<p>
+  Até
+  <a
+    data-local="2023-12-31T23:59:00+00:00"
+    href="https://time.cs50.io/20231231T235900Z"
+    >2023-12-31T23:59:00+00:00</a
+  >.
+</p>
+
+<h2 id="advice">Conselho</h2>
+
+<ul>
+  <li data-marker="*">
+    Experimente qualquer um dos programas do Ramon da aula através de
+    <a href="{{url_for('cs50x.weeks.week1')}}">Código-fonte da Semana 1</a>.
+  </li>
+  <li data-marker="*">
+    Veja o guia de estilo da CS50’s
+    <a href="https://cs50.readthedocs.io/style/c/">para dicas de como melhorar o estilo do seu código</a>.
+  </li>
+  <li data-marker="*">
+    Se você vir erros ao compilar seu código com
+    <code class="language-plaintext highlighter-rouge">make</code>, concentre-se primeiro em corrigir o primeiro erro que você vê, rolando para cima conforme necessário. Se não tiver certeza
+    o que significa, tente perguntar 
+    <code class="language-plaintext highlighter-rouge">help50</code> para obter ajuda.
+    Por exemplo, se tentar compilar
+    <code class="language-plaintext highlighter-rouge">hello</code>, e
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>make hello
+</code></pre>
+      </div>
+    </div>
+    <p>está gerando erros, tente executar</p>
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>help50 make hello
+</code></pre>
+      </div>
+    </div>
+    <p>em vez disso!</p>
+  </li>
+</ul>
+
+{% endblock %}

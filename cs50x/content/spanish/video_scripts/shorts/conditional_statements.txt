@@ -1,0 +1,35 @@
+Muy bien. Así que ahora hablemos acerca de algo realmente útil en la programación - las declaraciones condicionales. Las expresiones condicionales permiten que tus programas tomen decisiones y sigan diferentes caminos, algo que mencioné antes, dependiendo de los valores de las variables o de lo que el usuario introduzca en el programador, en la línea de comandos o en alguna opción similar. C tiene varias maneras de expresar declaraciones condicionales, que también a veces llamamos ramas condicionales en tus programas. Y algunas de ellas se verán bastante familiares desde Scratch, así que incluso las mostraremos lado a lado, para que puedas hacer la analogía. 
+
+Así que "if" es una condición bastante simple. Si recuerdas desde Scratch, aquí a la derecha puedes llenar ese hexágono con una expresión azul si el mouse está abajo o si X es menor que 10, o algo así. Luego, si X era menor que 10 o si el mouse estaba abajo, todo el código dentro de la pieza del rompecabezas se ejecutará. Todas las cosas que se ajustan dentro de esa forma de C.
+
+Del mismo modo, tenemos "if" a la izquierda. Si hay una expresión booleana que se cumple, que estoy usando como sustituto de una de las expresiones booleanas que discutimos anteriormente, abrir llaves, cerrar llaves. Así que piensa en abrir llaves y cerrar llaves como algo análogo al efecto de sándwich del bloque "if" a la derecha de Scratch. 
+
+Si la expresión booleana en la declaración "if" es verdadera, entonces todas las líneas de código entre las llaves se ejecutarán en orden de arriba hacia abajo. Si la expresión booleana es falsa, saltaremos todo lo que esté entre las llaves, porque solo queremos seguir ese camino si la expresión booleana es verdadera. 
+
+Podemos llevar esto un paso más allá con "if else". Este bloque de Scratch es bastante similar al que vimos hace un segundo, excepto que sigue dos caminos diferentes según lo que suceda. Así que si el mouse estaba abajo o si X era menor que 10, haremos todo lo que hay entre ese primer camino, ese primer "C". 
+
+De lo contrario, si el mouse está arriba o X no es menor que 10, haremos todo en el segundo conjunto. Y eso es análogo a lo que se ve aquí para C. Si hay una expresión booleana, haga todo lo que esté entre el primer conjunto de llaves. De lo contrario, haga todo lo que esté entre el segundo conjunto de llaves. Así que si la expresión booleana es verdadera, haremos lo que esté entre el primer conjunto. Si la expresión booleana es falsa, eso activaría el "else", y haríamos lo que está en el segundo conjunto de llaves. De nuevo, de arriba abajo, todas las líneas entre las llaves.
+
+En C, es posible crear una cadena de "if-else if-else". De hecho, puedes tener una cadena "if-else if-else if-else", y así sucesivamente. En Scratch, esto requería que los bloques estuvieran anidados. Agregabas un "if-else" y tenías que poner otro dentro del "else" y así sucesivamente, y se complicaba un poco. Pero en C, no tenemos que hacer eso. De hecho, podemos hacer que sea una cadena como esta. De nuevo, como podrías esperar, todas estas ramas son mutuamente excluyentes. Solo puedes seguir una de las ramas. Si esto es verdadero, de lo contrario, si lo otro es verdadero, si esto otro es verdadero, de lo contrario, haz esto. Así que las cuatro ramas en este ejemplo son mutuamente excluyentes. Es una cadena "if-else if-else" 
+
+Sin embargo, es posible y a veces muy útil, crear una cadena de ramas no mutuamente excluyentes. En este ejemplo, solo las ramas tres y cuatro son mutuamente excluyentes. Podría ser que pudieras satisfacer la primera condición, y pudieras satisfacer la segunda condición, y pudieras satisfacer la tercera condición, en cuyo caso seguirías la primera rama, luego pasarías a la segunda rama, luego a la tercera rama. O tal vez satisfaces la primera y la segunda condición, pero no satisfaces la tercera condición. En este caso, seguirías la primera rama y la segunda rama, y luego la cuarta rama. 
+
+La razón de esto es que el "else" solo se vinculará al "if" más cercano. Así que aunque hay un "else" aquí, eso no necesariamente crea una cadena mutuamente excluyente de todo. Solo lo es con la expresión allí, con la expresión booleana 3 - esa es la que es mutuamente excluyente con el "else". Así que es posible, y a veces muy útil, como dije, crear una cadena de ramas no mutuamente excluyentes. 
+
+Veamos otro tipo de condicional, que no has visto antes en Scratch. Hay algo llamado instrucción "switch". La instrucción "switch" es bastante genial porque es una declaración condicional que te permite especificar casos distintos, en lugar de depender de expresiones booleanas para tomar decisiones por ti. Por ejemplo, digamos que tengo este programa, y le pido al usuario que me proporcione información. Entonces digo "int x = GetInt()". Y si aún no estás familiarizado, "GetInt" es una función que también está incluida en la biblioteca CS50, así que si incluyes "CS50.h", tendrás acceso a "GetInt()" y a todos sus primos: "GetFloat", "GetString", y así sucesivamente. Básicamente, una función "Get" para cada tipo de dato que ya discutimos. 
+
+Entonces "int x" es igual a "Get Int". Básicamente lo que está sucediendo es que estoy en la terminal. Le pregunto al usuario que escriba un número. 
+
+Y aquí estoy cambiando lo que estoy haciendo, dependiendo de lo que el usuario escriba en la instrucción. Así que si escriben uno, imprimo uno. Y entonces, corto. Si escriben dos, imprimo dos. Y entonces, corto. Es importante cortar entre cada caso, de lo contrario, caerás. Entonces, si no tuviera ningún corte allí, y el usuario escribiera uno, ¿qué sucedería? Imprimiría uno, luego dos, luego tres. Ese es un comportamiento extraño, ¿verdad? Podrías pensar eso, pero hay algunos casos en los que esto podría ser bastante útil. Así que aquí hay otro ejemplo de una instrucción "switch" donde omito los cortes. Pero lo hago a propósito. 
+
+Entonces, ¿qué sucede aquí? Piensa por un segundo. Incluso puedes pausar el video.
+
+¿Qué sucede aquí si el usuario escribe cuatro? Así que le he pedido al usuario que escriba información y él proporciona el valor 4. ¿Qué se imprime cuando hago eso? En la diapositiva anterior, había cortes entre todos los casos. Así que solo imprimiría cuatro y luego se detendría. Pero en este caso, no lo hará. Lo que sucederá es que caerás en cada caso. 
+
+Así que en este caso, organicé mis casos de tal manera que si el usuario escribe 4, imprimiré cuatro, tres, dos, uno, despegue. Y si escriben 5, comenzaré en cinco y haré lo mismo. Si escriben 1, solo haré uno, despegue. 
+
+Así que en este caso, estoy usando una "switch" de manera bastante ingeniosa para que caiga en todos los casos. Pero generalmente, probablemente querrás que haya un corte entre todos ellos, a menos que tengas una situación como esta en la que estás aprovechando el hecho de que caerás en los casos sin un corte. 
+
+Así que esa es la segunda de las principales declaraciones condicionales. La última de las cuales es "?:". Así que tengo dos fragmentos de código aquí. Uno a la izquierda y otro a la derecha. El de la izquierda probablemente te resulte bastante familiar. 
+
+T

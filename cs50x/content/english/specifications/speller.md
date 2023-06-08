@@ -1,7 +1,8 @@
 Speller
 =======
 
-**Be sure to read this specification in its entirety before starting so you know what to do and how to do it!**
+<div class="alert" data-alert="danger" role="alert"><p><strong>Be sure to read this specification in its entirety before starting so you know what to do and how to do it!</strong></p></div>
+
 
 For this problem, you’ll implement a program that spell-checks a file, a la the below, using a hash table.
 
@@ -93,16 +94,19 @@ Also notice our use of `#define`, a “preprocessor directive” that defines a 
 
 Finally, notice the prototypes for five functions: `check`, `hash`, `load`, `size`, and `unload`. Notice how three of those take a pointer as an argument, per the `*`:
 
-    bool check(const char *word);
-    unsigned int hash(const char *word);
-    bool load(const char *dictionary);
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bool</span> <span class="nf">check</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">word</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">hash</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">word</span><span class="p">);</span>
+<span class="n">bool</span> <span class="nf">load</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">dictionary</span><span class="p">);</span>
+</code></pre></div></div>
     
 
 Recall that `char *` is what we used to call `string`. So those three prototypes are essentially just:
 
-    bool check(const string word);
-    unsigned int hash(const string word);
-    bool load(const string dictionary);
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bool</span> <span class="nf">check</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="n">word</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">hash</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="n">word</span><span class="p">);</span>
+<span class="n">bool</span> <span class="nf">load</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="n">dictionary</span><span class="p">);</span>
+</code></pre></div></div>
+
     
 
 And `const`, meanwhile, just says that those strings, when passed in as arguments, must remain constant; you won’t be able to change them, accidentally or otherwise!
@@ -225,7 +229,11 @@ Walkthroughs
 
 Note that there are 6 videos in the below playlist.
 
-Though Speller’s walkthrough indicates it is reasonable to use a hash function found online, this video is from an older version of the problem where we allowed this. Per the specification above, the hash function you write should ultimately be your own; you **may not** use a hash function you find online. Be sure to cite any external sources you referenced in writing your hash function.
+
+<div class="alert" data-alert="danger" role="alert"><p>Though Speller’s walkthrough indicates it is reasonable to use a hash function found online, this video is from an older version of the problem where we allowed this. Per the specification above, the hash function you write should ultimately be your own; you <strong>may not</strong> use a hash function you find online. Be sure to cite any external sources you referenced in writing your hash function.</p></div>
+
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/_z57x5PGF4w?modestbranding=0&amp;rel=0&amp;showinfo=1&amp;list=PLhQjrBD2T382T4b6jjwX_qbU23E_Unwcz"></iframe></div>
+
 
 Hints
 -----

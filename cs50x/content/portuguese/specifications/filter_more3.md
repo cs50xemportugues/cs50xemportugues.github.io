@@ -1,0 +1,15 @@
+#### Bordas
+
+Em algoritmos de inteligência artificial para processamento de imagem, muitas vezes é útil detectar bordas em uma imagem: linhas na imagem que criam um limite entre um objeto e outro. Uma maneira de alcançar esse efeito é aplicando o operador [Sobel](https://en.wikipedia.org/wiki/Sobel_operator) à imagem.
+
+Assim como no desfoque de imagem, a detecção de bordas funciona tomando cada pixel e modificando-o com base na grade 3x3 de pixels que o rodeia. Mas em vez de apenas tirar a média dos nove pixels, o operador Sobel calcula o novo valor de cada pixel, fazendo uma soma ponderada dos valores dos pixels circundantes. E como as bordas entre objetos podem ocorrer em direções tanto vertical quanto horizontal, na verdade, você calculará duas somas ponderadas: uma para detectar bordas na direção x e outra para detectar bordas na direção y. Em particular, você usará os seguintes dois "kernels":
+
+![Sobel kernels](https://cs50.harvard.edu/x/2023/psets/4/filter/more/sobel.png)
+
+Como interpretar esses kernels? Resumidamente, para cada um dos três valores de cor para cada pixel, calcularemos duas valores `Gx` e `Gy`. Para calcular `Gx` para o valor do canal vermelho de um pixel, por exemplo, pegaremos os valores vermelhos originais dos nove pixels que formam uma caixa 3x3 ao redor do pixel, multiplicaremos cada um deles pelo valor correspondente no kernel `Gx` e levaremos a soma dos valores resultantes.
+
+Por que esses valores particulares para o kernel? Na direção `Gx`, por exemplo, estamos multiplicando os pixels à direita do pixel alvo por um número positivo e os pixels à esquerda do pixel alvo por um número negativo. Quando tiramos a soma, se os pixels à direita forem de uma cor semelhante aos pixels à esquerda, o resultado será próximo de 0 (os números se cancelam).Mas se os pixels à direita forem muito diferentes dos pixels à esquerda, o valor resultante será muito positivo ou muito negativo, indicando uma mudança na cor que provavelmente é o resultado de um limite entre objetos. E um argumento semelhante é válido para calcular bordas na direção `y`.
+
+Usando esses kernels, podemos gerar um valor `Gx` e `Gy` para cada um dos canais de vermelho, verde e azul para um pixel. Mas cada canal só pode ter um valor, não dois: portanto, precisamos de alguma maneira de combinar `Gx` e `Gy` em um único valor. O algoritmo do filtro Sobel combina `Gx` e `Gy` em um valor final calculando a raiz quadrada de `Gx^2 + Gy^2`. E como os valores do canal só podem ter valores inteiros de 0 a 255, certifique-se de que o valor resultante seja arredondado para o inteiro mais próximo e limitado a 255!
+
+E quanto ao tratamento de pixels na borda ou no canto da imagem? Existem muitas maneiras de lidar com pixels na borda, mas, para os fins deste problema, pediremos que você trate a imagem como se houvesse uma borda preta sólida de 1 pixel ao redor da borda da imagem: portanto, tentar acessar um pixel além da borda da imagem deve ser tratado como um pixel preto sólido (valores de 0 para cada vermelho, verde e azul). Isso efetivamente ignorará esses pixels de nossos cálculos de `Gx` e `Gy`.

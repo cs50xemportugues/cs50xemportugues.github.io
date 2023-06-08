@@ -1,0 +1,48 @@
+{% extends 'layout.html' %} {% block conteudo %}
+<h1 id="problem-set-0">Conjunto de Problemas 0</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    La colaboración en conjuntos de problemas no está permitida, excepto en la medida en que pueda solicitar ayuda a compañeros de clase y otros, siempre y cuando esa ayuda no se reduzca a que otro haga su trabajo por usted, de acuerdo con la política del curso sobre la honestidad académica.
+    <a href="{{url_for('cs50x.honesty')}}">honestidad académica</a>.
+  </p>
+
+  <p>
+    El personal realiza auditorías aleatorias de las presentaciones para CS50x. Los estudiantes que se encuentren en violación de esta política serán expulsados del curso. Los estudiantes que hayan completado previamente CS50x, si se descubre que están en violación, tendrán su Certificado de CS50 revocado permanentemente.
+  </p>
+</div>
+
+<h2 id="what-to-do">Qué hacer</h2>
+
+<ol>
+  <li>
+    Descargue e instale la última versión de
+    <a href="https://www.google.com/chrome/">Chrome</a>, si aún no lo tiene.
+  </li>
+  <li>
+    Implemente su propio proyecto de Scratch utilizando Chrome, según
+    <a href="{{url_for('cs50x.psets.scratch')}}">esta especificación</a>.
+  </li>
+</ol>
+
+<h2 id="when-to-do-it">Cuándo hacerlo</h2>
+
+<p>
+  Para
+  <a
+    data-local="2023-12-31T23:59:00+00:00"
+    href="https://time.cs50.io/20231231T235900Z"
+    >2023-12-31T23:59:00+00:00</a
+  >.
+</p>
+
+<h2 id="advice">Consejos</h2>
+
+<p>
+  Aquí están
+  <a href="https://scratch.mit.edu/studios/30233348/">los ejemplos de David</a> de
+  la clase si desea revisarlos. Para ver el código fuente de cada uno, haga clic en
+  <strong>Ver el interior</strong>.
+</p>
+
+{% endblock %}

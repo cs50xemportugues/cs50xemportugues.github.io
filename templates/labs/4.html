@@ -1,0 +1,45 @@
+{% extends 'layout.html' %} {% block conteudo %}
+<h1 id="lab-4">Lab 4</h1>
+
+<h2 id="what-to-do">What to Do</h2>
+
+<ol>
+  <li>
+    Log into <a href="https://code.cs50.io">code.cs50.io</a> using your GitHub
+    account
+  </li>
+  <li>
+    Run <code class="language-plaintext highlighter-rouge">update50</code> in
+    your codespace’s terminal window to ensure your codespace is up-to-date and,
+    when prompted, click <strong>Rebuild now</strong>
+  </li>
+  <li>
+    Submit one of:
+    <ul>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.labs.smiley')}}">Smiley</a>
+      </li>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.labs.volume')}}">Volume</a>
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>
+  If you submit both Smiley and Volume, we’ll record the higher of your two
+  scores.
+</p>
+
+<h2 id="when-to-do-it">When to Do It</h2>
+
+<p>
+  By
+  <a
+    data-local="2023-12-31T23:59:00+00:00"
+    href="https://time.cs50.io/20231231T235900Z"
+    >2023-12-31T23:59:00+00:00</a
+  >.
+</p>
+
+{% endblock %}

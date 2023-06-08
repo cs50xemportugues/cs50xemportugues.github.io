@@ -1,0 +1,42 @@
+TRANSLATED specifications part1:
+- hello
+- scratch
+- mario more
+- credit
+- scrabble
+- sort
+- smiley
+- volume
+
+INCOMPLETE specifications part1:
+- population
+- mario_less
+- bulbs
+- caesar
+- substitution
+- wordle50
+- plurality
+- tideman
+- recover
+- reverse
+- inheritance
+- cash
+
+NOT STARTED specifications part1:
+- readability
+- caesar
+- filter_less
+- filter_more
+- speller
+
+############################################################
+############################################################
+############################################################
+
+labs:
+- inheritance
+- sort
+- world cup
+
+
+

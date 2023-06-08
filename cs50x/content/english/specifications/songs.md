@@ -1,7 +1,7 @@
 Lab 7: Songs
 ============
 
-You are welcome to collaborate with one or two classmates on this lab, though it is expected that every student in any such group contribute equally to the lab.
+<div class="alert" data-alert="warning" role="alert"><p>You are welcome to collaborate with one or two classmates on this lab, though it is expected that every student in any such group contribute equally to the lab.</p></div>
 
 Write SQL queries to answer questions about a database of songs.
 
@@ -91,7 +91,10 @@ For each of the following problems, you should write a single SQL query that out
 
 ### Walkthrough
 
-This video was recorded when the course was still using CS50 IDE for writing code. Though the interface may look different from your codespace, the behavior of the two environments should be largely similar!
+<div class="alert" data-alert="primary" role="alert"><p>This video was recorded when the course was still using CS50 IDE for writing code. Though the interface may look different from your codespace, the behavior of the two environments should be largely similar!</p></div>
+
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/wgKPUd_95AA"></iframe>
+
 
 Usage
 -----
@@ -107,7 +110,9 @@ where `filename.sql` is the file containing your SQL query.
 
 *   See [this SQL keywords reference](https://www.w3schools.com/sql/sql_ref_keywords.asp) for some SQL syntax that may be helpful!
 
-Not sure how to solve?
+
+<details><summary>Not sure how to solve?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/7hydPL9ZswE"></iframe></details>
+
 
 ### Spotify Wrapped
 

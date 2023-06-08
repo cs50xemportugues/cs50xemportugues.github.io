@@ -1,140 +1,133 @@
-<h1 id="homepage">Homepage</h1>
+Homepage
+========
 
-<p>Build a simple homepage using HTML, CSS, and JavaScript.</p>
+Build a simple homepage using HTML, CSS, and JavaScript.
 
-<h2 id="background">Background</h2>
+Background
+----------
 
-<p>The internet has enabled incredible things: we can use a search engine to research anything imaginable, communicate with friends and family members around the globe, play games, take courses, and so much more. But it turns out that nearly all pages we may visit are built on three core languages, each of which serves a slightly different purpose:</p>
+The internet has enabled incredible things: we can use a search engine to research anything imaginable, communicate with friends and family members around the globe, play games, take courses, and so much more. But it turns out that nearly all pages we may visit are built on three core languages, each of which serves a slightly different purpose:
 
-<ol>
-  <li>HTML, or <em>HyperText Markup Language</em>, which is used to describe the content of websites;</li>
-  <li>CSS, <em>Cascading Style Sheets</em>, which is used to describe the aesthetics of websites; and</li>
-  <li>JavaScript, which is used to make websites interactive and dynamic.</li>
-</ol>
+1.  HTML, or _HyperText Markup Language_, which is used to describe the content of websites;
+2.  CSS, _Cascading Style Sheets_, which is used to describe the aesthetics of websites; and
+3.  JavaScript, which is used to make websites interactive and dynamic.
 
-<p>Create a simple homepage that introduces yourself, your favorite hobby or extracurricular, or anything else of interest to you.</p>
+Create a simple homepage that introduces yourself, your favorite hobby or extracurricular, or anything else of interest to you.
 
-<h2 id="getting-started">Getting Started</h2>
+Getting Started
+---------------
 
-<p>Log into <a href="https://code.cs50.io/">code.cs50.io</a>, click on your terminal window, and execute <code class="language-plaintext highlighter-rouge">cd</code> by itself. You should find that your terminal window’s prompt resembles the below:</p>
+Log into [code.cs50.io](https://code.cs50.io/), click on your terminal window, and execute `cd` by itself. You should find that your terminal window’s prompt resembles the below:
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>$
-</code></pre></div></div>
+    $
+    
 
-<p>Next execute</p>
+Next execute
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>wget https://cdn.cs50.net/2022/fall/psets/8/homepage.zip
-</code></pre></div></div>
+    wget https://cdn.cs50.net/2022/fall/psets/8/homepage.zip
+    
 
-<p>in order to download a ZIP called <code class="language-plaintext highlighter-rouge">homepage.zip</code> into your codespace.</p>
+in order to download a ZIP called `homepage.zip` into your codespace.
 
-<p>Then execute</p>
+Then execute
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>unzip homepage.zip
-</code></pre></div></div>
+    unzip homepage.zip
+    
 
-<p>to create a folder called <code class="language-plaintext highlighter-rouge">homepage</code>. You no longer need the ZIP file, so you can execute</p>
+to create a folder called `homepage`. You no longer need the ZIP file, so you can execute
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rm homepage.zip
-</code></pre></div></div>
+    rm homepage.zip
+    
 
-<p>and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.</p>
+and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.
 
-<p>Now type</p>
+Now type
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cd homepage
-</code></pre></div></div>
+    cd homepage
+    
 
-<p>followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.</p>
+followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>homepage/ $
-</code></pre></div></div>
+    homepage/ $
+    
 
-<p>Execute <code class="language-plaintext highlighter-rouge">ls</code> by itself, and you should see a few files:</p>
+Execute `ls` by itself, and you should see a few files:
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>index.html  styles.css
-</code></pre></div></div>
+    index.html  styles.css
+    
 
-<p>If you run into any trouble, follow these same steps again and see if you can determine where you went wrong! You can immediately start a server to view your site by running</p>
+If you run into any trouble, follow these same steps again and see if you can determine where you went wrong! You can immediately start a server to view your site by running
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http-server
-</code></pre></div></div>
+    http-server
+    
 
-<p>in the terminal window. Then, command-click (if on Mac) or control-click (if on PC) on the first link that appears:</p>
+in the terminal window. Then, command-click (if on Mac) or control-click (if on PC) on the first link that appears:
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>http-server running on LINK
-</code></pre></div></div>
+    http-server running on LINK
+    
 
-<p>Where LINK is the address of your server.</p>
+Where LINK is the address of your server.
 
-<h2 id="specification">Specification</h2>
+Specification
+-------------
 
-<p>Implement in your <code class="language-plaintext highlighter-rouge">homepage</code> directory a website that must:</p>
+Implement in your `homepage` directory a website that must:
 
-<ul>
-  <li data-marker="*">Contain at least four different <code class="language-plaintext highlighter-rouge">.html</code> pages, at least one of which is <code class="language-plaintext highlighter-rouge">index.html</code> (the main page of your website), and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.</li>
-  <li data-marker="*">Use at least ten (10) distinct HTML tags besides <code class="language-plaintext highlighter-rouge">&lt;html&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>, <code class="language-plaintext highlighter-rouge">&lt;body&gt;</code>, and <code class="language-plaintext highlighter-rouge">&lt;title&gt;</code>. Using some tag (e.g., <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>) multiple times still counts as just one (1) of those ten!</li>
-  <li data-marker="*">
-    <p>Integrate one or more features from Bootstrap into your site. Bootstrap is a popular library (that comes with lots of CSS classes and more) via which you can beautify your site. See <a href="https://getbootstrap.com/docs/5.2/">Bootstrap’s documentation</a> to get started. In particular, you might find some of <a href="https://getbootstrap.com/docs/5.2/components/">Bootstrap’s components</a> of interest. To add Bootstrap to your site, it suffices to include</p>
-
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+*   Contain at least four different `.html` pages, at least one of which is `index.html` (the main page of your website), and it should be possible to get from any page on your website to any other page by following one or more hyperlinks.
+*   Use at least ten (10) distinct HTML tags besides `<html>`, `<head>`, `<body>`, and `<title>`. Using some tag (e.g., `<p>`) multiple times still counts as just one (1) of those ten!
+*   Integrate one or more features from Bootstrap into your site. Bootstrap is a popular library (that comes with lots of CSS classes and more) via which you can beautify your site. See [Bootstrap’s documentation](https://getbootstrap.com/docs/5.2/) to get started. In particular, you might find some of [Bootstrap’s components](https://getbootstrap.com/docs/5.2/components/) of interest. To add Bootstrap to your site, it suffices to include <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.5.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
 <span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div> in your pages’ `<head>`, below which you can also include <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"styles.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
 </code></pre></div>    </div>
+      
+    
+    to link your own CSS.
+    
+*   Have at least one stylesheet file of your own creation, `styles.css`, which uses at least five (5) different CSS selectors (e.g. tag (`example`), class (`.example`), or ID (`#example`)), and within which you use a total of at least five (5) different CSS properties, such as `font-size`, or `margin`; and
+*   Integrate one or more features of JavaScript into your site to make your site more interactive. For example, you can use JavaScript to add alerts, to have an effect at a recurring interval, or to add interactivity to buttons, dropdowns, or forms. Feel free to be creative!
+*   Ensure that your site looks nice on browsers both on mobile devices as well as laptops and desktops.
 
-    <p>in your pages’ <code class="language-plaintext highlighter-rouge">&lt;head&gt;</code>, below which you can also include</p>
+Testing
+-------
 
-    <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"styles.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
-</code></pre></div>    </div>
+If you want to see how your site looks while you work on it, you can run `http-server`. Command- or control-click on the first link presented by http-server, which should open your webpage in a new tab. You should then be able to refresh the tab containing your webpage to see your latest changes.
 
-    <p>to link your own CSS.</p>
-  </li>
-  <li data-marker="*">Have at least one stylesheet file of your own creation, <code class="language-plaintext highlighter-rouge">styles.css</code>, which uses at least five (5) different CSS selectors (e.g. tag (<code class="language-plaintext highlighter-rouge">example</code>), class (<code class="language-plaintext highlighter-rouge">.example</code>), or ID (<code class="language-plaintext highlighter-rouge">#example</code>)), and within which you use a total of at least five (5) different CSS properties, such as <code class="language-plaintext highlighter-rouge">font-size</code>, or <code class="language-plaintext highlighter-rouge">margin</code>; and</li>
-  <li data-marker="*">Integrate one or more features of JavaScript into your site to make your site more interactive. For example, you can use JavaScript to add alerts, to have an effect at a recurring interval, or to add interactivity to buttons, dropdowns, or forms. Feel free to be creative!</li>
-  <li data-marker="*">Ensure that your site looks nice on browsers both on mobile devices as well as laptops and desktops.</li>
-</ul>
+Recall also that by opening Developer Tools in Google Chrome, you can _simulate_ visiting your page on a mobile device by clicking the phone-shaped icon to the left of **Elements** in the developer tools window, or, once the Developer Tools tab has already been opened, by typing `Ctrl`+`Shift`+`M` on a PC or `Cmd`+`Shift`+`M` on a Mac, rather than needing to visit your site on a mobile device separately!
 
-<h2 id="testing">Testing</h2>
+Assessment
+----------
 
-<p>If you want to see how your site looks while you work on it, you can run <code class="language-plaintext highlighter-rouge">http-server</code>. Command- or control-click on the first link presented by http-server, which should open your webpage in a new tab. You should then be able to refresh the tab containing your webpage to see your latest changes.</p>
+No `check50` for this assignment! Instead, your site’s correctness will be assessed based on whether you meet the requirements of the specification as outlined above, and whether your HTML is well-formed and valid. To ensure that your pages are, you can use this [Markup Validation Service](https://validator.w3.org/#validate_by_input), copying and pasting your HTML directly into the provided text box. Take care to eliminate any warnings or errors suggested by the validator before submitting!
 
-<p>Recall also that by opening Developer Tools in Google Chrome, you can <em>simulate</em> visiting your page on a mobile device by clicking the phone-shaped icon to the left of <strong>Elements</strong> in the developer tools window, or, once the Developer Tools tab has already been opened, by typing <code class="language-plaintext highlighter-rouge">Ctrl</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+<code class="language-plaintext highlighter-rouge">M</code> on a PC or <code class="language-plaintext highlighter-rouge">Cmd</code>+<code class="language-plaintext highlighter-rouge">Shift</code>+<code class="language-plaintext highlighter-rouge">M</code> on a Mac, rather than needing to visit your site on a mobile device separately!</p>
+Consider also:
 
-<h2 id="assessment">Assessment</h2>
+*   whether the aesthetics of your site are such that it is intuitive and straightforward for a user to navigate;
+*   whether your CSS has been factored out into a separate CSS file(s); and
+*   whether you have avoided repetition and redundancy by “cascading” style properties from parent tags.
 
-<p>No <code class="language-plaintext highlighter-rouge">check50</code> for this assignment! Instead, your site’s correctness will be assessed based on whether you meet the requirements of the specification as outlined above, and whether your HTML is well-formed and valid. To ensure that your pages are, you can use this <a href="https://validator.w3.org/#validate_by_input">Markup Validation Service</a>, copying and pasting your HTML directly into the provided text box. Take care to eliminate any warnings or errors suggested by the validator before submitting!</p>
+Afraid `style50` does not support HTML files, and so it is incumbent upon you to indent and align your HTML tags cleanly. Know also that you can create an HTML comment with:
 
-<p>Consider also:</p>
+    <!-- Comment goes here -->
+    
 
-<ul>
-  <li data-marker="*">whether the aesthetics of your site are such that it is intuitive and straightforward for a user to navigate;</li>
-  <li data-marker="*">whether your CSS has been factored out into a separate CSS file(s); and</li>
-  <li data-marker="*">whether you have avoided repetition and redundancy by “cascading” style properties from parent tags.</li>
-</ul>
+but commenting your HTML code is not as imperative as it is when commenting code in, say, C or Python. You can also comment your CSS, in CSS files, with:
 
-<p>Afraid <code class="language-plaintext highlighter-rouge">style50</code> does not support HTML files, and so it is incumbent upon you to indent and align your HTML tags cleanly. Know also that you can create an HTML comment with:</p>
+    /* Comment goes here */
+    
 
-<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">&lt;!-- Comment goes here --&gt;</span>
-</code></pre></div></div>
+Hints
+-----
 
-<p>but commenting your HTML code is not as imperative as it is when commenting code in, say, C or Python. You can also comment your CSS, in CSS files, with:</p>
+For fairly comprehensive guides on the languages introduced in this problem, check out these tutorials:
 
-<div class="language-css highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="c">/* Comment goes here */</span>
-</code></pre></div></div>
+*   [HTML](https://www.w3schools.com/html/)
+*   [CSS](https://www.w3schools.com/css/)
+*   [JavaScript](https://www.w3schools.com/js/)
 
-<h2 id="hints">Hints</h2>
+How to Submit
+-------------
 
-<p>For fairly comprehensive guides on the languages introduced in this problem, check out these tutorials:</p>
+In your terminal, execute the below to submit your work.
 
-<ul>
-  <li data-marker="*"><a href="https://www.w3schools.com/html/">HTML</a></li>
-  <li data-marker="*"><a href="https://www.w3schools.com/css/">CSS</a></li>
-  <li data-marker="*"><a href="https://www.w3schools.com/js/">JavaScript</a></li>
-</ul>
-
-<h2 id="how-to-submit">How to Submit</h2>
-
-<p>In your terminal, execute the below to submit your work.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>submit50 cs50/problems/2023/x/homepage
-</code></pre></div></div>
+    submit50 cs50/problems/2023/x/homepage

@@ -1,0 +1,35 @@
+Muy bien, bubble sort es un algoritmo que se usa para ordenar un conjunto de elementos. Veamos cómo funciona. 
+
+La idea básica detrás de bubble sort es la siguiente. En general, queremos mover elementos de valores más altos hacia la derecha y elementos de valores más bajos hacia la izquierda, como cabría esperar. Queremos que lo más bajo esté al principio y lo más alto al final. 
+
+¿Cómo lo hacemos? Bueno, en pseudocódigo, podríamos decir que establecemos un contador de intercambio en un valor no nulo. Veremos por qué hacemos esto en un momento. Y luego repetimos el siguiente proceso hasta que el contador de intercambio sea 0 o hasta que no hagamos intercambios en absoluto. 
+
+Reiniciamos el contador de intercambio a 0 si aún no es 0. Luego miramos cada par adyacente de elementos. Si esos dos elementos no están en orden, los intercambiamos y agregamos 1 al contador de intercambio. Si está pensando en esto antes de visualizarlo, observe que esto moverá los elementos de valor más bajo a la izquierda y los elementos de valor más alto a la derecha, haciendo efectivamente lo que queremos hacer, que es mover esos grupos de elementos de esa manera. Visualicemos cómo podríamos hacer esto usando nuestro conjunto de datos que usamos para probar estos algoritmos. Aquí tenemos un conjunto sin ordenar de nuevo, indicado por todos los elementos que se muestran en rojo. Y establecí mi contador de intercambio en un valor distinto de cero. Elegí arbitrariamente -1, que no es 0. Queremos repetir este proceso hasta que el contador de intercambio sea 0. Es por eso que establecí mi contador de intercambio en algún valor distinto de cero, porque de lo contrario, el contador de intercambio sería 0. Ni siquiera comenzaríamos el proceso del algoritmo. Entonces, de nuevo, los pasos son: restablezca el contador de intercambio en 0, luego mire cada par adyacente, y si no están en orden, intercámbielos y agregue 1 al contador de intercambio. Entonces, comencemos este proceso. Lo primero que hacemos es establecer el contador de intercambio en 0 y luego comenzar a mirar cada par adyacente. 
+
+Así que primero comenzamos a mirar 5 y 2. Vemos que están fuera de orden, por lo que los intercambiamos. Y agregamos 1 al contador de intercambio. Así que ahora nuestro contador de intercambio es 1 y 2 y 5 han cambiado de posición. Ahora repetimos el proceso nuevamente. 
+
+Miramos el siguiente par adyacente, 5 y 1: también están fuera de orden, por lo que los intercambiamos y agregamos 1 al contador de intercambio. Luego miramos 5 y 3. Están fuera de orden, así que los intercambiamos y agregamos 1 al contador de intercambio. Luego miramos 5 y 6. Están en orden, así que realmente no necesitamos intercambiar nada esta vez. Luego miramos 6 y 4. También están fuera de orden, así que los intercambiamos y agregamos 1 al contador de intercambio. 
+
+Ahora, observe lo que ha sucedido. Hemos movido 6 hasta el final. Así que en selection sort, si ha visto ese video, lo que hicimos fue mover los elementos más pequeños en la construcción del conjunto ordenado esencialmente de izquierda a derecha, de menor a mayor. En el caso de bubble sort, si estamos siguiendo este algoritmo en particular, en realidad vamos a construir el conjunto ordenado de derecha a izquierda, de mayor a menor. Hemos movido efectivamente 6, el valor más grande, hasta el final. 
+
+Y así ahora podemos declarar que eso está ordenado y en futuras iteraciones, volviendo a través del conjunto de nuevo, ya no tenemos que considerar el 6. Solo tenemos que considerar los elementos no ordenados cuando estamos mirando pares adyacentes. Hemos terminado una pasada por bubble sort. Así que ahora volvemos a la pregunta, repetir hasta que el contador de intercambio sea 0. Bueno, el contador de intercambio es 4, así que seguiremos repitiendo este proceso de nuevo. 
+
+Vamos a restablecer el contador de intercambio a 0 y mirar cada par adyacente. Así que comenzamos con 2 y 1: están fuera de orden, así que los intercambiamos y agregamos 1 al contador de intercambio. 2 y 3 están en orden. No hay nada más que hacer. 3 y 5 están en orden. No tenemos que hacer nada allí. 
+
+5 y 4 están fuera de orden, así que tenemos que intercambiarlos y agregar 1 al contador de intercambio. Y ahora hemos movido 5, el siguiente elemento más grande, al final de la parte no ordenada. Por lo tanto, ahora podemos considerar que esa parte está ordenada. 
+
+Ahora estás mirando la pantalla y probablemente puedes decir, como yo, que el conjunto está ordenado en este momento. Pero aún no podemos probarlo. Pero aquí es donde entra en juego el contador de intercambio. 
+
+Hemos completado una pasada. El contador de intercambio es 2. Así que vamos a repetir este proceso de nuevo, repetir hasta que el contador de intercambio sea 0. Restablecer el contador de intercambio a 0. Entonces lo restableceremos. 
+
+Ahora miramos cada par adyacente. Eso está en orden, 1 y 2. 2 y 3 están en orden. 3 y 4 están en orden. Entonces, en este punto, observe que hemos completado la revisión de cada par adyacente, pero el contador de intercambio aún es 0. 
+
+Si no tenemos que intercambiar ningún elemento, entonces deben estar ordenados, por virtud de este proceso. Y así, una eficiencia de algún tipo, que los informáticos amamos, es que ahora podemos declarar que todo el conjunto debe estar ordenado, porque no tuvimos que intercambiar ningún elemento. Eso es bastante bueno. 
+
+¿Cuál es el peor escenario con bubble sort? En el peor de los casos, el conjunto está completamente ordenado al revés. Y así tenemos que hacer burbujear cada uno de los elementos grandes hasta el otro extremo del conjunto. Efectivamente, también tenemos que hacer burbujear todos los elementos pequeños de vuelta a través del conjunto. Así que cada uno de los n elementos tiene que moverse a través de todos los demás n elementos. Ese es el peor de los casos. En el mejor de los casos, esto es ligeramente diferente del selection sort. El conjunto ya está ordenado cuando comenzamos. No tenemos que hacer ningún intercambio en la primera pasada. Entonces, podríamos tener que mirar menos elementos, ¿verdad?, No tenemos que repetir este proceso varias veces. 
+
+Entonces, ¿qué significa eso? Entonces, ¿cuál es el peor escenario para bubble sort y cuál es el mejor escenario para bubble sort? ¿Adivinaste esto? En el peor escenario, tienes que iterar por todos los n elementos n veces. Por lo tanto, el peor escenario es n². 
+
+Si el conjunto está perfectamente ordenado, solo tienes que mirar cada uno de los elementos una vez. Y si el contador de intercambio aún es 0, puedes decir que el conjunto está ordenado. Y así, en el mejor de los casos, esto es incluso mejor que el selection sort, es omega de n. 
+
+Soy Doug Lloyd. Esto es CS50. "

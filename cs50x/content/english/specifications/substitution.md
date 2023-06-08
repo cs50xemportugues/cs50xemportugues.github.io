@@ -101,7 +101,8 @@ Or really, really doesn’t cooperate, providing too many command-line arguments
     Usage: ./substitution key
     
 
-Watch a Recording
+<details><summary>Watch a Recording</summary><script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-HWzT4fngSv4KtdNFgfgpdLxZY" src="https://asciinema.org/a/HWzT4fngSv4KtdNFgfgpdLxZY.js"></script></details>
+
 
 Specification
 -------------
@@ -122,6 +123,9 @@ You might find one or more functions declared in `ctype.h` to be helpful, per [m
 Walkthrough
 -----------
 
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/cXAoZAsgxJ4?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+
 How to Test Your Code
 ---------------------
 
@@ -135,19 +139,17 @@ Execute the below to evaluate the style of your code using `style50`.
     style50 substitution.c
     
 
-How to Use `debug50`
+<details><summary>How to Use <code>debug50</code></summary><p>Looking to run <code class="language-plaintext highlighter-rouge">debug50</code>? You can do so as follows, after compiling your code successfully with <code class="language-plaintext highlighter-rouge">make</code>,</p>
 
-Looking to run `debug50`? You can do so as follows, after compiling your code successfully with `make`,
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>debug50 ./substitution KEY
+</code></pre></div></div>
 
-    debug50 ./substitution KEY
-    
+<p>wherein <code class="language-plaintext highlighter-rouge">KEY</code> is the key you give as a command-line argument to your program. Note that running</p>
 
-wherein `KEY` is the key you give as a command-line argument to your program. Note that running
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>debug50 ./substitution
+</code></pre></div></div>
 
-    debug50 ./substitution
-    
-
-will (ideally!) cause your program end by prompting the user for a key.
+<p>will (ideally!) cause your program end by prompting the user for a key.</p></details>
 
 How to Submit
 -------------

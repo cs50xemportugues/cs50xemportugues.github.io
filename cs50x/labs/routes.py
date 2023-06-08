@@ -43,7 +43,29 @@ def lab3():
 @bp.route('/4')
 @bp.route('/4.html')
 def lab4():
-    return render_template('topicos/index.html')
+    return render_template('labs/4.html')
+
+@bp.route('/4/smiley')
+@bp.route('/4/smiley.html')
+def smiley():
+    with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/smiley.md", "r") as f:
+        markdown_text = f.read()
+
+    return render_template(
+        'blank.html',
+        markdown_text=marko.convert(markdown_text)
+    )
+
+@bp.route('/4/volume')
+@bp.route('/4/volume.html')
+def volume():
+    with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/volume.md", "r") as f:
+        markdown_text = f.read()
+
+    return render_template(
+        'blank.html',
+        markdown_text=marko.convert(markdown_text)
+    )
 
 @bp.route('/5')
 @bp.route('/5.html')
@@ -59,7 +81,7 @@ def lab5():
 @bp.route('/6')
 @bp.route('/6.html')
 def lab6():
-    with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/world_cup.md", "r") as f:
+    with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/worldcup.md", "r") as f:
         markdown_text = f.read()
 
     return render_template(

@@ -1,0 +1,27 @@
+Antes de hablar sobre imágenes, debemos hablar sobre hipervínculos. Si queremos que nuestra página web sea interactiva y nos lleve a lugares, sería bueno poder hacer clic en uno de esos enlaces que típicamente es de color azul. De esta manera construimos un hipervínculo en nuestra página web. Interesantemente, hay otra etiqueta HTML llamada link, que no es un hipervínculo. La letra "A" significa "ancla", y es así como indicamos un hipervínculo. 
+
+"A href igual a X" significa "ir a la página web X". Y todo lo que está entre la etiqueta A abierta y la etiqueta A cerrada es el texto bajo subrayado y con un color azul que se parece a un enlace que conocemos. Debajo de eso tenemos la etiqueta de imagen, que es una etiqueta auto-cerrada para mostrar una imagen ubicada en X. Es posible cambiar esa imagen especificando la anchura y altura y otros atributos correspondientes. 
+
+En la parte inferior, tenemos una etiqueta de aspecto interesante que no tiene una etiqueta de cierre. Es el signo de exclamación, seguido de "doctype HTML". HTML ha estado presente desde la década de 1990 para crear páginas web y ha sufrido varias revisiones desde entonces. La revisión más reciente es HTML5, que se convirtió en el estándar HTML actual. 
+
+Para indicar que nuestras páginas web están escritas en HTML5, esto es cómo empezamos. Puede omitirse, pero básicamente significa que no se pueden usar las etiquetas que son de HTML5, es decir, las nuevas etiquetas. Por lo tanto, siempre comenzamos si estamos usando HTML5. Y todas las etiquetas que hemos mencionado anteriormente no son etiquetas HTML5. Pero esto indicaría que las etiquetas HTML5 estarán presentes. Y así, tenemos doctype HTML, que está al principio de nuestro archivo HTML y, a partir de ese punto, tenemos nuestra etiqueta HTML abierta y procedemos a partir de allí. 
+
+La última etiqueta es una etiqueta de comentario, que se ve un poco diferente. Comienza con el signo de ángulo, seguido de una exclamación y dos guiones, pero sin el signo de cierre. Escribimos nuestros comentarios entre esos dos elementos. Y echemos un vistazo a imágenes, comentarios y enlaces en CS50 IDE. 
+
+Tengo aquí un archivo llamado "image_link.html" que voy a abrir. Y observen que tengo algunos comentarios aquí en mis comentarios HTML. Al igual que en C y otros lenguajes de programación, HTML, al ser un lenguaje de marcado, tiene la capacidad de tener comentarios. Y aparentemente, voy a colocar una imagen de Rick Astley en algún lugar de esta etiqueta de "división", en alguna parte arbitraria. Aparentemente, ese archivo está ubicado en "rick.jpeg", que, si regresamos a mi árbol de archivos por un momento, es un archivo que existe en el directorio actual, lo que está bien. Puedo hacer referencia a él. 
+
+Luego puedo tener enlaces internos. Observen que en la línea 11 la referencia a "href" es "hello.html", lo que se refiere a "hello.html", que existe en el directorio actual. Y también puedo tener enlaces externos simplemente especificando "HTTPS" para indicar que no estoy hablando de un archivo en mi directorio actual. Estoy hablando de un archivo que existe en algún lugar de Internet, lo que debo solicitar usando el protocolo HTTP. 
+
+Veamos cómo podría verse esta página y prepárense para ver una imagen de Rick Astley en su pantalla. Entonces, lo previsualizaré. Ahí está Rick Astley en la parte superior, en esta "división" arbitraria. Y luego, debajo de eso, tengo mis enlaces, ¿verdad? 
+
+Tengo un enlace a "hello.html". Y si hago clic en eso, me traslado a esta página con la que estamos muy familiarizados desde el inicio de nuestro programa. Si abro esa página de nuevo, si abro "image_link" una vez más, también puedo ir externamente al sitio web de CS50. Y allí vemos - haré un zoom out un poco - el sitio web de CS50 incrustado en medio de nuestra página. Entonces pude hacer un enlace interno y un enlace externo. 
+
+La última regla con HTML que hablaremos aquí es que su HTML debería estar bien formado. En C hablamos mucho sobre la sintaxis de las cosas. En HTML, la sintaxis gira en torno a las etiquetas. Cada etiqueta que abre debe cerrarse. Y de hecho, cada etiqueta que abre debe cerrarse en orden inverso. 
+
+Entonces, si abres una etiqueta de negrita, una de cursiva y luego una de subrayado para hacer las tres cosas a un conjunto particular de texto, debes cerrarlas en orden inverso. Entonces, si abriste negrita, cursiva, subrayado, debes cerrar subrayado, cursiva, negrita. Esta encapsulación es lo que mantiene a HTML agradable y organizado. 
+
+A diferencia de C, los errores de sintaxis no paralizarán tu HTML posiblemente. Su HTML puede no estar bien formado, pero aún funcionaría. Por lo tanto, estos errores pueden pasar desapercibidos. Depende de ti ser realmente vigilante. A veces fallarán, pero a veces puedes salirte con la tuya. 
+
+Puede ser una tarea realmente difícil hacer un seguimiento de cuándo abriste una etiqueta, cuándo la cerraste, especialmente a medida que tus archivos HTML se vuelven cada vez más grandes. Necesitarás ayuda. Y hay herramientas validadoras en línea que puedes usar para ver tu página web y ver si está bien formada en HTML. Y definitivamente deberías echar un vistazo a esas herramientas y empezar a usarlas a medida que comiences a trabajar con HTML, escribiendo HTML, para que adoptes buenos hábitos para organizar tu HTML de una manera buena y en un buen estilo, y asegurarte de no hacer nada que pueda crear un error de sintaxis que pueda causarte problemas más adelante. 
+
+Soy Doug Lloyd. Esto es CS50. "

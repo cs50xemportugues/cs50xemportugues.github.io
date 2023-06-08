@@ -1,0 +1,43 @@
+De acuerdo. ¿Un tema extraño, verdad? Números mágicos. ¿Qué significa cuando se habla de números mágicos? Bueno, algunos de los programas que hemos escrito en CS50 hasta ahora han tenido algunos números extraños. Tal vez por razones que no entendemos completamente en este momento. Por ejemplo, en el problema de Mario, establecimos un límite de altura de la pirámide en 23. Dijimos explícitamente que no puedes ir más alto que 23.
+
+¿Pero qué significa 23? Bueno, si lees cuidadosamente la especificación, puede haber visto que la razón por la que lo limitamos a 23 es porque la altura estándar de una ventana de terminal es 24. Si hacemos que la pirámide sea más alta que eso, podría hacer una cosa rara donde se sale de la pantalla.  Y, ¿sabes qué significa esto en contexto, verdad?
+
+¿Es el significado de 23 inmediatamente obvio para alguien que mira tu programa y tal vez tiene una ventana de terminal de tamaño diferente? Probablemente no. Parece que están escribiendo constantes en tu código es una mala práctica. Y de hecho, cuando escribes una constante en tu código, a veces se le llama usar números mágicos, algo que generalmente queremos evitar.
+
+Por ejemplo, echemos un vistazo a esta simple función aquí. Obviamente, no hay un tipo de datos en C llamado carta o mazo. Solo sé paciente. Hay un poco de seudocódigo mezclado aquí. Esta es una función llamada "repartir carta", que aparentemente toma un mazo como parámetro y me proporcionará una sola carta.
+
+Estoy haciendo algo aquí donde tengo un bucle que se ejecuta de 0 a 52 y reparto una carta. Bueno, tenemos un número mágico aquí, ¿verdad? ¿Ves cuál es el número mágico? O más importante, ¿ves cuál es el problema aquí? Especialmente si esta es solo una función en su propio archivo en una carpeta que contiene un montón de archivos diferentes, cada uno de los cuales hace otra cosa con un mazo de cartas. Tal vez los mezclan o reparten una mano de cinco cartas en lugar de una sola carta.
+
+¿Ves cuál podría ser el problema aquí? ¿Ves el número mágico que he inyectado en el código? Es 52, ¿verdad?
+
+De manera intuitiva, probablemente sepas que un mazo de cartas estándar contiene 52 cartas. Pero en nuestro programa, está flotando por ahí. De repente hay un 52.
+
+Una solución para resolver este problema es la siguiente: ahora estamos llamando explícitamente al tamaño del mazo como 52. Esto le da un poco más de significado intuitivo cuando más tarde en el bucle for decimos "i es menor que el tamaño del mazo". Simplemente parece mejor que decir 52. 
+
+Esto realmente resuelve el problema. Pero en realidad, introduce otro problema que puede no ser inmediatamente evidente. Incluso si esta variable se declara globalmente: ¿recuerdas lo que significa cuando declaramos una variable globalmente frente a localmente? Aún si declaramos una variable globalmente, ¿qué pasaría si hay otra función en nuestra suite de funciones que de manera inadvertida cambia el tamaño del mazo o lo incrementa en 1 o lo decrementa en 1? Eso podría interpretarse como problemas, ¿verdad? Especialmente si estamos tratando con un conjunto de cartas donde se requiere mezclar todo el mazo. Si el tamaño del mazo se disminuye en uno, por ejemplo, a 51, es posible que no estemos realmente mezclando todas las cartas. Estamos dejando una carta fuera. Y ese valor podría ser predicho o explotado por un mal actor.
+
+C proporciona lo que se llama una directiva del preprocesador, que también se llama una macro, para crear constantes simbólicas. De hecho, ya has visto una directiva del preprocesador, incluso si no lo han llamado así, con #include. Es otro ejemplo de una macro o directiva del preprocesador.
+
+La forma de crear constantes simbólicas, o darle un nombre a una constante para que tenga más significado, es la siguiente: #define, nombre, reemplazo. Realmente importante: no ponga un punto y coma al final de tus #defines. Así que es #define, nombre, reemplazo.
+
+Cuando se compila tu programa, lo que sucede es que el compilador va a pasar dentro de tu código y reemplazar cada aparición de la palabra "nombre" con lo que hayas puesto como "reemplazo". Analógicamente, si #include se parece a copiar y pegar, entonces #define se parece un poco a buscar y reemplazar, si alguna vez has usado esa función en un programa de procesamiento de textos, por ejemplo.
+
+Por ejemplo, si definimos pi como 3.14159265, si eres más matemáticamente inclinado y de repente ves 3.14159265 volando en tu código, probablemente sepas que se está hablando de pi. Pero tal vez podamos darle un poco más de significado simbólico. Y en su lugar podemos decir "define pi" como esa cantidad de números que no voy a seguir leyendo una y otra vez.
+
+Eso va a pasar en tiempo de compilación. El primer paso será que el programa va a pasar dentro del código. Cada vez que vea una P mayúscula, una I mayúscula, la reemplazará literalmente con 3.14 y así sucesivamente. Entonces, no tendrás que escribirlo cada vez.
+
+No estás limitado a esta sustitución solo para números. Por ejemplo, podría #define "curso" como la cadena "CS50". En este caso, cuando el programa se compile, #define pasará por el código y reemplazará cada vez que se vea "curso" con la cadena "CS50".
+
+También notarás aquí que con frecuencia #define todas las constantes simbólicas definidas que utilizo están siempre en mayúsculas. Es una convención, no es obligatorio. La razón general por la que las personas suelen usar todas las letras mayúsculas cuando definen es solo para dejar en claro que este elemento particular de mi código es una constante definida. Si está en minúsculas, es posible que se confunda con una variable. Y eso probablemente no sea algo bueno.
+
+Esta solución particular es mucho mejor que las anteriores. Si primero #define deck size como 52, ahora el uso de 52, o deck size aquí, es mucho más intuitivo y mucho más seguro. No puedes manipular una constante. No puedes decir "52 plus plus". Eso no va a convertirlo en 53. No puedes cambiar 52 a algo.
+
+Puedes cambiar una variable cuyo valor es 52, que era la primera corrección que hicimos antes. Y podrías aumentar esa variable a 53. Pero no puedes decir "52 plus plus" y hacer que de repente se convierta en 53. 52 siempre será 52. Por lo que no puedes cambiar deck size aquí inadvertidamente manipulándolo.
+
+Otro buen efecto secundario de esto es que, ¿sabías que no todos los países del mundo usan un mazo de cartas de tamaño 52? Por ejemplo, en Alemania es muy común usar un tamaño de carta de 32, donde eliminan algunas de las cartas de menor valor. En este caso, si quisiera trasladar mi suite de funciones que tratan la manipulación de cartas a Alemania, podría en el primer caso que mostramos, tener que ir y reemplazar todas las instancias de 52 en mi código con 32.
+
+Pero aquí, si #define deck size como 32 en la parte superior de mi código, si necesito cambiarlo, solo puedo cambiar esa cosa, volver a compilar mi código y de repente se propagará. De hecho, podemos cambiar deck size a cualquier valor que queramos. 
+
+¿Quieres jugar al recolector de cartas? 
+
+Soy Doug Lloyd. Y esto es CS50.

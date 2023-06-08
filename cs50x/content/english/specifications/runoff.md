@@ -35,19 +35,19 @@ You already know about plurality elections, which follow a very simple algorithm
 
 But the plurality vote does have some disadvantages. What happens, for instance, in an election with three candidates, and the ballots below are cast?
 
-![Five ballots, tie betweeen Alice and Bob](../fptp_ballot_1.png)
+![Five ballots, tie betweeen Alice and Bob](https://cs50.harvard.edu/x/2023/psets/3/fptp_ballot_1.png)
 
 A plurality vote would here declare a tie between Alice and Bob, since each has two votes. But is that the right outcome?
 
 There’s another kind of voting system known as a ranked-choice voting system. In a ranked-choice system, voters can vote for more than one candidate. Instead of just voting for their top choice, they can rank the candidates in order of preference. The resulting ballots might therefore look like the below.
 
-![Three ballots, with ranked preferences](../ranked_ballot_1.png)
+![Three ballots, with ranked preferences](https://cs50.harvard.edu/x/2023/psets/3/ranked_ballot_1.png)
 
 Here, each voter, in addition to specifying their first preference candidate, has also indicated their second and third choices. And now, what was previously a tied election could now have a winner. The race was originally tied between Alice and Bob, so Charlie was out of the running. But the voter who chose Charlie preferred Alice over Bob, so Alice could here be declared the winner.
 
 Ranked choice voting can also solve yet another potential drawback of plurality voting. Take a look at the following ballots.
 
-![Nine ballots, with ranked preferences](../ranked_ballot_3.png)
+![Nine ballots, with ranked preferences](https://cs50.harvard.edu/x/2023/psets/3/ranked_ballot_3.png)
 
 Who should win this election? In a plurality vote where each voter chooses their first preference only, Charlie wins this election with four votes compared to only three for Bob and two for Alice. But a majority of the voters (5 out of the 9) would be happier with either Alice or Bob instead of Charlie. By considering ranked preferences, a voting system may be able to choose a winner that better reflects the preferences of the voters.
 
@@ -145,11 +145,12 @@ Complete the `vote` function.
 *   If the preference is successfully recorded, the function should return `true`; the function should return `false` otherwise (if, for instance, `name` is not the name of one of the candidates).
 *   You may assume that no two candidates will have the same name.
 
-Hints
 
-*   Recall that `candidate_count` stores the number of candidates in the election.
-*   Recall that you can use [`strcmp`](https://man.cs50.io/3/strcmp) to compare two strings.
-*   Recall that `preferences[i][j]` stores the index of the candidate who is the `j`th ranked preference for the `i`th voter.
+<details><summary>Hints</summary><ul>
+  <li data-marker="*">Recall that <code class="language-plaintext highlighter-rouge">candidate_count</code> stores the number of candidates in the election.</li>
+  <li data-marker="*">Recall that you can use <a href="https://man.cs50.io/3/strcmp"><code class="language-plaintext highlighter-rouge">strcmp</code></a> to compare two strings.</li>
+  <li data-marker="*">Recall that <code class="language-plaintext highlighter-rouge">preferences[i][j]</code> stores the index of the candidate who is the <code class="language-plaintext highlighter-rouge">j</code>th ranked preference for the <code class="language-plaintext highlighter-rouge">i</code>th voter.</li>
+</ul></details>
 
 ### `tabulate`
 
@@ -158,13 +159,13 @@ Complete the `tabulate` function.
 *   The function should update the number of `votes` each candidate has at this stage in the runoff.
 *   Recall that at each stage in the runoff, every voter effectively votes for their top-preferred candidate who has not already been eliminated.
 
-Hints
-
-*   Recall that `voter_count` stores the number of voters in the election and that, for each voter in our election, we want to count one ballot.
-*   Recall that for a voter `i`, their top choice candidate is represented by `preferences[i][0]`, their second choice candidate by `preferences[i][1]`, etc.
-*   Recall that the `candidate` `struct` has a field called `eliminated`, which will be `true` if the candidate has been eliminated from the election.
-*   Recall that the `candidate` `struct` has a field called `votes`, which you’ll likely want to update for each voter’s preferred candidate.
-*   Once you’ve cast a vote for a voter’s first non-eliminated candidate, you’ll want to stop there, not continue down their ballot! Recall that you can break out of a loop early using `break` inside of a conditional.
+<details><summary>Hints</summary><ul>
+  <li data-marker="*">Recall that <code class="language-plaintext highlighter-rouge">voter_count</code> stores the number of voters in the election and that, for each voter in our election, we want to count one ballot.</li>
+  <li data-marker="*">Recall that for a voter <code class="language-plaintext highlighter-rouge">i</code>, their top choice candidate is represented by <code class="language-plaintext highlighter-rouge">preferences[i][0]</code>, their second choice candidate by <code class="language-plaintext highlighter-rouge">preferences[i][1]</code>, etc.</li>
+  <li data-marker="*">Recall that the <code class="language-plaintext highlighter-rouge">candidate</code> <code class="language-plaintext highlighter-rouge">struct</code> has a field called <code class="language-plaintext highlighter-rouge">eliminated</code>, which will be <code class="language-plaintext highlighter-rouge">true</code> if the candidate has been eliminated from the election.</li>
+  <li data-marker="*">Recall that the <code class="language-plaintext highlighter-rouge">candidate</code> <code class="language-plaintext highlighter-rouge">struct</code> has a field called <code class="language-plaintext highlighter-rouge">votes</code>, which you’ll likely want to update for each voter’s preferred candidate.</li>
+  <li data-marker="*">Once you’ve cast a vote for a voter’s first non-eliminated candidate, you’ll want to stop there, not continue down their ballot! Recall that you can break out of a loop early using <code class="language-plaintext highlighter-rouge">break</code> inside of a conditional.</li>
+</ul></details>
 
 ### `print_winner`
 
@@ -173,9 +174,9 @@ Complete the `print_winner` function.
 *   If any candidate has more than half of the vote, their name should be printed and the function should return `true`.
 *   If nobody has won the election yet, the function should return `false`.
 
-Hints
-
-*   Recall that `voter_count` stores the number of voters in the election. Given that, how would you express the number of votes needed to win the election?
+<details><summary>Hints</summary><ul>
+  <li data-marker="*">Recall that <code class="language-plaintext highlighter-rouge">voter_count</code> stores the number of voters in the election. Given that, how would you express the number of votes needed to win the election?</li>
+</ul></details>
 
 ### `find_min`
 
@@ -183,9 +184,9 @@ Complete the `find_min` function.
 
 *   The function should return the minimum vote total for any candidate who is still in the election.
 
-Hints
-
-*   You’ll likely want to loop through the candidates to find the one who is both still in the election and has the fewest number of votes. What information should you keep track of as you loop through the candidates?
+<details><summary>Hints</summary><ul>
+  <li data-marker="*">You’ll likely want to loop through the candidates to find the one who is both still in the election and has the fewest number of votes. What information should you keep track of as you loop through the candidates?</li>
+</ul></details>
 
 ### `is_tie`
 
@@ -194,9 +195,9 @@ Complete the `is_tie` function.
 *   The function takes an argument `min`, which will be the minimum number of votes that anyone in the election currently has.
 *   The function should return `true` if every candidate remaining in the election has the same number of votes, and should return `false` otherwise.
 
-Hints
-
-*   Recall that a tie happens if every candidate still in the election has the same number of votes. Note, too, that the `is_tie` function takes an argument `min`, which is the smallest number of votes any candidate currently has. How might you use that information to determine if the election is a tie (or, conversely, not a tie)?
+<details><summary>Hints</summary><ul>
+  <li data-marker="*">Recall that a tie happens if every candidate still in the election has the same number of votes. Note, too, that the <code class="language-plaintext highlighter-rouge">is_tie</code> function takes an argument <code class="language-plaintext highlighter-rouge">min</code>, which is the smallest number of votes any candidate currently has. How might you use that information to determine if the election is a tie (or, conversely, not a tie)?</li>
+</ul></details>
 
 ### `eliminate`
 
@@ -207,6 +208,10 @@ Complete the `eliminate` function.
 
 Walkthrough
 -----------
+
+
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/-Vc5aGywKxo?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
 
 Usage
 -----

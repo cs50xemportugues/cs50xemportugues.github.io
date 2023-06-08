@@ -3,6 +3,7 @@ from . import cs50x as bp
 import os
 import marko
 
+
 @bp.route('/')
 @bp.route('/index.html')
 def index():
