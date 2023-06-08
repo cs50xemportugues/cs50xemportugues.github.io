@@ -28,14 +28,14 @@ routes_notes = {
 routes_psets = {
     "english": "psets",
     "portuguese": "problemas",
-    "french": "problemes",
+    "french": "problemas",
     "spanish": "problemas"
 }
 
 routes_labs = {
     "english": "labs",
     "portuguese": "laboratorios",
-    "french": "laboratoires",
+    "french": "laboratorios",
     "spanish": "laboratorios"
 }
 

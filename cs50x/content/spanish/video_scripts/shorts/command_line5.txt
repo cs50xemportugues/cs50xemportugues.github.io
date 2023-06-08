@@ -1,0 +1,11 @@
+El último comando de línea de comandos que será bastante útil para ti es mv, que es una abreviatura de move. Move es básicamente equivalente a rename. Mueve un archivo de una ubicación a otra, desde la fuente al destino. Veamos dónde podría ser útil usar move en la ventana de la terminal. 
+
+Así que estoy en mi directorio pset1, y he notado que algo ha salido mal. Estaba trabajando en mi problema codicioso, pero lo nombré accidentalmente como "greddy". Así que cuando intento ejecutarlo a través de check50, realmente no funciona. Tengo un par de opciones. Podríamos hacer lo que hemos hecho antes, que es hacer una copia del archivo. Podría copiar "greddy.c" a "greedy.c", ¿verdad? Presionar Enter. Veo que ambos archivos están allí. Y luego puedo utilizar rm, para eliminar, "greddy.c". Eso lo elimina. Así que eso funcionaría, después de confirmar que quiero deshacerme de él. Y efectivamente he renombrado "greddy.c" como "greedy.c". Lo copié y luego eliminé el original. 
+
+Pero ese es un proceso de varios pasos. Y ciertamente hay una mejor manera. De hecho, la hay. Así que presionemos Control + L, para volver a mostrar esto, y listar el contenido de mi directorio de nuevo. 
+
+Así que digamos, oh, cometí un error. Realmente quería llamar a ese archivo "greddy.c". En un solo paso, puedo escribir "move greedy.c greddy.c". Presionar Enter. Y ahora, no tuve que copiarlo y eliminarlo, simplemente pude renombrarlo. Compras y ventas en un solo lugar. 
+
+Ahora, hay muchas otras utilidades básicas de línea de comandos que puedes usar con la línea de comandos de Linux. Y discutiremos muchas de ellas en el futuro en CS50. Pero por ahora, simplemente familiarizándote con el entorno de la terminal, estos cinco comandos deberían llevarte bastante lejos para navegar y trabajar con archivos en tu IDE o en cualquier sistema operativo basado en Linux que estés utilizando. 
+
+Si tienes curiosidad y quieres mirar un poco hacia adelante a algunos de los comandos de línea de comandos que usaremos en el futuro, aquí hay una lista de algunos de los más comunes. Soy Doug Lloyd. Esto es CS50. "

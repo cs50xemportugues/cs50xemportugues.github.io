@@ -1,0 +1,33 @@
+A estas alturas, ya sabes mucho sobre arreglos y también sabes mucho sobre listas enlazadas. Y hemos discutido las ventajas y desventajas, hemos hablado de que las listas enlazadas pueden crecer y disminuir, pero ocupan más espacio. Los arreglos son mucho más sencillos de usar, pero son restrictivos en cuanto a que tenemos que establecer el tamaño del arreglo al principio y luego estamos atrapados con eso.
+
+Pero, prácticamente hemos agotado todos nuestros temas sobre listas enlazadas y arreglos. ¿O no? Tal vez podamos hacer algo aún más creativo. Y eso sugiere la idea de una tabla hash.
+
+Entonces, en una tabla hash intentaremos combinar un arreglo con una lista enlazada. Vamos a tomar las ventajas del arreglo, como el acceso aleatorio, poder ir a los elementos del arreglo 4 o 8 sin tener que iterar a través de él. Eso es bastante rápido, ¿verdad?
+
+Pero también queremos que nuestra estructura de datos pueda crecer y disminuir. No queremos estar restringidos. Y queremos poder agregar y quitar cosas con facilidad, lo cual, si recuerdas, es muy complejo con un arreglo. Y podemos llamar a esta nueva cosa una tabla hash.
+
+Y si se implementa correctamente, estamos tomando las ventajas de ambas estructuras de datos que ya has visto, arreglos y listas enlazadas.
+
+Bueno, una inserción promedio en una tabla hash puede comenzar a acercarse al tiempo constante. Y la eliminación también puede acercarse al tiempo constante. Y la búsqueda también puede acercarse al tiempo constante. No tenemos una estructura de datos aún que pueda hacer eso, y eso ya suena como algo bastante bueno. Realmente hemos mitigado las desventajas de cada una por separado.
+
+Para obtener esta mejora de rendimiento, sin embargo, necesitamos repensar cómo agregamos datos a la estructura. Específicamente, queremos que los datos mismos nos digan dónde deberían ir en la estructura. Y si luego necesitamos ver si está en la estructura, si necesitamos encontrarlo, queremos mirar los datos nuevamente y ser capaces, mediante los datos, de accederlos aleatoriamente. Solo mirando los datos deberíamos tener una idea de dónde exactamente lo encontraremos en la tabla hash.
+
+Ahora, el inconveniente de una tabla hash es que realmente no son muy buenos para ordenar datos. Y de hecho, si comienzas a usarlos para ordenar datos, pierdes todas las ventajas que tenías anteriormente en términos de inserción y eliminación. El tiempo se acerca más a theta de n y, básicamente, hemos regresado a una lista enlazada. Y por lo tanto, solo queremos usar tablas hash si no nos importa si los datos están ordenados. Para el contexto en el que los usará en CS50, probablemente no le importe que los datos estén ordenados.
+
+Entonces, una tabla hash es una combinación de dos piezas distintas con las que estamos familiarizados. La primera es una función, que generalmente llamamos una función hash. Y esa función hash va a devolver un entero no negativo, que generalmente llamamos un código hash, ¿de acuerdo? La segunda pieza es un arreglo, que es capaz de almacenar datos del tipo que queremos colocar en la estructura de datos. Postergaremos el elemento de la lista enlazada por ahora y simplemente comenzaremos con los conceptos básicos de una tabla hash para que te hagas una idea, y luego quizás te sorprendamos un poco cuando combinemos arreglos y listas enlazadas.
+
+La idea básica es tomar algunos datos. Ejecutamos esos datos a través de la función hash. Y por lo tanto, los datos se procesan y arrojan un número, ¿de acuerdo? Y luego, con ese número, simplemente almacenamos los datos que queremos almacenar en el arreglo en esa ubicación. Entonces, por ejemplo, tenemos esta tabla hash de cadenas. Tiene 10 elementos en ella, por lo que podemos colocar 10 cadenas en ella.
+
+Digamos que queremos crear un hash para John. Así que John es el dato que queremos insertar en esta tabla hash en algún lugar. ¿Dónde lo ponemos? Bueno, típicamente con un arreglo hasta ahora probablemente lo habríamos colocado en la ubicación 0 del arreglo. Pero ahora tenemos esta nueva función hash.
+
+Y digamos que ejecutamos John a través de esta función hash y arroja 4. Bueno, ahí es donde vamos a querer colocar a John. Queremos poner a John en la ubicación del arreglo 4, porque si aplicamos la función hash a John nuevamente, digamos más tarde queremos buscar y ver si John existe en esta tabla hash, todo lo que necesitamos hacer es ejecutarlo a través de la misma función hash, obtener el número 4 de nuevo y ser capaces de encontrar a John de inmediato en nuestra estructura de datos. Eso es bastante bueno.
+
+Digamos que hacemos esto de nuevo, queremos crear un hash para Paul. Queremos agregar a Paul en esta tabla hash. Digamos que esta vez ejecutamos a Paul a través de la función hash, el código hash que se genera es 6. Bueno, ahora podemos colocar a Paul en la ubicación del arreglo 6. Y si necesitamos buscar si Paul está en esta tabla hash, todo lo que necesitamos hacer es ejecutar a Paul a través de la función hash nuevamente y obtendremos 6 de nuevo.
+
+Y luego solo miramos la ubicación del arreglo 6. ¿Está Paul allí? Si es así, él está en la tabla hash. ¿No está Paul allí? Entonces no está en la tabla hash. Es bastante sencillo.
+
+Ahora, ¿cómo se define una función hash? Bueno, realmente no hay límite para el número de posibles funciones hash. De hecho, hay varias realmente buenas en Internet. Hay varias realmente malas en Internet. También es bastante fácil escribir una mala.
+
+Entonces, ¿qué hace una buena función hash, ¿verdad? Bueno, una buena función hash debe usar solo los datos que se están hasheando y todos los datos que se están hasheando. Por lo tanto, no queremos usar nada más que los datos. Y queremos usar todos los datos. No queremos usar solo una parte de ellos, queremos usarlos todos. Una función hash también debe ser determinista. ¿Qué significa eso? Significa que cada vez que pasamos exactamente la misma pieza de datos a la función hash, siempre obtenemos el mismo código hash. Si paso a John en la función hash, obtengo 4. Debería poder hacer eso 10.000 veces y siempre tendré 4. Entonces, efectivamente, no puede haber números aleatorios en nuestras funciones hash.
+
+Una función hash también debe distribuir uniformemente los datos. Si cada vez que ejecuta datos a través de la función hash, obtienes el código hash 0, eso probablemente no sea tan bueno, ¿verdad? Probablemente quieras un rango más grande de códigos hash. También las cosas pueden distribuirse por toda la tabla. Y también sería genial si los datos realmente similares, como John y Jonathan, se distribuyeran en diferentes ubicaciones en la tabla hash. Esa sería una buena ventaja.

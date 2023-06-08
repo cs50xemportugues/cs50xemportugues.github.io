@@ -1,0 +1,23 @@
+Como dije, teníamos alrededor de 4 mil millones. Pero eso no va a ser suficiente, ¿verdad? Y por lo tanto, la forma en que se ha decidido manejar esto es hacer direcciones IP más largas. En lugar de direcciones de 32 bits, tendremos direcciones de 128 bits. Por lo tanto, en lugar de 4 mil millones de direcciones, tendremos ese enorme número de direcciones, que son 340 mil billones de billones de billones de billones, muchas direcciones IP.
+
+Este nuevo esquema se llama IPv6, comúnmente conocido como se refiere. El antiguo esquema es IPv4. Es un poco un problema ya que este problema ha sido conocido por mucho tiempo.
+
+Y verás esto mucho en el contexto de las computadoras y la informática. Somos buenos anticipando problemas. Pero somos malos en lidiar con ellos, aunque sepamos de ellos. IPv6 ha estado disponible durante un tiempo. Y solo en los últimos años, realmente hemos empezado a incorporar estas direcciones IPv6 para eliminar las direcciones IPv4. Pero algunos lugares las tienen. Y se parecen a una dirección IP regular. Pero son mucho más largas.
+
+Entonces, en lugar de tener cuatro grupos de 8 bytes para tu dirección, ahora tenemos ocho grupos de 16 bytes. Y 8 veces 16 es 128. Y las representamos en la forma hexadecimal menos convencional. Porque tener números de 16 bits significa que en lugar de tener un rango de 0 a 255, tendríamos un rango de 0 a 65,535.
+
+Y por lo tanto, tener un montón de esos pegados juntos sería muy difícil de leer. Y generalmente usamos hex por conveniencia. Y así, una dirección IPv6 típica podría verse así.
+
+Ciertamente es mucho más larga que la dirección IPv4 que hemos visto antes, pero esta sería una dirección IPv6 válida. Esta también es sobre una dirección IPv6.
+
+Esta pertenece a Google. Y observa que hay un montón de ceros allí. A veces, estas direcciones pueden volverse tan largas. Y como todavía estamos bastante temprano en IPv6, a veces puede haber grandes bloques de ceros allí que no necesitamos.
+
+Si estás leyendo esto en voz alta, es 2001.4860.4860.0.0.0.0.8844. Es un poco pesado, ¿verdad? Entonces, si ves un montón de ceros, a veces puedes ver una dirección IPv6 como esta, donde omiten los ceros y usan un doble colon en su lugar. Esto está bien, sin embargo. Porque sabemos que deben haber ocho grupos distintos. Y por lo tanto, por implicación, vemos cuatro. Entonces sabemos que debe haber cuatro conjuntos de ceros como este, que lo llenan.
+
+Entonces, a veces, puedes ver una dirección IPv6 que no tiene ocho grupos separados como aquí. Puede verse así. Y eso solo significa que todo lo que no veas entre donde está ese doble colon es cero separado.
+
+Entonces, bien. Sabemos un poco más sobre las direcciones IP ahora. Pero, ¿cómo las obtenemos? No podemos elegir la que queremos. Si hiciéramos eso, podríamos terminar peleando con alguien por la misma dirección IP. O alguien podría haberlo elegido previamente. Si tratamos de tomarlo, encontraremos un problema. Por lo tanto, no podemos elegir la dirección IP que queremos.
+
+La forma en que obtenemos una dirección IP está en alguna parte entre nuestra computadora e internet, ese gran internet ahí afuera, hay algo llamado un servidor DHCP, un Protocolo de configuración dinámica de host. Es una gran cantidad de texto. Pero realmente lo que hace es asignarte una dirección IP.
+
+Tu servidor DHCP tiene una lista de direcciones que puede asignar válidamente. Y te da uno. Eso es prácticamente todo. Antes de DHCP, esta tarea de asignar direcciones correspondía a un administrador del sistema. Entonces, una persona real tendría que asignar manualmente a su computadora y dirección cuando se conectara a una red. Entonces, DHCP simplemente automatiza este proceso de darte una dirección IP. Pero así es como lo obtienes. Es solo un programa que se ejecuta en algún lugar entre tú e internet que tiene un banco de direcciones IP que puede otorgar. Y cuando te conectas a la red, te da uno. Entonces, volvamos a revisar este diagrama. En algún lugar entre tú e internet, hay un servidor DHCP. Muy bien.

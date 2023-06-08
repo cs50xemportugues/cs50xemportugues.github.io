@@ -1,0 +1,37 @@
+Aquí hay un ejemplo de una función hash. Escribí esta anteriormente. No es una función hash particularmente buena por razones que realmente no merece la pena discutir ahora mismo. ¿Pero ves lo que está sucediendo aquí? Parece que estamos declarando una variable llamada suma y estableciéndola igual a 0. Y luego aparentemente estoy haciendo algo siempre que strstr[j] no sea igual a la barra invertida 0. ¿Qué estoy haciendo ahí?
+
+Básicamente esto es solo otra forma de implementar [?strl?] y detectar cuando has llegado al final de la cadena. Así que no tengo que calcular realmente la longitud de la cadena, estoy usando cuando llego al carácter de barra invertida 0, sé que he llegado al final de la cadena. Y luego voy a seguir iterando a través de esa cadena, agregando strstr[j] a suma, y luego al final del día voy a devolver suma mod HASH_MAX.
+
+Básicamente todo lo que hace esta función hash es agregar todos los valores ASCII de mi cadena, y luego devuelve algún código hash modulado por HASH_MAX. Probablemente es el tamaño de mi matriz, ¿verdad? No quiero obtener códigos hash si mi matriz tiene un tamaño de 10, no quiero obtener códigos hash 11, 12, 13, no puedo poner cosas en esas ubicaciones de la matriz, eso sería ilegal. Sufiría un error de segmentación.
+
+Ahora aquí hay otro rápido comentario. Por lo general, probablemente no querrás escribir tus propias funciones hash. En realidad es un poco un arte, no una ciencia. Y hay mucho que entra en ellas. Internet, como dije, está lleno de funciones hash realmente buenas, y deberías usar internet para encontrar funciones hash porque es realmente solo una pérdida de tiempo innecesaria crear la tuya propia.
+
+Puedes escribir simples para fines de prueba. Pero cuando realmente vayas a empezar a hashear datos y almacenarlos en una tabla hash, probablemente querrás utilizar alguna función que se haya generado para ti, que exista en internet. Si lo haces, asegúrate de citar tus fuentes. No hay razón para plagiar nada aquí.
+
+La comunidad de ciencias de la computación definitivamente está creciendo, y valora mucho el código abierto, y es muy importante citar tus fuentes para que las personas puedan obtener atribución por el trabajo que están haciendo en beneficio de la comunidad. Así que siempre asegúrate, no solo para las funciones hash, sino en general cuando uses código de una fuente externa, de citar tu fuente. Dale crédito a la persona que hizo parte del trabajo para que no tengas que hacerlo.
+
+Ok, entonces volvamos a esta tabla hash por un segundo. Aquí es donde lo dejamos después de insertar a John y Paul en esta tabla hash. ¿Ves algún problema aquí? Puedes ver dos. Pero en particular, ¿ves este posible problema?
+
+¿Qué pasa si hasheo a Ringo y resulta que después de procesar esos datos a través de la función hash, Ringo también genera el código hash 6? Ya tengo datos en la ubicación de código hash, ¿verdad?
+
+A esto lo llamamos colisión. Y la colisión ocurre cuando dos piezas de datos que pasan por la misma función hash generan el mismo código hash. Presumiblemente todavía queremos obtener ambas piezas de datos en la tabla hash, de lo contrario no estaríamos pasando arbitrariamente a Ringo por la función hash. Presumiblemente queremos obtener a Ringo en esa matriz.
+
+¿Cómo lo hacemos, sin embargo, si él y Paul generan ambos el código hash 6? No queremos sobrescribir a Paul, queremos que Paul también esté allí. Entonces necesitamos encontrar una manera de poner elementos en la tabla hash que aún preserva nuestra rápida inserción y búsqueda rápida. Y una forma de hacerlo es hacer algo llamado sondeo lineal.
+
+Usando este método, si tenemos una colisión, bueno, ¿qué hacemos? Bueno, no podemos ponerlo en la ubicación de la matriz 6, o cualquier otro código hash que se haya generado, pongámoslo en código hash más 1. Y si eso está lleno, pongámoslo en código hash más 2. El beneficio de esto es que si no está exactamente donde pensamos que está, y tenemos que empezar a buscar, tal vez no tengamos que ir demasiado lejos. Tal vez no tengamos que buscar todos los elementos de la tabla hash. Tal vez tengamos que buscar solo algunos.
+
+Y así seguimos tendiendo hacia que el caso promedio sea cercano a 1 en comparación con cerca de n, así que quizás eso funcione. Entonces veamos cómo podría funcionar esto en la realidad. Y veamos si tal vez podemos detectar el problema que podría ocurrir aquí.
+
+Digamos que hasheamos a Bart. Ahora vamos a ejecutar un nuevo conjunto de cadenas a través de la función hash, y ejecutamos a Bart a través de la función hash, obtenemos el código hash 6. Miramos, vemos que 6 está vacío, así que podemos poner a Bart allí.
+
+Ahora hasheamos a Lisa y eso también genera el código hash 6. Bueno, ahora que estamos usando este método de sondeo lineal, comenzamos en 6, vemos que 6 está lleno. No podemos poner a Lisa en 6. Entonces, ¿a dónde vamos? Vamos a 7. 7 está vacío, así que funciona. Así que pongamos a Lisa allí.
+
+Ahora hasheamos a Homer y obtenemos 7. Vale, sabemos que 7 está lleno ahora, así que no podemos poner a Homer allí. Entonces vayamos a 8. ¿Está disponible el 8? Sí, y el 8 está cerca del 7, así que si tenemos que empezar a buscar, no tendremos que ir demasiado lejos. Y así pongamos a Homer en 8.
+
+Ahora hasheamos a Maggie y devuelve 3, gracias a Dios, podemos poner a Maggie allí. No tenemos que hacer ningún tipo de sondeo para eso. Ahora hasheamos a Marge, y Marge también devuelve 6.
+
+Bueno, 6 está lleno, 7 está lleno, 8 está lleno, 9, bien, gracias a Dios, está vacío. Puedo poner a Marge en 9. Ya podemos ver que estamos empezando a tener este problema donde ahora estamos empezando a estirar las cosas bastante lejos de sus códigos hash. Y ese theta de 1, ese caso promedio de ser constante, está empezando a volver un poco más - hacia el theta de n. Estamos empezando a perder esa ventaja de las tablas hash.
+
+Este problema que acabamos de ver se llama agrupación. Y lo que es realmente malo acerca de la agrupación es que una vez que tienes dos elementos uno al lado del otro, hace que sea aún más probable, tienes el doble de posibilidades, de que vayas a tener otra colisión con ese grupo, y el grupo crecerá en uno. Y seguirás creciendo y aumentando tu probabilidad de tener una colisión. Y eventualmente es tan malo como no ordenar los datos en absoluto.
+
+El otro problema es que todavía, y hasta este punto, simplemente hemos estado entendiendo lo que es una tabla hash, todavía solo tenemos espacio para 10 cadenas. Si queremos seguir hasheando a los ciudadanos de Springfield, solo podemos poner 10 de ellos allí. Y si intentamos agregar un undécimo o duodécimo, no tenemos lugar para ponerlos. Podríamos estar dando vueltas en círculos tratando de encontrar un lugar vacío, y tal vez nos quedamos atrapados en un ciclo infinito.

@@ -26,7 +26,7 @@ Criar todo um projeto pode parecer desafiador. Aqui estão algumas perguntas que
 
 Se você estiver usando o CS50 Codespace, crie um diretório chamado projeto para armazenar o código fonte e outros arquivos do seu projeto. É possível desenvolver o projeto fora do CS50 Codespace.
 
-Como enviar
+Como Enviar
 Você deve completar todos os três passos!
 
 Passo 1 de 3

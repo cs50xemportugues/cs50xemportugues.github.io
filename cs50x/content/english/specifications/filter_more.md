@@ -15,7 +15,7 @@ Background
 
 Perhaps the simplest way to represent an image is with a grid of pixels (i.e., dots), each of which can be of a different color. For black-and-white images, we thus need 1 bit per pixel, as 0 could represent black and 1 could represent white, as in the below.
 
-![a simple bitmap](bitmap.png)
+![a simple bitmap](https://cs50.harvard.edu/x/2023/psets/4/filter/more/bitmap.png)
 
 In this sense, then, is an image just a bitmap (i.e., a map of bits). For more colorful images, you simply need more bits per pixel. A file format (like [BMP](https://en.wikipedia.org/wiki/BMP_file_format), [JPEG](https://en.wikipedia.org/wiki/JPEG), or [PNG](https://en.wikipedia.org/wiki/Portable_Network_Graphics)) that supports “24-bit color” uses 24 bits per pixel. (BMP actually supports 1-, 4-, 8-, 16-, 24-, and 32-bit color.)
 
@@ -29,7 +29,7 @@ Recall that a file is just a sequence of bits, arranged in some fashion. A 24-bi
 
 The first of these headers, called `BITMAPFILEHEADER`, is 14 bytes long. (Recall that 1 byte equals 8 bits.) The second of these headers, called `BITMAPINFOHEADER`, is 40 bytes long. Immediately following these headers is the actual bitmap: an array of bytes, triples of which represent a pixel’s color. However, BMP stores these triples backwards (i.e., as BGR), with 8 bits for blue, followed by 8 bits for green, followed by 8 bits for red. (Some BMPs also store the entire bitmap backwards, with an image’s top row at the end of the BMP file. But we’ve stored this problem set’s BMPs as described herein, with each bitmap’s top row first and bottom row last.) In other words, were we to convert the 1-bit smiley above to a 24-bit smiley, substituting red for black, a 24-bit BMP would store this bitmap as follows, where `0000ff` signifies red and `ffffff` signifies white; we’ve highlighted in red all instances of `0000ff`.
 
-![red smile](red_smile.png)
+![red smile](https://cs50.harvard.edu/x/2023/psets/4/filter/more/red_smile.png)
 
 Because we’ve presented these bits from left to right, top to bottom, in 8 columns, you can actually see the red smiley if you take a step back.
 
@@ -65,7 +65,7 @@ There are a number of ways to create the effect of blurring or softening an imag
 
 Consider the following grid of pixels, where we’ve numbered each pixel.
 
-![a grid of pixels](grid.png)
+![a grid of pixels](https://cs50.harvard.edu/x/2023/psets/4/filter/more/grid.png)
 
 The new value of each pixel would be the average of the values of all of the pixels that are within 1 row and column of the original pixel (forming a 3x3 box). For example, each of the color values for pixel 6 would be obtained by averaging the original color values of pixels 1, 2, 3, 5, 6, 7, 9, 10, and 11 (note that pixel 6 itself is included in the average). Likewise, the color values for pixel 11 would be be obtained by averaging the color values of pixels 6, 7, 8, 10, 11, 12, 14, 15 and 16.
 
@@ -77,7 +77,7 @@ In artificial intelligence algorithms for image processing, it is often useful t
 
 Like image blurring, edge detection also works by taking each pixel, and modifying it based on the 3x3 grid of pixels that surrounds that pixel. But instead of just taking the average of the nine pixels, the Sobel operator computes the new value of each pixel by taking a weighted sum of the values for the surrounding pixels. And since edges between objects could take place in both a vertical and a horizontal direction, you’ll actually compute two weighted sums: one for detecting edges in the x direction, and one for detecting edges in the y direction. In particular, you’ll use the following two “kernels”:
 
-![Sobel kernels](sobel.png)
+![Sobel kernels](https://cs50.harvard.edu/x/2023/psets/4/filter/more/sobel.png)
 
 How to interpret these kernels? In short, for each of the three color values for each pixel, we’ll compute two values `Gx` and `Gy`. To compute `Gx` for the red channel value of a pixel, for instance, we’ll take the original red values for the nine pixels that form a 3x3 box around the pixel, multiply them each by the corresponding value in the `Gx` kernel, and take the sum of the resulting values.
 
@@ -198,22 +198,25 @@ Walkthrough
 
 **Please note that there are 5 videos in this playlist.**
 
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/vsOsctDernw?modestbranding=0&amp;rel=0&amp;showinfo=1&amp;list=PLhQjrBD2T382OwvMbZuaMGtD9wZkhnhYj"></iframe></div>
+
 Usage
 -----
 
 Your program should behave per the examples below. `INFILE.bmp` is the name of the input image and `OUTFILE.bmp` is the name of the resulting image after a filter has been applied.
 
-    $ ./filter -g INFILE.bmp OUTFILE.bmp
-    
-
-    $ ./filter -r INFILE.bmp OUTFILE.bmp
-    
-
-    $ ./filter -b INFILE.bmp OUTFILE.bmp
-    
-
-    $ ./filter -e INFILE.bmp OUTFILE.bmp
-    
+```
+$ ./filter -g INFILE.bmp OUTFILE.bmp
+```
+```
+$ ./filter -r INFILE.bmp OUTFILE.bmp
+```
+```
+$ ./filter -b INFILE.bmp OUTFILE.bmp
+```
+```
+$ ./filter -e INFILE.bmp OUTFILE.bmp
+``` 
 
 Hints
 -----

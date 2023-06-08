@@ -1,284 +1,135 @@
-Mario
-=====
+# Hello
 
-Getting Started
----------------
+## Getting Started
 
-Open [VS Code](https://code.cs50.io/).
+Recall that Visual Studio Code (aka VS Code) is a popular “integrated development environment” (IDE) via which you can write code. So that you don’t have to download, install, and configure your own copy of VS Code, we’ll use a cloud-based version instead that has everything you’ll need pre-installed.
+
+Log into [code.cs50.io](https://code.cs50.io/) using your GitHub account. Once your “codespace” loads, you should see that, by default, VS Code is divided into three regions. Toward the top of VS Code is your “text editor”, where you’ll write all of your programs. Toward the bottom of is a “terminal window”, a command-line interface (CLI) that allows you to explore your codespace’s files and directories (aka folders), compile code, and run programs. And on the left is your file “explorer,” a graphical user interface (GUI) via which you can also explore your codespace’s files and directories.
 
 Start by clicking inside your terminal window, then execute `cd` by itself. You should find that its “prompt” resembles the below.
 
     $
-    
 
-Click inside of that terminal window and then execute
+Click inside of that terminal window and then type
 
-    wget https://cdn.cs50.net/2022/fall/psets/1/mario-less.zip
-    
+    mkdir hello
 
-followed by Enter in order to download a ZIP called `mario-less.zip` in your codespace. Take care not to overlook the space between `wget` and the following URL, or any other character for that matter!
+followed by Enter in order to make a directory called `hello` in your codespace. Take care not to overlook the space between `mkdir` and `hello` or any other character for that matter!
+
+Here on out, to execute (i.e., run) a command means to type it into a terminal window and then hit Enter. Commands are “case-sensitive,” so be sure not to type in uppercase when you mean lowercase or vice versa.
 
 Now execute
 
-    unzip mario-less.zip
-    
+    cd hello
 
-to create a folder called `mario-less`. You no longer need the ZIP file, so you can execute
+to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.
 
-    rm mario-less.zip
-    
+    hello/ $
 
-and respond with “y” followed by Enter at the prompt to remove the ZIP file you downloaded.
+If not, retrace your steps and see if you can determine where you went wrong!
 
-Now type
+Shall we have you write your first program? Execute
 
-    cd mario-less
-    
+    code hello.c
 
-followed by Enter to move yourself into (i.e., open) that directory. Your prompt should now resemble the below.
+to create a new file called `hello.c`, which should open automatically in your codespace’s text editor. As soon as you save the file with command-S (on macOS) or control-S (on Windows), it should also appear in your codespace’s explorer.
 
-    mario-less/ $
-    
+Proceed to write your first program by typing precisely these lines into `hello.c`:
 
-If all was successful, you should execute
+    #include <stdio.h>
+
+    int main(void)
+    {
+        printf("hello, world\n");
+    }
+
+Notice how VS Code adds “syntax highlighting” (i.e., color) as you type, though VS Code’s choice of colors might differ from this problem set’s. Those colors aren’t actually saved inside of the file itself; they’re just added by VS Code to make certain syntax stand out. Had you not saved the file as `hello.c` from the start, VS Code wouldn’t know (per the filename’s extension) that you’re writing C code, in which case those colors would be absent.
+
+## Listing Files
+
+Next, in your terminal window, immediately to the right of the prompt (`hello/ $`), execute
 
     ls
-    
 
-and see a file named `mario.c`. Executing `code mario.c` should open the file where you will type your code for this problem set. If not, retrace your steps and see if you can determine where you went wrong!
+You should see just `hello.c`? That’s because you’ve just listed the files in your `hello` folder. In particular, you executed a command called `ls`, which is shorthand for “list.” (It’s such a frequently used command that its authors called it just `ls` to save keystrokes.) Make sense?
 
-World 1-1
----------
+## Compiling Programs
 
-Toward the end of World 1-1 in Nintendo’s Super Mario Brothers, Mario must ascend right-aligned pyramid of blocks, a la the below.
+Now, before we can execute the `hello.c` program, recall that we must _compile_ it with a _compiler_, translating it from _source code_ into _machine code_ (i.e., zeroes and ones). Execute the command below to do just that:
 
-![screenshot of Mario jumping up a right-aligned pyramid](pyramid.png)
+    make hello
 
-Let’s recreate that pyramid in C, albeit in text, using hashes (`#`) for bricks, a la the below. Each hash is a bit taller than it is wide, so the pyramid itself will also be taller than it is wide.
+And then execute this one again:
 
-           #
-          ##
-         ###
-        ####
-       #####
-      ######
-     #######
-    ########
-    
+    ls
 
-The program we’ll write will be called `mario`. And let’s allow the user to decide just how tall the pyramid should be by first prompting them for a positive integer between, say, 1 and 8, inclusive.
+This time, you should see not only `hello.c` but `hello` listed as well? You’ve now translated the source code in `hello.c` into machine code in `hello`.
 
-Here’s how the program might work if the user inputs `8` when prompted:
+Now execute the program itself by executing the below.
 
-    $ ./mario
-    Height: 8
-           #
-          ##
-         ###
-        ####
-       #####
-      ######
-     #######
-    ########
-    
+    ./hello
 
-Here’s how the program might work if the user inputs `4` when prompted:
+Hello, world, indeed!
 
-    $ ./mario
-    Height: 4
-       #
-      ##
-     ###
-    ####
-    
+## Getting User Input
 
-Here’s how the program might work if the user inputs `2` when prompted:
+Suffice it to say, no matter how you compile or execute this program, it only ever prints `hello, world`. Let’s personalize it a bit, just as we did in class.
 
-    $ ./mario
-    Height: 2
-     #
-    ##
-    
+Modify this program in such a way that it first prompts the user for their name and then prints `hello, so-and-so`, where `so-and-so` is their actual name.
 
-And here’s how the program might work if the user inputs `1` when prompted:
+As before, be sure to compile your program with:
 
-    $ ./mario
-    Height: 1
-    #
-    
+    make hello
 
-If the user doesn’t, in fact, input a positive integer between 1 and 8, inclusive, when prompted, the program should re-prompt the user until they cooperate:
+And be sure to execute your program, testing it a few times with different inputs, with:
 
-    $ ./mario
-    Height: -1
-    Height: 0
-    Height: 42
-    Height: 50
-    Height: 4
-       #
-      ##
-     ###
-    ####
-    
+    ./hello
 
-How to begin? Let’s approach this problem one step at a time.
+### Walkthrough
 
-Walkthrough
------------
+Here’s a “walkthrough” (i.e., tour) of this problem, if you’d like a verbal overview of what to do too!
 
-Pseudocode
-----------
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/wSk1KSDUEYA?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
 
-First, execute
+### Hints
 
-    cd
-    
+#### Don’t recall how to prompt the user for their name?
 
-to ensure you’re in your codespace’s default directory.
+Recall that you can use `get_string` as follows, storing its _return value_ in a variable called `name` of type `string`.
 
-Then, execute
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"What's your name? "</span><span class="p">);</span>
+</code></pre></div></div>
 
-    cd mario-less
-    
+#### Don’t recall how to format a string?
 
-to change to your `mario-less` directory.
+Don’t recall how to join (i.e., concatenate) the user’s name with a greeting? Recall that you can use `printf` not only to print but to format a string (hence, the `f` in `printf`), a la the below, wherein `name` is a `string`.
 
-Then, execute
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+</code></pre></div></div>
 
-    code pseudocode.txt
-    
+#### Use of undeclared identifier?
 
-to open the file called `pseudocode.txt` inside that directory.
+Seeing the below, perhaps atop other errors?
 
-Write in `pseudocode.txt` some pseudocode that implements this program, even if not (yet!) sure how to write it in code. There’s no one right way to write pseudocode, but short English sentences suffice. Recall how we wrote [pseudocode for finding someone in a phone book](https://docs.google.com/presentation/d/1X3AMSenwZGSE6WxGpzoALAfMg2hmh1LYIJp3N2a1EYI/edit#slide=id.g41907da2bc_0_265). Odds are your pseudocode will use (or imply using!) one or more functions, conditionals, Boolean expressions, loops, and/or variables.
+    error: use of undeclared identifier 'string'; did you mean 'stdin'?
 
-Spoiler
+Recall that, to use `get_string`, you need to include `cs50.h` (in which `get_string` is _declared_) atop a file, as with:
 
-There’s more than one way to do this, so here’s just one!
-
-1.  Prompt user for height
-2.  If height is less than 1 or greater than 8 (or not an integer at all), go back one step
-3.  Iterate from 1 through height:
-    1.  On iteration _i_, print _i_ hashes and then a newline
-
-It’s okay to edit your own after seeing this pseudocode here, but don’t simply copy/paste ours into your own!
-
-Prompting for Input
--------------------
-
-Whatever your pseudocode, let’s first write only the C code that prompts (and re-prompts, as needed) the user for input. Open the file called `mario.c` inside of your `mario` directory. (Remember how?)
-
-Now, modify `mario.c` in such a way that it prompts the user for the pyramid’s height, storing their input in a variable, re-prompting the user again and again as needed if their input is not a positive integer between 1 and 8, inclusive. Then, simply print the value of that variable, thereby confirming (for yourself) that you’ve indeed stored the user’s input successfully, a la the below.
-
-    $ ./mario
-    Height: -1
-    Height: 0
-    Height: 42
-    Height: 50
-    Height: 4
-    Stored: 4
-    
-
-Hints
-
-*   Recall that you can compile your program with `make`.
-*   Recall that you can print an `int` with `printf` using `%i`.
-*   Recall that you can get an integer from the user with `get_int`.
-*   Recall that `get_int` is declared in `cs50.h`.
-*   Recall that we prompted the user for a positive integer in lecture using a `do while` loop in [`mario.c`](https://cdn.cs50.net/2022/fall/lectures/1/src1/mario8.c?highlight).
-
-Building the Opposite
----------------------
-
-Now that your program is (hopefully!) accepting input as prescribed, it’s time for another step.
-
-It turns out it’s a bit easier to build a left-aligned pyramid than right-, a la the below.
-
-    #
-    ##
-    ###
-    ####
-    #####
-    ######
-    #######
-    ########
-    
-
-So let’s build a left-aligned pyramid first and then, once that’s working, right-align it instead!
-
-Modify `mario.c` at right such that it no longer simply prints the user’s input but instead prints a left-aligned pyramid of that height.
-
-Hints
-
-*   Keep in mind that a hash is just a character like any other, so you can print it with `printf`.
-*   Just as Scratch has a [`repeat`](https://docs.google.com/presentation/d/1mRIN6EDK92NJJlazpFfBNKhxrAQUUxJOJW0UH7knS0g/edit#slide=id.gee4e5a99f9_0_313) block, so does C have a [`for`](https://docs.google.com/presentation/d/1mRIN6EDK92NJJlazpFfBNKhxrAQUUxJOJW0UH7knS0g/edit#slide=id.gee4e5a99f9_0_313) loop, via which you can iterate some number times. Perhaps on each iteration, _i_, you could print that many hashes?
-*   You can actually “nest” loops, iterating with one variable (e.g., `i`) in the “outer” loop and another (e.g., `j`) in the “inner” loop. For instance, here’s how you might print a square of height and width `n`, below. Of course, it’s not a square that you want to print!
-    
-          for (int i = 0; i < n; i++)
-          {
-              for (int j = 0; j < n; j++)
-              {
-                  printf("#");
-              }
-              printf("\n");
-          }
-
-Right-Aligning with Dots
-------------------------
-
-Let’s now right-align that pyramid by pushing its hashes to the right by prefixing them with dots (i.e., periods), a la the below.
-
-    .......#
-    ......##
-    .....###
-    ....####
-    ...#####
-    ..######
-    .#######
-    ########
-    
-
-Modify `mario.c` in such a way that it does exactly that!
-
-Hint
-
-Notice how the number of dots needed on each line is the “opposite” of the number of that line’s hashes. For a pyramid of height 8, like the above, the first line has but 1 hash and thus 7 dots. The bottom line, meanwhile, has 8 hashes and thus 0 dots. Via what formula (or arithmetic, really) could you print that many dots?
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+</span></code></pre></div></div>
 
 ### How to Test Your Code
 
-Does your code work as prescribed when you input
+Execute the below to evaluate the correctness of your code using `check50`, a command-line program that will output happy faces whenever your code passes CS50’s automated tests and sad faces whenever it doesn’t! But be sure to compile and test it yourself as well!
 
-*   `-1` (or other negative numbers)?
-*   `0`?
-*   `1` through `8`?
-*   `9` or other positive numbers?
-*   letters or words?
-*   no input at all, when you only hit Enter?
+    check50 cs50/problems/2023/x/hello
 
-Removing the Dots
------------------
+Execute the below to evaluate the style of your code using `style50`, a command-line program that will output additions (in green) and deletions (in red) that you should make to your program in order to improve its style. If you have trouble seeing those colors, `style50` supports other [modes](https://cs50.readthedocs.io/style50/) too!
 
-All that remains now is a finishing flourish! Modify `mario.c` in such a way that it prints spaces instead of those dots!
+    style50 hello.c
 
-### How to Test Your Code
-
-Execute the below to evaluate the correctness of your code using `check50`. But be sure to compile and test it yourself as well!
-
-    check50 cs50/problems/2023/x/mario/less
-    
-
-Execute the below to evaluate the style of your code using `style50`.
-
-    style50 mario.c
-    
-
-Hint
-
-A space is just a press of your space bar, just as a period is just a press of its key! Just remember that `printf` requires that you surround both with double quotes!
-
-How to Submit
--------------
+## How to Submit
 
 In your terminal, execute the below to submit your work.
 
-    submit50 cs50/problems/2023/x/mario/less
+    submit50 cs50/problems/2023/x/hello

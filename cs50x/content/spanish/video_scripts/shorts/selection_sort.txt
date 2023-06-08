@@ -1,0 +1,35 @@
+La selección de clasificación es un algoritmo que, como podrías esperar, ordena un conjunto de elementos. Y el recordatorio del algoritmo es un conjunto paso a paso de instrucciones para completar una tarea.
+
+En la selección de clasificación, la idea básica es encontrar el elemento no ordenado más pequeño y agregarlo al final de la lista ordenada. Efectivamente, lo que esto hace es construir una lista ordenada, con un elemento a la vez. Descomponiéndolo en pseudocódigo podríamos declarar este algoritmo como sigue: repetir esto hasta que no queden elementos sin ordenar. Busque el valor más pequeño en los datos no ordenados y luego intercambie el valor más pequeño con el primer elemento de la parte no ordenada.
+
+Puede ser útil visualizar esto, así que echemos un vistazo a esto. Entonces esto, sostengo, es una matriz no ordenada y lo he indicado indicando que todos los elementos están coloreados de rojo, no están ordenados todavía. Esta es toda la parte no ordenada de la matriz.
+
+Entonces pasemos por los pasos de la selección de clasificación para ordenar esta matriz. Entonces, de nuevo, vamos a repetir hasta que no queden elementos sin ordenar. Vamos a buscar a través de los datos para encontrar el valor más pequeño y luego intercambiar ese valor con el primer elemento de la parte no ordenada.
+
+Ahora mismo, de nuevo, toda la matriz es la parte no ordenada. Todos los elementos rojos están sin ordenar. Así que buscamos y encontramos el valor más pequeño. Comenzamos al principio, vamos hasta el final, encontramos que el valor más pequeño es uno. Eso es parte uno. Y luego la parte dos, intercambia ese valor con el primer elemento de la parte no ordenada o el primer elemento rojo.
+
+En este caso, eso sería cinco, así que intercambiamos uno y cinco. Cuando hacemos esto, podemos ver visualmente que hemos movido el elemento con el valor más pequeño de la matriz al comienzo. Ordenando efectivamente ese elemento.
+
+Y así podemos confirmar y declarar que el uno está ordenado. Y por lo tanto, indicaremos la parte ordenada de nuestra matriz, coloreándola de azul.
+
+Ahora simplemente repetimos el proceso de nuevo. Buscamos a través de la parte no ordenada de la matriz para encontrar el elemento más pequeño. En este caso, es dos.
+
+Lo intercambiamos con el primer elemento de la parte no ordenada. En este caso, dos también resulta ser el primer elemento de la parte no ordenada. Así que intercambiamos dos consigo mismo, lo que realmente deja dos donde está y está ordenado. Continuando, buscamos para encontrar el elemento más pequeño. Es tres. Lo intercambiamos con el primer elemento, que es cinco. Y ahora tres está ordenado.
+
+Buscamos de nuevo y encontramos que el elemento más pequeño es cuatro. Lo intercambiamos con el primer elemento de la parte no ordenada y ahora cuatro está ordenado.
+
+Encontramos que cinco es el elemento más pequeño. Lo intercambiamos con el primer elemento de la parte no ordenada. Y ahora cinco está ordenado.
+
+Y luego, por último, nuestra parte no ordenada consiste en un solo elemento, así que buscamos y encontramos que seis es el elemento más pequeño, y de hecho, el único elemento. Y luego podemos afirmar que está ordenado. Y ahora hemos cambiado nuestra matriz de ser completamente no ordenada en rojo, a completamente ordenada en azul, usando la selección de clasificación.
+
+¿Cuál es el peor escenario aquí? Bueno, en el peor de los casos absolutos, tenemos que revisar todos los elementos de la matriz para encontrar el elemento no ordenado más pequeño, y tenemos que repetir este proceso n veces. Una vez por cada elemento de la matriz porque solo, en este algoritmo, se ordena un elemento a la vez.
+
+¿Cuál es el mejor escenario? Bueno, es exactamente lo mismo, ¿verdad? Realmente todavía tenemos que pasar por cada elemento de la matriz para confirmar que es, de hecho, el elemento más pequeño.
+
+Así que el tiempo de ejecución peor en el peor de los casos, tenemos que repetir un proceso n veces, una vez por cada uno de los n elementos. Y en el mejor escenario, tenemos que hacer lo mismo.
+
+Así que pensando de nuevo en nuestra caja de herramientas de complejidad computacional, ¿qué crees que es el tiempo de ejecución en el peor de los casos para la selección de clasificación? ¿Qué crees que es el tiempo de ejecución en el mejor de los casos para la selección de clasificación?
+
+¿Adivinaste Big O de n cuadrado, y Big Omega de n cuadrado? Tendrías razón. Esos son, de hecho, los peores tiempos de ejecución y los mejores casos para la selección de clasificación.
+
+Soy Doug Lloyd. Este es CS50.

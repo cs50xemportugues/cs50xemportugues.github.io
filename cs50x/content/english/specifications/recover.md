@@ -82,6 +82,8 @@ Implement a program called `recover` that recovers JPEGs from a forensic image.
 Walkthrough
 -----------
 
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/ooL0r_8N9ms?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
 Usage
 -----
 
@@ -101,7 +103,8 @@ Hints
 
 Keep in mind that you can open `card.raw` programmatically with `fopen`, as with the below, provided `argv[1]` exists.
 
-    FILE *file = fopen(argv[1], "r");
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">FILE</span> <span class="o">*</span><span class="n">file</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"r"</span><span class="p">);</span>
+</code></pre></div></div>
     
 
 When executed, your program should recover every one of the JPEGs from `card.raw`, storing each as a separate file in your current working directory. Your program should number the files it outputs by naming each `###.jpg`, where `###` is three-digit decimal number from `000` on up. Befriend [`sprintf`](https://man.cs50.io/3/sprintf) and note that `sprintf` stores a formatted string at a location in memory. Given the prescribed `###.jpg` format for a JPEG’s filename, how many bytes should you allocate for that string? (Don’t forget the NUL character!)
@@ -127,13 +130,14 @@ If you’d like to create a new type to store a byte of data, you can do so via 
 
 Keep in mind, too, that you can read data from a file using [`fread`](https://man.cs50.io/3/fread), which will read data from a file into a location in memory. Per its [manual page](https://man.cs50.io/3/fread), `fread` returns the number of bytes that it has read, in which case it should either return `512` or `0`, given that `card.raw` contains some number of 512-byte blocks. In order to read every block from `card.raw`, after opening it with `fopen`, it should suffice to use a loop like:
 
-    while (fread(buffer, 1, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
-    {
-    
-    
-    }
-    
+   
+<pre class="highlight">
+<span class="k">while</span> (fread(buffer, <span class="mi">1</span>, BLOCK_SIZE, raw_file) == BLOCK_SIZE)
+{
 
+
+}
+</pre>
 That way, as soon as `fread` returns `0` (which is effectively `false`), your loop will end.
 
 Testing

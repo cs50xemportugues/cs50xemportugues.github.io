@@ -1,16 +1,17 @@
 Lab 8: Trivia
 =============
 
-You are welcome to collaborate with one or two classmates on this lab, though it is expected that every student in any such group contribute equally to the lab.
+<div class="alert" data-alert="warning" role="alert"><p>You are welcome to collaborate with one or two classmates on this lab, though it is expected that every student in any such group contribute equally to the lab.</p></div>
+
 
 Write a webpage that lets users answer trivia questions.
 
-![screenshot of trivia questions](questions.png)
+![screenshot of trivia questions](https://cs50.harvard.edu/x/2023/labs/8/questions.png)
 
 Getting Started
 ---------------
 
-Started CS50x in 2021 or prior and need to migrate your work from CS50 IDE to the new VS Code codespace? Be sure to check out our instructions on how to [migrate](../../new/) your files!
+<div class="alert" data-alert="primary" role="alert"><p>Started CS50x in 2021 or prior and need to migrate your work from CS50 IDE to the new VS Code codespace? Be sure to check out our instructions on how to <a href="../../new/">migrate</a> your files!</p></div>
 
 Open [VS Code](https://code.cs50.io/).
 
@@ -83,14 +84,19 @@ Optionally, you may also:
 
 ### Walkthrough
 
-This video was recorded when the course was still using CS50 IDE for writing code. Though the interface may look different from your codespace, the behavior of the two environments should be largely similar!
+<div class="alert" data-alert="primary" role="alert"><p>This video was recorded when the course was still using CS50 IDE for writing code. Though the interface may look different from your codespace, the behavior of the two environments should be largely similar!</p></div>
+
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/WGd0Jx7rxUo"></iframe>
+
 
 ### Hints
 
 *   Use [`document.querySelector`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector) to query for a single HTML element.
 *   Use [`document.querySelectorAll`](https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll) to query for multiple HTML elements that match a query. The function returns an array of all matching elements.
 
-Not sure how to solve?
+
+<details><summary>Not sure how to solve?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/FLlI7rSSV_M"></iframe></details>
+
 
 ### Testing
 

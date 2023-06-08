@@ -1,7 +1,7 @@
 Lab 5: Inheritance
 ==================
 
-You are welcome to collaborate with one or two classmates on this lab, though it is expected that every student in any such group contribute equally to the lab.
+<div class="alert" data-alert="warning" role="alert"><p>You are welcome to collaborate with one or two classmates on this lab, though it is expected that every student in any such group contribute equally to the lab.</p></div>
 
 Simulate the inheritance of blood types for each member of a family.
 
@@ -107,7 +107,10 @@ The `free_family` function should accept as input a pointer to a `person`, free 
 
 ### Walkthrough
 
-This video was recorded when the course was still using CS50 IDE for writing code. Though the interface may look different from your codespace, the behavior of the two environments should be largely similar!
+<div class="alert" data-alert="primary" role="alert"><p>This video was recorded when the course was still using CS50 IDE for writing code. Though the interface may look different from your codespace, the behavior of the two environments should be largely similar!</p></div>
+
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/9p7ddI3ozTY"></iframe>
+
 
 ### Hints
 
@@ -117,7 +120,8 @@ This video was recorded when the course was still using CS50 IDE for writing cod
 *   Remember, to access a variable via a pointer, we can use arrow notation.
     *   For example, if `p` is a pointer to a person, then a pointer to this person’s first parent can be accessed by `p->parents[0]`.
 
-Not sure how to solve?
+<details><summary>Not sure how to solve?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/H7LULatPwcQ"></iframe></details>
+
 
 ### How to Test Your Code
 

@@ -1,0 +1,21 @@
+Muy bien. Así que he copiado un archivo por error y ahora quiero deshacerme de él. ¿Cómo hago eso? Nuevamente, si está familiarizado con una interfaz GUI, puede hacer clic derecho y seleccionar Eliminar, y lo enviará a la papelera de reciclaje o a la Papelera. Pero en la línea de comandos, podemos simplemente escribir rm, para eliminar, y luego el nombre del archivo que queremos eliminar.
+
+Ahora, rm es muy cuidadoso. Hace muchos controles dobles para asegurarse de que realmente desea eliminar el archivo. No quiere cometer errores porque aquí no hay Papelera de reciclaje. Una vez que eliminamos un archivo, se ha ido. Y realmente no hay forma de recuperarlo. Así que necesitamos ser bastante cuidadosos, y rm será realmente cuidadoso por nosotros.
+
+Entonces volvamos al IDE y deshazte de ese archivo hi.txt que creé hace un minuto con copia. Estamos en el IDE. Y listo el contenido de mi directorio de nuevo, solo para darnos contexto. Puedes ver que está hi.txt, que creé hace un tiempo. Ahora, quiero deshacerme de él. ¿Cómo lo hago?
+
+De nuevo, solo rm. Puedo escribir rm hi.txt y presionar Enter. Y ahí está rm siendo realmente cuidadoso por nosotros y asegurándose de que realmente queremos eliminar este archivo. ¿Realmente quieres eliminar el archivo vacío regular hi.txt? Eso es como un sistema operativo, como Windows o Mac, que quizás estés familiarizado con la ventana emergente que dice si realmente quieres hacer esto.
+
+Estoy bastante seguro de que quiero esto, así que voy a escribir sí, también podría escribir y, y presionar Enter. Y si vuelvo a listar el contenido de mi directorio, hi.txt se ha ido. ¿No está mal, verdad? Presionemos Control L solo para deshacernos de todo esto y volver a la parte superior de la pantalla.
+
+Ahora, hay una forma de abreviar rm, para que no nos haga esa pregunta. Realmente sabemos que queremos deshacernos de ese archivo, y ni siquiera queremos que se nos haga la pregunta. ¿Cómo lo hacemos? Bueno, podemos especificar una bandera adicional, como lo hicimos con cp donde podríamos agregar la bandera -r, para copiar recursivamente en un directorio. Hay otra bandera para rm, que es -f, que es forzar rm a hacer exactamente lo que le estamos diciendo que haga.
+
+Entonces, digamos que ahora quiero deshacerme de mi archivo hello.txt. Tampoco quiero ese. ¿Qué puedo hacer? Bueno, puedo rm -f hello.txt. ¿Qué crees que va a pasar aquí? Ha desaparecido. Ni siquiera me hizo la pregunta. Y de hecho, si vuelvo a listar el contenido de mi directorio, se ha ido. No hay opción deshacer aquí. hello.txt se ha ido, y ni siquiera se me preguntó si quería eliminarlo. ¿Y si quiero deshacerme de un directorio completo? La forma de hacerlo es muy similar a la copia. Si desea eliminar un directorio, no solo desea eliminar el directorio, sino que desea eliminar todo lo que hay dentro. Y por lo tanto, usa -r, para eliminar recursivamente un directorio.
+
+Entonces, rm -r pset2. En realidad, no estoy trabajando en pset2, así que puedo deshacerme de ese directorio. Presiono Enter. ¿Quiero eliminar el directorio pset2? Sí, lo hago. Y si vuelvo a listar el contenido de mi directorio, ha desaparecido. ¿De acuerdo?
+
+Una variación más sobre este tema. Entonces, voy a borrar la pantalla de nuevo, para poner todo en la parte superior. Presiona ls. Ahora quiero deshacerme de mi directorio pset3, y realmente sé que quiero deshacerme de mi directorio pset3. Puedo deshacerme recursivamente y forzadamente de mi directorio pset3.
+
+Ahora, serás muy cuidadoso cuando uses rm -rf. A medida que programas más, será algo que hagas muy rápido. Y de hecho, lo hago todo el tiempo. Pero puede llevar a algunas consecuencias desastrosas si eliminas accidentalmente lo incorrecto. Así que quiero que estés consciente de que esta es una opción disponible para ti, pero úsala con moderación y precaución.
+
+Sé que de hecho ya no estoy trabajando en mi conjunto de problemas 3, así que voy a deshacerme de todos esos archivos. Y sé que no quiero que se me pregunte cada vez que quiera eliminar un archivo, así que voy a rm -rf pset3. Ni siquiera me preguntó si quería deshacerme de él. Presiono ls. pset3 se ha ido. Entonces, esas son todas las variaciones que puedes usar para deshacerte de archivos con rm.

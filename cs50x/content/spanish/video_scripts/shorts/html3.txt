@@ -1,0 +1,32 @@
+Otra cosa que se puede hacer con HTML es construir una tabla de información de filas y columnas para presentar información de manera particularmente organizada. Para hacer esto con HTML, podemos tener una definición de tabla que comience con corchete abierto, "table". Dentro de esa tabla, podríamos tener un conjunto de filas, etiquetas TR para indicar cada fila. Y luego, etiquetas TD se colocan dentro de las etiquetas TR para especificar una columna dentro de una fila.
+
+¿Por qué se llama TD y no TC? Bueno, TD significa datos de la tabla. Por lo general, se coloca la información allí. Entonces, es por eso que es TD y no TC. Es un poco confuso.
+
+Entonces, tienes las etiquetas de tabla y dentro de ellas tienes varias filas, TR. Y en cada fila, tienes TDs para el número de columnas que deseas tener en esa fila en particular. Echemos un vistazo a una tabla muy simple en CS50 IDE.
+
+Aquí tengo un archivo llamado "table dot HTML". Veamos cómo se ve. Hay mucho sucediendo aquí, pero si notas, tengo una tabla abierta. Estoy comenzando la definición con "table". Y luego, en mi primera fila, aparentemente tengo cuatro columnas, uno, dos, tres, cuatro. Y luego terminé esa fila.
+
+Luego comienzo otra fila y coloco dos, cuatro, seis, ocho. Termina esa fila. Hago otra fila, tres, seis, nueve, 12. Y luego una última fila, cuatro, ocho, 12, y aunque está un poco cortada aquí, 16.
+
+Terminé esa fila. Terminé la tabla. Y luego he terminado con mi HTML. ¿Cómo se ve esto? Bueno, no hay mucho que ver. He organizado claramente mi información de una manera algo más organizada. Pero no es muy atractivo aquí. Y vamos a hablar de eso cuando hablemos sobre CSS. Volveremos a visitar esta idea de lo que hacemos para hacer una tabla, ¿tal vez para formatearla un poco mejor? Pero todavía tengo cuatro filas, cada una con cuatro columnas, y realmente lo que esto significa es una tabla de multiplicar muy simple de cuatro por cuatro.
+
+Solo quedan algunas etiquetas de las que hablaremos. Hablemos del concepto de un formulario HTML. Entonces, puede haber visto esto en el contexto de iniciar sesión en una página web. Por lo general, escribe su nombre de usuario, escribe su contraseña y ya está listo. Ese sería el comienzo de un formulario.
+
+Saltando sobre "div" por un segundo. También tenemos entradas, que encajan dentro de los formularios. Estos son los elementos en los que realmente está escribiendo, o los botones de opción que está marcando, o las casillas de verificación que está seleccionando. Entonces, se colocan dentro de los formularios. Y básicamente comprenden cada fila del formulario si su formulario está bien formateado. Luego está este concepto de "div", que realmente no encaja en ninguna categoría particular de etiquetas como las que he estado usando anteriormente. Simplemente demarca el comienzo de alguna división arbitraria, "div", de la página. No hay separación visual. No hay línea. No se separa automáticamente como un fragmento separado. Tendrías que diseñarlo de esa manera para hacerlo.
+
+Simplemente dice que quiero un espacio en mi página web y 
+voy a llamarlo esta división de mi página. Podemos poner cosas dentro de las "divs", y de hecho, cuando vayamos a IDE en un segundo, veremos que estoy poniendo mi formulario dentro de una "div".
+
+Tengo aquí en mi IDE un archivo llamado "div form dot HTML". Abrámoslo. Note que, como dije, "div" es algo arbitrario. ¿Verdad? Realmente no significa nada. Entonces, tengo una primera división arbitraria de mi página. Y luego, en lugar de otra "div" más adelante, comenzando en la línea ocho, tengo este formulario. Y dentro del formulario tengo una serie de entradas, campos del formulario. Entonces, tengo un campo cuyo nombre es "A", que no significa nada ahora mismo, y al parecer toma texto, otro que toma una contraseña, otro que es un botón de opción, otro que es una casilla de verificación y otro que es un botón de envío. ¿Qué se ve realmente? Bueno, echemos un vistazo. Lo abriremos en nuestra ventana de vista previa. Note que esta primera división arbitraria, no hay separación visual aquí. No hizo realmente nada, ¿verdad?
+
+Y luego tengo mi formulario. Y no hice ningún formato especial. Entonces, el formulario es solo una gran fila de información. Si hubiera formateado mi formulario de manera diferente, tal vez lo tendría línea por línea por línea. Pero no hice ningún estilo. Una vez más, no estamos hablando de CSS aquí. Solo estamos hablando de HTML.
+ 
+Muy bien, en mi formulario de texto puedo escribir, recuerde que los formularios de tipo texto, así que puedo escribir mi nombre. Y en mi contraseña puedo escribir mi contraseña. Y porque ese campo es de tipo contraseña, no sabes cuál es mi contraseña. Son solo puntos.
+
+También puedo elegir marcar un botón de opción o tachar una casilla de verificación. O puedo enviar mi formulario. Y no hice nada, así que cuando envío mi formulario, la página se actualiza. Pero tal vez podría configurar mi botón de envío para hacer algo más. Y veremos qué podemos hacer con eso en un futuro video sobre PHP. Pero esto construye un formulario muy simple que podemos usar para que los usuarios interactúen y envíen información a nuestro sitio web.
+
+Un último comentario antes de pasar a algunas otras etiquetas es echar un vistazo a esta etiqueta de entrada una vez más. Note que he resaltado los extremos de la etiqueta en rojo. Todas las otras etiquetas que hemos visto hasta ahora han tenido un comienzo y un final, una etiqueta de apertura y una etiqueta de cierre.
+
+Pero una etiqueta de entrada no tiene eso. No hay texto que vaya entre las etiquetas de entrada. Toda la información que pretendemos transmitir está vinculada como parte de los atributos de esa entrada. Note que tenemos "input name equals x. Type equals y". Realmente toda la información que necesitamos.
+
+Esto se llama una etiqueta de cierre automático. No requiere una apertura y un cierre porque toda la información está contenida dentro de la etiqueta y sus atributos. Entonces, a veces también verás esto. Entonces, simplemente tenga en cuenta que si tiene una etiqueta que es completamente autónoma, se abre y se cierra con el corchete abierto a la izquierda y el corchete de cierre a la derecha. Veremos otro de esos ahora mismo con las etiquetas de imagen también.

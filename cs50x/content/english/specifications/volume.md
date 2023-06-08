@@ -1,7 +1,8 @@
 Lab 4: Volume
 =============
 
-You are welcome to collaborate with one or two classmates on this lab, though it is expected that every student in any such group contribute equally to the lab.
+
+<div class="alert" data-alert="warning" role="alert"><p>You are welcome to collaborate with one or two classmates on this lab, though it is expected that every student in any such group contribute equally to the lab.</p></div>
 
 Write a program to modify the volume of an audio file.
 
@@ -88,21 +89,27 @@ Complete the implementation of `volume.c`, such that it changes the volume of a 
 
 ### Walkthrough
 
-This video was recorded when the course was still using CS50 IDE for writing code. Though the interface may look different from your codespace, the behavior of the two environments should be largely similar!
+
+<div class="alert" data-alert="primary" role="alert"><p>This video was recorded when the course was still using CS50 IDE for writing code. Though the interface may look different from your codespace, the behavior of the two environments should be largely similar!</p></div>
+
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/LiGhjz9ColQ"></iframe>
+
 
 ### Hints
 
 *   You’ll likely want to create an array of bytes to store the data from the WAV file header that you’ll read from the input file. Using the `uint8_t` type to represent a byte, you can create an array of `n` bytes for your header with syntax like
 
-    uint8_t header[n];
-    
+<pre>
+uint8_t header[n];
+</pre>    
 
 replacing `n` with the number of bytes. You can then use `header` as an argument to `fread` or `fwrite` to read into or write from the header.
 
 *   You’ll likely want to create a “buffer” in which to store audio samples that you read from the WAV file. Using the `int16_t` type to store an audio sample, you can create a buffer variable with syntax like
 
-    int16_t buffer;
-    
+<pre>
+int16_t buffer;
+</pre>   
 
 You can then use `&buffer` as an argument to `fread` or `fwrite` to read into or write from the buffer. (Recall that the `&` operator is used to get the address of the variable.)
 
@@ -114,7 +121,9 @@ You can then use `&buffer` as an argument to `fread` or `fwrite` to read into or
         *   `stream`: the file pointer to be read from or written to
     *   Per its documentation, `fread` will return the number of items of data successfully read. You may find this useful to check for when you’ve reached the end of the file!
 
-Not sure how to solve?
+
+<details><summary>Not sure how to solve?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/-rtZkTAK2gg"></iframe></details>
+
 
 ### How to Test Your Code
 

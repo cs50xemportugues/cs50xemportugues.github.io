@@ -1,0 +1,33 @@
+Si has estado viendo estos videos en el orden que recomendamos, estamos a punto de experimentar un cambio cultural. Porque ahora, vamos a empezar a hablar sobre internet y tecnologías web. Hasta ahora, hemos estado haciendo mucho C. Y cuando hemos estado ejecutando nuestros programas, los hemos estado ejecutando desde la línea de comandos. Esa es prácticamente la forma en que los usuarios han estado interactuando con los programas que escribimos. Se elige algo para provocar, algo sucede en la ventana del terminal, y luego se termina. 
+
+A veces, puede haber datos persistentes que permanecen después. Pero eso es prácticamente todo. Es en la línea de comandos. Es la única forma en que el usuario puede interactuar. A partir de este punto, vamos a comenzar la transición para que los usuarios puedan interactuar con nuestros sitios web. Así que vamos a estar escribiendo sitios web, que no están escritos en C, sino que están escritos en una variedad de otros lenguajes de programación, incluyendo PHP, y sus lenguajes auxiliares, HTML, CSS, y similares. Así que vamos a empezar a hablar de esas cosas. 
+
+Antes de adentrarnos en la programación web propiamente dicha, creo que probablemente sea buena idea dar un paso atrás y hablar sobre cómo interactúan los ordenadores y los humanos a través de la web. Así que este video es realmente una introducción, una guía básica, a internet. Ahora, la advertencia aquí es que CS50 no es una clase de redes. Así que lo que vamos a hablar aquí es bastante general. No vamos a entrar en detalles de bajo nivel sobre cómo funciona todo esto. Si estás interesado en eso, te recomiendo encarecidamente que tomes una clase de redes de ordenadores. Y tal vez digamos una pequeña mentira para hacer comprensible la comprensión general. 
+
+Dicho esto, hablemos de cómo interactuamos con internet. Así que aquí estamos. Aquí estamos nosotros. Estamos bastante emocionados de estar en internet, que como todos sabemos, está lleno de gatos. 
+
+¿Podemos conectarnos simplemente a internet de esta manera? Bueno, probablemente no. Intuitivamente, sabes que, por ejemplo, cuando cambias la red WiFi en tu ordenador, no ves una llamada internet a menos que ese sea el nombre de tu red WiFi local. ¿Verdad? 
+
+Suele ser algo así como home. O si estás en el trabajo, puede ser el nombre de tu empresa. No hay solo una opción llamada internet. Y así que algo o algunas cosas existen entre cuando queremos conectarnos a internet. ¿Cuáles son algunas de esas cosas? Bueno, vamos a hablar de eso. También hablaremos de algunas cosas importantes que necesitamos para poder conectarnos a internet. Y la primera de estas cosas es una dirección IP. Probablemente has oído el término dirección IP antes. ¿Qué significa? Bueno, una dirección IP es básicamente un identificador único de tu ordenador en una red. Así como cada hogar u oficina tiene una dirección única a la que se puede enviar correo. 
+
+De manera similar, cada ordenador si quiere enviar o recibir datos, necesita tener una dirección única. De manera que cuando se envía o se recibe información, se está enviando o se está recibiendo en la ubicación correcta. Este esquema de direccionamiento, como dije, se llama direccionamiento IP. IP significa Protocolo de Internet, del que hablaremos nuevamente en breve. 
+
+¿Cómo se ve el direccionamiento IP? Bueno, el esquema básicamente consistía, cuando se implementó por primera vez, en darle a cada ordenador una dirección única de 32 bits. Eso es muchos bits. Son 4 mil millones de direcciones. 
+
+Y en general, en lugar de usar la notación hexadecimal, que hemos usado anteriormente en el contexto de los punteros en C para hablar sobre las direcciones, solemos representar las direcciones IP de una manera un poco más amigable para los humanos, representándolas como cuatro grupos de ocho bits representados como números decimales. Porque los seres humanos no hablan frecuentemente en hexadecimal, a menos que estén programando. Pero las personas que usan internet no son necesariamente programadores. 
+
+Y así que hacerlo fácilmente accesible para que puedan hablar sobre cuál es su dirección IP en caso de que necesiten llamar a alguien para solucionar algo, es mejor hacerlo en el formato numérico decimal convencional más común. Y así que una dirección IP se ve simplemente así, w.x.y.z, donde cada una de esas letras representa un valor no negativo en el rango de 0 a 255. Recuerda que un número de 8 bits puede contener 256 valores distintos. 
+
+Y así que es por eso que nuestro rango es de 0 a 255. Y tenemos cuatro grupos de 8 bits para un total de 32 bits. Y así que una dirección IP podría verse así. Esta es una dirección IP genérica predeterminada, 123.45.67.89. Todos ellos están en el rango de 0 a 255, así que es una dirección IP válida. 
+
+Aquí en la Universidad de Harvard, todas nuestras direcciones IP comienzan con 140.247. Esa es solo la forma en que se han asignado las direcciones IP en esta área geográfica. Y así que esta podría ser una dirección IP que podría existir aquí en Harvard. 
+
+Como dije, si cada dirección IP tiene 32 bits, tenemos alrededor de 4 mil millones para repartir, un poco más de 4 mil millones. Pero podemos ver que hay un problema, ¿verdad? ¿Cuál es la población mundial en este momento? 
+
+Bueno, está en algún lugar al norte de 7 mil millones de personas. Y en el mundo occidental, al menos, la mayoría de las personas tienen más de un dispositivo capaz de conectarse a internet. Yo tengo uno aquí. Y tengo otro en mi bolsillo. Y tengo uno en mi oficina. 
+
+Y así eso son tres. Y eso ni siquiera cuenta los que tengo en casa, también. Y así que es un problema, ¿verdad? Tenemos al menos 7 mil millones de personas y solo 4 mil millones de direcciones. 
+
+Y se supone que todos los dispositivos deben estar identificados de manera única. Hemos desarrollado algunos métodos para lidiar con este problema, algo llamado dirección IP privada, del que no vamos a hablar en este video. Pero básicamente, permite que la web, internet, finja un poco que tienes una dirección única al tener direcciones privadas y luego canalizarlas a través de una sola dirección, que es compartida por muchos ordenadores diferentes. 
+
+Pero realmente no es una solución a largo plazo. Incluso esa solución no va a durar para siempre. Y así que necesitamos tener una manera diferente de lidiar con esto.

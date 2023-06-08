@@ -38,5 +38,25 @@ specifications = [
     "trivia",
     "volume",
     "wordle50",
-    "world_cup",
+    "worldcup",
+]
+
+specifications_part1 = [
+    "scratch",
+    "hello",
+    "mario_more",
+    "credit",
+    "scrabble",
+    "sort",
+    "plurality",
+]
+
+specifications_part2 = [
+    "python_hello",
+    "python_mario_less",
+    "python_mario_more",
+    "python_cash",
+    "python_credit",
+    "fiftyville",
+    "trivia",
 ]

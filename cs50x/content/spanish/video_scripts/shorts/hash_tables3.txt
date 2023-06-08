@@ -1,0 +1,33 @@
+Entonces, esto se relaciona con la idea de algo llamado encadenamiento. Y es aquí donde traeremos de vuelta las listas enlazadas. ¿Qué pasaría si en lugar de almacenar solo los datos en sí mismos en una matriz, cada elemento de la matriz pudiera contener múltiples piezas de datos? Bueno, eso no tendría sentido, ¿verdad? Sabemos que una matriz solo puede contener, cada elemento de una matriz puede contener solo una pieza de datos de ese tipo de datos.
+
+Pero, ¿qué pasa si ese tipo de datos es una lista enlazada, verdad? ¿Y si cada elemento de la matriz fuera un puntero a la cabeza de una lista enlazada? Y luego podríamos construir esas listas enlazadas y hacerlas crecer arbitrariamente, porque las listas enlazadas nos permiten crecer y encogerse de manera mucho más flexible que una matriz. ¿Qué pasa si ahora usamos esto, verdad? Comenzamos a hacer crecer estas cadenas de estas ubicaciones de matrices.
+
+Ahora podemos ajustar una cantidad infinita de datos, o no infinita, una cantidad arbitraria de datos, en nuestra tabla hash sin nunca tener el problema de la colisión. También hemos eliminado el agrupamiento al hacer esto. Y bien, sabemos que cuando insertamos en una lista enlazada, si recuerda de nuestro video sobre listas enlazadas, listas enlazadas simples y listas enlazadas dobles, es una operación de tiempo constante. Solo estamos agregando al frente.
+
+Y para la búsqueda, bueno, sabemos que la búsqueda en una lista enlazada puede ser un problema, ¿verdad? Tenemos que buscarla desde el principio hasta el final. No hay acceso aleatorio en una lista enlazada. Pero si en lugar de tener una lista enlazada donde una búsqueda sería O de n, ahora tenemos 10 listas enlazadas, o 1,000 listas enlazadas, ahora es O de n dividido por 10, o O de n dividido por 1,000.
+
+Y mientras hablamos teóricamente sobre la complejidad ignoramos las constantes, en el mundo real estas cosas realmente importan, ¿verdad? Realmente notaremos que esto funciona 10 veces más rápido o 1,000 veces más rápido porque estamos distribuyendo una larga cadena en 1,000 cadenas más pequeñas. Y cada vez que tengamos que buscar a través de una de esas cadenas, podemos ignorar las 999 cadenas que no nos importan y buscar solo esa.
+
+Lo cual en promedio será 1,000 veces más corto. Y así seguimos tendiendo hacia este caso promedio de ser de tiempo constante, pero solo porque estamos aprovechando la división por un factor de constante enorme. Pero veamos cómo podría verse esto en realidad. Entonces esta fue la tabla hash que teníamos antes, hemos declarado una tabla hash capaz de almacenar 10 cadenas. No lo haremos más. Ya conocemos las limitaciones de ese método. Ahora nuestra tabla hash va a ser un arreglo de 10 nodos, punteros a cabezas de listas enlazadas.
+
+Y ahora está nulo. Cada uno de esos 10 punteros es nulo. No hay nada en nuestra tabla hash ahora mismo.
+
+Ahora comencemos a poner algunas cosas en esta tabla hash. Y veamos cómo este método nos va a beneficiar un poco. Ahora hasheemos a Joey. Ejecutaremos la cadena de caracteres "Joey" a través de una función hash y obtendremos 6. ¿Bueno qué hacemos ahora?
+
+Bueno, ahora que trabajamos con listas enlazadas, no estamos trabajando con arreglos. Y cuando trabajamos con listas enlazadas sabemos que necesitamos comenzar a asignar espacio de manera dinámica y construir cadenas. Ese es el núcleo de construir una lista enlazada. Entonces, asignemos espacio dinámicamente para Joey y agreguemoslo a la cadena.
+
+Entonces, veamos lo que hemos hecho. Cuando hasheamos a Joey, obtenemos el código hash 6. Ahora el puntero en la ubicación del arreglo 6 apunta a la cabeza de una lista enlazada y ahora es el único elemento de una lista enlazada. Y el nodo en esa lista enlazada es Joey.
+
+Entonces, si necesitamos buscar a Joey más tarde, simplemente hasheamos a Joey nuevamente, obtenemos 6 nuevamente porque nuestra función hash es determinista. Y luego comenzamos en la cabeza de la lista enlazada apuntada por la ubicación del arreglo 6 y podemos iterar a través de eso tratando de encontrar a Joey. Y si construimos nuestra tabla hash eficazmente y nuestra función hash efectivamente para distribuir bien los datos, en promedio cada una de esas listas enlazadas en cada ubicación del arreglo será 1/10 parte del tamaño si simplemente lo tuviéramos como una lista enlazada única enorme con todo lo que hay.
+
+Si distribuimos esa enorme lista enlazada en 10 listas enlazadas, cada lista será 1/10 parte del tamaño. Y por lo tanto, 10 veces más rápido para buscar a través. Entonces hagamos esto de nuevo. Ahora hasheemos a Ross.
+
+Y digamos que Ross, cuando hacemos eso, el hashcode que obtenemos es 2. Bueno, ahora asignamos dinámicamente un nodo nuevo, ponemos a Ross en ese nodo y decimos que ahora la ubicación del arreglo 2, en lugar de apuntar a nulo, apunta a la cabeza de una lista enlazada cuyo único nodo es Ross. Y podemos hacer esto una vez más, podemos hashear a Rachel y obtener el código hash 4, asignar dinámicamente un nuevo nodo, poner a Rachel en el nodo y decir que la ubicación del arreglo 4 ahora apunta a la cabeza de una lista enlazada cuyo único elemento sucede que es Rachel.
+
+Pero, ¿qué pasa si tenemos una colisión? Veamos cómo manejamos las colisiones usando el método de encadenamiento. Hasheemos a Phoebe. Obtenemos el hashcode 6. En nuestro ejemplo anterior, simplemente estábamos almacenando las cadenas en el arreglo. Esto fue un problema.
+
+No queremos pisar a Joey, y ya hemos visto que podemos tener algunos problemas de agrupamiento si intentamos avanzar y sondear. Pero ¿qué pasa si tratamos esto de la misma manera, verdad? Es como agregar un elemento a la cabeza de una lista enlazada. Simplemente asignemos espacio para Phoebe. diremos que el puntero siguiente de Phoebe apunta a la antigua cabeza de la lista enlazada y luego el número 6 lleva a la nueva cabeza de la lista enlazada. Y ahora mira, hemos agregado a Phoebe.
+
+Ahora podemos almacenar dos elementos con hashcode 6 y no tenemos ningún problema. Eso es prácticamente todo lo que hay que hacer en la técnica de encadenamiento. Y el encadenamiento es definitivamente el método que será más efectivo para usted si está almacenando datos en una tabla hash. Pero esta combinación de arreglos y listas enlazadas juntos para formar una tabla hash realmente mejora drásticamente su capacidad para almacenar grandes cantidades de datos y buscar ese datos rápida y eficientemente.
+
+Aún queda una estructura de datos más que podría incluso ser un poco mejor en términos de garantizar que nuestros tiempos de inserción, eliminación y búsqueda sean aún más rápidos. Y lo veremos en un video sobre tries. Soy Doug Lloyd, esto es CS50.

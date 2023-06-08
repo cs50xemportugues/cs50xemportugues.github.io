@@ -1,0 +1,18 @@
+Spécifications
+-------------
+
+Mettez en œuvre dans votre répertoire `homepage` un site Web qui doit :
+
+*   Contenir au moins quatre pages HTML différentes, dont au moins une est `index.html` (la page principale de votre site), et il doit être possible de passer d'une page à l'autre en suivant un ou plusieurs hyperliens.
+*   Utiliser au moins dix (10) balises HTML distinctes en plus de `<html>`, `<head>`, `<body>` et `<title>`. Utiliser une balise plusieurs fois (par exemple `<p>`) compte toujours comme une seule (1) des dix !
+*   Intégrer une ou plusieurs fonctionnalités de Bootstrap dans votre site. Bootstrap est une bibliothèque populaire (qui inclut de nombreuses classes CSS et autres) avec laquelle vous pouvez embellir votre site. Consultez [la documentation de Bootstrap](https://getbootstrap.com/docs/5.2/) pour commencer. En particulier, certains des [composants de Bootstrap](https://getbootstrap.com/docs/5.2/components/) peuvent vous intéresser. Pour ajouter Bootstrap à votre site, il suffit d'inclure <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">rel=</span><span class="s">"stylesheet"</span> <span class="na">href=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"</span> <span class="na">integrity=</span><span class="s">"sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://code.jquery.com/jquery-3.5.1.slim.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+<span class="nt">&lt;script </span><span class="na">src=</span><span class="s">"https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"</span> <span class="na">integrity=</span><span class="s">"sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx"</span> <span class="na">crossorigin=</span><span class="s">"anonymous"</span><span class="nt">&gt;&lt;/script&gt;</span>
+</code></pre></div></div> dans la balise `<head>` de vos pages, en dessous duquel vous pouvez également inclure <div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;link</span> <span class="na">href=</span><span class="s">"styles.css"</span> <span class="na">rel=</span><span class="s">"stylesheet"</span><span class="nt">&gt;</span>
+</code></pre></div>    </div>
+
+    pour lier votre propre CSS.
+    
+*   Avoir au moins un fichier de style personnalisé, `styles.css`, qui utilise au moins cinq (5) sélecteurs CSS différents (par exemple, de balise (`example`), de classe (`.exemple`) ou d'ID (`#exemple`)), et dans lequel vous utilisez un total d'au moins cinq (5) propriétés CSS différentes, telles que `font-size` ou `margin`. 
+*   Intégrez une ou plusieurs fonctionnalités JavaScript dans votre site pour le rendre plus interactif. Par exemple, vous pouvez utiliser JavaScript pour ajouter des alertes, pour avoir un effet à intervalles réguliers, ou pour ajouter de l'interactivité à des boutons, des menus déroulants ou des formulaires. N'hésitez pas à être créatif !
+*   Assurez-vous que votre site a un design agréable sur les navigateurs des appareils mobiles ainsi que sur les ordinateurs portables et de bureau.

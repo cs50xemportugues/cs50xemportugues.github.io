@@ -1,0 +1,39 @@
+Al empezar a trabajar con funciones, otra cosa que se volverá muy importante de entender es el concepto de alcance de una variable, también conocido como scope. El alcance es una característica de una variable que define desde qué funciones se puede acceder a esa variable. En C existen dos ámbitos principales: las variables locales y las variables globales. Las variables locales solo pueden ser accedidas dentro de las funciones en las que se crean. No pueden ser accedidas por cualquier otra función que exista en el programa, solamente dentro de la función en la que se crearon. En cambio, las variables globales pueden ser accedidas por cualquier función en el programa, ya que no se crean dentro de ninguna función en particular. Las declaramos fuera de todas las funciones, lo que significa que cada función conoce su ubicación y puede acceder y manipularla.
+
+Hasta ahora en el curso, casi exclusivamente has estado trabajando con variables locales. Aquí hay un ejemplo muy, muy simple de una función principal y una función adicional muy simple que hemos escrito. En este caso, la variable "x", que resalté en color verde para destacar la localidad o el ámbito de esa variable, es local para la función "triple". "Main" no puede referirse a "x" en absoluto, no sabe lo que es. De hecho, ninguna otra función, si tuviéramos funciones adicionales aquí, podría referirse a "x". 
+
+De manera similar, "results", que he resaltado en azul, es local solamente para "main". Solamente "main" conoce lo que es la variable "result". "Triple" no puede usarlo.
+
+Ahora bien, como mencioné anteriormente, las variables globales sí existen. Si se declara una variable fuera de cualquier función, todas las funciones del programa pueden referirse a ella. En este caso, he resaltado en verde la declaración de una variable global. En este caso, la variable que se está declarando se llama "global", para que sea extremadamente claro. Es de tipo float y le asignamos el valor 0.5050.
+
+Notarás que tanto en "main" como en "triple", puedo referirme a "global". Y de hecho, si recorremos el programa según se indica, "main" llama primero a "triple", "triple" multiplica "global" por 3, lo que establece su valor en 1.5 algo, 1.51 o algo así, y luego "main" también imprime el valor de "global". Por lo tanto, "main" no imprimirá 0.5050, imprimirá el valor de "global" multiplicado por 3, 1.51. Así que debes tener cuidado cuando trabajas con variables globales. Si bien son muy flexibles para pasar información alrededor de manera que cada función pueda usarla, también puede tener algunas consecuencias peligrosas si alguna función cambia el valor de una variable antes de lo que se esperaba.
+
+¿Por qué importa esta distinción? ¿Por qué nos importa que algunas variables sean locales y otras globales? Bueno, en su mayor parte, las variables locales en C se llaman "pasadas por valor" cuando hacemos una llamada de función. ¿Qué significa eso?
+
+Cuando una variable se pasa por valor, el llamado, que es otra forma de decir la función que está recibiendo la variable que se pasa como entrada, en realidad no recibe esa variable en sí. Recibe su propia copia para trabajar. Esta es una distinción realmente importante. Vimos hace un segundo que con las variables globales, si manipulamos la variable global en una función, el efecto en esa función se transmite a todas las demás funciones. 
+
+Pero con las variables locales, no es así. Cada función cuando recibe variables como entrada recibe copias de esas variables, no las variables en sí mismas. Entonces, ¿cuál es el efecto secundario de eso? Eso significa que la variable en el "caller", la función que está haciendo la llamada de función, no se cambia a menos que se anule.
+
+Por ejemplo, en este código, "foo" no cambia en absoluto. "Int foo equals 4", llamo a "triple" de "foo", dentro de "triple", esperamos que "foo" se multiplique por 3 y se devuelva, pero en realidad no hay ningún efecto.
+
+Aquí, sin embargo, una diferencia muy sutil. Esto sí tiene el efecto que queremos. ¿Ves por qué? Estamos anulando "foo" en "main" esta vez. 
+
+"Int foo equals 4", "foo equals triple foo", al hacer esa llamada, "triple" obtiene su propia copia de "foo", su propia copia de 4. Dice "devuelve 4 veces 3", o cualquier variable que se pase por 3. Y luego asignamos el valor devuelto de "triple" a "foo" nuevamente. Por lo tanto, esto realmente sobrescribirá "foo". Esta es la única forma de hacer esto con una variable local. Así que ahora, si agregamos otra línea de código aquí al final de "main" para imprimir el valor de "foo", en realidad imprimirá 12.
+
+El alcance de las variables generalmente no es demasiado problemático si nombras todas tus variables con diferentes nombres. Pero puede ser un poco difícil si el mismo nombre de variable aparece en varias funciones, lo que sucede mucho. Si alguna vez trabajas en el mundo real donde estás trabajando en programas colaborativos y personas de diferentes equipos trabajan juntos para escribir el mismo programa o el mismo conjunto de programas, reutilizarán los nombres de variables con frecuencia. Particularmente nombres comunes como x, y, i, j, y así sucesivamente.
+
+Pero cuando las variables tienen el mismo nombre, los problemas de alcance pueden ser un poco más complicados de analizar. Por ejemplo, ¿sabes qué se imprimiría al final de este programa en particular? Toma un minuto. Pausa el video y lee este programa. Puedes ver en la parte superior que tenemos una declaración de función para una función llamada "increment". Esa función toma un solo parámetro, un entero que llamamos "x". Y devuelve un entero. Ese es el tipo de devolución al principio.
+
+Luego tenemos "main", un par de líneas de código en "main", la última de las cuales es una declaración de impresión. Y recuerda, esa es la pregunta aquí. ¿Qué se imprimirá realmente al final de esta función? Y luego, de hecho, tenemos la definición de "increment" a continuación.
+
+Toma un minuto, pasa por el código, rastrea las cosas. ¿Sabes qué se imprimirá al final de este programa en particular?
+
+Muy bien. Con suerte, tomaste unos segundos para intentar entender esto por tu cuenta. Hagámoslo juntos.
+
+Entonces taché la declaración de "increment" en la parte superior. Era un poco una distracción. No es su propia variable. No tiene su propio alcance. Es solo una declaración de función, por lo que para fines de tratar de analizar lo que está sucediendo en este programa, podríamos evitarla. 
+
+Ahora tenemos, en este caso, que el motivo por el que este problema es complicado es porque tenemos variables locales tanto en "main" como en "increment", cada una de las cuales se llama "x". Y por supuesto, el meollo de este problema es tratar de entender qué "x" se cambia y cómo se cambia. Así que he resaltado en rojo cada instancia de "x" que es local a "main". Y he resaltado en azul cada instancia de "x" que es local a "increment".
+
+Observa que, en la tercera línea de "main", "y" es igual a "increment x", y "increment" no está pasando la "x" de "main", o la "x" roja. Está recibiendo una copia de ella. Y solo funcionará con esa copia, la "x" azul. Si tienes habilidades matemáticas, es posible que en su lugar hayas pensado en esto como "x sub m" para "main" y "x sub i" para "increment". Pero es la misma idea. "X sub m", o las "x" rojas en la diapositiva anterior, son las variables que son locales, es decir, la instancia de "x" que es local a "main", y "x sub i", o las variables azules en la diapositiva anterior, son las instancias de "x" que son locales a "increment".
+
+¿Pudiste averiguar qué imprimiría esta función al final? Soy Doug Lloyd y esto es CS50.

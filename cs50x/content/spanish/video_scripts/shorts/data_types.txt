@@ -1,0 +1,11 @@
+Muy bien. Así que hablemos de algo que es único en C, lo que son los tipos de datos y las variables. Cuando digo que es único en C, en realidad solo quiero decir que en el contexto de si has sido programador durante mucho tiempo, probablemente no hayas trabajado con tipos de datos si has usado lenguajes de programación modernos. En lenguajes modernos como PHP y JavaScript, que también veremos más adelante en el curso, en realidad no tienes que especificar el tipo de datos de una variable cuando la usas. 
+
+Simplemente la declaras y comienzas a usarla. Si es un número entero, sabe que es un número entero. Si es un carácter, sabe que es un carácter. Si es una palabra, sabe que es una cadena, llamada así. 
+
+Pero en C, que es un lenguaje antiguo, necesitamos especificar el tipo de datos de cada variable que creamos la primera vez que usamos esa variable. Así que C viene con algunos tipos de datos integrados. Y familiaricémonos con algunos de ellos. Luego hablaremos un poco sobre algunos de los tipos de datos que hemos escrito para ustedes, para que los puedan usar en CS50. 
+
+El primero es int. El tipo de datos int se utiliza para variables que almacenarán valores enteros. Enteros, que es algo que debes tener en cuenta para el cuestionario, siempre ocupan cuatro bytes de memoria, que es 32 bits. Hay ocho bits en un byte. 
+
+Esto significa que el rango de valores que un entero puede almacenar está limitado por lo que se puede ajustar dentro de 32 bits de información. Ahora resulta que hace mucho tiempo se decidió dividir ese rango de 32 bits en enteros negativos y enteros positivos, cada uno obteniendo la mitad del rango. Entonces, el rango de valores que representamos con un entero van desde menos 2 a la 31 potencia hasta 2 a la 31 potencia menos 1, porque también necesitas un espacio para el 0. 
+
+Así que básicamente la mitad de los posibles valores que se
