@@ -40,4 +40,4 @@ Você vai primeiro solicitar o tamanho inicial, depois solicitar o tamanho n. Em
 
 Depois de escrever todas essas peças, você deve ser capaz de compilar seu programa e depois executá-lo, dando ao seu programa um tamanho de população inicial e um tamanho de população final. E, em seguida, o seu programa deve ser capaz de dizer quanto tempo levará para chegar do ponto A ao ponto B.
 
-Meu nome é Brian. E este foi o crescimento populacional.
+Meu nome é Ramon. E este foi o crescimento populacional.
