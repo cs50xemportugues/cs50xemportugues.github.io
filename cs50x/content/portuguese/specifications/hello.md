@@ -89,7 +89,7 @@ E certifique-se de executar seu programa, testando-o algumas vezes com entradas 
 
 Aqui está um "tutorial" (ou seja, uma visita guiada) deste problema, se você quiser uma visão geral verbal do que fazer também!
 
-<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/wSk1KSDUEYA?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/LvT8TjHHCRU?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
 
 ### Dicas
 

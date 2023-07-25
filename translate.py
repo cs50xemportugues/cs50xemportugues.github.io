@@ -2,13 +2,14 @@ import openai
 import time
 from files_names.text.specifications import specifications, specifications_part1, specifications_part2
 from dotenv import load_dotenv
-
 load_dotenv()  
 import datetime
 import os
+import sys
+from dotenv import load_dotenv
+load_dotenv()
 
-openai.api_key = os.environ["CHATGPT_APIKEY"]
-
+openai.api_key = os.getenv('CHATGPT_KEY')
 
 def concat_files(input_filenames, folder, language):
     with open(f"cs50x/content/{language}/{folder}/{input_filenames[0][0:-1]}.md", 'w') as outfile:
@@ -28,17 +29,19 @@ def concat_files_notes(input_filenames, folder, language):
 
 def translate(files, folder, language, extension, file_description):
 
+
     for f in files:
-
         try:
+            print(f"cs50x/content/english/{folder}/{f}.{extension}")
             source_file = open(f"cs50x/content/english/{folder}/{f}.{extension}", "r")
-
+            
             try:
+
                 response = openai.ChatCompletion.create(
                     model="gpt-3.5-turbo",
                     messages=[
                         {"role": "system", "content": f"You are a helpful assistant that translates computer science related content from English to {language.capitalize()}. Translate the text thoroughly. Do not summarize the translation. Do not convert HTML tags to Markdown."},
-                        {"role": "user", "content": f'Translate the following computer science {file_description} from English to {language.capitalize()}: "{source_file.read()}"'}
+                        {"role": "user", "content": f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''}
                     ],
                 )
 
@@ -50,10 +53,14 @@ def translate(files, folder, language, extension, file_description):
                     generated_file = open(f'cs50x/content/{language}/{folder}/{f}.{extension}', 'w')
                     generated_file.writelines(response.choices[0].message.content)
 
+                print(">>> STEP 3")
+
             except openai.error.InvalidRequestError:
                 print(f"there was an error when translating '{f}'")
             time.sleep(20)
+            
         except:
+            print("Error: couldn't open the file")
             pass
 
 def translate_specifications(language):
@@ -406,27 +413,23 @@ def translate_notes(language):
     concat_files_notes(notes8, "notes", language)
     concat_files_notes(notes9, "notes", language)
 
-
-
 def translate_psets(language):
     psets = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
     translate(psets, "psets", language, "html", "HTML file")
 
-
-"""
-translate_specifications_part1("french")
-translate_specifications_part2("french")
-translate_specifications_divided_part1("french")
-translate_specifications_divided_part2("french")
-translate_notes("portuguese")
-translate_psets("portuguese")
-"""
-
-
-translate_notes("french")
-translate_notes("spanish")
-translate_psets("portuguese")
-translate_psets("french")
-translate_psets("spanish")
-
-
+if sys.argv[1] != "notes" and sys.argv[1] == "specifications" and sys.argv[1] == "psets":
+    print("Usage: python translate.py CONTENT_TYPE LANGUAGE")
+    print("CONTENT_TYPE can be one of the following: notes, psets, or specifications")
+    sys.exit()    
+else:
+    print(f"Translating content to {sys.argv[2]}.")
+    if sys.argv[1] == "notes":
+        translate_notes(sys.argv[2])
+    elif sys.argv[1] == "specifications":
+        translate_specifications(sys.argv[2])
+        translate_specifications_part1(sys.argv[2])
+        translate_specifications_part2(sys.argv[2])
+        translate_specifications_divided_part1(sys.argv[2])
+        translate_specifications_divided_part2(sys.argv[2])
+    elif sys.argv[1] == "psets":
+        translate_psets(sys.argv[2])

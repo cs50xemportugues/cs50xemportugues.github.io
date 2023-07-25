@@ -127,6 +127,10 @@ week_3 = {
             "name": "Selection Sort",
             "link": ""
         },
+        "insertion_sort": {
+            "name": "",
+            "link": ""
+        },
         "recursion":  {
             "name": "Recursion",
             "link": ""
@@ -142,24 +146,27 @@ week_4 = {
     "name": "Memory",
     "number": 4,
     "shorts": {
-        "": {
-            "name": "Hexadecimal",
-            "link": ""
-        },"": {
+        "hexadecimal": {
+            "name": "Sistema Hexadecimal",
+            "link": "https://www.youtube.com/watch?v=bJcp5OnZ1U0"
+        },
+        "pointers": {
             "name": "Pointers",
             "link": ""
         },
-        "": {
+        "custom_types": {
             "name": "Defining Custom Types",
             "link": ""
-        },"": {
-            "name": "Dynamic Memory Allocation",
-            "link": ""
         },
-        "": {
+        "memory_allocation": {
+            "name": "Alocação de Memória Dinâmica",
+            "link": "https://www.youtube.com/watch?v=zh6p9MKynDw"
+        },
+        "call_stacks": {
             "name": "Call Stacks",
             "link": ""
-        },"": {
+        },
+        "file_pointers": {
             "name": "File Pointers",
             "link": ""
         },

@@ -1,43 +1,43 @@
 menu = {
-    "title": "This is CS50x",
-    "intro": "Harvard University's computer science course",
-    "week": "Week",
-    "week2": "Arrays",
-    "week3": "Algorithms",
-    "week4": "Memory",
-    "week5": "Data Structures",
-    "cybersecurity": "Cybersecurity",
-    "seminars": "Seminars",
-    "project": "Final Project",
-    "honesty": "Academic Honesty",
-    "certificate": "CS50 Certificate",
-    "faqs": "FAQs",
+    "title": "Este é o CS50x",
+    "intro": "O curso de Ciências da Computação da Universidade de Harvard",
+    "week": "Semana",
+    "week2": "Vetores",
+    "week3": "Algoritmos",
+    "week4": "Memória",
+    "week5": "Estruturas de Dados",
+    "cybersecurity": "Cibersegurança",
+    "seminars": "Seminários",
+    "project": "Projeto Final",
+    "honesty": "Honestidade Acadêmica",
+    "certificate": "Certificado CS50",
+    "faqs": "Perguntas Frequentes",
     "gradebook": "Gradebook",
-    "staff": "Staff",
-    "syllabus": "Syllabus",
-    "office_hours": "Office Hours",
-    "psets": "Problem Sets",
-    "sections": "Sections",
-    "python_documentation": "Python Documentation",
-    "adminer": "PostgreSQL Browser",
-    "sqlite_browser": "SQLite Browser",
+    "staff": "Equipe",
+    "syllabus": "Currículo do Curso",
+    "office_hours": "Mentorias",
+    "psets": "Listas de Problemas",
+    "sections": "Seções",
+    "python_documentation": "Documentação Python",
+    "adminer": "Navegador PostgreSQL",
+    "sqlite_browser": "Navegador SQLite",
 }
 
 week_page = {
-    "week": "Week",
-    "lecture": "Lecture",
-    "audio": "Audio",
-    "notes": "Notes",
+    "week": "Semana",
+    "lecture": "Aula",
+    "audio": "Áudio",
+    "notes": "Anotações",
     "slides": "Slides",
-    "source_code": "Source Code",
-    "subtitles": "Subtitles",
-    "transcript": "Transcript",
-    "video": "Video",
-    "shorts": "Shorts",
-    "section": "Section",
-    "practice_problems": "Practice Problems",
-    "lab": "Lab",
-    "problem_set": "Problem Set",
+    "source_code": "Código Fonte",
+    "subtitles": "Legendas",
+    "transcript": "Transcrição",
+    "video": "Vídeo",
+    "shorts": "Tópicos Importantes",
+    "section": "Seção",
+    "practice_problems": "Problemas Práticos",
+    "lab": "Laboratório",
+    "problem_set": "Lista de Problemas",
 }
 
 week_0 = {
@@ -50,27 +50,27 @@ week_1 = {
     "number": 1,
     "shorts": {
         "data_types": {
-            "name": "Data Types",
-            "link": ""
+            "name": "Tipos de Dados",
+            "link": "https://www.youtube.com/watch?v=kyYFtm59r5Q"
         },
             "operators":{
-            "name": "Operators",
-            "link": ""
+            "name": "Operadores",
+            "link": "https://www.youtube.com/watch?v=NnVsN0RGXBs"
         },
             "conditionals": {
-            "name": "Conditional Statements",
-            "link": ""
+            "name": "Estruturas Condicionais",
+            "link": "https://www.youtube.com/watch?v=LPKqDguO4JY"
         },
             "loops": {
-            "name": "Loops",
-            "link": ""
+            "name": "Estruturas de Repetição",
+            "link": "https://www.youtube.com/watch?v=2CwCdEHU36o"
         },
             "command_line": {
-            "name": "Command Line",
+            "name": "Linha de Comando",
             "link": ""
         },
             "magic_numbers": {
-            "name": "Magic Numbers",
+            "name": "Números Mágicos",
             "link": ""
         },
     }
@@ -85,8 +85,8 @@ week_2 = {
             "link": ""
         },
         "variables_and_scope": {
-            "name": "Variables and Scope",
-            "link": ""
+            "name": "Variáveis e Escopo",
+            "link": "https://www.youtube.com/watch?v=xfxa98WQXdw"
         },
         "debugging_step_through": {
             "name": "Debugging (“Step through”)",
@@ -97,12 +97,12 @@ week_2 = {
             "link": ""
         },
         "arrays": {
-            "name": "Arrays",
-            "link": ""
+            "name": "Vetores",
+            "link": "https://www.youtube.com/watch?v=WXJXqmmJATY"
         },
         "command_line_arguments": {
-            "name": "Command Line Arguments",
-            "link": ""
+            "name": "Argumentos de Linha de Comando",
+            "link": "https://www.youtube.com/watch?v=xipno6i0Z2c"
         },
     }
 }
@@ -112,20 +112,24 @@ week_3 = {
     "number": 3,
     "shorts": {
         "linear_search": {
-            "name": "Linear Search",
-            "link": ""
+            "name": "Pesquisa Linear",
+            "link": "https://www.youtube.com/watch?v=1gqgpqo7Ams"
         },
         "binary_search": {
             "name": "Binary Search",
             "link": ""
         },
         "bubble_sort":  {
-            "name": "Bubble Sort",
-            "link": ""
+            "name": "Ordenação por Flutuação",
+            "link": "https://www.youtube.com/watch?v=jMrWnPPZ6ZM"
         },
         "selection_sort":  {
-            "name": "Selection Sort",
-            "link": ""
+            "name": "Ordenação por Seleção",
+            "link": "https://www.youtube.com/watch?v=k2XR-vsoT5s"
+        },
+        "insertion_sort": {
+            "name": "Ordenação por Inserção",
+            "link": "https://www.youtube.com/watch?v=NfGIj-r4IvM"
         },
         "recursion":  {
             "name": "Recursion",
@@ -135,6 +139,10 @@ week_3 = {
             "name": "Merge Sort", 
             "link": ""
         },
+        "algorithms_summary": {
+            "name": "Resumo dos Algoritmos",
+            "link": "https://www.youtube.com/watch?v=0tmqY6K3VK8",
+        }
     }
 }
 
@@ -142,24 +150,27 @@ week_4 = {
     "name": "Memory",
     "number": 4,
     "shorts": {
-        "": {
-            "name": "Hexadecimal",
-            "link": ""
-        },"": {
+        "hexadecimal": {
+            "name": "Sistema Hexadecimal",
+            "link": "https://www.youtube.com/watch?v=bJcp5OnZ1U0"
+        },
+        "pointers": {
             "name": "Pointers",
             "link": ""
         },
-        "": {
+        "custom_types": {
             "name": "Defining Custom Types",
             "link": ""
-        },"": {
-            "name": "Dynamic Memory Allocation",
-            "link": ""
         },
-        "": {
+        "memory_allocation": {
+            "name": "Alocação de Memória Dinâmica",
+            "link": "https://www.youtube.com/watch?v=zh6p9MKynDw"
+        },
+        "call_stacks": {
             "name": "Call Stacks",
-            "link": ""
-        },"": {
+            "link": "https://www.youtube.com/watch?v=ui4C0SgplWY"
+        },
+        "file_pointers": {
             "name": "File Pointers",
             "link": ""
         },
@@ -277,36 +288,38 @@ week_10 = {
 cibersecurity = {
     "name": "Cybersecurity",
 }
+
 urls = {
-    "cybersecurity": "cybersecurity",
-    "seminars": "seminars",
-    "honesty": "honesty",
-    "certificate": "syllabus",
-    "faqs": "syllabus",
-    "staff": "syllabus",
-    "syllabus": "syllabus",
-    "project": "project",
-    "hello": "hello",
-    "mario_less": "mario/less",
-    "mario_more": "mario/more",
-    "cash": "cash",
-    "credit": "credit",
-    "readability": "readability",
-    "bulbs": "bulbs",
-    "caesar": "caesar",
-    "substitution": "substitution",
-    "plurality": "plurality",
-    "runoff": "runoff",
-    "tideman": "tideman",
-    "filter": "filter",
-    "recover": "recover",
-    "reverse": "reverse",
-    "speller": "speller",
+    "cybersecurity": "ciberseguranca",
+    "seminars": "seminarios",
+    "honesty": "honestidade",
+    "certificate": "certificado",
+    "faqs": "perguntas_frequentes",
+    "staff": "equipe",
+    "syllabus": "curriculo",
+    "project": "projeto",
+    "hello": "ola",
+    "mario_less": "mario/menos",
+    "mario_more": "mario/mais",
+    "cash": "dinheiro",
+    "credit": "credito",
+    "readability": "legibilidade",
+    "bulbs": "bulbos",
+    "caesar": "cesar",
+    "substitution": "substituicao",
+    "wordle50": "wordle50",
+    "plurality": "pluralidade",
+    "runoff": "preferencia",
+    "tideman": "pares_ranqueados",
+    "filter": "filtrar",
+    "recover": "recuperar",
+    "reverse": "reversao",
+    "speller": "corretor",
     "dna": "dna",
-    "movies": "movies",
-    "fiftyville": "fiftyville",
-    "homepage": "homepage",
-    "finance": "finance",
-    "less": "less",
-    "more": "more"
+    "movies": "filmes",
+    "fiftyville": "vila50",
+    "homepage": "pagina_inicial",
+    "finance": "financas",
+    "less": "menos",
+    "more": "mais"
 }
