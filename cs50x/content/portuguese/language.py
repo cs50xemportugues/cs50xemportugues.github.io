@@ -43,11 +43,15 @@ week_page = {
 week_0 = {
     "name": "Scratch",
     "number": 0,
+    "google_slides_link": "https://docs.google.com/presentation/d/1acUrdTo6VXEYxhN_iwES2Ruz7yVJZ3Fd-w5cn2jLcuM/edit?usp=sharing",
+    "pdf_slides_link": "https://drive.google.com/file/d/1or9fI5y5w5NMds7UfTWjgupotmAIQMMx/view"
 }
 
 week_1 = {
     "name": "C",
     "number": 1,
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "data_types": {
             "name": "Tipos de Dados",
@@ -79,6 +83,8 @@ week_1 = {
 week_2 = {
     "name": "Arrays",
     "number": 2,
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "functions": {
             "name": "Functions",
@@ -110,6 +116,8 @@ week_2 = {
 week_3 = {
     "name": "Algorithms",
     "number": 3,
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "linear_search": {
             "name": "Pesquisa Linear",
@@ -149,6 +157,8 @@ week_3 = {
 week_4 = {
     "name": "Memory",
     "number": 4,
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "hexadecimal": {
             "name": "Sistema Hexadecimal",
@@ -180,6 +190,8 @@ week_4 = {
 week_5 = {
     "name": "Data Structures",
     "number": 5,
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "data_structures": {
             "name": "Data Structures",
@@ -213,6 +225,8 @@ week_5 = {
 week_6 = {
     "name": "Python",
     "number": 6,
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "python": {
             "name": "Python",
@@ -224,6 +238,8 @@ week_6 = {
 week_7 = {
     "name": "SQL",
     "number": 7,
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "sql": {
             "name": "SQL",
@@ -235,6 +251,8 @@ week_7 = {
 week_8 = {
     "name": "HTML, CSS, JavaScript",
     "number": 8,
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "internet_primer": {
             "name": "Internet Primer",
@@ -268,6 +286,8 @@ week_8 = {
 week_9 = {
     "name": "Flask",
     "number": 9,
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "flask": {
             "name": "Flask",
@@ -282,11 +302,15 @@ week_9 = {
 
 week_10 = {
     "name": "Emoji",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "number": 10,
 }
 
 cibersecurity = {
     "name": "Cybersecurity",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
 }
 
 urls = {

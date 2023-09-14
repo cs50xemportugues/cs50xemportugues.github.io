@@ -31,7 +31,7 @@ def translate(files, folder, language, extension, file_description):
 
 
     for f in files:
-        try:
+        try:    
             print(f"cs50x/content/english/{folder}/{f}.{extension}")
             source_file = open(f"cs50x/content/english/{folder}/{f}.{extension}", "r")
             

@@ -1,14 +1,14 @@
 # Scratch
 
-Chegou a hora de escolher sua própria aventura! Sua tarefa, simplesmente, é implementar em Scratch, em [scratch.mit.edu](https://scratch.mit.edu/), qualquer projeto de sua escolha, seja uma história interativa, jogo, animação ou qualquer outra coisa, sujeito apenas aos seguintes requisitos:
+Chegou a hora de escolher sua própria aventura! Sua tarefa, simplesmente, é implementar usando Scratch, em [scratch.mit.edu](https://scratch.mit.edu/), qualquer projeto de sua escolha, seja uma história interativa, jogo, animação ou qualquer outra coisa, sujeito apenas aos seguintes requisitos:
 
-- Seu projeto deve usar pelo menos dois sprites, dos quais pelo menos um não deve ser um gato.
+- Seu projeto deve usar pelo menos dois sprites (dois atores, personagens), dos quais pelo menos um não deve ser um gato.
 - Seu projeto deve ter pelo menos três scripts no total (ou seja, não necessariamente três por sprite).
-- Seu projeto deve usar pelo menos uma condição, pelo menos um loop e pelo menos uma variável.
-- Seu projeto deve usar pelo menos um bloco personalizado que você mesmo tenha feito (por meio de **Criar um bloco**), que deve ter pelo menos uma entrada.
-- Seu projeto deve ser mais complexo do que a maioria dos projetos demonstrados na aula (muitos dos quais, embora instrutivos, foram bastante curtos), mas pode ser menos complexo do que [Oscartime](https://scratch.mit.edu/projects/277537196) e [Ivy’s Hardest Game](https://scratch.mit.edu/projects/326129433).
+- Seu projeto deve usar pelo menos uma condição, pelo menos uma repetição e pelo menos uma variável.
+- Seu projeto deve usar pelo menos um bloco personalizado que você mesmo tenha feito (por meio de **Criar um bloco**), que deve ter pelo menos uma entrada de dados.
+- Seu projeto deve ser mais complexo do que a maioria dos projetos demonstrados na aula (muitos dos quais, embora instrutivos, foram bastante curtos), mas pode ser menos complexo do que [Oscartime](https://scratch.mit.edu/projects/277537196) e [O Jogo mais Difícil da Ivy League](https://scratch.mit.edu/projects/326129433).
 
-Para atender a esses requisitos, seu projeto deve usar algumas dezenas de peças de quebra-cabeça no geral. E seu código deve ser idealmente não apenas correto, mas também bem projetado. Se um dos seus scripts estiver um pouco longo, tente dividi-lo em vários scripts (cada um dos quais faz algo específico). E tente aproveitar a "abstração" sempre que possível: se você pode imaginar dar um nome descritivo a uma sequência de blocos (por exemplo, **miado**), provavelmente pode movê-los para um bloco personalizado!
+Para atender a esses requisitos, seu projeto deve usar algumas dezenas de peças de quebra-cabeça no geral. E seu código deve ser idealmente não apenas correto, mas também bem projetado. Se um dos seus scripts estiver um pouco longo, tente dividi-lo em vários scripts (cada um dos quais faz algo específico). E tente aproveitar a "abstração" sempre que possível: se você pode imaginar dar um nome descritivo a uma sequência de blocos (por exemplo, **espirrar**), provavelmente pode movê-los para um bloco personalizado!
 
 Se você precisar de inspiração de alunos anteriores, aqui estão apenas alguns:
 
@@ -31,9 +31,9 @@ Quando terminar o projeto, selecione **Arquivo > Salvar agora** pela última vez
 
 Suffice it to say que é um pouco mais difícil conhecer seus colegas de classe quando se faz um curso on-line. Mas, graças à tecnologia, todo mundo pode pelo menos dizer olá!
 
-Se você tiver um telefone (ou câmera digital) e quiser dizer olá aos colegas de classe, grave um vídeo de 1 a 2 minutos de você dizendo olá, talvez indicando onde você está no mundo, por que está fazendo CS50x e algo interessante sobre você! Tente começar seu vídeo dizendo "olá, mundo" e termine com "meu nome é ..., e isso é CS50". Mas, em última análise, depende totalmente de você.
+Se você tiver um telefone (ou câmera digital) e quiser dizer olá aos colegas de classe, grave um vídeo de 1 a 2 minutos de você dizendo olá, talvez indicando onde você está no mundo, por que está fazendo CS50x e algo interessante sobre você! Tente começar seu vídeo dizendo "olá, mundo" e termine com "meu nome é ..., e este é o CS50". Mas, no fim das contas, depende totalmente de você.
 
-Se você gravou um vídeo, envie-o para o YouTube (a menos que esteja bloqueado em seu país, caso em que você poderá enviá-lo para outro lugar) para que possa nos fornecer sua URL quando enviar!
+Se você gravou um vídeo, envie-o para o YouTube para que possa nos fornecer o link do seu vídeo quando enviar!
 
 ## Como Enviar
 
@@ -45,15 +45,15 @@ Envie [este formulário](https://forms.cs50.io/73e44070-1fac-46bb-b041-5a5fce32a
 
 ### Passo 2 de 2
 
-Assume-se que você baixou seu projeto Scratch como um arquivo cujo nome termina em `.sb3`. E este passo também assume que você se registrou para uma conta do GitHub, de acordo com o formulário acima.
+Considerando que você baixou seu projeto Scratch como um arquivo cujo nome termina em `.sb3`. E este passo também considera que você se registrou para uma conta do GitHub, de acordo com o formulário acima.
 
 1.  Visite [este link](https://submit.cs50.io/invites/9770b67479384c4d8c37790779e466d9), faça login com sua conta do GitHub e clique em **Autorizar cs50**.
 2.  Selecione a caixa indicando que você gostaria de conceder acesso da equipe do curso às suas entregas e clique em **Participar do curso**.
 3.  Vá para [submit.cs50.io/upload/cs50/problems/2023/x/scratch](https://submit.cs50.io/upload/cs50/problems/2023/x/scratch).
 4.  Clique em “Escolher arquivo” e escolha o seu arquivo `.sb3`. Clique em **Enviar**.
 
-É isso! Depois que sua entrega for enviada, você deverá ser redirecionado para a página da sua entrega. Clique no link de entrega e depois no link **check50** para ver quais requisitos seu projeto cumpriu. Você pode enviar novamente quantas vezes quiser (antes do prazo)!
+É isso! Depois que seu projeto for enviado, você deverá ser redirecionado para a página do seu envio. Clique no link de envio e depois no link **check50** para ver quais requisitos seu projeto cumpriu. Você pode enviar novamente quantas vezes quiser (antes do prazo)!
 
 Observe que se você carregar um arquivo cujo tamanho seja maior que 10MB (o que é bastante grande para um projeto Scratch), o `check50` poderá ter dificuldade em processá-lo. É melhor garantir que seu arquivo seja menor que esse limite.
 
-Para ver seu progresso atual no curso, visite o livro de notas do curso em [cs50.me/cs50x](https://cs50.me/cs50x)!
+Para ver seu progresso atual no curso, visite o painel de notas do curso em [cs50.me/cs50x](https://cs50.me/cs50x)!

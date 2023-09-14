@@ -46,7 +46,7 @@ def pset1():
         f'{os.environ["COURSE_LANGUAGE"]}/psets/1.html',
     )
 
-
+"""
 @bp.route(f"/1/{current_app.config['URLS']['hello']}/")
 @bp.route(f"/1/{current_app.config['URLS']['hello']}.html")
 def hello():
@@ -476,3 +476,4 @@ def finance():
         'blank.html',
         markdown_text=marko.convert(markdown_text)
     )
+"""
