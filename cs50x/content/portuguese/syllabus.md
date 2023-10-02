@@ -61,5 +61,5 @@ O CS50x não tem prazo para o projeto final. Você pode trabalhar nele e enviá-
 
 ## Honestidade Acadêmica
 
-Consulte a Política de [Honestidade Acadêmica](/2023/honesty) para obter diretrizes.
+Consulte a Política de [Honestidade Acadêmica](/2023/honestidade) para obter diretrizes.
 

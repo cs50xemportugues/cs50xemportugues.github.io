@@ -6,7 +6,6 @@ from cs50x.content.french.language import menu as menu_french
 from cs50x.content.portuguese.language import menu as menu_portuguese
 from cs50x.content.spanish.language import menu as menu_spanish
 from cs50x.content.english.language import menu as menu_english
-
 from cs50x.content.french.language import urls as urls_french
 from cs50x.content.portuguese.language import urls as urls_portuguese
 from cs50x.content.spanish.language import urls as urls_spanish
@@ -14,7 +13,7 @@ from cs50x.content.english.language import urls as urls_english
 
 def create_app():
     app = Flask(__name__)
-    app.config["FREEZE_DESTINATION"] = os.environ["COURSE_LANGUAGE"]
+    app.config["FREEZE_DESTINATION"] = f"build_{os.environ['COURSE_LANGUAGE']}"
   
     if os.environ["COURSE_LANGUAGE"] == "portuguese":
         app.config["FREEZER_DESTINATION"] = "portuguese"

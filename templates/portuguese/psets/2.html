@@ -1,0 +1,116 @@
+{% extends 'layout.html' %} {% block conteudo %}
+<h1 id="problem-set-2">Problema Set 2</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    A colaboração nos problemas é proibida, exceto na medida em que você
+    possa pedir ajuda aos colegas e outras pessoas, desde que essa ajuda não se reduza
+    a outra pessoa fazer o trabalho por você, de acordo com a política do curso sobre
+    <a href="{{url_for('cs50x.honesty')}}">honestidade acadêmica</a>.
+  </p>
+
+  <p>
+    A equipe faz auditorias aleatórias das submissões para CS50x. Os alunos que forem
+    encontrados em violação desta política serão removidos do curso. Os alunos que
+    já tenham concluído CS50x, se forem encontrados em violação, terão seu
+    Certificado CS50 permanentemente revogado.
+  </p>
+</div>
+
+<h2 id="what-to-do">O que fazer</h2>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    Certifique-se de ter concluído
+    <a href="{{url_for('cs50x.labs.lab2')}}">Lab 2</a> antes de iniciar este
+    problema set.
+  </p>
+</div>
+
+<ol>
+  <li>
+    Faça login em <a href="https://code.cs50.io">code.cs50.io</a> usando sua conta do GitHub
+  </li>
+  <li>
+    Execute <code class="language-plaintext highlighter-rouge">update50</code> na
+    janela do terminal do seu codespace para garantir que seu codespace esteja atualizado e,
+    quando solicitado, clique em <strong>Rebuild now</strong>
+  </li>
+  <li>
+    Envie <a href="{{url_for('cs50x.psets.readability')}}">Readability</a>
+  </li>
+  <li>
+    Envie um dos seguintes:
+    <ul>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.bulbs')}}">Bulbs</a>, se sentir menos
+        confortável
+      </li>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.caesar')}}">Caesar</a>, se sentir menos
+        confortável
+      </li>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.substitution')}}">Substitution</a>, se
+        sentir mais confortável
+      </li>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.wordle50')}}">Wordle50</a>, se sentir
+        mais confortável
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>
+  Se você enviar mais de um dos problemas Bulbs, Caesar, Substitution ou Wordle50, nós
+  registraremos a pontuação mais alta entre esses problemas.
+</p>
+
+<h2 id="when-to-do-it">Quando fazer</h2>
+
+<p>
+  Até
+  <a
+    data-local="2023-12-31T23:59:00+00:00"
+    href="https://time.cs50.io/20231231T235900Z"
+    >2023-12-31T23:59:00+00:00</a
+  >.
+</p>
+
+<h2 id="advice">Dicas</h2>
+
+<ul>
+  <li data-marker="*">
+    Experimente qualquer um dos programas do David da aula através dos
+    <a href="{{url_for('cs50x.weeks.week2')}}">exemplos da Semana 2</a>.
+  </li>
+  <li data-marker="*">
+    Para ver as páginas de manual das funções em C, visite
+    <a href="https://manual.cs50.io/">manual.cs50.io</a>.
+  </li>
+  <li data-marker="*">
+    Se você encontrar erros ao compilar seu código com
+    <code class="language-plaintext highlighter-rouge">make</code>, concentre-se primeiro
+    em corrigir o primeiro erro que você ver, se necessário, role para cima. Se não tiver certeza
+    do que isso significa, tente pedir ajuda usando
+    <code class="language-plaintext highlighter-rouge">help50</code>. Por exemplo, se estiver tentando compilar
+    <code class="language-plaintext highlighter-rouge">readability</code>, e
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>make readability
+</code></pre>
+      </div>
+    </div>
+    <p>estiver gerando erros, tente executar</p>
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>help50 make readability
+</code></pre>
+      </div>
+    </div>
+    <p>em seu lugar!</p>
+  </li>
+</ul>
+
+{% endblock %}

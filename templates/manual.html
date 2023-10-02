@@ -1,0 +1,32 @@
+{% extends 'manual/layout.html' %}
+
+{% block content %}
+                
+    <div class="container-fluid mt-2 px-4">
+            
+    <p class="mb-3 mt-4">
+        Manual do programador para as funções da biblioteca padrão da linguagem C e a biblioteca do CS50 para <a data-bs-content="Assim como você!" data-bs-toggle="popover" tabindex="0">aqueles menos confortáveis</a>.
+    </p>
+
+    <form>
+        <div class="mb-3">
+            <input autocomplete="off" class="form-control" id="q" placeholder="Pesquisar" type="search">
+        </div>
+        
+        <div class="form-check form-switch mb-4 invisible">
+            <input checked class="form-check-input" id="filter" type="checkbox">
+            <label class="form-check-label" for="filter">frequently used in CS50</label>
+        </div>
+    </form>
+
+    {% include 'manual/cs50.h.html' %}
+    {% include 'manual/ctype.h.html' %}
+    {% include 'manual/math.h.html' %}
+    {% include 'manual/stdio.h.html' %}
+    {% include 'manual/stdlib.h.html' %}
+    {% include 'manual/string.h.html' %}
+    {% include 'manual/strings.h.html' %}
+    {% include 'manual/time.h.html' %}
+
+    </div>
+{% endblock %}

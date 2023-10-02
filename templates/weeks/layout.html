@@ -40,8 +40,8 @@
           {% if week.name=="Scratch" %}
             <li data-marker="*"><a target="_blank" href="https://scratch.mit.edu/studios/27380633">Scratch Studio</a></li>
           {% else %}
-            <li data-marker="*"><a target="_blank" href="">PDF</a></li>
-            <li data-marker="*"><a target="_blank" href="">Zip</a></li>
+            <li data-marker="*"><a target="_blank" href="{{week.pdf_code_link}}">PDF</a></li>
+            <li data-marker="*"><a target="_blank" href="{{week.zip_code_link}}">Zip</a></li>
           {% endif %}
         </ul>
       </li>

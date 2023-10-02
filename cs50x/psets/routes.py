@@ -5,11 +5,6 @@ import os
 from flask import current_app
 
 
-@bp.route('/')
-@bp.route('/index.html')
-def psets():
-    return render_template('psets/index.html')
-
 #############################################################################
 #############################################################################
 #############################################################################
@@ -46,9 +41,9 @@ def pset1():
         f'{os.environ["COURSE_LANGUAGE"]}/psets/1.html',
     )
 
-"""
-@bp.route(f"/1/{current_app.config['URLS']['hello']}/")
-@bp.route(f"/1/{current_app.config['URLS']['hello']}.html")
+
+@bp.route(f"/1/hello/")
+@bp.route(f"/1/hello.html")
 def hello():
     
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/hello.md", "r") as f:
@@ -60,8 +55,8 @@ def hello():
     )
 
 
-@bp.route(f"/1/mario/{current_app.config['URLS']['less']}/")
-@bp.route(f"/1/mario/{current_app.config['URLS']['less']}.html")
+@bp.route(f"/1/mario/less/")
+@bp.route(f"/1/mario/less.html")
 def mario_less():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/mario_less.md", "r") as f:
         markdown_text = f.read()
@@ -71,8 +66,8 @@ def mario_less():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/1/mario/{current_app.config['URLS']['more']}/")
-@bp.route(f"/1/mario/{current_app.config['URLS']['more']}.html")
+@bp.route(f"/1/mario/more/")
+@bp.route(f"/1/mario/more.html")
 def mario_more():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/mario_more.md", "r") as f:
         markdown_text = f.read()
@@ -82,8 +77,8 @@ def mario_more():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/1/{current_app.config['URLS']['cash']}/")
-@bp.route(f"/1/{current_app.config['URLS']['cash']}.html")
+@bp.route(f"/1/cash/")
+@bp.route(f"/1/cash.html")
 def cash():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/cash.md", "r") as f:
         markdown_text = f.read()
@@ -93,8 +88,8 @@ def cash():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/1/{current_app.config['URLS']['credit']}/")
-@bp.route(f"/1/{current_app.config['URLS']['credit']}.html")
+@bp.route(f"/1/credit/")
+@bp.route(f"/1/credit.html")
 def credit():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/credit.md", "r") as f:
         markdown_text = f.read()
@@ -119,8 +114,8 @@ def pset2():
     )
 
 
-@bp.route(f"/2/{current_app.config['URLS']['readability']}/")
-@bp.route(f"/2/{current_app.config['URLS']['readability']}.html")
+@bp.route(f"/2/readability/")
+@bp.route(f"/2/readability.html")
 def readability():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/readability.md", "r") as f:
         markdown_text = f.read()
@@ -130,8 +125,8 @@ def readability():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/2/{current_app.config['URLS']['bulbs']}/")
-@bp.route(f"/2/{current_app.config['URLS']['bulbs']}.html")
+@bp.route(f"/2/bulbs/")
+@bp.route(f"/2/bulbs.html")
 def bulbs():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/bulbs.md", "r") as f:
         markdown_text = f.read()
@@ -142,8 +137,8 @@ def bulbs():
     )
 
 
-@bp.route(f"/2/{current_app.config['URLS']['caesar']}/")
-@bp.route(f"/2/{current_app.config['URLS']['caesar']}.html")
+@bp.route(f"/2/caesar/")
+@bp.route(f"/2/caesar.html")
 def caesar():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/caesar.md", "r") as f:
         markdown_text = f.read()
@@ -155,8 +150,8 @@ def caesar():
 
 
 
-@bp.route(f"/2/{current_app.config['URLS']['substitution']}/")
-@bp.route(f"/2/{current_app.config['URLS']['substitution']}.html")
+@bp.route(f"/2/substitution/")
+@bp.route(f"/2/substitution.html")
 def substitution():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/substitution.md", "r") as f:
         markdown_text = f.read()
@@ -190,8 +185,8 @@ def pset3():
         f'{os.environ["COURSE_LANGUAGE"]}/psets/3.html',
     )
 
-@bp.route(f"/3/{current_app.config['URLS']['plurality']}/")
-@bp.route(f"/3/{current_app.config['URLS']['plurality']}.html")
+@bp.route(f"/3/plurality/")
+@bp.route(f"/3/plurality.html")
 def plurality():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/plurality.md", "r") as f:
         markdown_text = f.read()
@@ -201,8 +196,8 @@ def plurality():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/3/{current_app.config['URLS']['runoff']}/")
-@bp.route(f"/3/{current_app.config['URLS']['runoff']}.html")
+@bp.route(f"/3/runoff/")
+@bp.route(f"/3/runoff.html")
 def runoff():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/runoff.md", "r") as f:
         markdown_text = f.read()
@@ -212,8 +207,8 @@ def runoff():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/3/{current_app.config['URLS']['tideman']}/")
-@bp.route(f"/3/{current_app.config['URLS']['tideman']}.html")
+@bp.route(f"/3/tideman/")
+@bp.route(f"/3/tideman.html")
 def tideman():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/tideman.md", "r") as f:
         markdown_text = f.read()
@@ -235,8 +230,8 @@ def pset4():
         f'{os.environ["COURSE_LANGUAGE"]}/psets/4.html',
     )
 
-@bp.route(f"/4/{current_app.config['URLS']['filter']}/{current_app.config['URLS']['less']}/")
-@bp.route(f"/4/{current_app.config['URLS']['filter']}/{current_app.config['URLS']['less']}.html")
+@bp.route(f"/4/filter/less/")
+@bp.route(f"/4/filter/less.html")
 def filter_less():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/filter_less.md", "r") as f:
         markdown_text = f.read()
@@ -246,8 +241,8 @@ def filter_less():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/4/{current_app.config['URLS']['filter']}/{current_app.config['URLS']['more']}/")
-@bp.route(f"/4/{current_app.config['URLS']['filter']}/{current_app.config['URLS']['more']}.html")
+@bp.route(f"/4/filter/more/")
+@bp.route(f"/4/filter/more.html")
 def filter_more():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/filter_more.md", "r") as f:
         markdown_text = f.read()
@@ -257,8 +252,8 @@ def filter_more():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/4/{current_app.config['URLS']['recover']}/")
-@bp.route(f"/4/{current_app.config['URLS']['recover']}.html")
+@bp.route(f"/4/recover/")
+@bp.route(f"/4/recover.html")
 def recover():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/recover.md", "r") as f:
         markdown_text = f.read()
@@ -268,8 +263,8 @@ def recover():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/4/{current_app.config['URLS']['reverse']}/")
-@bp.route(f"/4/{current_app.config['URLS']['reverse']}.html")
+@bp.route(f"/4/reverse/")
+@bp.route(f"/4/reverse.html")
 def reverse():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/reverse.md", "r") as f:
         markdown_text = f.read()
@@ -292,8 +287,8 @@ def pset5():
     )
     
 
-@bp.route(f"/5/{current_app.config['URLS']['speller']}/")
-@bp.route(f"/5/{current_app.config['URLS']['speller']}.html")
+@bp.route(f"/5/speller/")
+@bp.route(f"/5/speller.html")
 def speller():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/speller.md", "r") as f:
         markdown_text = f.read()
@@ -316,8 +311,8 @@ def pset6():
         f'{os.environ["COURSE_LANGUAGE"]}/psets/6.html',
     )
 
-@bp.route(f"/6/{current_app.config['URLS']['hello']}/")
-@bp.route(f"/6/{current_app.config['URLS']['hello']}.html")
+@bp.route(f"/6/hello/")
+@bp.route(f"/6/hello.html")
 def python_hello():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/python_hello.md", "r") as f:
         markdown_text = f.read()
@@ -327,8 +322,8 @@ def python_hello():
         markdown_text=marko.convert(markdown_text)
     )
  
-@bp.route(f"/6/mario/{current_app.config['URLS']['less']}/")
-@bp.route(f"/6/mario/{current_app.config['URLS']['less']}.html")
+@bp.route(f"/6/mario/less/")
+@bp.route(f"/6/mario/less.html")
 def python_mario_less():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/python_mario_less.md", "r") as f:
         markdown_text = f.read()
@@ -338,8 +333,8 @@ def python_mario_less():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/6/mario/{current_app.config['URLS']['more']}/")
-@bp.route(f"/6/mario/{current_app.config['URLS']['more']}.html")
+@bp.route(f"/6/mario/more/")
+@bp.route(f"/6/mario/more.html")
 def python_mario_more():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/python_mario_more.md", "r") as f:
         markdown_text = f.read()
@@ -349,8 +344,8 @@ def python_mario_more():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/6/{current_app.config['URLS']['cash']}/")
-@bp.route(f"/6/{current_app.config['URLS']['cash']}.html")
+@bp.route(f"/6/cash/")
+@bp.route(f"/6/cash.html")
 def python_cash():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/python_cash.md", "r") as f:
         markdown_text = f.read()
@@ -360,8 +355,8 @@ def python_cash():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/6/{current_app.config['URLS']['credit']}/")
-@bp.route(f"/6/{current_app.config['URLS']['credit']}.html")
+@bp.route(f"/6/credit/")
+@bp.route(f"/6/credit.html")
 def python_credit():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/python_credit.md", "r") as f:
         markdown_text = f.read()
@@ -371,8 +366,8 @@ def python_credit():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/6/{current_app.config['URLS']['readability']}/")
-@bp.route(f"/6/{current_app.config['URLS']['readability']}.html")
+@bp.route(f"/6/readability/")
+@bp.route(f"/6/readability.html")
 def python_readability():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/python_readability.md", "r") as f:
         markdown_text = f.read()
@@ -382,8 +377,8 @@ def python_readability():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/6/{current_app.config['URLS']['dna']}/")
-@bp.route(f"/6/{current_app.config['URLS']['dna']}.html")
+@bp.route(f"/6/dna/")
+@bp.route(f"/6/dna.html")
 def dna():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/dna.md", "r") as f:
         markdown_text = f.read()
@@ -406,8 +401,8 @@ def pset7():
         f'{os.environ["COURSE_LANGUAGE"]}/psets/7.html',
     )
 
-@bp.route(f"/7/{current_app.config['URLS']['movies']}/")
-@bp.route(f"/7/{current_app.config['URLS']['movies']}.html")
+@bp.route(f"/7/movies/")
+@bp.route(f"/7/movies.html")
 def movies():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/movies.md", "r") as f:
         markdown_text = f.read()
@@ -417,8 +412,8 @@ def movies():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route(f"/7/{current_app.config['URLS']['fiftyville']}/")
-@bp.route(f"/7/{current_app.config['URLS']['fiftyville']}.html")
+@bp.route(f"/7/fiftyville/")
+@bp.route(f"/7/fiftyville.html")
 def fiftyville():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/fiftyville.md", "r") as f:
         markdown_text = f.read()
@@ -442,8 +437,8 @@ def pset8():
     )
     
    
-@bp.route(f"/8/{current_app.config['URLS']['homepage']}/")
-@bp.route(f"/8/{current_app.config['URLS']['homepage']}.html")
+@bp.route(f"/8/homepage/")
+@bp.route(f"/8/homepage.html")
 def homepage():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/homepage.md", "r") as f:
         markdown_text = f.read()
@@ -466,8 +461,8 @@ def pset9():
         f'{os.environ["COURSE_LANGUAGE"]}/psets/9.html',
     )
 
-@bp.route(f"/9/{current_app.config['URLS']['finance']}/")
-@bp.route(f"/9/{current_app.config['URLS']['finance']}.html")
+@bp.route(f"/9/finance/")
+@bp.route(f"/9/finance.html")
 def finance():
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/specifications/finance.md", "r") as f:
         markdown_text = f.read()
@@ -476,4 +471,3 @@ def finance():
         'blank.html',
         markdown_text=marko.convert(markdown_text)
     )
-"""

@@ -3,11 +3,6 @@ from . import notes_bp as bp
 import os
 import marko
 
-@bp.route('/')
-@bp.route('/index.html')
-def notes():
-    return render_template('notes/index.html')
-
 @bp.route('/0')
 @bp.route('/0.html')
 def notes0():
@@ -118,17 +113,6 @@ def notes9():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route('/10')
-@bp.route('/10.html')
-def notes10():
-    
-    with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/notes/10.md", "r") as f:
-        markdown_text = f.read()
-
-    return render_template(
-        'blank.html',
-        markdown_text=marko.convert(markdown_text)
-    )
 
 
 @bp.route('/cybersecurity')

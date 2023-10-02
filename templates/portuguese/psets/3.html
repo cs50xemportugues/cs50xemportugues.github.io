@@ -1,0 +1,102 @@
+{% extends 'layout.html' %} {% block conteudo %}
+<h1 id="problem-set-3">Conjunto de Problemas 3</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    A colaboração nos conjuntos de problemas não é permitida, exceto na medida em que você
+    possa pedir ajuda a colegas de classe e outras pessoas, desde que essa ajuda não se reduza
+    a outra pessoa fazendo o seu trabalho, de acordo com a política do curso de
+    <a href="{{url_for('cs50x.honesty')}}">honestidade acadêmica</a>.
+  </p>
+
+  <p>
+    A equipe faz auditorias aleatórias das submissões do CS50x. Estudantes que forem
+    descobertos violando esta política serão removidos do curso. Estudantes que já
+    tenham concluído o CS50x, se encontrados em violação, terão seu
+    Certificado CS50 revogado permanentemente.
+  </p>
+</div>
+
+<h2 id="what-to-do">O que fazer</h2>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    Certifique-se de ter concluído
+    <a href="{{url_for('cs50x.labs.lab3')}}">Laboratório 3</a> antes de começar este
+    conjunto de problemas.
+  </p>
+</div>
+
+<ol>
+  <li>
+    Faça login no <a href="https://code.cs50.io">code.cs50.io</a> utilizando a sua conta do GitHub
+  </li>
+  <li>
+    Execute <code class="language-plaintext highlighter-rouge">update50</code> na
+    janela do terminal do codespace para garantir que o seu codespace esteja atualizado e,
+    quando solicitado, clique em <strong>Reconstruir agora</strong>
+  </li>
+  <li>Envie <a href="{{url_for('cs50x.psets.plurality')}}">Plurality</a></li>
+  <li>
+    Envie um dos seguintes:
+    <ul>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.runoff')}}">Runoff</a>, se se sentir menos
+        confiante
+      </li>
+      <li data-marker="*">
+        <a href="{{url_for('cs50x.psets.tideman')}}">Tideman</a>, se se sentir
+        mais confiante
+      </li>
+    </ul>
+  </li>
+</ol>
+
+<p>
+  Se você submeter tanto Runoff quanto Tideman, registraremos a maior das suas
+  notas.
+</p>
+
+<h2 id="when-to-do-it">Quando fazer</h2>
+
+<p>
+  Até
+  <a
+    data-local="2023-12-31T23:59:00+00:00"
+    href="https://time.cs50.io/20231231T235900Z"
+    >2023-12-31T23:59:00+00:00</a
+  >.
+</p>
+
+<h2 id="advice">Conselhos</h2>
+
+<ul>
+  <li data-marker="*">
+    Experimente qualquer um dos programas do David da aula através dos
+    <a href="{{url_for('cs50x.weeks.week3')}}">exercícios práticos da Semana 3</a>.
+  </li>
+  <li data-marker="*">
+    Se você encontrar erros ao compilar o seu código com
+    <code class="language-plaintext highlighter-rouge">make</code>, concentre-se primeiro
+    em corrigir o primeiro erro que você encontrar, rolando para cima conforme necessário. Se não tiver certeza
+    do que significa, tente pedir ajuda ao
+    <code class="language-plaintext highlighter-rouge">help50</code>. Por exemplo, se estiver tentando compilar
+    <code class="language-plaintext highlighter-rouge">plurality</code>, e
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>make plurality
+</code></pre>
+      </div>
+    </div>
+    <p>estiver gerando erros, tente executar</p>
+    <div class="language-plaintext highlighter-rouge">
+      <div class="highlight">
+        <pre class="highlight"><code>help50 make plurality
+</code></pre>
+      </div>
+    </div>
+    <p>em vez disso!</p>
+  </li>
+</ul>
+
+{% endblock %}'

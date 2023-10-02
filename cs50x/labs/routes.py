@@ -3,11 +3,6 @@ from . import labs_bp as bp
 import os
 import marko
 
-@bp.route('/')
-@bp.route('/index.html')
-def index():
-    return render_template('topicos/index.html')
-
 @bp.route('/1')
 @bp.route('/1.html')
 def lab1():

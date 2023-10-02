@@ -1,0 +1,65 @@
+{% extends 'layout.html' %} {% block conteudo %}
+
+<h1 id="problem-set-7">Conjunto de Problemas 7</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    A colaboração nos conjuntos de problemas não é permitida, exceto na medida em que você
+    pode pedir ajuda a colegas de classe e outros, desde que essa ajuda não se reduza a
+    outra pessoa fazendo seu trabalho por você, de acordo com a política do curso sobre
+    <a href="{{url_for('cs50x.honesty')}}">honestidade acadêmica</a>.
+  </p>
+
+  <p>
+    A equipe do curso faz auditorias aleatórias das submissões do CS50x. Alunos que forem
+    identificados em violação a esta política serão removidos do curso. Alunos que já
+    tenham concluído o CS50x, se identificados em violação, terão seu Certificado CS50
+    revogado permanentemente.
+  </p>
+</div>
+
+<h2 id="what-to-do">O que Fazer</h2>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    Certifique-se de ter completado
+    <a href="{{url_for('cs50x.labs.lab7')}}">Lab 7</a> antes de começar este
+    conjunto de problemas.
+  </p>
+</div>
+
+<ol>
+  <li>
+    Faça login em <a href="https://code.cs50.io">code.cs50.io</a> usando sua conta do GitHub
+  </li>
+  <li>
+    Execute <code class="language-plaintext highlighter-rouge">update50</code> na
+    janela do terminal do seu espaço de código para garantir que seu espaço de código esteja atualizado e,
+    quando solicitado, clique em <strong>Rebuild now</strong>
+  </li>
+  <li>Envie <a href="{{url_for('cs50x.psets.movies')}}">Filmes</a></li>
+  <li>Envie <a href="{{url_for('cs50x.psets.fiftyville')}}">Fiftyville</a></li>
+</ol>
+
+<h2 id="when-to-do-it">Quando Fazer</h2>
+
+<p>
+  Até
+  <a
+    data-local="2023-12-31T23:59:00+00:00"
+    href="https://time.cs50.io/20231231T235900Z"
+    >2023-12-31T23:59:00+00:00</a
+  >.
+</p>
+
+<h2 id="advice">Conselho</h2>
+
+<ul>
+  <li data-marker="*">
+    Visite <a href="https://www.w3schools.com/sql/">w3schools.com/sql</a> para um
+    guia prático!
+  </li>
+</ul>
+
+{% endblock %}
+'

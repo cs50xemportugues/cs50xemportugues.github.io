@@ -414,7 +414,7 @@ def translate_notes(language):
     concat_files_notes(notes9, "notes", language)
 
 def translate_psets(language):
-    psets = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    psets = ["2", "3", "4", "5", "6", "7", "8", "9"]
     translate(psets, "psets", language, "html", "HTML file")
 
 if sys.argv[1] != "notes" and sys.argv[1] == "specifications" and sys.argv[1] == "psets":
