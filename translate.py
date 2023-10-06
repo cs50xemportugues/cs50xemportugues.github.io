@@ -29,31 +29,46 @@ def concat_files_notes(input_filenames, folder, language):
 
 def translate(files, folder, language, extension, file_description):
 
-
     for f in files:
         try:    
             print(f"cs50x/content/english/{folder}/{f}.{extension}")
             source_file = open(f"cs50x/content/english/{folder}/{f}.{extension}", "r")
-            
+            print(">>>>>>>>>> HERE 1")
             try:
 
-                response = openai.ChatCompletion.create(
-                    model="gpt-3.5-turbo",
-                    messages=[
-                        {"role": "system", "content": f"You are a helpful assistant that translates computer science related content from English to {language.capitalize()}. Translate the text thoroughly. Do not summarize the translation. Do not convert HTML tags to Markdown."},
-                        {"role": "user", "content": f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''}
-                    ],
-                )
+                if (extension=="c"):
+                        response = openai.ChatCompletion.create(
+                        model="gpt-3.5-turbo",
+                        messages=[
+                            {"role": "system", "content": f"You are a helpful assistant that translates C language code from English to {language.capitalize()}. Translate the function names also."},
+                            {"role": "user", "content": f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''}
+                        ],
+                    )
+                else:
+                    response = openai.ChatCompletion.create(
+                        model="gpt-3.5-turbo",
+                        messages=[
+                            {"role": "system", "content": f"You are a helpful assistant that translates computer science related content from English to {language.capitalize()}. Translate the text thoroughly. Do not summarize the translation. Do not convert HTML tags to Markdown."},
+                            {"role": "user", "content": f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''}
+                        ],
+                    )
+
+                print(">>>>>>>>>> HERE 2")
+
+                print(response.choices[0].message.content)
 
                 # It generates an html file instead of markdown because the pset page require the url_for function to properly route
                 if folder=="psets":
                     generated_file = open(f'templates/{language}/psets/{f}.{extension}', 'w')
                     generated_file.writelines(response.choices[0].message.content)
+                elif folder=="psets_code":
+                    generated_file = open(f'cs50x/content/{language}/{folder}/{f}.{extension}', 'w')
+                    generated_file.writelines(response.choices[0].message.content)
                 else:
                     generated_file = open(f'cs50x/content/{language}/{folder}/{f}.{extension}', 'w')
                     generated_file.writelines(response.choices[0].message.content)
-
-                print(">>> STEP 3")
+                
+                print(">>>>>>>>>> HERE 3")
 
             except openai.error.InvalidRequestError:
                 print(f"there was an error when translating '{f}'")
@@ -414,8 +429,12 @@ def translate_notes(language):
     concat_files_notes(notes9, "notes", language)
 
 def translate_psets(language):
-    psets = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"]
+    psets = ["2", "3", "4", "5", "6", "7", "8", "9"]
     translate(psets, "psets", language, "html", "HTML file")
+
+def translate_psets_code(language):
+    psets_code = ["bulbs/bulbs", "cash/cash"]
+    translate(psets_code, "psets_code", language, "c", "C language code")
 
 if sys.argv[1] != "notes" and sys.argv[1] == "specifications" and sys.argv[1] == "psets":
     print("Usage: python translate.py CONTENT_TYPE LANGUAGE")
@@ -433,3 +452,5 @@ else:
         translate_specifications_divided_part2(sys.argv[2])
     elif sys.argv[1] == "psets":
         translate_psets(sys.argv[2])
+    elif sys.argv[1] == "psets_code":
+        translate_psets_code(sys.argv[2])

@@ -1,0 +1,49 @@
+{% extends 'layout.html' %} {% block conteudo %}
+
+<h1 id="problem-set-9">Problem Set 9</h1>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    A colaboração nos conjuntos de problemas não é permitida, exceto na medida em que você pode pedir ajuda a colegas e a outras pessoas, desde que essa ajuda não se resuma a outra pessoa fazer o trabalho por você, de acordo com a política de integridade acadêmica do curso.
+    <a href="{{url_for('cs50x.honesty')}}">integridade acadêmica</a>.
+  </p>
+
+  <p>
+    A equipe realiza auditorias aleatórias das submissões do CS50x. Estudantes que forem encontrados em violação dessa política serão removidos do curso. Estudantes que já tenham concluído o CS50x, se encontrados em violação, terão seu Certificado CS50 permanentemente revogado.
+  </p>
+</div>
+
+<h2 id="what-to-do">O que fazer</h2>
+
+<div class="alert" data-alert="warning" role="alert">
+  <p>
+    Certifique-se de ter concluído
+    <a href="{{url_for('cs50x.labs.lab9')}}">Lab 9</a> antes de iniciar este
+    conjunto de problemas.
+  </p>
+</div>
+
+<ol>
+  <li>
+    Faça login em <a href="https://code.cs50.io">code.cs50.io</a> usando sua
+    conta do GitHub
+  </li>
+  <li>
+    Execute <code class="language-plaintext highlighter-rouge">update50</code> na
+    janela do terminal do seu espaço de código para garantir que seu espaço de código esteja atualizado e, quando solicitado, clique em <strong>Rebuild now</strong>
+  </li>
+  <li>Envie <a href="{{url_for('cs50x.psets.finance')}}">Finance</a></li>
+</ol>
+
+<h2 id="when-to-do-it">Quando fazer isso</h2>
+
+<p>
+  Até
+  <a
+    data-local="2023-12-31T23:59:00+00:00"
+    href="https://time.cs50.io/20231231T235900Z"
+    >2023-12-31T23:59:00+00:00</a
+  >.
+</p>
+{% endblock %}
+'

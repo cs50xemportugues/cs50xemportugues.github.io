@@ -17,15 +17,34 @@
   </h1>
 {% endif %}
 
+<!--
+<iframe width="560" height="315" src="{{week.lecture_embed_url}}" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+-->
+
 <ul>
   <li data-marker="-">
     {{week_page.lecture}}
     <ul>
+      <li data-marker="*"><a href="{{week.study_guide}}">Guia de Estudos</a></li>
+      <li data-marker="*"><a href="{{week.lecture_url}}">Vídeo</a></li>
       {% if week.name == 'Cybersecurity' %}
         <li data-marker="*"><a href="{{url_for('cs50x.notes.cybersecurity')}}">{{week_page.notes}}</a></li>
       {% else %}
         {{ notes_item(title=week_page.notes, number=week.number) }}
       {% endif %}
+
+      
+      <li data-marker="-">
+        {{week_page.source_code}}
+        <ul>
+          {% if week.name=="Scratch" %}
+            <li data-marker="*"><a target="_blank" href="https://scratch.mit.edu/studios/27380633">Scratch Studio</a></li>
+          {% else %}
+            <li data-marker="*"><a target="_blank" href="{{week.pdf_code_link}}">PDF</a></li>
+            <li data-marker="*"><a target="_blank" href="{{week.zip_code_link}}">Zip</a></li>
+          {% endif %}
+        </ul>
+      </li>
 
       <li data-marker="-">
         {{week_page.slides}}
@@ -34,18 +53,6 @@
           <li data-marker="*"><a target="_blank" href="{{week.pdf_slides_link}}">PDF</a></li>
         </ul>
       </li>
-      <li data-marker="-">
-        {{week_page.source_code}}
-        <ul>
-          {% if week.name=="Scratch" %}
-            <li data-marker="*"><a target="_blank" href="https://scratch.mit.edu/studios/27380633">Scratch Studio</a></li>
-          {% else %}
-            <li data-marker="*"><a target="_blank" href="">PDF</a></li>
-            <li data-marker="*"><a target="_blank" href="">Zip</a></li>
-          {% endif %}
-        </ul>
-      </li>
-      <li data-marker="*"><a href="">Video</a></li>
     </ul>
   </li>
 

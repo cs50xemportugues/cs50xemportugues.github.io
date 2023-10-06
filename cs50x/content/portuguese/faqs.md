@@ -1,4 +1,4 @@
-FAQs
+# FAQs
 Para respostas a outras perguntas, basta perguntar em uma das comunidades do CS50!
 
 Avaliações

@@ -43,6 +43,9 @@ week_page = {
 week_0 = {
     "name": "Scratch",
     "number": 0,
+    "study_guide": "https://drive.google.com/file/d/1mw1BkX7qoZRZwV8mnhdvIMinfP1BwNb0/view?usp=sharing",
+    "lecture_url": "https://www.youtube.com/watch?v=CfJYwHylIck",
+    "lecture_embed_url": "https://www.youtube.com/embed/CfJYwHylIck?si=LxCcYnvdbSmFJJnB",
     "google_slides_link": "https://docs.google.com/presentation/d/1acUrdTo6VXEYxhN_iwES2Ruz7yVJZ3Fd-w5cn2jLcuM/edit?usp=sharing",
     "pdf_slides_link": "https://drive.google.com/file/d/1or9fI5y5w5NMds7UfTWjgupotmAIQMMx/view"
 }
@@ -50,8 +53,12 @@ week_0 = {
 week_1 = {
     "name": "C",
     "number": 1,
-    "google_slides_link": "",
-    "pdf_slides_link": "",
+    "lecture_url": "https://www.youtube.com/watch?v=Li85z0EfiUA",
+    "lecture_embed_url": "https://www.youtube.com/embed/Li85z0EfiUA?si=YAR0TrclGFTlSdvB",
+    "pdf_code_link": "https://drive.google.com/file/d/1XR6QQhIGe3zthCzQmhr8m3ykNXKQYZT1/view?usp=drive_link",
+    "zip_code_link": "https://drive.google.com/file/d/1xAC-8xjFmLJQ3c_ibfT1YhFZlZb2PkyB/view?usp=sharing",
+    "google_slides_link": "https://docs.google.com/presentation/d/1b-5xwyf5wHEIMTvWn4IE3260Mgm_8a8G9FyppU4MWyo/edit?usp=sharing",
+    "pdf_slides_link": "https://drive.google.com/file/d/1ciyAdlhWj3sNKDq6Kunvs1B4dUj2Y8Dq/view?usp=sharing",
     "shorts": {
         "data_types": {
             "name": "Tipos de Dados",
@@ -69,20 +76,14 @@ week_1 = {
             "name": "Estruturas de Repetição",
             "link": "https://www.youtube.com/watch?v=2CwCdEHU36o"
         },
-            "command_line": {
-            "name": "Linha de Comando",
-            "link": ""
-        },
-            "magic_numbers": {
-            "name": "Números Mágicos",
-            "link": ""
-        },
     }
 }
 
 week_2 = {
     "name": "Arrays",
     "number": 2,
+    "pdf_code_link": "https://drive.google.com/file/d/1JStUjEyXk21OqHuHRDoP0FKg0TKRGESZ/view?usp=sharing",
+    "zip_code_link": "https://drive.google.com/file/d/1f7Ba870kj1KJZtOHONrVyPNj10ZQpFLP/view?usp=sharing",
     "google_slides_link": "",
     "pdf_slides_link": "",
     "shorts": {
@@ -116,6 +117,8 @@ week_2 = {
 week_3 = {
     "name": "Algorithms",
     "number": 3,
+    "pdf_code_link": "",
+    "zip_code_link": "",
     "google_slides_link": "",
     "pdf_slides_link": "",
     "shorts": {
@@ -157,6 +160,8 @@ week_3 = {
 week_4 = {
     "name": "Memory",
     "number": 4,
+    "pdf_code_link": "",
+    "zip_code_link": "",
     "google_slides_link": "",
     "pdf_slides_link": "",
     "shorts": {
@@ -190,6 +195,8 @@ week_4 = {
 week_5 = {
     "name": "Data Structures",
     "number": 5,
+    "pdf_code_link": "",
+    "zip_code_link": "",
     "google_slides_link": "",
     "pdf_slides_link": "",
     "shorts": {
@@ -225,6 +232,8 @@ week_5 = {
 week_6 = {
     "name": "Python",
     "number": 6,
+    "pdf_code_link": "",
+    "zip_code_link": "",
     "google_slides_link": "",
     "pdf_slides_link": "",
     "shorts": {
@@ -238,6 +247,8 @@ week_6 = {
 week_7 = {
     "name": "SQL",
     "number": 7,
+    "pdf_code_link": "",
+    "zip_code_link": "",
     "google_slides_link": "",
     "pdf_slides_link": "",
     "shorts": {
@@ -251,6 +262,8 @@ week_7 = {
 week_8 = {
     "name": "HTML, CSS, JavaScript",
     "number": 8,
+    "pdf_code_link": "",
+    "zip_code_link": "",
     "google_slides_link": "",
     "pdf_slides_link": "",
     "shorts": {
@@ -286,6 +299,8 @@ week_8 = {
 week_9 = {
     "name": "Flask",
     "number": 9,
+    "pdf_code_link": "",
+    "zip_code_link": "",
     "google_slides_link": "",
     "pdf_slides_link": "",
     "shorts": {

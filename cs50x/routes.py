@@ -15,8 +15,13 @@ def index():
         markdown_text=marko.convert(markdown_text)
     )
 
-@bp.route('/honesty')
-@bp.route('/honesty.html')
+@bp.route('/manual')
+@bp.route('/manual.html')
+def manual():
+    return render_template('manual.html')
+
+@bp.route('/honestidade')
+@bp.route('/honestidade.html')
 def honesty():
         
     with open(f"cs50x/content/{os.environ['COURSE_LANGUAGE']}/honesty.md", "r") as f:
@@ -47,7 +52,7 @@ def certificate():
         markdown_text = f.read()
 
     return render_template(
-        'certificate.html',
+        'blank.html',
         markdown_text=marko.convert(markdown_text)
     )
 
@@ -129,5 +134,4 @@ def office_hours():
         'blank.html',
         markdown_text=marko.convert(markdown_text)
     )
-
 
