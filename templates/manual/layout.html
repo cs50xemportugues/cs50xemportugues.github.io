@@ -239,6 +239,10 @@
         padding-left: 0;
     }
 
+    pre {
+        padding: 20px;
+    }
+
         </style>
 
         <title>CS50 Manual do Programador</title>
@@ -251,6 +255,8 @@
             <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
         </nav>
 
-        {% block content %} {% endblock %}
+        <div class="container-fluid mt-2 px-4">
+            {% block content %} {% endblock %}
+        </div>
     </body>
 </html>

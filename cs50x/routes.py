@@ -15,6 +15,11 @@ def index():
         markdown_text=marko.convert(markdown_text)
     )
 
+@bp.route('/manual')
+@bp.route('/manual.html')
+def manual():
+    return render_template('manual.html')
+
 @bp.route('/honestidade')
 @bp.route('/honestidade.html')
 def honesty():

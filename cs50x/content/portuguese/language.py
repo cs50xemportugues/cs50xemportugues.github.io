@@ -43,6 +43,9 @@ week_page = {
 week_0 = {
     "name": "Scratch",
     "number": 0,
+    "study_guide": "https://drive.google.com/file/d/1mw1BkX7qoZRZwV8mnhdvIMinfP1BwNb0/view?usp=sharing",
+    "lecture_url": "https://www.youtube.com/watch?v=CfJYwHylIck",
+    "lecture_embed_url": "https://www.youtube.com/embed/CfJYwHylIck?si=LxCcYnvdbSmFJJnB",
     "google_slides_link": "https://docs.google.com/presentation/d/1acUrdTo6VXEYxhN_iwES2Ruz7yVJZ3Fd-w5cn2jLcuM/edit?usp=sharing",
     "pdf_slides_link": "https://drive.google.com/file/d/1or9fI5y5w5NMds7UfTWjgupotmAIQMMx/view"
 }
@@ -50,6 +53,8 @@ week_0 = {
 week_1 = {
     "name": "C",
     "number": 1,
+    "lecture_url": "https://www.youtube.com/watch?v=Li85z0EfiUA",
+    "lecture_embed_url": "https://www.youtube.com/embed/Li85z0EfiUA?si=YAR0TrclGFTlSdvB",
     "pdf_code_link": "https://drive.google.com/file/d/1XR6QQhIGe3zthCzQmhr8m3ykNXKQYZT1/view?usp=drive_link",
     "zip_code_link": "https://drive.google.com/file/d/1xAC-8xjFmLJQ3c_ibfT1YhFZlZb2PkyB/view?usp=sharing",
     "google_slides_link": "https://docs.google.com/presentation/d/1b-5xwyf5wHEIMTvWn4IE3260Mgm_8a8G9FyppU4MWyo/edit?usp=sharing",
@@ -70,14 +75,6 @@ week_1 = {
             "loops": {
             "name": "Estruturas de Repetição",
             "link": "https://www.youtube.com/watch?v=2CwCdEHU36o"
-        },
-            "command_line": {
-            "name": "Linha de Comando",
-            "link": ""
-        },
-            "magic_numbers": {
-            "name": "Números Mágicos",
-            "link": ""
         },
     }
 }

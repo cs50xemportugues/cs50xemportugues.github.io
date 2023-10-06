@@ -3,6 +3,5 @@
 {% block conteudo %}
     {{markdown_text | safe}}
     
-    <img id="logo" alt="Imagem do gato do CS50" src="{{ url_for('static', filename='images/'+config['LANGUAGE']+'.png') }}">
-                   
+    <img id="logo" alt="Imagem do gato do CS50" src="{{ url_for('static', filename='images/'+config['LANGUAGE']+'.png') }}">            
 {% endblock %}
