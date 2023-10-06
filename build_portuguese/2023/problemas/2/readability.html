@@ -1,0 +1,432 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html">Este é o CS50x</a>
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x"
+        >O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1 <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2 <span class="semana-titulo">Vetores</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3 <span class="semana-titulo">Algoritmos</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4 <span class="semana-titulo">Memória</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6 <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7 <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9 <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10 <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+  <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html">Projeto Final</a>
+      </li>
+    </ul> -->
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          >Perguntas Frequentes</a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html">Equipe</a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html">Currículo do Curso</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/">Navegador SQLite</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/">Navegador PostgreSQL</a>
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"></a></p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Facilidade de Leitura</h1>
+<p>Para este problema, você implementará um programa que calcula o nível aproximado de escolaridade necessário para compreender algum texto, conforme abaixo.</p>
+<pre><code>$ ./readability
+Texto: Parabéns! Hoje é seu dia. Você está se dirigindo a grandes lugares! Você está saindo do nada!
+Grau 3
+</code></pre>
+<h2>Primeiros Passos</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da sua janela do terminal e, em seguida, execute <code>cd</code> sozinho. Você deve encontrar que o &quot;prompt&quot; se assemelha ao abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/2/readability.zip
+</code></pre>
+<p>seguido de Enter para baixar um arquivo ZIP chamado <code>readability.zip</code> em seu ambiente de codificação. Cuidado para não ignorar o espaço entre <code>wget</code> e a URL a seguir, ou qualquer outro caractere!</p>
+<p>Agora execute</p>
+<pre><code>unzip readability.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>readability</code>. Você não precisa mais do arquivo ZIP, então execute</p>
+<pre><code>rm readability.zip
+</code></pre>
+<p>e responda com &quot;y&quot; seguido de Enter na solicitação para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd readability
+</code></pre>
+<p>seguido de Enter para se mover para (i.e., abrir) esse diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>readability/ $
+</code></pre>
+<p>Se tudo correu bem, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e ver um arquivo chamado <code>readability.c</code>. Executar <code>code readability.c</code> deve abrir o arquivo onde você irá escrever seu código para este conjunto de problemas. Caso contrário, refaça seus passos e veja se consegue determinar onde errou!</p>
+<h2>Contexto</h2>
+<p>De acordo com a <a href="https://www.scholastic.com/teachers/teaching-tools/collections/guided-reading-book-lists-for-every-level.html">Scholastic</a>, o livro <em>Charlotte’s Web</em> de E.B. White está nivelado entre o segundo e o quarto ano e o livro <em>The Giver</em> de Lois Lowry entre o oitavo e o décimo segundo ano. Mas o que significa, afinal, para um livro estar em um determinado nível de leitura?</p>
+<p>Bem, em muitos casos, um especialista humano pode ler um livro e decidir em que série escolar acha mais apropriado. Mas um algoritmo também pode descobrir isso!</p>
+<p>Então, que características são típicas de níveis de leitura mais altos? Palavras mais longas provavelmente têm uma correlação com níveis de leitura mais altos. Da mesma forma, frases mais longas também têm uma correlação com níveis de leitura mais altos.</p>
+<p>Ao longo dos anos, vários &quot;testes de legibilidade&quot; foram desenvolvidos que definem fórmulas para calcular o nível de leitura de um texto. Um desses testes de legibilidade é o <em>índice Coleman-Liau</em>. O índice Coleman-Liau de um texto é projetado para indicar o nível escolar necessário para entender algum texto. A fórmula é</p>
+<pre><code>indice = 0.0588 * L - 0.296 * S - 15.8
+</code></pre>
+<p>onde <code>L</code> é o número médio de letras por 100 palavras no texto e <code>S</code> é o número médio de frases por 100 palavras no texto.</p>
+<p>Vamos escrever um programa chamado <code>readability</code> que recebe um texto e determina seu nível de leitura. Por exemplo, se o usuário digitar uma linha de texto do Dr. Seuss, o programa deve se comportar da seguinte maneira:</p>
+<pre><code>$ ./readability
+Texto: Congratulations! Today is your day. You&#x27;re off to Great Places! You&#x27;re off and away!
+Série 3
+</code></pre>
+<p>O texto que o usuário digitou tem 65 letras, 4 frases e 14 palavras. 65 letras por 14 palavras é uma média de cerca de 464,29 letras por 100 palavras (porque 65/14 * 100 = 464,29). E 4 frases por 14 palavras é uma média de cerca de 28,57 frases por 100 palavras (porque 4/14 * 100 = 28,57). Quando aplicamos isso à fórmula Coleman-Liau e arredondamos o resultado para o inteiro mais próximo, obtemos um resultado de 3 (porque 0.0588 * 464,29 - 0.296 * 28,57 - 15,8 = 3): portanto, este trecho está no nível de leitura da terceira série.</p>
+<p>Vamos tentar outro exemplo:</p>
+<pre><code>$ ./readability
+Texto: Harry Potter era um garoto muito incomum em muitos aspectos. Para começar, ele odiava as férias de verão mais do que qualquer outra época do ano. Além disso, ele realmente queria fazer sua lição de casa, mas era forçado a fazê-la em segredo, no meio da noite. E ele também era um bruxo.
+Série 5
+</code></pre>
+<p>Este texto tem 214 letras, 4 frases e 56 palavras. Isso dá cerca de 382,14 letras por 100 palavras e 7,14 frases por 100 palavras. Quando aplicamos isso à fórmula Coleman-Liau, obtemos um nível de leitura da quinta série.</p>
+<p>À medida que a quantidade média de letras e palavras por frase aumenta, o índice Coleman-Liau dá um nível de leitura mais alto ao texto. Se pegarmos este parágrafo, por exemplo, que tem palavras e frases mais longas do que os dois exemplos anteriores, a fórmula nos dará um nível de leitura do décimo-segundo ano.</p>
+<pre><code>$ ./readability
+Texto: À medida que a quantidade média de letras e palavras por frase aumenta, o índice Coleman-Liau dá um nível de leitura mais alto ao texto. Se pegarmos este parágrafo, por exemplo, que tem palavras e frases mais longas do que os dois exemplos anteriores, a fórmula nos dará um nível de leitura do décimo-segundo ano.
+Série 12
+</code></pre>
+<details><summary>Assista a uma Gravação</summary><script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-2YTPtsNbRP2p4bD4drEjHaoRj" src="https://asciinema.org/a/2YTPtsNbRP2p4bD4drEjHaoRj.js"></script></details>
+<h2>Especificações</h2>
+<p>Projete e implemente um programa, <code>readability</code>, que calcule o índice Coleman-Liau do texto.</p>
+<ul>
+<li>Implemente seu programa em um arquivo chamado <code>readability.c</code> em um diretório chamado <code>readability</code>.</li>
+<li>Seu programa deve solicitar ao usuário uma <code>string</code> de texto usando <code>get_string</code>.</li>
+<li>Seu programa deve contar o número de letras, palavras e frases no texto. Você pode assumir que uma letra é qualquer caractere minúsculo de <code>a</code> a <code>z</code> ou qualquer caractere maiúsculo de <code>A</code> a <code>Z</code>, qualquer sequência de caracteres separados por espaços deve contar como uma palavra e que qualquer ocorrência de um ponto, ponto de exclamação ou ponto de interrogação indica o final de uma frase.</li>
+<li>Seu programa deve imprimir como saída <code>&quot;Série X</code>, onde <code>X</code> é o nível escolar calculado pela fórmula Coleman-Liau, arredondado para o inteiro mais próximo.</li>
+<li>Se o número do índice resultante for 16 ou superior (equivalente ou maior que o nível universitário sênior), seu programa deverá imprimir <code>&quot;Série 16+&quot;</code> em vez de dar o número exato do índice. Se o número do índice for inferior a 1, o programa deverá imprimir <code>&quot;Antes da Série 1&quot;</code>.</li>
+</ul>
+<h3>Obtendo entrada do usuário</h3>
+<p>Vamos primeiro escrever um código em C que obtenha apenas uma entrada de texto do usuário e imprima de volta. Especificamente, implemente em <code>readability.c</code> uma função <code>main</code> que solicita ao usuário &quot;Texto: &quot; usando <code>get_string</code> e, em seguida, imprime o mesmo texto usando <code>printf</code>. E lembre-se, ao trabalhar neste programa, que se você usar qualquer função de biblioteca, verifique se inclui os arquivos de cabeçalho correspondentes usando <code>#include</code>.</p>
+<p>O programa deve se comportar conforme abaixo.</p>
+<pre><code>$ ./readability
+Text: Em meus anos mais jovens e vulneráveis, meu pai me deu alguns conselhos que tenho pensado muito desde então.
+Em meus anos mais jovens e vulneráveis, meu pai me deu alguns conselhos que tenho pensado muito desde então.
+</code></pre>
+<h3>Letras</h3>
+<p>Agora que você coletou a entrada do usuário, vamos começar a analisar essa entrada contando o número de letras. Considere letras como caracteres alfabéticos maiúsculos ou minúsculos, sem pontuação, dígitos ou outros símbolos.</p>
+<p>Adicione em <code>readability.c</code>, abaixo de <code>main</code>, uma função chamada <code>count_letters</code> que recebe um argumento, uma <code>string</code> de texto, e retorna um <code>int</code>, o número de letras nesse texto. Certifique-se de adicionar o protótipo da função no início do arquivo, para que <code>main</code> saiba como chamá-lo. Provavelmente, o protótipo deve se parecer com o abaixo:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">count_letters</span><span class="p">(</span><span class="n">string</span> <span class="n">text</span><span class="p">)</span>
+</code></pre></div></div>
+<p>Em seguida, chame essa função em <code>main</code>, para que, em vez de imprimir o próprio texto, agora o programa imprima o número de letras no texto.</p>
+<p>O programa deve se comportar conforme abaixo.</p>
+<pre><code>$ ./readability
+Texto: Alice estava começando a ficar muito cansada de sentar ao lado de sua irmã em frente ao córrego e não ter nada para fazer: uma ou duas vezes ela deu uma espiada no livro que a sua irmã estava lendo, mas não tinha figuras nem conversas nele, &quot;e qual é o uso de um livro&quot;, pensou Alice &quot;sem figuras ou conversas?&quot;
+235 letras
+</code></pre>
+<details><summary>Dica</summary><p>Declarada em <code class="language-plaintext highlighter-rouge">ctype.h</code>, existe uma função que pode ser útil, de acordo com o <a href="https://manual.cs50.io/">manual.cs50.io</a>. Se você usar essa função, certifique-se de incluir o cabeçalho no início do seu próprio código!</p></details>
+<h3>Palavras</h3>
+<p>O índice de Coleman-Liau não se preocupa apenas com o número de letras, mas também com o número de palavras em uma frase. Para este problema, consideramos qualquer sequência de caracteres separados por um espaço como uma palavra (então uma palavra hifenizada como <code>&quot;cabeça-de-ponte&quot;</code> deve ser considerada uma palavra, não três).</p>
+<p>Adicione em <code>readability.c</code>, abaixo de <code>main</code>, uma função chamada <code>count_words</code> que recebe um argumento, uma <code>string</code> de texto, e retorna um <code>int</code>, o número de palavras nesse texto. Certifique-se de adicionar o protótipo da função no início do arquivo, para que <code>main</code> saiba como chamá-lo. (Deixamos o protótipo a seu critério!)</p>
+<p>Em seguida, chame essa função em <code>main</code> para que seu programa também imprima o número de palavras no texto.</p>
+<p>Você pode assumir que uma frase:</p>
+<ul>
+<li>conterá pelo menos uma palavra;</li>
+<li>não começará ou terminará com um espaço; e</li>
+<li>não terá vários espaços em sequência.</li>
+</ul>
+<p>Você é, é claro, bem-vindo a tentar uma solução que tolerará vários espaços entre as palavras ou mesmo, nenhuma palavra!</p>
+<p>O programa deve se comportar conforme abaixo.</p>
+<pre><code>$ ./readability
+Text: Foi um dia frio e brilhante de abril, e os relógios batiam treze vezes. Winston Smith, com o queixo enfiado no peito na tentativa de escapar do vento, entrou rapidamente pelas portas de vidro das Mansões da Vitória, mas não rápido o suficiente para evitar que uma nuvem de poeira entrasse junto com ele.
+250 letras
+55 palavras
+</code></pre>
+<h3>Sentenças</h3>
+<p>A última informação que a fórmula Coleman-Liau se preocupa, além do número de letras e palavras, é o número de sentenças. Determinar o número de sentenças pode ser surpreendentemente complicado. Você pode imaginar que uma sentença é apenas qualquer sequência de caracteres que termina com um ponto, mas é claro que as sentenças também podem terminar com um ponto de exclamação ou uma interrogação. Mas é claro, nem todos os pontos necessariamente significam que a sentença acabou. Por exemplo, considere a sentença abaixo.</p>
+<pre><code>Sr. e Sra. Dursley, do número quatro da Rua dos Alfeneiros, estavam orgulhosos por dizer que eram perfeitamente normais, muito obrigado.
+</code></pre>
+<p>Essa é apenas uma única sentença, mas existem três pontos! Para este problema, pediremos para você ignorar essa sutileza: você deve considerar qualquer sequência de caracteres que termine com <code>.</code> ou <code>!</code> ou <code>?</code> como uma sentença (então para a &quot;sentença&quot; acima, você deve considerar três sentenças). Na prática, a detecção de limite de sentença precisa ser um pouco mais inteligente para lidar com esses casos, mas não se preocupe com isso por enquanto.</p>
+<p>Adicione ao arquivo <code>readability.c</code>, abaixo do <code>main</code>, uma função chamada <code>count_sentences</code> que recebe um argumento, uma <code>string</code> de texto, e que retorna um <code>int</code>, o número de sentenças naquele texto. Certifique-se de adicionar o protótipo da função também no topo do arquivo, para que o <code>main</code> saiba como chamá-lo. (Deixamos o protótipo da função para você definir!)</p>
+<p>Então, chame essa função no <code>main</code> para que o seu programa também imprima o número de sentenças no texto.</p>
+<p>O programa agora deve se comportar conforme o abaixo.</p>
+<pre><code>$ ./readability
+Texto: Quando ele tinha quase treze anos, meu irmão Jem quebrou o braço gravemente no cotovelo. Quando sarou, e os medos de Jem de nunca mais poder jogar futebol foram acalmados, ele raramente se mostrou autoconsciente sobre sua lesão. Seu braço esquerdo era um pouco mais curto do que o direito; quando ele ficava em pé ou caminhava, o dorso de sua mão ficava em ângulo reto com o corpo, o polegar paralelo à coxa.
+295 letras
+70 palavras
+3 sentenças
+</code></pre>
+<h3>Colocando Tudo Junto</h3>
+<p>Agora é hora de juntar todas as peças! Lembre-se de que o índice Coleman-Liau é calculado usando a fórmula:</p>
+<pre><code>índice = 0.0588 * L - 0.296 * S - 15.8
+</code></pre>
+<p>onde <code>L</code> é o número médio de letras por 100 palavras no texto e <code>S</code> é o número médio de sentenças por 100 palavras no texto.</p>
+<p>Modifique o <code>main</code> em <code>readability.c</code> para que, em vez de imprimir o número de letras, palavras e sentenças, ele imprima (apenas) o nível de grau conforme definido pelo índice Coleman-Liau (por exemplo, <code>&quot;Grau 2&quot;</code> ou <code>&quot;Grau 8&quot;</code> ou similar). Certifique-se de arredondar o número do índice resultante para o número inteiro mais próximo!</p>
+<details><summary>Dicas</summary><ul>
+  <li data-marker="*">Lembre-se de que `round` é declarado em `math.h`, de acordo com o <a href="https://manual.cs50.io/">manual.cs50.io</a>!</li>
+  <li data-marker="*">Lembre-se de que, ao dividir valores do tipo `int` em C, o resultado também será um `int`, com qualquer resto (ou seja, dígitos após a vírgula decimal) descartados. Em outras palavras, o resultado será "truncado". Você pode querer converter um ou mais valores em `float` antes de fazer a divisão ao calcular `L` e `S`!</li>
+</ul></details>
+<p>Se o número do índice resultante for 16 ou maior (equivalente ou superior a um nível de leitura de graduação superior), seu programa deve imprimir <code>&quot;Grau 16+&quot;</code> em vez de imprimir um número de índice exato. Se o número do índice for menor que 1, seu programa deve imprimir <code>&quot;Antes do Grau 1&quot;</code>.</p>
+<h2>Passo a Passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/AOVyZEh9zgE?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<h2>Como Testar seu Código</h2>
+<p>Tente executar seu programa nos seguintes textos, para garantir que você veja o nível de escolaridade especificado. Certifique-se de copiar apenas o texto, sem espaços extras.</p>
+<ul>
+<li><code>One fish. Two fish. Red fish. Blue fish.</code> (Antes do 1º Ano)</li>
+<li><code>Would you like them here or there? I would not like them here or there. I would not like them anywhere.</code> (2º Ano)</li>
+<li><code>Congratulations! Today is your day. You&#x27;re off to Great Places! You&#x27;re off and away!</code> (3º Ano)</li>
+<li><code>Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.</code> (5º Ano)</li>
+<li><code>In my younger and more vulnerable years my father gave me some advice that I&#x27;ve been turning over in my mind ever since.</code> (7º Ano)</li>
+<li><code>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, &quot;and what is the use of a book,&quot; thought Alice &quot;without pictures or conversation?&quot;</code> (8º Ano)</li>
+<li><code>When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem&#x27;s fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh.</code> (8º Ano)</li>
+<li><code>There are more things in Heaven and Earth, Horatio, than are dreamt of in your philosophy.</code> (9º Ano)</li>
+<li><code>It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.</code> (10º Ano)</li>
+<li><code>A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains.</code> (Graduação)</li>
+</ul>
+<p>Execute abaixo para avaliar a correção do seu código ainda mais usando <code>check50</code>. Mas não se esqueça de compilá-lo e testá-lo também!</p>
+<pre><code>check50 cs50/problems/2023/x/readability
+</code></pre>
+<p>Execute abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 readability.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>No terminal, execute abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/readability
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

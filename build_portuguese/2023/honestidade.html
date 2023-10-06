@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html">Este é o CS50x</a>
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x"
+        >O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1 <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2 <span class="semana-titulo">Vetores</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3 <span class="semana-titulo">Algoritmos</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4 <span class="semana-titulo">Memória</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6 <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7 <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9 <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10 <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+  <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html">Projeto Final</a>
+      </li>
+    </ul> -->
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          >Perguntas Frequentes</a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html">Equipe</a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html">Currículo do Curso</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/">Navegador SQLite</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/">Navegador PostgreSQL</a>
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"></a></p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Honestidade Acadêmica</h1>
+<p>A filosofia deste curso sobre honestidade acadêmica pode ser resumida como &quot;seja razoável&quot;. O curso reconhece que interações com colegas e outros podem facilitar a compreensão do material do curso. No entanto, há uma linha entre pedir ajuda a outro e enviar o trabalho de outro. A política do curso caracteriza ambos os lados dessa linha.</p>
+<h2>Política</h2>
+<p>A essência de todo trabalho que você enviar para este curso deve ser seu. A menos que seja especificado de outra forma, a colaboração em avaliações (por exemplo, tarefas, laboratórios, conjuntos de problemas, projetos, testes ou provas) não é permitida, exceto na medida em que você possa pedir ajuda a colegas e outros, desde que essa ajuda não seja igual a outra pessoa fazendo o trabalho para você. Em geral, ao pedir ajuda, você pode mostrar seu trabalho a outras pessoas, mas não pode ver o delas, desde que você e elas respeitem as outras restrições desta política.</p>
+<p><strong>Cláusula de arrependimento</strong>. Se você cometer algum ato que não seja razoável, mas trouxer isso à atenção dos responsáveis pelo curso por meio do email certificates@cs50.harvard.edu em até 72 horas, o curso pode impor sanções locais que podem incluir uma nota insatisfatória ou reprovada para o trabalho enviado, mas o curso não encaminhará o assunto para qualquer outra ação disciplinar, exceto em casos de atos reincidentes.</p>
+<p>A seguir, estão regras básicas que caracterizam atos que o curso considera razoáveis e não razoáveis. Em caso de dúvida quanto à razoabilidade de algum ato, não o cometa até buscar e receber aprovação por escrito dos responsáveis pelo curso. Atos que o curso considere não razoáveis serão tratados com rigidez. Se o curso encaminhar algum assunto para ação disciplinar e o resultado for punitivo, o curso reserva o direito de impor sanções locais além desse resultado, que podem incluir nota insatisfatória ou reprovada para o trabalho enviado ou para o curso em si. O curso, por norma, recomenda a exclusão (ou seja, a retirada obrigatória) do curso em si.</p>
+<h3>Razãoáveis</h3>
+<ul>
+<li>Comunicar-se com colegas sobre avaliações em inglês (ou em alguma outra língua falada) e citar corretamente essas discussões.</li>
+<li>Discutir o material do curso com outros para entendê-lo melhor.</li>
+<li>Ajudar um colega a identificar um bug em seu código, por exemplo, visualizando, compilando ou executando seu código depois de ter enviado aquela parte do pset você mesmo.</li>
+<li>Incorporar algumas linhas de código que você encontrar online ou em outro lugar em seu próprio código, desde que essas linhas não sejam soluções para trabalhos atribuídos e que você cite a origem das linhas.</li>
+<li>Enviar ou mostrar o código que você escreveu para alguém, possivelmente um colega, para que ele possa ajudá-lo a identificar e corrigir um bug.</li>
+<li>Enviar o mesmo trabalho ou trabalho semelhante para este curso que você já enviou anteriormente para este curso.</li>
+<li>Procurar na web ou em outro lugar instruções além das próprias do curso, referências e soluções para dificuldades técnicas, mas não para soluções diretas para trabalhos atribuídos.</li>
+<li>Fazer anotações e esboços para soluções com outros usando diagramas ou pseudocódigo, mas não código real.</li>
+<li>Trabalhar com (e até pagar) um tutor para ajudá-lo com o curso, desde que o tutor não faça o trabalho para você.</li>
+</ul>
+<h3>Não razoáveis</h3>
+<ul>
+<li>Acessar uma solução para alguma avaliação antes de (re)enviar a sua.</li>
+<li>Acessar ou tentar acessar, sem permissão, uma conta que não seja sua.</li>
+<li>Pedir a um colega para ver a solução dele para alguma avaliação antes de (re)enviar a sua.</li>
+<li>Descobrir, mas deixar de comunicar aos responsáveis pelo curso, bugs no software do curso que afetam as notas.</li>
+<li>Descompilar, desobfuscar ou desmontar soluções do pessoal do curso.</li>
+<li>Não citar (como em comentários) a origem de códigos ou técnicas que você descobriu fora do próprio curso e que incorporou em seu próprio trabalho, mesmo respeitando as outras restrições desta política.</li>
+<li>Dar ou mostrar a um colega a solução para uma avaliação quando é ele, e não você, quem está com dificuldades para resolvê-la.</li>
+<li>Manipular ou tentar manipular notas artificialmente, explorando bugs ou fórmulas no software do curso.</li>
+<li>Pagar ou oferecer pagar a um indivíduo por trabalho que você possa enviar como (parte do) seu próprio.</li>
+<li>Fornecer ou disponibilizar soluções para avaliações para qualquer pessoa, seja um aluno presente, passado ou futuro.</li>
+<li>Procurar ou solicitar soluções diretas para avaliações online ou em outro lugar.</li>
+<li>Dividir o trabalho de uma avaliação com outra pessoa e combinar seu trabalho.</li>
+<li>Enviar (depois de possivelmente modificar) o trabalho de outro indivíduo além das poucas linhas permitidas aqui.</li>
+<li>Enviar o mesmo trabalho ou trabalho semelhante para este curso que você já enviou ou enviará para outro.</li>
+<li>Usar software baseado em IA que sugere ou completa respostas a perguntas ou linhas de código.</li>
+<li>Ver a solução de outra pessoa para uma avaliação e basear sua própria solução nela.</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

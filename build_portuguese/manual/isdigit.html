@@ -1,0 +1,411 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+        <link href="/static/49a1a858-favicon-32x32.png" rel="icon" type="image/png">
+
+        <script>
+            window.FontAwesomeConfig = { autoReplaceSvg: false };
+        </script>
+
+        <link href="/static/dist/main.css?1694737498" rel="stylesheet">
+        <script src="/static/dist/main.js?1694737498"></script>
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="/static/css/main.css"
+    />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/rouge.css"
+        />
+        <script src="/static/js/main.js"></script>
+        <script>
+
+            
+
+    $(function() {
+
+        // Hide less-comfortable descriptions
+        $('[data-less]').addClass('d-none');
+
+        // Listen for checkbox
+        $('#filter').on('change', function() {
+            if ($('#filter').is(':checked')) {
+                $('[data-less]').removeClass('d-none');
+                $('[data-more]').addClass('d-none');
+            }
+            else {
+                $('[data-more]').removeClass('d-none');
+                $('[data-less]').addClass('d-none');
+            }
+            filter();
+        }).trigger('change');
+
+        // Listen for searches
+        $('#q').on('change keyup', function() {
+            filter();
+        });
+        $('#q').closest('form').on('submit', function(e) {
+            e.preventDefault();
+        });
+
+        // Filter results
+        filter();
+
+        // Unless user's followed a link to a heading, filter index
+        if (window.location.hash) {
+            $('#filter').prop('checked', false).trigger('change');
+        }
+
+        // Give focus to search (after body is visible)
+        else {
+            $(function() {
+                $('#q').focus();
+            });
+        }
+    });
+
+    function filter() {
+        let q = $('#q').val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === '') {
+            q = [];
+        }
+        $('h1').each(function(index, element) {
+            const $h1 = $(element);
+            const header = $h1.val();
+            const $ul = $h1.next('ul');
+            $ul.children('li').each(function(index, element) {
+                const $li = $(element);
+                if ($('#filter').prop('checked') && $li.attr('data-filter') === undefined) {
+                    $li.addClass('filtered');
+                }
+                else {
+                    $li.removeClass('filtered');
+                }
+                const haystack = $h1.text() + $li.text().trim();
+                let matches = q.filter(function(s) {
+                    return haystack.match(new RegExp(s, 'i')) !== null;
+                });
+                if (matches.length === q.length) {
+                    $li.removeClass('mismatched');
+                }
+                else {
+                    $li.addClass('mismatched');
+                }
+            });
+            if ($ul.children('li:not(.filtered, .mismatched)').length > 0) {
+                $h1.removeClass('d-none');
+                $ul.removeClass('d-none');
+            }
+            else {
+                $h1.addClass('d-none');
+                $ul.addClass('d-none');
+            }
+        });
+    };
+
+
+
+        </script>
+
+        <script>
+
+            $(function() {
+
+                // Add borders to tables
+                $('.table').addClass('table-bordered');
+
+                // Enable popovers
+                $('[data-bs-toggle="popover"]').each(function(index, element) {
+                    new bootstrap.Popover(element, {
+                        boundary: 'viewport',
+                        html: true,
+                        placement: 'bottom',
+                        trigger: 'focus'
+                    });
+                });
+
+                // Ensure all elements are styled the same
+                $('h1').addClass('border-bottom fw-bold h2 mb-3 pb-2 pt-4');
+                $('h2').addClass('fw-bold h3');
+
+                // Ensure last heading can be anchored atop page
+                $(window).resize(function() {
+                    const top = $('h1').last().offset().top;
+                    const margin = $(window).height() - ($('body').outerHeight() - top);
+                    $('body').css('margin-bottom', Math.max(0, Math.ceil(margin)) + 'px');
+                });
+                $(window).trigger('resize');
+
+                // Reveal body
+                $('body').removeClass('invisible');
+            });
+
+        </script>
+
+        <style>
+
+            /* Style popovers */
+            .popover {
+                font-family: inherit;
+                max-width: 100%;
+            }
+
+            /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+            but not in buttons and not in tables, which should instead scroll horizontally */
+            * {
+                word-break: break-word;
+            }
+            button, table * {
+                word-break: normal;
+            }
+
+            /* Remove underlining */
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            nav a:hover {
+                text-decoration: none;
+            }
+
+            /* Match Gmail's yellow */
+            a[data-bs-toggle=popover] {
+                border-bottom: 2px solid rgb(252, 237, 193);
+                box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+                cursor: help;
+            }
+            a[data-bs-toggle=popover]:hover {
+                background-color: rgb(252, 237, 193);
+            }
+
+            /* Match pre tags */
+            code {
+                color: inherit;
+            }
+
+            /* A la Jekyll theme */
+            code, pre {
+                background-color: #f8f9fa;
+                border: 1px solid #dee2e6;
+                padding: calc(.2rem - 3px) 0.2rem;
+            }
+            pre code {
+                background-color: initial;
+                border: initial;
+                padding: initial;
+            }
+
+            /* Don't shrink these */
+            code, pre {
+                font-size: inherit;
+            }
+
+            /* Don't italicize */
+            dl dt {
+                font-style: normal;
+            }
+
+            /* Don't fill viewport */
+            .table {
+                width: inherit;
+            }
+
+        </style>
+
+        <style>
+
+            
+
+    /* Don't display */
+    .filtered, .mismatched {
+        display: none;
+    }
+
+    /* No bullets */
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    pre {
+        padding: 20px;
+    }
+
+        </style>
+
+        <title>CS50 Manual do Programador</title>
+
+    </head>
+
+    <body class="font-monospace invisible pb-5">
+
+        <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+            <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+        </nav>
+
+        <div class="container-fluid mt-2 px-4">
+            
+
+<h1><a href="#name">NAME</a></h1>
+<p>isdigit - check whether a character is a digit</p>
+<p>isalnum, isalpha, isascii, isblank, iscntrl, isdigit, isgraph, islower, isprint, ispunct, isspace, isupper, isxdigit, isalnum_l, isalpha_l, isascii_l, isblank_l, iscntrl_l, isdigit_l, isgraph_l, islower_l, isprint_l, ispunct_l, isspace_l, isupper_l, isxdigit_l - character classification functions</p>
+<h1><a href="#synopsis">SYNOPSIS</a></h1>
+<h2>Header File</h2>
+<pre><code>#include &lt;ctype.h&gt;
+</code></pre>
+<h2>Prototype</h2>
+<pre><code>int isdigit(char c);
+</code></pre>
+<p>Think of this function as taking a <code>char</code> as input.</p>
+<pre><code>#include &lt;ctype.h&gt;
+
+int isalnum(int c);
+int isalpha(int c);
+int iscntrl(int c);
+int isdigit(int c);
+int isgraph(int c);
+int islower(int c);
+int isprint(int c);
+int ispunct(int c);
+int isspace(int c);
+int isupper(int c);
+int isxdigit(int c);
+
+int isascii(int c);
+int isblank(int c);
+
+int isalnum_l(int c, locale_t locale);
+int isalpha_l(int c, locale_t locale);
+int isblank_l(int c, locale_t locale);
+int iscntrl_l(int c, locale_t locale);
+int isdigit_l(int c, locale_t locale);
+int isgraph_l(int c, locale_t locale);
+int islower_l(int c, locale_t locale);
+int isprint_l(int c, locale_t locale);
+int ispunct_l(int c, locale_t locale);
+int isspace_l(int c, locale_t locale);
+int isupper_l(int c, locale_t locale);
+int isxdigit_l(int c, locale_t locale);
+
+int isascii_l(int c, locale_t locale);
+</code></pre>
+<blockquote>
+<p>Feature Test Macro Requirements for glibc (see <a href="/7/feature_test_macros">feature_test_macros</a>(7)):</p>
+</blockquote>
+<p><a href="isascii">isascii</a>():</p>
+<blockquote>
+<p>_XOPEN_SOURCE || /* Glibc since 2.19: */ _DEFAULT_SOURCE || /* Glibc versions &lt;= 2.19: */ _SVID_SOURCE</p>
+</blockquote>
+<p><a href="isblank">isblank</a>():</p>
+<blockquote>
+<p>_ISOC99_SOURCE || _POSIX_C_SOURCE &gt;= 200112L</p>
+</blockquote>
+<p><a href="isalnum_l">isalnum_l</a>(), <a href="isalpha_l">isalpha_l</a>(), <a href="isblank_l">isblank_l</a>(), <a href="iscntrl_l">iscntrl_l</a>(), <a href="isdigit_l">isdigit_l</a>(), <a href="isgraph_l">isgraph_l</a>(), <a href="islower_l">islower_l</a>(), <a href="isprint_l">isprint_l</a>(), <a href="ispunct_l">ispunct_l</a>(), <a href="isspace_l">isspace_l</a>(), <a href="isupper_l">isupper_l</a>(), <a href="isxdigit_l">isxdigit_l</a>():</p>
+<blockquote>
+<p>Since glibc 2.10:</p>
+<p>_XOPEN_SOURCE &gt;= 700</p>
+<p>Before glibc 2.10:</p>
+<p>_GNU_SOURCE</p>
+</blockquote>
+<p><a href="isascii_l">isascii_l</a>():</p>
+<blockquote>
+<p>Since glibc 2.10:</p>
+<p>_XOPEN_SOURCE &gt;= 700 &amp;&amp; (_SVID_SOURCE || _BSD_SOURCE)</p>
+<p>Before glibc 2.10:</p>
+<p>_GNU_SOURCE</p>
+</blockquote>
+<h1><a href="#description">DESCRIPTION</a></h1>
+<p>This function checks whether <code>c</code> is a decimal digit (<code>&#x27;0&#x27;</code> through <code>&#x27;9&#x27;</code>) or not. In other words, it checks whether the <a href="https://asciichart.com/">ASCII</a> value of <code>c</code> is between 48 and 57, inclusive.</p>
+<p>These functions check whether <code>c</code>, which must have the value of an <code>unsigned char</code> or <strong>EOF</strong>, falls into a certain character class according to the specified locale. The functions without the &quot;_l&quot; suffix perform the check based on the current locale.</p>
+<p>The functions with the &quot;_l&quot; suffix perform the check based on the locale specified by the locale object <code>locale</code>. The behavior of these functions is undefined if <code>locale</code> is the special locale object <strong>LC_GLOBAL_LOCALE</strong> (see <a href="/3/duplocale">duplocale</a>(3)) or is not a valid locale object handle.</p>
+<p>The list below explains the operation of the functions without the &quot;_l&quot; suffix; the functions with the &quot;_l&quot; suffix differ only in using the locale object <code>locale</code> instead of the current locale.</p>
+<p><a href="isalnum">isalnum</a>()</p>
+<p>checks for an alphanumeric character; it is equivalent to <strong>(<a href="isalpha">isalpha</a>(</strong><code>c</code><strong>) || <a href="isdigit">isdigit</a>(</strong><code>c</code><strong>))</strong><code>.</code></p>
+<p><a href="isalpha">isalpha</a>()</p>
+<p>checks for an alphabetic character; in the standard <strong>&quot;C&quot;</strong> locale, it is equivalent to <strong>(<a href="isupper">isupper</a>(</strong><code>c</code><strong>) || <a href="islower">islower</a>(</strong><code>c</code><strong>))</strong><code>.</code> In some locales, there may be additional characters for which <a href="isalpha">isalpha</a>() is true—letters which are neither uppercase nor lowercase.</p>
+<p><a href="isascii">isascii</a>()</p>
+<p>checks whether <code>c</code> is a 7-bit <code>unsigned char</code> value that fits into the ASCII character set.</p>
+<p><a href="isblank">isblank</a>()</p>
+<p>checks for a blank character; that is, a space or a tab.</p>
+<p><a href="iscntrl">iscntrl</a>()</p>
+<p>checks for a control character.</p>
+<p><a href="isdigit">isdigit</a>()</p>
+<p>checks for a digit (0 through 9).</p>
+<p><a href="isgraph">isgraph</a>()</p>
+<p>checks for any printable character except space.</p>
+<p><a href="islower">islower</a>()</p>
+<p>checks for a lowercase character.</p>
+<p><a href="isprint">isprint</a>()</p>
+<p>checks for any printable character including space.</p>
+<p><a href="ispunct">ispunct</a>()</p>
+<p>checks for any printable character which is not a space or an alphanumeric character.</p>
+<p><a href="isspace">isspace</a>()</p>
+<p>checks for white-space characters. In the <strong>&quot;C&quot;</strong> and <strong>&quot;POSIX&quot;</strong> locales, these are: space, form-feed (<strong>'\f'</strong>), newline (<strong>'\n'</strong>), carriage return (<strong>'\r'</strong>), horizontal tab (<strong>'\t'</strong>), and vertical tab (<strong>'\v'</strong>).</p>
+<p><a href="isupper">isupper</a>()</p>
+<p>checks for an uppercase letter.</p>
+<p><a href="isxdigit">isxdigit</a>()</p>
+<p>checks for hexadecimal digits, that is, one of<br />
+<strong>0 1 2 3 4 5 6 7 8 9 a b c d e f A B C D E F</strong>.</p>
+<h1><a href="#return-value">RETURN VALUE</a></h1>
+<p>This function returns a non-zero <code>int</code> if <code>c</code> is a decimal digit and <code>0</code> if <code>c</code> is not a decimal digit.</p>
+<p>The values returned are nonzero if the character <code>c</code> falls into the tested class, and zero if not.</p>
+<h1><a href="#example">EXAMPLE</a></h1>
+<pre><code>#include &lt;cs50.h&gt;#include &lt;ctype.h&gt;#include &lt;stdio.h&gt;
+int main(void)
+{
+    char c = get_char(&quot;Input: &quot;);
+    if (isdigit(c))
+    {
+        printf(&quot;Your input is a digit.\n&quot;);
+    }
+    else
+    {
+        printf(&quot;Your input is not a digit.\n&quot;);
+    }
+}
+</code></pre>
+<h1><a href="#versions">VERSIONS</a></h1>
+<p><a href="isalnum_l">isalnum_l</a>(), <a href="isalpha_l">isalpha_l</a>(), <a href="isblank_l">isblank_l</a>(), <a href="iscntrl_l">iscntrl_l</a>(), <a href="isdigit_l">isdigit_l</a>(), <a href="isgraph_l">isgraph_l</a>(), <a href="islower_l">islower_l</a>(), <a href="isprint_l">isprint_l</a>(), <a href="ispunct_l">ispunct_l</a>(), <a href="isspace_l">isspace_l</a>(), <a href="isupper_l">isupper_l</a>(), <a href="isxdigit_l">isxdigit_l</a>(), and <a href="isascii_l">isascii_l</a>() are available since glibc 2.3.</p>
+<h1><a href="#attributes">ATTRIBUTES</a></h1>
+<p>For an explanation of the terms used in this section, see <a href="/7/attributes">attributes</a>(7).</p>
+<p>Interface</p>
+<p>Attribute</p>
+<p>Value</p>
+<p><a href="isalnum">isalnum</a>(), <a href="isalpha">isalpha</a>(), <a href="isascii">isascii</a>(), <a href="isblank">isblank</a>(), <a href="iscntrl">iscntrl</a>(), <a href="isdigit">isdigit</a>(), <a href="isgraph">isgraph</a>(), <a href="islower">islower</a>(), <a href="isprint">isprint</a>(), <a href="ispunct">ispunct</a>(), <a href="isspace">isspace</a>(), <a href="isupper">isupper</a>(), <a href="isxdigit">isxdigit</a>()</p>
+<p>Thread safety</p>
+<p>MT-Safe</p>
+<h1><a href="#conforming-to">CONFORMING TO</a></h1>
+<p>C89 specifies <a href="isalnum">isalnum</a>(), <a href="isalpha">isalpha</a>(), <a href="iscntrl">iscntrl</a>(), <a href="isdigit">isdigit</a>(), <a href="isgraph">isgraph</a>(), <a href="islower">islower</a>(), <a href="isprint">isprint</a>(), <a href="ispunct">ispunct</a>(), <a href="isspace">isspace</a>(), <a href="isupper">isupper</a>(), and <a href="isxdigit">isxdigit</a>(), but not <a href="isascii">isascii</a>() and <a href="isblank">isblank</a>(). POSIX.1-2001 also specifies those functions, and also <a href="isascii">isascii</a>() (as an XSI extension) and <a href="isblank">isblank</a>(). C99 specifies all of the preceding functions, except <a href="isascii">isascii</a>().</p>
+<p>POSIX.1-2008 marks <a href="isascii">isascii</a>() as obsolete, noting that it cannot be used portably in a localized application.</p>
+<p>POSIX.1-2008 specifies <a href="isalnum_l">isalnum_l</a>(), <a href="isalpha_l">isalpha_l</a>(), <a href="isblank_l">isblank_l</a>(), <a href="iscntrl_l">iscntrl_l</a>(), <a href="isdigit_l">isdigit_l</a>(), <a href="isgraph_l">isgraph_l</a>(), <a href="islower_l">islower_l</a>(), <a href="isprint_l">isprint_l</a>(), <a href="ispunct_l">ispunct_l</a>(), <a href="isspace_l">isspace_l</a>(), <a href="isupper_l">isupper_l</a>(), and <a href="isxdigit_l">isxdigit_l</a>().</p>
+<p><a href="isascii_l">isascii_l</a>() is a GNU extension.</p>
+<h1><a href="#notes">NOTES</a></h1>
+<p>The standards require that the argument <code>c</code> for these functions is either <strong>EOF</strong> or a value that is representable in the type <code>unsigned char</code>. If the argument <code>c</code> is of type <code>char</code>, it must be cast to <em>unsigned char</em>, as in the following example:</p>
+<pre><code>char c;
+...
+res = toupper((unsigned char) c);
+</code></pre>
+<p>This is necessary because <code>char</code> may be the equivalent of <code>signed char</code>, in which case a byte where the top bit is set would be sign extended when converting to <code>int</code>, yielding a value that is outside the range of <code>unsigned char</code>.</p>
+<p>The details of what characters belong to which class depend on the locale. For example, <a href="isupper">isupper</a>() will not recognize an A-umlaut (Ä) as an uppercase letter in the default <strong>C</strong> locale.</p>
+<h1><a href="#see-also">SEE ALSO</a></h1>
+<p><a href="/3/iswalnum">iswalnum</a>(3), <a href="/3/iswalpha">iswalpha</a>(3), <a href="/3/iswblank">iswblank</a>(3), <a href="/3/iswcntrl">iswcntrl</a>(3), <a href="/3/iswdigit">iswdigit</a>(3), <a href="/3/iswgraph">iswgraph</a>(3), <a href="/3/iswlower">iswlower</a>(3), <a href="/3/iswprint">iswprint</a>(3), <a href="/3/iswpunct">iswpunct</a>(3), <a href="/3/iswspace">iswspace</a>(3), <a href="/3/iswupper">iswupper</a>(3), <a href="/3/iswxdigit">iswxdigit</a>(3), <a href="/3/newlocale">newlocale</a>(3), <a href="/3/setlocale">setlocale</a>(3), <a href="/3/toascii">toascii</a>(3), <a href="/3/tolower">tolower</a>(3), <a href="/3/toupper">toupper</a>(3), <a href="/3/uselocale">uselocale</a>(3), <a href="/7/ascii">ascii</a>(7), <a href="/7/locale">locale</a>(7)</p>
+<h1><a href="#colophon">COLOPHON</a></h1>
+<p>This page is part of release 5.10 of the Linux <code>man-pages</code> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</p>
+
+
+
+        </div>
+    </body>
+</html>

@@ -1,0 +1,357 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+        <link href="/static/49a1a858-favicon-32x32.png" rel="icon" type="image/png">
+
+        <script>
+            window.FontAwesomeConfig = { autoReplaceSvg: false };
+        </script>
+
+        <link href="/static/dist/main.css?1694737498" rel="stylesheet">
+        <script src="/static/dist/main.js?1694737498"></script>
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="/static/css/main.css"
+    />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/rouge.css"
+        />
+        <script src="/static/js/main.js"></script>
+        <script>
+
+            
+
+    $(function() {
+
+        // Hide less-comfortable descriptions
+        $('[data-less]').addClass('d-none');
+
+        // Listen for checkbox
+        $('#filter').on('change', function() {
+            if ($('#filter').is(':checked')) {
+                $('[data-less]').removeClass('d-none');
+                $('[data-more]').addClass('d-none');
+            }
+            else {
+                $('[data-more]').removeClass('d-none');
+                $('[data-less]').addClass('d-none');
+            }
+            filter();
+        }).trigger('change');
+
+        // Listen for searches
+        $('#q').on('change keyup', function() {
+            filter();
+        });
+        $('#q').closest('form').on('submit', function(e) {
+            e.preventDefault();
+        });
+
+        // Filter results
+        filter();
+
+        // Unless user's followed a link to a heading, filter index
+        if (window.location.hash) {
+            $('#filter').prop('checked', false).trigger('change');
+        }
+
+        // Give focus to search (after body is visible)
+        else {
+            $(function() {
+                $('#q').focus();
+            });
+        }
+    });
+
+    function filter() {
+        let q = $('#q').val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === '') {
+            q = [];
+        }
+        $('h1').each(function(index, element) {
+            const $h1 = $(element);
+            const header = $h1.val();
+            const $ul = $h1.next('ul');
+            $ul.children('li').each(function(index, element) {
+                const $li = $(element);
+                if ($('#filter').prop('checked') && $li.attr('data-filter') === undefined) {
+                    $li.addClass('filtered');
+                }
+                else {
+                    $li.removeClass('filtered');
+                }
+                const haystack = $h1.text() + $li.text().trim();
+                let matches = q.filter(function(s) {
+                    return haystack.match(new RegExp(s, 'i')) !== null;
+                });
+                if (matches.length === q.length) {
+                    $li.removeClass('mismatched');
+                }
+                else {
+                    $li.addClass('mismatched');
+                }
+            });
+            if ($ul.children('li:not(.filtered, .mismatched)').length > 0) {
+                $h1.removeClass('d-none');
+                $ul.removeClass('d-none');
+            }
+            else {
+                $h1.addClass('d-none');
+                $ul.addClass('d-none');
+            }
+        });
+    };
+
+
+
+        </script>
+
+        <script>
+
+            $(function() {
+
+                // Add borders to tables
+                $('.table').addClass('table-bordered');
+
+                // Enable popovers
+                $('[data-bs-toggle="popover"]').each(function(index, element) {
+                    new bootstrap.Popover(element, {
+                        boundary: 'viewport',
+                        html: true,
+                        placement: 'bottom',
+                        trigger: 'focus'
+                    });
+                });
+
+                // Ensure all elements are styled the same
+                $('h1').addClass('border-bottom fw-bold h2 mb-3 pb-2 pt-4');
+                $('h2').addClass('fw-bold h3');
+
+                // Ensure last heading can be anchored atop page
+                $(window).resize(function() {
+                    const top = $('h1').last().offset().top;
+                    const margin = $(window).height() - ($('body').outerHeight() - top);
+                    $('body').css('margin-bottom', Math.max(0, Math.ceil(margin)) + 'px');
+                });
+                $(window).trigger('resize');
+
+                // Reveal body
+                $('body').removeClass('invisible');
+            });
+
+        </script>
+
+        <style>
+
+            /* Style popovers */
+            .popover {
+                font-family: inherit;
+                max-width: 100%;
+            }
+
+            /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+            but not in buttons and not in tables, which should instead scroll horizontally */
+            * {
+                word-break: break-word;
+            }
+            button, table * {
+                word-break: normal;
+            }
+
+            /* Remove underlining */
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            nav a:hover {
+                text-decoration: none;
+            }
+
+            /* Match Gmail's yellow */
+            a[data-bs-toggle=popover] {
+                border-bottom: 2px solid rgb(252, 237, 193);
+                box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+                cursor: help;
+            }
+            a[data-bs-toggle=popover]:hover {
+                background-color: rgb(252, 237, 193);
+            }
+
+            /* Match pre tags */
+            code {
+                color: inherit;
+            }
+
+            /* A la Jekyll theme */
+            code, pre {
+                background-color: #f8f9fa;
+                border: 1px solid #dee2e6;
+                padding: calc(.2rem - 3px) 0.2rem;
+            }
+            pre code {
+                background-color: initial;
+                border: initial;
+                padding: initial;
+            }
+
+            /* Don't shrink these */
+            code, pre {
+                font-size: inherit;
+            }
+
+            /* Don't italicize */
+            dl dt {
+                font-style: normal;
+            }
+
+            /* Don't fill viewport */
+            .table {
+                width: inherit;
+            }
+
+        </style>
+
+        <style>
+
+            
+
+    /* Don't display */
+    .filtered, .mismatched {
+        display: none;
+    }
+
+    /* No bullets */
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    pre {
+        padding: 20px;
+    }
+
+        </style>
+
+        <title>CS50 Manual do Programador</title>
+
+    </head>
+
+    <body class="font-monospace invisible pb-5">
+
+        <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+            <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+        </nav>
+
+        <div class="container-fluid mt-2 px-4">
+            
+
+<h1><a href="#name">NAME</a></h1>
+<p>pow - raise a number to a power</p>
+<p>pow, powf, powl - power functions</p>
+<h1><a href="#synopsis">SYNOPSIS</a></h1>
+<h2>Header File</h2>
+<pre><code>#include &lt;math.h&gt;
+</code></pre>
+<h2>Prototype</h2>
+<pre><code>double pow(double x, double y);
+
+
+#include &lt;math.h&gt;
+
+double pow(double x, double y);
+float powf(float x, float y);
+long double powl(long double x, long double y);
+</code></pre>
+<p>Link with <code>-lm</code>.</p>
+<blockquote>
+<p>Feature Test Macro Requirements for glibc (see <a href="/7/feature_test_macros">feature_test_macros</a>(7)):</p>
+</blockquote>
+<p><a href="powf">powf</a>(), <a href="powl">powl</a>():</p>
+<blockquote>
+<p>_ISOC99_SOURCE || _POSIX_C_SOURCE &gt;= 200112L || /* Since glibc 2.19: */ _DEFAULT_SOURCE || /* Glibc versions &lt;= 2.19: */ _BSD_SOURCE || _SVID_SOURCE</p>
+</blockquote>
+<h1><a href="#description">DESCRIPTION</a></h1>
+<p>This function raises <code>x</code> to the power of <code>y</code>.</p>
+<p>These functions return the value of <code>x</code> raised to the power of <code>y</code>.</p>
+<h1><a href="#return-value">RETURN VALUE</a></h1>
+<p>This function returns, as a <code>double</code>, <code>x</code> raised to the power of <code>y</code>.</p>
+<p>On success, these functions return the value of <code>x</code> to the power of <code>y</code>.</p>
+<p>If <code>x</code> is a finite value less than 0, and <code>y</code> is a finite noninteger, a domain error occurs, and a NaN is returned.</p>
+<p>If the result overflows, a range error occurs, and the functions return <strong>HUGE_VAL</strong>, <strong>HUGE_VALF</strong>, or <strong>HUGE_VALL</strong>, respectively, with the mathematically correct sign.</p>
+<p>If result underflows, and is not representable, a range error occurs, and 0.0 is returned.</p>
+<p>Except as specified below, if <code>x</code> or <code>y</code> is a NaN, the result is a NaN.</p>
+<p>If <code>x</code> is +1, the result is 1.0 (even if <code>y</code> is a NaN).</p>
+<p>If <code>y</code> is 0, the result is 1.0 (even if <code>x</code> is a NaN).</p>
+<p>If <code>x</code> is +0 (-0), and <code>y</code> is an odd integer greater than 0, the result is +0 (-0).</p>
+<p>If <code>x</code> is 0, and <code>y</code> greater than 0 and not an odd integer, the result is +0.</p>
+<p>If <code>x</code> is -1, and <code>y</code> is positive infinity or negative infinity, the result is 1.0.</p>
+<p>If the absolute value of <code>x</code> is less than 1, and <code>y</code> is negative infinity, the result is positive infinity.</p>
+<p>If the absolute value of <code>x</code> is greater than 1, and <code>y</code> is negative infinity, the result is +0.</p>
+<p>If the absolute value of <code>x</code> is less than 1, and <code>y</code> is positive infinity, the result is +0.</p>
+<p>If the absolute value of <code>x</code> is greater than 1, and <code>y</code> is positive infinity, the result is positive infinity.</p>
+<p>If <code>x</code> is negative infinity, and <code>y</code> is an odd integer less than 0, the result is -0.</p>
+<p>If <code>x</code> is negative infinity, and <code>y</code> less than 0 and not an odd integer, the result is +0.</p>
+<p>If <code>x</code> is negative infinity, and <code>y</code> is an odd integer greater than 0, the result is negative infinity.</p>
+<p>If <code>x</code> is negative infinity, and <code>y</code> greater than 0 and not an odd integer, the result is positive infinity.</p>
+<p>If <code>x</code> is positive infinity, and <code>y</code> less than 0, the result is +0.</p>
+<p>If <code>x</code> is positive infinity, and <code>y</code> greater than 0, the result is positive infinity.</p>
+<p>If <code>x</code> is +0 or -0, and <code>y</code> is an odd integer less than 0, a pole error occurs and <strong>HUGE_VAL</strong>, <strong>HUGE_VALF</strong>, or <strong>HUGE_VALL</strong>, is returned, with the same sign as <code>x</code>.</p>
+<p>If <code>x</code> is +0 or -0, and <code>y</code> is less than 0 and not an odd integer, a pole error occurs and +<strong>HUGE_VAL</strong>, +<strong>HUGE_VALF</strong>, or +<strong>HUGE_VALL</strong>, is returned.</p>
+<h1><a href="#example">EXAMPLE</a></h1>
+<pre><code>#include &lt;math.h&gt;#include &lt;stdio.h&gt;
+int main(void)
+{
+    printf(&quot;A 32-bit integer can store %li possible values.\n&quot;, (long) pow(2, 32));
+}
+</code></pre>
+<h1><a href="#errors">ERRORS</a></h1>
+<p>See <a href="/7/math_error">math_error</a>(7) for information on how to determine whether an error has occurred when calling these functions.</p>
+<p>The following errors can occur:</p>
+<p>Domain error: <code>x</code> is negative, and <code>y</code> is a finite noninteger</p>
+<p><code>errno</code> is set to <strong>EDOM</strong>. An invalid floating-point exception (<strong>FE_INVALID</strong>) is raised.</p>
+<p>Pole error: <code>x</code> is zero, and <code>y</code> is negative</p>
+<p><code>errno</code> is set to <strong>ERANGE</strong> (but see BUGS). A divide-by-zero floating-point exception (<strong>FE_DIVBYZERO</strong>) is raised.</p>
+<p>Range error: the result overflows</p>
+<p><code>errno</code> is set to <strong>ERANGE</strong>. An overflow floating-point exception (<strong>FE_OVERFLOW</strong>) is raised.</p>
+<p>Range error: the result underflows</p>
+<p><code>errno</code> is set to <strong>ERANGE</strong>. An underflow floating-point exception (<strong>FE_UNDERFLOW</strong>) is raised.</p>
+<h1><a href="#attributes">ATTRIBUTES</a></h1>
+<p>For an explanation of the terms used in this section, see <a href="/7/attributes">attributes</a>(7).</p>
+<p>Interface</p>
+<p>Attribute</p>
+<p>Value</p>
+<p><a href="pow">pow</a>(), <a href="powf">powf</a>(), <a href="powl">powl</a>()</p>
+<p>Thread safety</p>
+<p>MT-Safe</p>
+<h1><a href="#conforming-to">CONFORMING TO</a></h1>
+<p>C99, POSIX.1-2001, POSIX.1-2008.</p>
+<p>The variant returning <code>double</code> also conforms to SVr4, 4.3BSD, C89.</p>
+<h1><a href="#bugs">BUGS</a></h1>
+<h2>Historical bugs (now fixed)</h2>
+<p>Before glibc 2.28, on some architectures (e.g., x86-64) <a href="pow">pow</a>() may be more than 10,000 times slower for some inputs than for other nearby inputs. This affects only <a href="pow">pow</a>(), and not <a href="powf">powf</a>() nor <a href="powl">powl</a>(). This problem was fixed in glibc 2.28.</p>
+<p>A number of bugs in the glibc implementation of <a href="pow">pow</a>() were fixed in glibc version 2.16.</p>
+<p>In glibc 2.9 and earlier, when a pole error occurs, <code>errno</code> is set to <strong>EDOM</strong> instead of the POSIX-mandated <strong>ERANGE</strong>. Since version 2.10, glibc does the right thing.</p>
+<p>In version 2.3.2 and earlier, when an overflow or underflow error occurs, glibc's <a href="pow">pow</a>() generates a bogus invalid floating-point exception (<strong>FE_INVALID</strong>) in addition to the overflow or underflow exception.</p>
+<h1><a href="#see-also">SEE ALSO</a></h1>
+<p><a href="/3/cbrt">cbrt</a>(3), <a href="/3/cpow">cpow</a>(3), <a href="/3/sqrt">sqrt</a>(3)</p>
+<h1><a href="#colophon">COLOPHON</a></h1>
+<p>This page is part of release 5.10 of the Linux <code>man-pages</code> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</p>
+
+
+
+        </div>
+    </body>
+</html>

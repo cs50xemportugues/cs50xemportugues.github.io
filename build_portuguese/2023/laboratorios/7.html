@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html">Este é o CS50x</a>
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x"
+        >O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1 <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2 <span class="semana-titulo">Vetores</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3 <span class="semana-titulo">Algoritmos</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4 <span class="semana-titulo">Memória</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6 <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7 <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9 <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10 <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+  <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html">Projeto Final</a>
+      </li>
+    </ul> -->
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          >Perguntas Frequentes</a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html">Equipe</a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html">Currículo do Curso</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/">Navegador SQLite</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/">Navegador PostgreSQL</a>
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"></a></p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Laboratório 7: Músicas</h1>
+<p>Você pode colaborar com um ou dois colegas neste laboratório, embora seja esperado que cada aluno em qualquer grupo contribua igualmente para o laboratório.</p>
+<p>Escreva consultas SQL para responder a perguntas sobre um banco de dados de músicas.</p>
+<h2>Iniciando</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do seu terminal e execute <code>cd</code> por si só. Você deve encontrar que o &quot;prompt&quot; é semelhante ao abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/labs/7/songs.zip
+</code></pre>
+<p>seguido de Enter para baixar um ZIP chamado <code>songs.zip</code> em seu espaço de código. Tenha cuidado para não ignorar o espaço entre <code>wget</code> e a URL seguinte, ou qualquer outro caractere, na verdade!</p>
+<p>Agora execute</p>
+<pre><code>unzip songs.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>songs</code>. Você não precisa mais do arquivo ZIP; portanto, execute</p>
+<pre><code>rm songs.zip
+</code></pre>
+<p>e responda com &quot;y&quot; seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd songs
+</code></pre>
+<p>seguido de Enter para se mover para dentro (ou seja, abrir) esse diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>songs/ $
+</code></pre>
+<p>Se tudo correu bem, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e você deve ver 8 arquivos .sql, <code>songs.db</code> e <code>answers.txt</code>.</p>
+<p>Se você tiver algum problema, siga essas mesmas etapas novamente e veja se pode determinar onde errou!</p>
+<h2>Entendimento</h2>
+<p>Foi fornecido um arquivo chamado <code>songs.db</code>, um banco de dados SQLite que armazena dados sobre músicas e seus artistas do <a href="https://developer.spotify.com/documentation/web-api/">Spotify</a>. Este conjunto de dados contém as 100 músicas mais tocadas no Spotify em 2018. Em uma janela do terminal, execute <code>sqlite3 songs.db</code> para poder começar a executar consultas no banco de dados.</p>
+<p>Primeiro, quando o <code>sqlite3</code> solicitar uma consulta, digite <code>.schema</code> e pressione Enter. Isso exibirá as declarações <code>CREATE TABLE</code> que foram usadas para gerar cada uma das tabelas no banco de dados. Examinando essas declarações, você pode identificar as colunas presentes em cada tabela.</p>
+<p>Observe que cada <code>artista</code> tem um <code>id</code> e um <code>nome</code>. Observe também que cada música tem um <code>nome</code>, um <code>artist_id</code> (correspondente ao <code>id</code> do artista da música), assim como valores de danceabilidade, energia, chave, volume, fala (presença de palavras faladas em uma faixa), valência, tempo e duração da música (medida em milissegundos).</p>
+<p>O desafio é escrever consultas SQL para responder a uma variedade de perguntas diferentes selecionando dados de uma ou mais dessas tabelas. Depois de fazer isso, você refletirá sobre as maneiras pelas quais o Spotify pode usar esses mesmos dados em sua campanha anual <a href="https://en.wikipedia.org/wiki/Spotify_Wrapped">Spotify Wrapped</a> para caracterizar os hábitos dos ouvintes.</p>
+<h2>Detalhes de implementação</h2>
+<p>Para cada um dos seguintes problemas, você deve escrever uma única consulta SQL que gere os resultados especificados por cada problema. Sua resposta deve estar na forma de uma única consulta SQL, embora você possa aninhar outras consultas dentro de sua consulta. Você <strong>não deve</strong> assumir nada sobre os <code>id</code>s de qualquer música ou artista em particular: suas consultas devem ser precisas mesmo se o <code>id</code> de qualquer música ou pessoa fosse diferente. Finalmente, cada consulta deve retornar apenas os dados necessários para responder à pergunta: se o problema solicitá-lo, por exemplo, apenas para fornecer os nomes das músicas, sua consulta não deve fornecer o tempo de cada música.</p>
+<ol>
+<li>
+Em <code>1.sql</code>, escreva uma consulta SQL para listar os nomes de todas as músicas do banco de dados.<ul>
+<li>Sua consulta deve produzir uma tabela com uma única coluna para o nome de cada música.</li>
+</ul>
+</li>
+<li>
+Em <code>2.sql</code>, escreva uma consulta SQL para listar os nomes de todas as músicas em ordem crescente de tempo.<ul>
+<li>Sua consulta deve produzir uma tabela com uma única coluna para o nome de cada música.</li>
+</ul>
+</li>
+<li>
+Em <code>3.sql</code>, escreva uma consulta SQL para listar os nomes das 5 músicas mais longas, em ordem decrescente de duração.<ul>
+<li>Sua consulta deve produzir uma tabela com uma única coluna para o nome de cada música.</li>
+</ul>
+</li>
+<li>
+Em <code>4.sql</code>, escreva uma consulta SQL que liste os nomes de quaisquer músicas que tenham danceabilidade, energia e valência maiores que 0,75.<ul>
+<li>Sua consulta deve produzir uma tabela com uma única coluna para o nome de cada música.</li>
+</ul>
+</li>
+<li>
+Em <code>5.sql</code>, escreva uma consulta SQL que retorne a energia média de todas as músicas.<ul>
+<li>Sua consulta deve produzir uma tabela com uma única coluna e uma única linha contendo a energia média.</li>
+</ul>
+</li>
+<li>
+Em <code>6.sql</code>, escreva uma consulta SQL que liste os nomes das músicas que são de Post Malone.<ul>
+<li>Sua consulta deve produzir uma tabela com uma única coluna para o nome de cada música.</li>
+<li>Você não deve fazer nenhuma suposição sobre qual é o <code>artist_id</code> de Post Malone.</li>
+</ul>
+</li>
+<li>
+Em <code>7.sql</code>, escreva uma consulta SQL que retorne a energia média das músicas que são de Drake.<ul>
+<li>Sua consulta deve produzir uma tabela com uma única coluna e uma única linha contendo a energia média.</li>
+<li>Você não deve fazer nenhuma suposição sobre qual é o <code>artist_id</code> do Drake.</li>
+</ul>
+</li>
+<li>
+Em <code>8.sql</code>, escreva uma consulta SQL que liste os nomes das músicas que apresentam outros artistas.<ul>
+<li>As músicas que apresentam outros artistas incluirão &quot;feat.&quot; no nome da música.</li>
+<li>Sua consulta deve produzir uma tabela com uma única coluna para o nome de cada música.</li>
+</ul>
+</li>
+</ol>
+<h3>Walkthrough</h3>
+<p>Este vídeo foi gravado quando o curso ainda usava o CS50 IDE para escrever código. Embora a interface possa parecer diferente do seu espaço de código, o comportamento dos dois ambientes deve ser amplamente semelhante!</p>
+<h2>Uso</h2>
+<p>Além de executar suas consultas no <code>sqlite3</code>, você pode testar suas consultas no terminal do VS Code executando</p>
+<pre><code>$ cat filename.sql | sqlite3 songs.db
+</code></pre>
+<p>onde <code>filename.sql</code> é o arquivo contendo sua consulta SQL.</p>
+<h3>Sugestões</h3>
+<ul>
+<li>Consulte <a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">este guia de referência de palavras-chave SQL</a> para obter uma sintaxe SQL que possa ajudar!</li>
+</ul>
+<p>Não sabe como resolver?</p>
+<h3>Spotify Wrapped</h3>
+<p><a href="https://en.wikipedia.org/wiki/Spotify_Wrapped">Spotify Wrapped</a> é um recurso que apresenta as 100 músicas mais reproduzidas do Spotify do usuário no ano passado. Em 2021, o Spotify Wrapped calculou uma <a href="https://newsroom.spotify.com/2021-12-01/learn-more-about-the-audio-aura-in-your-spotify-2021-wrapped-with-aura-reader-mystic-michaela/">“Aura Áudio”</a> para cada usuário, uma “leitura das [suas] duas emoções mais proeminentes ditadas pelas [suas] principais músicas e artistas do ano”. Suponha que o Spotify determine uma aura de áudio olhando para a energia média, valência e danceabilidades das 100 músicas principais de uma pessoa do ano passado. Em <code>answers.txt</code>, reflita sobre as seguintes perguntas:</p>
+<ul>
+<li>Se <code>songs.db</code> contém as 100 principais músicas de um ouvinte de 2018, como você caracterizaria sua aura de áudio?</li>
+<li>Hipotetize por que a maneira como você calculou essa aura pode <em>não</em> ser muito representativa do ouvinte. Que maneiras melhores de calcular essa aura você proporia?</li>
+</ul>
+<p>Certifique-se de enviar <code>answers.txt</code> juntamente com cada um dos seus arquivos <code>.sql</code>!</p>
+<h3>Teste</h3>
+<p>Execute o abaixo para avaliar a correção do seu código usando <code>check50</code>.</p>
+<pre><code>check50 cs50/labs/2023/x/songs
+</code></pre>
+<h2>Como enviar</h2>
+<p>Em seu terminal, execute o abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/labs/2023/x/songs
+</code></pre>
+<h2>Reconhecimentos</h2>
+<p>Conjunto de dados do <a href="https://www.kaggle.com/nadintamer/top-spotify-tracks-of-2018">Kaggle</a>.</p>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

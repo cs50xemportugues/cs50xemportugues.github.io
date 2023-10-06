@@ -1,0 +1,401 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+        <link href="/static/49a1a858-favicon-32x32.png" rel="icon" type="image/png">
+
+        <script>
+            window.FontAwesomeConfig = { autoReplaceSvg: false };
+        </script>
+
+        <link href="/static/dist/main.css?1694737498" rel="stylesheet">
+        <script src="/static/dist/main.js?1694737498"></script>
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="/static/css/main.css"
+    />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/rouge.css"
+        />
+        <script src="/static/js/main.js"></script>
+        <script>
+
+            
+
+    $(function() {
+
+        // Hide less-comfortable descriptions
+        $('[data-less]').addClass('d-none');
+
+        // Listen for checkbox
+        $('#filter').on('change', function() {
+            if ($('#filter').is(':checked')) {
+                $('[data-less]').removeClass('d-none');
+                $('[data-more]').addClass('d-none');
+            }
+            else {
+                $('[data-more]').removeClass('d-none');
+                $('[data-less]').addClass('d-none');
+            }
+            filter();
+        }).trigger('change');
+
+        // Listen for searches
+        $('#q').on('change keyup', function() {
+            filter();
+        });
+        $('#q').closest('form').on('submit', function(e) {
+            e.preventDefault();
+        });
+
+        // Filter results
+        filter();
+
+        // Unless user's followed a link to a heading, filter index
+        if (window.location.hash) {
+            $('#filter').prop('checked', false).trigger('change');
+        }
+
+        // Give focus to search (after body is visible)
+        else {
+            $(function() {
+                $('#q').focus();
+            });
+        }
+    });
+
+    function filter() {
+        let q = $('#q').val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === '') {
+            q = [];
+        }
+        $('h1').each(function(index, element) {
+            const $h1 = $(element);
+            const header = $h1.val();
+            const $ul = $h1.next('ul');
+            $ul.children('li').each(function(index, element) {
+                const $li = $(element);
+                if ($('#filter').prop('checked') && $li.attr('data-filter') === undefined) {
+                    $li.addClass('filtered');
+                }
+                else {
+                    $li.removeClass('filtered');
+                }
+                const haystack = $h1.text() + $li.text().trim();
+                let matches = q.filter(function(s) {
+                    return haystack.match(new RegExp(s, 'i')) !== null;
+                });
+                if (matches.length === q.length) {
+                    $li.removeClass('mismatched');
+                }
+                else {
+                    $li.addClass('mismatched');
+                }
+            });
+            if ($ul.children('li:not(.filtered, .mismatched)').length > 0) {
+                $h1.removeClass('d-none');
+                $ul.removeClass('d-none');
+            }
+            else {
+                $h1.addClass('d-none');
+                $ul.addClass('d-none');
+            }
+        });
+    };
+
+
+
+        </script>
+
+        <script>
+
+            $(function() {
+
+                // Add borders to tables
+                $('.table').addClass('table-bordered');
+
+                // Enable popovers
+                $('[data-bs-toggle="popover"]').each(function(index, element) {
+                    new bootstrap.Popover(element, {
+                        boundary: 'viewport',
+                        html: true,
+                        placement: 'bottom',
+                        trigger: 'focus'
+                    });
+                });
+
+                // Ensure all elements are styled the same
+                $('h1').addClass('border-bottom fw-bold h2 mb-3 pb-2 pt-4');
+                $('h2').addClass('fw-bold h3');
+
+                // Ensure last heading can be anchored atop page
+                $(window).resize(function() {
+                    const top = $('h1').last().offset().top;
+                    const margin = $(window).height() - ($('body').outerHeight() - top);
+                    $('body').css('margin-bottom', Math.max(0, Math.ceil(margin)) + 'px');
+                });
+                $(window).trigger('resize');
+
+                // Reveal body
+                $('body').removeClass('invisible');
+            });
+
+        </script>
+
+        <style>
+
+            /* Style popovers */
+            .popover {
+                font-family: inherit;
+                max-width: 100%;
+            }
+
+            /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+            but not in buttons and not in tables, which should instead scroll horizontally */
+            * {
+                word-break: break-word;
+            }
+            button, table * {
+                word-break: normal;
+            }
+
+            /* Remove underlining */
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            nav a:hover {
+                text-decoration: none;
+            }
+
+            /* Match Gmail's yellow */
+            a[data-bs-toggle=popover] {
+                border-bottom: 2px solid rgb(252, 237, 193);
+                box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+                cursor: help;
+            }
+            a[data-bs-toggle=popover]:hover {
+                background-color: rgb(252, 237, 193);
+            }
+
+            /* Match pre tags */
+            code {
+                color: inherit;
+            }
+
+            /* A la Jekyll theme */
+            code, pre {
+                background-color: #f8f9fa;
+                border: 1px solid #dee2e6;
+                padding: calc(.2rem - 3px) 0.2rem;
+            }
+            pre code {
+                background-color: initial;
+                border: initial;
+                padding: initial;
+            }
+
+            /* Don't shrink these */
+            code, pre {
+                font-size: inherit;
+            }
+
+            /* Don't italicize */
+            dl dt {
+                font-style: normal;
+            }
+
+            /* Don't fill viewport */
+            .table {
+                width: inherit;
+            }
+
+        </style>
+
+        <style>
+
+            
+
+    /* Don't display */
+    .filtered, .mismatched {
+        display: none;
+    }
+
+    /* No bullets */
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    pre {
+        padding: 20px;
+    }
+
+        </style>
+
+        <title>CS50 Manual do Programador</title>
+
+    </head>
+
+    <body class="font-monospace invisible pb-5">
+
+        <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+            <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+        </nav>
+
+        <div class="container-fluid mt-2 px-4">
+            
+
+<h1><a href="#name">NAME</a></h1>
+<p>strcmp - compare two strings</p>
+<p>strcmp, strncmp - compare two strings</p>
+<h1><a href="#synopsis">SYNOPSIS</a></h1>
+<h2>Header Files</h2>
+<pre><code>#include &lt;cs50.h&gt;#include &lt;string.h&gt;
+</code></pre>
+<h2>Prototype</h2>
+<pre><code>int strcmp(string s1, string s2);
+
+
+#include &lt;string.h&gt;
+
+int strcmp(const char *s1, const char *s2);
+
+int strncmp(const char *s1, const char *s2, size_t n);
+</code></pre>
+<h1><a href="#description">DESCRIPTION</a></h1>
+<p>This function compares two strings case-sensitively.</p>
+<p>The <a href="strcmp">strcmp</a>() function compares the two strings <code>s1</code> and <code>s2</code>. The locale is not taken into account (for a locale-aware comparison, see <a href="/3/strcoll">strcoll</a>(3)). The comparison is done using unsigned characters.</p>
+<p><a href="strcmp">strcmp</a>() returns an integer indicating the result of the comparison, as follows:</p>
+<ul>
+<li>
+<p>0, if the <code>s1</code> and <code>s2</code> are equal;</p>
+</li>
+<li>
+<p>a negative value if <code>s1</code> is less than <code>s2</code>;</p>
+</li>
+<li>
+<p>a positive value if <code>s1</code> is greater than <code>s2</code>.</p>
+</li>
+</ul>
+<p>The <a href="strncmp">strncmp</a>() function is similar, except it compares only the first (at most) <code>n</code> bytes of <code>s1</code> and <code>s2</code>.</p>
+<h1><a href="#return-value">RETURN VALUE</a></h1>
+<p>This function returns</p>
+<ul>
+<li>an <code>int</code> less than <code>0</code> if <code>s1</code> comes before <code>s2</code>,</li>
+<li><code>0</code> if <code>s1</code> is the same as <code>s2</code>,</li>
+<li>an <code>int</code> greater than <code>0</code> if <code>s1</code> comes after <code>s2</code>.</li>
+</ul>
+<p>The strings are compared using “ASCIIbetical” order, based on the ASCII values of their characters. For instance, <code>&quot;AAA&quot;</code> would come before <code>&quot;BBB&quot;</code>, and <code>&quot;AAA&quot;</code> would also come before <code>&quot;aaa&quot;</code>.</p>
+<p>The <a href="strcmp">strcmp</a>() and <a href="strncmp">strncmp</a>() functions return an integer less than, equal to, or greater than zero if <code>s1</code> (or the first <code>n</code> bytes thereof) is found, respectively, to be less than, to match, or be greater than <code>s2</code>.</p>
+<h1><a href="#examples">EXAMPLES</a></h1>
+<pre><code>#include &lt;cs50.h&gt;#include &lt;stdio.h&gt;#include &lt;string.h&gt;
+int main(void)
+{
+    string s1 = get_string(&quot;s1: &quot;);
+    string s2 = get_string(&quot;s2: &quot;);
+    if (strcmp(s1, s2) == 0)
+    {
+        printf(&quot;Those are the same.\n&quot;);
+    }
+    else
+    {
+        printf(&quot;Those are different.\n&quot;);
+    }
+}
+</code></pre>
+<p>The program below can be used to demonstrate the operation of <a href="strcmp">strcmp</a>() (when given two arguments) and <a href="strncmp">strncmp</a>() (when given three arguments). First, some examples using <a href="strcmp">strcmp</a>():</p>
+<pre><code>$ ./string_comp ABC ABC
+&lt;str1&gt; and &lt;str2&gt; are equal
+$ ./string_comp ABC AB      # &#x27;C&#x27; is ASCII 67; &#x27;C&#x27; - &#x27; &#x27; = 67
+&lt;str1&gt; is greater than &lt;str2&gt; (67)
+$ ./string_comp ABA ABZ     # &#x27;A&#x27; is ASCII 65; &#x27;Z&#x27; is ASCII 90
+&lt;str1&gt; is less than &lt;str2&gt; (-25)
+$ ./string_comp ABJ ABC
+&lt;str1&gt; is greater than &lt;str2&gt; (7)
+$ ./string_comp $&#x27;\201&#x27; A   # 0201 - 0101 = 0100 (or 64 decimal)
+&lt;str1&gt; is greater than &lt;str2&gt; (64)
+</code></pre>
+<p>The last example uses <a href="/1/bash">bash</a>(1)-specific syntax to produce a string containing an 8-bit ASCII code; the result demonstrates that the string comparison uses unsigned characters.</p>
+<p>And then some examples using <a href="strncmp">strncmp</a>():</p>
+<pre><code>$ ./string_comp ABC AB 3
+&lt;str1&gt; is greater than &lt;str2&gt; (67)
+$ ./string_comp ABC AB 2
+&lt;str1&gt; and &lt;str2&gt; are equal in the first 2 bytes
+</code></pre>
+<h2>Program source</h2>
+<pre><code>/* string_comp.c
+
+   Licensed under GNU General Public License v2 or later.
+*/
+#include &lt;stdio.h&gt;
+#include &lt;stdlib.h&gt;
+#include &lt;string.h&gt;
+
+int
+main(int argc, char *argv[])
+{
+    int res;
+
+    if (argc &lt; 3) {
+        fprintf(stderr, &quot;Usage: %s &lt;str1&gt; &lt;str2&gt; [&lt;len&gt;]\n&quot;, argv[0]);
+        exit(EXIT_FAILURE);
+    }
+
+    if (argc == 3)
+        res = strcmp(argv[1], argv[2]);
+    else
+        res = strncmp(argv[1], argv[2], atoi(argv[3]));
+
+    if (res == 0) {
+        printf(&quot;&lt;str1&gt; and &lt;str2&gt; are equal&quot;);
+        if (argc &gt; 3)
+            printf(&quot; in the first %d bytes\n&quot;, atoi(argv[3]));
+        printf(&quot;\n&quot;);
+    } else if (res &lt; 0) {
+        printf(&quot;&lt;str1&gt; is less than &lt;str2&gt; (%d)\n&quot;, res);
+    } else {
+        printf(&quot;&lt;str1&gt; is greater than &lt;str2&gt; (%d)\n&quot;, res);
+    }
+
+    exit(EXIT_SUCCESS);
+}
+</code></pre>
+<h1><a href="#attributes">ATTRIBUTES</a></h1>
+<p>For an explanation of the terms used in this section, see <a href="/7/attributes">attributes</a>(7).</p>
+<p>Interface</p>
+<p>Attribute</p>
+<p>Value</p>
+<p><a href="strcmp">strcmp</a>(), <a href="strncmp">strncmp</a>()</p>
+<p>Thread safety</p>
+<p>MT-Safe</p>
+<h1><a href="#conforming-to">CONFORMING TO</a></h1>
+<p>POSIX.1-2001, POSIX.1-2008, C89, C99, SVr4, 4.3BSD.</p>
+<h1><a href="#notes">NOTES</a></h1>
+<p>POSIX.1 specifies only that:</p>
+<blockquote>
+<p>The sign of a nonzero return value shall be determined by the sign of the difference between the values of the first pair of bytes (both interpreted as type <code>unsigned char</code>) that differ in the strings being compared.</p>
+</blockquote>
+<p>In glibc, as in most other implementations, the return value is the arithmetic result of subtracting the last compared byte in <code>s2</code> from the last compared byte in <code>s1</code>. (If the two characters are equal, this difference is 0.)</p>
+<h1><a href="#see-also">SEE ALSO</a></h1>
+<p><a href="/3/bcmp">bcmp</a>(3), <a href="/3/memcmp">memcmp</a>(3), <a href="/3/strcasecmp">strcasecmp</a>(3), <a href="/3/strcoll">strcoll</a>(3), <a href="/3/string">string</a>(3), <a href="/3/strncasecmp">strncasecmp</a>(3), <a href="/3/strverscmp">strverscmp</a>(3), <a href="/3/wcscmp">wcscmp</a>(3), <a href="/3/wcsncmp">wcsncmp</a>(3), <a href="/7/ascii">ascii</a>(7)</p>
+<h1><a href="#colophon">COLOPHON</a></h1>
+<p>This page is part of release 5.10 of the Linux <code>man-pages</code> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</p>
+
+
+
+        </div>
+    </body>
+</html>

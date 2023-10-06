@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html">Este é o CS50x</a>
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x"
+        >O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1 <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2 <span class="semana-titulo">Vetores</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3 <span class="semana-titulo">Algoritmos</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4 <span class="semana-titulo">Memória</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6 <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7 <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9 <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10 <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+  <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html">Projeto Final</a>
+      </li>
+    </ul> -->
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          >Perguntas Frequentes</a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html">Equipe</a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html">Currículo do Curso</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/">Navegador SQLite</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/">Navegador PostgreSQL</a>
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"></a></p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Dinheiro</h1>
+<h2>Começando</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do seu terminal e, em seguida, execute <code>cd</code> sozinho. Você deve ver que o &quot;prompt&quot; é parecido com o abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal novamente e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/1/cash.zip
+</code></pre>
+<p>seguido de Enter para baixar um arquivo ZIP chamado <code>cash.zip</code> em sua área de trabalho. Certifique-se de não esquecer do espaço entre &quot;wget&quot; e a URL a seguir, ou qualquer outro caractere, por assim dizer!</p>
+<p>Agora execute</p>
+<pre><code>unzip cash.zip
+</code></pre>
+<p>para criar uma pasta chamada &quot;cash&quot;. Você não precisa mais do arquivo ZIP, então execute o seguinte comando para remover o arquivo:</p>
+<pre><code>rm cash.zip
+</code></pre>
+<p>e responda com &quot;y&quot; seguido de Enter para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd cash
+</code></pre>
+<p>seguido de Enter para se mover para dentro (abrir) desse diretório. O prompt deve exibir:</p>
+<pre><code>cash/ $
+</code></pre>
+<p>Se tudo estiver correto, execute</p>
+<pre><code>ls
+</code></pre>
+<p>e você deve ver um arquivo chamado <code>cash.c</code>. Executar <code>code cash.c</code> abrirá o arquivo onde você digitará seu código para este conjunto de problemas. Caso contrário, refaça seus passos e verifique se consegue determinar onde você errou!</p>
+<h2>Algoritmos gananciosos</h2>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/1/cash/coins.jpg" alt="US coins" /></p>
+<p>Ao fazer troco, é provável que você queira minimizar o número de moedas que está entregando para cada cliente, para não ficar sem moedas (ou incomodar o cliente!). Felizmente, a ciência da computação deu aos caixas de todo o mundo maneiras de minimizar o número de moedas: algoritmos gananciosos.</p>
+<p>De acordo com o Instituto Nacional de Padrões e Tecnologia (NIST), um algoritmo ganancioso é aquele &quot;que sempre toma a melhor solução imediata ou local enquanto encontra uma resposta. Algoritmos gananciosos encontram soluções ótimas globais ou globais para alguns problemas de otimização, mas podem encontrar soluções menos que ótimas para algumas instâncias de outros problemas&quot;.</p>
+<p>O que tudo isso significa? Bem, suponha que um caixa deve dar troco a um cliente e que na gaveta do caixa há moedas de vinte e cinco centavos (25¢), dez centavos (10¢), cinco centavos (5¢) e um centavo (1¢). O problema a ser resolvido é decidir quais moedas e quantas de cada uma entregar ao cliente. Pense em um caixa &quot;ganancioso&quot; como aquele que quer tirar o maior pedaço possível desse problema com cada moeda que ele tira da gaveta. Por exemplo, se um cliente deve R$0,41, a maior &quot;mordida&quot; (ou solução imediata ou local) que pode ser tomada é de R$0,25. (Essa mordida é a &quot;melhor&quot; porque nos aproxima de R$0 mais rapidamente do que qualquer outra moeda.) Observe que uma mordida desse tamanho reduziria o problema de R$0,41 para R$0,16, já que 41 - 25 = 16. Ou seja, o restante é um problema semelhante, mas menor. Não é preciso dizer que outra mordida de R$0,25 seria muito grande (supondo que o caixa prefira não perder dinheiro), então o caixa ganancioso passaria para uma mordida de tamanho 10 centavos, deixando-o com um problema de 6 centavos. Nesse ponto, a ganância exige uma mordida de 5 centavos, seguida por uma mordida de 1 centavo, momento em que o problema é resolvido. O cliente recebe uma moeda de vinte e cinco centavos, uma de dez centavos, uma de cinco centavos e uma de um centavo: quatro moedas no total.</p>
+<p>Acontece que essa abordagem gananciosa (ou seja, algoritmo) não é apenas localmente ótima, mas também globalmente ótima para a moeda americana (e também para a União Europeia). Ou seja, desde que um caixa tenha o suficiente de cada moeda, essa abordagem de maior a menor resultará nas menos moedas possíveis. Quantas vezes? Bem, você nos diz!</p>
+<h2>Detalhes da Implementação</h2>
+<p>Em <code>cash.c</code>, nós implementamos a maior parte (mas não toda!) de um programa que solicita ao usuário a quantidade de centavos que um cliente deve e depois imprime o menor número de moedas com as quais a mudança pode ser feita. De fato, <code>main</code> já está implementado para você. Mas observe como <code>main</code> chama várias funções que ainda não estão implementadas! Uma dessas funções, <code>get_cents</code>, não recebe argumentos (como indicado por <code>void</code>) e retorna um <code>int</code>. O restante das funções também recebe um argumento, um <code>int</code>, e também retorna um <code>int</code>. Todos eles atualmente retornam <code>0</code> para que o código compile. Mas você vai querer substituir todos os <code>TODO</code> e <code>return 0;</code> pelo seu próprio código. Especificamente, conclua a implementação dessas funções da seguinte forma:</p>
+<ul>
+<li>Implemente <code>get_cents</code> de tal forma que a função solicite ao usuário um número de centavos usando <code>get_int</code> e então retorne esse número como um <code>int</code>. Se o usuário inserir um <code>int</code> negativo, o seu código deve solicitar ao usuário que insira novamente. (Mas você não precisa se preocupar com o usuário inserindo, por exemplo, uma <code>string</code>, já que <code>get_int</code> cuidará disso para você). Provavelmente, você encontrará um loop <code>do while</code>, como em <a href="https://cdn.cs50.net/2022/fall/lectures/1/src1/mario8.c?highlight"><code>mario.c</code></a>, útil!</li>
+<li>Implemente <code>calculate_quarters</code> de tal forma que a função calcule (e retorne como um <code>int</code>) quantos trimestres um cliente deve receber se ele receber alguns centavos. Por exemplo, se <code>cents</code> for <code>25</code>, então <code>calculate_quarters</code> deve retornar <code>1</code>. Se <code>cents</code> for <code>26</code> ou <code>49</code> (ou qualquer coisa entre eles), então <code>calculate_quarters</code> também deve retornar <code>1</code>. Se <code>cents</code> for <code>50</code> ou <code>74</code> (ou qualquer coisa entre eles), então <code>calculate_quarters</code> deve retornar <code>2</code>. E assim por diante.</li>
+<li>Implemente <code>calculate_dimes</code> de tal forma que a função calcule o mesmo para moedas de dez centavos.</li>
+<li>Implemente <code>calculate_nickels</code> de tal forma que a função calcule o mesmo para moedas de cinco centavos.</li>
+<li>Implemente <code>calculate_pennies</code> de tal forma que a função calcule o mesmo para moedas de um centavo.</li>
+</ul>
+<p>Observe que, ao contrário de funções que possuem apenas efeitos colaterais, as funções que retornam um valor devem fazê-lo explicitamente com <code>return</code>! Tome cuidado para não modificar o código de distribuição em si, apenas substitua os <code>TODO</code>s e o valor <code>return</code> subsequente! Observe também que, recordando a ideia de abstração, cada uma de suas funções de cálculo deve aceitar qualquer valor de <code>cents</code>, não apenas aqueles valores que o algoritmo ávido pode sugerir. Se <code>cents</code> for 85, por exemplo, <code>calculate_dimes</code> deve retornar 8.</p>
+<details><summary>Dica</summary><ul>
+  <li data-marker="*">Lembre-se de que existem vários programas de exemplo no <a href="https://cdn.cs50.net/2022/fall/lectures/1/src1/">código-fonte</a> da Semana 1, que ilustram como as funções podem retornar um valor.</li>
+</ul></details>
+<p>Seu programa deve se comportar conforme os exemplos abaixo.</p>
+<pre><code>$ ./cash
+O valor do troco é: 41
+4
+</code></pre>
+<pre><code>$ ./cash
+O valor do troco é: -41
+O valor do troco é: foo
+O valor do troco é: 41
+4
+</code></pre>
+<h3>Como Testar Seu Código</h3>
+<p>Para este programa, tente testar seu código manualmente, é uma boa prática:</p>
+<ul>
+<li>Se você inserir <code>-1</code>, o seu programa solicita que você insira novamente?</li>
+<li>Se você inserir <code>0</code>, o seu programa exibe <code>0</code>?</li>
+<li>Se você inserir <code>1</code>, o seu programa exibe <code>1</code> (ou seja, uma moeda de um centavo)?</li>
+<li>Se você inserir <code>4</code>, o seu programa exibe <code>4</code> (ou seja, quatro moedas de um centavo)?</li>
+<li>Se você inserir <code>5</code>, o seu programa exibe <code>1</code> (ou seja, uma moeda de cinco centavos)?</li>
+<li>Se você inserir <code>24</code>, o seu programa exibe <code>6</code> (ou seja, duas moedas de dez centavos e quatro moedas de um centavo)?</li>
+<li>Se você inserir <code>25</code>, o seu programa exibe <code>1</code> (ou seja, uma moeda de vinte e cinco centavos)?</li>
+<li>Se você inserir <code>26</code>, o seu programa exibe <code>2</code> (ou seja, uma moeda de vinte e cinco centavos e uma moeda de um centavo)?</li>
+<li>Se você inserir <code>99</code>, o seu programa exibe <code>9</code> (ou seja, três moedas de vinte e cinco centavos, duas moedas de dez centavos e quatro moedas de um centavo)?</li>
+</ul>
+<p>Você também pode executar o comando abaixo para avaliar a precisão do seu código usando <code>check50</code>. Mas lembre-se de compilar e testá-lo sozinho também!</p>
+<pre><code>check50 cs50/problems/2023/x/cash
+</code></pre>
+<details><summary>O <code>check50</code> não está compilando o seu código corretamente?</summary><p>Certifique-se de ter modificado apenas as partes do programa marcadas como <code class="language-plaintext highlighter-rouge">TODO</code>. Se você modificar a função <code class="language-plaintext highlighter-rouge">main</code> ou adicionar quaisquer variáveis globais, por exemplo, seu código pode <strong>não ser compilado</strong>. O `check50testará` suas cinco funções independentemente, para além de verificar apenas a resposta final.</p></details>
+<p>E execute o comando abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 cash.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>No terminal, execute o comando abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/cash
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

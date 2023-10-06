@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html">Este é o CS50x</a>
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x"
+        >O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1 <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2 <span class="semana-titulo">Vetores</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3 <span class="semana-titulo">Algoritmos</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4 <span class="semana-titulo">Memória</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6 <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7 <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9 <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10 <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+  <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html">Projeto Final</a>
+      </li>
+    </ul> -->
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          >Perguntas Frequentes</a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html">Equipe</a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html">Currículo do Curso</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/">Navegador SQLite</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/">Navegador PostgreSQL</a>
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"></a></p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Substituição</h1>
+<p>Para este problema, você escreverá um programa que implementa uma cifra de substituição, conforme abaixo.</p>
+<pre><code>$ ./substitution JTREKYAVOGDXPSNCUIZLFBMWHQ
+plaintext:  HELLO
+ciphertext: VKXXN
+</code></pre>
+<h2>Primeiros passos</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do seu terminal e, em seguida, execute <code>cd</code> sozinho. Você deve encontrar que sua “prompt” se parece com a abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/2/substitution.zip
+</code></pre>
+<p>seguido por Enter para baixar um arquivo ZIP chamado <code>substitution.zip</code> em seu espaço de códigos. Não se esqueça de não deixar um espaço em branco entre <code>wget</code> e a URL seguinte, ou qualquer outro caractere, na verdade!</p>
+<p>Agora execute</p>
+<pre><code>unzip substitution.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>substitution</code>. Não é mais necessário manter o arquivo ZIP, portanto, execute</p>
+<pre><code>rm substitution.zip
+</code></pre>
+<p>e responda &quot;y&quot; seguido por Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Digite agora</p>
+<pre><code>cd substitution
+</code></pre>
+<p>seguido por Enter para mover-se para dentro (ou seja, abrir) aquele diretório. Sua &quot;prompt&quot; agora deve parecer com a abaixo.</p>
+<pre><code>substitution/ $
+</code></pre>
+<p>Se tudo correu bem, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e visualizar um arquivo chamado <code>substitution.c</code>. Executando <code>code substitution.c</code> abrirá o arquivo onde você digitá seu código para este conjunto de problemas. Caso contrário, reveja seus passos e tente determinar onde você errou!</p>
+<h2>Contexto</h2>
+<p>Em uma cifra de substituição, “codificamos” (ou seja, ocultamos de forma reversível) uma mensagem substituindo cada letra por outra letra. Para isso, usamos uma <em>chave</em>: neste caso, um mapeamento de cada uma das letras do alfabeto para a letra à qual ela deve corresponder quando a codificamos. Para “decodificar” a mensagem, o receptor da mensagem precisaria conhecer a chave, para poder reverter o processo: traduzindo o texto codificado (geralmente chamado de <em>ciphertext</em>) de volta para a mensagem original (geralmente chamada de <em>plaintext</em>).</p>
+<p>Uma chave, por exemplo, pode ser a string <code>NQXPOMAFTRHLZGECYJIUWSKDVB</code>. Esta chave de 26 caracteres significa que <code>A</code> (a primeira letra do alfabeto) deve ser convertida em <code>N</code> (o primeiro caractere da chave), <code>B</code> (a segunda letra do alfabeto) deve ser convertida em <code>Q</code> (o segundo caractere da chave), e assim por diante.</p>
+<p>Uma mensagem como <code>HELLO</code>, então, seria codificada como <code>FOLLE</code>, substituindo cada uma das letras de acordo com o mapeamento determinado pela chave.</p>
+<p>Vamos escrever um programa chamado <code>substitution</code> que permite que você criptografe mensagens usando uma cifra de substituição. Na ocasião em que o usuário executa o programa, ele deve decidir, fornecendo um argumento de linha de comando, qual deve ser a chave da mensagem secreta que eles fornecerão durante a execução.</p>
+<p>Aqui estão alguns exemplos de como o programa pode funcionar. Por exemplo, se o usuário inserir uma chave <code>YTNSHKVEFXRBAUQZCLWDMIPGJO</code> e um plaintext <code>HELLO</code>:</p>
+<pre><code>$ ./substitution YTNSHKVEFXRBAUQZCLWDMIPGJO
+plaintext:  HELLO
+ciphertext: EHBBQ
+</code></pre>
+<p>Aqui está como o programa poderia funcionar se o usuário fornecer uma chave <code>VCHPRZGJNTLSKFBDQWAXEUYMOI</code> e um plaintext <code>hello, world</code>:</p>
+<pre><code>$ ./substitution VCHPRZGJNTLSKFBDQWAXEUYMOI
+plaintext:  hello, world
+ciphertext: jrssb, ybwsp
+</code></pre>
+<p>Observe que nem a vírgula nem o espaço foram substituídos pela cifra. Substitua apenas os caracteres alfabéticos! Observe também que o caso da mensagem original foi preservado. Letras minúsculas permanecem minúsculas, e letras maiúsculas permanecem maiúsculas.</p>
+<p>Não importa se os caracteres da própria chave são em letras maiúsculas ou minúsculas. Uma chave de <code>VCHPRZGJNTLSKFBDQWAXEUYMOI</code> é funcionalmente idêntica a uma chave de <code>vchprzgjntlskfbdqwaxeuymoi</code> (como também é <code>VcHpRzGjNtLsKfBdQwAxEuYmOi</code>).</p>
+<p>E se um usuário não fornecer uma chave válida? O programa deve explicar com uma mensagem de erro:</p>
+<pre><code>$ ./substitution ABC
+A chave deve conter 26 caracteres.
+</code></pre>
+<p>Ou realmente não coopera, não fornecendo um argumento de linha de comando? O programa deve lembrar o usuário de como usar o programa:</p>
+<pre><code>$ ./substitution
+Uso: ./substitution chave
+</code></pre>
+<p>Ou realmente, realmente não coopera, fornecendo muitos argumentos de linha de comando? O programa também deve lembrar o usuário de como usar o programa:</p>
+<pre><code>$ ./substitution 1 2 3
+Uso: ./substitution chave
+</code></pre>
+<details><summary>Assista a uma gravação</summary><script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-HWzT4fngSv4KtdNFgfgpdLxZY" src="https://asciinema.org/a/HWzT4fngSv4KtdNFgfgpdLxZY.js"></script></details>
+<h2>Especificação</h2>
+<p>Projete e implemente um programa denominado <code>substitution</code> que criptografa mensagens usando uma cifra de substituição.</p>
+<ul>
+<li>Implemente seu programa em um arquivo chamado <code>substitution.c</code> em um diretório chamado <code>substitution</code>.</li>
+<li>Seu programa deve aceitar um único argumento de linha de comando, a chave a ser usada para a substituição. A própria chave deve ser insensível a maiúsculas e minúsculas, portanto, se qualquer caractere na chave for maiúsculo ou minúsculo, não deve afetar o comportamento do seu programa.</li>
+<li>Se o seu programa for executado sem argumentos da linha de comando ou com mais de um argumento da linha de comando, seu programa deve imprimir uma mensagem de erro de sua escolha (com <code>printf</code>) e retornar de <code>main</code> um valor imediatamente igual a<code> 1</code> (que tende a significar um erro).</li>
+<li>Se a chave for inválida (por não conter 26 caracteres, conter qualquer caractere que não seja um caractere alfabético ou não conter cada letra exatamente uma vez), seu programa deve imprimir uma mensagem de erro de sua escolha (com <code>printf</code>) e retornar de <code>main</code> um valor imediatamente igual a <code>1</code>.</li>
+<li>Seu programa deve imprimir <code>plaintext:</code> (sem uma nova linha) e depois solicitar ao usuário uma <code>string</code> de texto simples (usando <code>get_string</code>).</li>
+<li>Seu programa deve imprimir <code>ciphertext:</code> (sem uma nova linha) seguido pelo criptograma correspondente do texto simples, com cada caractere alfabético do texto simples substituído pelo caractere correspondente no criptograma; caracteres não alfabéticos devem ser impressos sem alterações.</li>
+<li>Seu programa deve preservar maiúsculas e minúsculas: letras maiúsculas devem permanecer letras maiúsculas; letras minúsculas devem permanecer letras minúsculas.</li>
+<li>Depois de imprimir o criptograma, você deve imprimir uma nova linha. Seu programa deve, em seguida, sair retornando <code>0</code> de <code>main</code>.</li>
+</ul>
+<p>Você pode encontrar uma ou mais funções declaradas em <code>ctype.h</code> que podem ser úteis, de acordo com <a href="https://manual.cs50.io/">manual.cs50.io</a>.</p>
+<h2>Passo a Passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="acelerômetro, autoplay, tela cheia, gyroscope, picture-in-picture" allowfullscreen="" class="border" src="https://www.youtube.com/embed/cXAoZAsgxJ4?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<h2>Como Testar o Código</h2>
+<p>Execute o comando abaixo para avaliar a correção do seu código usando o <code>check50</code>. Mas, certifique-se de compilar e testar você mesmo também!</p>
+<pre><code>check50 cs50/problems/2023/x/substitution
+</code></pre>
+<p>Execute o comando abaixo para avaliar o estilo do seu código usando o <code>style50</code>.</p>
+<pre><code>style50 substitution.c
+</code></pre>
+<details><summary>Como usar o <code>debug50</code></summary><p>Deseja rodar o <code class="language-plaintext highlighter-rouge">debug50</code>? Você pode fazer isso da seguinte forma, após compilar com sucesso o seu código com o <code class="language-plaintext highlighter-rouge">make</code>,</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>debug50 ./substitution KEY
+</code></pre></div></div>
+<p>onde <code class="language-plaintext highlighter-rouge">KEY</code> é a chave que você dá como argumento de linha de comando para o seu programa. Note que rodar</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>debug50 ./substitution
+</code></pre></div></div>
+<p>vai fazer com que seu programa seja finalizado, idealmente, solicitando ao usuário uma chave.</p></details>
+<h2>Como Enviar</h2>
+<p>No seu terminal, execute o comando abaixo para enviar o seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/substitution&quot;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

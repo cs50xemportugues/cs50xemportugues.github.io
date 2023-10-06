@@ -1,0 +1,345 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+        <link href="/static/49a1a858-favicon-32x32.png" rel="icon" type="image/png">
+
+        <script>
+            window.FontAwesomeConfig = { autoReplaceSvg: false };
+        </script>
+
+        <link href="/static/dist/main.css?1694737498" rel="stylesheet">
+        <script src="/static/dist/main.js?1694737498"></script>
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="/static/css/main.css"
+    />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/rouge.css"
+        />
+        <script src="/static/js/main.js"></script>
+        <script>
+
+            
+
+    $(function() {
+
+        // Hide less-comfortable descriptions
+        $('[data-less]').addClass('d-none');
+
+        // Listen for checkbox
+        $('#filter').on('change', function() {
+            if ($('#filter').is(':checked')) {
+                $('[data-less]').removeClass('d-none');
+                $('[data-more]').addClass('d-none');
+            }
+            else {
+                $('[data-more]').removeClass('d-none');
+                $('[data-less]').addClass('d-none');
+            }
+            filter();
+        }).trigger('change');
+
+        // Listen for searches
+        $('#q').on('change keyup', function() {
+            filter();
+        });
+        $('#q').closest('form').on('submit', function(e) {
+            e.preventDefault();
+        });
+
+        // Filter results
+        filter();
+
+        // Unless user's followed a link to a heading, filter index
+        if (window.location.hash) {
+            $('#filter').prop('checked', false).trigger('change');
+        }
+
+        // Give focus to search (after body is visible)
+        else {
+            $(function() {
+                $('#q').focus();
+            });
+        }
+    });
+
+    function filter() {
+        let q = $('#q').val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === '') {
+            q = [];
+        }
+        $('h1').each(function(index, element) {
+            const $h1 = $(element);
+            const header = $h1.val();
+            const $ul = $h1.next('ul');
+            $ul.children('li').each(function(index, element) {
+                const $li = $(element);
+                if ($('#filter').prop('checked') && $li.attr('data-filter') === undefined) {
+                    $li.addClass('filtered');
+                }
+                else {
+                    $li.removeClass('filtered');
+                }
+                const haystack = $h1.text() + $li.text().trim();
+                let matches = q.filter(function(s) {
+                    return haystack.match(new RegExp(s, 'i')) !== null;
+                });
+                if (matches.length === q.length) {
+                    $li.removeClass('mismatched');
+                }
+                else {
+                    $li.addClass('mismatched');
+                }
+            });
+            if ($ul.children('li:not(.filtered, .mismatched)').length > 0) {
+                $h1.removeClass('d-none');
+                $ul.removeClass('d-none');
+            }
+            else {
+                $h1.addClass('d-none');
+                $ul.addClass('d-none');
+            }
+        });
+    };
+
+
+
+        </script>
+
+        <script>
+
+            $(function() {
+
+                // Add borders to tables
+                $('.table').addClass('table-bordered');
+
+                // Enable popovers
+                $('[data-bs-toggle="popover"]').each(function(index, element) {
+                    new bootstrap.Popover(element, {
+                        boundary: 'viewport',
+                        html: true,
+                        placement: 'bottom',
+                        trigger: 'focus'
+                    });
+                });
+
+                // Ensure all elements are styled the same
+                $('h1').addClass('border-bottom fw-bold h2 mb-3 pb-2 pt-4');
+                $('h2').addClass('fw-bold h3');
+
+                // Ensure last heading can be anchored atop page
+                $(window).resize(function() {
+                    const top = $('h1').last().offset().top;
+                    const margin = $(window).height() - ($('body').outerHeight() - top);
+                    $('body').css('margin-bottom', Math.max(0, Math.ceil(margin)) + 'px');
+                });
+                $(window).trigger('resize');
+
+                // Reveal body
+                $('body').removeClass('invisible');
+            });
+
+        </script>
+
+        <style>
+
+            /* Style popovers */
+            .popover {
+                font-family: inherit;
+                max-width: 100%;
+            }
+
+            /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+            but not in buttons and not in tables, which should instead scroll horizontally */
+            * {
+                word-break: break-word;
+            }
+            button, table * {
+                word-break: normal;
+            }
+
+            /* Remove underlining */
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            nav a:hover {
+                text-decoration: none;
+            }
+
+            /* Match Gmail's yellow */
+            a[data-bs-toggle=popover] {
+                border-bottom: 2px solid rgb(252, 237, 193);
+                box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+                cursor: help;
+            }
+            a[data-bs-toggle=popover]:hover {
+                background-color: rgb(252, 237, 193);
+            }
+
+            /* Match pre tags */
+            code {
+                color: inherit;
+            }
+
+            /* A la Jekyll theme */
+            code, pre {
+                background-color: #f8f9fa;
+                border: 1px solid #dee2e6;
+                padding: calc(.2rem - 3px) 0.2rem;
+            }
+            pre code {
+                background-color: initial;
+                border: initial;
+                padding: initial;
+            }
+
+            /* Don't shrink these */
+            code, pre {
+                font-size: inherit;
+            }
+
+            /* Don't italicize */
+            dl dt {
+                font-style: normal;
+            }
+
+            /* Don't fill viewport */
+            .table {
+                width: inherit;
+            }
+
+        </style>
+
+        <style>
+
+            
+
+    /* Don't display */
+    .filtered, .mismatched {
+        display: none;
+    }
+
+    /* No bullets */
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    pre {
+        padding: 20px;
+    }
+
+        </style>
+
+        <title>CS50 Manual do Programador</title>
+
+    </head>
+
+    <body class="font-monospace invisible pb-5">
+
+        <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+            <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+        </nav>
+
+        <div class="container-fluid mt-2 px-4">
+            
+
+<h1><a href="#name">NAME</a></h1>
+<p>srandom - seed pseudorandom number generation</p>
+<p>random, srandom, initstate, setstate - random number generator</p>
+<h1><a href="#synopsis">SYNOPSIS</a></h1>
+<h2>Header File</h2>
+<pre><code>#define _DEFAULT_SOURCE#include &lt;stdlib.h&gt;
+</code></pre>
+<h2>Prototype</h2>
+<pre><code>void srandom(unsigned int seed);
+</code></pre>
+<p>An <code>unsigned int</code> must be non-negative.</p>
+<p>Defining <code>_DEFAULT_SOURCE</code> in this way enables <a href="srandom">srandom</a> within <code>stdlib.h</code>.</p>
+<pre><code>#include &lt;stdlib.h&gt;
+
+long random(void);
+
+void srandom(unsigned seed);
+
+char *initstate(unsigned seed, char *state, size_t n);
+
+char *setstate(char *state);
+</code></pre>
+<blockquote>
+<p>Feature Test Macro Requirements for glibc (see <a href="/7/feature_test_macros">feature_test_macros</a>(7)):</p>
+</blockquote>
+<p><a href="random">random</a>(), <a href="srandom">srandom</a>(), <a href="initstate">initstate</a>(), <a href="setstate">setstate</a>():</p>
+<blockquote>
+<p>_XOPEN_SOURCE &gt;= 500 || /* Glibc since 2.19: */ _DEFAULT_SOURCE || /* Glibc versions &lt;= 2.19: */ _SVID_SOURCE || _BSD_SOURCE</p>
+</blockquote>
+<h1><a href="#description">DESCRIPTION</a></h1>
+<p>This function alters the sequence of pseudorandom numbers generated by <a href="random">random</a>. It should be called (once) before making any calls to <a href="random">random</a>. In other words, if you first call <a href="srandom">srandom</a> with a <code>seed</code> of <code>1</code>, subsequent calls to <a href="random">random</a> will return different values than if you first call <a href="srandom">srandom</a> with a <code>seed</code> of <code>2</code>.</p>
+<p>Rather than hardcode a value for <code>seed</code>, it is common to pass the return value of <a href="/2/time">time</a> (which changes every second) to <a href="srandom">srandom</a>.</p>
+<p>The <a href="random">random</a>() function uses a nonlinear additive feedback random number generator employing a default table of size 31 long integers to return successive pseudo-random numbers in the range from 0 to 2^31 - 1. The period of this random number generator is very large, approximately <code>16 * ((2^31) - 1)</code>.</p>
+<p>The <a href="srandom">srandom</a>() function sets its argument as the seed for a new sequence of pseudo-random integers to be returned by <a href="random">random</a>(). These sequences are repeatable by calling <a href="srandom">srandom</a>() with the same seed value. If no seed value is provided, the <a href="random">random</a>() function is automatically seeded with a value of 1.</p>
+<p>The <a href="initstate">initstate</a>() function allows a state array <code>state</code> to be initialized for use by <a href="random">random</a>(). The size of the state array <code>n</code> is used by <a href="initstate">initstate</a>() to decide how sophisticated a random number generator it should use—the larger the state array, the better the random numbers will be. Current &quot;optimal&quot; values for the size of the state array <code>n</code> are 8, 32, 64, 128, and 256 bytes; other amounts will be rounded down to the nearest known amount. Using less than 8 bytes results in an error. <code>seed</code> is the seed for the initialization, which specifies a starting point for the random number sequence, and provides for restarting at the same point.</p>
+<p>The <a href="setstate">setstate</a>() function changes the state array used by the <a href="random">random</a>() function. The state array <code>state</code> is used for random number generation until the next call to <a href="initstate">initstate</a>() or <a href="setstate">setstate</a>(). <code>state</code> must first have been initialized using <a href="initstate">initstate</a>() or be the result of a previous call of <a href="setstate">setstate</a>().</p>
+<h1><a href="#return-value">RETURN VALUE</a></h1>
+<p>This function does not return a value.</p>
+<p>The <a href="random">random</a>() function returns a value between 0 and <code>(2^31) - 1</code>. The <a href="srandom">srandom</a>() function returns no value.</p>
+<p>The <a href="initstate">initstate</a>() function returns a pointer to the previous state array. On error, <code>errno</code> is set to indicate the cause.</p>
+<p>On success, <a href="setstate">setstate</a>() returns a pointer to the previous state array. On error, it returns NULL, with <code>errno</code> set to indicate the cause of the error.</p>
+<h1><a href="#example">EXAMPLE</a></h1>
+<pre><code>#define _DEFAULT_SOURCE#include &lt;stdlib.h&gt;
+#include &lt;stdio.h&gt;#include &lt;time.h&gt;
+int main(void)
+{
+    srandom(time(NULL));
+    printf(&quot;%lu\n&quot;, random());
+    printf(&quot;%lu\n&quot;, random());
+    printf(&quot;%lu\n&quot;, random());
+}
+</code></pre>
+<p>Calling <code>time</code> with an input of <code>NULL</code>, a constant defined in <code>stdlib.h</code>, returns the current time in seconds.</p>
+<h1><a href="#errors">ERRORS</a></h1>
+<p><strong>EINVAL</strong></p>
+<p>The <code>state</code> argument given to <a href="setstate">setstate</a>() was NULL.</p>
+<p><strong>EINVAL</strong></p>
+<p>A state array of less than 8 bytes was specified to <a href="initstate">initstate</a>().</p>
+<h1><a href="#attributes">ATTRIBUTES</a></h1>
+<p>For an explanation of the terms used in this section, see <a href="/7/attributes">attributes</a>(7).</p>
+<p>Interface</p>
+<p>Attribute</p>
+<p>Value</p>
+<p><a href="random">random</a>(), <a href="srandom">srandom</a>(),<br />
+<a href="initstate">initstate</a>(), <a href="setstate">setstate</a>()</p>
+<p>Thread safety</p>
+<p>MT-Safe</p>
+<h1><a href="#conforming-to">CONFORMING TO</a></h1>
+<p>POSIX.1-2001, POSIX.1-2008, 4.3BSD.</p>
+<h1><a href="#notes">NOTES</a></h1>
+<p>The <a href="random">random</a>() function should not be used in multithreaded programs where reproducible behavior is required. Use <a href="/3/random_r">random_r</a>(3) for that purpose.</p>
+<p>Random-number generation is a complex topic. <em>Numerical Recipes in C: The Art of Scientific Computing</em> (William H. Press, Brian P. Flannery, Saul A. Teukolsky, William T. Vetterling; New York: Cambridge University Press, 2007, 3rd ed.) provides an excellent discussion of practical random-number generation issues in Chapter 7 (Random Numbers).</p>
+<p>For a more theoretical discussion which also covers many practical issues in depth, see Chapter 3 (Random Numbers) in Donald E. Knuth's <code>The Art of Computer Programming</code>, volume 2 (Seminumerical Algorithms), 2nd ed.; Reading, Massachusetts: Addison-Wesley Publishing Company, 1981.</p>
+<h1><a href="#bugs">BUGS</a></h1>
+<p>According to POSIX, <a href="initstate">initstate</a>() should return NULL on error. In the glibc implementation, <code>errno</code> is (as specified) set on error, but the function does not return NULL.</p>
+<h1><a href="#see-also">SEE ALSO</a></h1>
+<p><a href="/2/getrandom">getrandom</a>(2), <a href="/3/drand48">drand48</a>(3), <a href="/3/rand">rand</a>(3), <a href="/3/random_r">random_r</a>(3), <a href="/3/srand">srand</a>(3)</p>
+<h1><a href="#colophon">COLOPHON</a></h1>
+<p>This page is part of release 5.10 of the Linux <code>man-pages</code> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</p>
+
+
+
+        </div>
+    </body>
+</html>

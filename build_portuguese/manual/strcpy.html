@@ -1,0 +1,352 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+        <link href="/static/49a1a858-favicon-32x32.png" rel="icon" type="image/png">
+
+        <script>
+            window.FontAwesomeConfig = { autoReplaceSvg: false };
+        </script>
+
+        <link href="/static/dist/main.css?1694737498" rel="stylesheet">
+        <script src="/static/dist/main.js?1694737498"></script>
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="/static/css/main.css"
+    />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/rouge.css"
+        />
+        <script src="/static/js/main.js"></script>
+        <script>
+
+            
+
+    $(function() {
+
+        // Hide less-comfortable descriptions
+        $('[data-less]').addClass('d-none');
+
+        // Listen for checkbox
+        $('#filter').on('change', function() {
+            if ($('#filter').is(':checked')) {
+                $('[data-less]').removeClass('d-none');
+                $('[data-more]').addClass('d-none');
+            }
+            else {
+                $('[data-more]').removeClass('d-none');
+                $('[data-less]').addClass('d-none');
+            }
+            filter();
+        }).trigger('change');
+
+        // Listen for searches
+        $('#q').on('change keyup', function() {
+            filter();
+        });
+        $('#q').closest('form').on('submit', function(e) {
+            e.preventDefault();
+        });
+
+        // Filter results
+        filter();
+
+        // Unless user's followed a link to a heading, filter index
+        if (window.location.hash) {
+            $('#filter').prop('checked', false).trigger('change');
+        }
+
+        // Give focus to search (after body is visible)
+        else {
+            $(function() {
+                $('#q').focus();
+            });
+        }
+    });
+
+    function filter() {
+        let q = $('#q').val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === '') {
+            q = [];
+        }
+        $('h1').each(function(index, element) {
+            const $h1 = $(element);
+            const header = $h1.val();
+            const $ul = $h1.next('ul');
+            $ul.children('li').each(function(index, element) {
+                const $li = $(element);
+                if ($('#filter').prop('checked') && $li.attr('data-filter') === undefined) {
+                    $li.addClass('filtered');
+                }
+                else {
+                    $li.removeClass('filtered');
+                }
+                const haystack = $h1.text() + $li.text().trim();
+                let matches = q.filter(function(s) {
+                    return haystack.match(new RegExp(s, 'i')) !== null;
+                });
+                if (matches.length === q.length) {
+                    $li.removeClass('mismatched');
+                }
+                else {
+                    $li.addClass('mismatched');
+                }
+            });
+            if ($ul.children('li:not(.filtered, .mismatched)').length > 0) {
+                $h1.removeClass('d-none');
+                $ul.removeClass('d-none');
+            }
+            else {
+                $h1.addClass('d-none');
+                $ul.addClass('d-none');
+            }
+        });
+    };
+
+
+
+        </script>
+
+        <script>
+
+            $(function() {
+
+                // Add borders to tables
+                $('.table').addClass('table-bordered');
+
+                // Enable popovers
+                $('[data-bs-toggle="popover"]').each(function(index, element) {
+                    new bootstrap.Popover(element, {
+                        boundary: 'viewport',
+                        html: true,
+                        placement: 'bottom',
+                        trigger: 'focus'
+                    });
+                });
+
+                // Ensure all elements are styled the same
+                $('h1').addClass('border-bottom fw-bold h2 mb-3 pb-2 pt-4');
+                $('h2').addClass('fw-bold h3');
+
+                // Ensure last heading can be anchored atop page
+                $(window).resize(function() {
+                    const top = $('h1').last().offset().top;
+                    const margin = $(window).height() - ($('body').outerHeight() - top);
+                    $('body').css('margin-bottom', Math.max(0, Math.ceil(margin)) + 'px');
+                });
+                $(window).trigger('resize');
+
+                // Reveal body
+                $('body').removeClass('invisible');
+            });
+
+        </script>
+
+        <style>
+
+            /* Style popovers */
+            .popover {
+                font-family: inherit;
+                max-width: 100%;
+            }
+
+            /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+            but not in buttons and not in tables, which should instead scroll horizontally */
+            * {
+                word-break: break-word;
+            }
+            button, table * {
+                word-break: normal;
+            }
+
+            /* Remove underlining */
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            nav a:hover {
+                text-decoration: none;
+            }
+
+            /* Match Gmail's yellow */
+            a[data-bs-toggle=popover] {
+                border-bottom: 2px solid rgb(252, 237, 193);
+                box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+                cursor: help;
+            }
+            a[data-bs-toggle=popover]:hover {
+                background-color: rgb(252, 237, 193);
+            }
+
+            /* Match pre tags */
+            code {
+                color: inherit;
+            }
+
+            /* A la Jekyll theme */
+            code, pre {
+                background-color: #f8f9fa;
+                border: 1px solid #dee2e6;
+                padding: calc(.2rem - 3px) 0.2rem;
+            }
+            pre code {
+                background-color: initial;
+                border: initial;
+                padding: initial;
+            }
+
+            /* Don't shrink these */
+            code, pre {
+                font-size: inherit;
+            }
+
+            /* Don't italicize */
+            dl dt {
+                font-style: normal;
+            }
+
+            /* Don't fill viewport */
+            .table {
+                width: inherit;
+            }
+
+        </style>
+
+        <style>
+
+            
+
+    /* Don't display */
+    .filtered, .mismatched {
+        display: none;
+    }
+
+    /* No bullets */
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    pre {
+        padding: 20px;
+    }
+
+        </style>
+
+        <title>CS50 Manual do Programador</title>
+
+    </head>
+
+    <body class="font-monospace invisible pb-5">
+
+        <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+            <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+        </nav>
+
+        <div class="container-fluid mt-2 px-4">
+            
+
+<h1><a href="#name">NAME</a></h1>
+<p>strcpy - copy a string</p>
+<p>strcpy, strncpy - copy a string</p>
+<h1><a href="#synopsis">SYNOPSIS</a></h1>
+<h2>Header File</h2>
+<pre><code>#include &lt;string.h&gt;
+</code></pre>
+<h2>Prototype</h2>
+<pre><code>char *strcpy(char *dest, char *src);
+
+
+#include &lt;string.h&gt;
+
+char *strcpy(char *dest, const char *src);
+
+char *strncpy(char *dest, const char *src, size_t n);
+</code></pre>
+<h1><a href="#description">DESCRIPTION</a></h1>
+<p>This function copies the string at <code>src</code>, including its terminating <code>&#x27;\0&#x27;</code>, to the memory at <code>dest</code>.</p>
+<p>The <a href="strcpy">strcpy</a>() function copies the string pointed to by <code>src</code>, including the terminating null byte ('\0'), to the buffer pointed to by <code>dest</code>. The strings may not overlap, and the destination string <code>dest</code> must be large enough to receive the copy. <code>Beware of buffer overruns!</code> (See <a href="#bugs">BUGS</a>.)</p>
+<p>The <a href="strncpy">strncpy</a>() function is similar, except that at most <code>n</code> bytes of <code>src</code> are copied. <strong>Warning</strong>: If there is no null byte among the first <code>n</code> bytes of <code>src</code>, the string placed in <code>dest</code> will not be null-terminated.</p>
+<p>If the length of <code>src</code> is less than <code>n</code>, <a href="strncpy">strncpy</a>() writes additional null bytes to <code>dest</code> to ensure that a total of <code>n</code> bytes are written.</p>
+<p>A simple implementation of <a href="strncpy">strncpy</a>() might be:</p>
+<pre><code>char *
+strncpy(char *dest, const char *src, size_t n)
+{
+    size_t i;
+
+    for (i = 0; i &lt; n &amp;&amp; src[i] != &#x27;\0&#x27;; i++)
+        dest[i] = src[i];
+    for ( ; i &lt; n; i++)
+        dest[i] = &#x27;\0&#x27;;
+
+    return dest;
+}
+</code></pre>
+<h1><a href="#return-value">RETURN VALUE</a></h1>
+<p>This function returns <code>dest</code>.</p>
+<p>The <a href="strcpy">strcpy</a>() and <a href="strncpy">strncpy</a>() functions return a pointer to the destination string <code>dest</code>.</p>
+<h1><a href="#example">EXAMPLE</a></h1>
+<pre><code>#include &lt;cs50.h&gt;#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;#include &lt;string.h&gt;
+int main(void)
+{
+    char *s = get_string(&quot;s: &quot;);
+    if (s != NULL)
+    {
+        char *t = malloc(strlen(s) + 1);
+        if (t != NULL)
+        {
+            strcpy(t, s);
+            printf(&quot;s: %s\n&quot;, s);
+            printf(&quot;t: %s\n&quot;, t);
+        }
+    }
+}
+</code></pre>
+<h1><a href="#attributes">ATTRIBUTES</a></h1>
+<p>For an explanation of the terms used in this section, see <a href="/7/attributes">attributes</a>(7).</p>
+<p>Interface</p>
+<p>Attribute</p>
+<p>Value</p>
+<p><a href="strcpy">strcpy</a>(), <a href="strncpy">strncpy</a>()</p>
+<p>Thread safety</p>
+<p>MT-Safe</p>
+<h1><a href="#conforming-to">CONFORMING TO</a></h1>
+<p>POSIX.1-2001, POSIX.1-2008, C89, C99, SVr4, 4.3BSD.</p>
+<h1><a href="#notes">NOTES</a></h1>
+<p>Some programmers consider <a href="strncpy">strncpy</a>() to be inefficient and error prone. If the programmer knows (i.e., includes code to test!) that the size of <code>dest</code> is greater than the length of <code>src</code>, then <a href="strcpy">strcpy</a>() can be used.</p>
+<p>One valid (and intended) use of <a href="strncpy">strncpy</a>() is to copy a C string to a fixed-length buffer while ensuring both that the buffer is not overflowed and that unused bytes in the destination buffer are zeroed out (perhaps to prevent information leaks if the buffer is to be written to media or transmitted to another process via an interprocess communication technique).</p>
+<p>If there is no terminating null byte in the first <code>n</code> bytes of <code>src</code>, <a href="strncpy">strncpy</a>() produces an unterminated string in <code>dest</code>. If <code>buf</code> has length <code>buflen</code>, you can force termination using something like the following:</p>
+<pre><code>if (buflen &gt; 0) {
+    strncpy(buf, str, buflen - 1);
+    buf[buflen - 1]= &#x27;\0&#x27;;
+}
+</code></pre>
+<p>(Of course, the above technique ignores the fact that, if <code>src</code> contains more than <code>buflen - 1</code> bytes, information is lost in the copying to <code>dest</code>.)</p>
+<h2>strlcpy()</h2>
+<p>Some systems (the BSDs, Solaris, and others) provide the following function:</p>
+<p>size_t strlcpy(char *dest, const char *src, size_t size);</p>
+<p>This function is similar to <a href="strncpy">strncpy</a>(), but it copies at most <code>size-1</code> bytes to <code>dest</code>, always adds a terminating null byte, and does not pad the destination with (further) null bytes. This function fixes some of the problems of <a href="strcpy">strcpy</a>() and <a href="strncpy">strncpy</a>(), but the caller must still handle the possibility of data loss if <code>size</code> is too small. The return value of the function is the length of <code>src</code>, which allows truncation to be easily detected: if the return value is greater than or equal to <code>size</code>, truncation occurred. If loss of data matters, the caller <code>must</code> either check the arguments before the call, or test the function return value. <a href="strlcpy">strlcpy</a>() is not present in glibc and is not standardized by POSIX, but is available on Linux via the <code>libbsd</code> library.</p>
+<h1><a href="#bugs">BUGS</a></h1>
+<p>If the destination string of a <a href="strcpy">strcpy</a>() is not large enough, then anything might happen. Overflowing fixed-length string buffers is a favorite cracker technique for taking complete control of the machine. Any time a program reads or copies data into a buffer, the program first needs to check that there's enough space. This may be unnecessary if you can show that overflow is impossible, but be careful: programs can get changed over time, in ways that may make the impossible possible.</p>
+<h1><a href="#see-also">SEE ALSO</a></h1>
+<p><a href="/3/bcopy">bcopy</a>(3), <a href="/3/memccpy">memccpy</a>(3), <a href="/3/memcpy">memcpy</a>(3), <a href="/3/memmove">memmove</a>(3), <a href="/3/stpcpy">stpcpy</a>(3), <a href="/3/stpncpy">stpncpy</a>(3), <a href="/3/strdup">strdup</a>(3), <a href="/3/string">string</a>(3), <a href="/3/wcscpy">wcscpy</a>(3), <a href="/3/wcsncpy">wcsncpy</a>(3)</p>
+<h1><a href="#colophon">COLOPHON</a></h1>
+<p>This page is part of release 5.10 of the Linux <code>man-pages</code> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</p>
+
+
+
+        </div>
+    </body>
+</html>

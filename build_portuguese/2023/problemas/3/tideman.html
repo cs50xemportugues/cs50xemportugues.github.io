@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html">Este é o CS50x</a>
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x"
+        >O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1 <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2 <span class="semana-titulo">Vetores</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3 <span class="semana-titulo">Algoritmos</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4 <span class="semana-titulo">Memória</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6 <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7 <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9 <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10 <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+  <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html">Projeto Final</a>
+      </li>
+    </ul> -->
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          >Perguntas Frequentes</a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html">Equipe</a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html">Currículo do Curso</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/">Navegador SQLite</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/">Navegador PostgreSQL</a>
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"></a></p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Tideman</h1>
+<p>Para este programa, você implementará um programa que executa uma eleição Tideman, como abaixo.</p>
+<pre><code>$ ./tideman Alice Bob Charlie
+Number of voters: 5
+Rank 1: Alice
+Rank 2: Charlie
+Rank 3: Bob
+
+Rank 1: Alice
+Rank 2: Charlie
+Rank 3: Bob
+
+Rank 1: Bob
+Rank 2: Charlie
+Rank 3: Alice
+
+Rank 1: Bob
+Rank 2: Charlie
+Rank 3: Alice
+
+Rank 1: Charlie
+Rank 2: Alice
+Rank 3: Bob
+
+Charlie
+</code></pre>
+<h2>Contexto</h2>
+<p>Você já sabe sobre eleições plurais, que seguem um algoritmo muito simples para determinar o vencedor de uma eleição: cada eleitor recebe um voto, e o candidato com mais votos ganha.</p>
+<p>Mas a votação plural tem algumas desvantagens. O que acontece, por exemplo, em uma eleição com três candidatos, e os votos abaixo são lançados?</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/3/fptp_ballot_1.png" alt="Five ballots, tie betweeen Alice and Bob" /></p>
+<p>Uma votação de pluralidade aqui declararia um empate entre Alice e Bob, já que cada um tem dois votos. Mas essa é a saída correta?</p>
+<p>Existe outro tipo de sistema de votação conhecido como sistema de votação por classificação. Em um sistema de classificação, os eleitores podem votar em mais de um candidato. Em vez de votar apenas em sua primeira escolha, eles podem classificar os candidatos em ordem de preferência. As cédulas resultantes podem ser, portanto, como as abaixo.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/3/ranked_ballot_1.png" alt="Three ballots, with ranked preferences" /></p>
+<p>Aqui, cada eleitor, além de especificar seu candidato de primeira preferência, também indicou sua segunda e terceira escolhas. E agora, o que antes era uma eleição empatada agora pode ter um vencedor. A corrida estava originalmente empatada entre Alice e Bob. Mas o eleitor que escolheu Charlie preferiu Alice a Bob, então Alice poderia aqui ser declarada a vencedora.</p>
+<p>A votação por classificação também pode resolver outra possível desvantagem da votação de pluralidade. Dê uma olhada nas seguintes cédulas.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/3/condorcet_1.png" alt="Nine ballots, with ranked preferences" /></p>
+<p>Quem deve ganhar esta eleição? Em uma votação de pluralidade em que cada eleitor escolhe apenas sua primeira preferência, Charlie ganha esta eleição com quatro votos em comparação com apenas três para Bob e dois para Alice. (Observe que, se você estiver familiarizado com o sistema de votação de segunda rodada instantânea, Charlie também ganha aqui sob esse sistema). Alice, no entanto, pode justificadamente argumentar que ela deveria ser a vencedora da eleição em vez de Charlie: afinal, dos nove eleitores, a maioria (cinco deles) preferiu Alice a Charlie, então a maioria das pessoas ficaria mais feliz com Alice como vencedora em vez de Charlie.</p>
+<p>Alice é, nesta eleição, a chamada &quot;vencedora de Condorcet&quot; da eleição: a pessoa que teria vencido qualquer confronto cabeça a cabeça contra outro candidato. Se a eleição tivesse sido apenas Alice e Bob, ou apenas Alice e Charlie, Alice teria vencido.</p>
+<p>O método de votação Tideman (também conhecido como &quot;pares classificados&quot;) é um método de votação por classificação que garante produzir o vencedor de Condorcet da eleição, se houver um.</p>
+<p>Em termos gerais, o método Tideman funciona construindo um &quot;gráfico&quot; de candidatos, onde uma seta (ou seja, uma borda) de um candidato A para um candidato B indica que o candidato A vence contra o candidato B em um confronto cabeça a cabeça. O gráfico para a eleição acima, então, seria como abaixo.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/3/condorcet_graph_1.png" alt="Nine ballots, with ranked preferences" /></p>
+<p>A seta de Alice para Bob significa que mais eleitores preferem Alice a Bob (5 preferem Alice, 4 preferem Bob). Da mesma forma, as outras setas significam que mais eleitores preferem Alice a Charlie, e mais eleitores preferem Charlie a Bob.</p>
+<p>Olhando para este gráfico, o método Tideman diz que o vencedor da eleição deve ser a &quot;fonte&quot; do gráfico (ou seja, o candidato que não tem nenhuma seta apontando para eles). Neste caso, a fonte é Alice - Alice é a única que não tem nenhuma seta apontando para ela, o que significa que ninguém é preferido cabeça a cabeça sobre Alice. Alice é assim declarada a vencedora da eleição.</p>
+<p>No entanto, é possível que, quando as setas são desenhadas, não haja vencedor de Condorcet. Considere as cédulas abaixo.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/3/no_condorcet_1.png" alt="Nine ballots, with ranked preferences" /></p>
+<p>Entre Alice e Bob, Alice é preferida por Bob por uma margem de 7 a 2. Entre Bob e Charlie, Bob prefere Charlie por uma margem de 5 a 4. Mas, entre Charlie e Alice, Charlie prefere Alice por uma margem de 6 a 3. Se desenharmos o gráfico, não há fonte! Temos um ciclo de candidatos, onde Alice derrota Bob, que derrota Charlie, que derrota Alice (como um jogo de pedra-papel-tesoura). Neste caso, parece que não há como escolher um vencedor.</p>
+<p>Para lidar com isso, o algoritmo Tideman deve ter cuidado para evitar criar ciclos no gráfico de candidatos. Como ele faz isso? O algoritmo bloqueia primeiro as bordas mais fortes, já que essas são, em geral, as mais significativas. Em particular, o algoritmo Tideman especifica que as bordas de confronto devem ser &quot;bloqueadas&quot; no gráfico, uma a uma, com base na &quot;força&quot; da vitória (quanto mais pessoas preferem um candidato sobre seu oponente, mais forte é a vitória). Desde que a borda possa ser bloqueada no gráfico sem criar um ciclo, a borda é adicionada; caso contrário, a borda é ignorada.</p>
+<p>Como isso funcionaria no caso dos votos acima? Bem, a maior margem de vitória para um par é Alice batendo Bob, já que 7 eleitores preferem Alice a Bob (nenhum outro confronto cabeça a cabeça tem um vencedor preferido por mais de 7 eleitores). Então, a seta de Alice-Bob é bloqueada no gráfico primeiro. A próxima maior margem de vitória é 6-3 de Charlie sobre Alice, então essa seta é bloqueada em seguida.</p>
+<p>A próxima é a vitória de Bob, por 5-4 sobre Charlie. Mas note: se adicionarmos uma seta de Bob para Charlie agora, criaríamos um ciclo! Como o gráfico não pode permitir loops, devemos pular esta borda e não adicioná-la ao gráfico. Se houvesse mais setas a serem consideradas, olharíamos para as próximas, mas essa foi a última seta, então o gráfico está completo.</p>
+<p>Este processo é mostrado passo a passo abaixo, com o gráfico final à direita.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/3/lockin.png" alt="Nine ballots, with ranked preferences" /></p>
+<p>Com base no gráfico resultante, Charlie é a fonte (não há nenhuma seta apontando para Charlie), assim, Charlie é declarado o vencedor desta eleição.</p>
+<p>Mais formalmente, o método de votação Tideman consiste em três partes:</p>
+<ul>
+<li><strong>Totalização</strong>: uma vez que todos os eleitores indicaram todas as suas preferências, determine, para cada par de candidatos, quem é o candidato preferido e por qual margem eles são preferidos.</li>
+<li><strong>Ordenação</strong>: ordene os pares de candidatos em ordem decrescente de força da vitória, onde a força da vitória é definida como o número de eleitores que preferem o candidato preferido.</li>
+<li><strong>Bloqueio</strong>: começando com o par mais forte, passe pelos pares de candidatos em ordem e &quot;trave&quot; cada par no gráfico de candidatos, desde que trancar esse par não crie um ciclo no gráfico.</li>
+</ul>
+<p>Uma vez que o gráfico está completo, a fonte do gráfico (aquele com nenhuma seta apontando para ele) é o vencedor!</p>
+<h2>Começando</h2>
+<p>Faça login em <a href="https://code.cs50.io/">code.cs50.io</a>, clique na janela do seu terminal e execute <code>cd</code> por si só. Você deve encontrar que o prompt da janela do seu terminal se parece com o abaixo:</p>
+<pre><code>$
+</code></pre>
+<p>Em seguida, execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/3/tideman.zip
+</code></pre>
+<p>para baixar um ZIP chamado <code>tideman.zip</code> no seu espaço de código.</p>
+<p>Então execute</p>
+<pre><code>unzip tideman.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>tideman</code>. Você não precisa mais do arquivo ZIP, então pode executar</p>
+<pre><code>rm tideman.zip
+</code></pre>
+<p>e responder com &quot;y&quot; seguido de Enter no prompt para remover o arquivo ZIP baixado.</p>
+<p>Agora digite</p>
+<pre><code>cd tideman
+</code></pre>
+<p>seguido de Enter para mover-se para dentro (ou seja, abrir) do diretório. Seu prompt agora deve se assemelhar ao abaixo.</p>
+<pre><code>tideman/ $
+</code></pre>
+<p>Se tudo correu bem, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e ver um arquivo chamado <code>tideman.c</code>. Executar <code>code tideman.c</code> deve abrir o arquivo onde você digitará seu código para este conjunto de problemas. Se não, retraçar seus passos e ver se você pode determinar onde você errou!</p>
+<h2>Compreendendo</h2>
+<p>Vamos dar uma olhada em <code>tideman.c</code>.</p>
+<p>Primeiro, observe a matriz bidimensional <code>preferences</code>. O inteiro <code>preferences[i][j]</code> representará o número de eleitores que preferem o candidato <code>i</code> ao candidato <code>j</code>.</p>
+<p>O arquivo também define outra matriz bidimensional, chamada <code>locked</code>, que representará o grafo de candidatos. <code>locked</code> é uma matriz booleana, então <code>locked[i][j]</code> sendo <code>true</code> representa a existência de uma borda apontando do candidato <code>i</code> para o candidato <code>j</code>; <code>false</code> significa que não há borda. (Se curioso, essa representação de um grafo é conhecida como uma &quot;matriz de adjacência&quot;).</p>
+<p>Em seguida, temos uma <code>struct</code> chamada <code>pair</code>, usada para representar um par de candidatos: cada par inclui o índice do candidato vencedor e o índice do candidato perdedor.</p>
+<p>Os próprios candidatos são armazenados no array <code>candidates</code>, que é um array de <code>strings</code> representando os nomes de cada um dos candidatos. Há também um array de <code>pairs</code>, que representará todos os pares de candidatos (para os quais um é preferido em relação ao outro) na eleição.</p>
+<p>O programa também tem duas variáveis globais: <code>pair_count</code> e <code>candidate_count</code>, representando o número de pares e o número de candidatos em arrays <code>pairs</code> e <code>candidates</code>, respectivamente.</p>
+<p>Agora vamos para <code>main</code>. Observe que depois de determinar o número de candidatos, o programa percorre o grafo <code>locked</code> e define inicialmente todos os valores como <code>false</code>, o que significa que nosso grafo inicial não terá bordas nele.</p>
+<p>Em seguida, o programa percorre todos os eleitores e coleta suas preferências em um array chamado <code>ranks</code> (por meio de uma chamada a <code>vote</code>), onde <code>ranks[i]</code> é o índice do candidato que é a <code>i</code>ª preferência para o eleitor. Essas classificações são passadas para a função <code>record_preference</code>, cuja função é pegar essas classificações e atualizar a variável global <code>preferences</code>.</p>
+<p>Depois que todos os votos são dados, os pares de candidatos são adicionados ao array <code>pairs</code> por meio de uma chamada a <code>add_pairs</code>, classificados por meio de uma chamada a <code>sort_pairs</code> e trancados no grafo por meio de uma chamada a <code>lock_pairs</code>. Finalmente, <code>print_winner</code> é chamado para imprimir o nome do vencedor da eleição!</p>
+<p>Mais abaixo no arquivo, você verá que as funções <code>vote</code>, <code>record_preference</code>, <code>add_pairs</code>, <code>sort_pairs</code>, <code>lock_pairs</code> e <code>print_winner</code> estão em branco. Isso é com você!</p>
+<h2>Especificação</h2>
+<p>Complemente a implementação de <code>tideman.c</code> de forma que simule uma eleição de Tideman.</p>
+<ul>
+<li>
+Complete a função <code>vote</code>.<ul>
+<li>A função recebe os argumentos <code>rank</code>, <code>name</code> e <code>ranks</code>. Se <code>name</code> corresponder ao nome de um candidato válido, você deve atualizar o vetor <code>ranks</code> para indicar que o eleitor tem o candidato como sua preferência na posição <code>rank</code> (onde <code>0</code> é a primeira preferência, <code>1</code> é a segunda preferência, etc.).</li>
+<li>Lembre-se que <code>ranks[i]</code> representa a <code>i</code>-ésima preferência do usuário.</li>
+<li>A função deve retornar <code>true</code> se a classificação foi registrada com sucesso e <code>false</code> caso contrário (por exemplo, se <code>name</code> não for o nome de um dos candidatos).</li>
+<li>É possível assumir que nenhum dos candidatos terá o mesmo nome.</li>
+</ul>
+</li>
+<li>
+Complete a função <code>record_preferences</code>.<ul>
+<li>A função é chamada uma vez para cada eleitor e recebe como argumento o vetor <code>ranks</code> (lembre-se de que <code>ranks[i]</code> é a <code>i</code>-ésima preferência do eleitor, onde <code>ranks[0]</code> é a primeira preferência).</li>
+<li>A função deve atualizar o vetor de <code>preferências</code> global para adicionar as preferências do eleitor atual. Lembre-se que <code>preferências[i][j]</code> deve representar o número de eleitores que preferem o candidato <code>i</code> ao candidato <code>j</code>.</li>
+<li>É possível assumir que cada eleitor classificará todos os candidatos.</li>
+</ul>
+</li>
+<li>
+Complete a função <code>add_pairs</code>.<ul>
+<li>A função deve adicionar todos os pares de candidatos em que um candidato é preferido no vetor <code>pairs</code>. Um par de candidatos que empatam (um não é preferido em relação ao outro) não deve ser adicionado ao vetor.</li>
+<li>A função deve atualizar a variável global <code>pair_count</code> para ser o número total de pares de candidatos. (Os pares devem ser armazenados em <code>pairs[0]</code> até <code>pairs[pair_count - 1]</code>, inclusive).</li>
+</ul>
+</li>
+<li>
+Complete a função <code>sort_pairs</code>.<ul>
+<li>A função deve classificar o vetor <code>pairs</code> em ordem decrescente de força de vitória, onde a força da vitória é definida como o número de eleitores que preferem o candidato preferido. Se vários pares tiverem a mesma força de vitória, é possível assumir que não importa a ordem.</li>
+</ul>
+</li>
+<li>
+Complete a função <code>lock_pairs</code>.<ul>
+<li>A função deve criar o grafo &quot;locked&quot;, adicionando todas as arestas em ordem decrescente de força de vitória, desde que a aresta não crie ciclo.</li>
+</ul>
+</li>
+<li>
+Complete a função <code>print_winner</code>.<ul>
+<li>A função deve imprimir o nome do candidato que é a fonte do grafo. É possível assumir que não haverá mais de uma fonte.</li>
+</ul>
+</li>
+</ul>
+<p>Você não deve modificar nada além das implementações das funções <code>vote</code>, <code>record_preferences</code>, <code>add_pairs</code>, <code>sort_pairs</code>, <code>lock_pairs</code> e <code>print_winner</code> em <code>tideman.c</code> (e a inclusão de arquivos header adicionais, se desejar). É permitido adicionar funções adicionais em <code>tideman.c</code>, desde que não sejam alteradas as declarações das funções existentes.</p>
+<h2>Passo a passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/kb83NwyYI68?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<h2>Uso</h2>
+<p>Seu programa deve se comportar como no exemplo abaixo:</p>
+<pre><code>./tideman Alice Bob Charlie
+Número de eleitores: 5
+Classificação 1: Alice
+Classificação 2: Charlie
+Classificação 3: Bob
+
+Classificação 1: Alice
+Classificação 2: Charlie
+Classificação 3: Bob
+
+Classificação 1: Bob
+Classificação 2: Charlie
+Classificação 3: Alice
+
+Classificação 1: Bob
+Classificação 2: Charlie
+Classificação 3: Alice
+
+Classificação 1: Charlie
+Classificação 2: Alice
+Classificação 3: Bob
+
+Charlie
+</code></pre>
+<h2>Testando</h2>
+<p>Certifique-se de testar seu código para verificar se ele lida com...</p>
+<ul>
+<li>uma eleição com qualquer número de candidatos (até o <code>MAX</code> de <code>9</code>)</li>
+<li>votar em um candidato pelo nome</li>
+<li>votos inválidos para candidatos que não estão na cédula</li>
+<li>imprimir o vencedor da eleição</li>
+</ul>
+<p>Execute o seguinte para avaliar a correção do seu código usando <code>check50</code>. Mas certifique-se de compilar e testar por conta própria também!</p>
+<pre><code>check50 cs50/problems/2023/x/tideman
+</code></pre>
+<p>Execute o seguinte para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 tideman.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>Em seu terminal, execute o seguinte para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/tideman&quot;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

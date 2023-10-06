@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html">Este é o CS50x</a>
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x"
+        >O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1 <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2 <span class="semana-titulo">Vetores</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3 <span class="semana-titulo">Algoritmos</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4 <span class="semana-titulo">Memória</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5 <span class="semana-titulo">Estruturas de Dados</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6 <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7 <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8 <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9 <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10 <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+  <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html">Projeto Final</a>
+      </li>
+    </ul> -->
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          >Perguntas Frequentes</a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html">Equipe</a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html">Currículo do Curso</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/">Navegador SQLite</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/">Navegador PostgreSQL</a>
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"></a></p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Laboratório 3: Ordenação</h1>
+<div class="alert" data-alert="warning" role="alert"><p>Você pode colaborar com um ou dois colegas neste laboratório, mas espera-se que cada aluno do grupo contribua igualmente para o laboratório.</p></div>
+<p>Analise três programas de ordenação para determinar quais algoritmos eles usam.</p>
+<h2>Contexto</h2>
+<p>Lembre-se da aula que vimos alguns algoritmos para ordenar uma sequência de números: ordenação por seleção, ordenação por bolha e ordenação por fusão.</p>
+<ul>
+<li>A ordenação por seleção percorre as porções não ordenadas de uma lista, selecionando o menor elemento a cada vez e movendo-o para sua localização correta.</li>
+<li>A ordenação por bolha compara pares de valores adjacentes um de cada vez e os troca se estiverem na ordem incorreta. Isso continua até que a lista esteja ordenada.</li>
+<li>A ordenação por fusão divide recursivamente a lista em dois repetidamente e depois mescla as listas menores de volta em uma maior na ordem correta.</li>
+</ul>
+<h2>Começando</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do terminal e, em seguida, execute o comando <code>cd</code> sozinho. Você deve encontrar um prompt semelhante abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro dessa janela do terminal e, em seguida, execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/labs/3/sort.zip
+</code></pre>
+<p>seguido de Enter para baixar um arquivo ZIP chamado <code>sort.zip</code> em seu workspace. Cuidado para não ignorar o espaço entre <code>wget</code> e a URL seguinte, ou qualquer outro caractere para aquela questão!</p>
+<p>Agora execute</p>
+<pre><code>unzip sort.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>sort</code>. Você não precisará mais do arquivo ZIP, portanto, execute</p>
+<pre><code>rm sort.zip
+</code></pre>
+<p>e responda com &quot;y&quot; seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Digite agora</p>
+<pre><code>cd sort
+</code></pre>
+<p>seguido de Enter para se mover para dentro (ou seja, abrir) esse diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>sort/ $
+</code></pre>
+<p>Se tudo correu bem, execute</p>
+<pre><code>ls
+</code></pre>
+<p>e você deve ver uma coleção de arquivos <code>.txt</code> juntos com os programas executáveis <code>sort1</code>, <code>sort2</code> e <code>sort3</code>.</p>
+<p>Se você tiver algum problema, siga esses mesmos passos novamente e veja se consegue determinar onde ocorreu o erro!</p>
+<h2>Instruções</h2>
+<p>Foram fornecidos a você três programas C já compilados, <code>sort1</code>, <code>sort2</code> e <code>sort3</code>. Cada um desses programas implementa um algoritmo de ordenação diferente: ordenação por seleção, ordenação por bolha ou ordenação por fusão (embora não necessariamente nessa ordem!). Sua tarefa é determinar qual algoritmo de classificação é usado por cada arquivo.</p>
+<ul>
+<li>Os arquivos <code>sort1</code>, <code>sort2</code> e <code>sort3</code> são arquivos binários e, portanto, você não conseguirá visualizar o código-fonte C de cada um. Para avaliar qual classificação implementa qual algoritmo, execute as classificações em diferentes listas de valores.</li>
+<li>
+Vários arquivos <code>.txt</code> são fornecidos a você. Esses arquivos contêm <code>n</code> linhas de valores, reversos, misturados ou ordenados.<ul>
+<li>Por exemplo, o arquivo <code>reversed10000.txt</code> contém 10000 linhas de números que estão reversos do <code>10000</code>, enquanto o arquivo <code>random10000.txt</code> contém 10000 linhas de números que estão em ordem aleatória.</li>
+</ul>
+</li>
+<li>
+Para executar a classificação nos arquivos de texto, no terminal, execute <code>./[nome_do_programa] [arquivo_de_texto.txt]</code>. Certifique-se de ter usado o comando <code>cd</code> para entrar no diretório <code>sort</code>!<ul>
+<li>Por exemplo, para classificar <code>reversed10000.txt</code> com <code>sort1</code>, execute <code>./sort1 reversed10000.txt</code>.</li>
+</ul>
+</li>
+<li>
+Você pode achar útil cronometrar suas classificações. Para fazer isso, execute <code>time ./[sort_file] [arquivo_de_texto.txt]</code>.<ul>
+<li>Por exemplo, você poderia executar <code>time ./sort1 reversed10000.txt</code> para rodar <code>sort1</code> em 10.000 números invertidos. No final da saída do terminal, você pode olhar o tempo <code>real</code> para ver quanto tempo realmente se passou enquanto o programa estava em execução.</li>
+</ul>
+</li>
+<li>Registre suas respostas em <code>answers.txt</code>, juntamente com uma explicação para cada programa, preenchendo os espaços em branco marcados <code>TODO</code>.</li>
+</ul>
+<h3>Passo a Passo</h3>
+<div class="alert" data-alert="primary" role="alert"><p>Este vídeo foi gravado quando o curso ainda estava usando o CS50 IDE para escrever código. Embora a interface possa ser diferente do seu workspace, o comportamento dos dois ambientes deve ser em grande parte similar!</p></div>
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/-Bhxxw6JKKY"></iframe>
+<h3>Sugestões</h3>
+<ul>
+<li>Os diferentes tipos de arquivos <code>.txt</code> podem ajudá-lo a determinar qual classificação é qual. Considere como cada algoritmo se comporta com uma lista já ordenada. E uma lista invertida? Ou uma lista embaralhada? Pode ajudar a trabalhar através de uma lista menor de cada tipo e seguir cada processo de classificação.</li>
+</ul>
+<details><summary>Não tem certeza de como resolver?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/uOYhrBs37j0"></iframe></details>
+<h3>Como verificar suas respostas</h3>
+<p>Execute o abaixo para avaliar a correção de suas respostas usando <code>check50</code>. Mas certifique-se de preencher também suas explicações, que o <code>check50</code> não verificará aqui!</p>
+<pre><code>check50 cs50/labs/2023/x/sort
+</code></pre>
+<h2>Como Enviar</h2>
+<p>No seu terminal, execute o abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/labs/2023/x/sort&quot;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

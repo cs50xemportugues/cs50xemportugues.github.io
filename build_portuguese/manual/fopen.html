@@ -1,0 +1,396 @@
+
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, width=device-width">
+
+        <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+        <link href="/static/49a1a858-favicon-32x32.png" rel="icon" type="image/png">
+
+        <script>
+            window.FontAwesomeConfig = { autoReplaceSvg: false };
+        </script>
+
+        <link href="/static/dist/main.css?1694737498" rel="stylesheet">
+        <script src="/static/dist/main.js?1694737498"></script>
+        <link
+        rel="stylesheet"
+        type="text/css"
+        href="/static/css/main.css"
+    />
+        <link
+            rel="stylesheet"
+            type="text/css"
+            href="/static/css/rouge.css"
+        />
+        <script src="/static/js/main.js"></script>
+        <script>
+
+            
+
+    $(function() {
+
+        // Hide less-comfortable descriptions
+        $('[data-less]').addClass('d-none');
+
+        // Listen for checkbox
+        $('#filter').on('change', function() {
+            if ($('#filter').is(':checked')) {
+                $('[data-less]').removeClass('d-none');
+                $('[data-more]').addClass('d-none');
+            }
+            else {
+                $('[data-more]').removeClass('d-none');
+                $('[data-less]').addClass('d-none');
+            }
+            filter();
+        }).trigger('change');
+
+        // Listen for searches
+        $('#q').on('change keyup', function() {
+            filter();
+        });
+        $('#q').closest('form').on('submit', function(e) {
+            e.preventDefault();
+        });
+
+        // Filter results
+        filter();
+
+        // Unless user's followed a link to a heading, filter index
+        if (window.location.hash) {
+            $('#filter').prop('checked', false).trigger('change');
+        }
+
+        // Give focus to search (after body is visible)
+        else {
+            $(function() {
+                $('#q').focus();
+            });
+        }
+    });
+
+    function filter() {
+        let q = $('#q').val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === '') {
+            q = [];
+        }
+        $('h1').each(function(index, element) {
+            const $h1 = $(element);
+            const header = $h1.val();
+            const $ul = $h1.next('ul');
+            $ul.children('li').each(function(index, element) {
+                const $li = $(element);
+                if ($('#filter').prop('checked') && $li.attr('data-filter') === undefined) {
+                    $li.addClass('filtered');
+                }
+                else {
+                    $li.removeClass('filtered');
+                }
+                const haystack = $h1.text() + $li.text().trim();
+                let matches = q.filter(function(s) {
+                    return haystack.match(new RegExp(s, 'i')) !== null;
+                });
+                if (matches.length === q.length) {
+                    $li.removeClass('mismatched');
+                }
+                else {
+                    $li.addClass('mismatched');
+                }
+            });
+            if ($ul.children('li:not(.filtered, .mismatched)').length > 0) {
+                $h1.removeClass('d-none');
+                $ul.removeClass('d-none');
+            }
+            else {
+                $h1.addClass('d-none');
+                $ul.addClass('d-none');
+            }
+        });
+    };
+
+
+
+        </script>
+
+        <script>
+
+            $(function() {
+
+                // Add borders to tables
+                $('.table').addClass('table-bordered');
+
+                // Enable popovers
+                $('[data-bs-toggle="popover"]').each(function(index, element) {
+                    new bootstrap.Popover(element, {
+                        boundary: 'viewport',
+                        html: true,
+                        placement: 'bottom',
+                        trigger: 'focus'
+                    });
+                });
+
+                // Ensure all elements are styled the same
+                $('h1').addClass('border-bottom fw-bold h2 mb-3 pb-2 pt-4');
+                $('h2').addClass('fw-bold h3');
+
+                // Ensure last heading can be anchored atop page
+                $(window).resize(function() {
+                    const top = $('h1').last().offset().top;
+                    const margin = $(window).height() - ($('body').outerHeight() - top);
+                    $('body').css('margin-bottom', Math.max(0, Math.ceil(margin)) + 'px');
+                });
+                $(window).trigger('resize');
+
+                // Reveal body
+                $('body').removeClass('invisible');
+            });
+
+        </script>
+
+        <style>
+
+            /* Style popovers */
+            .popover {
+                font-family: inherit;
+                max-width: 100%;
+            }
+
+            /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+            but not in buttons and not in tables, which should instead scroll horizontally */
+            * {
+                word-break: break-word;
+            }
+            button, table * {
+                word-break: normal;
+            }
+
+            /* Remove underlining */
+            a {
+                text-decoration: none;
+            }
+            a:hover {
+                text-decoration: underline;
+            }
+            nav a:hover {
+                text-decoration: none;
+            }
+
+            /* Match Gmail's yellow */
+            a[data-bs-toggle=popover] {
+                border-bottom: 2px solid rgb(252, 237, 193);
+                box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+                cursor: help;
+            }
+            a[data-bs-toggle=popover]:hover {
+                background-color: rgb(252, 237, 193);
+            }
+
+            /* Match pre tags */
+            code {
+                color: inherit;
+            }
+
+            /* A la Jekyll theme */
+            code, pre {
+                background-color: #f8f9fa;
+                border: 1px solid #dee2e6;
+                padding: calc(.2rem - 3px) 0.2rem;
+            }
+            pre code {
+                background-color: initial;
+                border: initial;
+                padding: initial;
+            }
+
+            /* Don't shrink these */
+            code, pre {
+                font-size: inherit;
+            }
+
+            /* Don't italicize */
+            dl dt {
+                font-style: normal;
+            }
+
+            /* Don't fill viewport */
+            .table {
+                width: inherit;
+            }
+
+        </style>
+
+        <style>
+
+            
+
+    /* Don't display */
+    .filtered, .mismatched {
+        display: none;
+    }
+
+    /* No bullets */
+    ul {
+        list-style-type: none;
+        padding-left: 0;
+    }
+
+    pre {
+        padding: 20px;
+    }
+
+        </style>
+
+        <title>CS50 Manual do Programador</title>
+
+    </head>
+
+    <body class="font-monospace invisible pb-5">
+
+        <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+            <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+        </nav>
+
+        <div class="container-fluid mt-2 px-4">
+            
+
+<h1><a href="#name">NAME</a></h1>
+<p>fopen - open a file</p>
+<p>fopen, fdopen, freopen - stream open functions</p>
+<h1><a href="#synopsis">SYNOPSIS</a></h1>
+<h2>Header File</h2>
+<pre><code>#include &lt;stdio.h&gt;
+</code></pre>
+<h2>Prototype</h2>
+<pre><code>FILE *fopen(const char *pathname, const char *mode);
+
+
+#include &lt;stdio.h&gt;
+
+FILE *fopen(const char *pathname, const char *mode);
+
+FILE *fdopen(int fd, const char *mode);
+
+FILE *freopen(const char *pathname, const char *mode, FILE *stream);
+</code></pre>
+<blockquote>
+<p>Feature Test Macro Requirements for glibc (see <a href="/7/feature_test_macros">feature_test_macros</a>(7)):</p>
+</blockquote>
+<p><a href="fdopen">fdopen</a>(): _POSIX_C_SOURCE</p>
+<h1><a href="#description">DESCRIPTION</a></h1>
+<p>This function opens a file, <code>pathname</code>. Supported values for <code>mode</code> include</p>
+<ul>
+<li><code>&quot;r&quot;</code>, if opening the file in order to read from it,</li>
+<li><code>&quot;w&quot;</code>, if opening the file in order to write to it, and</li>
+<li><code>&quot;a&quot;</code>, if opening the file in order to append to it.</li>
+</ul>
+<p>The <a href="fopen">fopen</a>() function opens the file whose name is the string pointed to by <code>pathname</code> and associates a stream with it.</p>
+<p>The argument <code>mode</code> points to a string beginning with one of the following sequences (possibly followed by additional characters, as described below):</p>
+<p><strong>r</strong></p>
+<p>Open text file for reading. The stream is positioned at the beginning of the file.</p>
+<p><strong>r+</strong></p>
+<p>Open for reading and writing. The stream is positioned at the beginning of the file.</p>
+<p><strong>w</strong></p>
+<p>Truncate file to zero length or create text file for writing. The stream is positioned at the beginning of the file.</p>
+<p><strong>w+</strong></p>
+<p>Open for reading and writing. The file is created if it does not exist, otherwise it is truncated. The stream is positioned at the beginning of the file.</p>
+<p><strong>a</strong></p>
+<p>Open for appending (writing at end of file). The file is created if it does not exist. The stream is positioned at the end of the file.</p>
+<p><strong>a+</strong></p>
+<p>Open for reading and appending (writing at end of file). The file is created if it does not exist. Output is always appended to the end of the file. POSIX is silent on what the initial read position is when using this mode. For glibc, the initial file position for reading is at the beginning of the file, but for Android/BSD/MacOS, the initial file position for reading is at the end of the file.</p>
+<p>The <code>mode</code> string can also include the letter 'b' either as a last character or as a character between the characters in any of the two-character strings described above. This is strictly for compatibility with C89 and has no effect; the 'b' is ignored on all POSIX conforming systems, including Linux. (Other systems may treat text files and binary files differently, and adding the 'b' may be a good idea if you do I/O to a binary file and expect that your program may be ported to non-UNIX environments.)</p>
+<p>See <a href="#notes">NOTES</a> below for details of glibc extensions for <code>mode</code>.</p>
+<p>Any created file will have the mode <strong>S_IRUSR</strong> | <strong>S_IWUSR</strong> | <strong>S_IRGRP</strong> | <strong>S_IWGRP</strong> | <strong>S_IROTH</strong> | <strong>S_IWOTH</strong> (0666), as modified by the process's umask value (see <a href="/2/umask">umask</a>(2)).</p>
+<p>Reads and writes may be intermixed on read/write streams in any order. Note that ANSI C requires that a file positioning function intervene between output and input, unless an input operation encounters end-of-file. (If this condition is not met, then a read is allowed to return the result of writes other than the most recent.) Therefore it is good practice (and indeed sometimes necessary under Linux) to put an <a href="/3/fseek">fseek</a>(3) or <a href="/3/fgetpos">fgetpos</a>(3) operation between write and read operations on such a stream. This operation may be an apparent no-op (as in <code>fseek(..., 0L, SEEK_CUR)</code> called for its synchronizing side effect).</p>
+<p>Opening a file in append mode (<strong>a</strong> as the first character of <code>mode</code>) causes all subsequent write operations to this stream to occur at end-of-file, as if preceded the call:</p>
+<pre><code>fseek(stream, 0, SEEK_END);
+</code></pre>
+<p>The file descriptor associated with the stream is opened as if by a call to <a href="/2/open">open</a>(2) with the following flags:</p>
+<blockquote>
+<p>fopen() mode</p>
+<p>open() flags</p>
+<p><code>r</code></p>
+<p>O_RDONLY</p>
+<p><code>w</code></p>
+<p>O_WRONLY | O_CREAT | O_TRUNC</p>
+<p><code>a</code></p>
+<p>O_WRONLY | O_CREAT | O_APPEND</p>
+<p><code>r+</code></p>
+<p>O_RDWR</p>
+<p><code>w+</code></p>
+<p>O_RDWR | O_CREAT | O_TRUNC</p>
+<p><code>a+</code></p>
+<p>O_RDWR | O_CREAT | O_APPEND</p>
+</blockquote>
+<h2>fdopen()</h2>
+<p>The <a href="fdopen">fdopen</a>() function associates a stream with the existing file descriptor, <code>fd</code>. The <code>mode</code> of the stream (one of the values &quot;r&quot;, &quot;r+&quot;, &quot;w&quot;, &quot;w+&quot;, &quot;a&quot;, &quot;a+&quot;) must be compatible with the mode of the file descriptor. The file position indicator of the new stream is set to that belonging to <code>fd</code>, and the error and end-of-file indicators are cleared. Modes &quot;w&quot; or &quot;w+&quot; do not cause truncation of the file. The file descriptor is not dup'ed, and will be closed when the stream created by <a href="fdopen">fdopen</a>() is closed. The result of applying <a href="fdopen">fdopen</a>() to a shared memory object is undefined.</p>
+<h2>freopen()</h2>
+<p>The <a href="freopen">freopen</a>() function opens the file whose name is the string pointed to by <code>pathname</code> and associates the stream pointed to by <code>stream</code> with it. The original stream (if it exists) is closed. The <code>mode</code> argument is used just as in the <a href="fopen">fopen</a>() function.</p>
+<p>If the <code>pathname</code> argument is a null pointer, <a href="freopen">freopen</a>() changes the mode of the stream to that specified in <code>mode</code>; that is, <a href="freopen">freopen</a>() reopens the pathname that is associated with the stream. The specification for this behavior was added in the C99 standard, which says:</p>
+<blockquote>
+<p>In this case, the file descriptor associated with the stream need not be closed if the call to <a href="freopen">freopen</a>() succeeds. It is implementation-defined which changes of mode are permitted (if any), and under what circumstances.</p>
+</blockquote>
+<p>The primary use of the <a href="freopen">freopen</a>() function is to change the file associated with a standard text stream (<code>stderr</code>, <code>stdin</code>, or <code>stdout</code>).</p>
+<h1><a href="#return-value">RETURN VALUE</a></h1>
+<p>This function returns a pointer to a <code>FILE</code> representing the opened file or, in cases of error (as when <code>pathname</code> doesn’t exist), <code>NULL</code>.</p>
+<p>Upon successful completion <a href="fopen">fopen</a>(), <a href="fdopen">fdopen</a>(), and <a href="freopen">freopen</a>() return a <code>FILE</code> pointer. Otherwise, NULL is returned and <code>errno</code> is set to indicate the error.</p>
+<h1><a href="#examples">EXAMPLES</a></h1>
+<pre><code>#include &lt;stdio.h&gt;
+int main(void)
+{
+    FILE *file = fopen(&quot;cs50.txt&quot;, &quot;w&quot;);
+    if (file != NULL)
+    {
+        fprintf(file, &quot;This is CS50\n&quot;);
+        fclose(file);
+    }
+}
+</code></pre>
+<h1><a href="#errors">ERRORS</a></h1>
+<p><strong>EINVAL</strong></p>
+<p>The <code>mode</code> provided to <a href="fopen">fopen</a>(), <a href="fdopen">fdopen</a>(), or <a href="freopen">freopen</a>() was invalid.</p>
+<p>The <a href="fopen">fopen</a>(), <a href="fdopen">fdopen</a>(), and <a href="freopen">freopen</a>() functions may also fail and set <code>errno</code> for any of the errors specified for the routine <a href="/3/malloc">malloc</a>(3).</p>
+<p>The <a href="fopen">fopen</a>() function may also fail and set <code>errno</code> for any of the errors specified for the routine <a href="/2/open">open</a>(2).</p>
+<p>The <a href="fdopen">fdopen</a>() function may also fail and set <code>errno</code> for any of the errors specified for the routine <a href="/2/fcntl">fcntl</a>(2).</p>
+<p>The <a href="freopen">freopen</a>() function may also fail and set <code>errno</code> for any of the errors specified for the routines <a href="/2/open">open</a>(2), <a href="/3/fclose">fclose</a>(3), and <a href="/3/fflush">fflush</a>(3).</p>
+<h1><a href="#attributes">ATTRIBUTES</a></h1>
+<p>For an explanation of the terms used in this section, see <a href="/7/attributes">attributes</a>(7).</p>
+<p>Interface</p>
+<p>Attribute</p>
+<p>Value</p>
+<p><a href="fopen">fopen</a>(), <a href="fdopen">fdopen</a>(), <a href="freopen">freopen</a>()</p>
+<p>Thread safety</p>
+<p>MT-Safe</p>
+<h1><a href="#conforming-to">CONFORMING TO</a></h1>
+<p><a href="fopen">fopen</a>(), <a href="freopen">freopen</a>(): POSIX.1-2001, POSIX.1-2008, C89, C99.</p>
+<p><a href="fdopen">fdopen</a>(): POSIX.1-2001, POSIX.1-2008.</p>
+<h1><a href="#notes">NOTES</a></h1>
+<h2>Glibc notes</h2>
+<p>The GNU C library allows the following extensions for the string specified in <code>mode</code>:</p>
+<p><strong>c</strong> (since glibc 2.3.3)</p>
+<p>Do not make the open operation, or subsequent read and write operations, thread cancellation points. This flag is ignored for <a href="fdopen">fdopen</a>().</p>
+<p><strong>e</strong> (since glibc 2.7)</p>
+<p>Open the file with the <strong>O_CLOEXEC</strong> flag. See <a href="/2/open">open</a>(2) for more information. This flag is ignored for <a href="fdopen">fdopen</a>().</p>
+<p><strong>m</strong> (since glibc 2.3)</p>
+<p>Attempt to access the file using <a href="/2/mmap">mmap</a>(2), rather than I/O system calls (<a href="/2/read">read</a>(2), <a href="/2/write">write</a>(2)). Currently, use of <a href="/2/mmap">mmap</a>(2) is attempted only for a file opened for reading.</p>
+<p><strong>x</strong></p>
+<p>Open the file exclusively (like the <strong>O_EXCL</strong> flag of <a href="/2/open">open</a>(2)). If the file already exists, <a href="fopen">fopen</a>() fails, and sets <code>errno</code> to <strong>EEXIST</strong>. This flag is ignored for <a href="fdopen">fdopen</a>().</p>
+<p>In addition to the above characters, <a href="fopen">fopen</a>() and <a href="freopen">freopen</a>() support the following syntax in <code>mode</code>:</p>
+<p><strong>,ccs=</strong><code>string</code></p>
+<p>The given <code>string</code> is taken as the name of a coded character set and the stream is marked as wide-oriented. Thereafter, internal conversion functions convert I/O to and from the character set <code>string</code>. If the <strong>,ccs=</strong><code>string</code> syntax is not specified, then the wide-orientation of the stream is determined by the first file operation. If that operation is a wide-character operation, the stream is marked wide-oriented, and functions to convert to the coded character set are loaded.</p>
+<h1><a href="#bugs">BUGS</a></h1>
+<p>When parsing for individual flag characters in <code>mode</code> (i.e., the characters preceding the &quot;ccs&quot; specification), the glibc implementation of <a href="fopen">fopen</a>() and <a href="freopen">freopen</a>() limits the number of characters examined in <code>mode</code> to 7 (or, in glibc versions before 2.14, to 6, which was not enough to include possible specifications such as &quot;rb+cmxe&quot;). The current implementation of <a href="fdopen">fdopen</a>() parses at most 5 characters in <code>mode</code>.</p>
+<h1><a href="#see-also">SEE ALSO</a></h1>
+<p><a href="/2/open">open</a>(2), <a href="/3/fclose">fclose</a>(3), <a href="/3/fileno">fileno</a>(3), <a href="/3/fmemopen">fmemopen</a>(3), <a href="/3/fopencookie">fopencookie</a>(3), <a href="/3/open_memstream">open_memstream</a>(3)</p>
+<h1><a href="#colophon">COLOPHON</a></h1>
+<p>This page is part of release 5.10 of the Linux <code>man-pages</code> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</p>
+
+
+
+        </div>
+    </body>
+</html>
