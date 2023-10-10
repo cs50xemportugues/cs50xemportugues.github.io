@@ -3,40 +3,40 @@ import time
 from files_names.text.specifications import specifications, specifications_part1, specifications_part2
 from dotenv import load_dotenv
 load_dotenv()  
-import datetime
 import os
 import sys
-from dotenv import load_dotenv
-load_dotenv()
 
 openai.api_key = os.getenv('CHATGPT_KEY')
 
-def concat_files(input_filenames, folder, language):
-    with open(f"cs50x/content/{language}/{folder}/{input_filenames[0][0:-1]}.md", 'w') as outfile:
-        for fname in input_filenames:
-            with open(f"cs50x/content/{language}/{folder}/{fname}.md") as infile:
-                for line in infile:
-                    outfile.write(line)
-            outfile.write("\n\n")
-
-def concat_files_notes(input_filenames, folder, language):
-    with open(f"cs50x/content/{language}/{folder}/{input_filenames[0][0:-2]}.md", 'w') as outfile:
-        for fname in input_filenames:
-            with open(f"cs50x/content/{language}/{folder}/{fname}.md") as infile:
-                for line in infile:
-                    outfile.write(line)
-            outfile.write("\n\n")
 
 def translate(files, folder, language, extension, file_description):
 
     for f in files:
-        try:    
-            print(f"cs50x/content/english/{folder}/{f}.{extension}")
-            source_file = open(f"cs50x/content/english/{folder}/{f}.{extension}", "r")
+
+        try:
+            if folder=="manual":
+                root_folder = "app/content/english"
+            else:
+                root_folder = "cs50x/content/english"
+
+            if (folder=="labs_code" or folder=="psets_code"):
+                source_file = open(f"{root_folder}/{folder}/{f}/{f}.{extension}", "r")
+            elif (folder=="labs_checks"):
+                source_file = open(f"{root_folder}/{folder}/{f}/__init__.{extension}", "r")
+            else:
+                source_file = open(f"{root_folder}/{folder}/{f}.{extension}", "r")
+
             print(">>>>>>>>>> HERE 1")
             try:
-
-                if (extension=="c"):
+                if (extension=="py"):
+                    response = openai.ChatCompletion.create(
+                        model="gpt-3.5-turbo",
+                        messages=[
+                            {"role": "system", "content": f"You are a helpful assistant that translates Python language code from English to {language.capitalize()}. Translate the function names also."},
+                            {"role": "user", "content": f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''}
+                        ],
+                    )
+                elif (extension=="c"):
                         response = openai.ChatCompletion.create(
                         model="gpt-3.5-turbo",
                         messages=[
@@ -58,9 +58,64 @@ def translate(files, folder, language, extension, file_description):
                 print(response.choices[0].message.content)
 
                 # It generates an html file instead of markdown because the pset page require the url_for function to properly route
+                
                 if folder=="psets":
                     generated_file = open(f'templates/{language}/psets/{f}.{extension}', 'w')
                     generated_file.writelines(response.choices[0].message.content)
+
+                if folder=="manual":
+                    current_directory = os.getcwd()
+                    file_destination = f"{current_directory}/app/content/{language}/{folder}"
+                    # Creates folder if not exists
+                    if not (os.path.exists(file_destination)):
+                        os.makedirs(file_destination)
+
+                    translated_file = response.choices[0].message.content
+
+                    # remove " at the end of file
+                    if translated_file.startswith("'"):
+                        translated_file = translated_file[1:]
+                    if translated_file.startswith('"'):
+                        translated_file = translated_file[1:]
+                    # remove ' at the end of file
+                    if translated_file.endswith("'"):
+                        translated_file = translated_file[:-1]
+                    if translated_file.endswith('"'):
+                        translated_file = translated_file[:-1]
+
+                    generated_file = open(f'{file_destination}/{f}.{extension}', 'w')
+                    generated_file.writelines(translated_file)
+
+                elif folder=="labs_code" or folder=="psets_code":
+
+                    current_directory = os.getcwd()
+                    file_destination = f"{current_directory}/cs50x/content/{language}/{folder}/{f}"
+
+                    # Creates folder if not exists
+                    if not (os.path.exists(file_destination)):
+                        os.makedirs(file_destination)
+
+                    generated_file = open(f'{file_destination}/{f}.{extension}', 'w')
+
+                    # Replace TODO by FAZER
+                    translated_file = response.choices[0].message.content.replace("TODO", "FAZER").replace("TO-DO", "FAZER")
+                    translated_file.replace("int principal(", "int main(")
+                    # remove ' at start of file
+                    if translated_file.startswith("'"):
+                        translated_file = translated_file[1:]
+                    # remove ' at the end of file
+                    if translated_file.endswith("'"):
+                        translated_file = translated_file[:-1]
+
+                    generated_file.writelines(translated_file)
+
+                elif folder=="labs_checks":
+                    generated_file = open(f'cs50x/content/{language}/labs_checks/{f}/__init__.{extension}', 'w')
+                    generated_file.writelines(response.choices[0].message.content.replace("importar ", "import ").replace("check50.verificar", "check50.check").replace("check50.existe", "check50.exists").replace("check50.c.compila", "check50.c.compile").replace("check50.executar", "check50.run").replace(".entradas(", ".stdin(").replace(".rejeitar()", ".reject()").replace(".saída(", ".stdout(").replace(".sair(0)", ".exit(0)"))
+
+                    source_cs50yml = open(f"cs50x/content/english/labs_checks/{f}/.cs50.yml", "r")
+                    cs50yml = open(f'cs50x/content/{language}/labs_checks/{f}/.cs50.yml', 'w')
+                    cs50yml.writelines(source_cs50yml.readlines())
                 elif folder=="psets_code":
                     generated_file = open(f'cs50x/content/{language}/{folder}/{f}.{extension}', 'w')
                     generated_file.writelines(response.choices[0].message.content)
@@ -77,6 +132,23 @@ def translate(files, folder, language, extension, file_description):
         except:
             print("Error: couldn't open the file")
             pass
+
+
+def concat_files(input_filenames, folder, language):
+    with open(f"cs50x/content/{language}/{folder}/{input_filenames[0][0:-1]}.md", 'w') as outfile:
+        for fname in input_filenames:
+            with open(f"cs50x/content/{language}/{folder}/{fname}.md") as infile:
+                for line in infile:
+                    outfile.write(line)
+            outfile.write("\n\n")
+
+def concat_files_notes(input_filenames, folder, language):
+    with open(f"cs50x/content/{language}/{folder}/{input_filenames[0][0:-2]}.md", 'w') as outfile:
+        for fname in input_filenames:
+            with open(f"cs50x/content/{language}/{folder}/{fname}.md") as infile:
+                for line in infile:
+                    outfile.write(line)
+            outfile.write("\n\n")
 
 def translate_specifications(language):
     translate(specifications, "specifications", language, "md", "Markdown file")
@@ -313,7 +385,6 @@ def translate_notes(language):
         "0_e",
         "0_f",
         "0_g",
-        "0_h",
     ]
 
     notes1 = [
@@ -324,6 +395,7 @@ def translate_notes(language):
         "1_e",
         "1_f",
         "1_g",
+        "1_h"
     ]
 
     notes2 = [
@@ -341,6 +413,7 @@ def translate_notes(language):
         "3_c",
         "3_d",
         "3_e",
+        "3_f"
     ]
 
     notes4 = [
@@ -349,20 +422,12 @@ def translate_notes(language):
         "4_c",
         "4_d",
         "4_e",
-        "4_f",
-        "4_g",
-        "4_h",
     ]
 
     notes5 = [
         "5_a",
         "5_b",
         "5_c",
-        "5_d",
-        "5_e",
-        "5_f",
-        "5_g",
-        "5_h",
     ]
 
     notes6 = [
@@ -371,13 +436,6 @@ def translate_notes(language):
         "6_c",
         "6_d",
         "6_e",
-        "6_f",
-        "6_g",
-        "6_h",
-        "6_i",
-        "6_j",
-        "6_k",
-        "6_l",
     ]
 
     notes7 = [
@@ -387,7 +445,6 @@ def translate_notes(language):
         "7_d",
         "7_e",
         "7_f",
-        "7_g",
     ]
 
     notes8 = [
@@ -413,12 +470,13 @@ def translate_notes(language):
         "9_h",
     ]
 
-    files = notes0 + notes1 + notes2 + notes3+ notes4+ notes5+ notes6+ notes7+ notes8+ notes9
+    #files = notes0 + notes1 + notes2 + notes3+ notes4+ notes5+ notes6+ notes7+ notes8+ notes9
+    files =  notes7+ notes8+ notes9
 
     translate(files, "notes", language, "md", "Markdown file")
 
-    concat_files_notes(notes0, "notes", language)
-    concat_files_notes(notes1, "notes", language)
+    #concat_files_notes(notes0, "notes", language)
+    #concat_files_notes(notes1, "notes", language)
     concat_files_notes(notes2, "notes", language)
     concat_files_notes(notes3, "notes", language)
     concat_files_notes(notes4, "notes", language)
@@ -427,14 +485,82 @@ def translate_notes(language):
     concat_files_notes(notes7, "notes", language)
     concat_files_notes(notes8, "notes", language)
     concat_files_notes(notes9, "notes", language)
-
+    
 def translate_psets(language):
     psets = ["2", "3", "4", "5", "6", "7", "8", "9"]
     translate(psets, "psets", language, "html", "HTML file")
 
 def translate_psets_code(language):
-    psets_code = ["bulbs/bulbs", "cash/cash"]
+    psets_code = ["bulbs", "caesar", "cash", "credit", "plurality", "readability", "recover", "reverse", "runoff", "substitution", "tideman", "wordle"]
     translate(psets_code, "psets_code", language, "c", "C language code")
+
+# TODO
+def translate_labs_checks(language):
+    #checks = ["population", "scrabble", "smiley"]
+    translate(["smiley", "population"], "labs_checks", language, "py", "Python code")
+
+def translate_labs_code(language):
+    code = ["inheritance", "scrabble", "volume"]
+    translate(code, "labs_code", language, "c", "C code")
+    
+def translate_manual(language):
+
+    manual = [
+        "atof",
+        "atoi",
+        "atol",
+        "ceil",
+        "fclose",
+        "floor",
+        "fopen",
+        "fprintf",
+        "fread",
+        "free",
+        "fscanf",
+        "fwrite",
+        "get_char",
+        "get_double",
+        "get_float",
+        "get_int",
+        "get_long",
+        "get_string",
+        "isalnum",
+        "isalpha",
+        "isblank",
+        "isdigit",
+        "islower",
+        "ispunct",
+        "isspace",
+        "isupper",
+        "log2",
+        "malloc",
+        "pow",
+        "printf",
+        "random",
+        "realloc",
+        "round",
+        "scanf",
+        "sprintf",
+        "sqrt",
+        "srandom",
+        "strcasecmp",
+        "strcasestr",
+        "strcmp",
+        "strcpy",
+        "strlen",
+        "strstr",
+        "time",
+        "tolower",
+        "toupper",
+    ]
+
+
+    manual = [
+        "scanf",
+    ]
+    
+    translate(manual, "manual", language, "md", "Markdown file")
+
 
 if sys.argv[1] != "notes" and sys.argv[1] == "specifications" and sys.argv[1] == "psets":
     print("Usage: python translate.py CONTENT_TYPE LANGUAGE")
@@ -452,5 +578,11 @@ else:
         translate_specifications_divided_part2(sys.argv[2])
     elif sys.argv[1] == "psets":
         translate_psets(sys.argv[2])
+    elif sys.argv[1] == "labs_code":
+        translate_labs_code(sys.argv[2])
     elif sys.argv[1] == "psets_code":
         translate_psets_code(sys.argv[2])
+    elif sys.argv[1] == "labs_checks":
+        translate_labs_checks(sys.argv[2])
+    elif sys.argv[1] == "manual":
+        translate_manual(sys.argv[2])

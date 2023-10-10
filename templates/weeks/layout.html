@@ -62,11 +62,13 @@
     {{week_page.shorts}}
     <ol>
       {% for short in week.shorts %}
-      <li>
-        <a target="_blank" href="{{week.shorts[short].link}}"
-          >{{week.shorts[short].name}}</a
-        >
-      </li>
+        {% if week.shorts[short].link %}
+          <li>
+            <a target="_blank" href="{{week.shorts[short].link}}"
+              >{{week.shorts[short].name}}</a
+            >
+          </li>
+        {% endif %}
       {% endfor %}
     </ol>
   </li>

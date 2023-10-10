@@ -34,8 +34,10 @@ The translated content will be stored at `cs50x/content/LANGUAGE`. These transla
 
 ### Environment Variables
 
-- `COURSE_LANGUAGE`: The language of the course to visualize the website (portuguese, spanish, or french)
+Create a `.env` file and include the following environment variables:
 
+- `COURSE_LANGUAGE`: The language of the course to visualize the website (portuguese, spanish, or french)
+- `CHATGPT_KEY`: Your ChatGPT API key
 
 ## Building the Project
 
@@ -43,4 +45,4 @@ After translating the content, run the following command to build (freeze) the p
 
 `python freeze.py`
 
-This will create a folder called `build` that contains the files that compose the website. You can host it on Github Pages.
+This will create a folder called `build_LANGUAGE` (e.g. `build_portuguese`) that contains the files that compose the website. You can host it on Github Pages.

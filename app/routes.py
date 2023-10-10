@@ -9,13 +9,5 @@ def index():
 
 @bp.route('/estilo')
 @bp.route('/estilo.html')
-def manual():
+def estilo():
     return render_template('estilo.html')
-
-@bp.route('/download/<path:filename>')
-@bp.route('/download/<path:filename>.html')
-def return_file(filename):
-	try:
-		return send_from_directory("download_files", filename, as_attachment=True)
-	except Exception as e:
-		return str(e)

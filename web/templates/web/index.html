@@ -1,0 +1,8 @@
+{% extends 'web/layout.html' %}
+
+{% block conteudo %}
+    
+    {{markdown_text | safe}}
+    
+    <img  style="margin-top: 100px" id="logo" alt="Imagem do gato do CS50" src="{{ url_for('static', filename='images/'+config['LANGUAGE']+'.png') }}">            
+{% endblock %}

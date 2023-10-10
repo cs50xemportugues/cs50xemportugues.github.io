@@ -16,40 +16,46 @@ def create_app():
     app.config["FREEZE_DESTINATION"] = f"build_{os.environ['COURSE_LANGUAGE']}"
   
     if os.environ["COURSE_LANGUAGE"] == "portuguese":
-        app.config["FREEZER_DESTINATION"] = "portuguese" + "_website"
+        app.config["FREEZER_DESTINATION"] = "build_" + "portuguese"
         app.config["LANGUAGE"] = "portuguese"
         app.config["ASIDE_BG_COLOR"] = "green"
         app.config["LANGUAGE_MENU"] = menu_portuguese
         app.config["URLS"] = urls_portuguese
 
     elif os.environ["COURSE_LANGUAGE"] == "spanish":
-        app.config["FREEZER_DESTINATION"] = "spanish" + "_website"
+        app.config["FREEZER_DESTINATION"] = "build_" + "spanish"
         app.config["LANGUAGE"] = "spanish"
         app.config["ASIDE_BG_COLOR"] = "red"
         app.config["LANGUAGE_MENU"] = menu_spanish
         app.config["URLS"] = urls_spanish
 
     elif os.environ["COURSE_LANGUAGE"] == "french":
-        app.config["FREEZER_DESTINATION"] = "french" + "_website"
+        app.config["FREEZER_DESTINATION"] = "build_" + "french"
         app.config["LANGUAGE"] = "french"
         app.config["ASIDE_BG_COLOR"] = "blue"
         app.config["LANGUAGE_MENU"] = menu_french
         app.config["URLS"] = urls_french
 
     elif os.environ["COURSE_LANGUAGE"] == "english":
-        app.config["FREEZER_DESTINATION"] = "english" + "_website"
+        app.config["FREEZER_DESTINATION"] = "build_" + "english"
         app.config["LANGUAGE"] = "english"
         app.config["ASIDE_BG_COLOR"] = "black"
         app.config["LANGUAGE_MENU"] = menu_english
         app.config["URLS"] = urls_english
 
     with app.app_context():
+        from cs50x import cs50x as cs50x_bp
+        app.register_blueprint(cs50x_bp, url_prefix='/2023')
+
+        from python import python as python_bp
+        app.register_blueprint(python_bp, url_prefix='/python')
+
+        from web import web as web_bp
+        app.register_blueprint(web_bp, url_prefix='/web')
+
         from app import app as cs50_app
         app.register_blueprint(cs50_app, url_prefix='/')
 
-        from cs50x import cs50x
-        app.register_blueprint(cs50x, url_prefix='/2023')
-        
     return app
 
 if __name__ == '__main__':

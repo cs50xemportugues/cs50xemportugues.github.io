@@ -21,6 +21,7 @@ menu = {
     "python_documentation": "Documentação Python",
     "adminer": "Navegador PostgreSQL",
     "sqlite_browser": "Navegador SQLite",
+    "manual": "Manual do Programador"
 }
 
 week_page = {
