@@ -1,325 +1,299 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <head>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-
-        <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
-        <link href="/static/49a1a858-favicon-32x32.png" rel="icon" type="image/png">
-
-        <script>
-            window.FontAwesomeConfig = { autoReplaceSvg: false };
-        </script>
-
-        <link href="/static/dist/main.css?1694737498" rel="stylesheet">
-        <script src="/static/dist/main.js?1694737498"></script>
-        <link
-        rel="stylesheet"
-        type="text/css"
-        href="/static/css/main.css"
+    <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+    <link
+      href="/static/49a1a858-favicon-32x32.png"
+      rel="icon"
+      type="image/png"
     />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="/static/css/rouge.css"
-        />
-        <script src="/static/js/main.js"></script>
-        <script>
 
-            
 
-    $(function() {
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      window.FontAwesomeConfig = { autoReplaceSvg: false };
+    </script>
 
+    <link href="/static/dist/main.css?1694737498" rel="stylesheet" />
+    <script src="/static/dist/main.js?1694737498"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/rouge.css"
+    />
+    <script src="/static/js/main.js"></script>
+    <script>
+      $(function () {
         // Hide less-comfortable descriptions
-        $('[data-less]').addClass('d-none');
+        $("[data-less]").addClass("d-none");
 
         // Listen for checkbox
-        $('#filter').on('change', function() {
-            if ($('#filter').is(':checked')) {
-                $('[data-less]').removeClass('d-none');
-                $('[data-more]').addClass('d-none');
-            }
-            else {
-                $('[data-more]').removeClass('d-none');
-                $('[data-less]').addClass('d-none');
+        $("#filter")
+          .on("change", function () {
+            if ($("#filter").is(":checked")) {
+              $("[data-less]").removeClass("d-none");
+              $("[data-more]").addClass("d-none");
+            } else {
+              $("[data-more]").removeClass("d-none");
+              $("[data-less]").addClass("d-none");
             }
             filter();
-        }).trigger('change');
+          })
+          .trigger("change");
 
         // Listen for searches
-        $('#q').on('change keyup', function() {
-            filter();
+        $("#q").on("change keyup", function () {
+          filter();
         });
-        $('#q').closest('form').on('submit', function(e) {
+        $("#q")
+          .closest("form")
+          .on("submit", function (e) {
             e.preventDefault();
-        });
+          });
 
         // Filter results
         filter();
 
         // Unless user's followed a link to a heading, filter index
         if (window.location.hash) {
-            $('#filter').prop('checked', false).trigger('change');
+          $("#filter").prop("checked", false).trigger("change");
         }
 
         // Give focus to search (after body is visible)
         else {
-            $(function() {
-                $('#q').focus();
-            });
+          $(function () {
+            $("#q").focus();
+          });
         }
-    });
+      });
 
-    function filter() {
-        let q = $('#q').val().trim().split(/\s+/);
-        if (q.length === 1 && q[0] === '') {
-            q = [];
+      function filter() {
+        let q = $("#q").val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === "") {
+          q = [];
         }
-        $('h1').each(function(index, element) {
-            const $h1 = $(element);
-            const header = $h1.val();
-            const $ul = $h1.next('ul');
-            $ul.children('li').each(function(index, element) {
-                const $li = $(element);
-                if ($('#filter').prop('checked') && $li.attr('data-filter') === undefined) {
-                    $li.addClass('filtered');
-                }
-                else {
-                    $li.removeClass('filtered');
-                }
-                const haystack = $h1.text() + $li.text().trim();
-                let matches = q.filter(function(s) {
-                    return haystack.match(new RegExp(s, 'i')) !== null;
-                });
-                if (matches.length === q.length) {
-                    $li.removeClass('mismatched');
-                }
-                else {
-                    $li.addClass('mismatched');
-                }
+        $("h1").each(function (index, element) {
+          const $h1 = $(element);
+          const header = $h1.val();
+          const $ul = $h1.next("ul");
+          $ul.children("li").each(function (index, element) {
+            const $li = $(element);
+            if (
+              $("#filter").prop("checked") &&
+              $li.attr("data-filter") === undefined
+            ) {
+              $li.addClass("filtered");
+            } else {
+              $li.removeClass("filtered");
+            }
+            const haystack = $h1.text() + $li.text().trim();
+            let matches = q.filter(function (s) {
+              return haystack.match(new RegExp(s, "i")) !== null;
             });
-            if ($ul.children('li:not(.filtered, .mismatched)').length > 0) {
-                $h1.removeClass('d-none');
-                $ul.removeClass('d-none');
+            if (matches.length === q.length) {
+              $li.removeClass("mismatched");
+            } else {
+              $li.addClass("mismatched");
             }
-            else {
-                $h1.addClass('d-none');
-                $ul.addClass('d-none');
-            }
+          });
+          if ($ul.children("li:not(.filtered, .mismatched)").length > 0) {
+            $h1.removeClass("d-none");
+            $ul.removeClass("d-none");
+          } else {
+            $h1.addClass("d-none");
+            $ul.addClass("d-none");
+          }
         });
-    };
+      }
+    </script>
 
+    <script>
+      $(function () {
+        // Add borders to tables
+        $(".table").addClass("table-bordered");
 
+        // Enable popovers
+        $('[data-bs-toggle="popover"]').each(function (index, element) {
+          new bootstrap.Popover(element, {
+            boundary: "viewport",
+            html: true,
+            placement: "bottom",
+            trigger: "focus",
+          });
+        });
 
-        </script>
+        // Ensure all elements are styled the same
+        $("h1").addClass("border-bottom fw-bold h2 mb-3 pb-2 pt-4");
+        $("h2").addClass("fw-bold h3");
 
-        <script>
+        // Ensure last heading can be anchored atop page
+        $(window).resize(function () {
+          const top = $("h1").last().offset().top;
+          const margin = $(window).height() - ($("body").outerHeight() - top);
+          $("body").css("margin-bottom", Math.max(0, Math.ceil(margin)) + "px");
+        });
+        $(window).trigger("resize");
 
-            $(function() {
+        // Reveal body
+        $("body").removeClass("invisible");
+      });
+    </script>
 
-                // Add borders to tables
-                $('.table').addClass('table-bordered');
+    <style>
+      /* Style popovers */
+      .popover {
+        font-family: inherit;
+        max-width: 100%;
+      }
 
-                // Enable popovers
-                $('[data-bs-toggle="popover"]').each(function(index, element) {
-                    new bootstrap.Popover(element, {
-                        boundary: 'viewport',
-                        html: true,
-                        placement: 'bottom',
-                        trigger: 'focus'
-                    });
-                });
-
-                // Ensure all elements are styled the same
-                $('h1').addClass('border-bottom fw-bold h2 mb-3 pb-2 pt-4');
-                $('h2').addClass('fw-bold h3');
-
-                // Ensure last heading can be anchored atop page
-                $(window).resize(function() {
-                    const top = $('h1').last().offset().top;
-                    const margin = $(window).height() - ($('body').outerHeight() - top);
-                    $('body').css('margin-bottom', Math.max(0, Math.ceil(margin)) + 'px');
-                });
-                $(window).trigger('resize');
-
-                // Reveal body
-                $('body').removeClass('invisible');
-            });
-
-        </script>
-
-        <style>
-
-            /* Style popovers */
-            .popover {
-                font-family: inherit;
-                max-width: 100%;
-            }
-
-            /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+      /* Wrap long words (and URLs, whether linked or not), especially on mobile,
             but not in buttons and not in tables, which should instead scroll horizontally */
-            * {
-                word-break: break-word;
-            }
-            button, table * {
-                word-break: normal;
-            }
+      * {
+        word-break: break-word;
+      }
+      button,
+      table * {
+        word-break: normal;
+      }
 
-            /* Remove underlining */
-            a {
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-            nav a:hover {
-                text-decoration: none;
-            }
+      /* Remove underlining */
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      nav a:hover {
+        text-decoration: none;
+      }
 
-            /* Match Gmail's yellow */
-            a[data-bs-toggle=popover] {
-                border-bottom: 2px solid rgb(252, 237, 193);
-                box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
-                cursor: help;
-            }
-            a[data-bs-toggle=popover]:hover {
-                background-color: rgb(252, 237, 193);
-            }
+      /* Match Gmail's yellow */
+      a[data-bs-toggle="popover"] {
+        border-bottom: 2px solid rgb(252, 237, 193);
+        box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+        cursor: help;
+      }
+      a[data-bs-toggle="popover"]:hover {
+        background-color: rgb(252, 237, 193);
+      }
 
-            /* Match pre tags */
-            code {
-                color: inherit;
-            }
+      /* Match pre tags */
+      code {
+        color: inherit;
+      }
 
-            /* A la Jekyll theme */
-            code, pre {
-                background-color: #f8f9fa;
-                border: 1px solid #dee2e6;
-                padding: calc(.2rem - 3px) 0.2rem;
-            }
-            pre code {
-                background-color: initial;
-                border: initial;
-                padding: initial;
-            }
+      /* A la Jekyll theme */
+      code {
+        border: 1px solid #dee2e6;
+      }
 
-            /* Don't shrink these */
-            code, pre {
-                font-size: inherit;
-            }
+      pre {
+        padding: 0 !important;
+      }
 
-            /* Don't italicize */
-            dl dt {
-                font-style: normal;
-            }
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
 
-            /* Don't fill viewport */
-            .table {
-                width: inherit;
-            }
+      /* Don't italicize */
+      dl dt {
+        font-style: normal;
+      }
 
-        </style>
+      /* Don't fill viewport */
+      .table {
+        width: inherit;
+      }
 
-        <style>
+      td,
+      th {
+        border: 1px solid rgb(228, 228, 228);
+        padding: 8px;
+      }
 
-            
+      table {
+        margin-bottom: 15px;
+      }
 
-    /* Don't display */
-    .filtered, .mismatched {
+      h2 {
+        font-size: 1em !important;
+      }
+
+      ul {
+        padding-left: 30px !important;
+        list-style-type: disc !important;
+      }
+    </style>
+
+    <style>
+      /* Don't display */
+      .filtered,
+      .mismatched {
         display: none;
-    }
+      }
 
-    /* No bullets */
-    ul {
+      /* No bullets */
+      ul {
         list-style-type: none;
         padding-left: 0;
-    }
+      }
 
-    pre {
+      pre {
         padding: 20px;
-    }
+      }
+    </style>
 
-        </style>
+    <title>CS50 Manual do Programador</title>
+  </head>
 
-        <title>CS50 Manual do Programador</title>
+  <body class="font-monospace invisible pb-5">
+    <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+      <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+    </nav>
 
-    </head>
+    <div class="container-fluid mt-2 px-4">
+      
 
-    <body class="font-monospace invisible pb-5">
-
-        <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
-            <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
-        </nav>
-
-        <div class="container-fluid mt-2 px-4">
-            
-
-<h1><a href="#name">NAME</a></h1>
-<p>atol - convert a <code>string</code> to a <code>long</code></p>
-<p>atoi, atol, atoll - convert a string to an integer</p>
-<h1><a href="#synopsis">SYNOPSIS</a></h1>
-<h2>Header File</h2>
+<h1><a href="#nome">NOME</a></h1>
+<p>atol - converte uma <code>string</code> em um <code>long</code></p>
+<h1><a href="#sinopse">SINOPSE</a></h1>
+<h2>Arquivo de Cabeçalho</h2>
 <pre><code>#include &lt;stdlib.h&gt;
 </code></pre>
-<h2>Prototype</h2>
+<h2>Protótipo</h2>
 <pre><code>long atol(string s);
-
-
+</code></pre>
+<h1><a href="#descrição">DESCRIÇÃO</a></h1>
+<p>Esta função converte um inteiro (positivo ou negativo) de uma <code>string</code> (por exemplo, <code>"50"</code>) para um <code>long</code> (por exemplo, <code>50</code>).</p>
+<h1><a href="#valor-de-retorno">VALOR DE RETORNO</a></h1>
+<p>Esta função retorna o valor de entrada, <code>s</code>, como um <code>long</code>.</p>
+<h1><a href="#exemplo">EXEMPLO</a></h1>
+<pre><code>#include &lt;stdio.h&gt;
 #include &lt;stdlib.h&gt;
 
-int atoi(const char *nptr);
-long atol(const char *nptr);
-long long atoll(const char *nptr);
-</code></pre>
-<blockquote>
-<p>Feature Test Macro Requirements for glibc (see <a href="/7/feature_test_macros">feature_test_macros</a>(7)):</p>
-</blockquote>
-<p><a href="atoll">atoll</a>():</p>
-<blockquote>
-<p>_ISOC99_SOURCE || || /* Glibc versions &lt;= 2.19: */ _BSD_SOURCE || _SVID_SOURCE</p>
-</blockquote>
-<h1><a href="#description">DESCRIPTION</a></h1>
-<p>This function converts a (positive or negative) integer from a <code>string</code> (e.g., <code>&quot;50&quot;</code>) to a <code>long</code> (e.g., <code>50</code>).</p>
-<p>The <a href="atoi">atoi</a>() function converts the initial portion of the string pointed to by <code>nptr</code> to <code>int</code>. The behavior is the same as</p>
-<pre><code>strtol(nptr, NULL, 10);
-</code></pre>
-<p>except that <a href="atoi">atoi</a>() does not detect errors.</p>
-<p>The <a href="atol">atol</a>() and <a href="atoll">atoll</a>() functions behave the same as <a href="atoi">atoi</a>(), except that they convert the initial portion of the string to their return type of <code>long</code> or <code>long long</code>.</p>
-<h1><a href="#return-value">RETURN VALUE</a></h1>
-<p>This function returns its input, <code>s</code>, as a <code>long</code>.</p>
-<p>The converted value or 0 on error.</p>
-<h1><a href="#example">EXAMPLE</a></h1>
-<pre><code>#include &lt;stdio.h&gt;#include &lt;stdlib.h&gt;
 int main(void)
 {
-    printf(&quot;This is CS%li\n&quot;, atol(&quot;50&quot;));
+    printf("Este é o CS%li\n", atol("50"));
 }
 </code></pre>
-<h1><a href="#attributes">ATTRIBUTES</a></h1>
-<p>For an explanation of the terms used in this section, see <a href="/7/attributes">attributes</a>(7).</p>
-<p>Interface</p>
-<p>Attribute</p>
-<p>Value</p>
-<p><a href="atoi">atoi</a>(), <a href="atol">atol</a>(), <a href="atoll">atoll</a>()</p>
-<p>Thread safety</p>
-<p>MT-Safe locale</p>
-<h1><a href="#conforming-to">CONFORMING TO</a></h1>
-<p>POSIX.1-2001, POSIX.1-2008, C99, SVr4, 4.3BSD. C89 and POSIX.1-1996 include the functions <a href="atoi">atoi</a>() and <a href="atol">atol</a>() only.</p>
-<h1><a href="#notes">NOTES</a></h1>
-<p>POSIX.1 leaves the return value of <a href="atoi">atoi</a>() on error unspecified. On glibc, musl libc, and uClibc, 0 is returned on error.</p>
-<h1><a href="#bugs">BUGS</a></h1>
-<p><code>errno</code> is not set on error so there is no way to distinguish between 0 as an error and as the converted value. No checks for overflow or underflow are done. Only base-10 input can be converted. It is recommended to instead use the <a href="strtol">strtol</a>() and <a href="strtoul">strtoul</a>() family of functions in new programs.</p>
-<h1><a href="#see-also">SEE ALSO</a></h1>
-<p><a href="/3/atof">atof</a>(3), <a href="/3/strtod">strtod</a>(3), <a href="/3/strtol">strtol</a>(3), <a href="/3/strtoul">strtoul</a>(3)</p>
-<h1><a href="#colophon">COLOPHON</a></h1>
-<p>This page is part of release 5.10 of the Linux <code>man-pages</code> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</p>
 
 
-
-        </div>
-    </body>
+    </div>
+  </body>
 </html>

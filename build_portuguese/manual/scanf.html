@@ -1,489 +1,336 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <head>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-
-        <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
-        <link href="/static/49a1a858-favicon-32x32.png" rel="icon" type="image/png">
-
-        <script>
-            window.FontAwesomeConfig = { autoReplaceSvg: false };
-        </script>
-
-        <link href="/static/dist/main.css?1694737498" rel="stylesheet">
-        <script src="/static/dist/main.js?1694737498"></script>
-        <link
-        rel="stylesheet"
-        type="text/css"
-        href="/static/css/main.css"
+    <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+    <link
+      href="/static/49a1a858-favicon-32x32.png"
+      rel="icon"
+      type="image/png"
     />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="/static/css/rouge.css"
-        />
-        <script src="/static/js/main.js"></script>
-        <script>
 
-            
 
-    $(function() {
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      window.FontAwesomeConfig = { autoReplaceSvg: false };
+    </script>
 
+    <link href="/static/dist/main.css?1694737498" rel="stylesheet" />
+    <script src="/static/dist/main.js?1694737498"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/rouge.css"
+    />
+    <script src="/static/js/main.js"></script>
+    <script>
+      $(function () {
         // Hide less-comfortable descriptions
-        $('[data-less]').addClass('d-none');
+        $("[data-less]").addClass("d-none");
 
         // Listen for checkbox
-        $('#filter').on('change', function() {
-            if ($('#filter').is(':checked')) {
-                $('[data-less]').removeClass('d-none');
-                $('[data-more]').addClass('d-none');
-            }
-            else {
-                $('[data-more]').removeClass('d-none');
-                $('[data-less]').addClass('d-none');
+        $("#filter")
+          .on("change", function () {
+            if ($("#filter").is(":checked")) {
+              $("[data-less]").removeClass("d-none");
+              $("[data-more]").addClass("d-none");
+            } else {
+              $("[data-more]").removeClass("d-none");
+              $("[data-less]").addClass("d-none");
             }
             filter();
-        }).trigger('change');
+          })
+          .trigger("change");
 
         // Listen for searches
-        $('#q').on('change keyup', function() {
-            filter();
+        $("#q").on("change keyup", function () {
+          filter();
         });
-        $('#q').closest('form').on('submit', function(e) {
+        $("#q")
+          .closest("form")
+          .on("submit", function (e) {
             e.preventDefault();
-        });
+          });
 
         // Filter results
         filter();
 
         // Unless user's followed a link to a heading, filter index
         if (window.location.hash) {
-            $('#filter').prop('checked', false).trigger('change');
+          $("#filter").prop("checked", false).trigger("change");
         }
 
         // Give focus to search (after body is visible)
         else {
-            $(function() {
-                $('#q').focus();
-            });
+          $(function () {
+            $("#q").focus();
+          });
         }
-    });
+      });
 
-    function filter() {
-        let q = $('#q').val().trim().split(/\s+/);
-        if (q.length === 1 && q[0] === '') {
-            q = [];
+      function filter() {
+        let q = $("#q").val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === "") {
+          q = [];
         }
-        $('h1').each(function(index, element) {
-            const $h1 = $(element);
-            const header = $h1.val();
-            const $ul = $h1.next('ul');
-            $ul.children('li').each(function(index, element) {
-                const $li = $(element);
-                if ($('#filter').prop('checked') && $li.attr('data-filter') === undefined) {
-                    $li.addClass('filtered');
-                }
-                else {
-                    $li.removeClass('filtered');
-                }
-                const haystack = $h1.text() + $li.text().trim();
-                let matches = q.filter(function(s) {
-                    return haystack.match(new RegExp(s, 'i')) !== null;
-                });
-                if (matches.length === q.length) {
-                    $li.removeClass('mismatched');
-                }
-                else {
-                    $li.addClass('mismatched');
-                }
+        $("h1").each(function (index, element) {
+          const $h1 = $(element);
+          const header = $h1.val();
+          const $ul = $h1.next("ul");
+          $ul.children("li").each(function (index, element) {
+            const $li = $(element);
+            if (
+              $("#filter").prop("checked") &&
+              $li.attr("data-filter") === undefined
+            ) {
+              $li.addClass("filtered");
+            } else {
+              $li.removeClass("filtered");
+            }
+            const haystack = $h1.text() + $li.text().trim();
+            let matches = q.filter(function (s) {
+              return haystack.match(new RegExp(s, "i")) !== null;
             });
-            if ($ul.children('li:not(.filtered, .mismatched)').length > 0) {
-                $h1.removeClass('d-none');
-                $ul.removeClass('d-none');
+            if (matches.length === q.length) {
+              $li.removeClass("mismatched");
+            } else {
+              $li.addClass("mismatched");
             }
-            else {
-                $h1.addClass('d-none');
-                $ul.addClass('d-none');
-            }
+          });
+          if ($ul.children("li:not(.filtered, .mismatched)").length > 0) {
+            $h1.removeClass("d-none");
+            $ul.removeClass("d-none");
+          } else {
+            $h1.addClass("d-none");
+            $ul.addClass("d-none");
+          }
         });
-    };
+      }
+    </script>
 
+    <script>
+      $(function () {
+        // Add borders to tables
+        $(".table").addClass("table-bordered");
 
+        // Enable popovers
+        $('[data-bs-toggle="popover"]').each(function (index, element) {
+          new bootstrap.Popover(element, {
+            boundary: "viewport",
+            html: true,
+            placement: "bottom",
+            trigger: "focus",
+          });
+        });
 
-        </script>
+        // Ensure all elements are styled the same
+        $("h1").addClass("border-bottom fw-bold h2 mb-3 pb-2 pt-4");
+        $("h2").addClass("fw-bold h3");
 
-        <script>
+        // Ensure last heading can be anchored atop page
+        $(window).resize(function () {
+          const top = $("h1").last().offset().top;
+          const margin = $(window).height() - ($("body").outerHeight() - top);
+          $("body").css("margin-bottom", Math.max(0, Math.ceil(margin)) + "px");
+        });
+        $(window).trigger("resize");
 
-            $(function() {
+        // Reveal body
+        $("body").removeClass("invisible");
+      });
+    </script>
 
-                // Add borders to tables
-                $('.table').addClass('table-bordered');
+    <style>
+      /* Style popovers */
+      .popover {
+        font-family: inherit;
+        max-width: 100%;
+      }
 
-                // Enable popovers
-                $('[data-bs-toggle="popover"]').each(function(index, element) {
-                    new bootstrap.Popover(element, {
-                        boundary: 'viewport',
-                        html: true,
-                        placement: 'bottom',
-                        trigger: 'focus'
-                    });
-                });
-
-                // Ensure all elements are styled the same
-                $('h1').addClass('border-bottom fw-bold h2 mb-3 pb-2 pt-4');
-                $('h2').addClass('fw-bold h3');
-
-                // Ensure last heading can be anchored atop page
-                $(window).resize(function() {
-                    const top = $('h1').last().offset().top;
-                    const margin = $(window).height() - ($('body').outerHeight() - top);
-                    $('body').css('margin-bottom', Math.max(0, Math.ceil(margin)) + 'px');
-                });
-                $(window).trigger('resize');
-
-                // Reveal body
-                $('body').removeClass('invisible');
-            });
-
-        </script>
-
-        <style>
-
-            /* Style popovers */
-            .popover {
-                font-family: inherit;
-                max-width: 100%;
-            }
-
-            /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+      /* Wrap long words (and URLs, whether linked or not), especially on mobile,
             but not in buttons and not in tables, which should instead scroll horizontally */
-            * {
-                word-break: break-word;
-            }
-            button, table * {
-                word-break: normal;
-            }
+      * {
+        word-break: break-word;
+      }
+      button,
+      table * {
+        word-break: normal;
+      }
 
-            /* Remove underlining */
-            a {
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-            nav a:hover {
-                text-decoration: none;
-            }
+      /* Remove underlining */
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      nav a:hover {
+        text-decoration: none;
+      }
 
-            /* Match Gmail's yellow */
-            a[data-bs-toggle=popover] {
-                border-bottom: 2px solid rgb(252, 237, 193);
-                box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
-                cursor: help;
-            }
-            a[data-bs-toggle=popover]:hover {
-                background-color: rgb(252, 237, 193);
-            }
+      /* Match Gmail's yellow */
+      a[data-bs-toggle="popover"] {
+        border-bottom: 2px solid rgb(252, 237, 193);
+        box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+        cursor: help;
+      }
+      a[data-bs-toggle="popover"]:hover {
+        background-color: rgb(252, 237, 193);
+      }
 
-            /* Match pre tags */
-            code {
-                color: inherit;
-            }
+      /* Match pre tags */
+      code {
+        color: inherit;
+      }
 
-            /* A la Jekyll theme */
-            code, pre {
-                background-color: #f8f9fa;
-                border: 1px solid #dee2e6;
-                padding: calc(.2rem - 3px) 0.2rem;
-            }
-            pre code {
-                background-color: initial;
-                border: initial;
-                padding: initial;
-            }
+      /* A la Jekyll theme */
+      code {
+        border: 1px solid #dee2e6;
+      }
 
-            /* Don't shrink these */
-            code, pre {
-                font-size: inherit;
-            }
+      pre {
+        padding: 0 !important;
+      }
 
-            /* Don't italicize */
-            dl dt {
-                font-style: normal;
-            }
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
 
-            /* Don't fill viewport */
-            .table {
-                width: inherit;
-            }
+      /* Don't italicize */
+      dl dt {
+        font-style: normal;
+      }
 
-        </style>
+      /* Don't fill viewport */
+      .table {
+        width: inherit;
+      }
 
-        <style>
+      td,
+      th {
+        border: 1px solid rgb(228, 228, 228);
+        padding: 8px;
+      }
 
-            
+      table {
+        margin-bottom: 15px;
+      }
 
-    /* Don't display */
-    .filtered, .mismatched {
+      h2 {
+        font-size: 1em !important;
+      }
+
+      ul {
+        padding-left: 30px !important;
+        list-style-type: disc !important;
+      }
+    </style>
+
+    <style>
+      /* Don't display */
+      .filtered,
+      .mismatched {
         display: none;
-    }
+      }
 
-    /* No bullets */
-    ul {
+      /* No bullets */
+      ul {
         list-style-type: none;
         padding-left: 0;
-    }
+      }
 
-    pre {
+      pre {
         padding: 20px;
-    }
+      }
+    </style>
 
-        </style>
+    <title>CS50 Manual do Programador</title>
+  </head>
 
-        <title>CS50 Manual do Programador</title>
+  <body class="font-monospace invisible pb-5">
+    <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+      <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+    </nav>
 
-    </head>
+    <div class="container-fluid mt-2 px-4">
+      
 
-    <body class="font-monospace invisible pb-5">
-
-        <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
-            <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
-        </nav>
-
-        <div class="container-fluid mt-2 px-4">
-            
-
-<h1><a href="#name">NAME</a></h1>
-<p>scanf - get input from a user</p>
-<p>scanf, fscanf, sscanf, vscanf, vsscanf, vfscanf - input format conversion</p>
-<h1><a href="#synopsis">SYNOPSIS</a></h1>
-<h2>Header File</h2>
+<h1><a href="#nome">NOME</a></h1>
+<p>scanf - obter entrada de um usuário</p>
+<h1><a href="#sinopse">SINOPSE</a></h1>
+<h2>Arquivo de Cabeçalho</h2>
 <pre><code>#include &lt;stdio.h&gt;
 </code></pre>
-<h2>Prototype</h2>
+<h2>Protótipo</h2>
 <pre><code>int scanf(const char *format, ...);
 </code></pre>
-<p>Note that <code>...</code> represents zero or more additional arguments.</p>
+<p>Observe que <code>...</code> representa zero ou mais argumentos adicionais.</p>
+<h1><a href="#descrição">DESCRIÇÃO</a></h1>
+<p>Esta função "lê" a entrada do teclado de um usuário para valores de tipos especificados. Ela espera como entrada uma "string de formato" que especifica o que esperar e zero ou mais argumentos subsequentes, cada um dos quais deve ser uma localização na memória. A string de formato deve conter geralmente "especificações de conversão", espaços reservados que começam com <code>%</code> que especificam quais tipos de valores esperar. Os argumentos subsequentes receberão esses valores. Por exemplo, se <code>n</code> é um <code>int</code>, esta função pode obter um <code>int</code> de um usuário usando <code>%i</code>:</p>
+<pre><code>scanf("%i", &amp;n);
+</code></pre>
+<p>Entre as especificações de conversão suportadas por essa função estão:</p>
+<table>
+<thead>
+<tr>
+<th>Especificação de conversão</th>
+<th>Tipo</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><code>%c</code></td>
+<td><code>char</code></td>
+</tr>
+<tr>
+<td><code>%f</code></td>
+<td><code>double</code></td>
+</tr>
+<tr>
+<td><code>%f</code></td>
+<td><code>float</code></td>
+</tr>
+<tr>
+<td><code>%i</code></td>
+<td><code>int</code></td>
+</tr>
+<tr>
+<td><code>%li</code></td>
+<td><code>long</code></td>
+</tr>
+</tbody>
+</table>
+<p>Não é seguro usar esta função para obter uma string de um usuário usando <code>%s</code>, pois a entrada do usuário pode exceder a capacidade do argumento que seria atribuído a esse valor.</p>
+<h1><a href="#valor-de-retorno">VALOR DE RETORNO</a></h1>
+<p>Esta função retorna o número de argumentos que foram atribuídos valores ou <code>EOF</code>, uma constante definida em <code>stdio.h</code>, em casos de erro.</p>
+<h1><a href="#exemplos">EXEMPLOS</a></h1>
 <pre><code>#include &lt;stdio.h&gt;
 
-int scanf(const char *format, ...);
-int fscanf(FILE *stream, const char *format, ...);
-int sscanf(const char *str, const char *format, ...);
-
-#include &lt;stdarg.h&gt;
-
-int vscanf(const char *format, va_list ap);
-int vsscanf(const char *str, const char *format, va_list ap);
-int vfscanf(FILE *stream, const char *format, va_list ap);
-</code></pre>
-<blockquote>
-<p>Feature Test Macro Requirements for glibc (see <a href="/7/feature_test_macros">feature_test_macros</a>(7)):</p>
-</blockquote>
-<p><a href="vscanf">vscanf</a>(), <a href="vsscanf">vsscanf</a>(), <a href="vfscanf">vfscanf</a>():</p>
-<blockquote>
-<p>_ISOC99_SOURCE || _POSIX_C_SOURCE &gt;= 200112L</p>
-</blockquote>
-<h1><a href="#description">DESCRIPTION</a></h1>
-<p>This function “scans” input from a user’s keyboard for values of specified types. It expects as input a “format string” that specifies what to expect and zero or more subsequent arguments, each of which should be a location in memory. The format string should typically contain “conversion specifications,” placeholders that begin with <code>%</code> that specify what types of values to expect. Subsequent arguments will be assigned those values. For instance, if <code>n</code> is a <code>int</code>, this function can get an <code>int</code> from a user using <code>%i</code>:</p>
-<pre><code>scanf(&quot;%i&quot;, &amp;n);
-</code></pre>
-<p>Among this function’s supported conversion specifications are:</p>
-<p>Conversion Specification</p>
-<p>Type</p>
-<p><code>%c</code></p>
-<p><code>char</code></p>
-<p><code>%f</code></p>
-<p><code>double</code></p>
-<p><code>%f</code></p>
-<p><code>float</code></p>
-<p><code>%i</code></p>
-<p><code>int</code></p>
-<p><code>%li</code></p>
-<p><code>long</code></p>
-<p>It is not safe to use this function to get a string from a user using <code>%s</code>, as the user’s input might exceed the capacity of the argument that would be assigned that value.</p>
-<p>The <a href="scanf">scanf</a>() family of functions scans input according to <code>format</code> as described below. This format may contain <code>conversion specifications</code>; the results from such conversions, if any, are stored in the locations pointed to by the <code>pointer</code> arguments that follow <code>format</code>. Each <code>pointer</code> argument must be of a type that is appropriate for the value returned by the corresponding conversion specification.</p>
-<p>If the number of conversion specifications in <code>format</code> exceeds the number of <code>pointer</code> arguments, the results are undefined. If the number of <code>pointer</code> arguments exceeds the number of conversion specifications, then the excess <code>pointer</code> arguments are evaluated, but are otherwise ignored.</p>
-<p>The <a href="scanf">scanf</a>() function reads input from the standard input stream <code>stdin</code>, <a href="fscanf">fscanf</a>() reads input from the stream pointer <code>stream</code>, and <a href="sscanf">sscanf</a>() reads its input from the character string pointed to by <code>str</code>.</p>
-<p>The <a href="vfscanf">vfscanf</a>() function is analogous to <a href="/3/vfprintf">vfprintf</a>(3) and reads input from the stream pointer <code>stream</code> using a variable argument list of pointers (see <a href="/3/stdarg">stdarg</a>(3). The <a href="vscanf">vscanf</a>() function scans a variable argument list from the standard input and the <a href="vsscanf">vsscanf</a>() function scans it from a string; these are analogous to the <a href="/3/vprintf">vprintf</a>(3) and <a href="/3/vsprintf">vsprintf</a>(3) functions respectively.</p>
-<p>The <code>format</code> string consists of a sequence of <code>directives</code> which describe how to process the sequence of input characters. If processing of a directive fails, no further input is read, and <a href="scanf">scanf</a>() returns. A &quot;failure&quot; can be either of the following: <code>input failure</code>, meaning that input characters were unavailable, or <code>matching failure</code>, meaning that the input was inappropriate (see below).</p>
-<p>A directive is one of the following:</p>
-<ul>
-<li>
-<p>A sequence of white-space characters (space, tab, newline, etc.; see <a href="/3/isspace">isspace</a>(3)). This directive matches any amount of white space, including none, in the input.</p>
-</li>
-<li>
-<p>An ordinary character (i.e., one other than white space or '%'). This character must exactly match the next character of input.</p>
-</li>
-<li>
-<p>A conversion specification, which commences with a '%' (percent) character. A sequence of characters from the input is converted according to this specification, and the result is placed in the corresponding <code>pointer</code> argument. If the next item of input does not match the conversion specification, the conversion fails—this is a <code>matching failure</code>.</p>
-</li>
-</ul>
-<p>Each <code>conversion specification</code> in <code>format</code> begins with either the character '%' or the character sequence &quot;<strong>%</strong><code>n</code><strong>$</strong>&quot; (see below for the distinction) followed by:</p>
-<ul>
-<li>
-<p>An optional '*' assignment-suppression character: <a href="scanf">scanf</a>() reads input as directed by the conversion specification, but discards the input. No corresponding <code>pointer</code> argument is required, and this specification is not included in the count of successful assignments returned by <a href="scanf">scanf</a>().</p>
-</li>
-<li>
-<p>For decimal conversions, an optional quote character ('). This specifies that the input number may include thousands' separators as defined by the <strong>LC_NUMERIC</strong> category of the current locale. (See <a href="/3/setlocale">setlocale</a>(3).) The quote character may precede or follow the '*' assignment-suppression character.</p>
-</li>
-<li>
-<p>An optional 'm' character. This is used with string conversions (<code>%s</code>, <code>%c</code>, <code>%[</code>), and relieves the caller of the need to allocate a corresponding buffer to hold the input: instead, <a href="scanf">scanf</a>() allocates a buffer of sufficient size, and assigns the address of this buffer to the corresponding <code>pointer</code> argument, which should be a pointer to a <code>char *</code> variable (this variable does not need to be initialized before the call). The caller should subsequently <a href="/3/free">free</a>(3) this buffer when it is no longer required.</p>
-</li>
-<li>
-<p>An optional decimal integer which specifies the <em>maximum field width</em>. Reading of characters stops either when this maximum is reached or when a nonmatching character is found, whichever happens first. Most conversions discard initial white space characters (the exceptions are noted below), and these discarded characters don't count toward the maximum field width. String input conversions store a terminating null byte ('\0') to mark the end of the input; the maximum field width does not include this terminator.</p>
-</li>
-<li>
-<p>An optional <code>type modifier character</code>. For example, the <strong>l</strong> type modifier is used with integer conversions such as <strong>%d</strong> to specify that the corresponding <code>pointer</code> argument refers to a <code>long</code> rather than a pointer to an <code>int</code>.</p>
-</li>
-<li>
-<p>A <code>conversion specifier</code> that specifies the type of input conversion to be performed.</p>
-</li>
-</ul>
-<p>The conversion specifications in <code>format</code> are of two forms, either beginning with '%' or beginning with &quot;<strong>%</strong><code>n</code><strong>$</strong>&quot;. The two forms should not be mixed in the same <code>format</code> string, except that a string containing &quot;<strong>%</strong><code>n</code><strong>$</strong>&quot; specifications can include <strong>%%</strong> and <strong>%*</strong>. If <code>format</code> contains '%' specifications, then these correspond in order with successive <code>pointer</code> arguments. In the &quot;<strong>%</strong><code>n</code><strong>$</strong>&quot; form (which is specified in POSIX.1-2001, but not C99), <code>n</code> is a decimal integer that specifies that the converted input should be placed in the location referred to by the <code>n</code>-th <code>pointer</code> argument following <code>format</code>.</p>
-<h2>Conversions</h2>
-<p>The following <code>type modifier characters</code> can appear in a conversion specification:</p>
-<p><strong>h</strong></p>
-<p>Indicates that the conversion will be one of <strong>d</strong>, <strong>i</strong>, <strong>o</strong>, <strong>u</strong>, <strong>x</strong>, <strong>X</strong>, or <strong>n</strong> and the next pointer is a pointer to a <code>short</code> or <code>unsigned short</code> (rather than <code>int</code>).</p>
-<p><strong>hh</strong></p>
-<p>As for <strong>h</strong>, but the next pointer is a pointer to a <code>signed char</code> or <code>unsigned char</code>.</p>
-<p><strong>j</strong></p>
-<p>As for <strong>h</strong>, but the next pointer is a pointer to an <code>intmax_t</code> or a <code>uintmax_t</code>. This modifier was introduced in C99.</p>
-<p><strong>l</strong></p>
-<p>Indicates either that the conversion will be one of <strong>d</strong>, <strong>i</strong>, <strong>o</strong>, <strong>u</strong>, <strong>x</strong>, <strong>X</strong>, or <strong>n</strong> and the next pointer is a pointer to a <code>long</code> or <code>unsigned long</code> (rather than <code>int</code>), or that the conversion will be one of <strong>e</strong>, <strong>f</strong>, or <strong>g</strong> and the next pointer is a pointer to <code>double</code> (rather than <code>float</code>). Specifying two <strong>l</strong> characters is equivalent to <strong>L</strong>. If used with <strong>%c</strong> or <strong>%s</strong>, the corresponding parameter is considered as a pointer to a wide character or wide-character string respectively.</p>
-<p><strong>L</strong></p>
-<p>Indicates that the conversion will be either <strong>e</strong>, <strong>f</strong>, or <strong>g</strong> and the next pointer is a pointer to <code>long double</code> or the conversion will be <strong>d</strong>, <strong>i</strong>, <strong>o</strong>, <strong>u</strong>, or <strong>x</strong> and the next pointer is a pointer to <code>long long</code>.</p>
-<p><strong>q</strong></p>
-<p>equivalent to <strong>L</strong>. This specifier does not exist in ANSI C.</p>
-<p><strong>t</strong></p>
-<p>As for <strong>h</strong>, but the next pointer is a pointer to a <code>ptrdiff_t</code>. This modifier was introduced in C99.</p>
-<p><strong>z</strong></p>
-<p>As for <strong>h</strong>, but the next pointer is a pointer to a <code>size_t</code>. This modifier was introduced in C99.</p>
-<p>The following <code>conversion specifiers</code> are available:</p>
-<p><strong>%</strong></p>
-<p>Matches a literal '%'. That is, <strong>%%</strong> in the format string matches a single input '%' character. No conversion is done (but initial white space characters are discarded), and assignment does not occur.</p>
-<p><strong>d</strong></p>
-<p>Matches an optionally signed decimal integer; the next pointer must be a pointer to <code>int</code>.</p>
-<p><strong>i</strong></p>
-<p>Matches an optionally signed integer; the next pointer must be a pointer to <code>int</code>. The integer is read in base 16 if it begins with <code>0x</code> or <code>0X</code>, in base 8 if it begins with <code>0</code>, and in base 10 otherwise. Only characters that correspond to the base are used.</p>
-<p><strong>o</strong></p>
-<p>Matches an unsigned octal integer; the next pointer must be a pointer to <code>unsigned int</code>.</p>
-<p><strong>u</strong></p>
-<p>Matches an unsigned decimal integer; the next pointer must be a pointer to <code>unsigned int</code>.</p>
-<p><strong>x</strong></p>
-<p>Matches an unsigned hexadecimal integer (that may optionally begin with a prefix of <code>0x</code> or <code>0X</code>, which is discarded); the next pointer must be a pointer to <code>unsigned int</code>.</p>
-<p><strong>X</strong></p>
-<p>Equivalent to <strong>x</strong>.</p>
-<p><strong>f</strong></p>
-<p>Matches an optionally signed floating-point number; the next pointer must be a pointer to <code>float</code>.</p>
-<p><strong>e</strong></p>
-<p>Equivalent to <strong>f</strong>.</p>
-<p><strong>g</strong></p>
-<p>Equivalent to <strong>f</strong>.</p>
-<p><strong>E</strong></p>
-<p>Equivalent to <strong>f</strong>.</p>
-<p><strong>a</strong></p>
-<p>(C99) Equivalent to <strong>f</strong>.</p>
-<p><strong>s</strong></p>
-<p>Matches a sequence of non-white-space characters; the next pointer must be a pointer to the initial element of a character array that is long enough to hold the input sequence and the terminating null byte ('\0'), which is added automatically. The input string stops at white space or at the maximum field width, whichever occurs first.</p>
-<p><strong>c</strong></p>
-<p>Matches a sequence of characters whose length is specified by the <code>maximum field width</code> (default 1); the next pointer must be a pointer to <code>char</code>, and there must be enough room for all the characters (no terminating null byte is added). The usual skip of leading white space is suppressed. To skip white space first, use an explicit space in the format.</p>
-<p><strong>[</strong></p>
-<p>Matches a nonempty sequence of characters from the specified set of accepted characters; the next pointer must be a pointer to <code>char</code>, and there must be enough room for all the characters in the string, plus a terminating null byte. The usual skip of leading white space is suppressed. The string is to be made up of characters in (or not in) a particular set; the set is defined by the characters between the open bracket <strong>[</strong> character and a close bracket <strong>]</strong> character. The set <code>excludes</code> those characters if the first character after the open bracket is a circumflex (<strong>^</strong>). To include a close bracket in the set, make it the first character after the open bracket or the circumflex; any other position will end the set. The hyphen character <strong>-</strong> is also special; when placed between two other characters, it adds all intervening characters to the set. To include a hyphen, make it the last character before the final close bracket. For instance, <strong>[^]0-9-]</strong> means the set &quot;everything except close bracket, zero through nine, and hyphen&quot;. The string ends with the appearance of a character not in the (or, with a circumflex, in) set or when the field width runs out.</p>
-<p><strong>p</strong></p>
-<p>Matches a pointer value (as printed by <strong>%p</strong> in <a href="/3/printf">printf</a>(3)); the next pointer must be a pointer to a pointer to <code>void</code>.</p>
-<p><strong>n</strong></p>
-<p>Nothing is expected; instead, the number of characters consumed thus far from the input is stored through the next pointer, which must be a pointer to <code>int</code>. This is <code>not</code> a conversion and does <code>not</code> increase the count returned by the function. The assignment can be suppressed with the <strong>*</strong> assignment-suppression character, but the effect on the return value is undefined. Therefore <strong>%*n</strong> conversions should not be used.</p>
-<h1><a href="#return-value">RETURN VALUE</a></h1>
-<p>This function returns the number of arguments that were assigned values or <code>EOF</code>, a constant defined in <code>stdio.h</code>, in cases of error.</p>
-<p>On success, these functions return the number of input items successfully matched and assigned; this can be fewer than provided for, or even zero, in the event of an early matching failure.</p>
-<p>The value <strong>EOF</strong> is returned if the end of input is reached before either the first successful conversion or a matching failure occurs. <strong>EOF</strong> is also returned if a read error occurs, in which case the error indicator for the stream (see <a href="/3/ferror">ferror</a>(3)) is set, and <code>errno</code> is set to indicate the error.</p>
-<h1><a href="#examples">EXAMPLES</a></h1>
-<pre><code>#include &lt;stdio.h&gt;
 int main(void)
 {
     int i;
-    printf(&quot;Input: &quot;);
-    scanf(&quot;%i&quot;, &amp;i);
-    printf(&quot;Output: %i\n&quot;, i);
+    printf("Entrada: ");
+    scanf("%i", &amp;i);
+    printf("Saída: %i\n", i);
 }
 </code></pre>
-<p>To use the dynamic allocation conversion specifier, specify <strong>m</strong> as a length modifier (thus <strong>%ms</strong> or <strong>%m[</strong><code>range</code><strong>]</strong>). The caller must <a href="/3/free">free</a>(3) the returned string, as in the following example:</p>
-<pre><code>char *p;
-int n;
-
-errno = 0;
-n = scanf(&quot;%m[a-z]&quot;, &amp;p);
-if (n == 1) {
-    printf(&quot;read: %s\n&quot;, p);
-    free(p);
-} else if (errno != 0) {
-    perror(&quot;scanf&quot;);
-} else {
-    fprintf(stderr, &quot;No matching characters\n&quot;);
-}
-</code></pre>
-<p>As shown in the above example, it is necessary to call <a href="/3/free">free</a>(3) only if the <a href="scanf">scanf</a>() call successfully read a string.</p>
-<h1><a href="#errors">ERRORS</a></h1>
-<p><strong>EAGAIN</strong></p>
-<p>The file descriptor underlying <code>stream</code> is marked nonblocking, and the read operation would block.</p>
-<p><strong>EBADF</strong></p>
-<p>The file descriptor underlying <code>stream</code> is invalid, or not open for reading.</p>
-<p><strong>EILSEQ</strong></p>
-<p>Input byte sequence does not form a valid character.</p>
-<p><strong>EINTR</strong></p>
-<p>The read operation was interrupted by a signal; see <a href="/7/signal">signal</a>(7).</p>
-<p><strong>EINVAL</strong></p>
-<p>Not enough arguments; or <code>format</code> is NULL.</p>
-<p><strong>ENOMEM</strong></p>
-<p>Out of memory.</p>
-<p><strong>ERANGE</strong></p>
-<p>The result of an integer conversion would exceed the size that can be stored in the corresponding integer type.</p>
-<h1><a href="#attributes">ATTRIBUTES</a></h1>
-<p>For an explanation of the terms used in this section, see <a href="/7/attributes">attributes</a>(7).</p>
-<p>Interface</p>
-<p>Attribute</p>
-<p>Value</p>
-<p><a href="scanf">scanf</a>(), <a href="fscanf">fscanf</a>(),<br />
-<a href="sscanf">sscanf</a>(), <a href="vscanf">vscanf</a>(),<br />
-<a href="vsscanf">vsscanf</a>(), <a href="vfscanf">vfscanf</a>()</p>
-<p>Thread safety</p>
-<p>MT-Safe locale</p>
-<h1><a href="#conforming-to">CONFORMING TO</a></h1>
-<p>The functions <a href="fscanf">fscanf</a>(), <a href="scanf">scanf</a>(), and <a href="sscanf">sscanf</a>() conform to C89 and C99 and POSIX.1-2001. These standards do not specify the <strong>ERANGE</strong> error.</p>
-<p>The <strong>q</strong> specifier is the 4.4BSD notation for <em>long long</em>, while <strong>ll</strong> or the usage of <strong>L</strong> in integer conversions is the GNU notation.</p>
-<p>The Linux version of these functions is based on the <code>GNU</code> <code>libio</code> library. Take a look at the <code>info</code> documentation of <code>GNU</code> <code>libc (glibc-1.08)</code> for a more concise description.</p>
-<h1><a href="#notes">NOTES</a></h1>
-<h2>The 'a' assignment-allocation modifier</h2>
-<p>Originally, the GNU C library supported dynamic allocation for string inputs (as a nonstandard extension) via the <strong>a</strong> character. (This feature is present at least as far back as glibc 2.0.) Thus, one could write the following to have <a href="scanf">scanf</a>() allocate a buffer for an input string, with a pointer to that buffer being returned in <code>*buf</code>:</p>
-<p>char *buf; scanf(&quot;%as&quot;, &amp;buf);</p>
-<p>The use of the letter <strong>a</strong> for this purpose was problematic, since <strong>a</strong> is also specified by the ISO C standard as a synonym for <strong>f</strong> (floating-point input). POSIX.1-2008 instead specifies the <strong>m</strong> modifier for assignment allocation (as documented in DESCRIPTION, above).</p>
-<p>Note that the <strong>a</strong> modifier is not available if the program is compiled with <code>gcc -std=c99</code> or <em>gcc -D_ISOC99_SOURCE</em> (unless <strong>_GNU_SOURCE</strong> is also specified), in which case the <strong>a</strong> is interpreted as a specifier for floating-point numbers (see above).</p>
-<p>Support for the <strong>m</strong> modifier was added to glibc starting with version 2.7, and new programs should use that modifier instead of <strong>a</strong>.</p>
-<p>As well as being standardized by POSIX, the <strong>m</strong> modifier has the following further advantages over the use of <strong>a:</strong></p>
-<ul>
-<li>
-<p>It may also be applied to <strong>%c</strong> conversion specifiers (e.g., <strong>%3mc</strong>).</p>
-</li>
-<li>
-<p>It avoids ambiguity with respect to the <strong>%a</strong> floating-point conversion specifier (and is unaffected by <em>gcc -std=c99</em> etc.).</p>
-</li>
-</ul>
-<h1><a href="#bugs">BUGS</a></h1>
-<p>All functions are fully C89 conformant, but provide the additional specifiers <strong>q</strong> and <strong>a</strong> as well as an additional behavior of the <strong>L</strong> and <strong>l</strong> specifiers. The latter may be considered to be a bug, as it changes the behavior of specifiers defined in C89.</p>
-<p>Some combinations of the type modifiers and conversion specifiers defined by ANSI C do not make sense (e.g., <strong>%Ld</strong>). While they may have a well-defined behavior on Linux, this need not to be so on other architectures. Therefore it usually is better to use modifiers that are not defined by ANSI C at all, that is, use <strong>q</strong> instead of <strong>L</strong> in combination with <strong>d</strong>, <strong>i</strong>, <strong>o</strong>, <strong>u</strong>, <strong>x</strong>, and <strong>X</strong> conversions or <strong>ll</strong>.</p>
-<p>The usage of <strong>q</strong> is not the same as on 4.4BSD, as it may be used in float conversions equivalently to <strong>L</strong>.</p>
-<h1><a href="#see-also">SEE ALSO</a></h1>
-<p><a href="/3/getc">getc</a>(3), <a href="/3/printf">printf</a>(3), <a href="/3/setlocale">setlocale</a>(3), <a href="/3/strtod">strtod</a>(3), <a href="/3/strtol">strtol</a>(3), <a href="/3/strtoul">strtoul</a>(3)</p>
-<h1><a href="#colophon">COLOPHON</a></h1>
-<p>This page is part of release 5.10 of the Linux <code>man-pages</code> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</p>
 
 
-
-        </div>
-    </body>
+    </div>
+  </body>
 </html>

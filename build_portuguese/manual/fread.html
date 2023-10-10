@@ -1,377 +1,317 @@
-
 <!DOCTYPE html>
-
 <html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
 
-    <head>
-
-        <meta charset="utf-8">
-        <meta name="viewport" content="initial-scale=1, width=device-width">
-
-        <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
-        <link href="/static/49a1a858-favicon-32x32.png" rel="icon" type="image/png">
-
-        <script>
-            window.FontAwesomeConfig = { autoReplaceSvg: false };
-        </script>
-
-        <link href="/static/dist/main.css?1694737498" rel="stylesheet">
-        <script src="/static/dist/main.js?1694737498"></script>
-        <link
-        rel="stylesheet"
-        type="text/css"
-        href="/static/css/main.css"
+    <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+    <link
+      href="/static/49a1a858-favicon-32x32.png"
+      rel="icon"
+      type="image/png"
     />
-        <link
-            rel="stylesheet"
-            type="text/css"
-            href="/static/css/rouge.css"
-        />
-        <script src="/static/js/main.js"></script>
-        <script>
 
-            
 
-    $(function() {
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      window.FontAwesomeConfig = { autoReplaceSvg: false };
+    </script>
 
+    <link href="/static/dist/main.css?1694737498" rel="stylesheet" />
+    <script src="/static/dist/main.js?1694737498"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/rouge.css"
+    />
+    <script src="/static/js/main.js"></script>
+    <script>
+      $(function () {
         // Hide less-comfortable descriptions
-        $('[data-less]').addClass('d-none');
+        $("[data-less]").addClass("d-none");
 
         // Listen for checkbox
-        $('#filter').on('change', function() {
-            if ($('#filter').is(':checked')) {
-                $('[data-less]').removeClass('d-none');
-                $('[data-more]').addClass('d-none');
-            }
-            else {
-                $('[data-more]').removeClass('d-none');
-                $('[data-less]').addClass('d-none');
+        $("#filter")
+          .on("change", function () {
+            if ($("#filter").is(":checked")) {
+              $("[data-less]").removeClass("d-none");
+              $("[data-more]").addClass("d-none");
+            } else {
+              $("[data-more]").removeClass("d-none");
+              $("[data-less]").addClass("d-none");
             }
             filter();
-        }).trigger('change');
+          })
+          .trigger("change");
 
         // Listen for searches
-        $('#q').on('change keyup', function() {
-            filter();
+        $("#q").on("change keyup", function () {
+          filter();
         });
-        $('#q').closest('form').on('submit', function(e) {
+        $("#q")
+          .closest("form")
+          .on("submit", function (e) {
             e.preventDefault();
-        });
+          });
 
         // Filter results
         filter();
 
         // Unless user's followed a link to a heading, filter index
         if (window.location.hash) {
-            $('#filter').prop('checked', false).trigger('change');
+          $("#filter").prop("checked", false).trigger("change");
         }
 
         // Give focus to search (after body is visible)
         else {
-            $(function() {
-                $('#q').focus();
-            });
+          $(function () {
+            $("#q").focus();
+          });
         }
-    });
+      });
 
-    function filter() {
-        let q = $('#q').val().trim().split(/\s+/);
-        if (q.length === 1 && q[0] === '') {
-            q = [];
+      function filter() {
+        let q = $("#q").val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === "") {
+          q = [];
         }
-        $('h1').each(function(index, element) {
-            const $h1 = $(element);
-            const header = $h1.val();
-            const $ul = $h1.next('ul');
-            $ul.children('li').each(function(index, element) {
-                const $li = $(element);
-                if ($('#filter').prop('checked') && $li.attr('data-filter') === undefined) {
-                    $li.addClass('filtered');
-                }
-                else {
-                    $li.removeClass('filtered');
-                }
-                const haystack = $h1.text() + $li.text().trim();
-                let matches = q.filter(function(s) {
-                    return haystack.match(new RegExp(s, 'i')) !== null;
-                });
-                if (matches.length === q.length) {
-                    $li.removeClass('mismatched');
-                }
-                else {
-                    $li.addClass('mismatched');
-                }
+        $("h1").each(function (index, element) {
+          const $h1 = $(element);
+          const header = $h1.val();
+          const $ul = $h1.next("ul");
+          $ul.children("li").each(function (index, element) {
+            const $li = $(element);
+            if (
+              $("#filter").prop("checked") &&
+              $li.attr("data-filter") === undefined
+            ) {
+              $li.addClass("filtered");
+            } else {
+              $li.removeClass("filtered");
+            }
+            const haystack = $h1.text() + $li.text().trim();
+            let matches = q.filter(function (s) {
+              return haystack.match(new RegExp(s, "i")) !== null;
             });
-            if ($ul.children('li:not(.filtered, .mismatched)').length > 0) {
-                $h1.removeClass('d-none');
-                $ul.removeClass('d-none');
+            if (matches.length === q.length) {
+              $li.removeClass("mismatched");
+            } else {
+              $li.addClass("mismatched");
             }
-            else {
-                $h1.addClass('d-none');
-                $ul.addClass('d-none');
-            }
+          });
+          if ($ul.children("li:not(.filtered, .mismatched)").length > 0) {
+            $h1.removeClass("d-none");
+            $ul.removeClass("d-none");
+          } else {
+            $h1.addClass("d-none");
+            $ul.addClass("d-none");
+          }
         });
-    };
+      }
+    </script>
 
+    <script>
+      $(function () {
+        // Add borders to tables
+        $(".table").addClass("table-bordered");
 
+        // Enable popovers
+        $('[data-bs-toggle="popover"]').each(function (index, element) {
+          new bootstrap.Popover(element, {
+            boundary: "viewport",
+            html: true,
+            placement: "bottom",
+            trigger: "focus",
+          });
+        });
 
-        </script>
+        // Ensure all elements are styled the same
+        $("h1").addClass("border-bottom fw-bold h2 mb-3 pb-2 pt-4");
+        $("h2").addClass("fw-bold h3");
 
-        <script>
+        // Ensure last heading can be anchored atop page
+        $(window).resize(function () {
+          const top = $("h1").last().offset().top;
+          const margin = $(window).height() - ($("body").outerHeight() - top);
+          $("body").css("margin-bottom", Math.max(0, Math.ceil(margin)) + "px");
+        });
+        $(window).trigger("resize");
 
-            $(function() {
+        // Reveal body
+        $("body").removeClass("invisible");
+      });
+    </script>
 
-                // Add borders to tables
-                $('.table').addClass('table-bordered');
+    <style>
+      /* Style popovers */
+      .popover {
+        font-family: inherit;
+        max-width: 100%;
+      }
 
-                // Enable popovers
-                $('[data-bs-toggle="popover"]').each(function(index, element) {
-                    new bootstrap.Popover(element, {
-                        boundary: 'viewport',
-                        html: true,
-                        placement: 'bottom',
-                        trigger: 'focus'
-                    });
-                });
-
-                // Ensure all elements are styled the same
-                $('h1').addClass('border-bottom fw-bold h2 mb-3 pb-2 pt-4');
-                $('h2').addClass('fw-bold h3');
-
-                // Ensure last heading can be anchored atop page
-                $(window).resize(function() {
-                    const top = $('h1').last().offset().top;
-                    const margin = $(window).height() - ($('body').outerHeight() - top);
-                    $('body').css('margin-bottom', Math.max(0, Math.ceil(margin)) + 'px');
-                });
-                $(window).trigger('resize');
-
-                // Reveal body
-                $('body').removeClass('invisible');
-            });
-
-        </script>
-
-        <style>
-
-            /* Style popovers */
-            .popover {
-                font-family: inherit;
-                max-width: 100%;
-            }
-
-            /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+      /* Wrap long words (and URLs, whether linked or not), especially on mobile,
             but not in buttons and not in tables, which should instead scroll horizontally */
-            * {
-                word-break: break-word;
-            }
-            button, table * {
-                word-break: normal;
-            }
+      * {
+        word-break: break-word;
+      }
+      button,
+      table * {
+        word-break: normal;
+      }
 
-            /* Remove underlining */
-            a {
-                text-decoration: none;
-            }
-            a:hover {
-                text-decoration: underline;
-            }
-            nav a:hover {
-                text-decoration: none;
-            }
+      /* Remove underlining */
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      nav a:hover {
+        text-decoration: none;
+      }
 
-            /* Match Gmail's yellow */
-            a[data-bs-toggle=popover] {
-                border-bottom: 2px solid rgb(252, 237, 193);
-                box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
-                cursor: help;
-            }
-            a[data-bs-toggle=popover]:hover {
-                background-color: rgb(252, 237, 193);
-            }
+      /* Match Gmail's yellow */
+      a[data-bs-toggle="popover"] {
+        border-bottom: 2px solid rgb(252, 237, 193);
+        box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+        cursor: help;
+      }
+      a[data-bs-toggle="popover"]:hover {
+        background-color: rgb(252, 237, 193);
+      }
 
-            /* Match pre tags */
-            code {
-                color: inherit;
-            }
+      /* Match pre tags */
+      code {
+        color: inherit;
+      }
 
-            /* A la Jekyll theme */
-            code, pre {
-                background-color: #f8f9fa;
-                border: 1px solid #dee2e6;
-                padding: calc(.2rem - 3px) 0.2rem;
-            }
-            pre code {
-                background-color: initial;
-                border: initial;
-                padding: initial;
-            }
+      /* A la Jekyll theme */
+      code {
+        border: 1px solid #dee2e6;
+      }
 
-            /* Don't shrink these */
-            code, pre {
-                font-size: inherit;
-            }
+      pre {
+        padding: 0 !important;
+      }
 
-            /* Don't italicize */
-            dl dt {
-                font-style: normal;
-            }
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
 
-            /* Don't fill viewport */
-            .table {
-                width: inherit;
-            }
+      /* Don't italicize */
+      dl dt {
+        font-style: normal;
+      }
 
-        </style>
+      /* Don't fill viewport */
+      .table {
+        width: inherit;
+      }
 
-        <style>
+      td,
+      th {
+        border: 1px solid rgb(228, 228, 228);
+        padding: 8px;
+      }
 
-            
+      table {
+        margin-bottom: 15px;
+      }
 
-    /* Don't display */
-    .filtered, .mismatched {
+      h2 {
+        font-size: 1em !important;
+      }
+
+      ul {
+        padding-left: 30px !important;
+        list-style-type: disc !important;
+      }
+    </style>
+
+    <style>
+      /* Don't display */
+      .filtered,
+      .mismatched {
         display: none;
-    }
+      }
 
-    /* No bullets */
-    ul {
+      /* No bullets */
+      ul {
         list-style-type: none;
         padding-left: 0;
-    }
+      }
 
-    pre {
+      pre {
         padding: 20px;
-    }
+      }
+    </style>
 
-        </style>
+    <title>CS50 Manual do Programador</title>
+  </head>
 
-        <title>CS50 Manual do Programador</title>
+  <body class="font-monospace invisible pb-5">
+    <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+      <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+    </nav>
 
-    </head>
+    <div class="container-fluid mt-2 px-4">
+      
 
-    <body class="font-monospace invisible pb-5">
-
-        <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
-            <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
-        </nav>
-
-        <div class="container-fluid mt-2 px-4">
-            
-
-<h1><a href="#name">NAME</a></h1>
-<p>fread - read bytes from a file</p>
-<p>fread, fwrite - binary stream input/output</p>
-<h1><a href="#synopsis">SYNOPSIS</a></h1>
-<h2>Header File</h2>
+<h1><a href="#nome">NOME</a></h1>
+<p>fread - lê bytes de um arquivo</p>
+<h1><a href="#sinopse">SINOPSE</a></h1>
+<h2>Arquivo de Cabeçalho</h2>
 <pre><code>#include &lt;stdio.h&gt;
 </code></pre>
-<h2>Prototype</h2>
+<h2>Protótipo</h2>
 <pre><code>size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
 </code></pre>
-<p>Think of <code>void *</code> as representing the address of the first byte of any type of data. Think of <code>size_t</code> as a <code>long</code>.</p>
-<pre><code>#include &lt;stdio.h&gt;
-
-size_t fread(void *ptr, size_t size, size_t nmemb, FILE *stream);
-
-size_t fwrite(const void *ptr, size_t size, size_t nmemb,
- FILE *stream);
-</code></pre>
-<h1><a href="#description">DESCRIPTION</a></h1>
-<p>This function reads data from a file that has been opened via <a href="fopen">fopen</a>. It expects as input:</p>
+<p>Pense em <code>void *</code> como representando o endereço do primeiro byte de qualquer tipo de dado. Pense em <code>size_t</code> como um <code>long</code>.</p>
+<h1><a href="#descrição">DESCRIÇÃO</a></h1>
+<p>Essa função lê dados de um arquivo que foi aberto via <a href="fopen">fopen</a>. Ela espera como entrada:</p>
 <ul>
-<li><code>ptr</code>, which is the address (of the first byte) of memory into which to read the data,</li>
-<li><code>size</code>, which is the size (in bytes) of the type of data to read,</li>
-<li><code>nmemb</code>, which is the number of those types to read at once, and</li>
-<li><code>stream</code>, which is the pointer to a <code>FILE</code> returned by <a href="fopen">fopen</a>.</li>
+<li><code>ptr</code>, que é o endereço (do primeiro byte) da memória para a qual os dados serão lidos,</li>
+<li><code>size</code>, que é o tamanho (em bytes) do tipo de dado a ser lido,</li>
+<li><code>nmemb</code>, que é o número desses tipos a serem lidos de uma vez, e</li>
+<li><code>stream</code>, que é o ponteiro para um <code>FILE</code> retornado por <a href="fopen">fopen</a>.</li>
 </ul>
-<p>For instance, if reading one <code>char</code> at a time, <code>size</code> would be <code>sizeof(char)</code> (i.e., <code>1</code>), and <code>nmemb</code> would be <code>1</code>.</p>
-<p>The function <a href="fread">fread</a>() reads <code>nmemb</code> items of data, each <code>size</code> bytes long, from the stream pointed to by <code>stream</code>, storing them at the location given by <code>ptr</code>.</p>
-<p>The function <a href="fwrite">fwrite</a>() writes <code>nmemb</code> items of data, each <code>size</code> bytes long, to the stream pointed to by <code>stream</code>, obtaining them from the location given by <code>ptr</code>.</p>
-<p>For nonlocking counterparts, see <a href="/3/unlocked_stdio">unlocked_stdio</a>(3).</p>
-<h1><a href="#return-value">RETURN VALUE</a></h1>
-<p>This function returns the number of items read, which equals the number of bytes read when <code>size</code> is <code>1</code>.</p>
-<p>If an error occurs, or the end of the file is reached, this function might return a value smaller than <code>nmemb</code> or even <code>0</code>.</p>
-<p>The opened file “remembers” the number of bytes that were successfully read, such that subsequent calls to this function for <code>stream</code> will return bytes after those already read.</p>
-<p>On success, <a href="fread">fread</a>() and <a href="fwrite">fwrite</a>() return the number of items read or written. This number equals the number of bytes transferred only when <code>size</code> is 1. If an error occurs, or the end of the file is reached, the return value is a short item count (or zero).</p>
-<p>The file position indicator for the stream is advanced by the number of bytes successfully read or written.</p>
-<p><a href="fread">fread</a>() does not distinguish between end-of-file and error, and callers must use <a href="/3/feof">feof</a>(3) and <a href="/3/ferror">ferror</a>(3) to determine which occurred.</p>
-<h1><a href="#examples">EXAMPLES</a></h1>
+<p>Por exemplo, se estiver lendo um <code>char</code> de cada vez, <code>size</code> seria <code>sizeof(char)</code> (ou seja, <code>1</code>), e <code>nmemb</code> seria <code>1</code>.</p>
+<h1><a href="#valor-de-retorno">VALOR DE RETORNO</a></h1>
+<p>Essa função retorna o número de itens lidos, que é igual ao número de bytes lidos quando <code>size</code> é <code>1</code>.</p>
+<p>Se ocorrer um erro ou o final do arquivo for atingido, essa função poderá retornar um valor menor que <code>nmemb</code> ou até mesmo <code>0</code>.</p>
+<p>O arquivo aberto "lembra" o número de bytes que foram lidos com sucesso, de modo que chamadas subsequentes a essa função para <code>stream</code> retornarão bytes após os já lidos.</p>
+<h1><a href="#exemplos">EXEMPLOS</a></h1>
 <pre><code>#include &lt;stdio.h&gt;
+
 int main(void)
 {
-    FILE *file = fopen(&quot;cs50.txt&quot;, &quot;r&quot;);
-    if (file != NULL)
+    FILE *arquivo = fopen("cs50.txt", "r");
+    if (arquivo != NULL)
     {
         char c;
-        while (fread(&amp;c, sizeof(char), 1, file))
+        while (fread(&amp;c, sizeof(char), 1, arquivo))
         {
-            printf(&quot;%c&quot;, c);
+            printf("%c", c);
         }
-        fclose(file);
+        fclose(arquivo);
     }
 }
 </code></pre>
-<p>The program below demonstrates the use of <a href="fread">fread</a>() by parsing /bin/sh ELF executable in binary mode and printing its magic and class:</p>
-<pre><code>$ ./a.out
-ELF magic: 0x7f454c46
-Class: 0x02
-</code></pre>
-<h2>Program source</h2>
-<pre><code>#include &lt;stdio.h&gt;
-#include &lt;stdlib.h&gt;
-
-#define ARRAY_SIZE(arr) (sizeof(arr) / sizeof((arr)[0]))
-
-int
-main(void)
-{
-    FILE *fp = fopen(&quot;/bin/sh&quot;, &quot;rb&quot;);
-    if (!fp) {
-        perror(&quot;fopen&quot;);
-        return EXIT_FAILURE;
-    }
-
-    unsigned char buffer[4];
-
-    size_t ret = fread(buffer, ARRAY_SIZE(buffer), sizeof(*buffer), fp);
-    if (ret != sizeof(*buffer)) {
-        fprintf(stderr, &quot;fread() failed: %zu\n&quot;, ret);
-        exit(EXIT_FAILURE);
-    }
-
-    printf(&quot;ELF magic: %#04x%02x%02x%02x\n&quot;, buffer[0], buffer[1],
-           buffer[2], buffer[3]);
-
-    ret = fread(buffer, 1, 1, fp);
-    if (ret != 1) {
-        fprintf(stderr, &quot;fread() failed: %zu\n&quot;, ret);
-        exit(EXIT_FAILURE);
-    }
-
-    printf(&quot;Class: %#04x\n&quot;, buffer[0]);
-
-    fclose(fp);
-
-    exit(EXIT_SUCCESS);
-}
-</code></pre>
-<h1><a href="#attributes">ATTRIBUTES</a></h1>
-<p>For an explanation of the terms used in this section, see <a href="/7/attributes">attributes</a>(7).</p>
-<p>Interface</p>
-<p>Attribute</p>
-<p>Value</p>
-<p><a href="fread">fread</a>(), <a href="fwrite">fwrite</a>()</p>
-<p>Thread safety</p>
-<p>MT-Safe</p>
-<h1><a href="#conforming-to">CONFORMING TO</a></h1>
-<p>POSIX.1-2001, POSIX.1-2008, C89.</p>
-<h1><a href="#see-also">SEE ALSO</a></h1>
-<p><a href="/2/read">read</a>(2), <a href="/2/write">write</a>(2), <a href="/3/feof">feof</a>(3), <a href="/3/ferror">ferror</a>(3), <a href="/3/unlocked_stdio">unlocked_stdio</a>(3)</p>
-<h1><a href="#colophon">COLOPHON</a></h1>
-<p>This page is part of release 5.10 of the Linux <code>man-pages</code> project. A description of the project, information about reporting bugs, and the latest version of this page, can be found at <a href="https://www.kernel.org/doc/man-pages/">https://www.kernel.org/doc/man-pages/</a>.</p>
 
 
-
-        </div>
-    </body>
+    </div>
+  </body>
 </html>
