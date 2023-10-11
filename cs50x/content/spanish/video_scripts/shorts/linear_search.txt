@@ -1,23 +1,23 @@
 La búsqueda lineal es un algoritmo que podemos utilizar para encontrar un elemento en una matriz. Un algoritmo, como se recuerda, es un conjunto de instrucciones paso por paso para completar una tarea.
 
-El algoritmo de búsqueda lineal funciona de la siguiente manera. Itera sobre la matriz de izquierda a derecha, buscando un elemento específico.
+El algoritmo de búsqueda lineal funciona de la siguiente manera. Itera sobre el arreglo de izquierda a derecha, buscando un elemento específico.
 
 En pseudocódigo, que es una versión más resumida de esta oración, si el primer elemento es lo que estás buscando, puedes detenerte. De lo contrario, muévete al siguiente elemento y sigue repitiendo esta operación hasta que encuentres el elemento o no. Por lo tanto, podemos utilizar el algoritmo de búsqueda lineal, por ejemplo, para encontrar el valor objetivo nueve en esta matriz. Comenzamos desde el principio. Si es lo que estamos buscando, podemos detenernos. No lo es, no estamos buscando el 11. Así que, en caso contrario, pasamos al siguiente elemento.
 
 Entonces, observamos el 23. ¿Es el 23 lo que estamos buscando? Bueno, no, así que pasamos al siguiente elemento, y al siguiente, y continuamos repitiendo este proceso una y otra vez hasta que lleguemos a una situación como esta. 
 
-Nueve es lo que estamos buscando, y este elemento de la matriz, su valor es nueve. Y así encontramos lo que buscábamos y podemos detenernos. La búsqueda lineal ha sido completada con éxito.
+Nueve es lo que estamos buscando, y este elemento del arreglo, su valor es nueve. Y así encontramos lo que buscábamos y podemos detenernos. La búsqueda lineal ha sido completada con éxito.
 
 ¿Pero qué sucede si estamos buscando un elemento que no está en nuestra matriz? ¿La búsqueda lineal aún funciona? Bueno, seguro. Entonces repetimos este proceso desde el primer elemento. Si es lo que buscamos, podemos detenernos. Si no, pasamos al siguiente elemento.
 
-Pero podemos seguir repitiendo este proceso, examinando cada elemento, esperando encontrar el número 50. Pero no sabremos si hemos encontrado o no el número 50, hasta que hayamos revisado cada elemento de la matriz.
+Pero podemos seguir repitiendo este proceso, examinando cada elemento, esperando encontrar el número 50. Pero no sabremos si hemos encontrado o no el número 50, hasta que hayamos revisado cada elemento del arreglo.
 
-Solo una vez que lo hayamos hecho y no hayamos encontrado nada, podemos concluir que el 50 no está en la matriz. Y así, el algoritmo de búsqueda lineal no falla, per se. Sino que no encontró el 50, pero el 50 no estaba en la matriz. Pero hemos buscado exhaustivamente cada elemento y, aunque no hayamos encontrado nada, la búsqueda lineal aún tiene éxito incluso si el elemento no está en la matriz.
+Solo una vez que lo hayamos hecho y no hayamos encontrado nada, podemos concluir que el 50 no está en el arreglo. Y así, el algoritmo de búsqueda lineal no falla, per se. Sino que no encontró el 50, pero el 50 no estaba en el arreglo. Pero hemos buscado exhaustivamente cada elemento y, aunque no hayamos encontrado nada, la búsqueda lineal aún tiene éxito incluso si el elemento no está en el arreglo.
 
-Entonces, ¿cuál es el peor escenario con la búsqueda lineal? Bueno, tenemos que revisar cada elemento, ya sea porque el elemento objetivo es el último de la matriz o porque el elemento que buscamos en realidad no existe en la matriz. ¿Cuál es el mejor escenario? Bueno, podríamos encontrar el elemento de inmediato. ¿Y cuántos elementos tenemos que mirar en el mejor de los casos, si lo estamos buscando y lo encontramos al principio? Podemos detenernos de inmediato.
+Entonces, ¿cuál es el peor escenario con la búsqueda lineal? Bueno, tenemos que revisar cada elemento, ya sea porque el elemento objetivo es el último del arreglo o porque el elemento que buscamos en realidad no existe en el arreglo. ¿Cuál es el mejor escenario? Bueno, podríamos encontrar el elemento de inmediato. ¿Y cuántos elementos tenemos que mirar en el mejor de los casos, si lo estamos buscando y lo encontramos al principio? Podemos detenernos de inmediato.
 
 ¿Qué indica esto sobre la complejidad de la búsqueda lineal? Bueno, en el peor de los casos, tenemos que mirar cada elemento. Por lo tanto, se ejecuta en O de n, en el peor de los casos.
 
 En el mejor de los casos, encontraremos el elemento de inmediato. Y, por lo tanto, se ejecuta en omega de 1.
 
-Soy Doug Lloyd. Esto es CS50.
+Soy Ramon Rodrigues. Esto es CS50.

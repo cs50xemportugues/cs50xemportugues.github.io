@@ -8,11 +8,9 @@ import sys
 
 openai.api_key = os.getenv('CHATGPT_KEY')
 
-
 def translate(files, folder, language, extension, file_description):
 
     for f in files:
-
         try:
             if folder=="manual":
                 root_folder = "app/content/english"
@@ -26,32 +24,27 @@ def translate(files, folder, language, extension, file_description):
             else:
                 source_file = open(f"{root_folder}/{folder}/{f}.{extension}", "r")
 
+
+            if (extension=="py"):
+                system_message = f"You are a helpful assistant that translates Python language code from English to {language.capitalize()}. Translate the function names also."
+                prompt = f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''
+            elif (extension=="c"):
+                system_message = f"You are a helpful assistant that translates C language code from English to {language.capitalize()}. Translate the function names also."
+                prompt = f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''
+            else:
+                system_message = f"You are a helpful assistant that translates computer science related content from English to {language.capitalize()}. Translate the text thoroughly. Do not summarize the translation. Do not convert HTML tags to Markdown."
+                prompt = f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''
+
+                
             print(">>>>>>>>>> HERE 1")
             try:
-                if (extension=="py"):
-                    response = openai.ChatCompletion.create(
-                        model="gpt-3.5-turbo",
-                        messages=[
-                            {"role": "system", "content": f"You are a helpful assistant that translates Python language code from English to {language.capitalize()}. Translate the function names also."},
-                            {"role": "user", "content": f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''}
-                        ],
-                    )
-                elif (extension=="c"):
-                        response = openai.ChatCompletion.create(
-                        model="gpt-3.5-turbo",
-                        messages=[
-                            {"role": "system", "content": f"You are a helpful assistant that translates C language code from English to {language.capitalize()}. Translate the function names also."},
-                            {"role": "user", "content": f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''}
-                        ],
-                    )
-                else:
-                    response = openai.ChatCompletion.create(
-                        model="gpt-3.5-turbo",
-                        messages=[
-                            {"role": "system", "content": f"You are a helpful assistant that translates computer science related content from English to {language.capitalize()}. Translate the text thoroughly. Do not summarize the translation. Do not convert HTML tags to Markdown."},
-                            {"role": "user", "content": f'Translate the following computer science {file_description} from English to {language.capitalize()}: \'{source_file.read()}\''}
-                        ],
-                    )
+                response = openai.ChatCompletion.create(
+                    model="gpt-3.5-turbo",
+                    messages=[
+                        {"role": "system", "content": system_message},
+                        {"role": "user", "content": prompt}
+                    ],
+                )
 
                 print(">>>>>>>>>> HERE 2")
 
@@ -126,11 +119,11 @@ def translate(files, folder, language, extension, file_description):
                 print(">>>>>>>>>> HERE 3")
 
             except openai.error.InvalidRequestError:
-                print(f"there was an error when translating '{f}'")
+                print(f">>>> Error: there was an error when translating '{f}'")
             time.sleep(20)
             
         except:
-            print("Error: couldn't open the file")
+            print(f">>> Error: couldn't open the file '{f}'")
             pass
 
 
@@ -586,3 +579,5 @@ else:
         translate_labs_checks(sys.argv[2])
     elif sys.argv[1] == "manual":
         translate_manual(sys.argv[2])
+
+
