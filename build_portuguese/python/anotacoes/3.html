@@ -1,0 +1,562 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Loops</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Exceptions</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Libraries</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Unit Tests</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h2># Aula 3</h2>
+<ul>
+<li><a href="#exceptions">Exceções</a></li>
+<li><a href="#runtime-errors">Erros de tempo de execução</a></li>
+<li><a href="#try">Bloco <code>try</code></a></li>
+<li><a href="#else">Bloco <code>else</code></a></li>
+<li><a href="#creating-a-function-to-get-an-integer">Criando uma Função para Obter um Número Inteiro</a></li>
+<li><a href="#pass">Declaração <code>pass</code></a></li>
+<li><a href="#summing-up">Resumindo</a></li>
+</ul>
+<h2>Exceções</h2>
+<ul>
+<li>
+<p>Exceções são coisas que dão errado em nossa codificação.</p>
+</li>
+<li>
+<p>Em nosso editor de texto, digite <code>code hello.py</code> para criar um novo arquivo. Digite como segue (com os erros intencionais incluídos):</p>
+<pre><code>print(&quot;hello, world)
+</code></pre>
+<p>Observe que deixamos intencionalmente faltando uma aspa.</p>
+</li>
+<li>
+<p>Executando <code>python hello.py</code> em nossa janela do terminal, um erro é mostrado. O compilador afirma que é um &quot;erro de sintaxe&quot;. Erros de sintaxe são aqueles que exigem que você verifique novamente se digitou a correção de código corretamente.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/tutorial/errors.html">Erros e Exceções</a>.</p>
+</li>
+</ul>
+<h2>Erros de tempo de execução</h2>
+<ul>
+<li>
+<p>Erros de tempo de execução se referem àqueles criados por comportamento inesperado dentro do seu código. Por exemplo, talvez você tenha pretendido que um usuário insira um número, mas eles inserem um caractere em vez disso. Seu programa pode lançar um erro por causa dessa entrada inesperada do usuário.</p>
+</li>
+<li>
+<p>Em sua janela do terminal, execute <code>code number.py</code>. O código é o seguinte em seu editor de texto:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+print(f&quot;x é {x}&quot;)
+</code></pre>
+<p>Observe que ao incluir o <code>f</code>, informamos ao Python para interpolar o que está entre os colchetes como o valor de <code>x</code>. Além disso, testando o código, você pode imaginar como alguém poderia facilmente digitar uma string ou um caractere em vez de um número. Ainda assim, um usuário poderia não digitar nada - simplesmente pressionando a tecla Enter.</p>
+</li>
+<li>
+<p>Como programadores, devemos ser defensivos para garantir que nossos usuários estejam inserindo o que esperávamos. Devemos considerar &quot;casos extremos&quot; como <code>-1</code>, <code>0</code> ou <code>cat</code>.</p>
+</li>
+<li>
+<p>Se executarmos esse programa e digitarmos &quot;cat&quot;, veremos repentinamente <code>ValueError: invalid literal for int() with base 10: &#x27;cat&#x27;</code>. Essencialmente, o interpretador do Python não gosta de passarmos &quot;cat&quot; para a função <code>print</code>.</p>
+</li>
+<li>
+<p>Uma estratégia eficaz para corrigir esse erro potencial seria criar uma &quot;tratamento de erros&quot; para garantir que o usuário se comporte conforme o pretendido.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/pt-br/3/tutorial/errors.html">Erros e Exceções</a>.</p>
+</li>
+</ul>
+<h2><code>try</code></h2>
+<ul>
+<li>
+<p>Em Python, <code>try</code> e <code>except</code> são formas de testar a entrada do usuário antes de algo dar errado. Modifique seu código da seguinte maneira:</p>
+<pre><code>try:
+    x = int(input(&quot;Qual é o valor de x?&quot;))
+    print(f&quot;x é {x}&quot;)
+except ValueError:
+    print(&quot;x não é um número inteiro&quot;)
+</code></pre>
+<p>Observe como, ao executar este código, a entrada <code>50</code> será aceita. No entanto, ao digitar <code>cat</code>, um erro será exibido ao usuário, explicando por que a entrada não foi aceita.</p>
+</li>
+<li>
+<p>Ainda não é a melhor maneira de implementar esse código. Observe que estamos tentando fazer duas linhas de código. Para uma melhor prática, devemos apenas <code>try</code> as linhas de código mínimas possíveis que estamos preocupados que possam falhar. Ajuste seu código da seguinte maneira:</p>
+<pre><code>try:
+    x = int(input(&quot;Qual é o valor de x?&quot;))
+except ValueError:
+    print(&quot;x não é um número inteiro&quot;)
+
+print(f&quot;x é {x}&quot;)
+</code></pre>
+<p>Observe que, embora isso cumpra nosso objetivo de tentar o menor número possível de linhas, agora enfrentamos um novo erro! Enfrentamos um <code>NameError</code>, onde <code>x não está definido</code>. Observe este código e considere: por que <code>x</code> não está definido em alguns casos?</p>
+</li>
+<li>
+<p>De fato, se você examinar a ordem das operações em <code>x = int(input(&quot;Qual é o valor de x?&quot;))</code>, trabalhando da direita para a esquerda, ele pode pegar um caractere incorretamente inserido e tentar atribuí-lo como um número inteiro. Se isso falhar, a atribuição do valor de <code>x</code> nunca ocorre. Portanto, não há <code>x</code> para ser impresso em nossa última linha de código.</p>
+</li>
+</ul>
+<h2><code>else</code></h2>
+<ul>
+<li>
+<p>Descobre-se que há outra maneira de implementar um <code>try</code> que pode capturar erros desse tipo.</p>
+</li>
+<li>
+<p>Ajuste seu código da seguinte forma:</p>
+<pre><code>try:
+    x = int(input(&quot;Qual é o valor de x?&quot;))
+except ValueError:
+    print(&quot;x não é um número inteiro&quot;)
+else:
+    print(f&quot;x é {x}&quot;)
+</code></pre>
+<p>Observe que se nenhuma exceção ocorrer, o bloco de código dentro de <code>else</code> será executado. Executando <code>python number.py</code> e fornecendo <code>50</code>, você observará que o resultado será impresso. Tentando novamente, desta vez fornecendo <code>cat</code>, você observará que o programa agora captura o erro.</p>
+</li>
+<li>
+<p>Considerando a melhoria do nosso código, observe que estamos sendo um pouco rudes com nosso usuário. Se o usuário não cooperar, atualmente simplesmente encerramos o programa. Considere como podemos usar um loop para solicitar continuamente o valor de <code>x</code> e, caso o usuário não forneça um valor válido, pedir novamente! Melhore seu código da seguinte forma:</p>
+<pre><code>while True:
+    try:
+        x = int(input(&quot;Qual é o valor de x?&quot;))
+    except ValueError:
+        print(&quot;x não é um número inteiro&quot;)
+    else:
+        break
+
+print(f&quot;x é {x}&quot;)
+</code></pre>
+<p>Observe que <code>while True</code> executará o loop infinitamente. Se o usuário fornecer a entrada correta, podemos sair do loop e imprimir o resultado. Agora, um usuário que fornecer uma entrada incorreta será solicitado a fornecer outra entrada.</p>
+</li>
+</ul>
+<h2>Criando uma Função para Obter um Número Inteiro</h2>
+<ul>
+<li>
+<p>Com certeza, existem muitas vezes em que gostaríamos de obter um número inteiro do usuário. Modifique seu código da seguinte forma:</p>
+<pre><code>def main():
+    x = get_int()
+    print(f&quot;x é {x}&quot;)
+
+
+def get_int():
+    while True:
+        try:
+            x = int(input(&quot;Qual o valor de x?&quot;))
+        except ValueError:
+            print(&quot;x não é um número inteiro&quot;)
+        else:
+            break
+    return x
+
+
+main()
+</code></pre>
+<p>Note que estamos manifestando várias características ótimas. Primeiro, abstraímos a capacidade de obter um número inteiro. Agora, todo o programa se resume às três primeiras linhas do programa.</p>
+</li>
+<li>
+<p>Ainda assim, podemos melhorar esse programa. Considere o que mais você poderia fazer para melhorar esse programa. Modifique seu código da seguinte forma:</p>
+<pre><code>def main():
+    x = get_int()
+    print(f&quot;x é {x}&quot;)
+
+
+def get_int():
+    while True:
+        try:
+            x = int(input(&quot;Qual o valor de x?&quot;))
+        except ValueError:
+            print(&quot;x não é um número inteiro&quot;)
+        else:
+            return x
+
+
+main()
+</code></pre>
+<p>Note que <code>return</code> não apenas interromperá o loop, mas também retornará um valor.</p>
+</li>
+<li>
+<p>Algumas pessoas podem argumentar que você poderia fazer o seguinte:</p>
+<pre><code>def main():
+    x = get_int()
+    print(f&quot;x é {x}&quot;)
+
+
+def get_int():
+    while True:
+        try:
+            return int(input(&quot;Qual o valor de x?&quot;))
+        except ValueError:
+            print(&quot;x não é um número inteiro&quot;)
+
+
+main()
+</code></pre>
+<p>Note que isso faz a mesma coisa que a versão anterior do nosso código, apenas com menos linhas.</p>
+</li>
+</ul>
+<h2><code>pass</code></h2>
+<ul>
+<li>
+<p>Podemos fazer com que nosso código não avise o usuário, mas simplesmente questione novamente, modificando nosso código da seguinte maneira:</p>
+<pre><code>def main():
+    x = get_int()
+    print(f&quot;x é {x}&quot;)
+
+
+def get_int():
+    while True:
+        try:
+            return int(input(&quot;Qual é o valor de x?&quot;))
+        except ValueError:
+            pass
+
+
+main()
+</code></pre>
+<p>Note que nosso código ainda funcionará, mas não informará repetidamente ao usuário sobre o erro. Em alguns casos, você desejará informar claramente ao usuário qual erro está sendo produzido. Em outros casos, você pode decidir apenas pedir a entrada novamente.</p>
+</li>
+<li>
+<p>Uma última melhoria que poderia melhorar a implementação dessa função <code>get_int</code>. Observamos que atualmente estamos confiando no sistema de honra de que <code>x</code> está presente tanto nas funções <code>main</code> quanto <code>get_int</code>. Provavelmente, queremos passar uma mensagem que o usuário veja ao ser solicitada a entrada. Modifique seu código da seguinte forma.</p>
+<pre><code>def main():
+    x = get_int(&quot;Qual é o valor de x? &quot;)
+    print(f&quot;x é {x}&quot;)
+
+
+def get_int(prompt):
+    while True:
+        try:
+            return int(input(prompt))
+        except ValueError:
+            pass
+
+
+main()
+</code></pre>
+</li>
+<li>
+<p>Você pode obter mais informações na documentação do Python sobre <a href="https://docs.python.org/3/tutorial/controlflow.html#pass-statements"><code>pass</code></a>.</p>
+</li>
+</ul>
+<h2>Resumindo</h2>
+<p>Erros são inevitáveis no seu código. No entanto, você tem a oportunidade de usar o que foi aprendido hoje para ajudar a prevenir esses erros. Nesta palestra, você aprendeu sobre...</p>
+<ul>
+<li>Exceções</li>
+<li>Erros de Valor</li>
+<li>Erros de Tempo de Execução</li>
+<li><code>try</code></li>
+<li><code>else</code></li>
+<li><code>pass</code></li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

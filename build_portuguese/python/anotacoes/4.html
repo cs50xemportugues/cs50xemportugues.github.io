@@ -1,0 +1,672 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Loops</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Exceptions</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Libraries</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Unit Tests</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h2># Aula 4</h2>
+<ul>
+<li><a href="#bibliotecas">Bibliotecas</a></li>
+<li><a href="#aleat%C3%B3rio">Aleatório</a></li>
+<li><a href="#estat%C3%ADsticas">Estatísticas</a></li>
+<li><a href="#argumentos-de-linha-de-comando">Argumentos de Linha de Comando</a></li>
+<li><a href="#slice"><code>slice</code></a></li>
+<li><a href="#pacotes">Pacotes</a></li>
+<li><a href="#apis">APIs</a></li>
+<li><a href="#criando-suas-pr%C3%B3prias-bibliotecas">Criando Suas Próprias Bibliotecas</a></li>
+<li><a href="#resumindo">Resumindo</a></li>
+</ul>
+<h2>Bibliotecas</h2>
+<ul>
+<li>Em geral, bibliotecas são trechos de código escritos por você ou outras pessoas que você pode usar em seu programa.</li>
+<li>O Python permite que você compartilhe funções ou recursos com outras pessoas como &quot;módulos&quot;.</li>
+<li>Se você copiar e colar código de um projeto antigo, há grandes chances de você poder criar um módulo ou biblioteca que você pode incorporar ao seu novo projeto.</li>
+</ul>
+<h2>Aleatório</h2>
+<ul>
+<li>
+<p><code>random</code> é uma biblioteca que vem com o Python e que você pode importar para o seu próprio projeto.</p>
+</li>
+<li>
+<p>É mais fácil para um programador se apoiar no trabalho de outros programadores anteriores.</p>
+</li>
+<li>
+<p>Então, como você carrega um módulo para o seu próprio programa? Você pode usar a palavra <code>import</code> no seu programa.</p>
+</li>
+<li>
+<p>Dentro do módulo <code>random</code>, há uma função embutida chamada <code>random.choice(seq)</code>. <code>random</code> é o módulo que você está importando. Dentro desse módulo, há a função <code>choice</code>. Essa função recebe como parâmetro uma <code>seq</code> ou sequência que é uma lista.</p>
+</li>
+<li>
+<p>Na janela do terminal, digite <code>code generate.py</code>. No seu editor de texto, escreva o código a seguir:</p>
+<pre><code>import random
+
+coin = random.choice([&quot;heads&quot;, &quot;tails&quot;])
+print(coin)
+</code></pre>
+<p>Observe que a lista dentro de <code>choice</code> tem colchetes quadrados, aspas e uma vírgula. Como você passou dois elementos, o Python faz o cálculo e dá uma chance de 50% para &quot;heads&quot; e &quot;tails&quot;. Ao executar o código, você perceberá que ele realmente funciona bem!</p>
+</li>
+<li>
+<p>Podemos melhorar nosso código. <code>from</code> nos permite sermos mais específicos sobre o que gostaríamos de importar. Antes, nossa linha de código <code>import</code> estava importando todo o conteúdo das funções de <code>random</code>. No entanto, e se quisermos apenas carregar uma parte pequena de um módulo? Modifique seu código da seguinte forma:</p>
+<pre><code>from random import choice
+
+coin = choice([&quot;heads&quot;, &quot;tails&quot;])
+print(coin)
+</code></pre>
+<p>Observe que agora podemos importar apenas a função <code>choice</code> do <code>random</code>. A partir desse ponto, não precisamos mais escrever <code>random.choice</code>. Agora, podemos escrever apenas <code>choice</code>. <code>choice</code> é carregado explicitamente em nosso programa. Isso economiza recursos do sistema e potencialmente pode fazer nosso código rodar mais rápido!</p>
+</li>
+<li>
+<p>Continuando, considere a função <code>random.randint(a, b)</code>. Essa função irá gerar um número aleatório entre <code>a</code> e <code>b</code>. Modifique seu código da seguinte forma:</p>
+<pre><code>import random
+
+number = random.randint(1, 10)
+print(number)
+</code></pre>
+<p>Observe que o código irá gerar aleatoriamente um número entre <code>1</code> e <code>10</code>.</p>
+</li>
+<li>
+<p>Podemos introduzir em nosso código <code>random.shuffle(x)</code>, onde ele embaralhará uma lista em uma ordem aleatória.</p>
+<pre><code>import random
+
+cards = [&quot;jack&quot;, &quot;queen&quot;, &quot;king&quot;]
+random.shuffle(cards)
+for card in cards:
+    print(card)
+</code></pre>
+<p>Observe que <code>random.shuffle</code> irá embaralhar os elementos da lista. Ao contrário de outras funções, ela não retornará um valor. Em vez disso, ela pegará a lista <code>cards</code> e embaralhará os elementos dentro dessa lista. Execute seu código algumas vezes para ver o código funcionando.</p>
+</li>
+<li>
+<p>Agora temos essas três maneiras acima de gerar informações aleatórias.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/random.html"><code>random</code></a>.</p>
+</li>
+</ul>
+<h2>Estatísticas</h2>
+<ul>
+<li>
+<p>O Python vem com uma biblioteca embutida chamada <code>statistics</code>. Como podemos usar este módulo?</p>
+</li>
+<li>
+<p><code>average</code> é uma função desta biblioteca que é bastante útil. Na janela do terminal, digite <code>code average.py</code>. Na janela do editor de texto, modifique seu código da seguinte forma:</p>
+<pre><code>import statistics
+
+print(statistics.mean([100, 90]))
+</code></pre>
+<p>Observe que importamos uma biblioteca diferente chamada <code>statistics</code>. A função <code>mean</code> recebe uma lista de valores. Isso imprimirá a média desses valores. Na janela do terminal, digite <code>python average.py</code>.</p>
+</li>
+<li>
+<p>Considere as possibilidades de usar o módulo <code>statistics</code> em seus próprios programas.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre a <a href="https://docs.python.org/3/library/statistics.html"><code>statistics</code></a>.</p>
+</li>
+</ul>
+<h2>Argumentos de Linha de Comando</h2>
+<ul>
+<li>
+<p>Até agora, temos fornecido todos os valores dentro do programa que criamos. E se quiséssemos ser capazes de receber entradas da linha de comando? Por exemplo, em vez de digitar <code>python average.py</code> no terminal, e se quiséssemos digitar <code>python average.py 100 90</code> e ser capaz de obter a média entre <code>100</code> e <code>90</code>?</p>
+</li>
+<li>
+<p><code>sys</code> é um módulo que nos permite receber argumentos na linha de comando.</p>
+</li>
+<li>
+<p><code>argv</code> é uma função dentro do módulo <code>sys</code> que nos permite saber o que o usuário digitou na linha de comando. Observe como <code>sys.argv</code> é utilizado no código abaixo. Na janela do terminal, digite <code>python nome.py</code>. No editor de texto, escreva o seguinte:</p>
+<pre><code>import sys
+
+print(&quot;olá, meu nome é&quot;, sys.argv[1])
+</code></pre>
+<p>Observe que o programa irá verificar o que o usuário digitou na linha de comando. Atualmente, se você digitar <code>python nome.py David</code> no terminal, verá <code>olá, meu nome é David</code>. Observe que <code>sys.argv[1]</code> é onde <code>David</code> está sendo armazenado. Por que é isso? Bem, em lições anteriores, você pode se lembrar de que as listas começam no elemento <code>0</code>. O que você acha que está armazenado atualmente em <code>sys.argv[0]</code>? Se você adivinhou <code>nome.py</code>, você está correto!</p>
+</li>
+<li>
+<p>Há um pequeno problema com nosso programa como ele está. E se o usuário não digitar o nome na linha de comando? Experimente você mesmo. Digite <code>python nome.py</code> no terminal. Um erro <code>list index out of range</code> será apresentado pelo compilador. O motivo disso é que não há nada em <code>sys.argv[1]</code> porque nada foi digitado! Veja como podemos proteger nosso programa desse tipo de erro:</p>
+<pre><code>import sys
+
+try:
+    print(&quot;olá, meu nome é&quot;, sys.argv[1])
+except IndexError:
+    print(&quot;Argumentos insuficientes&quot;)
+</code></pre>
+<p>Observe que o usuário agora receberá uma dica útil sobre como fazer o programa funcionar se ele esquecer de digitar um nome. No entanto, poderíamos ser mais defensivos para garantir que o usuário insira os valores corretos?</p>
+</li>
+<li>
+<p>Nosso programa pode ser melhorado da seguinte maneira:</p>
+<pre><code>import sys
+
+if len(sys.argv) &lt; 2:
+    print(&quot;Argumentos insuficientes&quot;)
+elif len(sys.argv) &gt; 2:
+    print(&quot;Argumentos em excesso&quot;)
+else:
+    print(&quot;olá, meu nome é&quot;, sys.argv[1])
+</code></pre>
+<p>Observe como se você testar seu código, você verá como essas exceções são tratadas, fornecendo ao usuário um conselho mais refinado. Mesmo se o usuário digitar argumentos demais ou insuficientes, o usuário recebe instruções claras sobre como corrigir o problema.</p>
+</li>
+<li>
+<p>No momento, nosso código está logicamente correto. No entanto, há algo muito bom em manter nossas verificações de erro separadas do restante de nosso código. Como poderíamos separar nosso tratamento de erro? Modifique seu código da seguinte maneira:</p>
+<pre><code>import sys
+
+if len(sys.argv) &lt; 2:
+    sys.exit(&quot;Argumentos insuficientes&quot;)
+elif len(sys.argv) &gt; 2:
+    sys.exit(&quot;Argumentos em excesso&quot;)
+
+print(&quot;olá, meu nome é&quot;, sys.argv[1])
+</code></pre>
+<p>Observe como estamos usando uma função embutida do <code>sys</code> chamada <code>exit</code> que nos permite encerrar o programa se um erro for introduzido pelo usuário. Agora, podemos ter certeza de que o programa nunca executará a última linha de código e desencadeará um erro. Portanto, <code>sys.argv</code> fornece uma maneira pela qual os usuários podem introduzir informações a partir da linha de comando. <code>sys.exit</code> fornece um meio pelo qual o programa pode encerrar se ocorrer um erro.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/sys.html"><code>sys</code></a>.</p>
+</li>
+</ul>
+<h2><code>slice</code></h2>
+<ul>
+<li>
+<p><code>slice</code> é um comando que nos permite pegar uma <code>list</code> e informar ao compilador onde queremos que ele considere o início e o fim da <code>list</code>. Por exemplo, modifique seu código da seguinte forma:</p>
+<pre><code>import sys
+
+if len(sys.argv) &lt; 2:
+    sys.exit(&quot;Argumentos insuficientes&quot;)
+
+for arg in sys.argv:
+    print(&quot;Olá, meu nome é&quot;, arg)
+</code></pre>
+<p>Note que se você digitar <code>python nome.py David Carter Rongxin</code> na janela do terminal, o compilador não irá apenas exibir a saída esperada com os nomes, mas também <code>Hello, my name is nome.py</code>. Como então podemos garantir que o compilador ignore o primeiro elemento da lista onde <code>nome.py</code> está atualmente armazenado?</p>
+</li>
+<li>
+<p><code>slice</code> pode ser utilizado em nosso código para iniciar a lista em algum lugar diferente! Modifique seu código da seguinte forma:</p>
+<pre><code>import sys
+
+if len(sys.argv) &lt; 2:
+    sys.exit(&quot;Argumentos insuficientes&quot;)
+
+for arg in sys.argv[1:]:
+    print(&quot;Olá, meu nome é&quot;, arg)
+</code></pre>
+<p>Observe que em vez de começarmos a lista em <code>0</code>, usamos colchetes para informar ao compilador para começar em <code>1</code> e ir até o final usando o argumento <code>1:</code>. Executando este código, você perceberá que podemos melhorar nosso código usando uma sintaxe relativamente simples.</p>
+</li>
+</ul>
+<h2>Pacotes</h2>
+<ul>
+<li>
+<p>Uma das razões pelas quais o Python é tão popular é que existem várias bibliotecas de terceiros poderosas que adicionam funcionalidades. Chamamos essas bibliotecas de terceiros, implementadas como uma pasta, de &quot;pacotes&quot;.</p>
+</li>
+<li>
+<p>O PyPI é um repositório ou diretório de todos os pacotes de terceiros atualmente disponíveis.</p>
+</li>
+<li>
+<p><code>cowsay</code> é um pacote bem conhecido que permite que uma vaca fale com o usuário.</p>
+</li>
+<li>
+<p>O Python possui um gerenciador de pacotes chamado <code>pip</code> que permite instalar pacotes rapidamente em seu sistema.</p>
+</li>
+<li>
+<p>Na janela do terminal, você pode instalar o pacote <code>cowsay</code> digitando <code>pip install cowsay</code>. Após um pouco de saída, você agora pode usar este pacote em seu código.</p>
+</li>
+<li>
+<p>Na janela do seu terminal, digite <code>code say.py</code>. No editor de texto, digite o seguinte:</p>
+<pre><code>import cowsay
+import sys
+
+if len(sys.argv) == 2:
+    cowsay.cow(&quot;olá, &quot; + sys.argv[1])
+</code></pre>
+<p>Note que o programa verifica primeiro se o usuário inseriu pelo menos dois argumentos na linha de comando. Em seguida, a vaca deve falar com o usuário. Digite <code>python say.py David</code> e você verá uma vaca dizendo &quot;olá&quot; para David.</p>
+</li>
+<li>
+<p>Modifique ainda mais seu código:</p>
+<pre><code>import cowsay
+import sys
+
+if len(sys.argv) == 2:
+    cowsay.trex(&quot;olá, &quot; + sys.argv[1])
+</code></pre>
+<p>Note que agora um t-rex está dizendo &quot;olá&quot;.</p>
+</li>
+<li>
+<p>Agora você pode ver como é possível instalar pacotes de terceiros.</p>
+</li>
+<li>
+<p>Você pode aprender mais na página do PyPI sobre o <a href="https://pypi.org/project/cowsay/"><code>cowsay</code></a></p>
+</li>
+<li>
+<p>Você pode encontrar outros pacotes de terceiros no <a href="https://pypi.org/">PyPI</a></p>
+</li>
+</ul>
+<h2>APIs</h2>
+<ul>
+<li>
+<p>APIs ou &quot;interfaces de programação de aplicativos&quot; permitem conectar ao código de outras pessoas.</p>
+</li>
+<li>
+<p><code>requests</code> é um pacote que permite que seu programa se comporte como um navegador da web.</p>
+</li>
+<li>
+<p>No terminal, digite <code>pip install requests</code>. Em seguida, digite <code>code itunes.py</code>.</p>
+</li>
+<li>
+<p>Acontece que o Apple iTunes tem sua própria API que você pode acessar em seus programas. No navegador da web, você pode visitar <a href="https://itunes.apple.com/search?entity=song&amp;limit=1&amp;term=weezer">https://itunes.apple.com/search?entity=song&amp;limit=1&amp;term=weezer</a> e um arquivo de texto será baixado. David construiu esta URL lendo a documentação da API da Apple. Observe como essa consulta está procurando uma <code>música</code>, com um <code>limite</code> de um resultado, que está relacionado ao <code>termo</code> chamado <code>weezer</code>. Ao analisar este arquivo de texto que é baixado, você pode perceber que o formato é semelhante ao que programamos anteriormente em Python.</p>
+</li>
+<li>
+<p>O formato no arquivo de texto baixado é chamado de JSON, um formato baseado em texto que é usado para trocar dados em formato de texto entre aplicativos. Literalmente, a Apple está fornecendo um arquivo JSON que poderíamos interpretar em nosso próprio programa Python.</p>
+</li>
+<li>
+<p>Na janela do terminal, digite <code>code itunes.py</code>. Código como segue:</p>
+<pre><code> import requests
+ import sys
+
+ if len(sys.argv) != 2:
+     sys.exit()
+
+ response = requests.get(&quot;https://itunes.apple.com/search?entity=song&amp;limit=1&amp;term=&quot; + sys.argv[1])
+ print(response.json())
+</code></pre>
+<p>Observe como o valor retornado de <code>requests.get</code> será armazenado em <code>response</code>. David, tendo lido a documentação da Apple sobre esta API, sabe que o que é retornado é um arquivo JSON. Executando <code>python itunes.py weezer</code>, você verá o arquivo JSON retornado pela Apple. No entanto, a resposta JSON é convertida pelo Python em um dicionário. Olhando para a saída, pode ser bastante confuso!</p>
+</li>
+<li>
+<p>Acontece que o Python possui uma biblioteca JSON incorporada que pode nos ajudar a interpretar os dados recebidos. Modifique seu código da seguinte maneira:</p>
+<pre><code> import json
+ import requests
+ import sys
+
+ if len(sys.argv) != 2:
+     sys.exit()
+
+ response = requests.get(&quot;https://itunes.apple.com/search?entity=song&amp;limit=1&amp;term=&quot; + sys.argv[1])
+ print(json.dumps(response.json(), indent=2))
+</code></pre>
+<p>Observe que <code>json.dumps</code> é implementado de forma que utiliza <code>indent</code> para tornar a saída mais legível. Executando <code>python itunes.py weezer</code>, você verá o mesmo arquivo JSON. No entanto, desta vez, ele é muito mais legível. Observe agora que você verá um dicionário chamado <code>results</code> dentro da saída. Dentro desse dicionário chamado <code>results</code>, existem várias chaves presentes. Olhe para o valor <code>trackName</code> na saída. Qual nome de faixa você vê em seus resultados?</p>
+</li>
+<li>
+<p>Como podemos simplesmente imprimir apenas o nome dessa faixa? Modifique seu código da seguinte maneira:</p>
+<pre><code> import json
+ import requests
+ import sys
+
+ if len(sys.argv) != 2:
+     sys.exit()
+
+ response = requests.get(&quot;https://itunes.apple.com/search?entity=song&amp;limit=50&amp;term=&quot; + sys.argv[1])
+
+ o = response.json()
+ for result in o[&quot;results&quot;]:
+     print(result[&quot;trackName&quot;])
+</code></pre>
+<p>Observe como estamos pegando o resultado de <code>response.json()</code> e armazenando-o em <code>o</code> (como na letra minúscula). Em seguida, estamos iterando pelos <code>results</code> em <code>o</code> e imprimindo cada <code>trackName</code>. Observe também como aumentamos o número limite de resultados para <code>50</code>. Execute seu programa. Veja os resultados.</p>
+</li>
+<li>
+<p>Você pode aprender mais sobre <code>requests</code> através da <a href="https://docs.python-requests.org/">documentação da biblioteca</a>.</p>
+</li>
+<li>
+<p>Você pode aprender mais sobre JSON na documentação do Python em <a href="https://docs.python.org/3/library/json.html">JSON</a>.</p>
+</li>
+</ul>
+<h2>Criando suas próprias bibliotecas</h2>
+<ul>
+<li>
+<p>Você tem a habilidade como um programador Python de criar sua própria biblioteca!</p>
+</li>
+<li>
+<p>Imagine situações em que você pode querer reutilizar trechos de código várias vezes ou até mesmo compartilhá-los com outras pessoas!</p>
+</li>
+<li>
+<p>Até agora neste curso, escrevemos muito código para dizer &quot;olá&quot;. Vamos criar um pacote que nos permita dizer &quot;olá&quot; e &quot;adeus&quot;. Na janela do seu terminal, digite <code>code sayings.py</code>. No editor de texto, insira o seguinte código:</p>
+<pre><code>def hello(name):
+    print(f&quot;olá, {nome}&quot;)
+
+
+def goodbye(name):
+    print(f&quot;adeus, {nome}&quot;)
+</code></pre>
+<p>Observe que este código em si não faz nada para o usuário. No entanto, se um programador importar esse pacote em seu próprio programa, as funcionalidades criadas pelas funções acima podem ser implementadas em seu código.</p>
+</li>
+<li>
+<p>Vamos ver como podemos implementar código utilizando o pacote que criamos. Na janela do terminal, digite <code>code say.py</code>. Neste novo arquivo no seu editor de texto, digite o seguinte:</p>
+<pre><code>import sys
+
+from sayings import goodbye
+
+if len(sys.argv) == 2:
+    goodbye(sys.argv[1])
+</code></pre>
+<p>Observe que este código importa as funcionalidades de <code>adeus</code> do pacote <code>sayings</code>. Se o usuário inserir pelo menos dois argumentos na linha de comando, ele irá dizer &quot;adeus&quot; juntamente com a string inserida na linha de comando.</p>
+</li>
+</ul>
+<h2>Resumindo</h2>
+<p>Bibliotecas estendem as capacidades do Python. Algumas bibliotecas são incluídas por padrão no Python e apenas precisam ser importadas. Outras são pacotes de terceiros que precisam ser instalados usando <code>pip</code>. Você pode criar seus próprios pacotes para uso pessoal ou de outras pessoas! Nesta palestra, você aprendeu sobre...</p>
+<ul>
+<li>Bibliotecas</li>
+<li>Random</li>
+<li>Estatísticas</li>
+<li>Argumentos de Linha de Comando</li>
+<li>Slice</li>
+<li>Pacotes</li>
+<li>APIs</li>
+<li>Criando suas Próprias Bibliotecas</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

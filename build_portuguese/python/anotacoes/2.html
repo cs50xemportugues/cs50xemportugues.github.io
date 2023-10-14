@@ -1,0 +1,796 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Loops</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Exceptions</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Libraries</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Unit Tests</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h2># Aula 2</h2>
+<ul>
+<li>
+<p><a href="#la%C3%A7os">Laços</a></p>
+</li>
+<li>
+<p><a href="#la%C3%A7os-while">Laços While</a></p>
+</li>
+<li>
+<p><a href="#la%C3%A7os-for">Laços For</a></p>
+</li>
+<li>
+<p><a href="#melhorando-com-entrada-do-usu%C3%A1rio">Melhorando com Entrada do Usuário</a></p>
+</li>
+<li>
+<p><a href="#mais-sobre-listas">Mais sobre Listas</a></p>
+</li>
+<li>
+<p><a href="#comprimento">Comprimento</a></p>
+</li>
+<li>
+<p><a href="#dicion%C3%A1rios">Dicionários</a></p>
+</li>
+<li>
+<p><a href="#mario">Mario</a></p>
+</li>
+<li>
+<p><a href="#resumindo">Resumindo</a>## Loops</p>
+</li>
+<li>
+<p>Em essência, os loops são uma maneira de fazer algo repetidamente.</p>
+</li>
+<li>
+<p>Comece digitando <code>code cat.py</code> na janela do terminal.</p>
+</li>
+<li>
+<p>No editor de texto, comece com o seguinte código:</p>
+<pre><code>print(&quot;miau&quot;)
+print(&quot;miau&quot;)
+print(&quot;miau&quot;)
+</code></pre>
+<p>Ao executar esse código digitando <code>python cat.py</code>, você perceberá que o programa mia três vezes.</p>
+</li>
+<li>
+<p>Ao desenvolver como programador, você deve considerar como é possível melhorar áreas do código em que você digita a mesma coisa repetidamente. Imagine onde você poderia querer &quot;miar&quot; 500 vezes. Seria lógico digitar a mesma expressão <code>print(&quot;miau&quot;)</code> repetidamente?</p>
+</li>
+<li>
+<p>Os loops permitem que você crie um bloco de código que é executado repetidamente.## Laços de Repetição (While Loops)</p>
+</li>
+<li>
+<p>O laço <code>while</code> é quase universal em todas as linguagens de programação.</p>
+</li>
+<li>
+<p>Esse tipo de laço repetirá um bloco de código várias vezes.</p>
+</li>
+<li>
+<p>No editor de texto, edite seu código da seguinte maneira:</p>
+<pre><code>i = 3
+while i != 0:
+    print(&quot;meow&quot;)
+</code></pre>
+<p>Observe como, mesmo que esse código execute <code>print(&quot;meow&quot;)</code> várias vezes, ele nunca irá parar! Ele irá executar infinitamente. Os laços <code>while</code> funcionam perguntando repetidamente se a condição do laço foi cumprida. Nesse caso, o compilador está perguntando &quot;o valor de <code>i</code> é diferente de zero?&quot;. Quando você fica preso em um laço que dura para sempre, você pode pressionar <code>control-c</code> no seu teclado para quebrar o laço.</p>
+</li>
+<li>
+<p>Para corrigir esse laço que dura para sempre, podemos editar nosso código da seguinte forma:</p>
+<pre><code>i = 3
+while i != 0:
+  print(&quot;meow&quot;)
+  i = i - 1
+</code></pre>
+<p>Observe que agora nosso código é executado corretamente, reduzindo o valor de <code>i</code> em <code>1</code> a cada &quot;iteração&quot; do laço. O termo &quot;iteração&quot; tem um significado especial na programação. Por iteração, nos referimos a um ciclo completo do laço. A primeira iteração é denominada &quot;0ª&quot; iteração. A segunda é denominada &quot;1ª&quot; iteração. Na programação, contamos a partir de 0, depois 1, depois 2.</p>
+</li>
+<li>
+<p>Podemos melhorar ainda mais nosso código da seguinte forma:</p>
+<pre><code>  i = 1
+  while i &lt;= 3:
+      print(&quot;meow&quot;)
+      i = i + 1
+</code></pre>
+<p>Observe que quando escrevemos <code>i = i + 1</code>, estamos atribuindo o valor de <code>i</code> da direita para a esquerda. Aqui, estamos começando <code>i</code> em um, assim como a maioria das pessoas conta (1, 2, 3). Se você executar o código acima, verá que ele produz três &quot;meows&quot;. É uma boa prática na programação começar a contar do zero.</p>
+</li>
+<li>
+<p>Podemos melhorar nosso código para começar a contar do zero:</p>
+<pre><code>i = 0
+while i &lt; 3:
+    print(&quot;meow&quot;)
+    i += 1
+</code></pre>
+<p>Observe como a alteração do operador para <code>i &lt; 3</code> permite que nosso código funcione como esperado. Começamos a contar do 0 e ele itera através do nosso laço três vezes, produzindo três &quot;meows&quot;. Além disso, observe como <code>i += 1</code> é o mesmo que <code>i = i + 1</code>.</p>
+</li>
+<li>
+<p>Nosso código até esse ponto é ilustrado da seguinte maneira:</p>
+<pre><code>flowchart TD
+  A([início]) --&gt; B[i = 0]
+  B --&gt; C{i &lt; 3}
+  C -- Verdadeiro --&gt; D[&quot;#quot;meow#quot;&quot;]
+  D --&gt; E[i += 1]
+  E --&gt; C
+  C -- Falso --&gt; F([fim])
+</code></pre>
+<p>Observe como nosso laço conta <code>i</code> até, mas não através do valor <code>3</code>.## Loops <code>for</code></p>
+</li>
+<li>
+<p>Um loop <code>for</code> é um tipo diferente de loop.</p>
+</li>
+<li>
+<p>Para entender melhor um loop <code>for</code>, é melhor começar falando sobre um novo tipo de variável chamado <code>list</code> em Python. Assim como em outras áreas de nossas vidas, podemos ter uma lista de compras, uma lista de tarefas, etc.</p>
+</li>
+<li>
+<p>Um loop <code>for</code> itera através de uma <code>list</code> de itens. Por exemplo, na janela do editor de texto, modifique seu código <code>cat.py</code> da seguinte forma:</p>
+<pre><code>for i in [0, 1, 2]:
+    print(&quot;meow&quot;)
+</code></pre>
+<p>Note como esse código é mais limpo em comparação com seu código anterior usando o loop <code>while</code>. Neste código, <code>i</code> começa com <code>0</code>, mia, <code>i</code> é atribuído <code>1</code>, mia, e, finalmente, <code>i</code> é atribuído <code>2</code>, mia, e então termina.</p>
+</li>
+<li>
+<p>Embora esse código alcance o que queremos, existem algumas possibilidades de melhorar o código para casos extremos. À primeira vista, nosso código parece ótimo. No entanto, e se você quisesse iterar até um milhão? É melhor criar um código que possa lidar com esses casos extremos. Consequentemente, podemos melhorar nosso código da seguinte forma:</p>
+<pre><code>for i in range(3):
+    print(&quot;meow&quot;)
+</code></pre>
+<p>Note como <code>range(3)</code> retorna automaticamente três valores (<code>0</code>, <code>1</code> e <code>2</code>). Este código será executado e produzirá o efeito desejado, miau três vezes.</p>
+</li>
+<li>
+<p>Nosso código pode ser melhorado ainda mais. Note como nunca usamos <code>i</code> explicitamente em nosso código. Ou seja, embora o Python precise do <code>i</code> como um local para armazenar o número da iteração do loop, nunca o usamos para nenhum outro propósito. Em Python, se uma variável não tem nenhum outro significado em nosso código, podemos representar essa variável simplesmente como um sublinhado único <code>_</code>. Portanto, você pode modificar seu código da seguinte forma:</p>
+<pre><code>for _ in range(3):
+    print(&quot;meow&quot;)
+</code></pre>
+<p>Note como alterar o <code>i</code> para <code>_</code> não tem impacto algum no funcionamento de nosso programa.</p>
+</li>
+<li>
+<p>Nosso código pode ser ainda mais melhorado. Para ampliar sua mente para as possibilidades dentro do Python, considere o seguinte código:</p>
+<pre><code>print(&quot;meow&quot; * 3)
+</code></pre>
+<p>Note como ele miará três vezes, mas o programa produzirá <code>meowmeowmeow</code> como resultado. Considere: como você poderia criar uma quebra de linha no final de cada miau?</p>
+</li>
+<li>
+<p>Na verdade, você pode editar seu código da seguinte forma:</p>
+<pre><code>print(&quot;meow\n&quot; * 3, end=&quot;&quot;)
+</code></pre>
+<p>Note como esse código produz três miados, cada um em uma linha separada. Ao adicionar <code>end=&quot;&quot;</code> e <code>\n</code>, dizemos ao compilador para adicionar uma quebra de linha no final de cada miau.## Melhorando com Entrada do Usuário</p>
+</li>
+<li>
+<p>Talvez queiramos obter entrada do nosso usuário. Podemos usar loops como uma maneira de validar a entrada do usuário.</p>
+</li>
+<li>
+<p>Um paradigma comum em Python é utilizar um loop <code>while</code> para validar a entrada do usuário.</p>
+</li>
+<li>
+<p>Por exemplo, vamos tentar solicitar ao usuário um número maior ou igual a 0:</p>
+<pre><code>while True:
+    n = int(input(&quot;Qual é o valor de n? &quot;))
+    if n &lt; 0:
+        continue
+    else:
+        break
+</code></pre>
+</li>
+<li>
+<p>Observe que introduzimos duas novas palavras-chave em Python, <code>continue</code> e <code>break</code>. <code>continue</code> explicitamente diz ao Python para avançar para a próxima iteração do loop. <code>break</code>, por outro lado, diz ao Python para &quot;quebrar&quot; o loop antecipadamente, antes que ele tenha terminado todas as iterações. Neste caso, iremos <code>continuar</code> para a próxima iteração do loop quando <code>n</code> for menor que 0, fazendo com que seja solicitado ao usuário novamente &quot;Qual é o valor de n?&quot;. Se, no entanto, <code>n</code> for maior ou igual a 0, iremos <code>break</code> para fora do loop e permitir que o restante do nosso programa seja executado.</p>
+</li>
+<li>
+<p>Acontece que a palavra-chave <code>continue</code> é redundante neste caso. Podemos melhorar nosso código da seguinte forma:</p>
+<pre><code>while True:
+    n = int(input(&quot;Qual é o valor de n? &quot;))
+    if n &gt; 0:
+        break
+
+for _ in range(n):
+    print(&quot;meow&quot;)
+</code></pre>
+<p>Note como este loop while sempre será executado (para sempre) até que <code>n</code> seja maior que <code>0</code>. Quando <code>n</code> for maior que <code>0</code>, o loop é interrompido.</p>
+</li>
+<li>
+<p>Com base no nosso aprendizado anterior, podemos usar funções para melhorar ainda mais nosso código:</p>
+<pre><code>def main():
+    meow(obter_numero())
+
+
+def obter_numero():
+    while True:
+        n = int(input(&quot;Qual é o valor de n? &quot;))
+        if n &gt; 1:
+            return n
+
+
+def meow(n):
+    for _ in range(n):
+        print(&quot;meow&quot;)
+
+
+main()
+</code></pre>
+<p>Note como não apenas alteramos seu código para operar em várias funções, mas também usamos uma instrução <code>return</code> para <code>retornar</code> o valor de <code>n</code> de volta para a função <code>main</code>.## Mais sobre Listas</p>
+</li>
+<li>
+<p>Considere o mundo de Hogwarts da famosa série de Harry Potter.</p>
+</li>
+<li>
+<p>No terminal, digite <code>code hogwarts.py</code>.</p>
+</li>
+<li>
+<p>No editor de texto, escreva o seguinte código:</p>
+<pre><code>students = [&quot;Hermoine&quot;, &quot;Harry&quot;, &quot;Ron&quot;]
+
+print(students[0])
+print(students[1])
+print(students[2])
+</code></pre>
+<p>Observe como temos uma <code>lista</code> de estudantes com seus nomes conforme acima. Então imprimimos o estudante que está na posição 0, &quot;Hermoine&quot;. Cada um dos outros estudantes também é impresso.</p>
+</li>
+<li>
+<p>Assim como ilustrado anteriormente, podemos usar um loop para percorrer a lista. Você pode melhorar seu código da seguinte forma:</p>
+<pre><code>students = [&quot;Hermoine&quot;, &quot;Harry&quot;, &quot;Ron&quot;]
+
+for student in students:
+    print(student)
+</code></pre>
+<p>Perceba que para cada <code>student</code> na lista <code>students</code>, ele será impresso conforme desejado. Você pode se perguntar por que não usamos a designação <code>_</code> como discutido anteriormente. Optamos por não fazer isso porque <code>student</code> é explicitamente usado em nosso código.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/tutorial/datastructures.html#more-on-lists">listas</a>.## Comprimento</p>
+</li>
+<li>
+<p>Podemos utilizar <code>len</code> como uma forma de verificar o comprimento da <code>list</code> chamada <code>students</code>.</p>
+</li>
+<li>
+<p>Imagine que você não deseja apenas imprimir o nome do aluno, mas também a posição dele na lista. Para fazer isso, você pode editar seu código da seguinte maneira:</p>
+<pre><code>students = [&quot;Hermoine&quot;, &quot;Harry&quot;, &quot;Ron&quot;]
+
+for i in range(len(students)):
+    print(i + 1, students[i])
+</code></pre>
+<p>Observe como a execução desse código resulta não apenas na obtenção da posição de cada aluno mais um usando <code>i + 1</code>, mas também na impressão do nome de cada aluno. <code>len</code> permite que você veja dinamicamente o comprimento da lista de alunos, independentemente de seu crescimento.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/functions.html?highlight=len#len">len</a>.## Dicionários</p>
+</li>
+<li>
+<p><code>dict</code>s ou dicionários é uma estrutura de dados que permite associar chaves com valores.</p>
+</li>
+<li>
+<p>Enquanto uma <code>list</code> é uma lista de múltiplos valores, um <code>dict</code> associa uma chave com um valor.</p>
+</li>
+<li>
+<p>Considerando as casas de Hogwarts, podemos atribuir estudantes específicos a casas específicas.</p>
+<p><img src="cs50pWeek2Slide17.png" alt="Nomes de Harry Potter." title="Nomes de Harry Potter." /></p>
+</li>
+<li>
+<p>Poderíamos usar apenas <code>list</code>s para realizar isso:</p>
+<pre><code>students = [&quot;Hermoine&quot;, &quot;Harry&quot;, &quot;Ron&quot;, &quot;Draco&quot;]
+houses = [&quot;Gryffindor&quot;, &quot;Gryffindor&quot;, &quot;Griffindor&quot;, &quot;Slytherin&quot;]
+</code></pre>
+<p>Observe que poderíamos prometer que sempre manteremos essas listas em ordem. O indivíduo na primeira posição de <code>students</code> está associado à casa na primeira posição da lista <code>houses</code>, e assim por diante. No entanto, isso pode se tornar bastante complicado à medida que nossas listas crescem!</p>
+</li>
+<li>
+<p>Podemos melhorar nosso código usando um <code>dict</code> da seguinte forma:</p>
+<pre><code>students = {
+    &quot;Hermoine&quot;: &quot;Gryffindor&quot;,
+    &quot;Harry&quot;: &quot;Gryffindor&quot;,
+    &quot;Ron&quot;: &quot;Gryffindor&quot;,
+    &quot;Draco&quot;: &quot;Slytherin&quot;,
+}
+print(students[&quot;Hermoine&quot;])
+print(students[&quot;Harry&quot;])
+print(students[&quot;Ron&quot;])
+print(students[&quot;Draco&quot;])
+</code></pre>
+<p>Observe como usamos chaves <code>{}</code> chaves para criar um dicionário. Enquanto as <code>list</code>s usam números para iterar pela lista, os <code>dict</code>s nos permitem usar palavras.</p>
+</li>
+<li>
+<p>Execute seu código e verifique se a saída é a seguinte:</p>
+<pre><code>$ python hogwarts.py
+Gryffindor
+Gryffindor
+Gryffindor
+Slytherin
+</code></pre>
+</li>
+<li>
+<p>Podemos melhorar nosso código da seguinte forma:</p>
+<pre><code>students = {
+    &quot;Hermoine&quot;: &quot;Gryffindor&quot;,
+    &quot;Harry&quot;: &quot;Gryffindor&quot;,
+    &quot;Ron&quot;: &quot;Gryffindor&quot;,
+    &quot;Draco&quot;: &quot;Slytherin&quot;,
+}
+for student in students:
+    print(student)
+</code></pre>
+<p>Observe como, ao executar este código, o loop <code>for</code> percorrerá apenas todas as chaves, resultando em uma lista com os nomes dos estudantes. Como podemos imprimir tanto valores quanto chaves?</p>
+</li>
+<li>
+<p>Modifique seu código da seguinte forma:</p>
+<pre><code>students = {
+    &quot;Hermoine&quot;: &quot;Gryffindor&quot;,
+    &quot;Harry&quot;: &quot;Gryffindor&quot;,
+    &quot;Ron&quot;: &quot;Gryffindor&quot;,
+    &quot;Draco&quot;: &quot;Slytherin&quot;,
+}
+for student in students:
+    print(student, students[student])
+</code></pre>
+<p>Observe como <code>students[student]</code> irá para a chave de cada aluno e encontrará o valor de sua casa. Execute seu código e você perceberá como a saída fica um pouco confusa.</p>
+</li>
+<li>
+<p>Podemos limpar a função print melhorando nosso código da seguinte forma:</p>
+<pre><code>students = {
+    &quot;Hermoine&quot;: &quot;Gryffindor&quot;,
+    &quot;Harry&quot;: &quot;Gryffindor&quot;,
+    &quot;Ron&quot;: &quot;Gryffindor&quot;,
+    &quot;Draco&quot;: &quot;Slytherin&quot;,
+}
+for student in students:
+    print(student, students[student], sep=&quot;, &quot;)
+</code></pre>
+<p>Observe como isso cria uma separação limpa de uma <code>,</code> entre cada item impresso.</p>
+</li>
+<li>
+<p>Se você executar <code>python hogwarts.py</code>, deverá ver o seguinte:</p>
+<pre><code>$ python hogwarts.py
+Hermoine, Gryffindor
+Harry, Gryffindor
+Ron, Gryffindor
+Draco, Slytherin
+</code></pre>
+</li>
+<li>
+<p>E se tivermos mais informações sobre nossos estudantes? Como poderíamos associar mais dados a cada um dos estudantes?</p>
+<p><img src="cs50pWeek2Slide18.png" alt="Nomes de Harry Potter." title="Nomes de Harry Potter." /></p>
+</li>
+<li>
+<p>Você pode imaginar querer ter muitos dados associados a várias coisas com uma única chave. Melhore seu código da seguinte forma:</p>
+<pre><code>students = [
+    {&quot;name&quot;: &quot;Hermoine&quot;, &quot;house&quot;: &quot;Gryffindor&quot;, &quot;patronus&quot;: &quot;Otter&quot;},
+    {&quot;name&quot;: &quot;Harry&quot;, &quot;house&quot;: &quot;Gryffindor&quot;, &quot;patronus&quot;: &quot;Stag&quot;},
+    {&quot;name&quot;: &quot;Ron&quot;, &quot;house&quot;: &quot;Gryffindor&quot;, &quot;patronus&quot;: &quot;Jack Russell terrier&quot;},
+    {&quot;name&quot;: &quot;Draco&quot;, &quot;house&quot;: &quot;Slytherin&quot;, &quot;patronus&quot;: None},
+]
+</code></pre>
+<p>Observe como este código cria uma <code>list</code> de <code>dict</code>s. A lista chamada <code>students</code> tem quatro <code>dicts</code> dentro dela: um para cada estudante. Além disso, perceba que o Python tem uma designação especial <code>None</code> onde não há valor associado a uma chave.</p>
+</li>
+<li>
+<p>Agora, você tem acesso a uma série de dados interessantes sobre esses estudantes. Agora, modifique ainda mais seu código da seguinte forma:</p>
+<pre><code>students = [
+    {&quot;name&quot;: &quot;Hermoine&quot;, &quot;house&quot;: &quot;Gryffindor&quot;, &quot;patronus&quot;: &quot;Otter&quot;},
+    {&quot;name&quot;: &quot;Harry&quot;, &quot;house&quot;: &quot;Gryffindor&quot;, &quot;patronus&quot;: &quot;Stag&quot;},
+    {&quot;name&quot;: &quot;Ron&quot;, &quot;house&quot;: &quot;Gryffindor&quot;, &quot;patronus&quot;: &quot;Jack Russell terrier&quot;},
+    {&quot;name&quot;: &quot;Draco&quot;, &quot;house&quot;: &quot;Slytherin&quot;, &quot;patronus&quot;: None},
+]
+
+for student in students:
+    print(student[&quot;name&quot;], student[&quot;house&quot;], student[&quot;patronus&quot;], sep=&quot;, &quot;)
+</code></pre>
+<p>Observe como o loop <code>for</code> percorrerá cada um dos <code>dict</code>s dentro da lista chamada <code>students</code>.</p>
+</li>
+<li>
+<p>Você pode aprender mais na Documentação do Python sobre <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries"><code>dict</code>s</a>.## Mario</p>
+</li>
+<li>
+<p>Lembre-se de que o clássico jogo do Mario tem um herói pulando sobre tijolos. Vamos criar uma representação textual desse jogo.</p>
+<p><img src="cs50pWeek2Slide21.png" alt="Bloco do Mario." title="Bloco do Mario." /></p>
+</li>
+<li>
+<p>Começe a codificar da seguinte maneira:</p>
+<pre><code>print(&quot;#&quot;)
+print(&quot;#&quot;)
+print(&quot;#&quot;)
+</code></pre>
+<p>Observe como estamos copiando e colando o mesmo código repetidamente.</p>
+</li>
+<li>
+<p>Considere como podemos melhorar o código da seguinte forma:</p>
+<pre><code>for _ in range(3):
+    print(&quot;#&quot;)
+</code></pre>
+<p>Observe como isso realiza basicamente o que queremos criar.</p>
+</li>
+<li>
+<p>Considere: Poderíamos abstrair ainda mais para resolver problemas mais sofisticados posteriormente com esse código? Modifique seu código da seguinte forma:</p>
+<pre><code>def main():
+    print_column(3)
+
+
+def print_column(height):
+    for _ in range(height):
+        print(&quot;#&quot;)
+
+
+main()
+</code></pre>
+<p>Observe como nossa coluna pode crescer o quanto quisermos sem codificação rígida.</p>
+</li>
+<li>
+<p>Agora, vamos tentar imprimir uma fileira horizontalmente. Modifique seu código da seguinte forma:</p>
+<pre><code>def main():
+    print_row(4)
+
+
+def print_row(width):
+    print(&quot;?&quot; * width)
+
+
+main()
+</code></pre>
+<p>Observe como agora temos código que pode criar blocos da esquerda para a direita.</p>
+</li>
+<li>
+<p>Examinando o slide abaixo, observe como o Mario tem fileiras e colunas de blocos.</p>
+<p><img src="cs50pWeek2Slide24.png" alt="Mario Subterrâneo." title="Mario Subterrâneo." /></p>
+</li>
+<li>
+<p>Considere, como poderíamos implementar fileiras e colunas dentro de nosso código? Modifique seu código da seguinte forma:</p>
+<pre><code>def main():
+    print_square(3)
+
+
+def print_square(size):
+
+    # Para cada fileira no quadrado
+    for i in range(size):
+
+        # Para cada tijolo na fileira
+        for j in range(size):
+
+            # Imprimir tijolo
+            print(&quot;#&quot;, end=&quot;&quot;)
+
+        # Imprimir linha vazia
+        print()
+
+
+main()
+</code></pre>
+<p>Observe que temos um loop externo que trata de cada fileira no quadrado. Em seguida, temos um loop interno que imprime um tijolo em cada fileira. Finalmente, temos uma instrução <code>print</code> que imprime uma linha vazia.</p>
+</li>
+<li>
+<p>Podemos abstrair ainda mais nosso código:</p>
+<pre><code>def main():
+    print_square(3)
+
+
+def print_square(size):
+    for i in range(size):
+        print_row(size)
+
+
+def print_row(width):
+    print(&quot;#&quot; * width)
+
+
+main()## Resumo
+</code></pre>
+</li>
+</ul>
+<p>Agora você possui mais um poder em sua crescente lista de habilidades em Python. Nesta palestra, abordamos...</p>
+<ul>
+<li>Loops</li>
+<li><code>while</code> (enquanto)</li>
+<li><code>for</code> (para)</li>
+<li><code>len</code> (comprimento)</li>
+<li><code>list</code> (lista)</li>
+<li><code>dict</code> (dicionário)</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

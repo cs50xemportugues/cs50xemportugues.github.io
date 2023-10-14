@@ -1,0 +1,686 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Loops</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Exceptions</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Libraries</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Unit Tests</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h2># Aula 5</h2>
+<ul>
+<li><a href="#testes-unit%C3%A1rios">Testes Unitários</a></li>
+<li><a href="#assert"><code>assert</code></a></li>
+<li><a href="#pytest"><code>pytest</code></a></li>
+<li><a href="#testando-strings">Testando Strings</a></li>
+<li><a href="#organizando-testes-em-pastas">Organizando Testes em Pastas</a></li>
+<li><a href="#conclus%C3%A3o">Conclusão</a></li>
+</ul>
+<h2>Testes Unitários</h2>
+<ul>
+<li>
+<p>Até agora, é provável que você tenha testado seu próprio código usando instruções <code>print</code>.</p>
+</li>
+<li>
+<p>Alternativamente, você pode ter contado com o CS50 para testar seu código por você!</p>
+</li>
+<li>
+<p>Na indústria, é mais comum escrever código para testar seus próprios programas.</p>
+</li>
+<li>
+<p>Na janela do console, digite <code>code calculator.py</code>. Observe que você pode ter codificado este arquivo anteriormente em uma palestra anterior. No editor de texto, verifique se seu código aparece como segue:</p>
+<pre><code>def main():
+    x = int(input(&quot;Qual é o valor de x? &quot;))
+    print(&quot;x ao quadrado é&quot;, square(x))
+
+
+def square(n):
+    return n * n
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que você poderia testar o código acima usando alguns números óbvios, como <code>2</code>. No entanto, considere por que você pode querer criar um teste que garanta que o código acima funcione corretamente.</p>
+</li>
+<li>
+<p>Seguindo a convenção, vamos criar um novo programa de teste digitando <code>code test_calculator.py</code> e modifique seu código no editor de texto da seguinte forma:</p>
+<pre><code>from calculator import square
+
+
+def main():
+    test_square()
+
+
+def test_square():
+    if square(2) != 4:
+        print(&quot;2 ao quadrado não é 4&quot;)
+    if square(3) != 9:
+        print(&quot;3 ao quadrado não é 9&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que estamos importando a função <code>square</code> de <code>square.py</code> na primeira linha de código. Por convenção, estamos criando uma função chamada <code>test_square</code>. Dentro dessa função, definimos algumas condições para testar.</p>
+</li>
+<li>
+<p>Na janela do console, digite <code>python test_calculator.py</code>. Você observará que nada está sendo exibido. Pode ser que tudo esteja funcionando bem! Alternativamente, pode ser que nossa função de teste não tenha descoberto um dos &quot;casos extremos&quot; que pode produzir um erro.</p>
+</li>
+<li>
+<p>No momento, nosso código testa duas condições. Se quisermos testar muitas mais condições, nosso código de teste pode facilmente se tornar inchado. Como poderíamos expandir nossas capacidades de teste sem expandir nosso código de teste?</p>
+</li>
+</ul>
+<h2><code>assert</code></h2>
+<ul>
+<li>
+<p>O comando <code>assert</code> do Python nos permite dizer ao compilador que algo, alguma afirmação, é verdadeira. Podemos aplicar isso ao nosso código de teste da seguinte forma:</p>
+<pre><code>from calculator import square
+
+
+def main():
+    test_square()
+
+
+def test_square():
+    assert square(2) == 4
+    assert square(3) == 9
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Perceba que estamos afirmando definitivamente o que <code>square(2)</code> e <code>square(3)</code> devem ser iguais. Nosso código foi reduzido de quatro linhas de teste para duas.</p>
+</li>
+<li>
+<p>Podemos intencionalmente quebrar nosso código de calculadora modificando-o da seguinte forma:</p>
+<pre><code>def main():
+    x = int(input(&quot;Qual é o valor de x? &quot;))
+    print(&quot;O quadrado de x é&quot;, square(x))
+
+
+def square(n):
+    return n + n
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Note que alteramos o operador <code>*</code> para <code>+</code> na função <code>square</code>.</p>
+</li>
+<li>
+<p>Agora, ao executar <code>python test_square.py</code> no console, você perceberá que um <code>AssertionError</code> é gerado pelo compilador. Essencialmente, isso significa que uma de nossas condições não foi atendida.</p>
+</li>
+<li>
+<p>Um dos desafios que estamos enfrentando agora é que nosso código pode se tornar ainda mais pesado se quisermos fornecer uma saída de erro mais descritiva para nossos usuários. É possível codificar da seguinte maneira:</p>
+<pre><code>from calculator import square
+
+
+def main():
+    test_square()
+
+
+def test_square():
+    try:
+        assert square(2) == 4
+    except AssertionError:
+        print(&quot;O quadrado de 2 não é 4&quot;)
+    try:
+        assert square(3) == 9
+    except AssertionError:
+        print(&quot;O quadrado de 3 não é 9&quot;)
+    try:
+        assert square(-2) == 4
+    except AssertionError:
+        print(&quot;O quadrado de -2 não é 4&quot;)
+    try:
+        assert square(-3) == 9
+    except AssertionError:
+        print(&quot;O quadrado de -3 não é 9&quot;)
+    try:
+        assert square(0) == 0
+    except AssertionError:
+        print(&quot;O quadrado de 0 não é 0&quot;)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Note que a execução desse código irá produzir vários erros. No entanto, não está produzindo todos os erros mencionados acima. Isso ilustra que vale a pena testar vários casos para capturar situações onde há erros de codificação.</p>
+</li>
+<li>
+<p>O código acima ilustra um grande desafio: como tornar mais fácil testar o código sem dezenas de linhas de código como o exemplo acima?</p>
+</li>
+</ul>
+<p>Você pode aprender mais na documentação do Python sobre o <a href="https://docs.python.org/3/reference/simple_stmts.html#assert"><code>assert</code></a>.</p>
+<h2><code>pytest</code></h2>
+<ul>
+<li>
+<p><code>pytest</code> é uma biblioteca de terceiros que permite testar unitariamente seu programa. Isso significa que você pode testar suas funções dentro do programa.</p>
+</li>
+<li>
+<p>Para utilizar o <code>pytest</code>, digite <code>pip install pytest</code> no seu terminal.</p>
+</li>
+<li>
+<p>Antes de aplicar o <code>pytest</code> ao nosso próprio programa, modifique sua função <code>test_calculator</code> da seguinte maneira:</p>
+<pre><code>from calculator import square
+
+
+def test_assert():
+    assert square(2) == 4
+    assert square(3) == 9
+    assert square(-2) == 4
+    assert square(-3) == 9
+    assert square(0) == 0
+</code></pre>
+<p>Observe como o código acima verifica todas as condições que queremos testar.</p>
+</li>
+<li>
+<p>O <code>pytest</code> nos permite executar nosso programa diretamente através dele, de modo que possamos visualizar mais facilmente os resultados de nossas condições de teste.</p>
+</li>
+<li>
+<p>Na janela do terminal, digite <code>pytest test_calculator.py</code>. Você irá notar imediatamente que a saída será fornecida. Observe o <code>F</code> vermelho próximo ao topo da saída, indicando que algo em seu código falhou. Além disso, observe que o <code>E</code> vermelho fornece algumas dicas sobre os erros em seu programa <code>calculator.py</code>. Com base na saída, podemos imaginar um cenário em que <code>3 * 3</code> retornou <code>6</code> em vez de <code>9</code>. Com base nos resultados deste teste, podemos corrigir nosso código <code>calculator.py</code> da seguinte maneira:</p>
+<pre><code>def main():
+    x = int(input(&quot;Qual é o valor de x? &quot;))
+    print(&quot;O quadrado de x é&quot;, square(x))
+
+
+def square(n):
+    return n * n
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que alteramos o operador <code>+</code> para <code>*</code> na função <code>square</code>, retornando-a para um estado funcional.</p>
+</li>
+<li>
+<p>Ao executar novamente o comando <code>pytest test_calculator.py</code>, observe como nenhum erro é produzido. Parabéns!</p>
+</li>
+<li>
+<p>No momento, não é ideal que o <code>pytest</code> pare de executar após o primeiro teste falhado. Novamente, vamos retornar nosso código <code>calculator.py</code> para seu estado quebrado:</p>
+<pre><code>def main():
+    x = int(input(&quot;Qual é o valor de x? &quot;))
+    print(&quot;O quadrado de x é&quot;, square(x))
+
+
+def square(n):
+    return n + n
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que alteramos o operador <code>*</code> para <code>+</code> na função <code>square</code>, retornando-a para um estado quebrado.</p>
+</li>
+<li>
+<p>Para melhorar nosso código de teste, vamos modificar o arquivo <code>test_calculator.py</code> para dividir o código em diferentes grupos de testes:</p>
+<pre><code>from calculator import square
+
+
+def test_positive():
+    assert square(2) == 4
+    assert square(3) == 9
+
+
+def test_negative():
+    assert square(-2) == 4
+    assert square(-3) == 9
+
+
+def test_zero():
+    assert square(0) == 0
+</code></pre>
+<p>Observe que dividimos os mesmos cinco testes em três funções diferentes. Frameworks de teste como o <code>pytest</code> executarão cada função, mesmo que haja uma falha em uma delas. Ao executar novamente o comando <code>pytest test_calculator.py</code>, você perceberá que muitos mais erros estão sendo exibidos. A saída de erro adicional permite explorar mais a fundo o que pode estar causando problemas em seu código.</p>
+</li>
+<li>
+<p>Após melhorar nosso código de teste, retorne seu código <code>calculator.py</code> ao estado total de funcionamento:</p>
+<pre><code>def main():
+    x = int(input(&quot;Qual é o valor de x? &quot;))
+    print(&quot;O quadrado de x é&quot;, square(x))
+
+
+def square(n):
+    return n * n
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que alteramos o operador <code>+</code> para <code>*</code> na função <code>square</code>, retornando-a para um estado funcional.</p>
+</li>
+<li>
+<p>Ao executar novamente o comando <code>pytest test_calculator.py</code>, você perceberá que nenhum erro é encontrado.</p>
+</li>
+<li>
+<p>Em resumo, cabe a você, como programador, definir quantas condições de teste achar necessário!</p>
+</li>
+</ul>
+<p>Você pode aprender mais na documentação do Pytest em <a href="https://docs.pytest.org/en/7.1.x/getting-started.html"><code>pytest</code></a>.</p>
+<h2>Testando Strings</h2>
+<ul>
+<li>
+<p>Voltando no tempo, considere o código a seguir <code>hello.py</code>:</p>
+<pre><code>def main():
+    name = input(&quot;Qual é o seu nome? &quot;)
+    hello(name)
+
+
+def hello(to=&quot;mundo&quot;):
+    print(&quot;olá,&quot;, to)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que podemos querer testar o resultado da função <code>hello</code>.</p>
+</li>
+<li>
+<p>Considere o seguinte código para <code>test_hello.py</code>:</p>
+<pre><code>from hello import hello
+
+
+def test_hello():
+    assert hello(&quot;David&quot;) == &quot;olá, David&quot;
+    assert hello() == &quot;olá, mundo&quot;
+</code></pre>
+<p>Ao analisar este código, você acha que esta abordagem de teste funcionará bem? Por que este teste pode não funcionar bem? Observe que a função <code>hello</code> em <code>hello.py</code> imprime algo: Isto é, ela não retorna um valor!</p>
+</li>
+<li>
+<p>Podemos alterar nossa função <code>hello</code> dentro de <code>hello.py</code> da seguinte forma:</p>
+<pre><code>def main():
+    name = input(&quot;Qual é o seu nome? &quot;)
+    print(hello(name))
+
+
+def hello(to=&quot;mundo&quot;):
+    return f&quot;olá, {to}&quot;
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que alteramos nossa função <code>hello</code> para retornar uma string. Isso significa efetivamente que agora podemos usar <code>pytest</code> para testar a função <code>hello</code>.</p>
+</li>
+<li>
+<p>Executando <code>pytest test_hello.py</code>, nosso código passará em todos os testes!</p>
+</li>
+<li>
+<p>Assim como nosso caso de teste anterior nesta lição, podemos dividir nossos testes separadamente:</p>
+<pre><code>from hello import hello
+
+
+def test_default():
+    assert hello() == &quot;olá, mundo&quot;
+
+
+def test_argument():
+    assert hello(&quot;David&quot;) == &quot;olá, David&quot;
+</code></pre>
+<p>Observe que o código acima separa nosso teste em várias funções para que todas elas sejam executadas, mesmo se ocorrer um erro.</p>
+</li>
+</ul>
+<h2>Organizando Testes em Pastas</h2>
+<ul>
+<li>
+<p>O código de teste de unidade usando vários testes é tão comum que você tem a capacidade de executar uma pasta inteira de testes com um único comando.</p>
+</li>
+<li>
+<p>Primeiro, na janela do terminal, execute <code>mkdir test</code> para criar uma pasta chamada <code>test</code>.</p>
+</li>
+<li>
+<p>Em seguida, para criar um teste dentro dessa pasta, digite na janela do terminal <code>code test/test_hello.py</code>. Observe que <code>test/</code> instrui o terminal a criar <code>test_hello.py</code> na pasta chamada <code>test</code>.</p>
+</li>
+<li>
+<p>Na janela do editor de texto, modifique o arquivo para incluir o seguinte código:</p>
+<pre><code>from hello import hello
+
+
+def test_default():
+    assert hello() == &quot;hello, world&quot;
+
+
+def test_argument():
+    assert hello(&quot;David&quot;) == &quot;hello, David&quot;
+</code></pre>
+<p>Observação que estamos criando um teste da mesma forma que fizemos anteriormente.</p>
+</li>
+<li>
+<p>O <code>pytest</code> não nos permitirá executar testes como uma pasta simplesmente com este arquivo (ou um conjunto inteiro de arquivos) sozinho, sem um arquivo especial <code>__init__</code>. Na janela do terminal, crie este arquivo digitando <code>code test/__init__.py</code>. Observe o <code>test/</code> como antes, assim como os sublinhados duplos em ambos os lados de <code>init</code>. Mesmo deixando este arquivo <code>__init__.py</code> vazio, o <code>pytest</code> é informado de que a pasta inteira contendo <code>__init__.py</code> possui testes que podem ser executados.</p>
+</li>
+<li>
+<p>Agora, digitando <code>pytest test</code> no terminal, você pode executar toda a pasta <code>test</code> de código.</p>
+</li>
+</ul>
+<p>Você pode aprender mais na documentação do Pytest sobre <a href="https://docs.pytest.org/en/7.1.x/explanation/pythonpath.html?highlight=folder#pytest-import-mechanisms-and-sys-path-pythonpath">mecanismos de importação</a>.</p>
+<h2>Resumindo</h2>
+<p>Testar o seu código é uma parte natural do processo de programação. Testes unitários permitem testar aspectos específicos do seu código. Você pode criar seus próprios programas que testam seu código. Alternativamente, você pode utilizar frameworks como <code>pytest</code> para executar seus testes unitários por você. Nesta palestra, você aprendeu sobre...</p>
+<ul>
+<li>Testes unitários</li>
+<li><code>assert</code></li>
+<li><code>pytest</code></li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

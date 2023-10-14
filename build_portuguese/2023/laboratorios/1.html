@@ -55,6 +55,28 @@
     <script src="/static/js/instantsearch.production.min.js"></script>
     <script src="/static/js/jekyll-theme-cs50.js"></script>
 
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
     <title>CS50x em Português</title>
   </head>
 
@@ -112,7 +134,7 @@
         <a href="/2023/semanas/2.html"
           >Semana 2
           <span class="semana-titulo"
-            >Vetores</span
+            >Loops</span
           ></a
         >
       </li>
@@ -122,7 +144,7 @@
         <a href="/2023/semanas/3.html"
           >Semana 3
           <span class="semana-titulo"
-            >Algoritmos</span
+            >Exceptions</span
           ></a
         >
       </li>
@@ -132,7 +154,7 @@
         <a href="/2023/semanas/4.html"
           >Semana 4
           <span class="semana-titulo"
-            >Memória</span
+            >Libraries</span
           ></a
         >
       </li>
@@ -142,7 +164,7 @@
         <a href="/2023/semanas/5.html"
           >Semana 5
           <span class="semana-titulo"
-            >Estruturas de Dados</span
+            >Unit Tests</span
           ></a
         >
       </li>
@@ -231,14 +253,14 @@
       <li data-marker="*">
         <span class="fa-li"><i class="fas fa-circle"></i></span>
         <a href="/2023/perguntas_frequentes.html"
-          >Perguntas Frequentes</a
+          ></a
         >
       </li>
       -->
       <!--
       <li data-marker="*">
         <span class="fa-li"><i class="fas fa-circle"></i></span>
-        <a href="/2023/equipe.html">Equipe</a>
+        <a href="/2023/equipe.html"></a>
       </li>-->
       <li data-marker="*">
         <span class="fa-li"><i class="fas fa-circle"></i></span>
@@ -336,7 +358,7 @@ Anos: 9
 <pre><code>population/ $
 </code></pre>
 <p>Clique dentro da janela do terminal e digite</p>
-<pre><code>wget https://cdn.cs50.net/2022/fall/labs/1/population.c
+<pre><code>wget http://cs50xemportugues.github.io/static/2023/laboratorios/populacao.c
 </code></pre>
 <p>seguido de Enter para baixar um arquivo modelo chamado <code>population.c</code> no seu codespace. Tome cuidado para não ignorar o espaço entre <code>wget</code> e a URL seguinte, ou qualquer outro caractere. Se tudo ocorrer bem, execute</p>
 <pre><code>ls
@@ -358,8 +380,6 @@ Seu programa deve, então, solicitar ao usuário um tamanho de população final
 <li>Seu programa deve então calcular o número (inteiro) de anos necessários para que a população atinja pelo menos o tamanho desejado.</li>
 <li>Finalmente, seu programa deve imprimir o número de anos necessários para que a população de lhamas atinja o tamanho desejado, digitando no terminal <code>Anos: n</code>, onde <code>n</code> representa o número de anos.</li>
 </ul>
-<h3>Passo a Passo</h3>
-<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/dZmtRHHUB1M"></iframe>
 <h3>Dicas</h3>
 <ul>
 <li>Se você deseja re-pedir repetidamente ao usuário o valor de uma variável até que alguma condição seja atendida, pode ser útil usar um loop <code>do… while</code>. Por exemplo, relembre o seguinte código da aula, que solicita o usuário repetidamente até que ele digite um número inteiro positivo. <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
@@ -412,7 +432,6 @@ Tamanho inicial: 100
 Tamanho final: 1000000
 Anos: 115
 </code></pre>
-<details><summary>Não tem certeza de como resolver?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/2CcqQnLbGOE"></iframe></details>
 <p>Execute o seguinte para avaliar a correção do código usando o <code>check50</code>. Mas verifique se você compilou e testou o código também!</p>
 <pre><code>check50 cs50/labs/2023/x/population
 </code></pre>

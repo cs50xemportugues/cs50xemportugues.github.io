@@ -1,0 +1,1244 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Loops</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Exceptions</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Libraries</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Unit Tests</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h2># Aula 9</h2>
+<ul>
+<li><a href="#et-cetera">Et Cetera</a></li>
+<li><a href="#set"><code>set</code></a></li>
+<li><a href="#global-variables">Variáveis Globais</a></li>
+<li><a href="#constants">Constantes</a></li>
+<li><a href="#type-hints">Dicas de Tipo</a></li>
+<li><a href="#docstrings">Docstrings</a></li>
+<li><a href="#argparse"><code>argparse</code></a></li>
+<li><a href="#unpacking">Desempacotamento</a></li>
+<li><a href="#args-and-kwargs"><code>args</code> e <code>kwargs</code></a></li>
+<li><a href="#map"><code>map</code></a></li>
+<li><a href="#list-comprehensions">Compreensão de Listas</a></li>
+<li><a href="#filter"><code>filter</code></a></li>
+<li><a href="#dictionary-comprehensions">Compreensão de Dicionários</a></li>
+<li><a href="#enumerate"><code>enumerate</code></a></li>
+<li><a href="#generators-and-iterators">Geradores e Iteradores</a></li>
+<li><a href="#congratulations">Parabéns!</a></li>
+<li><a href="#this-was-cs50">Isso foi CS50!</a></li>
+</ul>
+<h2>Et cetera</h2>
+<ul>
+<li>Ao longo das muitas lições passadas, abordamos muitas coisas relacionadas ao Python!</li>
+<li>Nesta lição, estaremos focando em muitos dos itens &quot;et cetera&quot; que não foram discutidos anteriormente. &quot;Et cetera&quot; literalmente significa &quot;e o restante&quot;!</li>
+<li>De fato, se você olhar a documentação do Python, encontrará várias outras funcionalidades &quot;o restante&quot;.</li>
+</ul>
+<h2><code>conjunto</code></h2>
+<ul>
+<li>
+<p>Na matemática, um conjunto seria considerado um conjunto de números sem duplicatas.</p>
+</li>
+<li>
+<p>Na janela do editor de texto, o código é o seguinte:</p>
+<pre><code>alunos = [
+    {&quot;nome&quot;: &quot;Hermione&quot;, &quot;casa&quot;: &quot;Grifinória&quot;},
+    {&quot;nome&quot;: &quot;Harry&quot;, &quot;casa&quot;: &quot;Grifinória&quot;},
+    {&quot;nome&quot;: &quot;Rony&quot;, &quot;casa&quot;: &quot;Grifinória&quot;},
+    {&quot;nome&quot;: &quot;Draco&quot;, &quot;casa&quot;: &quot;Sonserina&quot;},
+    {&quot;nome&quot;: &quot;Padma&quot;, &quot;casa&quot;: &quot;Corvinal&quot;},
+]
+
+casas = []
+for aluno in alunos:
+    if aluno[&quot;casa&quot;] not in casas:
+        casas.append(aluno[&quot;casa&quot;])
+
+for casa in sorted(casas):
+    print(casa)
+</code></pre>
+<p>Observe como temos uma lista de dicionários, sendo cada um um aluno. Uma lista vazia chamada <code>casas</code> é criada. Iteramos por cada <code>aluno</code> em <code>alunos</code>. Se a <code>casa</code> de um aluno não estiver em <code>casas</code>, adicionamos à nossa lista de <code>casas</code>.</p>
+</li>
+<li>
+<p>Descobrimos que podemos usar as funcionalidades incorporadas do <code>conjunto</code> para eliminar duplicatas.</p>
+</li>
+<li>
+<p>Na janela do editor de texto, o código é o seguinte:</p>
+<pre><code>alunos = [
+    {&quot;nome&quot;: &quot;Hermione&quot;, &quot;casa&quot;: &quot;Grifinória&quot;},
+    {&quot;nome&quot;: &quot;Harry&quot;, &quot;casa&quot;: &quot;Grifinória&quot;},
+    {&quot;nome&quot;: &quot;Rony&quot;, &quot;casa&quot;: &quot;Grifinória&quot;},
+    {&quot;nome&quot;: &quot;Draco&quot;, &quot;casa&quot;: &quot;Sonserina&quot;},
+    {&quot;nome&quot;: &quot;Padma&quot;, &quot;casa&quot;: &quot;Corvinal&quot;},
+]
+
+casas = set()
+for aluno in alunos:
+    casas.add(aluno[&quot;casa&quot;])
+
+for casa in sorted(casas):
+    print(casa)
+</code></pre>
+<p>Observe como não é necessário incluir verificações para garantir que não haja duplicatas. O objeto <code>conjunto</code> cuida disso automaticamente para nós.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/stdtypes.html#set"><code>conjunto</code></a>.</p>
+</li>
+</ul>
+<h2>Variáveis globais</h2>
+<ul>
+<li>
+<p>Em outras linguagens de programação, existe a noção de variáveis globais que são acessíveis por qualquer função.</p>
+</li>
+<li>
+<p>Podemos aproveitar essa capacidade no Python. No editor de texto, digite o seguinte código:</p>
+<pre><code>balance = 0
+
+
+def main():
+    print(&quot;Saldo:&quot;, balance)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe como criamos uma variável global chamada <code>balance</code>, fora de qualquer função.</p>
+</li>
+<li>
+<p>Como nenhuma mensagem de erro é apresentada ao executar o código acima, você poderia pensar que está tudo bem. No entanto, não está! No editor de texto, digite o seguinte código:</p>
+<pre><code>balance = 0
+
+
+def main():
+    print(&quot;Saldo:&quot;, balance)
+    deposit(100)
+    withdraw(50)
+    print(&quot;Saldo:&quot;, balance)
+
+
+def deposit(n):
+    balance += n
+
+
+def withdraw(n):
+    balance -= n
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe como agora adicionamos a funcionalidade de adicionar e retirar fundos do <code>balance</code>. No entanto, ao executar esse código, um erro é apresentado! Vemos um erro chamado <code>UnboundLocalError</code>. Você pode imaginar que, pelo menos da maneira como codificamos <code>balance</code> e nossas funções <code>deposit</code> e <code>withdraw</code> atualmente, não é possível atribuir um valor para dentro de uma função.</p>
+</li>
+<li>
+<p>Para interagir com uma variável global dentro de uma função, a solução é usar a palavra-chave <code>global</code>. No editor de texto, digite o seguinte código:</p>
+<pre><code>balance = 0
+
+
+def main():
+    print(&quot;Saldo:&quot;, balance)
+    deposit(100)
+    withdraw(50)
+    print(&quot;Saldo:&quot;, balance)
+
+
+def deposit(n):
+    global balance
+    balance += n
+
+
+def withdraw(n):
+    global balance
+    balance -= n
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe como a palavra-chave <code>global</code> informa a cada função que <code>balance</code> não se refere a uma variável local: em vez disso, ela se refere à variável global que colocamos originalmente no topo do nosso código. Agora, nosso código funciona!</p>
+</li>
+<li>
+<p>Utilizando nossos conhecimentos de programação orientada a objetos, podemos modificar nosso código para usar uma classe em vez de uma variável global. No editor de texto, digite o seguinte código:</p>
+<pre><code>class Conta:
+    def __init__(self):
+        self._saldo = 0
+
+    @property
+    def saldo(self):
+        return self._saldo
+
+    def depositar(self, n):
+        self._saldo += n
+
+    def sacar(self, n):
+        self._saldo -= n
+
+
+def main():
+    conta = Conta()
+    print(&quot;Saldo:&quot;, conta.saldo)
+    conta.depositar(100)
+    conta.sacar(50)
+    print(&quot;Saldo:&quot;, conta.saldo)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe como usamos <code>conta = Conta()</code> para criar uma conta. As classes nos permitem resolver esse problema da necessidade de uma variável global de forma mais limpa porque essas variáveis de instância são acessíveis a todos os métodos dessa classe utilizando <code>self</code>.</p>
+</li>
+<li>
+<p>Em geral, as variáveis globais devem ser usadas com muita moderação, se é que devem ser usadas!</p>
+</li>
+</ul>
+<h2>Constantes</h2>
+<ul>
+<li>
+<p>Alguns idiomas permitem que você crie variáveis que são imutáveis, chamadas de &quot;constantes&quot;. As constantes permitem programar defensivamente e reduzir as oportunidades de os valores importantes serem alterados.</p>
+</li>
+<li>
+<p>Na janela do editor de texto, escreva o seguinte código:</p>
+<pre><code>MEOWS = 3
+
+for _ in range(MEOWS):
+    print(&quot;meow&quot;)
+</code></pre>
+<p>Note que <code>MEOWS</code> é nossa constante neste caso. As constantes geralmente são indicadas por nomes de variáveis em letras maiúsculas e são colocadas no topo do nosso código. Embora isso <em>pareça</em> uma constante, na realidade, o Python na verdade não tem nenhum mecanismo para evitar que nós mudemos esse valor dentro do nosso código! Em vez disso, você está no sistema de honra: se um nome de variável estiver escrito em letras maiúsculas, simplesmente não o altere!</p>
+</li>
+<li>
+<p>É possível criar uma &quot;constante&quot; de classe, agora entre aspas porque sabemos que o Python não suporta totalmente &quot;constantes&quot;. Na janela do editor de texto, escreva o seguinte código:</p>
+<pre><code>class Gato:
+    MEOWS = 3
+
+    def miar(self):
+        for _ in range(Gato.MEOWS):
+            print(&quot;meow&quot;)
+
+
+gato = Gato()
+gato.miar()
+</code></pre>
+<p>Porque <code>MEOWS</code> é definida fora de qualquer método específico da classe, todos eles têm acesso a esse valor por meio de <code>Gato.MEOWS</code>.</p>
+</li>
+</ul>
+<h2>Dicas de Tipos</h2>
+<ul>
+<li>Em outras linguagens de programação, é possível expressar explicitamente o tipo de variável que se deseja usar.</li>
+<li>Como vimos anteriormente no curso, o Python não requer a declaração explícita de tipos.</li>
+<li>No entanto, é uma boa prática garantir que todas as suas variáveis sejam do tipo correto.</li>
+<li>O <code>mypy</code> é um programa que pode ajudar a verificar se todas as suas variáveis são do tipo correto.</li>
+<li>Você pode instalar o <code>mypy</code> executando o seguinte comando em sua janela de terminal: <code>pip install mypy</code>.</li>
+</ul>
+<p>No editor de texto, escreva o código da seguinte maneira:</p>
+<pre><code>  def meow(n):
+      for _ in range(n):
+          print(&quot;meow&quot;)
+
+
+  number = input(&quot;Número: &quot;)
+  meow(number)
+</code></pre>
+<p>Você pode notar que <code>number = input(&quot;Número: &quot;)</code> retorna uma <code>string</code>, não um <code>int</code>. Mas <code>meow</code> provavelmente espera um <code>int</code>!</p>
+<ul>
+<li>
+<p>Uma dica de tipo pode ser adicionada para dar uma dica ao Python sobre o tipo de variável que <code>meow</code> deve esperar. No editor de texto, escreva o código da seguinte maneira:</p>
+<pre><code>def meow(n: int):
+    for _ in range(n):
+        print(&quot;meow&quot;)
+
+
+number = input(&quot;Número: &quot;)
+meow(number)
+</code></pre>
+<p>Note, porém, que nosso programa ainda lança um erro.</p>
+</li>
+<li>
+<p>Após a instalação do <code>mypy</code>, execute <code>mypy meows.py</code> na janela do terminal. O <code>mypy</code> fornecerá algumas orientações sobre como corrigir esse erro.</p>
+</li>
+<li>
+<p>É possível fazer anotações em todas as suas variáveis. No editor de texto, escreva o código da seguinte maneira:</p>
+<pre><code>def meow(n: int):
+    for _ in range(n):
+        print(&quot;meow&quot;)
+
+
+number: int = input(&quot;Número: &quot;)
+meow(number)
+</code></pre>
+<p>Note como <code>number</code> agora recebe uma dica de tipo.</p>
+</li>
+<li>
+<p>Novamente, executar <code>mypy meows.py</code> na janela do terminal fornece feedback muito mais específico para você, o programador.</p>
+</li>
+<li>
+<p>Podemos corrigir nosso último erro escrevendo o código da seguinte maneira:</p>
+<pre><code>def meow(n: int):
+    for _ in range(n):
+        print(&quot;meow&quot;)
+
+
+number: int = int(input(&quot;Número: &quot;))
+meow(number)
+</code></pre>
+<p>Note como a execução de <code>mypy</code> agora não exibe erros porque transformamos nossa entrada em um inteiro.</p>
+</li>
+<li>
+<p>Vamos introduzir um novo erro, assumindo que <code>meow</code> nos retornará uma string, ou <code>str</code>. No editor de texto, escreva o código da seguinte maneira:</p>
+<pre><code>def meow(n: int):
+    for _ in range(n):
+        print(&quot;meow&quot;)
+
+
+number: int = int(input(&quot;Número: &quot;))
+meows: str = meow(number)
+print(meows)
+</code></pre>
+<p>Note como a função <code>meow</code> tem apenas um efeito colateral. Como só tentamos imprimir &quot;meow&quot;, sem retornar um valor, ocorre um erro ao tentarmos armazenar o valor de retorno de <code>meow</code> em <code>meows</code>.</p>
+</li>
+<li>
+<p>Podemos usar dicas de tipos para verificar erros, desta vez anotando os valores de retorno das funções. No editor de texto, escreva o código da seguinte maneira:</p>
+<pre><code>def meow(n: int) -&gt; None:
+    for _ in range(n):
+        print(&quot;meow&quot;)
+
+
+number: int = int(input(&quot;Número: &quot;))
+meows: str = meow(number)
+print(meows)
+</code></pre>
+<p>Note como a notação <code>-&gt; None</code> informa ao <code>mypy</code> que não há um valor de retorno.</p>
+</li>
+<li>
+<p>Podemos modificar nosso código para retornar uma string se desejarmos:</p>
+<pre><code>def meow(n: int) -&gt; str:
+    return &quot;meow\n&quot; * n
+
+
+number: int = int(input(&quot;Número: &quot;))
+meows: str = meow(number)
+print(meows, end=&quot;&quot;)
+</code></pre>
+<p>Note como armazenamos em <code>meows</code> várias <code>str</code>s. A execução de <code>mypy</code> não exibe erros.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/typing.html">Dicas de Tipos</a>.</p>
+</li>
+<li>
+<p>Você pode aprender mais sobre o <a href="https://mypy.readthedocs.io/"><code>mypy</code></a> por meio da própria documentação do programa.</p>
+</li>
+</ul>
+<h2>Docstrings</h2>
+<ul>
+<li>
+<p>Uma maneira padrão de comentar o propósito de sua função é usar um docstring. Na janela do editor de texto, escreva o código da seguinte forma:</p>
+<pre><code>def meow(n):
+    &quot;&quot;&quot;Miar n vezes.&quot;&quot;&quot;
+    return &quot;miar\n&quot; * n
+
+
+number = int(input(&quot;Número: &quot;))
+miados = meow(number)
+print(miados, end=&quot;&quot;)
+</code></pre>
+<p>Observe como as três aspas duplas indicam o que a função faz.</p>
+</li>
+<li>
+<p>Você pode usar docstrings para padronizar como você documenta as características de uma função. Na janela do editor de texto, escreva o código da seguinte forma:</p>
+<pre><code>def meow(n):
+    &quot;&quot;&quot;
+    Miar n vezes.
+
+    :param n: Número de vezes para miar
+    :type n: int
+    :raise TypeError: Se n não for um int
+    :return: Uma string com n miados, um por linha
+    :rtype: str
+    &quot;&quot;&quot;
+    return &quot;miar\n&quot; * n
+
+
+number = int(input(&quot;Número: &quot;))
+miados = meow(number)
+print(miados, end=&quot;&quot;)
+</code></pre>
+<p>Observe como vários argumentos de docstring são incluídos. Por exemplo, ele descreve os parâmetros recebidos pela função e o que é retornado pela função.</p>
+</li>
+<li>
+<p>Ferramentas estabelecidas, como <a href="https://www.sphinx-doc.org/en/master/index.html">Sphinx</a>, podem ser usadas para analisar docstrings e criar automaticamente documentação para nós na forma de páginas da web e arquivos PDF, que podem ser publicados e compartilhados com outras pessoas.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://peps.python.org/pep-0257/">docstrings</a>.</p>
+</li>
+</ul>
+<h2><code>argparse</code></h2>
+<ul>
+<li>Suponha que queremos usar argumentos de linha de comando em nosso programa. Na janela do editor de texto, codifique da seguinte forma:</li>
+</ul>
+<p>import sys</p>
+<p>if len(sys.argv) == 1:
+print(&quot;meow&quot;)
+elif len(sys.argv) == 3 and sys.argv[1] == &quot;-n&quot;:
+n = int(sys.argv[2])
+for _ in range(n):
+print(&quot;meow&quot;)
+else:
+print(&quot;uso: meows.py [-n NÚMERO]&quot;)</p>
+<p>Observe como <code>sys</code> é importado, de onde obtemos acesso a <code>sys.argv</code> - um array de argumentos de linha de comando fornecidos ao nosso programa quando executado. Podemos usar várias instruções <code>if</code> para verificar se o usuário executou corretamente nosso programa.</p>
+<ul>
+<li>Vamos supor que este programa fique muito mais complicado. Como poderíamos verificar todos os argumentos que podem ser inseridos pelo usuário? Podemos desistir se tivermos mais do que alguns argumentos de linha de comando!</li>
+<li>Felizmente, <code>argparse</code> é uma biblioteca que lida com a análise de strings complicadas de argumentos de linha de comando. Na janela do editor de texto, codifique da seguinte forma:</li>
+</ul>
+<p>import argparse</p>
+<p>parser = argparse.ArgumentParser()
+parser.add_argument(&quot;-n&quot;)
+args = parser.parse_args()</p>
+<p>for _ in range(int(args.n)):
+print(&quot;meow&quot;)</p>
+<p>Observe como <code>argparse</code> é importado em vez de <code>sys</code>. Um objeto chamado <code>parser</code> é criado a partir de uma classe <code>ArgumentParser</code>. O método <code>add_argument</code> dessa classe é usado para informar ao <code>argparse</code> quais argumentos devemos esperar do usuário quando eles executam nosso programa. Por fim, executar o método <code>parse_args</code> do analisador garante que todos os argumentos tenham sido incluídos corretamente pelo usuário.</p>
+<ul>
+<li>Também podemos programar de forma mais limpa, de modo que o usuário possa obter informações sobre o uso correto do nosso código quando falhar ao usar o programa corretamente. Na janela do editor de texto, codifique da seguinte forma:</li>
+</ul>
+<p>import argparse</p>
+<p>parser = argparse.ArgumentParser(description=&quot;Meow como um gato&quot;)
+parser.add_argument(&quot;-n&quot;, help=&quot;número de vezes para miar&quot;)
+args = parser.parse_args()</p>
+<p>for _ in range(int(args.n)):
+print(&quot;meow&quot;)</p>
+<p>Observe como o usuário recebe alguma documentação. Especificamente, um argumento <code>help</code> é fornecido. Agora, se o usuário executar <code>python meows.py --help</code> ou <code>-h</code>, o usuário receberá algumas dicas sobre como usar este programa.</p>
+<ul>
+<li>Podemos melhorar ainda mais este programa. Na janela do editor de texto, codifique da seguinte forma:</li>
+</ul>
+<p>import argparse</p>
+<p>parser = argparse.ArgumentParser(description=&quot;Meow como um gato&quot;)
+parser.add_argument(&quot;-n&quot;, default=1, help=&quot;número de vezes para miar&quot;, type=int)
+args = parser.parse_args()</p>
+<p>for _ in range(args.n):
+print(&quot;meow&quot;)</p>
+<p>Observe como não apenas a documentação de ajuda está incluída, mas você pode fornecer um valor <code>default</code> quando nenhum argumento é fornecido pelo usuário.</p>
+<ul>
+<li>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/argparse.html"><code>argparse</code></a>.</li>
+</ul>
+<h2>Desempacotando</h2>
+<ul>
+<li>
+<p>Não seria bom poder dividir uma única variável em duas variáveis? Na janela do editor de texto, escreva o seguinte código:</p>
+<pre><code>primeiro, _ = input(&quot;Qual é o seu nome? &quot;).split(&quot; &quot;)
+print(f&quot;olá, {primeiro}&quot;)
+</code></pre>
+<p>Observe como este programa tenta obter o primeiro nome do usuário, dividindo ingenuamente em um único espaço.</p>
+</li>
+<li>
+<p>Descobriu-se que existem outras maneiras de desempacotar variáveis. Você pode escrever um código mais poderoso e elegante ao entender como desempacotar variáveis de maneiras aparentemente mais avançadas. Na janela do editor de texto, escreva o seguinte código:</p>
+<pre><code>def total(galeões, sickles, knuts):
+    return (galeões * 17 + sickles) * 29 + knuts
+
+
+print(total(100, 50, 25), &quot;Knuts&quot;)
+</code></pre>
+<p>Observe como isso retorna o valor total em Knuts.</p>
+</li>
+<li>
+<p>E se quisermos armazenar nossas moedas em uma lista? Na janela do editor de texto, escreva o seguinte código:</p>
+<pre><code>def total(galeões, sickles, knuts):
+    return (galeões * 17 + sickles) * 29 + knuts
+
+
+coins = [100, 50, 25]
+
+print(total(coins[0], coins[1], coins[2]), &quot;Knuts&quot;)
+</code></pre>
+<p>Observe como uma lista chamada <code>coins</code> é criada. Podemos passar cada valor indexando usando <code>0</code>, <code>1</code> e assim por diante.</p>
+</li>
+<li>
+<p>Isso está ficando muito verboso. Não seria bom se pudéssemos simplesmente passar a lista de moedas para nossa função?</p>
+</li>
+<li>
+<p>Para possibilitar a passagem da lista inteira, podemos usar o desempacotamento. Na janela do editor de texto, escreva o seguinte código:</p>
+<pre><code>def total(galeões, sickles, knuts):
+    return (galeões * 17 + sickles) * 29 + knuts
+
+
+coins = [100, 50, 25]
+
+print(total(*coins), &quot;Knuts&quot;)
+</code></pre>
+<p>Observe como o <code>*</code> desempacota a sequência da lista de moedas e passa cada um de seus elementos individuais para <code>total</code>.</p>
+</li>
+<li>
+<p>Suponha que pudéssemos passar os nomes das moedas em qualquer ordem? Na janela do editor de texto, escreva o seguinte código:</p>
+<pre><code>def total(galeões, sickles, knuts):
+    return (galeões * 17 + sickles) * 29 + knuts
+
+
+print(total(galeões=100, sickles=50, knuts=25), &quot;Knuts&quot;)
+</code></pre>
+<p>Observe como isso ainda é calculado corretamente.</p>
+</li>
+<li>
+<p>Quando você começa a falar sobre &quot;nomes&quot; e &quot;valores&quot;, os dicionários podem vir à mente! Você pode implementar isso como um dicionário. Na janela do editor de texto, escreva o seguinte código:</p>
+<pre><code>def total(galeões, sickles, knuts):
+    return (galeões * 17 + sickles) * 29 + knuts
+
+
+coins = {&quot;galeões&quot;: 100, &quot;sickles&quot;: 50, &quot;knuts&quot;: 25}
+
+print(total(coins[&quot;galeões&quot;], coins[&quot;sickles&quot;], coins[&quot;knuts&quot;]), &quot;Knuts&quot;)
+</code></pre>
+<p>Observe como um dicionário chamado <code>coins</code> é fornecido. Podemos indexá-lo usando chaves, como &quot;galeões&quot; ou &quot;sickles&quot;.</p>
+</li>
+<li>
+<p>Como a função <code>total</code> espera três argumentos, não podemos passar um dicionário. Podemos usar o desempacotamento para ajudar com isso. Na janela do editor de texto, escreva o seguinte código:</p>
+<pre><code>def total(galeões, sickles, knuts):
+    return (galeões * 17 + sickles) * 29 + knuts
+
+
+coins = {&quot;galeões&quot;: 100, &quot;sickles&quot;: 50, &quot;knuts&quot;: 25}
+
+print(total(**coins), &quot;Knuts&quot;)
+</code></pre>
+<p>Observe como <code>**</code> permite que você desempacote um dicionário. Ao desempacotar um dicionário, ele fornece tanto as chaves quanto os valores.</p>
+</li>
+</ul>
+<h2><code>args</code> e <code>kwargs</code></h2>
+<ul>
+<li>
+<p>Lembre-se da documentação do <code>print</code> que vimos anteriormente neste curso:</p>
+<pre><code>print(*objects, sep=&#x27; &#x27;, end=&#x27;\n&#x27;, file=sys.stdout, flush=False)
+</code></pre>
+</li>
+<li>
+<p><code>args</code> são argumentos posicionais, como aqueles que fornecemos para <code>print</code> como <code>print(&quot;Olá&quot;, &quot;Mundo&quot;)</code>.</p>
+</li>
+<li>
+<p><code>kwargs</code> são argumentos nomeados, ou &quot;argumentos de palavra-chave&quot;, como aqueles que fornecemos para <code>print</code> como <code>print(end=&quot;&quot;)</code>.</p>
+</li>
+<li>
+<p>Como podemos ver no protótipo da função <code>print</code> acima, podemos informar à nossa função que ela pode esperar um número desconhecido de argumentos posicionais. Também podemos informar que ela pode esperar um número desconhecido de argumentos de palavra-chave. No editor de texto, escreva o seguinte código:</p>
+<pre><code>def f(*args, **kwargs):
+    print(&quot;Posicional:&quot;, args)
+
+
+f(100, 50, 25)
+</code></pre>
+<p>Observe como a execução deste código imprimirá os argumentos posicionais.</p>
+</li>
+<li>
+<p>Podemos até passar argumentos nomeados. No editor de texto, escreva o seguinte código:</p>
+<pre><code>def f(*args, **kwargs):
+    print(&quot;Nomeados:&quot;, kwargs)
+
+
+f(galeões=100, sicles=50, knuts=25)
+</code></pre>
+<p>Observe como os valores nomeados são fornecidos na forma de um dicionário.</p>
+</li>
+<li>
+<p>Ao pensar na função <code>print</code> acima, você pode ver como <code>*objects</code> aceita qualquer número de argumentos posicionais.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/functions.html#print"><code>print</code></a>.</p>
+</li>
+</ul>
+<h2><code>map</code></h2>
+<ul>
+<li>
+<p>No início, começamos com programação procedural.</p>
+</li>
+<li>
+<p>Mais tarde, descobrimos que o Python é uma linguagem de programação orientada a objetos.</p>
+</li>
+<li>
+<p>Vimos indícios de programação funcional, onde as funções têm efeitos colaterais sem um valor de retorno. Podemos ilustrar isso na janela do editor de texto, digitando <code>code yell.py</code> e o código a seguir:</p>
+<pre><code>  def main():
+      yell(&quot;This is CS50&quot;)
+
+
+  def yell(word):
+      print(word.upper())
+
+
+  if __name__ == &quot;__main__&quot;:
+      main()
+</code></pre>
+<p>Observe como a função <code>yell</code> apenas imprime o texto em caixa alta.</p>
+</li>
+<li>
+<p>Não seria legal gritar uma lista ilimitada de palavras? Modifique seu código da seguinte forma:</p>
+<pre><code>  def main():
+      yell([&quot;This&quot;, &quot;is&quot;, &quot;CS50&quot;])
+
+
+  def yell(words):
+      uppercased = []
+      for word in words:
+          uppercased.append(word.upper())
+      print(*uppercased)
+
+
+  if __name__ == &quot;__main__&quot;:
+      main()
+</code></pre>
+<p>Observe como acumulamos as palavras em caixa alta, percorrendo cada uma das palavras e convertendo-as em maiúsculas. A lista de palavras em maiúsculo é impressa usando o <code>*</code> para desempacotá-la.</p>
+</li>
+<li>
+<p>Removendo os colchetes, podemos passar as palavras como argumentos. No editor de texto, digite o seguinte código:</p>
+<pre><code>  def main():
+      yell(&quot;This&quot;, &quot;is&quot;, &quot;CS50&quot;)
+
+
+  def yell(*words):
+      uppercased = []
+      for word in words:
+          uppercased.append(word.upper())
+      print(*uppercased)
+
+
+  if __name__ == &quot;__main__&quot;:
+      main()
+</code></pre>
+<p>Observe como <code>*words</code> permite que muitos argumentos sejam passados para a função.</p>
+</li>
+<li>
+<p><code>map</code> permite mapear uma função para uma sequência de valores. Na prática, podemos escrever o código da seguinte forma:</p>
+<pre><code>  def main():
+      yell(&quot;This&quot;, &quot;is&quot;, &quot;CS50&quot;)
+
+
+  def yell(*words):
+      uppercased = map(str.upper, words)
+      print(*uppercased)
+
+
+  if __name__ == &quot;__main__&quot;:
+      main()
+</code></pre>
+<p>Observe como <code>map</code> recebe dois argumentos. Primeiro, ele recebe uma função que queremos aplicar a cada elemento de uma lista. Em segundo lugar, ele recebe a própria lista, à qual aplicaremos a função mencionada anteriormente. Assim, todas as palavras em <code>words</code> serão passadas para a função <code>str.upper</code> e retornadas para <code>uppercased</code>.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/functions.html#map"><code>map</code></a>.</p>
+</li>
+</ul>
+<h2>Compreensões de Lista</h2>
+<ul>
+<li>
+<p>As compreensões de lista permitem que você crie uma lista rapidamente em uma única linha elegante.</p>
+</li>
+<li>
+<p>Podemos implementar isso em nosso código da seguinte forma:</p>
+<pre><code>def main():
+    yell(&quot;This&quot;, &quot;is&quot;, &quot;CS50&quot;)
+
+
+def yell(*words):
+    uppercased = [arg.upper() for arg in words]
+    print(*uppercased)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Note como, em vez de usar <code>map</code>, escrevemos uma expressão Python entre colchetes. Para cada argumento, <code>.upper</code> é aplicado a ele.</p>
+</li>
+<li>
+<p>Levando esse conceito adiante, vamos nos voltar para outro programa.</p>
+</li>
+<li>
+<p>Na janela do editor de texto, digite <code>code gryffindors.py</code> e o código a seguir:</p>
+<pre><code>students = [
+    {&quot;name&quot;: &quot;Hermione&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Harry&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Ron&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Draco&quot;, &quot;house&quot;: &quot;Slytherin&quot;},
+]
+
+gryffindors = []
+for student in students:
+    if student[&quot;house&quot;] == &quot;Gryffindor&quot;:
+        gryffindors.append(student[&quot;name&quot;])
+
+for gryffindor in sorted(gryffindors):
+    print(gryffindor)
+</code></pre>
+<p>Note que temos uma condição enquanto estamos criando nossa lista. <em>Se</em> a casa do estudante for Gryffindor, adicionamos o estudante à lista de nomes. Finalmente, imprimimos todos os nomes.</p>
+</li>
+<li>
+<p>De forma mais elegante, podemos simplificar esse código com uma compreensão de lista da seguinte forma:</p>
+<pre><code>students = [
+    {&quot;name&quot;: &quot;Hermione&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Harry&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Ron&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Draco&quot;, &quot;house&quot;: &quot;Slytherin&quot;},
+]
+
+gryffindors = [
+    student[&quot;name&quot;] for student in students if student[&quot;house&quot;] == &quot;Gryffindor&quot;
+]
+
+for gryffindor in sorted(gryffindors):
+    print(gryffindor)
+</code></pre>
+<p>Note como a compreensão de lista está em uma única linha!</p>
+</li>
+</ul>
+<h2><code>filter</code></h2>
+<ul>
+<li>
+<p>Usar a função <code>filter</code> do Python nos permite retornar um subconjunto de uma sequência para a qual uma determinada condição é verdadeira.</p>
+</li>
+<li>
+<p>Na janela do editor de texto, insira o seguinte código:</p>
+<pre><code>students = [
+    {&quot;name&quot;: &quot;Hermione&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Harry&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Ron&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Draco&quot;, &quot;house&quot;: &quot;Slytherin&quot;},
+]
+
+
+def is_gryffindor(s):
+    return s[&quot;house&quot;] == &quot;Gryffindor&quot;
+
+
+gryffindors = filter(is_gryffindor, students)
+
+for gryffindor in sorted(gryffindors, key=lambda s: s[&quot;name&quot;]):
+    print(gryffindor[&quot;name&quot;])
+</code></pre>
+<p>Observe como uma função chamada <code>is_gryffindor</code> é criada. Esta é nossa função de filtragem que receberá um estudante <code>s</code> e retornará <code>True</code> ou <code>False</code> dependendo se a casa do aluno é Gryffindor. Você pode ver que a nova função <code>filter</code> recebe dois argumentos. Primeiro, ele recebe a função que será aplicada a cada elemento em uma sequência - neste caso, <code>is_gryffindor</code>. Segundo, ele recebe a sequência à qual aplicará a função de filtragem - neste caso, <code>students</code>. Em <code>gryffindors</code>, devemos ver apenas os alunos que estão em Gryffindor.</p>
+</li>
+<li>
+<p><code>filter</code> também pode usar funções lambda da seguinte forma:</p>
+<pre><code>students = [
+    {&quot;name&quot;: &quot;Hermione&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Harry&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Ron&quot;, &quot;house&quot;: &quot;Gryffindor&quot;},
+    {&quot;name&quot;: &quot;Draco&quot;, &quot;house&quot;: &quot;Slytherin&quot;},
+]
+
+
+gryffindors = filter(lambda s: s[&quot;house&quot;] == &quot;Gryffindor&quot;, students)
+
+for gryffindor in sorted(gryffindors, key=lambda s: s[&quot;name&quot;]):
+    print(gryffindor[&quot;name&quot;])
+</code></pre>
+<p>Observe como a mesma lista de alunos é fornecida.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/functions.html#filter"><code>filter</code></a>.</p>
+</li>
+</ul>
+<h2>Compreensões de Dicionários</h2>
+<ul>
+<li>
+<p>Podemos aplicar a mesma ideia das compreensões de listas aos dicionários. Na janela do editor de texto, digite o seguinte código:</p>
+<pre><code>students = [&quot;Hermione&quot;, &quot;Harry&quot;, &quot;Ron&quot;]
+
+gryffindors = []
+
+para estudante em students:
+    gryffindors.append({&quot;nome&quot;: estudante, &quot;casa&quot;: &quot;Gryffindor&quot;})
+
+print(gryffindors)
+</code></pre>
+<p>Observe como esse código ainda não usa nenhuma compreensão. Em vez disso, ele segue os mesmos paradigmas que vimos anteriormente.</p>
+</li>
+<li>
+<p>Agora podemos aplicar compreensões de dicionários modificando nosso código da seguinte maneira:</p>
+<pre><code>students = [&quot;Hermione&quot;, &quot;Harry&quot;, &quot;Ron&quot;]
+
+gryffindors = [{&quot;nome&quot;: estudante, &quot;casa&quot;: &quot;Gryffindor&quot;} para estudante em students]
+
+print(gryffindors)
+</code></pre>
+<p>Observe como todo o código anterior é simplificado em uma única linha, onde a estrutura do dicionário é fornecida para cada <code>estudante</code> em <code>students</code>.</p>
+</li>
+<li>
+<p>Podemos até simplificar ainda mais da seguinte maneira:</p>
+<pre><code>students = [&quot;Hermione&quot;, &quot;Harry&quot;, &quot;Ron&quot;]
+
+gryffindors = {estudante: &quot;Gryffindor&quot; para estudante em students}
+
+print(gryffindors)
+</code></pre>
+<p>Observe como o dicionário será construído com pares chave-valor.</p>
+</li>
+</ul>
+<h2><code>enumerate</code></h2>
+<ul>
+<li>
+<p>Podemos querer fornecer alguma classificação para cada aluno. Na janela do editor de texto, escreva o código da seguinte forma:</p>
+<pre><code>students = [&quot;Hermione&quot;, &quot;Harry&quot;, &quot;Ron&quot;]
+
+for i in range(len(students)):
+    print(i + 1, students[i])
+</code></pre>
+<p>Observe como cada aluno é enumerado ao executar este código.</p>
+</li>
+<li>
+<p>Utilizando a enumeração, podemos fazer o mesmo:</p>
+<pre><code>students = [&quot;Hermione&quot;, &quot;Harry&quot;, &quot;Ron&quot;]
+
+for i, student in enumerate(students):
+    print(i + 1, student)
+</code></pre>
+<p>Observe como a enumeração apresenta o índice e o valor de cada <code>student</code>.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/functions.html#enumerate"><code>enumerate</code></a>.</p>
+</li>
+</ul>
+<h2>Geradores e Iteradores</h2>
+<ul>
+<li>
+<p>No Python, há uma maneira de proteger contra seu sistema ficar sem recursos quando os problemas que eles estão abordando se tornam muito grandes.</p>
+</li>
+<li>
+<p>Nos Estados Unidos, é costumeiro &quot;contar carneiros&quot; mentalmente quando alguém está tendo dificuldade em pegar no sono.</p>
+</li>
+<li>
+<p>Na janela do editor de texto, digite <code>code sleep.py</code> e o código a seguir:</p>
+<pre><code>n = int(input(&quot;Qual é o valor de n? &quot;))
+for i in range(n):
+    print(&quot;🐑&quot; * i)
+</code></pre>
+<p>Observe como este programa irá contar o número de ovelhas que você solicitar a ele.</p>
+</li>
+<li>
+<p>Podemos tornar nosso programa mais sofisticado adicionando uma função <code>main</code> codificando da seguinte maneira:</p>
+<pre><code>def main():
+    n = int(input(&quot;Qual é o valor de n? &quot;))
+    for i in range(n):
+        print(&quot;🐑&quot; * i)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe como uma função <code>main</code> é fornecida.</p>
+</li>
+<li>
+<p>Temos adquirido o hábito de abstrair partes do nosso código.</p>
+</li>
+<li>
+<p>Podemos chamar uma função ovelha modificando nosso código da seguinte maneira:</p>
+<pre><code>def main():
+    n = int(input(&quot;Qual é o valor de n? &quot;))
+    for i in range(n):
+        print(ovelha(i))
+
+
+def ovelha(n):
+    return &quot;🐑&quot; * n
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe como a função <code>main</code> faz a iteração.</p>
+</li>
+<li>
+<p>Podemos fornecer mais habilidades à função <code>ovelha</code>. Na janela do editor de texto, codifique da seguinte maneira:</p>
+<pre><code>def main():
+    n = int(input(&quot;Qual é o valor de n? &quot;))
+    for s in ovelha(n):
+        print(s)
+
+
+def ovelha(n):
+    rebanho = []
+    for i in range(n):
+        rebanho.append(&quot;🐑&quot; * i)
+    return rebanho
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe como criamos um rebanho de ovelhas e retornamos o <code>rebanho</code>.</p>
+</li>
+<li>
+<p>Executando nosso código, você pode tentar diferentes números de ovelhas, como <code>10</code>, <code>1000</code> e <code>10000</code>. E se você pedisse <code>1000000</code> ovelhas, seu programa poderia ficar completamente travado ou travar. Porque você tentou gerar uma lista enorme de ovelhas, seu computador pode estar lutando para concluir o cálculo.</p>
+</li>
+<li>
+<p>O gerador <code>yield</code> pode solucionar esse problema, retornando um pequeno pedaço dos resultados de cada vez. Na janela do editor de texto, codifique da seguinte maneira:</p>
+<pre><code>def main():
+    n = int(input(&quot;Qual é o valor de n? &quot;))
+    for s in ovelha(n):
+        print(s)
+
+
+def ovelha(n):
+    for i in range(n):
+        yield &quot;🐑&quot; * i
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe como o <code>yield</code> fornece apenas um valor por vez, enquanto o laço <code>for</code> continua funcionando.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/howto/functional.html#generators">geradores</a>.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/howto/functional.html#iterators">iteradores</a>.</p>
+</li>
+</ul>
+<h2>Parabéns!</h2>
+<ul>
+<li>Ao concluir este curso, você tem um modelo mental e uma caixa de ferramentas para lidar com problemas relacionados à programação.</li>
+<li>Primeiro, você aprendeu sobre funções e variáveis.</li>
+<li>Segundo, você aprendeu sobre condicionais.</li>
+<li>Terceiro, você aprendeu sobre loops.</li>
+<li>Quarto, você aprendeu sobre exceções.</li>
+<li>Quinto, você aprendeu sobre bibliotecas.</li>
+<li>Sexto, você aprendeu sobre testes unitários.</li>
+<li>Sétimo, você aprendeu sobre E/S de arquivos.</li>
+<li>Oitavo, você aprendeu sobre expressões regulares.</li>
+<li>Mais recentemente, você aprendeu sobre programação orientada a objetos.</li>
+<li>Hoje, você aprendeu sobre muitas outras ferramentas que pode utilizar.</li>
+</ul>
+<h2>Isto foi o CS50!</h2>
+<ul>
+<li>
+<p>Para criar um programa final juntos, digite <code>code say.py</code> em sua janela de terminal e digite o seguinte código:</p>
+<pre><code>import cowsay
+import pyttsx3
+
+engine = pyttsx3.init()
+this = input(&quot;O que é isso? &quot;)
+cowsay.cow(this)
+engine.say(this)
+engine.runAndWait()
+</code></pre>
+<p>Observe como a execução deste programa lhe proporciona uma despedida animada.</p>
+</li>
+<li>
+<p>Nossa grande esperança é que você use o que aprendeu neste curso para resolver problemas reais no mundo, tornando nosso planeta um lugar melhor.</p>
+</li>
+<li>
+<p>Isto foi o CS50!</p>
+</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

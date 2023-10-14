@@ -1,0 +1,1057 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Loops</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Exceptions</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Libraries</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Unit Tests</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h2># Aula 8</h2>
+<ul>
+<li><a href="#programa%C3%A7%C3%A3o-orientada-a-objetos">Programação Orientada a Objetos</a></li>
+<li><a href="#classes">Classes</a></li>
+<li><a href="#raise"><code>raise</code></a></li>
+<li><a href="#decoradores">Decoradores</a></li>
+<li><a href="#conex%C3%A3o-com-o-trabalho-anterior-neste-curso">Conexão com o Trabalho Anterior neste Curso</a></li>
+<li><a href="#m%C3%A9todos-de-classe">Métodos de Classe</a></li>
+<li><a href="#m%C3%A9todos-est%C3%A1ticos">Métodos Estáticos</a></li>
+<li><a href="#heran%C3%A7a">Herança</a></li>
+<li><a href="#heran%C3%A7a-e-exce%C3%A7%C3%B5es">Herança e Exceções</a></li>
+<li><a href="#sobrecarga-de-operadores">Sobrecarga de Operadores</a></li>
+<li><a href="#resumindo">Resumindo</a></li>
+</ul>
+<h2>Programação Orientada a Objetos</h2>
+<ul>
+<li>
+<p>Existem diferentes paradigmas de programação. Conforme você aprende outras linguagens, começará a reconhecer padrões como esses.</p>
+</li>
+<li>
+<p>Até agora, você tem trabalhado procedimentalmente, passo a passo.</p>
+</li>
+<li>
+<p>A programação orientada a objetos (OOP) é uma solução convincente para problemas relacionados à programação.</p>
+</li>
+<li>
+<p>Para começar, digite <code>code student.py</code> na janela do terminal e escreva o código a seguir:</p>
+<p>nome = input(&quot;Nome: &quot;)
+casa = input(&quot;Casa: &quot;)
+print(f&quot;{nome} da casa {casa}&quot;)</p>
+<p>Observe que este programa segue um paradigma procedural, passo a passo: assim como você viu nas partes anteriores deste curso.</p>
+</li>
+<li>
+<p>Com base no nosso trabalho nas semanas anteriores, podemos criar funções para abstrair partes desse programa.</p>
+<p>def main():
+nome = get_nome()
+casa = get_casa()
+print(f&quot;{nome} da casa {casa}&quot;)</p>
+<p>def get_nome():
+return input(&quot;Nome: &quot;)</p>
+<p>def get_casa():
+return input(&quot;Casa: &quot;)</p>
+<p>if <strong>name</strong> == &quot;<strong>main</strong>&quot;:
+main()</p>
+<p>Observe como <code>get_nome</code> e <code>get_casa</code> abstraem algumas das necessidades da nossa função <code>main</code>. Além disso, observe que as últimas linhas do código acima dizem ao compilador para executar a função <code>main</code>.</p>
+</li>
+<li>
+<p>Podemos simplificar ainda mais nosso programa armazenando o estudante como uma <code>tuple</code>. Uma <code>tuple</code> é uma sequência de valores. Ao contrário de uma <code>list</code>, uma <code>tuple</code> não pode ser modificada. Em essência, estamos retornando dois valores.</p>
+<p>def main():
+nome, casa = get_estudante()
+print(f&quot;{nome} da casa {casa}&quot;)</p>
+<p>def get_estudante():
+nome = input(&quot;Nome: &quot;)
+casa = input(&quot;Casa: &quot;)
+return nome, casa</p>
+<p>if <strong>name</strong> == &quot;<strong>main</strong>&quot;:
+main()</p>
+<p>Observe como <code>get_estudante</code> retorna <code>nome, casa</code>.</p>
+</li>
+<li>
+<p>Empacotando essa <code>tuple</code>, para que possamos retornar ambos os itens para uma variável chamada <code>estudante</code>, podemos modificar nosso código da seguinte forma.</p>
+<p>def main():
+estudante = get_estudante()
+print(f&quot;{estudante[0]} da casa {estudante[1]}&quot;)</p>
+<p>def get_estudante():
+nome = input(&quot;Nome: &quot;)
+casa = input(&quot;Casa: &quot;)
+return (nome, casa)</p>
+<p>if <strong>name</strong> == &quot;<strong>main</strong>&quot;:
+main()</p>
+<p>Observe que <code>(nome, casa)</code> explicitamente informa a qualquer pessoa que lê nosso código que estamos retornando dois valores em um. Além disso, observe como podemos indexar <code>tuple</code>s usando <code>estudante[0]</code> ou <code>estudante[1]</code>.</p>
+</li>
+<li>
+<p>As <code>tuple</code>s são imutáveis, o que significa que não podemos alterar esses valores. A imutabilidade é uma forma pela qual podemos programar defensivamente.</p>
+<p>def main():
+estudante = get_estudante()
+if estudante[0] == &quot;Padma&quot;:
+estudante[1] = &quot;Ravenclaw&quot;
+print(f&quot;{estudante[0]} da casa {estudante[1]}&quot;)</p>
+<p>def get_estudante():
+nome = input(&quot;Nome: &quot;)
+casa = input(&quot;Casa: &quot;)
+return nome, casa</p>
+<p>if <strong>name</strong> == &quot;<strong>main</strong>&quot;:
+main()</p>
+<p>Observe que este código gera um erro. Como as <code>tuple</code>s são imutáveis, não podemos atribuir um novo valor a <code>estudante[1]</code>.</p>
+</li>
+<li>
+<p>Se quiséssemos fornecer flexibilidade aos nossos colegas programadores, poderíamos usar uma <code>list</code> da seguinte forma.</p>
+<p>def main():
+estudante = get_estudante()
+if estudante[0] == &quot;Padma&quot;:
+estudante[1] = &quot;Ravenclaw&quot;
+print(f&quot;{estudante[0]} da casa {estudante[1]}&quot;)</p>
+<p>def get_estudante():
+nome = input(&quot;Nome: &quot;)
+casa = input(&quot;Casa: &quot;)
+return [nome, casa]</p>
+<p>if <strong>name</strong> == &quot;<strong>main</strong>&quot;:
+main()</p>
+<p>Observe que as <code>list</code> são mutáveis. Ou seja, a ordem de <code>casa</code> e <code>nome</code> pode ser alterada por um programador. Você pode decidir usar isso em alguns casos em que deseja fornecer mais flexibilidade, em detrimento da segurança do seu código. Afinal, se a ordem desses valores for mutável, os programadores que trabalham com você podem cometer erros no futuro.</p>
+</li>
+<li>
+<p>Um dicionário também poderia ser utilizado nessa implementação. Lembre-se de que os dicionários fornecem um par de chave-valor.</p>
+<p>def main():
+estudante = get_estudante()
+print(f&quot;{estudante['nome']} da casa {estudante['casa']}&quot;)</p>
+<p>def get_estudante():
+estudante = {}
+estudante[&quot;nome&quot;] = input(&quot;Nome: &quot;)
+estudante[&quot;casa&quot;] = input(&quot;Casa: &quot;)
+return estudante</p>
+<p>if <strong>name</strong> == &quot;<strong>main</strong>&quot;:
+main()</p>
+<p>Observe que neste caso, são retornados dois pares de chave-valor. Uma vantagem dessa abordagem é que podemos usar as chaves para indexar esse dicionário.</p>
+</li>
+<li>
+<p>Ainda assim, nosso código pode ser melhorado. Observe que há uma variável desnecessária. Podemos remover <code>estudante = {}</code> porque não precisamos criar um dicionário vazio.</p>
+<p>def main():
+estudante = get_estudante()
+print(f&quot;{estudante['nome']} da casa {estudante['casa']}&quot;)</p>
+<p>def get_estudante():
+nome = input(&quot;Nome: &quot;)
+casa = input(&quot;Casa: &quot;)
+return {&quot;nome&quot;: nome, &quot;casa&quot;: casa}</p>
+<p>if <strong>name</strong> == &quot;<strong>main</strong>&quot;:
+main()</p>
+<p>Observe que podemos usar as chaves <code>{}</code> na declaração <code>return</code> para criar o dicionário e retorná-lo na mesma linha.</p>
+</li>
+<li>
+<p>Podemos adicionar nosso caso especial com Padma na versão do nosso código com dicionário.</p>
+<p>def main():
+estudante = get_estudante()
+if estudante[&quot;nome&quot;] == &quot;Padma&quot;:
+estudante[&quot;casa&quot;] = &quot;Ravenclaw&quot;
+print(f&quot;{estudante['nome']} da casa {estudante['casa']}&quot;)</p>
+<p>def get_estudante():
+nome = input(&quot;Nome: &quot;)
+casa = input(&quot;Casa: &quot;)
+return {&quot;nome&quot;: nome, &quot;casa&quot;: casa}</p>
+<p>if <strong>name</strong> == &quot;<strong>main</strong>&quot;:
+main()</p>
+<p>Observe como, de forma semelhante às iterações anteriores deste código, podemos usar os nomes das chaves para indexar nosso dicionário de estudante.</p>
+</li>
+</ul>
+<h2>Classes</h2>
+<ul>
+<li>
+<p>Classes são uma forma, na programação orientada a objetos, de podermos criar nosso próprio tipo de dado e dar-lhes nomes.</p>
+</li>
+<li>
+<p>Uma classe é como um molde para um tipo de dado - onde podemos inventar nosso próprio tipo de dado e dar-lhes um nome.</p>
+</li>
+<li>
+<p>Podemos modificar nosso código da seguinte forma para implementar nossa própria classe chamada <code>Student</code>:</p>
+<pre><code>class Student:
+    ...
+
+
+def main():
+    student = get_student()
+    print(f&quot;{student.name} da casa {student.house}&quot;)
+
+
+def get_student():
+    student = Student()
+    student.name = input(&quot;Nome: &quot;)
+    student.house = input(&quot;Casa: &quot;)
+    return student
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que por convenção <code>Student</code> é capitalizado. Além disso, observe que <code>...</code> simplesmente significa que voltaremos posteriormente para terminar essa parte do código. Além disso, observe que em <code>get_student</code>, podemos criar um <code>student</code> da classe <code>Student</code> usando a sintaxe <code>student = Student()</code>. Além disso, observe que utilizamos a &quot;notação de ponto&quot; para acessar atributos dessa variável <code>student</code> da classe <code>Student</code>.</p>
+</li>
+<li>
+<p>Toda vez que você cria uma classe e utiliza esse modelo para criar algo, você cria o que é chamado de &quot;objeto&quot; ou &quot;instância&quot;. No caso do nosso código, <code>student</code> é um objeto.</p>
+</li>
+<li>
+<p>Além disso, podemos estabelecer os atributos que são esperados dentro de um objeto cuja classe é <code>Student</code>. Podemos modificar nosso código da seguinte forma:</p>
+<pre><code>class Student:
+    def __init__(self, name, house):
+        self.name = name
+        self.house = house
+
+
+def main():
+    student = get_student()
+    print(f&quot;{student.name} da casa {student.house}&quot;)
+
+
+def get_student():
+    name = input(&quot;Nome: &quot;)
+    house = input(&quot;Casa: &quot;)
+    student = Student(name, house)
+    return student
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que dentro de <code>Student</code>, padronizamos os atributos dessa classe. Podemos criar uma função dentro da classe <code>Student</code>, chamada de &quot;método&quot;, que determina o comportamento de um objeto da classe <code>Student</code>. Dentro dessa função, ela pega o <code>name</code> e <code>house</code> passados para ela e atribui essas variáveis a esse objeto. Além disso, observe como o construtor <code>student = Student(name, house)</code> chama essa função dentro da classe <code>Student</code> e cria um <code>student</code>. <code>self</code> se refere ao objeto atual que acabou de ser criado.</p>
+</li>
+<li>
+<p>Podemos simplificar nosso código da seguinte forma:</p>
+<pre><code>class Student:
+    def __init__(self, name, house):
+        self.name = name
+        self.house = house
+
+
+def main():
+    student = get_student()
+    print(f&quot;{student.name} da casa {student.house}&quot;)
+
+
+def get_student():
+    name = input(&quot;Nome: &quot;)
+    house = input(&quot;Casa: &quot;)
+    return Student(name, house)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe como <code>return Student(name, house)</code> simplifica a iteração anterior do nosso código onde a instrução do construtor era executada em sua própria linha.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/tutorial/classes.html">classes</a>.</p>
+</li>
+</ul>
+<h2><code>raise</code></h2>
+<ul>
+<li>
+<p>A programação orientada a objetos encoraja você a encapsular toda a funcionalidade de uma classe dentro da definição da classe. E se algo der errado? E se alguém tentar digitar algo aleatório? E se alguém tentar criar um estudante sem um nome? Modifique seu código da seguinte forma:</p>
+<pre><code>class Aluno:
+    def __init__(self, nome, casa):
+        if not nome:
+            raise ValueError(&quot;Nome ausente&quot;)
+        if casa not in [&quot;Gryffindor&quot;, &quot;Hufflepuff&quot;, &quot;Ravenclaw&quot;, &quot;Slytherin&quot;]:
+            raise ValueError(&quot;Casa inválida&quot;)
+        self.nome = nome
+        self.casa = casa
+
+
+def principal():
+    aluno = obter_aluno()
+    print(f&quot;{aluno.nome} da casa {aluno.casa}&quot;)
+
+
+def obter_aluno():
+    nome = input(&quot;Nome: &quot;)
+    casa = input(&quot;Casa: &quot;)
+    return Aluno(nome, casa)
+
+
+if __name__ == &quot;__main__&quot;:
+    principal()
+</code></pre>
+<p>Observe como verificamos agora se um nome é fornecido e se uma casa adequada é designada. Acaba que podemos criar nossas próprias exceções que alertam o programador para um erro potencial criado pelo usuário chamado <code>raise</code>. No caso acima, lançamos um <code>ValueError</code> com uma mensagem de erro específica.</p>
+</li>
+<li>
+<p>Acontece que o Python permite criar uma função específica que imprime os atributos de um objeto. Modifique seu código da seguinte forma:</p>
+<pre><code>class Aluno:
+    def __init__(self, nome, casa, patronus):
+        if not nome:
+            raise ValueError(&quot;Nome ausente&quot;)
+        if casa not in [&quot;Gryffindor&quot;, &quot;Hufflepuff&quot;, &quot;Ravenclaw&quot;, &quot;Slytherin&quot;]:
+            raise ValueError(&quot;Casa inválida&quot;)
+        self.nome = nome
+        self.casa = casa
+        self.patronus = patronus
+
+    def __str__(self):
+        return f&quot;{self.nome} da casa {self.casa}&quot;
+
+
+def principal():
+    aluno = obter_aluno()
+    print(aluno)
+
+
+def obter_aluno():
+    nome = input(&quot;Nome: &quot;)
+    casa = input(&quot;Casa: &quot;)
+    patronus = input(&quot;Patronus: &quot;)
+    return Aluno(nome, casa, patronus)
+
+
+if __name__ == &quot;__main__&quot;:
+    principal()
+</code></pre>
+<p>Observe como <code>def __str__(self)</code> fornece uma forma de retornar um aluno quando chamado. Portanto, você agora, como programador, pode imprimir um objeto, seus atributos ou quase qualquer coisa relacionada a esse objeto.</p>
+</li>
+<li>
+<p><code>__str__</code> é um método integrado que vem com as classes em Python. Acontece que também podemos criar nossos próprios métodos para uma classe! Modifique seu código da seguinte forma:</p>
+<pre><code>class Aluno:
+    def __init__(self, nome, casa, patronus=None):
+        if not nome:
+            raise ValueError(&quot;Nome ausente&quot;)
+        if casa not in [&quot;Gryffindor&quot;, &quot;Hufflepuff&quot;, &quot;Ravenclaw&quot;, &quot;Slytherin&quot;]:
+            raise ValueError(&quot;Casa inválida&quot;)
+        if patronus and patronus not in [&quot;Stag&quot;, &quot;Otter&quot;, &quot;Jack Russell terrier&quot;]:
+            raise ValueError(&quot;Patronus inválido&quot;)
+        self.nome = nome
+        self.casa = casa
+        self.patronus = patronus
+
+    def __str__(self):
+        return f&quot;{self.nome} da casa {self.casa}&quot;
+
+    def encanto(self):
+        match self.patronus:
+            case &quot;Stag&quot;:
+                return &quot;🐴&quot;
+            case &quot;Otter&quot;:
+                return &quot;🦦&quot;
+            case &quot;Jack Russell terrier&quot;:
+                return &quot;🐶&quot;
+            case _:
+                return &quot;🪄&quot;
+
+
+def principal():
+    aluno = obter_aluno()
+    print(&quot;Expecto Patronum!&quot;)
+    print(aluno.encanto())
+
+
+def obter_aluno():
+    nome = input(&quot;Nome: &quot;)
+    casa = input(&quot;Casa: &quot;)
+    patronus = input(&quot;Patronus: &quot;) or None
+    return Aluno(nome, casa, patronus)
+
+
+if __name__ == &quot;__main__&quot;:
+    principal()
+</code></pre>
+<p>Observe como definimos nosso próprio método <code>encanto</code>. Ao contrário de dicionários, classes podem ter funções integradas chamadas métodos. Neste caso, definimos nosso método <code>encanto</code> onde casos específicos têm resultados específicos. Além disso, observe que o Python tem a capacidade de usar emojis diretamente em nosso código.</p>
+</li>
+<li>
+<p>Antes de prosseguir, vamos remover nosso código do patronus. Modifique seu código da seguinte forma:</p>
+<pre><code>class Aluno:
+    def __init__(self, nome, casa):
+        if not nome:
+            raise ValueError(&quot;Nome inválido&quot;)
+        if casa not in [&quot;Gryffindor&quot;, &quot;Hufflepuff&quot;, &quot;Ravenclaw&quot;, &quot;Slytherin&quot;]:
+            raise ValueError(&quot;Casa inválida&quot;)
+        self.nome = nome
+        self.casa = casa
+
+    def __str__(self):
+        return f&quot;{self.nome} da casa {self.casa}&quot;
+
+
+def principal():
+    aluno = obter_aluno()
+    aluno.casa = &quot;Número Quatro, Rua dos Alfeneiros&quot;
+    print(aluno)
+
+
+def obter_aluno():
+    nome = input(&quot;Nome: &quot;)
+    casa = input(&quot;Casa: &quot;)
+    return Aluno(nome, casa)
+
+
+if __name__ == &quot;__main__&quot;:
+    principal()
+</code></pre>
+<p>Observe como temos apenas dois métodos: <code>__init__</code> e <code>__str__</code>.</p>
+</li>
+</ul>
+<h2>Decoradores</h2>
+<ul>
+<li>
+<p>Propriedades podem ser utilizadas para fortalecer nosso código. Em Python, definimos propriedades usando &quot;decorators&quot;, que começam com <code>@</code>. Modifique seu código da seguinte forma:</p>
+<pre><code>class Aluno:
+    def __init__(self, nome, casa):
+        if not nome:
+            raise ValueError(&quot;Nome inválido&quot;)
+        self.nome = nome
+        self.casa = casa
+
+    def __str__(self):
+        return f&quot;{self.nome} da casa {self.casa}&quot;
+
+    # Getter para casa
+    @property
+    def casa(self):
+        return self._casa
+
+    # Setter para casa
+    @casa.setter
+    def casa(self, casa):
+        if casa not in [&quot;Grifinória&quot;, &quot;Lufa-Lufa&quot;, &quot;Corvinal&quot;, &quot;Sonserina&quot;]:
+            raise ValueError(&quot;Casa inválida&quot;)
+        self._casa = casa
+
+
+def main():
+    aluno = pegar_aluno()
+    print(aluno)
+
+
+def pegar_aluno():
+    nome = input(&quot;Nome: &quot;)
+    casa = input(&quot;Casa: &quot;)
+    return Aluno(nome, casa)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Note como escrevemos <code>@property</code> acima de uma função chamada <code>casa</code>. Fazendo isso, definimos <code>casa</code> como uma propriedade da nossa classe. Com <code>casa</code> como uma propriedade, ganhamos a capacidade de definir como algum atributo da nossa classe, <code>_casa</code>, deve ser configurado e obtido. Na verdade, agora podemos definir uma função chamada &quot;setter&quot;, via <code>@casa.setter</code>, que será chamada sempre que a propriedade casa for configurada - por exemplo, com <code>aluno.casa = &quot;Grifinória&quot;</code>. Aqui, fizemos nosso setter validar os valores de <code>casa</code> para nós. Note como lançamos um <code>ValueError</code> se o valor de <code>casa</code> não for nenhuma das casas de Harry Potter, caso contrário, usaremos <code>casa</code> para atualizar o valor de <code>_casa</code>. Por que <code>_casa</code> e não <code>casa</code>? <code>casa</code> é uma propriedade da nossa classe, com funções por meio das quais um usuário tenta configurar o atributo da nossa classe. <code>_casa</code> é esse próprio atributo da classe. O sublinhado inicial, <code>_</code>, indica aos usuários que eles não precisam (e na verdade, não devem!) modificar esse valor diretamente. <code>_casa</code> deve ser <em>apenas</em> configurado por meio do setter <code>casa</code>. Observe como a propriedade <code>casa</code> simplesmente retorna o valor de <code>_casa</code>, nosso atributo da classe que presumivelmente foi validado usando nosso setter <code>casa</code>. Quando um usuário chama <code>aluno.casa</code>, eles estão obtendo o valor de <code>_casa</code> por meio do nosso &quot;getter&quot; <code>casa</code>.</p>
+</li>
+<li>
+<p>Além do nome da casa, também podemos proteger o nome do nosso aluno. Modifique seu código da seguinte forma:</p>
+<pre><code>class Aluno:
+    def __init__(self, nome, casa):
+        self.nome = nome
+        self.casa = casa
+
+    def __str__(self):
+        return f&quot;{self.nome} da casa {self.casa}&quot;
+
+    # Getter para nome
+    @property
+    def nome(self):
+        return self._nome
+
+    # Setter para nome
+    @nome.setter
+    def nome(self, nome):
+        if not nome:
+            raise ValueError(&quot;Nome inválido&quot;)
+        self._nome = nome
+
+    @property
+    def casa(self):
+        return self._casa
+
+    @casa.setter
+    def casa(self, casa):
+        if casa not in [&quot;Grifinória&quot;, &quot;Lufa-Lufa&quot;, &quot;Corvinal&quot;, &quot;Sonserina&quot;]:
+            raise ValueError(&quot;Casa inválida&quot;)
+        self._casa = casa
+
+
+def main():
+    aluno = pegar_aluno()
+    print(aluno)
+
+
+def pegar_aluno():
+    nome = input(&quot;Nome: &quot;)
+    casa = input(&quot;Casa: &quot;)
+    return Aluno(nome, casa)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Note como, assim como no código anterior, fornecemos um getter e um setter para o nome.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/tutorial/classes.html">métodos</a>.</p>
+</li>
+</ul>
+<h2>Conectando com Trabalhos Anteriores neste Curso</h2>
+<ul>
+<li>
+<p>Embora não seja explicitamente declarado nas seções anteriores deste curso, você vem utilizando classes e objetos o tempo todo.</p>
+</li>
+<li>
+<p>Se você examinar a documentação de <code>int</code>, você verá que ela é uma classe com um construtor. É um modelo para criar objetos do tipo <code>int</code>. Você pode aprender mais na documentação do Python para <a href="https://docs.python.org/3/library/functions.html#int"><code>int</code></a>.</p>
+</li>
+<li>
+<p>As strings também são uma classe. Se você utilizou o <code>str.lower()</code>, você estava utilizando um método que faz parte da classe <code>str</code>. Você pode aprender mais na documentação do Python para <a href="https://docs.python.org/3/library/stdtypes.html#str"><code>str</code></a>.</p>
+</li>
+<li>
+<p><code>list</code> também é uma classe. Olhando a documentação para <code>list</code>, você pode ver os métodos que estão contidos nela, como <code>list.append()</code>. Você pode aprender mais na documentação do Python para <a href="https://docs.python.org/3/library/stdtypes.html#list"><code>list</code></a>.</p>
+</li>
+<li>
+<p><code>dict</code> também é uma classe do Python. Você pode aprender mais na documentação do Python para <a href="https://docs.python.org/3/library/stdtypes.html#dict"><code>dict</code></a>.</p>
+</li>
+<li>
+<p>Para ver como você vem utilizando classes o tempo todo, vá para o seu console e digite <code>code type.py</code> e então o código a seguir:</p>
+<pre><code>print(type(50))
+</code></pre>
+<p>Observe como, ao executar esse código, ele irá exibir que a classe de <code>50</code> é <code>int</code>.</p>
+</li>
+<li>
+<p>Também podemos aplicar isso para <code>str</code> da seguinte forma:</p>
+<pre><code>print(type(&quot;olá, mundo&quot;))
+</code></pre>
+<p>Observe como a execução desse código indicará que isso é da classe <code>str</code>.</p>
+</li>
+<li>
+<p>Também podemos aplicar isso para <code>list</code> da seguinte forma:</p>
+<pre><code>print(type([]))
+</code></pre>
+<p>Observe como a execução desse código indicará que isso é da classe <code>list</code>.</p>
+</li>
+<li>
+<p>Também podemos aplicar isso para <code>list</code> usando o nome da classe embutida do Python <code>list</code> da seguinte forma:</p>
+<pre><code>print(type(list()))
+</code></pre>
+<p>Observe como a execução desse código indicará que isso é da classe <code>list</code>.</p>
+</li>
+<li>
+<p>Também podemos aplicar isso para <code>dict</code> da seguinte forma:</p>
+<pre><code>print(type({}))
+</code></pre>
+<p>Observe como a execução desse código indicará que isso é da classe <code>dict</code>.</p>
+</li>
+<li>
+<p>Também podemos aplicar isso para <code>dict</code> usando o nome da classe embutida do Python <code>dict</code> da seguinte forma:</p>
+<pre><code>print(type(dict()))
+</code></pre>
+<p>Observe como a execução desse código indicará que isso é da classe <code>dict</code>.</p>
+</li>
+</ul>
+<h2>Métodos de Classe</h2>
+<ul>
+<li>
+<p>Às vezes, queremos adicionar funcionalidade a uma classe em si, não a instâncias dessa classe.</p>
+</li>
+<li>
+<p><code>@classmethod</code> é uma função que podemos usar para adicionar funcionalidade a uma classe como um todo.</p>
+</li>
+<li>
+<p>Aqui está um exemplo de <em>não</em> uso de um método de classe. Na janela do seu terminal, digite <code>code hat.py</code> e insira o seguinte código:</p>
+<pre><code>import random
+
+
+class Hat:
+    def __init__(self):
+        self.houses = [&quot;Grifinória&quot;, &quot;Lufa-Lufa&quot;, &quot;Corvinal&quot;, &quot;Sonserina&quot;]
+
+    def sort(self, name):
+        print(name, &quot;está em&quot;, random.choice(self.houses))
+
+
+hat = Hat()
+hat.sort(&quot;Harry&quot;)
+</code></pre>
+<p>Observe como, quando passamos o nome do aluno para o chapéu seletor, ele nos dirá a qual casa o aluno foi designado. Observe que <code>hat = Hat()</code> instância um <code>hat</code>. A funcionalidade <code>sort</code> é sempre tratada pela <em>instância</em> da classe <code>Hat</code>. Ao executar <code>hat.sort(&quot;Harry&quot;)</code>, passamos o nome do aluno para o método <code>sort</code> da instância particular de <code>Hat</code>, que chamamos de <code>hat</code>.</p>
+</li>
+<li>
+<p>No entanto, podemos querer executar a função <code>sort</code> sem criar uma instância específica do chapéu seletor (afinal, há apenas um!). Podemos modificar nosso código da seguinte forma:</p>
+<pre><code>import random
+
+
+class Hat:
+
+    houses = [&quot;Grifinória&quot;, &quot;Lufa-Lufa&quot;, &quot;Corvinal&quot;, &quot;Sonserina&quot;]
+
+    @classmethod
+    def sort(cls, name):
+        print(name, &quot;está em&quot;, random.choice(cls.houses))
+
+
+Hat.sort(&quot;Harry&quot;)
+</code></pre>
+<p>Observe como o método <code>__init__</code> é removido porque não precisamos instanciar um chapéu em nenhum lugar do código. Portanto, <code>self</code> não é mais relevante e é removido. Especificamos esse <code>sort</code> como um <code>@classmethod</code>, substituindo <code>self</code> por <code>cls</code>. Finalmente, observe como <code>Hat</code> é escrito em maiúsculas por convenção perto do final deste código, pois esse é o nome da nossa classe.</p>
+</li>
+<li>
+<p>Voltando para o arquivo <code>students.py</code>, podemos modificar nosso código da seguinte forma, abordando algumas oportunidades perdidas relacionadas aos <code>@classmethod</code>s:</p>
+<pre><code>class Student:
+    def __init__(self, name, house):
+        self.name = name
+        self.house = house
+
+    def __str__(self):
+        return f&quot;{self.name} da casa {self.house}&quot;
+
+    @classmethod
+    def get(cls):
+        name = input(&quot;Nome: &quot;)
+        house = input(&quot;Casa: &quot;)
+        return cls(name, house)
+
+
+def main():
+    student = Student.get()
+    print(student)
+
+
+if __name__ == &quot;__main__&quot;:
+    main()
+</code></pre>
+<p>Observe que <code>get_student</code> é removido e um <code>@classmethod</code> chamado <code>get</code> é criado. Agora, esse método pode ser chamado sem precisar criar um aluno primeiro.</p>
+</li>
+</ul>
+<h2>Métodos Estáticos</h2>
+<ul>
+<li>Acontece que, além dos <code>@classmethod</code>s, que são distintos dos métodos de instância, existem outros tipos de métodos também.</li>
+<li>Usar <code>@staticmethod</code> pode ser algo que você pode desejar explorar. Embora não seja abordado explicitamente neste curso, você está convidado a buscar e aprender mais sobre métodos estáticos e a diferença deles em relação aos métodos de classe.</li>
+</ul>
+<h2>Herança</h2>
+<ul>
+<li>
+<p>A herança é, talvez, o recurso mais poderoso da programação orientada a objetos.</p>
+</li>
+<li>
+<p>Acontece que você pode criar uma classe que &quot;herda&quot; métodos, variáveis ​​e atributos de outra classe.</p>
+</li>
+<li>
+<p>No terminal, execute <code>code wizard.py</code>. O código é o seguinte:</p>
+<pre><code>class Mago:
+    def __init__(self, nome):
+        if not nome:
+            raise ValueError(&quot;Nome faltando&quot;)
+        self.nome = nome
+
+    ...
+
+
+class Estudante(Mago):
+    def __init__(self, nome, casa):
+        super().__init__(nome)
+        self.casa = casa
+
+    ...
+
+
+class Professor(Mago):
+    def __init__(self, nome, matéria):
+        super().__init__(nome)
+        self.matéria = matéria
+
+    ...
+
+
+mago = Mago(&quot;Albus&quot;)
+estudante = Estudante(&quot;Harry&quot;, &quot;Gryffindor&quot;)
+professor = Professor(&quot;Severus&quot;, &quot;Defesa Contra as Artes das Trevas&quot;)
+...
+</code></pre>
+<p>Observe que há uma classe acima chamada <code>Mago</code> e uma classe chamada <code>Estudante</code>. Além disso, observe que há uma classe chamada <code>Professor</code>. Ambos os estudantes e professores têm nomes. Além disso, tanto estudantes quanto professores são magos. Portanto, tanto <code>Estudante</code> quanto <code>Professor</code> herdam as características de <code>Mago</code>. Dentro da classe &quot;filha&quot; <code>Estudante</code>, <code>Estudante</code> pode herdar da classe &quot;pai&quot; ou &quot;super&quot; <code>Mago</code>, pois a linha <code>super().__init__(nome)</code> executa o método <code>init</code> de <code>Mago</code>. Por fim, observe que as últimas linhas deste código criam um mago chamado Albus, um estudante chamado Harry, e assim por diante.</p>
+</li>
+</ul>
+<h2>Herança e Exceções</h2>
+<ul>
+<li>
+<p>Embora tenhamos acabado de introduzir a herança, temos usado isso o tempo todo durante o uso de exceções.</p>
+</li>
+<li>
+<p>Acontece também que as exceções seguem uma hierarquia, onde existem classes filhas, pais e avós. Isso é ilustrado abaixo:</p>
+<pre><code>BaseException
+ +-- KeyboardInterrupt
+ +-- Exception
+      +-- ArithmeticError
+      |    +-- ZeroDivisionError
+      +-- AssertionError
+      +-- AttributeError
+      +-- EOFError
+      +-- ImportError
+      |    +-- ModuleNotFoundError
+      +-- LookupError
+      |    +-- KeyError
+      +-- NameError
+      +-- SyntaxError
+      |    +-- IndentationError
+      +-- ValueError
+ ...
+</code></pre>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/exceptions.html">exceções</a>.</p>
+</li>
+</ul>
+<h2>Sobrecarga de Operadores</h2>
+<ul>
+<li>
+<p>Alguns operadores, como <code>+</code> e <code>-</code>, podem ser &quot;sobrecarregados&quot; de forma que eles possam ter mais habilidades além da simples aritmética.</p>
+</li>
+<li>
+<p>Na janela do seu terminal, digite <code>code vault.py</code>. Em seguida, codifique da seguinte forma:</p>
+<pre><code>class Vault:
+    def __init__(self, galeões=0, sicles=0, nuques=0):
+        self.galeões = galeões
+        self.sicles = sicles
+        self.nuques = nuques
+
+    def __str__(self):
+        return f&quot;{self.galeões} Galeões, {self.sicles} Sicles, {self.nuques} Nuques&quot;
+
+    def __add__(self, other):
+        galeões = self.galeões + other.galeões
+        sicles = self.sicles + other.sicles
+        nuques = self.nuques + other.nuques
+        return Vault(galeões, sicles, nuques)
+
+
+potter = Vault(100, 50, 25)
+print(potter)
+
+weasley = Vault(25, 50, 100)
+print(weasley)
+
+total = potter + weasley
+print(total)
+</code></pre>
+<p>Observe como o método <code>__str__</code> retorna uma string formatada. Além disso, observe como o método <code>__add__</code> permite a adição dos valores de dois cofres. <code>self</code> é o que está à esquerda do operando <code>+</code>. <code>other</code> é o que está à direita do <code>+</code>.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/reference/datamodel.html#special-method-names">sobrecarga de operadores</a>.</p>
+</li>
+</ul>
+<h2>Resumindo</h2>
+<p>Agora, você aprendeu um novo nível de capacidade através da programação orientada a objetos.</p>
+<ul>
+<li>Programação orientada a objetos</li>
+<li>Classes</li>
+<li><code>raise</code></li>
+<li>Métodos de classe</li>
+<li>Métodos estáticos</li>
+<li>Herança</li>
+<li>Sobrecarga de operadores</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
