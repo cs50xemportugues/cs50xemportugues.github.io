@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h2># Aula 7</h2>
+<ul>
+<li><a href="#express%C3%B5es-regulares">Expressões Regulares</a></li>
+<li><a href="#sensibilidade-a-mai%C3%BAsculas-e-min%C3%BAsculas">Sensibilidade a maiúsculas e minúsculas</a></li>
+<li><a href="#limpeza-da-entrada-do-usu%C3%A1rio">Limpeza da Entrada do Usuário</a></li>
+<li><a href="#extra%C3%A7%C3%A3o-da-entrada-do-usu%C3%A1rio">Extração da Entrada do Usuário</a></li>
+<li><a href="#resumindo">Resumindo</a></li>
+</ul>
+<h2>Expressões Regulares</h2>
+<ul>
+<li>
+<p>Expressões regulares ou &quot;regexes&quot; nos permitirão examinar padrões dentro do nosso código. Por exemplo, podemos querer validar se um endereço de e-mail está formatado corretamente. Expressões regulares nos permitirão examinar expressões dessa maneira.</p>
+</li>
+<li>
+<p>Para começar, digite <code>code validate.py</code> na janela do terminal. Em seguida, codifique da seguinte forma no editor de texto:</p>
+<pre><code>email = input(&quot;Qual é o seu e-mail? &quot;).strip()
+
+if &quot;@&quot; in email:
+    print(&quot;Válido&quot;)
+else:
+    print(&quot;Inválido&quot;)
+</code></pre>
+<p>Observe que <code>strip</code> removerá espaços em branco no início ou fim da entrada. Executando este programa, você verá que, desde que um símbolo &quot;@&quot; seja inserido, o programa considerará a entrada como válida.</p>
+</li>
+<li>
+<p>No entanto, podemos imaginar que alguém poderia inserir apenas <code>@@</code> e a entrada poderia ser considerada válida. Poderíamos considerar um endereço de e-mail como tendo pelo menos um <code>@</code> e um <code>.</code> em algum lugar. Modifique seu código da seguinte forma:</p>
+<pre><code>email = input(&quot;Qual é o seu e-mail? &quot;).strip()
+
+if &quot;@&quot; in email and &quot;.&quot; in email:
+    print(&quot;Válido&quot;)
+else:
+    print(&quot;Inválido&quot;)
+</code></pre>
+<p>Observe que, embora isso funcione como esperado, nosso usuário poderia ser adversário, digitando apenas <code>@.</code> resultaria no programa retornando <code>válido</code>.</p>
+</li>
+<li>
+<p>Podemos melhorar a lógica do nosso programa da seguinte forma:</p>
+<pre><code>email = input(&quot;Qual é o seu e-mail? &quot;).strip()
+
+username, domain = email.split(&quot;@&quot;)
+
+if username and &quot;.&quot; in domain:
+    print(&quot;Válido&quot;)
+else:
+    print(&quot;Inválido&quot;)
+</code></pre>
+<p>Observe como o método <code>strip</code> é usado para determinar se <code>username</code> existe e se <code>.</code> está dentro da variável <code>domain</code>. Executando este programa, um endereço de e-mail padrão digitado por você pode ser considerado <code>válido</code>. Digitar <code>malan@harvard</code> sozinho mostrará que o programa considera essa entrada como <code>inválida</code>.</p>
+</li>
+<li>
+<p>Podemos ser ainda mais precisos, modificando nosso código da seguinte forma:</p>
+<pre><code>email = input(&quot;Qual é o seu e-mail? &quot;).strip()
+
+username, domain = email.split(&quot;@&quot;)
+
+if username and domain.endswith(&quot;.edu&quot;):
+    print(&quot;Válido&quot;)
+else:
+    print(&quot;Inválido&quot;)
+</code></pre>
+<p>Observe como o método <code>endswith</code> verifica se <code>domain</code> contém <code>.edu</code>. No entanto, um usuário mal-intencionado ainda pode quebrar nosso código. Por exemplo, um usuário pode digitar <code>malan@.edu</code> e seria considerado válido.</p>
+</li>
+<li>
+<p>De fato, podemos continuar iterando neste código. No entanto, acontece que o Python tem uma biblioteca existente chamada <code>re</code> que possui várias funções integradas que podem validar entradas do usuário em relação a padrões.</p>
+</li>
+<li>
+<p>Uma das funções mais versáteis da biblioteca <code>re</code> é <code>search</code>.</p>
+</li>
+<li>
+<p>A biblioteca <code>search</code> segue a assinatura <code>re.search(padrao, string, flags=0)</code>. Seguindo essa assinatura, podemos modificar nosso código da seguinte forma:</p>
+<pre><code>import re
+
+email = input(&quot;Qual é o seu e-mail? &quot;).strip()
+
+if re.search(&quot;@&quot;, email):
+    print(&quot;Válido&quot;)
+else:
+    print(&quot;Inválido&quot;)
+</code></pre>
+<p>Observe que isso não aumenta a funcionalidade do nosso programa. Na verdade, é um passo atrás.</p>
+</li>
+<li>
+<p>Podemos melhorar ainda mais a funcionalidade do nosso programa. No entanto, precisamos avançar nosso vocabulário em relação à &quot;validação&quot;. Acontece que no mundo das expressões regulares existem certos símbolos que nos permitem identificar padrões. Até agora, apenas temos verificado partes específicas do texto, como <code>@</code>. Acontece que muitos símbolos especiais podem ser passados ​​para o compilador com o objetivo de fazer validação. Uma lista não exaustiva desses padrões é a seguinte:</p>
+<pre><code>.   qualquer caractere, exceto uma nova linha
+*   0 ou mais repetições
++   1 ou mais repetições
+?   0 ou 1 repetição
+{m} m repetições
+{m,n} repetições de m a n
+</code></pre>
+</li>
+<li>
+<p>Implementando isso em nosso código, modifique-o da seguinte forma:</p>
+<pre><code>import re
+
+email = input(&quot;Qual é o seu e-mail? &quot;).strip()
+
+if re.search(&quot;.+@.+&quot;, email):
+    print(&quot;Válido&quot;)
+else:
+    print(&quot;Inválido&quot;)
+</code></pre>
+<p>Observe que não nos importamos com o que é o nome de usuário ou o domínio. O que nos importa é o padrão. <code>.+</code> é usado para determinar se há algo à esquerda do endereço de e-mail e se há algo à direita do endereço de e-mail. Executando seu código, digitando <code>malan@</code>, você perceberá que a entrada é considerada <code>inválida</code>, como esperávamos.</p>
+</li>
+<li>
+<p>Se tivéssemos usado uma expressão regular <code>.*@.*</code> em nosso código acima, você pode visualizá-la da seguinte forma: <img src="cs50pWeek7Slide8.png" alt="Máquina de estados." title="cs50pWeek7Slide8.png" /></p>
+<p>Observe a representação da <code>máquina de estados</code> de nossa expressão regular. À esquerda, o compilador começa a avaliar a declaração da esquerda para a direita. Quando atingimos <code>q1</code> ou pergunta 1, o compilador lê repetidamente com base na expressão fornecida a ele. Em seguida, o estado é alterado, olhando agora para <code>q2</code> ou a segunda pergunta sendo validada. Novamente, a seta indica como a expressão será avaliada repetidamente com base em nossa programação. Em seguida</p>
+</li>
+</ul>
+<h2>Sensibilidade a maiúsculas e minúsculas</h2>
+<ul>
+<li>
+<p>Para ilustrar como você pode lidar com problemas relacionados à sensibilidade a maiúsculas e minúsculas, onde há diferença entre <code>EDU</code> e <code>edu</code>, vamos voltar nosso código para o seguinte:</p>
+<pre><code>import re
+
+email = input(&quot;Qual é o seu e-mail? &quot;).strip()
+
+if re.search(r&quot;^\w+@\w.+\.edu$&quot;, email):
+    print(&quot;Válido&quot;)
+else:
+    print(&quot;Inválido&quot;)
+</code></pre>
+<p>Observe como removemos as declarações <code>|</code> fornecidas anteriormente.</p>
+</li>
+<li>
+<p>Lembre-se de que dentro da função <code>re.search</code>, há um parâmetro para <code>flags</code>.</p>
+</li>
+<li>
+<p>Algumas variáveis de flag incorporadas são:</p>
+<pre><code>re.IGNORECASE
+re.MULTILINE
+re.DOTALL
+</code></pre>
+<p>Considere como você pode usá-las em seu código.</p>
+</li>
+<li>
+<p>Portanto, podemos alterar nosso código da seguinte forma.</p>
+<pre><code>import re
+
+email = input(&quot;Qual é o seu e-mail? &quot;).strip()
+
+if re.search(r&quot;^\w+@\w.+\.edu$&quot;, email, re.IGNORECASE):
+    print(&quot;Válido&quot;)
+else:
+    print(&quot;Inválido&quot;)
+</code></pre>
+<p>Observe como adicionamos um terceiro parâmetro <code>re.IGNORECASE</code>. Executando este programa com <code>MALAN@HARVARD.EDU</code>, a entrada agora é considerada válida.</p>
+</li>
+<li>
+<p>Considere o seguinte endereço de e-mail <code>malan@cs50.harvard.edu</code>. Usando nosso código acima, isso seria considerado inválido. Por quê?</p>
+</li>
+<li>
+<p>Como há um ponto adicional, o programa considera isso inválido.</p>
+</li>
+<li>
+<p>Acontece que, olhando para o nosso vocabulário de antes, podemos agrupar ideias juntas.</p>
+<pre><code>A|B     ou A ou B
+(...)   um grupo
+(?:...) versão de não captura
+</code></pre>
+</li>
+<li>
+<p>Podemos modificar nosso código da seguinte forma:</p>
+<pre><code>import re
+
+email = input(&quot;Qual é o seu e-mail? &quot;).strip()
+
+if re.search(r&quot;^\w+@(\w+\.)?\w+\.edu$&quot;, email, re.IGNORECASE):
+    print(&quot;Válido&quot;)
+else:
+    print(&quot;Inválido&quot;)
+</code></pre>
+<p>Observe como o <code>(\w+\.)?</code> comunica ao compilador que essa nova expressão pode estar presente uma vez ou não estar presente. Portanto, tanto <code>malan@cs50.harvard.edu</code> quanto <code>malan@harvard.edu</code> são considerados válidos.</p>
+</li>
+<li>
+<p>Curiosamente, as edições que fizemos até agora no nosso código não abrangem totalmente todas as verificações que podem ser feitas para garantir um endereço de e-mail válido. De fato, aqui está a expressão completa que alguém teria que digitar para garantir que um e-mail válido seja inserido:</p>
+<pre><code>^[a-zA-Z0-9.!#$%&amp;&#x27;*+\/=?^_`{|}~-]+@[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(?:\.[a-zA-Z0-9](?:[a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?)*$
+</code></pre>
+</li>
+<li>
+<p>Existem outras funções dentro da biblioteca <code>re</code> que você pode achar úteis. <code>re.match</code> e <code>re.fullmatch</code> são funções que você pode achar extremamente úteis.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/re.html">re</a>.</p>
+</li>
+</ul>
+<h2>Limpeza de Entrada do Usuário</h2>
+<ul>
+<li>
+<p>Você nunca deve esperar que seus usuários sigam sempre suas expectativas para entrada limpa. De fato, os usuários frequentemente violarão suas intenções como programador.</p>
+</li>
+<li>
+<p>Existem maneiras de limpar seus dados.</p>
+</li>
+<li>
+<p>Na janela do terminal, digite <code>code format.py</code>. Em seguida, no editor de texto, escreva o código da seguinte forma:</p>
+<pre><code>name = input(&quot;Qual é o seu nome? &quot;).strip()
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Observe que criamos, essencialmente, um programa &quot;hello world&quot;. Executando este programa e digitando <code>David</code>, funciona bem! No entanto, ao digitar <code>Malan, David</code>, observe como o programa não funciona como pretendido. Como poderíamos modificar nosso programa para limpar essa entrada?</p>
+</li>
+<li>
+<p>Modifique seu código da seguinte forma.</p>
+<pre><code>name = input(&quot;Qual é o seu nome? &quot;).strip()
+if &quot;,&quot; in name:
+    last, first = name.split(&quot;, &quot;)
+    name = f&quot;{first} {last}&quot;
+
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Observe como <code>last, first = name.split(&quot;, &quot;)</code> é executado se houver uma <code>,</code> no nome. Em seguida, o nome é padronizado como primeiro e último. Executando nosso código, digitando <code>Malan, David</code>, você pode ver como esse programa limpa pelo menos um cenário em que um usuário digita algo inesperado.</p>
+</li>
+<li>
+<p>Você pode perceber que ao digitar <code>Malan,David</code> sem espaço, o compilador retorna um erro. Como agora conhecemos um pouco de sintaxe de expressão regular, vamos aplicá-la ao nosso código:</p>
+<pre><code>import re
+
+name = input(&quot;Qual é o seu nome? &quot;).strip()
+matches = re.search(r&quot;^(.+), (.+)$&quot;, name)
+if matches:
+    last, first = matches.groups()
+    name = f&quot;{first} {last}&quot;
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Observe que <code>re.search</code> pode retornar um conjunto de correspondências extraídas da entrada do usuário. Se houver correspondências retornadas por <code>re.search</code>. Executando este programa, digitando <code>David Malan</code>, observe como a condição <code>if</code> não é executada e o nome é retornado. Se você executar o programa digitando <code>Malan, David</code>, o nome também será retornado corretamente.</p>
+</li>
+<li>
+<p>Acontece que podemos solicitar grupos específicos usando <code>matches.group</code>. Podemos modificar nosso código da seguinte forma:</p>
+<pre><code>import re
+
+name = input(&quot;Qual é o seu nome? &quot;).strip()
+matches = re.search(r&quot;^(.+), (.+)$&quot;, name)
+if matches:
+    last = matches.group(1)
+    first = matches.group(2)
+    name = f&quot;{first} {last}&quot;
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Observe como, nesta implementação, <code>group</code> não está no plural (não há <code>s</code>).</p>
+</li>
+<li>
+<p>Nosso código pode ser ainda mais simplificado da seguinte forma:</p>
+<pre><code>import re
+
+name = input(&quot;Qual é o seu nome? &quot;).strip()
+matches = re.search(r&quot;^(.+), (.+)$&quot;, name)
+if matches:
+    name = matches.group(2) + &quot; &quot; + matches.group(1)
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Observe como <code>group(2)</code> e <code>group(1)</code> são concatenados com um espaço. O primeiro grupo é o que está à esquerda da vírgula. O segundo grupo é o que está à direita da vírgula.</p>
+</li>
+<li>
+<p>Perceba ainda que ao digitar <code>Malan,David</code> sem espaço nosso código ainda falhará. Portanto, podemos fazer a seguinte modificação:</p>
+<pre><code>import re
+
+name = input(&quot;Qual é o seu nome? &quot;).strip()
+matches = re.search(r&quot;^(.+), *(.+)$&quot;, name)
+if matches:
+    name = matches.group(2) + &quot; &quot; + matches.group(1)
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Observe a adição do <code>*</code> em nossa declaração de validação. Agora, esse código aceitará e processará corretamente <code>Malan,David</code>. Além disso, ele lidará corretamente com <code>David,Malan</code>com vários espaços antes de <code> David</code>.</p>
+</li>
+<li>
+<p>É muito comum utilizar <code>re.search</code> como fizemos nos exemplos anteriores, onde <code>matches</code> está em uma linha de código posterior. No entanto, podemos combinar essas declarações:</p>
+<pre><code>import re
+
+name = input(&quot;Qual é o seu nome? &quot;).strip()
+if matches := re.search(r&quot;^(.+), *(.+)$&quot;, name):
+    name = matches.group(2) + &quot; &quot; + matches.group(1)
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Observe como combinamos duas linhas de nosso código. O operador <code>:=</code> (casco de morsa) atribui um valor da direita para a esquerda e nos permite fazer uma pergunta booleana ao mesmo tempo. Vire a cabeça de lado e você verá por que isso é chamado de operador de casco de morsa.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre expressões regulares (<a href="https://docs.python.org/3/library/re.html">re</a>).</p>
+</li>
+</ul>
+<h2>Extraindo Entrada do Usuário</h2>
+<ul>
+<li>
+<p>Até agora, validamos a entrada do usuário e limpamos a entrada do usuário.</p>
+</li>
+<li>
+<p>Agora, vamos extrair algumas informações específicas da entrada do usuário. Na janela do terminal, digite <code>code twitter.py</code> e o código a seguir na janela do editor de texto:</p>
+<pre><code>url = input(&quot;URL: &quot;).strip()
+print(url)
+</code></pre>
+<p>Observe que se digitarmos <code>https://twitter.com/davidjmalan</code>, ele mostrará exatamente o que o usuário digitou. No entanto, como podemos extrair apenas o nome de usuário e ignorar o resto da URL?</p>
+</li>
+<li>
+<p>Podemos simplesmente remover o início da URL padrão do Twitter. Podemos tentar isso da seguinte forma:</p>
+<pre><code>url = input(&quot;URL: &quot;).strip()
+
+username = url.replace(&quot;https://twitter.com/&quot;, &quot;&quot;)
+print(f&quot;Nome de usuário: {username}&quot;)
+</code></pre>
+<p>Observe como o método <code>replace</code> nos permite encontrar um item e substituí-lo por outro. Neste caso, estamos encontrando parte da URL e substituindo-a por nada. Ao digitar a URL completa <code>https://twitter.com/davidjmalan</code>, o programa exibe efetivamente o nome de usuário. No entanto, quais são algumas limitações desse programa atual?</p>
+</li>
+<li>
+<p>E se o usuário simplesmente digitasse <code>twitter.com</code> em vez de incluir <code>https://</code> e outras partes? Você pode imaginar muitos cenários em que o usuário pode inserir ou deixar de inserir partes da URL que criariam uma saída estranha neste programa. Para melhorar este programa, podemos codificar da seguinte forma:</p>
+<pre><code>url = input(&quot;URL: &quot;).strip()
+
+username = url.removeprefix(&quot;https://twitter.com/&quot;)
+print(f&quot;Nome de usuário: {username}&quot;)
+</code></pre>
+<p>Observe como utilizamos o método <code>removeprefix</code>. Este método removerá o início de uma string.</p>
+</li>
+<li>
+<p>Expressões regulares simplesmente nos permitem expressar de forma sucinta os padrões e metas.</p>
+</li>
+<li>
+<p>Dentro da biblioteca <code>re</code>, há um método chamado <code>sub</code>. Este método nos permite substituir um padrão por outra coisa.</p>
+</li>
+<li>
+<p>A assinatura do método <code>sub</code> é a seguinte:</p>
+<pre><code>re.sub(padrao, substituicao, string, count=0, flags=0)
+</code></pre>
+<p>Observe que <code>padrao</code> refere-se à expressão regular que estamos procurando. Em seguida, há uma string <code>substituicao</code> que podemos substituir pelo padrão. Por fim, há a <code>string</code> na qual queremos fazer a substituição.</p>
+</li>
+<li>
+<p>Implementando este método em nosso código, podemos modificar nosso programa da seguinte forma:</p>
+<pre><code>import re
+
+url = input(&quot;URL: &quot;).strip()
+
+username = re.sub(r&quot;https://twitter.com/&quot;, &quot;&quot;, url)
+print(f&quot;Nome de usuário: {username}&quot;)
+</code></pre>
+<p>Observe como ao executar este programa e inserir <code>https://twitter.com/davidjmalan</code>, ele produz o resultado correto. No entanto, ainda existem alguns problemas em nosso código.</p>
+</li>
+<li>
+<p>O protocolo, subdomínio e a possibilidade de o usuário inserir qualquer parte da URL após o nome de usuário são todos motivos pelos quais este código ainda não é ideal. Podemos abordar ainda mais essas limitações da seguinte forma:</p>
+<pre><code>import re
+
+url = input(&quot;URL: &quot;).strip()
+
+username re.sub(r&quot;^(https?://)?(www\.)?twitter\.com/&quot;, &quot;&quot;, url)
+print(f&quot;Nome de usuário: {username}&quot;)
+</code></pre>
+<p>Observe como o acento circunflexo <code>^</code> foi adicionado à URL. Observe também como o ponto <code>.</code> pode ser interpretado incorretamente pelo compilador. Portanto, escapamos dele usando uma barra invertida <code>\</code> para torná-lo <code>\.</code> Com a finalidade de tolerar tanto <code>http</code> quanto <code>https</code>, adicionamos um <code>?</code> ao final de <code>https?</code>, tornando o <code>s</code> opcional. Além disso, para acomodar <code>www</code>, adicionamos <code>(www\.)?</code> ao nosso código. Por fim, caso o usuário decida omitir completamente o protocolo, o <code>http://</code> ou <code>https://</code> é tornando opcional usando <code>(https?://)</code>.</p>
+</li>
+<li>
+<p>Ainda assim, estamos esperando cegamente que o usuário insira uma URL que, de fato, possui um nome de usuário.</p>
+</li>
+<li>
+<p>Usando nosso conhecimento de <code>re.search</code>, podemos melhorar ainda mais nosso código.</p>
+<pre><code>import re
+
+url = input(&quot;URL: &quot;).strip()
+
+matches = re.search(r&quot;^https?://(www\.)?twitter\.com/(.+)$&quot;, url, re.IGNORECASE)
+if matches:
+    print(f&quot;Nome de usuário:&quot;, matches.group(2))
+</code></pre>
+<p>Observe como estamos procurando a expressão regular acima na string fornecida pelo usuário. Em particular, estamos capturando o que aparece no final da URL usando a expressão regular <code>(.+)$</code>. Portanto, se o usuário deixar de inserir uma URL sem um nome de usuário, nenhuma entrada será apresentada.</p>
+</li>
+<li>
+<p>Ainda mais apertando nosso programa, podemos utilizar nosso operador <code>:=</code> da seguinte forma:</p>
+<pre><code>import re
+
+url = input(&quot;URL: &quot;).strip()
+
+if matches := re.search(r&quot;^https?://(?:www\.)?twitter\.com/(.+)$&quot;, url, re.IGNORECASE):
+    print(f&quot;Nome de usuário:&quot;, matches.group(1))
+</code></pre>
+<p>Observe que <code>?:</code> informa ao compilador que não é necessário capturar o que está nesse local em nossa expressão regular.</p>
+</li>
+<li>
+<p>Ainda assim, podemos ser mais explícitos para garantir que o nome de usuário inserido seja correto. Usando a documentação do Twitter, podemos adicionar o seguinte à nossa expressão regular:</p>
+<pre><code>import re
+
+url = input(&quot;URL: &quot;).strip()
+
+if matches := re.search(r&quot;^https?://(?:www\.)?twitter\.com/([a-z0-9_]+)&quot;, url, re.IGNORECASE):
+    print(f&quot;Nome de usuário:&quot;, matches.group(1))
+</code></pre>
+<p>Observe que <code>[a-z0-9_]+</code> informa ao compilador para esperar apenas <code>a-z</code>, <code>0-9</code> e <code>_</code> como parte da expressão regular. O <code>+</code> indica que esperamos um ou mais caracteres.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação de Python sobre <a href="https://docs.python.org/3/library/re.html">re</a>.</p>
+</li>
+</ul>
+<h2>Resumindo</h2>
+<p>Agora, você aprendeu uma nova linguagem de expressões regulares que pode ser utilizada para validar, limpar e extrair a entrada do usuário.</p>
+<ul>
+<li>Expressões Regulares</li>
+<li>Sensibilidade a maiúsculas e minúsculas</li>
+<li>Limpeza da entrada do usuário</li>
+<li>Extração da entrada do usuário</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

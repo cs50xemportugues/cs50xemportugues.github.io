@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Olá</h1>
+<h2>Introdução</h2>
+<p>Lembre-se de que o Visual Studio Code (também conhecido como VS Code) é um popular &quot;ambiente de desenvolvimento integrado&quot; (IDE) através do qual é possível escrever código. Para que você não precise baixar, instalar e configurar sua própria cópia do VS Code, usaremos uma versão baseada em nuvem que já tem tudo o que você precisa pré-instalado.</p>
+<p>Faça login em <a href="https://code.cs50.io/">code.cs50.io</a> usando sua conta do GitHub. Assim que seu &quot;código espacial&quot; carregar, você deve ver que, por padrão, o VS Code é dividido em três regiões. Na parte superior do VS Code está o &quot;editor de texto&quot;, onde você escreverá todos os seus programas. Na parte inferior está uma &quot;janela do terminal&quot;, uma interface de linha de comando (CLI) que permite explorar os arquivos e diretórios (também chamados de pastas) do seu espaço de codificação, compilar código e executar programas. E à esquerda está o &quot;explorador de arquivos&quot;, uma interface gráfica do usuário (GUI) por meio da qual você também pode explorar os arquivos e diretórios do seu espaço de codificação.</p>
+<p>Comece clicando dentro da sua janela do terminal e execute <code>cd</code>. Você deve ver que seu &quot;prompt&quot; se parece com o abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e digite</p>
+<pre><code>mkdir hello
+</code></pre>
+<p>seguido de Enter para criar um diretório chamado <code>hello</code> no seu espaço de codificação. Tome cuidado para não esquecer o espaço entre <code>mkdir</code> e <code>hello</code> ou qualquer outro caractere!</p>
+<p>De agora em diante, executar um comando significa digitá-lo em uma janela do terminal e pressionar Enter. Os comandos são &quot;sensíveis a maiúsculas e minúsculas&quot;, portanto, certifique-se de não digitar em maiúsculas quando deveria ser minúsculo ou vice-versa.</p>
+<p>Agora execute</p>
+<pre><code>cd hello
+</code></pre>
+<p>para mover-se para dentro desse diretório. Seu prompt deve agora se parecer com o abaixo.</p>
+<pre><code>hello/ $
+</code></pre>
+<p>Se não, retorne e veja se pode determinar onde você errou!</p>
+<p>Vamos escrever o seu primeiro programa? Execute</p>
+<pre><code>code hello.c
+</code></pre>
+<p>para criar um novo arquivo chamado <code>hello.c</code>, que deve ser aberto automaticamente no editor de texto do seu espaço de codificação. Assim que você salvá-lo com o comando-S (no macOS) ou control-S (no Windows), ele também deverá aparecer no explorador do seu espaço de codificação.</p>
+<p>Prossiga escrevendo seu primeiro programa digitando exatamente estas linhas em <code>hello.c</code>:</p>
+<pre><code>#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    printf(&quot;hello, world\n&quot;);
+}
+</code></pre>
+<p>Observe como o VS Code adiciona &quot;sintaxe de destaque&quot; (ou seja, cor) à medida que você digita, embora a escolha de cores do VS Code possa ser diferente deste conjunto de problemas. Essas cores não são realmente salvas dentro do arquivo em si; elas são apenas adicionadas pelo VS Code para destacar certa sintaxe. Se você não tivesse salvado o arquivo como <code>hello.c</code> desde o início, o VS Code não saberia (por causa da extensão do nome do arquivo) que você está escrevendo código C, caso em que essas cores estariam ausentes.</p>
+<h2>Listando arquivos</h2>
+<p>Agora, em sua janela do terminal, logo à direita do prompt (<code>hello/ $</code>), execute</p>
+<pre><code>ls
+</code></pre>
+<p>Você só deve ver <code>hello.c</code>? Isso porque você acabou de listar os arquivos na sua pasta <code>hello</code>. Em particular, você executou um comando chamado <code>ls</code>, que é uma abreviação para &quot;listar&quot;. (É um comando tão frequentemente usado que seus autores o chamaram apenas de <code>ls</code> para economizar teclas.) Faz sentido?</p>
+<h2>Compilando programas</h2>
+<p>Agora, antes de podermos executar o programa <code>hello.c</code>, lembre-se de que precisamos <em>compilá-lo</em> com um <em>compilador</em>, traduzindo-o do <em>código-fonte</em> para o <em>código de máquina</em> (ou seja, zeros e uns). Execute o comando abaixo para fazer isso:</p>
+<pre><code>make hello
+</code></pre>
+<p>E então execute este novamente:</p>
+<pre><code>ls
+</code></pre>
+<p>Desta vez, você não só deve ver <code>hello.c</code>, mas também <code>hello</code> listado? Você traduziu o código-fonte em <code>hello.c</code> para código de máquina em <code>hello</code>.</p>
+<p>Execute o programa em si executando o abaixo.</p>
+<pre><code>./hello
+</code></pre>
+<p>Olá, mundo, de fato!</p>
+<h2>Obtendo a entrada do usuário</h2>
+<p>Suficiente para dizer que, não importa como você compile ou execute este programa, ele sempre imprime apenas <code>hello, world</code>. Vamos personalizá-lo um pouco, como fizemos em sala de aula.</p>
+<p>Modifique este programa de tal forma que ele primeiro solicite ao usuário seu nome e depois imprima <code>hello, fulano</code>, onde <code>fulano</code> é o nome real dele ou dela.</p>
+<p>Como antes, certifique-se de compilar seu programa com:</p>
+<pre><code>make hello
+</code></pre>
+<p>E certifique-se de executar seu programa, testando-o algumas vezes com entradas diferentes, com:</p>
+<pre><code>./hello
+</code></pre>
+<h3>Tutorial</h3>
+<p>Aqui está um &quot;tutorial&quot; (ou seja, uma visita guiada) deste problema, se você quiser uma visão geral verbal do que fazer também!</p>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/LvT8TjHHCRU?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<h3>Dicas</h3>
+<h4>Não se lembra de como solicitar o nome do usuário?</h4>
+<p>Lembre-se de que você pode usar <code>get_string</code> da seguinte forma, armazenando seu <em>valor de retorno</em> em uma variável chamada <code>name</code> do tipo <code>string</code>.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">string</span> <span class="n">name</span> <span class="o">=</span> <span class="n">get_string</span><span class="p">(</span><span class="s">"Qual é o seu nome? "</span><span class="p">);</span>
+</code></pre></div></div>
+<h4>Não se lembra de como formatar uma string?</h4>
+<p>Não se lembra de como juntar (ou seja, concatenar) o nome do usuário com uma saudação? Lembre-se de que você pode usar <code>printf</code> não apenas para imprimir, mas para formatar uma string (daí o <code>f</code> em <code>printf</code>), como em:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">printf</span><span class="p">(</span><span class="s">"hello, %s</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span> <span class="n">name</span><span class="p">);</span>
+</code></pre></div></div>
+<h4>Uso de identificador não declarado?</h4>
+<p>Vendo o abaixo, talvez acima de outros erros?</p>
+<pre><code>error: use of undeclared identifier &#x27;string&#x27;; did you mean &#x27;stdin&#x27;?
+</code></pre>
+<p>Lembre-se de que, para usar <code>get_string</code>, é necessário incluir <code>cs50.h</code> (onde <code>get_string</code> é <em>declarado</em>) no topo de um arquivo, como em:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="cp">#include</span> <span class="cpf">&lt;cs50.h&gt;</span><span class="cp">
+</span></code></pre></div></div>
+<h3>Como testar seu código</h3>
+<p>Execute o abaixo para avaliar a correção do seu código usando <code>check50</code>, um programa de linha de comando que produzirá faces felizes sempre que seu código passar nos testes automatizados do CS50 e faces tristes sempre que não passar! Mas certifique-se de compilá-lo e testá-lo você mesmo também!</p>
+<pre><code>check50 cs50/problems/2023/x/hello
+</code></pre>
+<p>Execute o abaixo para avaliar o estilo do seu código usando <code>style50</code>, um programa de linha de comando que produz adições (em verde) e exclusões (em vermelho) que você deve fazer ao seu programa para melhorar seu estilo. Se você tiver problemas para ver essas cores, o <code>style50</code> suporta outros <a href="https://cs50.readthedocs.io/style50/">modos</a> também!</p>
+<pre><code>style50 hello.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>Em seu terminal, execute o abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/hello
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

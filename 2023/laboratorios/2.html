@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Laboratório 2: Scrabble</h1>
+<div class="alert" data-alert="warning" role="alert"><p>Você pode colaborar com um ou dois colegas neste laboratório, embora seja esperado que cada aluno que estiver em um grupo deste tipo contribua igualmente com o laboratório.</p></div>
+<p>Determine qual das duas palavras de Scrabble vale mais.</p>
+<pre><code>$ ./scrabble
+Jogador 1: COMPUTADOR
+Jogador 2: ciência
+Jogador 1 ganhou!
+</code></pre>
+<h2>Primeiros passos</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da sua janela do terminal e execute o comando <code>cd</code>. Você deve ver que o &quot;prompt&quot; se parece com o abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e execute o seguinte comando</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/labs/2/scrabble.zip
+</code></pre>
+<p>seguido por Enter para baixar um arquivo ZIP chamado <code>scrabble.zip</code> no seu codespace. Tome cuidado para não ignorar o espaço entre <code>wget</code> e a URL a seguir, ou qualquer outro caractere, na verdade!</p>
+<p>Agora execute</p>
+<pre><code>unzip scrabble.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>scrabble</code>. Você não precisa mais do arquivo ZIP, então você pode executar</p>
+<pre><code>rm scrabble.zip
+</code></pre>
+<p>e responder com &quot;y&quot; seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd scrabble
+</code></pre>
+<p>seguido de Enter para se movimentar dentro daquele diretório. Seu prompt deverá ser semelhante ao abaixo.</p>
+<pre><code>scrabble/ $
+</code></pre>
+<p>Se tudo correu bem, você deve abrir o arquivo <code>scrabble.c</code> executando</p>
+<pre><code>code scrabble.c
+</code></pre>
+<p>Se você tiver algum problema, siga os mesmos passos novamente e veja se consegue determinar onde errou!</p>
+<h2>Antecedentes</h2>
+<p>No jogo de <a href="https://scrabble.hasbro.com/en-us/rules">Scrabble</a>, os jogadores criam palavras para marcar pontos e o número de pontos é a soma dos valores de cada letra na palavra.</p>
+<table>
+  <thead>
+    <tr>
+      <th>A</th>
+      <th>B</th>
+      <th>C</th>
+      <th>D</th>
+      <th>E</th>
+      <th>F</th>
+      <th>G</th>
+      <th>H</th>
+      <th>I</th>
+      <th>J</th>
+      <th>K</th>
+      <th>L</th>
+      <th>M</th>
+      <th>N</th>
+      <th>O</th>
+      <th>P</th>
+      <th>Q</th>
+      <th>R</th>
+      <th>S</th>
+      <th>T</th>
+      <th>U</th>
+      <th>V</th>
+      <th>W</th>
+      <th>X</th>
+      <th>Y</th>
+      <th>Z</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>3</td>
+      <td>3</td>
+      <td>2</td>
+      <td>1</td>
+      <td>4</td>
+      <td>2</td>
+      <td>4</td>
+      <td>1</td>
+      <td>8</td>
+      <td>5</td>
+      <td>1</td>
+      <td>3</td>
+      <td>1</td>
+      <td>1</td>
+      <td>3</td>
+      <td>10</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>1</td>
+      <td>4</td>
+      <td>4</td>
+      <td>8</td>
+      <td>4</td>
+      <td>10</td>
+    </tr>
+  </tbody>
+</table>
+<p>Por exemplo, se quisermos marcar a palavra <code>Code</code>, notaremos que nas regras gerais do Scrabble, o <code>C</code> vale <code>3</code> pontos, o <code>o</code> vale <code>1</code> ponto, o <code>d</code> vale <code>2</code> pontos e o <code>e</code> vale <code>1</code> ponto. Somando esses pontos, obtemos <code>Code</code> que vale <code>3 + 1 + 2 + 1 = 7</code> pontos.</p>
+<h2>Detalhes de Implementação</h2>
+<p>Complete a implementação de <code>scrabble.c</code>, de modo que ela determine o vencedor de um jogo curto semelhante a Scrabble, no qual dois jogadores inserem sua palavra, e o jogador com a maior pontuação vence.</p>
+<ul>
+<li>
+Observe que armazenamos os valores numéricos de cada letra do alfabeto em um array de inteiros chamado <code>POINTS</code>.<ul>
+<li>Por exemplo, <code>A</code> ou <code>a</code> valem 1 ponto (representado por <code>POINTS[0]</code>), <code>B</code> ou <code>b</code> valem 3 pontos (representado por <code>POINTS[1]</code>), etc.</li>
+</ul>
+</li>
+<li>Observe que criamos um protótipo para uma função auxiliar chamada <code>compute_score()</code> que recebe uma string como entrada e retorna um <code>int</code>. Sempre que quisermos atribuir valores de pontos a uma determinada palavra, podemos chamar esta função. Observe que este protótipo é necessário para que o C saiba que <code>compute_score()</code> existe mais tarde no programa.</li>
+<li>Em <code>main()</code>, o programa solicita as duas palavras aos dois jogadores usando a função <code>get_string()</code>. Esses valores são armazenados dentro das variáveis <code>word1</code> e <code>word2</code>.</li>
+<li>
+Em <code>compute_score()</code>, seu programa deve calcular, usando o array <code>POINTS</code>, e retornar a pontuação para o argumento do tipo string. Os caracteres que não são letras devem receber zero pontos, e letras maiúsculas e minúsculas devem receber os mesmos valores de pontuação.<ul>
+<li>Por exemplo, <code>!</code> vale 0 ponto, enquanto <code>A</code> e <code>a</code> valem ambos 1 ponto.</li>
+<li>Embora as regras do Scrabble normalmente exijam que uma palavra esteja no dicionário, não é necessário verificar isso neste problema!</li>
+</ul>
+</li>
+<li>Em <code>main()</code>, seu programa deve imprimir, dependendo das pontuações dos jogadores, <code>Jogador 1 ganha!</code>, <code>Jogador 2 ganha!</code> ou <code>Empate!</code>.</li>
+</ul>
+<h3>Passo a Passo</h3>
+<div class="alert" data-alert="primary" role="alert"><p>Este vídeo foi gravado quando o curso ainda usava o CS50 IDE para escrever código. Embora a interface possa parecer diferente do seu codespace, o comportamento dos dois ambientes deve ser em grande parte semelhante!</p></div>
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/RtjxxxlN1gc"></iframe>
+<h3>Sugestões</h3>
+<ul>
+<li>Você pode achar as funções <code>isupper()</code> e <code>islower()</code> úteis. Essas funções recebem um caractere como argumento e retornam um valor booleano.</li>
+<li>Para encontrar o valor no enésimo índice de uma matriz chamada <code>arr</code>, podemos escrever <code>arr[n]</code>. Podemos aplicar isso a strings também, pois elas são matrizes de caracteres.</li>
+<li>Lembre-se de que os computadores representam caracteres usando [ASCII] (https://asciitable.com/), um padrão que representa cada caractere como um número.</li>
+</ul>
+<details><summary>Não tem certeza de como resolver?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/USiLkXuXJEg"></iframe></details>
+<h3>Como Testar o Seu Código</h3>
+<p>Seu programa deve se comportar conforme os exemplos abaixo.</p>
+<pre><code>$ ./scrabble
+Jogador 1: Question?
+Jogador 2: Question!
+Empate!
+</code></pre>
+<pre><code>$ ./scrabble
+Jogador 1: Oh,
+Jogador 2: hai!
+Jogador 2 ganha!
+</code></pre>
+<pre><code>$ ./scrabble
+Jogador 1: COMPUTADOR
+Jogador 2: ciência
+Jogador 1 ganha!
+</code></pre>
+<pre><code>$ ./scrabble
+Jogador 1: Scrabble
+Jogador 2: wiNNeR
+Jogador 1 ganha!
+</code></pre>
+<p>Execute o código abaixo para avaliar a correção do seu código usando <code>check50</code>. Mas certifique-se de compilá-lo e testá-lo também!</p>
+<pre><code>check50 cs50/labs/2023/x/scrabble
+</code></pre>
+<p>Execute o código abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 scrabble.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>No seu terminal, execute o código abaixo para enviar o seu trabalho.</p>
+<pre><code>submit50 cs50/labs/2023/x/scrabble
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

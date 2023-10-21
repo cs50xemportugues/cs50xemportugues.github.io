@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Runoff</h1>
+<p>Neste programa, você irá implementar um programa que simula uma eleição com votação instantânea, conforme abaixo.</p>
+<pre><code>./ runnoff Alice Bob Charlie
+Número de eleitores: 5
+Classificação 1: Alice
+Classificação 2: Bob
+Classificação 3: Charlie
+
+Classificação 1: Alice
+Classificação 2: Charlie
+Classificação 3: Bob
+
+Classificação 1: Bob
+Classificação 2: Charlie
+Classificação 3: Alice
+
+Classificação 1: Bob
+Classificação 2: Alice
+Classificação 3: Charlie
+
+Classificação 1: Charlie
+Classificação 2: Alice
+Classificação 3: Bob
+
+Alice
+</code></pre>
+<h2>Contexto</h2>
+<p>Você já sabe sobre eleições de pluralidade, que seguem um algoritmo muito simples para determinar o vencedor de uma eleição: cada eleitor tem um voto e o candidato com mais votos ganha.</p>
+<p>Mas a votação por pluralidade tem algumas desvantagens. O que acontece, por exemplo, em uma eleição com três candidatos, e as cédulas são lançadas da seguinte forma?</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/3/fptp_ballot_1.png" alt="Cinco cédulas, empate entre Alice e Bob" /></p>
+<p>Uma votação por pluralidade declararia um empate entre Alice e Bob, já que cada um tem dois votos. Mas esse é o resultado certo?</p>
+<p>Existe outro tipo de sistema de votação conhecido como sistema de votação com classificação. Em um sistema de classificação, os eleitores podem votar em mais de um candidato. Em vez de apenas votar em sua escolha principal, eles podem classificar os candidatos em ordem de preferência. As cédulas resultantes podem parecer assim.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/3/ranked_ballot_1.png" alt="Três cédulas, com preferências classificadas" /></p>
+<p>Aqui, cada eleitor, além de especificar o candidato de primeira preferência, também indicou os candidatos de segunda e terceira escolha. E agora, o que anteriormente era uma eleição empatada agora poderia ter um vencedor. A disputa era originalmente entre Alice e Bob, então Charlie estava fora da corrida. Mas o eleitor que escolheu Charlie preferiu Alice a Bob, então Alice poderia ser declarada a vencedora aqui.</p>
+<p>A votação por classificação também pode resolver mais uma possível desvantagem da votação por pluralidade. Dê uma olhada nas seguintes cédulas.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/3/ranked_ballot_3.png" alt="Nove cédulas, com preferências classificadas" /></p>
+<p>Quem deveria ganhar esta eleição? Em uma votação de pluralidade, onde cada eleitor escolhe apenas sua primeira preferência, Charlie ganha esta eleição com quatro votos, em comparação com apenas três para Bob e dois para Alice. Mas a maioria dos eleitores (5 em 9) ficaria mais feliz com Alice ou Bob em vez de Charlie. Ao considerar preferências classificadas, um sistema de votação pode escolher um vencedor que reflita melhor as preferências dos eleitores.</p>
+<p>Um desses sistemas de votação com classificação é o sistema de votação com eliminatória instantânea. Em uma eleição de eliminatória instantânea, os eleitores podem classificar quantos candidatos desejarem. Se algum candidato tiver uma maioria (mais de 50%) dos votos de primeira preferência, esse candidato é declarado o vencedor da eleição.</p>
+<p>Se nenhum candidato tiver mais de 50% dos votos, então ocorre uma &quot;eliminatória instantânea&quot;. O candidato que recebeu o menor número de votos é eliminado da eleição, e qualquer pessoa que tenha escolhido originalmente aquele candidato como sua primeira preferência agora tem sua segunda preferência considerada. Por que fazer isso? Efetivamente, isso simula o que teria acontecido se o candidato menos popular não tivesse participado da eleição em primeiro lugar.</p>
+<p>O processo se repete: se nenhum candidato tiver uma maioria dos votos, o candidato em último lugar é eliminado, e qualquer pessoa que tenha votado nele votará em sua próxima preferência (que ainda não foi eliminada). Uma vez que um candidato tiver uma maioria, esse candidato é declarado o vencedor.</p>
+<p>Vamos considerar as nove cédulas acima e examinar como uma eleição com eliminatória instantânea seria realizada.</p>
+<p>Alice tem dois votos, Bob tem três votos e Charlie tem quatro votos. Para vencer uma eleição com nove pessoas, é necessária uma maioria (cinco votos). Como ninguém tem maioria, uma votação com eliminação instantânea precisa ser realizada. Alice tem o menor número de votos (apenas dois), então Alice é eliminada. Os eleitores que votaram originalmente em Alice listaram Bob como segunda preferência, então Bob recebe os dois votos extras. Bob agora tem cinco votos, e Charlie ainda tem quatro votos. Bob agora tem maioria, e Bob é declarado o vencedor.</p>
+<p>Que casos de limite devemos considerar aqui?</p>
+<p>Uma possibilidade é que haja um empate para quem deve ser eliminado. Podemos lidar com esse cenário dizendo que todos os candidatos que estão empatados em último lugar serão eliminados. No entanto, se cada candidato restante tiver exatamente o mesmo número de votos, eliminar os candidatos empatados em último lugar significa eliminar todo mundo! Então, nesse caso, teremos que ter cuidado para não eliminar todos e apenas declarar a eleição empatada entre todos os candidatos restantes.</p>
+<p>Algumas eleições com eliminação instantânea não exigem que os eleitores classifiquem todas as suas preferências - então pode haver cinco candidatos em uma eleição, mas um eleitor pode escolher apenas dois. Para fins deste problema, no entanto, ignoraremos esse caso limitado e assumiremos que todos os eleitores classificarão todos os candidatos em sua ordem de preferência.</p>
+<p>Parece um pouco mais complicado do que uma votação por pluralidade, não é mesmo? Mas isso tem a vantagem de ser um sistema eleitoral em que o vencedor da eleição representa com mais precisão as preferências dos eleitores.</p>
+<h2>Começando</h2>
+<p>Faça login no [code.cs50.io] (https://code.cs50.io/), clique na janela do terminal e execute <code>cd</code> por si só. Você deve ver que o prompt da janela do terminal se parece com o abaixo:</p>
+<pre><code>$
+</code></pre>
+<p>Em seguida, execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/3/runoff.zip
+</code></pre>
+<p>para baixar um ZIP chamado <code>runoff.zip</code> em seu espaço de código.</p>
+<p>Em seguida, execute</p>
+<pre><code>unzip runoff.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>runoff</code>. Você não precisa mais do arquivo ZIP, portanto, execute</p>
+<pre><code>rm runoff.zip
+</code></pre>
+<p>e responda com &quot;y&quot; seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd runoff
+</code></pre>
+<p>seguido de Enter para se mover para (ou seja, abrir) esse diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>runoff/ $
+</code></pre>
+<p>Se tudo ocorreu conforme o esperado, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e ver um arquivo chamado <code>runoff.c</code>. A execução de <code>code runoff.c</code> deve abrir o arquivo onde você digitará seu código para este problema definido. Caso contrário, volte seus passos e veja se pode determinar onde saiu errado!</p>
+<h2>Entendendo</h2>
+<p>Vamos dar uma olhada em <code>runoff.c</code>. Estamos definindo duas constantes: <code>MAX_CANDIDATES</code> para o número máximo de candidatos na eleição e <code>MAX_VOTERS</code> para o número máximo de eleitores na eleição.</p>
+<p>Em seguida, temos uma matriz bidimensional <code>preferences</code>. A matriz <code>preferences [i]</code> representará todas as preferências para o eleitor número <code>i</code> e o número inteiro <code>preferences [i] [j]</code> aqui armazenará o índice do candidato que é a j-ésima preferência para o eleitor 'i'.</p>
+<p>Em seguida, temos uma <code>struct</code> chamada <code>candidate</code>. Cada <code>candidate</code> tem um campo de <code>string</code> para o seu <code>nome</code>, e um <code>int</code> representando o número de <code>votes</code> que eles têm no momento, e um valor <code>bool</code> chamado <code>eliminated</code> que indica se o candidato foi eliminado da eleição. A matriz <code>candidates</code> acompanhará todos os candidatos na eleição.</p>
+<p>O programa também tem duas variáveis globais: <code>voter_count</code> e <code>candidate_count</code>.</p>
+<p>Agora no <code>main</code>. Observe que, após determinar o número de candidatos e o número de eleitores, o loop de votação principal começa, dando a cada eleitor uma chance de votar. À medida que o eleitor insere suas preferências, a função <code>vote</code> é chamada para acompanhar todas as preferências. Se em algum momento a cédula for considerada inválida, o programa é encerrado.</p>
+<p>Depois que todas as votos forem feitas, outro loop começa: este vai manter a repetição do processo de votação até que haja um vencedor, verificando o último candidato.</p>
+<p>A primeira chamada aqui é para uma função chamada <code>tabulate</code>, que deve procurar todas as preferências dos eleitores e calcular os totais de votos atuais, verificando o candidato da escolha principal de cada eleitor que ainda não foi eliminado. Em seguida, a função <code>print_winner</code> deve imprimir o vencedor, se houver um; se houver, o programa acabou. Mas caso contrário, o programa precisa determinar o menor número de votos que qualquer pessoa ainda na eleição recebeu (por meio da chamada à função <code>find_min</code>). Se for descoberto que todas as pessoas na eleição empataram com o mesmo número de votos (como determinado pela função <code>is_tie</code>), a eleição é declarada um empate; caso contrário, o candidato (ou candidatos) em último lugar é eliminado da eleição por meio de uma chamada à função <code>eliminate</code>.</p>
+<p>Se você olhar um pouco mais abaixo no arquivo, verá que essas funções - <code>vote</code>, <code>tabulate</code>, <code>print_winner</code>, <code>find_min</code>, <code>is_tie</code> e <code>eliminate</code> - ficam todas a seu cargo para serem concluídas!</p>
+<h2>Especificação</h2>
+<p>Complete a implementação do <code>runoff.c</code> de forma a simular uma eleição de segundo turno. Você deve completar as implementações das funções <code>vote</code>, <code>tabulate</code>, <code>print_winner</code>, <code>find_min</code>, <code>is_tie</code> e <code>eliminate</code>, e não deve modificar nada mais no <code>runoff.c</code> (e a inclusão de arquivos de cabeçalho adicionais, se desejar).</p>
+<h3><code>vote</code></h3>
+<p>Complete a função <code>vote</code>.</p>
+<ul>
+<li>A função recebe como argumentos <code>voter</code>, <code>rank</code> e <code>name</code>. Se <code>name</code> for uma correspondência com o nome de um candidato válido, você deve atualizar a matriz global de preferências para indicar que o eleitor <code>voter</code> tem aquele candidato como sua preferência de <code>rank</code> (onde <code>0</code> é a primeira preferência, <code>1</code> é a segunda preferência, e assim por diante).
+*   Se a preferência for registrada com sucesso, a função deve retornar <code>true</code>; caso contrário, a função deve retornar <code>false</code> (se, por exemplo, <code>nome</code> não é o nome de um dos candidatos).
+*   Você pode assumir que nenhum dois candidatos terá o mesmo nome.</li>
+</ul>
+<details><summary>Dicas</summary><ul>
+  <li data-marker="*">Lembre-se de que <code class="language-plaintext highlighter-rouge">candidate_count</code> armazena o número de candidatos na eleição.</li>
+  <li data-marker="*">Lembre-se de que você pode usar <a href="https://man.cs50.io/3/strcmp"><code class="language-plaintext highlighter-rouge">strcmp</code></a> para comparar duas strings.</li>
+  <li data-marker="*">Lembre-se de que <code class="language-plaintext highlighter-rouge">preferences[i][j]</code> armazena o índice do candidato que é a preferência classificada como <code class="language-plaintext highlighter-rouge">j</code> para o eleitor <code class="language-plaintext highlighter-rouge">i</code>.</li>
+</ul></details>
+<h3><code>tabulate</code></h3>
+<p>Complete a função <code>tabulate</code>.</p>
+<ul>
+<li>A função deve atualizar o número de <code>votes</code> que cada candidato tem nesta fase da eleição.
+*   Lembre-se de que, em cada fase da eleição, cada eleitor vota efetivamente no candidato de sua preferência que ainda não foi eliminado.</li>
+</ul>
+<details><summary>Dicas</summary><ul>
+  <li data-marker="*">Lembre-se de que <code class="language-plaintext highlighter-rouge">voter_count</code> armazena o número de eleitores na eleição e que, para cada eleitor em nossa eleição, queremos contar uma cédula.</li>
+  <li data-marker="*">Lembre-se de que, para um eleitor <code class="language-plaintext highlighter-rouge">i</code>, seu candidato de primeira escolha é representado por <code class="language-plaintext highlighter-rouge">preferences[i][0]</code>, seu candidato de segunda escolha por <code class="language-plaintext highlighter-rouge">preferences[i][1]</code>, etc.</li>
+  <li data-marker="*">Lembre-se de que a <code class="language-plaintext highlighter-rouge">struct</code> <code class="language-plaintext highlighter-rouge">candidate</code> tem um campo chamado <code class="language-plaintext highlighter-rouge">eliminated</code>, que será <code class="language-plaintext highlighter-rouge">true</code> se o candidato foi eliminado da eleição.</li>
+  <li data-marker="*">Lembre-se de que a <code class="language-plaintext highlighter-rouge">struct</code> <code class="language-plaintext highlighter-rouge">candidate</code> tem um campo chamado <code class="language-plaintext highlighter-rouge">votes</code>, que você provavelmente desejará atualizar para o candidato preferido de cada eleitor.</li>
+  <li data-marker="*">Depois que você votou no primeiro candidato não eliminado de um eleitor, desejará parar ali, não continuar em sua cédula! Lembre-se de que você pode sair de um loop mais cedo usando <code class="language-plaintext highlighter-rouge">break</code> dentro de uma condicional.</li>
+</ul></details>
+<h3><code>print_winner</code></h3>
+<p>Complete a função <code>print_winner</code>.</p>
+<p>*   Se algum candidato tiver mais da metade dos votos, seu nome deve ser impresso e a função deve retornar <code>true</code>.
+*   Se ninguém ganhou a eleição ainda, a função deve retornar <code>false</code>.</p>
+<details><summary>Dicas</summary><ul>
+  <li data-marker="*">Lembre-se de que <code class="language-plaintext highlighter-rouge">voter_count</code> armazena o número de eleitores na eleição. Dado isso, como você expressaria o número de votos necessários para vencer a eleição?</li>
+</ul></details>
+<h3><code>find_min</code></h3>
+<p>Complete a função <code>find_min</code>.</p>
+<p>*   A função deve retornar o total mínimo de votos para qualquer candidato que ainda esteja na eleição.</p>
+<details><summary>Dicas</summary><ul>
+  <li data-marker="*">Provavelmente, você desejará percorrer os candidatos para encontrar aquele que ainda está na eleição e tem o menor número de votos. Que informações você deve controlar enquanto percorre os candidatos?</li>
+</ul></details>
+<h3><code>is_tie</code></h3>
+<p>Complete a função <code>is_tie</code>.</p>
+<p>*   A função leva um argumento <code>min</code>, que será o número mínimo de votos que alguém na eleição atualmente tem.
+*   A função deve retornar <code>true</code> se todo candidato que ainda está na eleição tiver o mesmo número de votos e deve retornar <code>false</code> caso contrário.</p>
+<details><summary>Dicas</summary><ul>
+  <li data-marker="*">Lembre-se de que uma gravata acontece se todo candidato ainda na eleição tiver o mesmo número de votos. Repare também que a função <code class="language-plaintext highlighter-rouge">is_tie</code> pega um argumento <code class="language-plaintext highlighter-rouge">min</code>, que é o menor número de votos que qualquer candidato tem atualmente. Como você pode usar essa informação para determinar se a eleição é uma gravata (ou, inversamente, não é uma gravata)?</li>
+</ul></details>
+<h3><code>eliminate</code></h3>
+<p>Complete a função <code>eliminate</code>.</p>
+<p>*   A função leva um argumento <code>min</code>, que será o número mínimo de votos que alguém na eleição atualmente tem.
+*   A função deve eliminar o candidato (ou candidatos) que tem <code>min</code> número de votos.</p>
+<h2>Passo a passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="acelerômetro; autoplay; encrypted-media; giroscópio; imagem em imagem" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/-Vc5aGywKxo?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<h2>Uso</h2>
+<p>Seu programa deve se comportar como no exemplo abaixo:</p>
+<pre><code>./runoff Alice Bob Charlie
+Número de eleitores: 5
+Classificação 1: Alice
+Classificação 2: Charlie
+Classificação 3: Bob
+
+Classificação 1: Alice
+Classificação 2: Charlie
+Classificação 3: Bob
+
+Classificação 1: Bob
+Classificação 2: Charlie
+Classificação 3: Alice
+
+Classificação 1: Bob
+Classificação 2: Charlie
+Classificação 3: Alice
+
+Classificação 1: Charlie
+Classificação 2: Alice
+Classificação 3: Bob
+
+Alice
+</code></pre>
+<h2>Teste</h2>
+<p>Certifique-se de testar seu código para verificar se ele lida com ...</p>
+<ul>
+<li>Uma eleição com qualquer número de candidatos (até o <code>MAX</code> de <code>9</code>)</li>
+<li>Votando em um candidato pelo nome</li>
+<li>Votos inválidos para candidatos que não estão na cédula</li>
+<li>Imprimir o vencedor da eleição se houver apenas um</li>
+<li>Não eliminar ninguém no caso de um empate entre todos os candidatos restantes</li>
+</ul>
+<p>Execute o seguinte para avaliar a correção do seu código usando <code>check50</code>. Mas certifique-se de compilar e testá-lo por si mesmo também!</p>
+<pre><code>check50 cs50/problems/2023/x/runoff
+</code></pre>
+<p>Execute o abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 runoff.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>No seu terminal, execute o abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/runoff
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

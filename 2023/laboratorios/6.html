@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Laboratório 6: Copa do Mundo</h1>
+<p>Você pode colaborar com um ou dois colegas neste laboratório, mas é esperado que todos os alunos em tal grupo contribuam igualmente para o laboratório.</p>
+<p>Escreva um programa para executar simulações da Copa do Mundo da FIFA.</p>
+<pre><code>$ python tournament.py 2018m.csv
+Bélgica: 20,9% de chance de ganhar
+Brasil: 20,3% de chance de ganhar
+Portugal: 14,5% de chance de ganhar
+Espanha: 13,6% de chance de ganhar
+Suíça: 10,5% de chance de ganhar
+Argentina: 6,5% de chance de ganhar
+Inglaterra: 3,7% de chance de ganhar
+França: 3,3% de chance de ganhar
+Dinamarca: 2,2% de chance de ganhar
+Croácia: 2,0% de chance de ganhar
+Colômbia: 1,8% de chance de ganhar
+Suécia: 0,5% de chance de ganhar
+Uruguai: 0,1% de chance de ganhar
+México: 0,1% de chance de ganhar
+</code></pre>
+<h2>Contexto</h2>
+<p>Na Copa do Mundo de futebol, a fase eliminatória é composta por 16 equipes. Em cada rodada, cada equipe joga contra outra equipe e as equipes que perdem são eliminadas. Quando restam apenas duas equipes, a equipe vencedora da partida final é campeã.</p>
+<p>No futebol, as equipes recebem [FIFA Ratings] (https://en.wikipedia.org/wiki/FIFA_World_Rankings#Current_calculation_method), que são valores numéricos que representam o nível de habilidade relativa de cada equipe. FIFA Ratings mais altos indicam melhores resultados de jogos anteriores e, dado os FIFA Ratings de duas equipes, é possível estimar a probabilidade de que qualquer equipe vença um jogo com base em suas classificações atuais. As FIFA Ratings de duas Copas do Mundo anteriores estão disponíveis como o [May 2018 Men’s FIFA Ratings] e [March 2019 Women’s FIFA Ratings].</p>
+<p>Usando essa informação, podemos simular todo o torneio, simulando repetidamente as rodadas até que reste apenas uma equipe. E se quisermos estimar a probabilidade de que qualquer equipe dada vença o torneio, podemos simular o torneio muitas vezes (por exemplo, 1000 simulações) e contar quantas vezes cada equipe ganha um torneio simulado. 1000 simulações podem parecer muitas, mas com o poder de computação de hoje podemos realizar essas simulações em questão de milissegundos. No final deste laboratório, experimentaremos o quão valioso pode ser aumentar o número de simulações que executamos, dada a troca de tempo de execução.</p>
+<p>Sua tarefa neste laboratório é fazer isso usando Python!</p>
+<h2>Começando</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do terminal e, em seguida, execute <code>cd</code>. Você deve encontrar que seu &quot;prompt&quot; se assemelha ao abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro dessa janela do terminal e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/labs/6/world-cup.zip
+</code></pre>
+<p>seguido de</p>
+<pre><code>Enter
+</code></pre>
+<p>para fazer o download de um arquivo ZIP chamado <code>world-cup.zip</code> em seu espaço de códigos. Tome cuidado para não ignorar o espaço entre wget e a URL a seguir, ou qualquer outro caractere, para esse assunto!</p>
+<p>Agora execute</p>
+<pre><code>unzip world-cup.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>world-cup</code>. Você não precisa mais do arquivo ZIP, portanto, execute</p>
+<pre><code>rm world-cup.zip
+</code></pre>
+<p>e responda com &quot;y&quot; seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd world-cup
+</code></pre>
+<p>seguido de Enter para se mover para o diretório (ou seja, abrir) esse diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>world-cup/ $
+</code></pre>
+<p>Se tudo ocorreu bem, execute</p>
+<pre><code>ls
+</code></pre>
+<p>e você deve ver os seguintes arquivos:</p>
+<pre><code>answers.txt  2018m.csv  2019w.csv  tournament.py
+</code></pre>
+<p>Se você tiver problemas, siga essas mesmas etapas novamente e veja se consegue determinar onde errou!</p>
+<h2>Entendendo</h2>
+<p>Comece dando uma olhada no arquivo <code>2018m.csv</code>. Este arquivo contém as 16 equipes na fase eliminatória da Copa do Mundo de 2018 e as classificações de cada equipe. Observe que o arquivo CSV tem duas colunas, chamadas <code>team</code> (representando o nome do país da equipe) e <code>rating</code> (representando a classificação da equipe).</p>
+<p>A ordem em que as equipes aparecem determina quais equipes jogarão entre si em cada rodada (na primeira rodada, por exemplo, o Uruguai jogará contra Portugal e a França jogará contra Argentina; na próxima rodada, o vencedor da partida Uruguai-Portugal jogará contra o vencedor da partida França-Argentina). Portanto, certifique-se de não editar a ordem em que as equipes aparecem neste arquivo!</p>
+<p>Finalmente, em Python, podemos representar cada equipe como um dicionário que contém duas chaves: o nome da equipe e a classificação. Uruguai, por exemplo, gostaríamos de representar em Python como <code>{&quot;team&quot;: &quot;Uruguai&quot;, &quot;rating&quot;: 976}</code>.</p>
+<p>Em seguida, dê uma olhada no arquivo <code>2019w.csv</code>, que contém dados formatados da mesma maneira para a Copa do Mundo Feminina de 2019.</p>
+<p>Agora, abra o arquivo <code>tournament.py</code> e veja que escrevemos algum código para você. A variável <code>N</code> no topo representa quantas simulações da Copa do Mundo serão executadas: neste caso, 1000.</p>
+<p>A função <code>simulate_game</code> aceita duas equipes como entradas (lembre-se de que cada equipe é um dicionário que contém o nome da equipe e a classificação da equipe) e simula uma partida entre elas. Se a primeira equipe vencer, a função retornará <code>True</code>; caso contrário, a função retornará <code>False</code>.</p>
+<p>A função <code>simulate_round</code> aceita uma lista de equipes (em uma variável chamada <code>teams</code>) como entrada e simula jogos entre cada par de equipes. A função então retorna uma lista de todas as equipes que venceram a rodada.</p>
+<p>Na função <code>main</code>, observe que primeiro garantimos que <code>len(sys.argv)</code> (o número de argumentos na linha de comando) seja 2. Usaremos argumentos na linha de comando para informar ao Python qual arquivo CSV de equipe usar para executar a simulação do torneio. Então, definimos uma lista chamada <code>teams</code> (que eventualmente será uma lista de equipes) e um dicionário chamado <code>counts</code> (que associará nomes de equipes ao número de vezes que a equipe venceu um torneio simulado). Agora, a população deles está nas suas mãos!</p>
+<p>Finalmente, no final de <code>main</code>, classificamos as equipes em ordem decrescente de quantas vezes elas venceram simulações (de acordo com <code>counts</code>) e imprimimos a probabilidade estimada de cada equipe vencer a Copa do Mundo.</p>
+<p>A população de <code>teams</code> e <code>counts</code> e a escrita da função <code>simulate_tournament</code> estão a cargo de você!</p>
+<h2>Detalhes da implementação</h2>
+<p>Complete a implementação do <code>tournament.py</code>, de modo que simule vários torneios e mostre a probabilidade de vitória de cada equipe.</p>
+<p>Primeiro, em <code>main</code>, leia os dados da equipe a partir do arquivo CSV para a memória do seu programa, e adicione cada equipe na lista <code>teams</code>.</p>
+<ul>
+<li>O arquivo a ser usado será fornecido como argumento da linha de comando. Você pode acessar o nome do arquivo com <code>sys.argv[1]</code>.</li>
+<li>Lembre-se que você pode abrir um arquivo com <code>open(filename)</code>, em que <code>filename</code> é uma variável que armazena o nome do arquivo.</li>
+<li>Depois de ter um arquivo <code>f</code>, use <code>csv.DictReader(f)</code> para criar um &quot;leitor&quot;: um objeto em Python que pode ser utilizado em um loop para ler o arquivo, uma linha de cada vez, tratando cada linha como um dicionário.</li>
+<li>Por padrão, todos os valores lidos do arquivo serão strings. Por isso, certifique-se de converter o <code>rating</code> da equipe em um <code>int</code> (você pode usar a função <code>int</code> do Python para isso).</li>
+<li>Por fim, adicione cada dicionário de equipe em <code>teams</code>. A chamada de função <code>teams.append (x)</code> adicionará <code>x</code> na lista de equipes <code>teams</code>.</li>
+<li>Lembre-se que cada equipe deve ser um dicionário com o nome da <code>equipe</code> e um <code>rating</code>.</li>
+</ul>
+<p>Em seguida, implemente a função <code>simulate_tournament</code>. Esta função deve aceitar como entrada uma lista de equipes e deve simular repetidamente as rodadas até restar apenas uma equipe. A função deve retornar o nome desta equipe.</p>
+<ul>
+<li>Você pode chamar a função <code>simulate_round</code>, que simula uma única rodada, aceitando uma lista de equipes como entrada e retornando uma lista com todos os vencedores.</li>
+<li>Lembre-se que se <code>x</code> é uma lista, você pode usar <code>len(x)</code> para determinar o comprimento da lista.</li>
+<li>Não se deve assumir o número de equipes no torneio, embora possa ser assumido que seja uma potência de 2.</li>
+</ul>
+<p>Finalmente, na função <code>main</code>, execute <code>N</code> simulações de torneio, e mantenha o controle de quantas vezes cada equipe vence na contagem de dicionários <code>counts</code>.</p>
+<ul>
+<li>Por exemplo, se o Uruguai venceu 2 torneios e Portugal venceu 3 torneios, então seu dicionário <code>counts</code> deve ser <code>{&quot;Uruguai&quot;: 2, &quot;Portugal&quot;: 3}</code>.</li>
+<li>Você deve usar sua função <code>simulate_tournament</code> para simular cada torneio e determinar o vencedor.</li>
+<li>Lembre-se que, se <code>counts</code> é um dicionário, a sintaxe como <code>counts [nome_da_equipe] = x</code> associará a chave armazenada em <code>nome_da_equipe</code> com o valor armazenado em <code>x</code>.</li>
+<li>Pode-se usar a palavra-chave <code>in</code> em Python para verificar se um dicionário já tem uma chave específica. Por exemplo,<code>if &quot;Portugal&quot; in counts:</code> verificará se <code>&quot;Portugal&quot;</code> já tem um valor existente no dicionário <code>counts</code>.</li>
+</ul>
+<h3>Passo a passo</h3>
+<div class="alert" data-alert="primary" role="alert"><p>Esse vídeo foi gravado quando o curso ainda usava o IDE CS50 para escrever código. Embora a interface possa parecer diferente do seu codespace, o comportamento dos dois ambientes deve ser amplamente semelhante!</p></div>
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/o5Bkc7gtRjo"></iframe>
+<h3>Dicas</h3>
+<ul>
+<li>
+<p>Ao ler o arquivo, você pode achar essa sintaxe útil, com <code>nome_arquivo</code> como o nome do seu arquivo e <code>arquivo</code> uma variável: <div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="k">with</span> <span class="nf">open</span><span class="p">(</span><span class="n">nome_arquivo</span><span class="p">)</span> <span class="k">as</span> <span class="nb">arquivo</span><span class="p">:</span>
+<span class="n">    leitor</span> <span class="o">=</span> <span class="n">csv</span><span class="p">.</span><span class="nc">DictReader</span><span class="p">(</span><span class="nb">arquivo</span><span class="p">)</span>
+</code></pre></div>    </div></p>
+</li>
+<li>
+<p>Em Python, para acrescentar algo ao final de uma lista, use a função <code>.append()</code>.</p>
+</li>
+</ul>
+<details><summary>Não tem certeza sobre como resolver?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/Fo7Roe8hw3A"></iframe></details>
+<h3>Testando</h3>
+<p>Seu programa deve se comportar conforme os exemplos abaixo. Como as simulações têm aleatoriedade em cada uma, a saída provavelmente não corresponderá perfeitamente aos exemplos abaixo.</p>
+<pre><code>$ python tournament.py 2018m.csv
+Bélgica: 20,9% de chance de vencer
+Brasil: 20,3% de chance de vencer
+Portugal: 14,5% de chance de vencer
+Espanha: 13,6% de chance de vencer
+Suíça: 10,5% de chance de vencer
+Argentina: 6,5% de chance de vencer
+Inglaterra: 3,7% de chance de vencer
+França: 3,3% de chance de vencer
+Dinamarca: 2,2% de chance de vencer
+Croácia: 2,0% de chance de vencer
+Colômbia: 1,8% de chance de vencer
+Suécia: 0,5% de chance de vencer
+Uruguai: 0,1% de chance de vencer
+México: 0,1% de chance de vencer
+
+
+$ python tournament.py 2019w.csv
+Alemanha: 17,1% de chance de vencer
+Estados Unidos: 14,8% de chance de vencer
+Inglaterra: 14,0% de chance de vencer
+França: 9,2% de chance de vencer
+Canadá: 8,5% de chance de vencer
+Japão: 7,1% de chance de vencer
+Austrália: 6,8% de chance de vencer
+Países Baixos: 5,4% de chance de vencer
+Suécia: 3,9% de chance de vencer
+Itália: 3,0% de chance de vencer
+Noruega: 2,9% de chance de vencer
+Brasil: 2,9% de chance de vencer
+Espanha: 2,2% de chance de vencer
+China PR: 2,1% de chance de vencer
+Nigéria: 0,1% de chance de vencer
+</code></pre>
+<ul>
+<li>Você pode estar se perguntando o que aconteceu de verdade nas Copas do Mundo de 2018 e 2019. No campeonato masculino, a França ganhou, derrotando a Croácia na final. A Bélgica derrotou a Inglaterra para ficar em terceiro lugar. No campeonato feminino, os Estados Unidos ganharam, derrotando os Países Baixos na final. A Inglaterra derrotou a Suécia para ficar em terceiro lugar.</li>
+</ul>
+<h2>Número de simulações</h2>
+<p>Depois de ter certeza de que seu código está correto, vamos brincar com o valor de <code>N</code>, constante no topo do arquivo, para ajustar o número de vezes que simulamos o torneio. Mais simulações de torneios nos darão previsões mais precisas (por quê?), mas ao custo de tempo.</p>
+<p>Podemos cronometrar programas adicionando sua execução na linha de comando com <code>time</code>. Por exemplo, com <code>N</code> ajustado para 1000 (o padrão), execute</p>
+<pre><code>time python tournament.py 2018m.csv
+</code></pre>
+<p>ou</p>
+<pre><code>time python tournament.py 2019w.csv
+</code></pre>
+<p>o que deve produzir algo como</p>
+<pre><code>real    0m0.037s
+user    0m0.028s
+sys     0m0.008s
+</code></pre>
+<p>embora seus próprios tempos possam variar.</p>
+<p>Preste atenção na métrica <strong>real</strong>, que é o tempo total que <code>tournament.py</code> levou para ser executado. E observe que você recebe o tempo em minutos e segundos, com precisão de milésimos de segundo.</p>
+<p>No arquivo <code>answers.txt</code>, acompanhe quanto tempo leva para <code>tournament.py</code> simular...</p>
+<ul>
+<li>10 (dez) torneios</li>
+<li>100 (cem) torneios</li>
+<li>1000 (mil) torneios</li>
+<li>10000 (dez mil) torneios</li>
+<li>100000 (cem mil) torneios</li>
+<li>1000000 (um milhão) de torneios</li>
+</ul>
+<p>Cada vez que você ajustar <code>N</code>, registre o tempo <strong>real</strong> na tarefa correspondente em <code>answers.txt</code>, usando o mesmo formato <code>0m0.000s</code>. Depois de cronometrar cada cenário, responda às duas perguntas de acompanhamento, sobrescrevendo a tarefa fornecida:</p>
+<ul>
+<li>Quais previsões, se houver, se mostraram incorretas à medida que você aumentou o número de simulações?</li>
+<li>Suponha que você seja cobrado por cada segundo do tempo de computação que seu programa usa. Depois de quantas simulações você consideraria as previsões &quot;suficientemente boas&quot;?</li>
+</ul>
+<details><summary>Veja um arquivo <code>answers.txt</code> formatado corretamente</summary><div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Tempos:
+<p>10 simulações: 0m0.028s
+100 simulações: 0m0.030s
+1000 simulações: 0m0.041s
+10000 simulações: 0m0.139s
+100000 simulações: 0m1.031s
+1000000 simulações: 0m11.961s</p>
+<p>Perguntas:</p>
+<p>Quais previsões, se houver, se mostraram incorretas à medida que você aumentou o número de simulações?:</p>
+<p>Com um pequeno número de simulações...</p>
+<p>Suponha que você seja cobrado por cada segundo do tempo de computação que seu programa usa. Depois de quantas simulações você consideraria as previsões &quot;suficientemente boas&quot;?:</p>
+<p>Parece que as previsões se estabilizaram depois de cerca de...</p>
+<p></code></pre></div></div></details></p>
+<h2>Como Testar Seu Código</h2>
+<p>Execute o abaixo para avaliar a correção do seu código usando <code>check50</code>. Mas certifique-se de compilá-lo e testá-lo você mesmo também!</p>
+<pre><code>check50 cs50/labs/2023/x/worldcup
+</code></pre>
+<p>Execute o abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 tournament.py
+</code></pre>
+<p>Como Enviar</p>
+<p>No seu terminal, execute o abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/labs/2023/x/worldcup&quot;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Reverse</h1>
+<p>Implementar um programa que inverta um arquivo WAV, conforme abaixo.</p>
+<pre><code>./reverse input.wav output.wav
+</code></pre>
+<h2>Background</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/J9iyqMwYtG4?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<p>Em &quot;Fire on High&quot;, do Electric Light Orchestra, há algo um pouco diferente sobre o primeiro minuto da música. Se você ouvir, soará como se o áudio estivesse tocando de trás para frente. Como se constata, se você reproduzir a seção inicial da música ao contrário, ouvirá o seguinte:</p>
+<p><em>&quot;The music is reversible. Time is not. Turn back, turn back!&quot;</em></p>
+<p>Estranho, certo? Essa é uma técnica chamada &quot;backmasking&quot;, ou esconder mensagens na música que só podem ser ouvidas quando a música é tocada de trás para frente. Muitos artistas usaram (ou foram suspeitos de usar) essa técnica em suas músicas. Para investigar o backmasking, pedimos que você escreva um programa que possa inverter arquivos WAV para nós!</p>
+<p>Ao contrário dos arquivos de áudio MP3, os arquivos WAV não são comprimidos. Isso torna os arquivos muito mais fáceis de editar e manipular, o que é útil para a tarefa em questão. Para aprender um pouco mais sobre arquivos WAV, precisamos dar uma olhada mais de perto no formato de arquivo WAV.</p>
+<h2>Getting Started</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da sua janela do terminal e execute <code>cd</code> sozinho. Você deve ver que seu &quot;prompt&quot; se parece com o abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/4/reverse.zip
+</code></pre>
+<p>Seguido de Enter, para baixar um arquivo ZIP chamado <code>reverse.zip</code> no seu código. Não perca o espaço entre <code>wget</code> e a URL a seguir, ou qualquer outro caractere!</p>
+<p>Agora execute</p>
+<pre><code>unzip reverse.zip
+</code></pre>
+<p>Para criar uma pasta chamada <code>reverse</code>. Você não precisa mais do arquivo ZIP, então execute</p>
+<pre><code>rm reverse.zip
+</code></pre>
+<p>e responda com &quot;y&quot; seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd reverse
+</code></pre>
+<p>Seguido de Enter para se mover para dentro (ou seja, abrir) esse diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>reverse/ $
+</code></pre>
+<p>Se tudo correu bem, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e ver um arquivo chamado <code>reverse.c</code>. Executar <code>code reverse.c</code> deve abrir o arquivo onde você digitará seu código para este conjunto de problemas. Se isso não acontecer, volte seus passos e descubra onde você errou!</p>
+<h3>O formato do arquivo WAV</h3>
+<p>Observe que, na imagem abaixo, um arquivo WAV é dividido em três partes. Cada parte tem alguns blocos de dados dentro dela.</p>
+<p>A primeira parte contém informações sobre o tipo de arquivo. Em particular, veja como o bloco &quot;Formato de Arquivo&quot; na primeira parte soletra 'W' 'A' 'V' 'E' nos bytes 8 a 11, para indicar que o arquivo é um arquivo WAV.</p>
+<p>A segunda parte contém informações sobre os dados de áudio que virão a seguir, incluindo quantos &quot;canais&quot; de áudio estão presentes e quantos bits estão em cada &quot;amostra&quot; de áudio. Os arquivos de áudio têm 1 canal quando são &quot;monofônicos&quot;: se você usar fones de ouvido, ouvirá o mesmo áudio em seu ouvido esquerdo e direito. Os arquivos de áudio têm 2 canais quando são &quot;estereofônicos&quot;: ouvindo com fones de ouvido, você ouvirá áudio ligeiramente diferente em seu ouvido esquerdo e direito, criando uma sensação de amplitude. As amostras são os fragmentos individuais de bits que compõem o áudio que você ouve. Com mais bits por amostra, um arquivo de áudio pode ter maior clareza (à custa do uso de mais memória!).</p>
+<p>Por fim, a terceira parte contém os dados de áudio em si - aquelas amostras mencionadas acima.</p>
+<p>Tudo antes dos dados de áudio é considerado parte do &quot;cabeçalho&quot; do arquivo WAV. Lembre-se de que um cabeçalho de arquivo é simplesmente alguns metadados sobre o arquivo. Neste caso, o cabeçalho tem 44 bytes de comprimento.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/4/reverse/WAV_header.png" alt="WAV Header" /></p>
+<p>Uma explicação mais técnica dos cabeçalhos de WAV pode ser encontrada <a href="http://soundfile.sapp.org/doc/WaveFormat/">aqui</a>, que é o recurso que inspirou esta imagem. Observe que incluímos um arquivo, <code>wav.h</code>, que implementa todos esses detalhes para você em uma estrutura chamada <code>WAVHEADER</code>.</p>
+<h2>Especificação</h2>
+<p>Vamos escrever um programa chamado <code>reverse</code> que nos permite reverter um arquivo WAV fornecido pelo usuário e criar um novo arquivo WAV que contém o áudio reverso resultante. Para simplificar, limitaremos os arquivos que lidamos ao formato WAV. No momento em que o usuário executa o programa, ele deve fornecer, usando dois argumentos de linha de comando, o nome do arquivo de entrada a ser lido e revertido, e o nome do arquivo de saída em que o áudio resultante deve ser salvo. Um programa executado com sucesso não deve produzir nenhum texto e deve criar um arquivo WAV com o nome especificado pelo usuário que toca o áudio do arquivo WAV de entrada na ordem reversa. Por exemplo:</p>
+<pre><code>$ ./reverse input.wav output.wav
+</code></pre>
+<p>Em <code>reverse.c</code>, você notará que algumas bibliotecas úteis foram incluídas, bem como um arquivo de cabeçalho, <code>wav.h</code>. Você provavelmente achará isso útil ao implementar seu programa. Deixamos oito <code>TODO</code>s e duas funções auxiliares para você preencher e recomendamos que você resolva-os de 1 a 8.</p>
+<ul>
+<li>
+<p>No primeiro <code>TODO</code>, você deve garantir que o programa aceite dois argumentos de linha de comando: o nome do arquivo WAV de entrada e o nome do arquivo WAV de saída. Se o programa não atender a essas condições, você deve imprimir uma mensagem de erro apropriada e retornar <code>1</code>, encerrando o programa.</p>
+  <ul>
+    <li data-marker="+">Dica
+      <ul>
+        <li data-marker="*">Lembre-se de que o número de argumentos de linha de comando pode ser encontrado nas variáveis <code class="language-plaintext highlighter-rouge">argc</code> passadas para a função <code class="language-plaintext highlighter-rouge">main</code> quando o programa é executado.</li>
+        <li data-marker="*">Lembre-se de que <code class="language-plaintext highlighter-rouge">argv[0]</code> contém o nome do programa como o primeiro argumento da linha de comando.</li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li>
+<p>No segundo <code>TODO</code>, você deve abrir o arquivo de entrada. Precisamos abrir o arquivo de entrada no modo &quot;somente leitura&quot;, já que leremos apenas dados do arquivo de entrada. Pode ser prudente verificar se o arquivo foi aberto com sucesso. Caso contrário, você deve imprimir uma mensagem de erro apropriada e retornar <code>1</code>, encerrando o programa. Devemos adiar a abertura do arquivo de saída, para não criar um novo arquivo WAV antes de saber se o arquivo de entrada é válido!</p>
+  <ul>
+    <li data-marker="+">Dica
+      <ul>
+        <li data-marker="*">Se o primeiro `TODO` for implementado corretamente, é seguro supor que podemos fazer referência ao nome do arquivo de entrada usando <code class="language-plaintext highlighter-rouge">argv[1]</code>.</li>
+        <li data-marker="*">Lembre-se de que, qualquer arquivo que abrimos, também precisamos fechar quando terminarmos de usá-lo. Isso pode significar adicionar código em outro lugar no programa.</li>
+      </ul>
+    </li>
+  </ul>
+</li>
+<li>
+<p>No terceiro <code>TODO</code>, você deve ler o cabeçalho do arquivo de entrada. Lembre-se de que, em <code>wav.h</code>, já implementamos uma estrutura que pode armazenar um cabeçalho de arquivo WAV. Como escrevemos <code>#include &quot;wav.h&quot;</code> no topo de <code>reverse.c</code>, você também pode usar a estrutura <code>WAVHEADER</code>.</p>
+</li>
+<li>
+<p>No quarto <code>TODO</code>, você deve concluir a função <code>check_format</code>. <code>check_format</code> recebe um único argumento, um <code>WAVHEADER</code> chamado <code>header</code>, representando uma estrutura contendo o cabeçalho do arquivo de entrada. Se <code>header</code> indicar que o arquivo é de fato um arquivo WAV, a função <code>check_format</code> deve retornar <code>true</code>. Se não, <code>check_format</code> deve retornar <code>false</code>. Para verificar se um arquivo é do formato WAV, podemos comparar os elementos do cabeçalho do arquivo de entrada aos que esperaríamos de um arquivo WAV. É suficiente mostrar que os caracteres marcadores &quot;WAVE&quot; são encontrados no membro <code>format</code> da estrutura <code>WAVHEADER</code> (consulte <a href="#background">Background</a> para obter mais detalhes sobre os cabeçalhos de arquivos WAV).</p>
+</li>
+<li>
+<p>No quinto <code>TODO</code>, agora é seguro abrir o arquivo de saída para gravação. Ainda é prudente verificar se o arquivo foi aberto com sucesso.</p>
+  <ul>
+    <li data-marker="+">Dicas
+      <ul>
+        <li data-marker="*">Se o primeiro `TODO` for implementado corretamente, é seguro supor que podemos fazer referência ao nome do arquivo de saída usando <code class="language-plaintext highlighter-rouge">argv[2]</code>.</li>
+        <li data-marker="*">Lembre-se de que, qualquer arquivo que abrimos, também precisamos fechar quando terminarmos de usá-lo. Isso pode significar adicionar código em outro lugar no programa.</li>
+      </ul>
+    </li>
+  </ul>
+</li>
+</ul>
+<p>Este pode ser um bom lugar para parar e testar se o seu programa se comporta como o esperado. Se implementado corretamente, seu programa deve abrir um novo arquivo quando executado com os argumentos de linha de comando adequados.</p>
+<p>Se a qualquer momento você achar necessário excluir um arquivo, execute o seguinte comando em seu diretório de trabalho atual.</p>
+<pre><code>$ rm nome_do_arquivo.wav
+</code></pre>
+<p>Se você não deseja ser solicitado a confirmar cada exclusão, execute o comando abaixo.</p>
+<pre><code>$ rm -f nome_do_arquivo.wav
+</code></pre>
+<p>Apenas tome cuidado com a opção <code>-f</code>, pois ela faz a exclusão sem perguntar.</p>
+<ul>
+<li>
+<p>Em seguida, agora que o tipo de arquivo foi verificado, o sexto <code>TODO</code> nos diz para escrever o cabeçalho no arquivo de saída. O arquivo WAV revertido ainda terá a mesma estrutura de arquivo subjacente do arquivo de entrada (mesmo tamanho, número de canais, bits por amostra, etc.), então é suficiente copiar o cabeçalho que lemos do arquivo de entrada no terceiro <code>TODO</code> para o arquivo de saída.</p>
+</li>
+<li>
+<p>No sétimo <code>TODO</code>, você deve implementar a função <code>get_block_size</code>. <code>get_block_size</code>, como <code>check_format</code>, recebe um único argumento: é um <code>WAVHEADER</code> chamado <code>header</code>, representando a estrutura que contém o cabeçalho do arquivo de entrada. <code>get_block_size</code> deve retornar um inteiro representando o <strong>tamanho do bloco</strong> do arquivo WAV fornecido, em bytes. Podemos pensar em um <em>bloco</em> como uma unidade de dados auditivos. Para áudio, calculamos o tamanho de cada bloco com o seguinte cálculo: <strong>número de canais</strong> multiplicado por <strong>bytes por amostra</strong>. Felizmente, o cabeçalho contém todas as informações necessárias para calcular esses valores. Certifique-se de fazer referência à seção <a href="#background">Background</a> para uma explicação mais detalhada sobre o que esses valores significam e como eles são armazenados. Veja também <code>wav.h</code>, para determinar quais membros de <code>WAVHEADER</code> podem ser úteis.</p>
+</li>
+</ul>
+<ul>
+<li
+<h2>Uso</h2>
+<p>Aqui estão alguns exemplos de como o programa deve funcionar. Por exemplo, se o usuário omitir um dos argumentos da linha de comando:</p>
+<pre><code>$ ./reverse input.wav
+Uso: ./reverse input.wav output.wav
+</code></pre>
+<p>Ou se o usuário omitir ambos os argumentos da linha de comando:</p>
+<pre><code>$ ./reverse
+Uso: ./reverse input.wav output.wav
+</code></pre>
+<p>É assim que o programa deve funcionar se o usuário fornecer um arquivo de entrada que não é um arquivo WAV real:</p>
+<pre><code>$ ./reverse image.jpg output.wav
+A entrada não é um arquivo WAV
+</code></pre>
+<p>Você pode assumir que o usuário insere um nome de arquivo de saída válido, como <code>output.wav</code>.</p>
+<p>Um programa executado com sucesso não deve gerar texto e deve criar um arquivo WAV com o nome especificado pelo usuário que reproduza o áudio do arquivo WAV de entrada ao contrário. Por exemplo:</p>
+<pre><code>$ ./reverse input.wav output.wav
+</code></pre>
+<h2>Teste</h2>
+<p>Execute o comando abaixo para avaliar a correção do seu código usando <code>check50</code>. Mas certifique-se de compilar e testá-lo por si mesmo também!</p>
+<pre><code>check50 cs50/problems/2023/x/reverse
+</code></pre>
+<p>Execute o comando abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 reverse.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>No terminal, digite o comando abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/reverse
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>FAQs</h1>
+<p>Para respostas a outras perguntas, basta perguntar em uma das comunidades do CS50!</p>
+<p>Avaliações
+O CS50x tem um teste ou quiz?
+Qual é a diferença entre problemas &quot;menos confortáveis&quot; e &quot;mais confortáveis&quot;? Eu tenho que fazer os dois?
+Se eu enviei um problema e não atingi a nota de aprovação de 70%, posso enviar novamente?</p>
+<p>Certificados
+Eu completei o CS50x em 2022 (ou antes). Por que o meu Gradebook não me mostra mais como tendo concluído o curso?
+Eu tenho que pagar pela verificação antes de começar o curso?
+Se eu paguei por um certificado verificado antes de 2023, preciso pagar novamente?
+Como faço para obter meu Certificado CS50 gratuito?
+Como faço para obter meu certificado verificado do edX?
+Como sei se concluí todos os requisitos para um certificado?
+Qual é a diferença entre um certificado verificado e um Certificado CS50?
+Como devo descrever meu certificado verificado em meu currículo ou em outro lugar?</p>
+<p>Prazos
+Se eu não concluir o curso antes de 31 de dezembro de 2023, o que acontecerá?
+Se eu comecei o CS50x antes de 2023, posso retomar?
+Quando são os prazos?
+Como o trabalho que eu completar como parte do CS50x 2022 será transferido para o CS50x 2023?
+O trabalho que completei para o CS50x 2022 (ou anterior) será transferido para o CS50x 2024?
+O trabalho que completei para o CS50x 2023 será transferido para o CS50x 2024?</p>
+<p>Elegibilidade
+Meu filho é jovem demais para fazer o CS50x?</p>
+<p>Notas
+Meu gradebook apenas mostra se eu obtive pontuação suficiente para passar em um problema? Como posso ver minhas notas numéricas reais?
+Se minha pontuação de estilo não for a esperada, por que pode ser?
+Por que o edX pensa que minha nota é 0%?</p>
+<p>Suporte
+O CS50x tem horários de atendimento?
+O CS50x tem seções?</p>
+<p>Avaliações
+O CS50x tem um teste ou quiz?
+Não! O CS50 em Harvard tem um teste e quiz, mas o CS50x não.</p>
+<p>Qual é a diferença entre problemas &quot;menos confortáveis&quot; e &quot;mais confortáveis&quot;? Eu tenho que fazer os dois?
+Em alguns conjuntos de problemas anteriores, você terá a opção entre um problema &quot;menos confortável&quot; e um problema &quot;mais confortável&quot;.</p>
+<p>Os &quot;menos confortáveis&quot; são o que você pode considerar como a versão &quot;padrão&quot; do problema, projetado para estudantes que têm pouca ou nenhuma experiência prévia. Os &quot;mais confortáveis&quot; são a versão &quot;desafio&quot;, projetada para estudantes que se consideram mais confortáveis ​​devido a estudos / experiências anteriores antes desta classe. Como tal, eles podem exigir mais conceitos do que foram abordados no curso até agora.</p>
+<p>Se você se encontrar realmente lutando com a versão &quot;mais confortável&quot;, deve mudar para a versão &quot;menos&quot; (ou se já concluiu, simplesmente seguir em frente e talvez revisitar em uma semana posterior). Seria melhor você pular o problema do que ficar tão frustrado a ponto de desistir do curso completamente. Para referência, na classe de outono de 2019 em Harvard, apenas 20-30% dos alunos enviaram os problemas &quot;mais confortáveis&quot;.</p>
+<p>Você não ganha pontos extras por fazer os problemas &quot;mais confortáveis&quot;. Se você enviar ambos, aquele com a nota mais alta será contado para o seu progresso geral no curso.</p>
+<p>Se eu enviei um problema e não atingi a nota de aprovação de 70%, posso enviar novamente?
+Sim! Você pode enviar novamente; apenas contaremos sua submissão mais recente para o seu progresso. Consulte a seção Notas abaixo para mais detalhes.</p>
+<p>Certificados
+Eu concluí o curso CS50x em 2022 (ou antes). Por que o meu Gradebook não está me mostrando como tendo concluído o curso?
+O CS50x é um curso que abrange vários anos, mas tem uma atualização de conteúdo em 1º de janeiro de cada ano. Seu gradebook só refletirá seu status de conclusão da versão atual do curso (que agora é o CS50x 2023), mesmo que você tenha concluído o curso em um ano anterior. Se você deseja obter o banner verde novamente, pode concluir as avaliações que estão faltando para a versão atual do curso, mas seu Certificado gratuito do CS50 ainda está disponível em certificates.cs50.io e a elegibilidade para um Certificado Verificado não é afetada desde que você tenha visto o banner verde no topo do seu gradebook pelo menos uma vez.</p>
+<p>Eu tenho que pagar para verificação antes de começar o curso?
+Não! Se você quiser um certificado verificado da edX, pode pagar pela verificação em qualquer momento, mesmo depois de concluir todo o curso. Embora recomendamos, para evitar problemas logísticos que podem atrasar a emissão do certificado, que você verifique antes de concluir o curso. Caso contrário, o prazo de espera de 30 dias que mencionamos apenas começa quando sua identidade for verificada pela edX.</p>
+<p>Se eu paguei por um certificado verificado antes de 2023, preciso pagar novamente?
+Não, sua verificação deve valer por um ano inteiro, mas se expirou, você deve conseguir se re-verificar por meio do painel da edX.</p>
+<p>Como faço para obter meu Certificado CS50 gratuito?
+Depois de concluir o curso e cumprir todos os requisitos, você verá um link na sua página do Gradebook do CS50x permitindo que solicite um Certificado CS50 gratuito, semelhante ao mostrado aqui. Este link estará disponível em aproximadamente quatro horas e você deverá fazer login usando suas credenciais do GitHub. Se tiver dificuldades para acessá-lo, tente sair e entrar novamente no GitHub, depois visite o link para baixar seu certificado. Certifique-se de solicitar seu certificado antes de 1º de janeiro de 2024.</p>
+<p>Como faço para obter meu certificado verificado da edX?
+A equipe do CS50 fornece à edX a cada poucas semanas uma lista de estudantes que atenderam aos requisitos do CS50x (ao receber pontuações de pelo menos 70% em cada problema obrigatório enviado como parte dos dez conjuntos de problemas do curso, os nove laboratórios e também no projeto final). Tipicamente, dentro de uma semana a partir daí, a edX gera os Certificados Verificados dos estudantes (para estudantes que têm uma Verificação ativa), momento em que eles devem aparecer automaticamente no painel da edX. Observe que a edX não enviará uma notificação, portanto, verifique periodicamente o seu painel.</p>
+<p>Se já faz mais de um mês desde que você cumpriu todos os requisitos e ainda não recebeu seu certificado, apesar de ter uma Verificação ativa todo esse tempo, envie um e-mail para certificates@cs50.harvard.edu com seus detalhes. Não envie um e-mail antes disso; não podemos aceitar solicitações de processamento urgente de certificados verificados.</p>
+<p>Como saber se cumpri todos os requisitos para um certificado?
+Seu Gradebook do CS50x mostra o resultado para cada envio de problema de 2023 e progresso que você fez para cada semana. Quando você cumprir os requisitos para uma determinada semana, o número da semana será exibido em verde e o indicador de progresso será atualizado para refletir isso. Quando cumprir todos os requisitos, verá um banner verde no topo da página, confirmando sua conclusão.</p>
+<p>Qual é a diferença entre um certificado verificado e um Certificado CS50?
+Um certificado verificado, que você pode comprar da edX, “pode fornecer prova para um empregador, escola ou outra instituição de que você concluiu com êxito um curso on-line”.</p>
+<p>Um Certificado CS50 é um certificado gratuito do próprio CS50.</p>
+<p>Como devo descrever meu certificado verificado em meu currículo ou em outro lugar?
+Você pode dizer que recebeu um certificado verificado da HarvardX.</p>
+<p>Prazos
+Se eu não concluir o curso antes de 31 de dezembro de 2023, o que acontecerá?
+Em 1º de janeiro de 2024, o curso será atualizado para a versão de 2024. Seu progresso de 2023 será levado para a versão de 2024 (veja abaixo). Após 31 de dezembro de 2023, você só poderá enviar os conjuntos de problemas da versão de 2024 e precisará atender a quaisquer requisitos que estejam em vigor para o CS50x 2024. No entanto, seu progresso (conforme descrito abaixo) de 2022 ou anterior não será levado para frente em 2024.</p>
+<p>Se eu comecei o CS50x antes de 2023, posso continuar?</p>
+<p>Sim, todo o progresso que você fez nos conjuntos de problemas dos anos anteriores foi levado para o seu registro de notas do CS50x 2023. Observe que os resultados individuais dos problemas dos anos anteriores não são mostrados, mas se o conjunto de problemas e laboratório correspondentes foram concluídos, você verá que eles estão marcados com um círculo verde e incluídos na sua barra de progresso no topo. No entanto, daqui para frente, você deve enviar conjuntos de problemas e laboratórios do CS50x 2023. Trabalhos de versões anteriores do curso não podem ser enviados para obtenção de crédito.</p>
+<p>Aqui está como você deve fazer a transição do curso de 2022 para o curso de 2023:</p>
+<p>Concluído em 2022</p>
+<p>Retome seus estudos com:</p>
+<p>Nenhum Conjunto de Problemas - Semana 0 e Conjunto de Problemas 0 do CS50x 2023.
+Conjunto de Problemas 0 - Semana 1, Laboratório 1 e Conjunto de Problemas 1 do CS50x 2023.
+Conjunto de Problemas 0 a 1 - Semana 2, Laboratório 2 e Conjunto de Problemas 2 do CS50x 2023.
+Conjunto de Problemas 0 a 2 - Semana 3, Laboratório 3 e Conjunto de Problemas 3 do CS50x 2023.
+Conjunto de Problemas 0 a 3 - Semana 4, Laboratório 4 e Conjunto de Problemas 4 do CS50x 2023.
+Conjunto de Problemas 0 a 4 – Semana 5, Laboratório 5 e Conjunto de Problemas 5 do CS50x 2023.
+Conjunto de Problemas 0 a 5 - Semana 6, Laboratório 6 e Conjunto de Problemas 6 do CS50x 2023.
+Conjunto de Problemas 0 a 6 - Semana 7, Laboratório 7 e Conjunto de Problemas 7 do CS50x 2023.
+Conjunto de Problemas 0 a 7 - Semana 8, Laboratório 8 e Conjunto de Problemas 8 do CS50x 2023.
+Conjunto de Problemas 0 a 8 - Semana 9, Laboratório 9 e Conjunto de Problemas 9 do CS50x 2023.
+Conjunto de Problemas 0 a 9 - Semana 10 e Projeto Final do CS50x 2023.</p>
+<p>Quais são os prazos?</p>
+<p>O CS50x não tem prazos individuais para as tarefas. Você pode trabalhar e enviar no seu próprio ritmo.</p>
+<p>O prazo geral para o curso é o final do dia, UTC, em 31 de dezembro de 2023 (domingo, 31 de dezembro de 2023, 11:59 PM UTC). Para sua conveniência, frequentemente, neste site, representamos este horário no seu fuso horário local (domingo, 31 de dezembro de 2023 às 8:59 PM GMT-3).</p>
+<p>Se todo o trabalho necessário for entregue antes do prazo acima e, em última análise, receber uma nota satisfatória (seja antes ou logo após esse prazo), você será considerado como tendo concluído o CS50x.</p>
+<p>Como meu trabalho completo como parte do CS50x 2022 será considerado no CS50x 2023?</p>
+<p>O crédito foi concedido pelo trabalho realizado no CS50x 2022 da seguinte forma. Observe que você deve ter concluído cada linha em uma caixa na coluna da esquerda antes de 1 de janeiro de 2023, para ter recebido crédito pelos conjuntos de problemas e laboratórios correspondentes na coluna da direita. Se você só tiver concluído alguns dos itens em uma caixa na coluna da esquerda, nenhum crédito será dado por esse trabalho. (A transferência é feita semanalmente, não por problema). Visite seu Painel CS50x para ver as semanas que foram creditadas, se houver.</p>
+<p>Concluído em CS50x 2022:</p>
+<p>Crédito equivalente em CS50x 2023:</p>
+<p>Scratch - Conjunto de Problemas 0</p>
+<p>Mario (Less) OU Mario (More)</p>
+<p>Caixa ou Crédito - Conjunto de Problemas 1</p>
+<p>Laboratório 1</p>
+<p>Legibilidade</p>
+<p>César OU Substituição</p>
+<p>Laboratório 2 - Conjunto de Problemas 2</p>
+<p>Laboratório 2</p>
+<p>Pluralidade</p>
+<p>Cédula OU Tideman</p>
+<p>Laboratório 3 - Conjunto de Problemas 3</p>
+<p>Laboratório 3</p>
+<p>Filtro (Menos) OU Filtro (Mais)</p>
+<p>Recuperar</p>
+<p>Laboratório 4 - Conjunto de Problemas 4</p>
+<p>Laboratório 4</p>
+<p>Speller</p>
+<p>Laboratório 5 - Conjunto de Problemas 5</p>
+<p>Laboratório 5</p>
+<p>Olá (Python)</p>
+<p>Mario (Menos) (Python) OU Mario (Mais) (Python)</p>
+<p>Caixa (Python) ou Crédito (Python)</p>
+<p>Legibilidade (Python)</p>
+<p>DNA</p>
+<p>Laboratório 6 - Conjunto de Problemas 6</p>
+<p>Laboratório 6</p>
+<p>Fiftyville</p>
+<p>Filmes</p>
+<p>Laboratório 7 - Conjunto de Problemas 7</p>
+<p>Laboratório 7</p>
+<p>Página Inicial</p>
+<p>Laboratório 8 - Conjunto de Problemas 8</p>
+<p>Laboratório 8</p>
+<p>Finanças</p>
+<p>Laboratório 9 - Conjunto de Problemas 9</p>
+<p>Laboratório 9</p>
+<p>Projeto Final - Projeto Final</p>
+<p>1 Ao concluir, queremos dizer que você obteve 70% ou mais nos problemas antes de 1 de janeiro de 2023.</p>
+<p>O trabalho que eu completei para CS50x 2022 (ou anterior) será transferido para CS50x 2024?</p>
+<p>O trabalho concluído em CS50x 2022 ou anterior não será transferido para o progresso. Apenas o trabalho completo em CS50x 2023 será transferido. Isso significa que se você recebeu crédito por trabalho anterior que foi transferido para CS50x 2023, esse crédito não será mais válido a partir de 1º de janeiro de 2024, e você pode precisar refazer (ou pelo menos enviar novamente) algumas tarefas. O que isso efetivamente significa é que, dependendo de quando você começa no ano calendário, você tem entre 12 e 24 meses para completar o CS50x sem precisar voltar atrás e começar a enviar novamente as tarefas. Sabemos, especialmente para aqueles que tentam terminar o curso logo no final de dezembro, que isso pode ser difícil, mas infelizmente não podemos fazer nenhuma exceção a essa regra por qualquer motivo. Portanto, encorajamos você, se possível, a evitar tentar correr para terminar o curso no prazo e, em vez disso, estender seus estudos por um período razoável de tempo.</p>
+<p>O trabalho que eu completei para CS50x 2023 será transferido para CS50x 2024?</p>
+<p>Sim. Vamos anunciar exatamente como isso acontecerá em novembro ou dezembro de 2023, mas é razoável presumir que a transferência ocorrerá de maneira semelhante à transição de 2022 para 2023, como mencionado acima.</p>
+<p>Elegibilidade</p>
+<p>Meu filho é muito jovem para fazer CS50x?</p>
+<p>CS50x é talvez mais adequado para maiores de 13 anos. Algumas das ferramentas de software que o curso usa exigem uma idade mínima de 13 anos para se inscrever. Portanto, estudantes mais jovens podem precisar de ajuda dos pais para se configurar.</p>
+<p>Notas</p>
+<p>Meu caderno de notas mostra apenas se eu pontuei alto o suficiente para passar em um problema? Como posso ver minhas notas numéricas reais?</p>
+<p>Você pode clicar no nome do problema para ir à sua submissão, onde as notas brutais de correção (check50) e estilo (style50) individuais serão exibidas.</p>
+<p>Sua nota geral do problema é ponderada em 75% para a correção e 25% para o estilo. Para receber o visto verde indicando conclusão, sua nota geral deve ser de 70% ou superior. Como exemplo, se sua pontuação check50 for 7/8 e sua pontuação style50 for 0,95, sua nota geral será (7/8 * 0,75) + (0,95 * 0,25) = 89%.</p>
+<p>Se você não passou em um problema, pode pairar sobre a cruz vermelha para ver qual foi sua pontuação real.</p>
+<p>Se minha pontuação de estilo não estiver como esperado, por que isso pode acontecer?</p>
+<p>Sua nota de estilo será baseada nos resultados style50 para todos os arquivos de código-fonte em sua submissão. Ao executar submit50, certifique-se de que sua pasta inclua apenas os arquivos necessários para o conjunto de problemas. Se houver algum arquivo de teste extra lá, esses serão contados em direção a sua nota. Remova os arquivos extras da pasta e envie novamente para obter uma pontuação Style atualizada.</p>
+<p>Por que o edX acha que minha nota é 0%?</p>
+<p>CS50x não usa o caderno de notas embutido do edX, então as notas de todos os alunos aparecem (no caderno de notas do edX) como 0%, sempre. Não se preocupe, consulte cs50.me/cs50x para ver seus resultados reais. (Observe que se você tiver crédito transferido, como descrito em uma pergunta acima, não verá os resultados individuais para aquelas semanas.)</p>
+<p>Suporte</p>
+<p>O CS50x tem horas de escritório?</p>
+<p>Não regularmente! Infelizmente, o CS50x é muito grande, mas você ainda pode fazer perguntas em qualquer uma das comunidades do CS50!</p>
+<p>O CS50x tem seções?</p>
+<p>Durante o outono de 2022, a equipe do curso conduziu pequenas seções com alguns alunos do CS50x enquanto as palestras estavam sendo filmadas. Embora o curso seja muito grande para realizar seções ao vivo para os alunos atuais, essas seções pré-gravadas estarão disponíveis (quando prontas!) para os alunos complementarem outros materiais do curso.</p>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

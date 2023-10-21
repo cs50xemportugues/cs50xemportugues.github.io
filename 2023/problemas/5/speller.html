@@ -1,0 +1,549 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Speller</h1>
+<div class="alert" data-alert="danger" role="alert"><p><strong>Leia esta especificação inteiramente antes de começar para saber o que fazer e como fazê-lo!</strong></p></div>
+<p>Neste problema, você implementará um programa que verifica a ortografia de um arquivo, como no exemplo abaixo, usando uma tabela hash.</p>
+<pre><code>$ ./speller texts/lalaland.txt
+MISSPELLED WORDS
+
+[...]
+AHHHHHHHHHHHHHHHHHHHHHHHHHHHT
+[...]
+Shangri
+[...]
+fianc
+[...]
+Sebastian&#x27;s
+[...]
+
+WORDS MISSPELLED:
+WORDS IN DICTIONARY:
+WORDS IN TEXT:
+TIME IN load:
+TIME IN check:
+TIME IN size:
+TIME IN unload:
+TIME IN TOTAL:
+</code></pre>
+<h2>Introdução</h2>
+<p>Conecte-se ao <a href="https://code.cs50.io/">code.cs50.io</a>, clique na janela do seu terminal e execute o comando <code>cd</code>. Você deve ver que o prompt da sua janela de terminal se assemelha ao seguinte:</p>
+<pre><code>$
+</code></pre>
+<p>Em seguida, execute o comando</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/5/speller.zip
+</code></pre>
+<p>para baixar um arquivo ZIP chamado de <code>speller.zip</code> em seu espaço de códigos.</p>
+<p>Em seguida, execute o comando</p>
+<pre><code>unzip speller.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>speller</code>. Você não precisa mais do arquivo ZIP, portanto você pode executar o comando:</p>
+<pre><code>rm speller.zip
+</code></pre>
+<p>e responda &quot;y&quot; seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd speller
+</code></pre>
+<p>seguido de Enter para mover-se para dentro desse diretório. Seu prompt deve se parecer com o seguinte:</p>
+<pre><code>speller/ $
+</code></pre>
+<p>Execute o comando <code>ls</code> e você verá alguns arquivos e pastas:</p>
+<pre><code>dictionaries/  dictionary.c  dictionary.h  keys/  Makefile  speller.c  speller50  texts/
+</code></pre>
+<p>Se você tiver algum problema durante este processo, siga esses mesmos passos novamente e veja se consegue determinar onde errou!</p>
+<h2>Distribuição</h2>
+<h3>Compreensão</h3>
+<p>Teoricamente, em uma entrada de tamanho <em>n</em>, um algoritmo com tempo de execução <em>n</em> é &quot;assintoticamente equivalente&quot;, em termos de <em>O</em>, a um algoritmo com tempo de execução de <em>2n</em>. Na verdade, ao descrever o tempo de execução de um algoritmo, normalmente nos concentramos no termo dominante (ou seja, mais impactante) (ou seja, <em>n</em> neste caso, já que <em>n</em> pode ser muito maior do que 2). No mundo real, no entanto, a verdade é que <em>2n</em> parece duas vezes mais lento que <em>n</em>.</p>
+<p>O desafio à sua frente é implementar o verificador ortográfico mais rápido que puder! Mas quando dizemos &quot;o mais rápido&quot;, estamos falando de tempo &quot;real&quot;, não assintótico.</p>
+<p>Em <code>speller.c </code>, criamos um programa projetado para verificar a ortografia de um arquivo após carregar um dicionário de palavras do disco na memória. Esse dicionário, enquanto isso, é implementado em um arquivo chamado <code>dictionary.c</code>. (Poderia ser implementado em<code> speller.c</code>, mas à medida que os programas se tornam mais complexos, geralmente é conveniente dividi-los em vários arquivos.) Os protótipos das funções do arquivo, enquanto isso, não são definidos em <code>dictionary.c</code> em si, mas sim em <code>dictionary.h</code>. Dessa forma, tanto <code>speller.c</code> quanto <code>dictionary.c</code> podem incluir o arquivo. Infelizmente, não conseguimos implementar a parte de carregamento. Nem a parte de verificação. Ambos (e um pouco mais) deixamos com você! Mas primeiro, uma turnê.</p>
+<h4><code>dictionary.h</code></h4>
+<p>Abra o arquivo <code>dictionary.h</code> e você verá alguma nova sintaxe, incluindo algumas linhas que menciona <code>DICTIONARY_H</code>. Não se preocupe com isso, mas, se curioso, essas linhas apenas garantem que, mesmo que <code>dictionary.c</code> e <code>speller.c</code>(que você verá em um momento) incluam este arquivo, o <code>clang</code> o compilará apenas uma vez.</p>
+<p>A seguir, observe como incluímos um arquivo chamado <code>stdbool.h</code>. Esse é o arquivo no qual <code>bool</code> é definido. Você não precisou dele antes, já que a Biblioteca CS50 o incluia para você.</p>
+<p>Observe também nosso uso de <code>#define</code>, uma &quot;diretiva de pré-processador&quot; que define uma &quot;constante&quot; chamada <code>LENGTH</code> que tem um valor de <code>45</code>. É uma constante no sentido de que você não pode (acidentalmente) alterá-la em seu próprio código. De fato, o <code>clang</code> substituirá qualquer menção a <code>LENGTH</code> em seu próprio código por, literalmente, <code>45</code>. Em outras palavras, não é uma variável, apenas um truque de encontrar e substituir.</p>
+<p>Finalmente, observe os protótipos de cinco funções: <code>check</code>, <code>hash</code>, <code>load</code>, <code>size</code> e <code>unload</code>. Observe como três deles recebem um ponteiro como argumento, de acordo com o <code>*</code>:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bool</span> <span class="nf">check</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">word</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">hash</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">word</span><span class="p">);</span>
+<span class="n">bool</span> <span class="nf">load</span><span class="p">(</span><span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">dictionary</span><span class="p">);</span>
+</code></pre></div></div>
+<p>Lembre-se de que <code>char *</code> é o que costumávamos chamar de <code>string</code>. Portanto, esses três protótipos são essencialmente:</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">bool</span> <span class="nf">check</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="n">word</span><span class="p">);</span>
+<span class="kt">unsigned</span> <span class="kt">int</span> <span class="nf">hash</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="n">word</span><span class="p">);</span>
+<span class="n">bool</span> <span class="nf">load</span><span class="p">(</span><span class="k">const</span> <span class="n">string</span> <span class="n">dictionary</span><span class="p">);</span>
+</code></pre></div></div>
+<p>E, enquanto isso, <code>const</code> apenas diz que essas strings, quando passadas como argumentos, devem permanecer constantes; você não poderá alterá-las, acidentalmente ou não!</p>
+<h4><code>dictionary.c</code></h4>
+<p>Agora abra o arquivo <code>dictionary.c</code>. Observe como, no topo do arquivo, definimos uma <code>struct</code> chamada <code>node</code> que representa um nó em uma tabela de hash. E declaramos uma array do ponteiro global, <code>table</code>, que representará (em breve) a tabela de hash que você usará para acompanhar as palavras no dicionário. A array contém <code>N</code> ponteiros de nó, e definimos <code>N</code> como <code>26</code> por enquanto, para corresponder à função <code>hash</code> padrão, conforme descrito abaixo. Você provavelmente desejará aumentar isso, dependendo de sua própria implementação de <code>hash</code>.</p>
+<p>Em seguida, observe que implementamos <code>load</code>, <code>check</code>, <code>size</code> e <code>unload</code>, mas apenas o suficiente para que o código compile. Observe também que implementamos a função <code>hash</code> com um algoritmo de exemplo com base na primeira letra da palavra. Seu trabalho, em última análise, é reimplementar essas funções da maneira mais inteligente possível para que este verificador de ortografia funcione conforme anunciado. E rápido!</p>
+<h4><code>speller.c</code></h4>
+<p>Ok, agora abra o arquivo <code>speller.c</code> e passe algum tempo examinando o código e os comentários nele. Você não precisará mudar nada neste arquivo, e não precisará entendê-lo na íntegra, mas tente obter uma ideia de sua funcionalidade, mesmo assim. Observe como, por meio da função chamada <code>getrusage</code>, &quot;teremos&quot; o &quot;benchmark&quot; (ou seja, cronometragem da execução de) suas implementações de <code>check</code>, <code>load</code>, <code>size</code> e <code>unload</code>. Além disso, observe como passamos o <code>check</code>, palavra por palavra, em conteúdo de algum arquivo a ser verificado ortograficamente. Por fim, relatamos cada palavra mal escrita naquele arquivo junto com muitas estatísticas.</p>
+<p>Observe, incidentalmente, que definimos o uso do <code>speller</code> como</p>
+<pre><code>Uso: speller [dicionário] texto
+</code></pre>
+<p>onde o <code>dicionário</code> é assumido como um arquivo contendo uma lista de palavras em minúsculas, uma por linha, e <code>texto</code> é um arquivo a ser verificado a ortografia. Como os colchetes sugerem, a provisão de um <code>dicionário</code> é opcional; se esse argumento for omitido, o <code>speller</code> usará <code>dictionaries/large</code> por padrão. Em outras palavras, executar</p>
+<pre><code>./speller texto
+</code></pre>
+<p>será equivalente a executar</p>
+<pre><code>./speller dictionaries/large text
+</code></pre>
+<p>onde <code>texto</code> é o arquivo que você deseja verificar a ortografia. Isso tudo e claro, o <code>speller</code> não poderá carregar quaisquer dicionários até você implementar <code>load</code> em <code>dictionary.c</code>! Até então, você verá <code>Could not load</code>.</p>
+<p>Dentro do dicionário padrão, há 143.091 palavras, todas as quais devem ser carregadas na memória! De fato, dê uma olhada nesse arquivo para ter uma ideia de sua estrutura e tamanho. Observe que toda palavra nesse arquivo aparece em minúsculo (até mesmo, por simplicidade, os nomes próprios e siglas). De cima para baixo, o arquivo é classificado lexicograficamente, com apenas uma palavra por linha (cada uma das quais termina com <code>\n</code>). Nenhuma palavra tem mais de 45 caracteres, e nenhuma palavra aparece mais de uma vez. Durante o desenvolvimento, pode ser útil fornecer um <code>dicionário</code> próprio ao <code>speller</code> que contenha muito menos palavras, para que você não tenha dificuldade em depurar uma estrutura enorme na memória. Em <code>dictionaries/small</code> existe um dicionário desses. Para usá-lo, execute</p>
+<pre><code>./speller dictionaries/small text
+</code></pre>
+<p>onde <code>texto</code> é o arquivo que você deseja verificar a ortografia. Não prossiga até ter certeza de que entende como o <code>speller</code> funciona!</p>
+<p>É provável que você não tenha passado tempo suficiente examinando o <code>speller.c</code>. Volte uma casa e passe por ele novamente!</p>
+<h4><code>texts/</code></h4>
+<p>Para que você possa testar sua implementação do <code>speller</code>, também fornecemos uma série de textos, entre eles, o roteiro de <em>La La Land</em>, o texto da Lei de Assistência Acessível, três milhões de bytes de Tolstoy, algumas passagens dos <em>Federalist Papers</em> e Shakespeare e mais. Para que você saiba o que esperar, abra e examine cada um desses arquivos, que estão em um diretório chamado <code>texts</code> dentro do seu diretório <code>pset5</code>.</p>
+<p>Agora, como você deve saber depois de ter lido o <code>speller.c</code> cuidadosamente, a saída do <code>speller</code>, se executada com, digamos,</p>
+<pre><code>./speller texts/lalaland.txt
+</code></pre>
+<p>irá se assemelhar eventualmente ao abaixo.</p>
+<p>Abaixo segue alguns exemplos de palavras mal escritas que você verá. E por não querer estragar a diversão, omitimos nossas próprias estatísticas por agora.</p>
+<pre><code>PALAVRAS MAL ESCRITAS
+
+[...]
+AHHHHHHHHHHHHHHHHHHHHHHHHHHHT
+[...]
+Shangri
+[...]
+fianc
+[...]
+Sebastian&#x27;s
+[...]
+
+PALAVRAS MAL ESCRITAS:
+PALAVRAS NO DICIONÁRIO:
+PALAVRAS NO TEXTO:
+TEMPO EM load:
+TEMPO EM check:
+TEMPO EM tamanho:
+TEMPO EM unload:
+TEMPO EM TOTAL:
+</code></pre>
+<p><code>TEMPO EM load</code> representa o número de segundos que o <code>speller</code> passa executando sua implementação de <code>load</code>. <code>TEMPO EM check</code> representa o número de segundos que o <code>speller</code> passa, no total, executando sua implementação de <code>check</code>. <code>TEMPO EM tamanho</code> representa o número de segundos que o <code>speller</code> passa executando sua implementação de <code>size</code>. <code>TEMPO EM unload</code> representa o número de segundos que o <code>speller</code> passa executando sua implementação de <code>unload</code>. <code>TEMPO EM TOTAL</code> é a soma dessas quatro medidas.</p>
+<p>Observe que esses tempos podem variar ligeiramente em execuções diferentes do <code>speller</code>, dependendo do que mais sua área de trabalho está fazendo, mesmo que você não altere seu código.</p>
+<p>Aliás, para ficar claro, &quot;mal escritas&quot; significa apenas que alguma palavra não está no <code>dicionário</code> fornecido.</p>
+<h4><code>Makefile</code></h4>
+<p>E, por último, lembre-se de que o <code>make</code> automatiza a compilação do seu código para que você não precise executar o <code>clang</code> manualmente junto com um monte de chaves. No entanto, à medida que seus programas crescem em tamanho, o <code>make</code> não poderá inferir mais do contexto como compilar seu código; você precisará começar a dizer ao <code>make</code> como compilar seu programa, principalmente quando envolve vários arquivos de origem (ou seja, <code>.c</code>), como no caso deste problema. E então usaremos um <code>Makefile</code>, um arquivo de configuração que diz ao <code>make</code> exatamente o que fazer. Abra o <code>Makefile</code>, e você verá quatro linhas:</p>
+<ol>
+<li>A primeira linha diz ao <code>make</code> para executar as linhas subsequentes sempre que você mesmo executar <code>make speller</code> (ou apenas <code>make</code>).</li>
+<li>A segunda linha diz ao <code>make</code> como compilar <code>speller.c</code> em código de máquina (ou seja, <code>speller.o</code>).</li>
+<li>A terceira linha diz ao <code>make</code> como compilar <code>dictionary.c</code> em código de máquina (ou seja, <code>dictionary.o</code>).</li>
+<li>A quarta linha diz ao <code>make</code> para vincular <code>speller.o</code> e <code>dictionary.o</code> em um arquivo chamado <code>speller</code>.</li>
+</ol>
+<p><strong>Certifique-se de compilar <code>speller</code> executando o <code>make speller</code> (ou apenas <code>make</code>). Executar <code>make dictionary</code> não funcionará!</strong></p>
+<h2>Especificação</h2>
+<p>Tudo bem, o desafio agora para você é implementar, em ordem, <code>load</code>, <code>hash</code>, <code>size</code>, <code>check</code> e <code>unload</code> da maneira mais eficiente possível usando uma tabela hash, de tal forma que <code>TIME IN load</code>, <code>TIME IN check</code>, <code>TIME IN size</code> e <code>TIME IN unload</code> sejam minimizados. Certamente, não é óbvio o que significa ser minimizado, já que essas referências certamente variarão à medida que você alimentar o <code>speller</code> com diferentes valores para <code>dictionary</code> e para <code>text</code>. Mas aí está o desafio, se não a diversão, desse problema. Este problema é sua chance de projetar. Embora convidemos você a minimizar o espaço, o seu inimigo final é o tempo. Mas antes de começar, algumas especificações de nossa parte.</p>
+<ul>
+<li>Você não pode alterar <code>speller.c</code> ou <code>Makefile</code>.</li>
+<li>Você pode alterar <code>dictionary.c</code> (e, de fato, deve fazê-lo para concluir as implementações de <code>load</code>, <code>hash</code>, <code>size</code>, <code>check</code> e <code>unload</code>), mas não pode alterar as declarações (ou seja, protótipos) de <code>load</code>, <code>hash</code>, <code>size</code>, <code>check</code> ou <code>unload</code>. Você pode, no entanto, adicionar novas funções e variáveis (locais ou globais) a <code>dictionary.c</code>.</li>
+<li>Você pode alterar o valor de <code>N</code> em <code>dictionary.c</code>, para que sua tabela hash possa ter mais buckets.</li>
+<li>Você pode alterar <code>dictionary.h</code>, mas não pode alterar as declarações de <code>load</code>, <code>hash</code>, <code>size</code>, <code>check</code> ou <code>unload</code>.</li>
+<li>Sua implementação de <code>check</code> deve ser insensível a maiúsculas e minúsculas. Em outras palavras, se <code>foo</code> estiver no dicionário, então <code>check</code> deve retornar verdadeiro para qualquer capitalização do mesmo; nenhum dos <code>foo</code>, <code>foO</code>, <code>fOo</code>, <code>fOO</code>, <code>fOO</code>, <code>Foo</code>, <code>FoO</code>, <code>FOo</code> e <code>FOO</code> devem ser considerados como ignorados.</li>
+<li>Com relação à capitalização, sua implementação de <code>check</code> só deve retornar <code>true</code> para as palavras que realmente estiverem no <code>dictionary</code>. Tenha cuidado para não codificar palavras comuns (por exemplo, <code>a</code>), para que não venhamos a passar para sua implementação um <code>dictionary</code> sem essas mesmas palavras. Além disso, somente os possessivos permitidos são aqueles que realmente estão no <code>dictionary</code>. Em outras palavras, mesmo que <code>foo</code> esteja no <code>dictionary</code>, <code>check</code> deve retornar <code>false</code> para <code>foo&#x27;s</code> se <code>foo&#x27;s</code> também não estiver no <code>dictionary</code>.</li>
+<li>Você pode pressupor que qualquer <code>dictionary</code> passado para o seu programa terá a mesma estrutura que a nossa, classificada em ordem alfabética de cima para baixo com uma palavra por linha, cada uma das quais termina com <code>\n</code>. Você também pode assumir que o <code>dictionary</code> conterá pelo menos uma palavra, que nenhuma palavra terá mais de <code>LENGTH</code> (uma constante definida em <code>dictionary.h</code>) caracteres, que nenhuma palavra aparecerá mais de uma vez, que cada palavra conterá apenas caracteres alfabéticos minúsculos e possivelmente apostrofes, e que nenhuma palavra começará com um apóstrofo.</li>
+<li>Você pode pressupor que o <code>check</code> só receberá palavras que contenham caracteres alfabéticos (maiúsculos ou minúsculos) e possivelmente apostrofes.</li>
+<li>Seu corretor ortográfico pode somente receber <code>text</code> e, opcionalmente, <code>dictionary</code> como entrada. Embora você possa estar inclinado (particularmente se é mais experiente) a “pre-processar” nosso dicionário padrão para derivar uma “função hash ideal” para ele, você não pode salvar a saída de qualquer pré-processamento em disco com o intuito de carregá-la novamente na memória em execuções subsequentes do verificador ortográfico para ganhar uma vantagem.</li>
+<li>Seu corretor ortográfico não deve vazar memória. Certifique-se de verificar vazamentos com <code>valgrind</code>.</li>
+<li><strong>A função hash que você escreve deve ser sua, não aquela que você procura online.</strong> Há muitas maneiras de implementar uma função hash além de usar o primeiro caractere (ou caracteres) de uma palavra. Considere uma função hash que usa a soma dos valores ASCII ou o comprimento de uma palavra. Uma boa função hash tende a reduzir as “colisões” e tem uma distribuição bastante uniforme em “buckets” da tabela hash.</li>
+</ul>
+<p>Ok, prontos para começar?</p>
+<ul>
+<li>Implemente <code>load</code>.</li>
+<li>Implemente <code>hash</code>.</li>
+<li>Implemente <code>size</code>.</li>
+<li>Implemente <code>check</code>.</li>
+<li>Implemente <code>unload</code>.</li>
+</ul>
+<h2>Guias</h2>
+<p>Observe que há 6 vídeos na playlist abaixo.</p>
+<div class="alert" data-alert="danger" role="alert"><p>Embora o guia de Speller indique que é razoável usar uma função hash encontrada on-line, este vídeo é de uma versão anterior do problema em que permitimos isso. Conforme a especificação acima, a função hash que você escrever deve ser sua; você <strong>não pode</strong> usar uma função hash que encontrar on-line. Certifique-se de citar quaisquer fontes externas que você tenha referenciado ao escrever sua função hash.</p></div>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="acelerômetro; autoplay; encrypted-media; giroscópio; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/_z57x5PGF4w?modestbranding=0&amp;rel=0&amp;showinfo=1&amp;list=PLhQjrBD2T382T4b6jjwX_qbU23E_Unwcz"></iframe></div>
+<h2>Dicas</h2>
+<p>Para comparar duas strings ignorando as diferenças entre letras maiúsculas e minúsculas, você pode usar a função <a href="https://man.cs50.io/3/strcasecmp"><code>strcasecmp</code></a>, declarada em <code>strings.h</code>! Você também deve garantir que sua função de hash não leve em consideração as diferenças entre letras maiúsculas e minúsculas, para que as palavras &quot;foo&quot; e &quot;FOO&quot; tenham o mesmo valor de hash.</p>
+<p>Por fim, certifique-se de liberar toda memória alocada em <code>load</code> ao implementar a função <code>unload</code>! Lembre-se de que <code>valgrind</code> é seu novo melhor amigo. Saiba que <code>valgrind</code> verifica vazamentos de memória enquanto seu programa está em execução, então, certifique-se de fornecer argumentos na linha de comando caso queira que <code>valgrind</code> analise <code>speller</code> enquanto você usa um dicionário e/ou texto específico, como abaixo. É melhor usar um texto curto, senão <code>valgrind</code> pode demorar bastante para rodar.</p>
+<pre><code>valgrind ./speller texts/cat.txt
+</code></pre>
+<p>Se você executar <code>valgrind</code> sem especificar um <code>texto</code> para <code>speller</code>, suas implementações de <code>load</code> e <code>unload</code> não serão chamadas (e, portanto, não serão analisadas).</p>
+<p>Se não tiver certeza de como interpretar a saída do <code>valgrind</code>, basta pedir ajuda ao <code>help50</code>:</p>
+<pre><code>help50 valgrind ./speller texts/cat.txt
+</code></pre>
+<h2>Testando</h2>
+<p>Como verificar se o programa está identificando as palavras incorretas? Bem, você pode consultar a chave de respostas que está no diretório <code>keys</code>, que está dentro do diretório <code>speller</code>. Por exemplo, dentro do arquivo <code>keys/lalaland.txt</code>, há todas as palavras que o seu programa <em>deveria</em> considerar como incorretas.</p>
+<p>Então, você pode executar seu programa em um texto em uma janela e, em outra janela, executar a solução da equipe no mesmo texto, como abaixo.</p>
+<pre><code>./speller texts/lalaland.txt
+./speller50 texts/lalaland.txt
+</code></pre>
+<p>E então você pode comparar as janelas visualmente lado a lado. Porém, isso pode ficar tedioso rapidamente. Portanto, você pode querer redirecionar a saída do programa para um arquivo, como abaixo.</p>
+<pre><code>./speller texts/lalaland.txt &gt; student.txt
+./speller50 texts/lalaland.txt &gt; staff.txt
+</code></pre>
+<p>Em seguida, você pode comparar ambos os arquivos lado a lado na mesma janela com um programa como <code>diff</code>, como abaixo.</p>
+<pre><code>diff -y student.txt staff.txt
+</code></pre>
+<p>Ou então, para economizar tempo, você pode comparar a saída do seu programa (supondo que você redirecionou-a para, por exemplo, <code>student.txt</code>) com uma das chaves de resposta sem executar a solução da equipe, como abaixo.</p>
+<pre><code>diff -y student.txt keys/lalaland.txt
+</code></pre>
+<p>Se a saída do seu programa corresponder às da equipe, o <code>diff</code> exibirá duas colunas que devem ser idênticas, exceto talvez pelos tempos de execução na parte inferior. Entretanto, se as colunas diferirem, você verá um <code>&gt;</code> ou <code>|</code> onde elas diferem. Por exemplo, se você vir</p>
+<pre><code>MISSPELLED WORDS                                                MISSPELLED WORDS
+
+TECHNO                                                          TECHNO
+L                                                               L
+                                                              &gt; Thelonious
+Prius                                                           Prius
+                                                              &gt; MIA
+L                                                               L
+</code></pre>
+<p>isso significa que seu programa (cuja saída está à esquerda) não considera que <code>Thelonious</code> ou <code>MIA</code> sejam palavras incorretas, mesmo que a saída da equipe (à direita) considere, como é mostrado pela ausência de, digamos, <code>Thelonious</code> na coluna da esquerda e pela presença de <code>Thelonious</code> na coluna da direita.</p>
+<h3><code>check50</code></h3>
+<p>Para testar seu código de maneira menos manual (embora ainda não exaustiva), você também pode executar o comando abaixo.</p>
+<pre><code>check50 cs50/problems/2023/x/speller
+</code></pre>
+<p>Observe que <code>check50</code> também verifica vazamentos de memória, portanto, certifique-se de que você tenha executado o <code>valgrind</code> também.</p>
+<h3>style50</h3>
+<p>Execute o comando abaixo para avaliar o estilo de seu código usando o <code>style50</code>.</p>
+<pre><code>style50 dictionary.c
+</code></pre>
+<h2>Solução da equipe</h2>
+<p>Como avaliar a velocidade (e a correção) do seu código? Bem, como sempre, sinta-se a vontade para brincar com a solução da equipe e comparar seus resultados, como abaixo.</p>
+<pre><code>./speller50 texts/lalaland.txt
+</code></pre>
+<h2>Enviar</h2>
+<p>No seu terminal, execute o comando abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/speller&quot;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

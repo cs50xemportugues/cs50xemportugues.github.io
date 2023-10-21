@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="initial-scale=1, width=device-width" />
+
+    <!-- https://assets.ubuntu.com/v1/49a1a858-favicon-32x32.png -->
+    <link
+      href="/static/49a1a858-favicon-32x32.png"
+      rel="icon"
+      type="image/png"
+    />
+
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <script>
+      window.FontAwesomeConfig = { autoReplaceSvg: false };
+    </script>
+
+    <link href="/static/dist/main.css?1694737498" rel="stylesheet" />
+    <script src="/static/dist/main.js?1694737498"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/main.css"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/rouge.css"
+    />
+    <script src="/static/js/main.js"></script>
+    <script>
+      $(function () {
+        // Hide less-comfortable descriptions
+        $("[data-less]").addClass("d-none");
+
+        // Listen for checkbox
+        $("#filter")
+          .on("change", function () {
+            if ($("#filter").is(":checked")) {
+              $("[data-less]").removeClass("d-none");
+              $("[data-more]").addClass("d-none");
+            } else {
+              $("[data-more]").removeClass("d-none");
+              $("[data-less]").addClass("d-none");
+            }
+            filter();
+          })
+          .trigger("change");
+
+        // Listen for searches
+        $("#q").on("change keyup", function () {
+          filter();
+        });
+        $("#q")
+          .closest("form")
+          .on("submit", function (e) {
+            e.preventDefault();
+          });
+
+        // Filter results
+        filter();
+
+        // Unless user's followed a link to a heading, filter index
+        if (window.location.hash) {
+          $("#filter").prop("checked", false).trigger("change");
+        }
+
+        // Give focus to search (after body is visible)
+        else {
+          $(function () {
+            $("#q").focus();
+          });
+        }
+      });
+
+      function filter() {
+        let q = $("#q").val().trim().split(/\s+/);
+        if (q.length === 1 && q[0] === "") {
+          q = [];
+        }
+        $("h1").each(function (index, element) {
+          const $h1 = $(element);
+          const header = $h1.val();
+          const $ul = $h1.next("ul");
+          $ul.children("li").each(function (index, element) {
+            const $li = $(element);
+            if (
+              $("#filter").prop("checked") &&
+              $li.attr("data-filter") === undefined
+            ) {
+              $li.addClass("filtered");
+            } else {
+              $li.removeClass("filtered");
+            }
+            const haystack = $h1.text() + $li.text().trim();
+            let matches = q.filter(function (s) {
+              return haystack.match(new RegExp(s, "i")) !== null;
+            });
+            if (matches.length === q.length) {
+              $li.removeClass("mismatched");
+            } else {
+              $li.addClass("mismatched");
+            }
+          });
+          if ($ul.children("li:not(.filtered, .mismatched)").length > 0) {
+            $h1.removeClass("d-none");
+            $ul.removeClass("d-none");
+          } else {
+            $h1.addClass("d-none");
+            $ul.addClass("d-none");
+          }
+        });
+      }
+    </script>
+
+    <script>
+      $(function () {
+        // Add borders to tables
+        $(".table").addClass("table-bordered");
+
+        // Enable popovers
+        $('[data-bs-toggle="popover"]').each(function (index, element) {
+          new bootstrap.Popover(element, {
+            boundary: "viewport",
+            html: true,
+            placement: "bottom",
+            trigger: "focus",
+          });
+        });
+
+        // Ensure all elements are styled the same
+        $("h1").addClass("border-bottom fw-bold h2 mb-3 pb-2 pt-4");
+        $("h2").addClass("fw-bold h3");
+
+        // Ensure last heading can be anchored atop page
+        $(window).resize(function () {
+          const top = $("h1").last().offset().top;
+          const margin = $(window).height() - ($("body").outerHeight() - top);
+          $("body").css("margin-bottom", Math.max(0, Math.ceil(margin)) + "px");
+        });
+        $(window).trigger("resize");
+
+        // Reveal body
+        $("body").removeClass("invisible");
+      });
+    </script>
+
+    <style>
+      /* Style popovers */
+      .popover {
+        font-family: inherit;
+        max-width: 100%;
+      }
+
+      /* Wrap long words (and URLs, whether linked or not), especially on mobile,
+            but not in buttons and not in tables, which should instead scroll horizontally */
+      * {
+        word-break: break-word;
+      }
+      button,
+      table * {
+        word-break: normal;
+      }
+
+      /* Remove underlining */
+      a {
+        text-decoration: none;
+      }
+      a:hover {
+        text-decoration: underline;
+      }
+      nav a:hover {
+        text-decoration: none;
+      }
+
+      /* Match Gmail's yellow */
+      a[data-bs-toggle="popover"] {
+        border-bottom: 2px solid rgb(252, 237, 193);
+        box-shadow: inset 0 -2px 0 rgb(252, 237, 193);
+        cursor: help;
+      }
+      a[data-bs-toggle="popover"]:hover {
+        background-color: rgb(252, 237, 193);
+      }
+
+      /* Match pre tags */
+      code {
+        color: inherit;
+      }
+
+      /* A la Jekyll theme */
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+
+      /* Don't italicize */
+      dl dt {
+        font-style: normal;
+      }
+
+      /* Don't fill viewport */
+      .table {
+        width: inherit;
+      }
+
+      td,
+      th {
+        border: 1px solid rgb(228, 228, 228);
+        padding: 8px;
+      }
+
+      table {
+        margin-bottom: 15px;
+      }
+
+      h2 {
+        font-size: 1em !important;
+      }
+
+      ul {
+        padding-left: 30px !important;
+        list-style-type: disc !important;
+      }
+    </style>
+
+    <style>
+      /* Don't display */
+      .filtered,
+      .mismatched {
+        display: none;
+      }
+
+      /* No bullets */
+      ul {
+        list-style-type: none;
+        padding-left: 0;
+      }
+
+      pre {
+        padding: 20px;
+      }
+    </style>
+
+    <title>CS50 Manual do Programador</title>
+  </head>
+
+  <body class="font-monospace invisible pb-5">
+    <nav class="bg-dark navbar navbar-dark navbar-expand-xl px-4">
+      <a class="navbar-brand" href="/manual">CS50 Manual do Programador</a>
+    </nav>
+
+    <div class="container-fluid mt-2 px-4">
+      
+
+<h1><a href="#nome">NOME</a></h1>
+<p>ispunct - verifica se um caractere é uma pontuação</p>
+<h1><a href="#sinopse">SINOPSE</a></h1>
+<h2>Arquivo de Cabeçalho</h2>
+<pre><code>#include &lt;ctype.h&gt;
+</code></pre>
+<h2>Protótipo</h2>
+<pre><code>int ispunct(char c);
+</code></pre>
+<p>Pense nessa função como recebendo um <code>char</code> como entrada.</p>
+<h1><a href="#descrição">DESCRIÇÃO</a></h1>
+<p>Essa função verifica se <code>c</code> é um sinal de pontuação (por exemplo, <code>'.'</code>, ou <code>','</code>, ou <code>'!'</code>, etc.) ou não.</p>
+<h1><a href="#valor-de-retorno">VALOR DE RETORNO</a></h1>
+<p>Essa função retorna um <code>int</code> diferente de zero se <code>c</code> for uma pontuação e <code>0</code> se <code>c</code> não for uma pontuação.</p>
+<h1><a href="#exemplo">EXEMPLO</a></h1>
+<pre><code>#include &lt;cs50.h&gt;
+#include &lt;ctype.h&gt;
+#include &lt;stdio.h&gt;
+
+int main(void)
+{
+    char c = get_char("Input: ");
+    if (ispunct(c))
+    {
+        printf("Sua entrada é uma pontuação.\n");
+    }
+    else
+    {
+        printf("Sua entrada não é uma pontuação.\n");
+    }
+}
+</code></pre>
+
+
+    </div>
+  </body>
+</html>

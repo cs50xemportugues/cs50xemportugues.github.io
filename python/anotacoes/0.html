@@ -1,0 +1,977 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<h1>Aula 0</h1>
+<ul>
+<li>
+<p><a href="#criando-c%C3%B3digo-com-python">Criando Código com Python</a></p>
+</li>
+<li>
+<p><a href="#fun%C3%A7%C3%B5es">Funções</a></p>
+</li>
+<li>
+<p><a href="#bugs">Bugs</a></p>
+</li>
+<li>
+<p><a href="#melhorando-seu-primeiro-programa-python">Melhorando seu Primeiro Programa Python</a></p>
+<ul>
+<li><a href="#vari%C3%A1veis">Variáveis</a></li>
+<li><a href="#coment%C3%A1rios">Comentários</a></li>
+<li><a href="#pseudoc%C3%B3digo">Pseudocódigo</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#melhorando-ainda-mais-seu-primeiro-programa-python">Melhorando Ainda Mais seu Primeiro Programa Python</a></p>
+</li>
+<li>
+<p><a href="#strings-e-par%C3%A2metros">Strings e Parâmetros</a></p>
+<ul>
+<li><a href="#um-pequeno-problema-com-aspas">Um pequeno problema com aspas</a></li>
+</ul>
+</li>
+<li>
+<p><a href="#formata%C3%A7%C3%A3o-de-strings">Formatação de Strings</a></p>
+</li>
+<li>
+<p><a href="#mais-sobre-strings">Mais sobre Strings</a></p>
+</li>
+<li>
+<p><a href="#n%C3%BAmeros-inteiros-ou-int">Números Inteiros ou int</a></p>
+</li>
+<li>
+<p><a href="#legibilidade-%C3%A9-importante">Legibilidade é Importante</a></p>
+</li>
+<li>
+<p><a href="#conceitos-b%C3%A1sicos-de-n%C3%BAmeros-de-ponto-flutuante">Conceitos Básicos de Números de Ponto Flutuante</a></p>
+</li>
+<li>
+<p><a href="#mais-sobre-n%C3%BAmeros-de-ponto-flutuante">Mais sobre Números de Ponto Flutuante</a></p>
+</li>
+<li>
+<p><a href="#def">Def</a></p>
+</li>
+<li>
+<p><a href="#retornando-valores">Retornando Valores</a></p>
+</li>
+<li>
+<p><a href="#resumindo">Resumindo</a>## Criando código com Python</p>
+</li>
+<li>
+<p>VS Code é um tipo especial de editor de texto chamado compilador. Na parte superior, você verá um editor de texto e, na parte inferior, uma janela de terminal onde você pode executar comandos.</p>
+</li>
+<li>
+<p>No terminal, você pode executar <code>code hello.py</code> para começar a codificar.</p>
+</li>
+<li>
+<p>No editor de texto acima, digite <code>print(&quot;olá, mundo&quot;)</code>. Este é um programa canônico famoso que quase todos os programadores escrevem durante seu processo de aprendizado.</p>
+</li>
+<li>
+<p>Na janela do terminal, você pode executar comandos. Para executar este programa, você precisa mover seu cursor para o fundo da tela, clicando na janela do terminal. Agora você pode digitar um segundo comando na janela do terminal. Ao lado do símbolo de dólar, digite <code>python hello.py</code> e pressione a tecla enter no seu teclado.</p>
+</li>
+<li>
+<p>Lembre-se, os computadores realmente só entendem zeros e uns. Portanto, quando você executa <code>python hello.py</code>, o Python interpretará o texto que você criou em <code>hello.py</code> e o traduzirá para zeros e uns que o computador possa entender.</p>
+</li>
+<li>
+<p>O resultado da execução do programa <code>python hello.py</code> é <code>olá, mundo</code>.</p>
+</li>
+<li>
+<p>Parabéns! Você acabou de criar seu primeiro programa.## Funções</p>
+</li>
+<li>
+<p>Funções são verbos ou ações que o computador ou a linguagem de programação já saberá como executar.</p>
+</li>
+<li>
+<p>No seu programa <code>hello.py</code>, a função <code>print</code> sabe como imprimir na tela do terminal.</p>
+</li>
+<li>
+<p>A função <code>print</code> recebe argumentos. Neste caso, <code>&quot;olá, mundo&quot;</code> são os argumentos que a função <code>print</code> recebe.## Erros</p>
+</li>
+<li>
+<p>Erros são uma parte natural da programação. São erros, problemas para você resolver! Não desanime! Isso faz parte do processo de se tornar um ótimo programador.</p>
+</li>
+<li>
+<p>Imagine em nosso programa <code>hello.py</code> que acidentalmente digitamos <code>print(&quot;olá, mundo&quot;</code> e perceba que esquecemos o <code>)</code> final necessário pelo compilador. Se eu cometer esse erro de propósito, você verá que o compilador exibirá um erro na janela do terminal!</p>
+</li>
+<li>
+<p>Frequentemente, as mensagens de erro informarão sobre seu erro e fornecerão pistas sobre como corrigi-lo. No entanto, haverá muitas vezes em que o compilador não será tão útil.## Melhorando seu Primeiro Programa em Python</p>
+</li>
+<li>
+<p>Podemos personalizar seu primeiro programa em Python.</p>
+</li>
+<li>
+<p>Em nosso editor de texto no arquivo <code>hello.py</code>, podemos adicionar outra função. <code>input</code> é uma função que recebe um prompt como argumento. Podemos editar nosso código para dizer</p>
+<pre><code>input(&quot;Qual é o seu nome? &quot;)
+print(&quot;olá, mundo&quot;)
+</code></pre>
+</li>
+<li>
+<p>Essa edição sozinha, no entanto, não permitirá que seu programa exiba o que o usuário insere. Para isso, precisaremos apresentar a você as variáveis.</p>
+</li>
+</ul>
+<h3>Variáveis</h3>
+<ul>
+<li>
+<p>Uma variável é apenas um contêiner para um valor dentro do seu próprio programa.</p>
+</li>
+<li>
+<p>Em seu programa, você pode introduzir sua própria variável editando para que ele leia</p>
+<pre><code>nome = input(&quot;Qual é o seu nome? &quot;)
+print(&quot;olá, mundo&quot;)
+</code></pre>
+<p>Observe que o sinal <code>=</code> no meio de <code>nome = input(&quot;Qual é o seu nome? &quot;)</code> tem um papel especial na programação. Esse sinal de igual literalmente atribui o que está à direita ao que está à esquerda. Portanto, o valor retornado por <code>input(&quot;Qual é o seu nome? &quot;)</code> é atribuído a <code>nome</code>.</p>
+</li>
+<li>
+<p>Se você editar seu código como a seguir, notará um erro</p>
+<pre><code>nome = input(&quot;Qual é o seu nome? &quot;)
+print(&quot;olá, nome&quot;)
+</code></pre>
+</li>
+<li>
+<p>O programa retornará <code>olá, nome</code> na janela do terminal, independentemente do que o usuário digitar.</p>
+</li>
+<li>
+<p>Ao editar ainda mais nosso código, você poderia digitar</p>
+<pre><code>nome = input(&quot;Qual é o seu nome? &quot;)
+print(&quot;olá,&quot;)
+print(nome)
+</code></pre>
+</li>
+<li>
+<p>O resultado na janela do terminal será</p>
+<pre><code>Qual é o seu nome? David
+olá
+David
+</code></pre>
+</li>
+<li>
+<p>Estamos nos aproximando do resultado que pretendemos!</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/datatypes.html">tipos de dados</a>.</p>
+</li>
+</ul>
+<h3>Comentários</h3>
+<ul>
+<li>
+<p>Comentários são uma maneira para os programadores rastrearem o que estão fazendo em seus programas e até informarem aos outros sobre suas intenções para um bloco de código. Em resumo, eles são notas para você mesmo e para os outros que verão seu código!</p>
+</li>
+<li>
+<p>Você pode adicionar comentários ao seu programa para poder ver o que seu programa está fazendo. Você pode editar seu código da seguinte maneira:</p>
+<pre><code># Pergunte ao usuário qual é o seu nome
+nome = input(&quot;Qual é o seu nome? &quot;)
+print(&quot;olá,&quot;)
+print(nome)
+</code></pre>
+</li>
+<li>
+<p>Comentários também podem servir como uma lista de tarefas para você.</p>
+</li>
+</ul>
+<h3>Pseudocódigo</h3>
+<ul>
+<li>
+<p>Pseudocódigo é um tipo importante de comentário que se torna um tipo especial de lista de tarefas, especialmente quando você não sabe como realizar uma tarefa de programação. Por exemplo, em seu código, você pode editar o código da seguinte maneira:</p>
+<pre><code># Pergunte ao usuário qual é o seu nome
+nome = input(&quot;Qual é o seu nome? &quot;)
+
+# Imprima olá
+print(&quot;olá,&quot;)
+
+# Imprima o nome inserido
+print(nome)## Melhorando ainda mais o seu primeiro programa Python
+</code></pre>
+</li>
+<li>
+<p>Podemos editar ainda mais nosso código da seguinte maneira:</p>
+<pre><code># Pergunte ao usuário o seu nome
+name = input(&quot;Qual é o seu nome? &quot;)
+
+# Imprima oi e o nome inserido
+print(&quot;oi, &quot; + name)
+</code></pre>
+</li>
+<li>
+<p>Acontece que algumas funções recebem muitos argumentos.</p>
+</li>
+<li>
+<p>Podemos usar uma vírgula <code>,</code> para passar vários argumentos editando o nosso código da seguinte maneira:</p>
+<pre><code># Pergunte ao usuário o seu nome
+name = input(&quot;Qual é o seu nome? &quot;)
+
+# Imprima oi e o nome inserido
+print(&quot;oi,&quot;, name)
+</code></pre>
+<p>A saída no terminal, se digitarmos &quot;David&quot;, seria <code>oi, David</code>. Sucesso.## Strings e Parâmetros</p>
+</li>
+<li>
+<p>Uma string, conhecida como <code>str</code> em Python, é uma sequência de texto.</p>
+</li>
+<li>
+<p>Retornando um pouco em nosso código para o seguinte, houve um efeito visual de ter o resultado aparecendo em várias linhas:</p>
+<pre><code># Pergunte ao usuário o seu nome
+name = input(&quot;Qual é o seu nome? &quot;)
+print(&quot;olá,&quot;)
+print(name)
+</code></pre>
+</li>
+<li>
+<p>As funções recebem argumentos que influenciam em seu comportamento. Se olharmos a documentação para <a href="https://docs.python.org/3/library/functions.html#print"><code>print</code></a>, você notará que podemos aprender muito sobre os argumentos que a função print recebe.</p>
+</li>
+<li>
+<p>Ao olhar essa documentação, você aprenderá que a função print inclui automaticamente um trecho de código <code>end=&#x27;\n&#x27;</code>. Este <code>\\n</code> indica que a função print criará automaticamente uma quebra de linha ao ser executada. A função print recebe um argumento chamado <code>end</code> e o padrão é criar uma nova linha.</p>
+</li>
+<li>
+<p>No entanto, tecnicamente podemos fornecer um argumento para <code>end</code> nós mesmos para que uma nova linha não seja criada!</p>
+</li>
+<li>
+<p>Podemos modificar nosso código da seguinte forma:</p>
+<pre><code># Pergunte ao usuário o seu nome
+name = input(&quot;Qual é o seu nome? &quot;)
+print(&quot;olá,&quot;, end=&quot;&quot;)
+print(name)
+</code></pre>
+<p>Ao fornecer <code>end=&quot;&quot;</code>, estamos substituindo o valor padrão de <code>end</code> para que ele nunca crie uma nova linha após essa primeira declaração de print. Fornecendo o nome como &quot;David&quot;, a saída na janela do terminal será <code>olá, David</code>.</p>
+</li>
+<li>
+<p>Portanto, parâmetros são argumentos que podem ser passados para uma função.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/functions.html#print"><code>print</code></a>.</p>
+</li>
+</ul>
+<h3>Um pequeno problema com aspas</h3>
+<ul>
+<li>
+<p>Observe como adicionar aspas como parte da sua string é desafiador.</p>
+</li>
+<li>
+<p><code>print(&quot;olá,&quot;friend&quot;&quot;)</code> não funcionará e o compilador exibirá um erro.</p>
+</li>
+<li>
+<p>Geralmente, existem duas abordagens para corrigir isso. Primeiro, você pode simplesmente alterar as aspas para aspas simples.</p>
+</li>
+<li>
+<p>Outra abordagem mais usada seria usar o código <code>print(&quot;olá, &quot;amigo&quot;&quot;)</code>. As barras invertidas informam ao compilador que o caractere seguinte deve ser considerado uma aspa na string e evitam um erro do compilador.## Formatação de Strings</p>
+</li>
+<li>
+<p>Provavelmente a maneira mais elegante de usar strings seria da seguinte forma:</p>
+<pre><code># Pergunte ao usuário o seu nome
+nome = input(&quot;Qual é o seu nome? &quot;)
+print(f&quot;olá, {nome}&quot;)
+</code></pre>
+<p>Repare no <code>f</code> em <code>print(f&quot;olá, {nome}&quot;)</code>. Esse <code>f</code> é um indicador especial para o Python tratar essa string de maneira especial, diferente das abordagens anteriores que foram ilustradas nesta aula. Espera-se que você use esse estilo de strings com frequência durante este curso.## Mais sobre strings</p>
+</li>
+<li>
+<p>Você nunca deve esperar que seu usuário coopere como esperado. Portanto, você precisará garantir que a entrada do usuário seja corrigida ou verificada.</p>
+</li>
+<li>
+<p>Descobriu-se que as strings têm a capacidade de remover espaços em branco de uma string.</p>
+</li>
+<li>
+<p>Utilizando o método <code>strip</code> em <code>name</code> como <code>name = name.strip()</code>, ele removerá todos os espaços em branco à esquerda e à direita da entrada do usuário. Você pode modificar seu código para ser:</p>
+<pre><code># Pergunte ao usuário o nome deles
+name = input(&quot;Qual é o seu nome? &quot;)
+
+# Remova os espaços em branco da string
+name = name.strip()
+
+# Imprima a saída
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Ao executar novamente este programa, independentemente do número de espaços que você digitar antes ou depois do nome, ele removerá todos os espaços em branco.</p>
+</li>
+<li>
+<p>Usando o método <code>title</code>, ele transformará o nome do usuário em Caixa Alta:</p>
+<pre><code># Pergunte ao usuário o nome deles
+name = input(&quot;Qual é o seu nome? &quot;)
+
+# Remova os espaços em branco da string
+name = name.strip()
+
+# Coloque a primeira letra de cada palavra em caixa alta
+name = name.title()
+
+# Imprima a saída
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+</li>
+<li>
+<p>Neste ponto, você provavelmente está cansado de digitar <code>python</code> repetidamente na janela do terminal. Você pode usar a seta para cima do seu teclado para recobrar os comandos mais recentes que você digitou no terminal.</p>
+</li>
+<li>
+<p>Observe que você pode modificar seu código para ser mais eficiente:</p>
+<pre><code># Pergunte ao usuário o nome deles
+name = input(&quot;Qual é o seu nome? &quot;)
+
+# Remova os espaços em branco da string e coloque a primeira letra de cada palavra em caixa alta
+name = name.strip().title()
+
+# Imprima a saída
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Isso cria o mesmo resultado que seu código anterior.</p>
+</li>
+<li>
+<p>Podemos ir ainda mais longe!</p>
+<pre><code># Pergunte ao usuário o nome deles, remova os espaços em branco da string e coloque a primeira letra de cada palavra em caixa alta
+name = input(&quot;Qual é o seu nome? &quot;).strip().title()
+
+# Imprima a saída
+print(f&quot;olá, {name}&quot;)
+</code></pre>
+</li>
+<li>
+<p>Você pode aprender mais sobre strings na documentação do Python em <a href="https://docs.python.org/3/library/stdtypes.html#str"><code>str</code></a>## Inteiros ou int</p>
+</li>
+<li>
+<p>Em Python, um inteiro é referido como <code>int</code>.</p>
+</li>
+<li>
+<p>No mundo da matemática, estamos familiarizados com os operadores +, -, *, / e %. O último operador <code>%</code> ou operador de módulo pode não ser muito familiar para você.</p>
+</li>
+<li>
+<p>Você não precisa usar a janela do editor de texto no seu compilador para executar código Python. No seu terminal, você pode executar <code>python</code> sozinho. Será apresentado <code>&gt;&gt;&gt;</code> na janela do terminal. Você pode então executar código ao vivo e interativo. Você pode digitar <code>1+1</code> e ele executará esse cálculo. Este modo não será comumente usado durante este curso.</p>
+</li>
+<li>
+<p>Abrindo o VS Code novamente, podemos digitar <code>code calculator.py</code> no terminal. Isso criará um novo arquivo no qual criaremos nossa própria calculadora.</p>
+</li>
+<li>
+<p>Primeiro, podemos declarar algumas variáveis.</p>
+<pre><code>x = 1
+y = 2
+
+z = x + y
+
+print(z)
+</code></pre>
+<p>Naturalmente, quando executamos <code>python calculator.py</code>, obtemos o resultado na janela do terminal de <code>3</code>. Podemos tornar isso mais interativo usando a função <code>input</code>.</p>
+<pre><code>x = input(&quot;Qual é o valor de x? &quot;)
+y = input(&quot;Qual é o valor de y? &quot;)
+
+z = x + y
+
+print(z)
+</code></pre>
+</li>
+<li>
+<p>Executando esse programa, descobrimos que a saída está incorreta, sendo <code>12</code>. Por que isso pode ser?</p>
+</li>
+<li>
+<p>Anteriormente, vimos como o sinal <code>+</code> concatena duas strings. Porque a entrada do teclado do seu computador entra no compilador como texto, ela é tratada como uma string. Portanto, precisamos converter essa entrada de string para um inteiro. Podemos fazer isso da seguinte maneira:</p>
+<pre><code>x = input(&quot;Qual é o valor de x? &quot;)
+y = input(&quot;Qual é o valor de y? &quot;)
+
+z = int(x) + int(y)
+
+print(z)
+</code></pre>
+<p>O resultado agora está correto. O uso de <code>int(x)</code> é chamado de &quot;casting&quot;, onde um valor é temporariamente alterado de um tipo de variável (neste caso, uma string) para outro (aqui, um inteiro).</p>
+</li>
+<li>
+<p>Podemos melhorar ainda mais nosso programa da seguinte maneira:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+y = int(input(&quot;Qual é o valor de y? &quot;))
+
+print(x + y)
+</code></pre>
+<p>Isso ilustra que você pode executar funções em funções. A função mais interna é executada primeiro e, em seguida, a externa é executada. Primeiro, a função <code>input</code> é executada. Em seguida, a função <code>int</code>.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/pt-br/3/library/functions.html?highlight=float#int"><code>int</code></a>.## Legibilidade em primeiro lugar</p>
+</li>
+<li>
+<p>Ao decidir sobre sua abordagem para uma tarefa de codificação, lembre-se de que é possível fazer um argumento razoável para muitas abordagens para o mesmo problema.</p>
+</li>
+<li>
+<p>Independentemente da abordagem que você escolher para uma tarefa de programação, lembre-se de que seu código deve ser legível. Você deve usar comentários para dar a si mesmo e a outros pistas sobre o que o seu código está fazendo. Além disso, você deve criar código de uma maneira que seja legível.## Conceitos básicos de float</p>
+</li>
+<li>
+<p>Um valor de ponto flutuante é um número real que contém um ponto decimal, como <code>0.52</code>.</p>
+</li>
+<li>
+<p>Você pode alterar seu código para suportar floats da seguinte maneira:</p>
+<pre><code>x = float(input(&quot;Qual é o valor de x? &quot;))
+y = float(input(&quot;Qual é o valor de y? &quot;))
+
+print(x + y)
+</code></pre>
+<p>Essa alteração permite que o usuário insira <code>1.2</code> e <code>3.4</code> para apresentar um total de <code>4.6</code>.</p>
+</li>
+<li>
+<p>Vamos imaginar, porém, que você queira arredondar o total para o inteiro mais próximo. Ao olhar a documentação do Python para a função <code>round</code>, você verá que os argumentos disponíveis são <code>round(número[n, ndígitos])</code>. Esses colchetes indicam que algo opcional pode ser especificado pelo programador. Portanto, você poderia fazer <code>round(n)</code> para arredondar um dígito para o inteiro mais próximo. Alternativamente, você poderia codificar da seguinte maneira:</p>
+<pre><code># Obtenha o input do usuário
+x = float(input(&quot;Qual é o valor de x? &quot;))
+y = float(input(&quot;Qual é o valor de y? &quot;))
+
+# Crie um resultado arredondado
+z = round(x + y)
+
+# Imprima o resultado
+print(z)
+</code></pre>
+<p>A saída será arredondada para o inteiro mais próximo.</p>
+</li>
+<li>
+<p>E se quisermos formatar a saída de números longos? Por exemplo, ao invés de ver <code>1000</code>, você pode querer ver <code>1,000</code>. Você pode modificar seu código da seguinte maneira:</p>
+<pre><code># Obtenha o input do usuário
+x = float(input(&quot;Qual é o valor de x? &quot;))
+y = float(input(&quot;Qual é o valor de y? &quot;))
+
+# Crie um resultado arredondado
+z = round(x + y)
+
+# Imprima o resultado formatado
+print(f&quot;{z:,}&quot;)
+</code></pre>
+<p>Embora um tanto quanto críptico, esse <code>print(f&quot;{z:,}&quot;)</code> cria um cenário em que a saída <code>z</code> terá vírgulas, fazendo com que o resultado pareça <code>1,000</code> ou <code>2,500</code>.## Mais sobre Floats</p>
+</li>
+<li>
+<p>Como podemos arredondar valores de ponto flutuante? Primeiro, modifique seu código da seguinte maneira:</p>
+<pre><code># Obtenha a entrada do usuário
+x = float(input(&quot;Qual é o valor de x? &quot;))
+y = float(input(&quot;Qual é o valor de y? &quot;))
+
+# Calcule o resultado
+z = x / y
+
+# Imprima o resultado
+print(z)
+</code></pre>
+<p>Ao inserir <code>2</code> como valor de x e <code>3</code> como valor de y, o resultado z é <code>0.6666666666</code>, que parece ser infinito, como poderíamos esperar.</p>
+</li>
+<li>
+<p>Vamos imaginar que queremos arredondar para baixo. Podemos modificar o código da seguinte forma:</p>
+<pre><code># Obtenha a entrada do usuário
+x = float(input(&quot;Qual é o valor de x? &quot;))
+y = float(input(&quot;Qual é o valor de y? &quot;))
+
+# Calcule o resultado e arredonde
+z = round(x / y, 2)
+
+# Imprima o resultado
+print(z)
+</code></pre>
+<p>Como podemos esperar, isso irá arredondar o resultado para as duas casas decimais mais próximas.</p>
+</li>
+<li>
+<p>Também podemos usar <code>fstring</code> para formatar a saída da seguinte forma:</p>
+<pre><code># Obtenha a entrada do usuário
+x = float(input(&quot;Qual é o valor de x? &quot;))
+y = float(input(&quot;Qual é o valor de y? &quot;))
+
+# Calcule o resultado
+z = x / y
+
+# Imprima o resultado
+print(f&quot;{z:.2f}&quot;)
+</code></pre>
+<p>Esse código críptico <code>fstring</code> exibe o mesmo resultado que nossa estratégia anterior de arredondamento.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/functions.html?highlight=float#float"><code>float</code></a>.</p>
+</li>
+</ul>
+<h2>Definição</h2>
+<ul>
+<li>
+<p>Não seria bom criar nossas próprias funções?</p>
+</li>
+<li>
+<p>Vamos trazer de volta nosso código final de <code>hello.py</code> digitando <code>code hello.py</code> na janela do terminal. Seu código inicial deve ficar assim:</p>
+<pre><code># Pergunte ao usuário o seu nome, remova os espaços em branco da string e capitaliza a primeira letra de cada palavra
+name = input(&quot;Qual é o seu nome? &quot;).strip().title()
+
+# Imprima a saída
+print(f&quot;Olá, {name}&quot;)
+</code></pre>
+<p>Podemos melhorar nosso código para criar nossa própria função especial que diz &quot;olá&quot; para nós!</p>
+</li>
+<li>
+<p>Apagando todo o nosso código no editor de texto, vamos começar do zero:</p>
+<pre><code>name = input(&quot;Qual é o seu nome? &quot;)
+hello()
+print(name)
+</code></pre>
+<p>Tentando rodar este código, o compilador lançará um erro. Afinal, não há uma função definida para <code>hello</code>.</p>
+</li>
+<li>
+<p>Podemos criar nossa própria função chamada <code>hello</code> da seguinte forma:</p>
+<pre><code>def hello():
+    print(&quot;olá&quot;)
+
+
+name = input(&quot;Qual é o seu nome? &quot;)
+hello()
+print(name)
+</code></pre>
+<p>Observe que tudo abaixo de <code>def hello()</code> está indentado. O Python é uma linguagem indentada. Ele usa a indentação para entender o que faz parte da função acima. Portanto, tudo na função <code>hello</code> deve ser indentado. Quando algo não está indentado, o Python trata como se não estivesse dentro da função <code>hello</code>. Depois de executar <code>python hello.py</code> na janela do terminal, você verá que a saída não é exatamente como você deseja.</p>
+</li>
+<li>
+<p>Podemos aprimorar ainda mais nosso código:</p>
+<pre><code># Crie nossa própria função
+def hello(to):
+    print(&quot;olá,&quot;, to)
+
+
+# Saída usando nossa própria função
+name = input(&quot;Qual é o seu nome? &quot;)
+hello(name)
+</code></pre>
+<p>Aqui, nas primeiras linhas, você está criando sua função <code>hello</code>. Desta vez, no entanto, você está informando ao compilador que esta função recebe um único parâmetro: uma variável chamada <code>to</code>. Portanto, quando você chama <code>hello(name)</code>, o computador passa <code>name</code> para a função <code>hello</code> como <code>to</code>. É assim que passamos valores para funções. Muito útil! Depois de executar <code>python hello.py</code> na janela do terminal, você verá que a saída está muito mais próxima do nosso ideal apresentado anteriormente nesta palestra.</p>
+</li>
+<li>
+<p>Podemos alterar nosso código para adicionar um valor padrão para <code>hello</code>:</p>
+<pre><code># Crie nossa própria função
+def hello(to=&quot;mundo&quot;):
+    print(&quot;Olá,&quot;, to)
+
+
+# Saída usando nossa própria função
+name = input(&quot;Qual é o seu nome? &quot;)
+hello(name)
+
+# Saída sem passar os argumentos esperados
+hello()
+</code></pre>
+<p>Teste o seu código. Observe como o primeiro &quot;olá&quot; se comportará como você esperaria e o segundo &quot;olá&quot;, que não recebe um valor, por padrão imprimirá &quot;olá, mundo&quot;.</p>
+</li>
+<li>
+<p>Não precisamos ter nossa função no início do programa. Podemos movê-la para baixo, mas precisamos informar ao compilador que temos uma função <code>main</code> e uma função <code>hello</code> separada.</p>
+<pre><code>def main():
+
+    # Saída usando nossa própria função
+    name = input(&quot;Qual é o seu nome? &quot;)
+    hello(name)
+
+    # Saída sem passar os argumentos esperados
+    hello()
+
+
+# Crie nossa própria função
+def hello(to=&quot;mundo&quot;):
+    print(&quot;Olá,&quot;, to)
+</code></pre>
+<p>Isso, no entanto, criará um tipo de erro. Se executarmos <code>python hello.py</code>, nada acontecerá! O motivo para isso é que nada neste código está realmente chamando a função <code>main</code> e dando vida ao nosso programa.</p>
+</li>
+<li>
+<p>A seguinte pequena modificação chamará a função <code>main</code> e restaurará nosso programa para ordem de funcionamento:</p>
+<pre><code>def main():
+
+    # Saída usando nossa própria função
+    name = input(&quot;Qual é o seu nome? &quot;)
+    hello(name)
+
+    # Saída sem passar os argumentos esperados
+    hello()
+
+
+# Crie nossa própria função
+def hello(to=&quot;mundo&quot;):
+    print(&quot;Olá,&quot;, to)
+
+
+main()## Retornando Valores
+</code></pre>
+</li>
+<li>
+<p>Você pode imaginar muitos cenários em que não apenas deseja que uma função execute uma ação, mas também retorne um valor de volta para a função principal. Por exemplo, em vez de simplesmente imprimir o cálculo de <code>x + y</code>, você pode querer que uma função retorne o valor desse cálculo para outra parte do seu programa. Chamamos esse &quot;retorno&quot; de um valor de retorno.</p>
+</li>
+<li>
+<p>Voltando ao nosso código <code>calculator.py</code> digitando <code>code calculator.py</code>. Apague todo o código lá. Refaça o código da seguinte forma:</p>
+<pre><code>def main():
+    x = int(input(&quot;Qual é o valor de x? &quot;))
+    print(&quot;O quadrado de x é&quot;, square(x))
+
+
+def square(n):
+    return n * n
+
+
+main()
+</code></pre>
+<p>Efetivamente, <code>x</code> é passado para <code>square</code>. Em seguida, o cálculo de <code>x * x</code> é retornado à função principal.## Resumindo</p>
+</li>
+</ul>
+<p>Através do trabalho desta única palestra, você aprendeu habilidades que irá utilizar inúmeras vezes em seus próprios programas. Você aprendeu sobre...</p>
+<ul>
+<li>Criar seus primeiros programas em Python;</li>
+<li>Funções;</li>
+<li>Bugs;</li>
+<li>Variáveis;</li>
+<li>Comentários;</li>
+<li>Pseudocódigo;</li>
+<li>Strings;</li>
+<li>Parâmetros;</li>
+<li>Strings formatadas;</li>
+<li>Inteiros;</li>
+<li>Princípios de legibilidade;</li>
+<li>Floats;</li>
+<li>Criar suas próprias funções; e</li>
+<li>Valores de retorno.# Computer Science Concepts</li>
+</ul>
+<h1>My Awesome Markdown File</h1>
+<p>Este é um arquivo Markdown incrível que contém informações sobre ciência da computação.</p>
+<h2>Título 1</h2>
+<h3>Subtítulo 1.1</h3>
+<p>Aqui está um exemplo de bloco de código em Python:</p>
+<pre><code class="language-python">def hello_world():
+    print(&quot;Olá, mundo!&quot;)
+
+hello_world()
+</code></pre>
+<h3>Subtítulo 1.2</h3>
+<p>Aqui está uma lista:</p>
+<ul>
+<li>Item 1</li>
+<li>Item 2</li>
+<li>Item 3</li>
+</ul>
+<h2>Título 2</h2>
+<h3>Subtítulo 2.1</h3>
+<p>Aqui está um exemplo de tabela:</p>
+<p>| Coluna 1 | Coluna 2 |
+|----------|----------|
+| Valor 1  | Valor 2  |
+| Valor 3  | Valor 4  |</p>
+<h3>Subtítulo 2.2</h3>
+<p>Esta é uma citação:</p>
+<blockquote>
+<p>&quot;O conhecimento é poder.&quot; - Sir Francis Bacon</p>
+</blockquote>
+<p>Espero que você tenha achado este arquivo Markdown útil!</p>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

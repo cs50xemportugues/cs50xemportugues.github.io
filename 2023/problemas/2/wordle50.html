@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/perguntas_frequentes.html"
+          ></a
+        >
+      </li>
+      -->
+      <!--
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/equipe.html"></a>
+      </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body" style="margin-bottom: 286px">
+          
+<style>.wrong { background-color: red } .right { background-color: green; } .close_ { background-color: yellow; }</style>
+<h1>Wordle50</h1>
+<p>Para este problema, você implementará um programa que se comporta de maneira semelhante ao popular jogo de palavras diário <a href="https://www.nytimes.com/games/wordle/index.html">Wordle</a>.</p>
+<pre><code> $ ./wordle 5
+<span class="right">Isto é Wordle50</span>
+Você tem 6 tentativas para adivinhar a palavra de 5 letras que estou pensando
+Digite uma palavra de 5 letras: crash
+Palpite 1: <span class="close_">c</span><span class="wrong">ra</span><span class="close_">s</span><span class="wrong">h</span>
+Digite uma palavra de 5 letras: scone
+Palpite 2: <span class="right">s</span><span class="close_">c</span><span class="wrong">o</span><span class="close_">n</span><span class="right">e</span>
+Digite uma palavra de 5 letras: since
+Palpite 3: <span class="right">since</span>
+Você ganhou!
+</code></pre>
+<h2>Começando</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da sua janela do terminal, execute  <code>cd</code> sozinho. Você deve ver o &quot;prompt&quot; dela abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/2/wordle.zip
+</code></pre>
+<p>seguido de Enter para baixar um ZIP chamado <code>wordle.zip</code> no seu espaço de código. Tome cuidado para não deixar passar o espaço entre <code>wget</code> e a URL seguinte, ou qualquer outro caractere!</p>
+<p>Agora execute</p>
+<pre><code>unzip wordle.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>wordle</code>. Você não precisa mais do arquivo ZIP, então execute</p>
+<pre><code>rm wordle.zip
+</code></pre>
+<p>e responda com &quot;y&quot; e Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd wordle
+</code></pre>
+<p>seguido de Enter para se mover para dentro (ou seja, abrir) esse diretório. Seu prompt agora deve ser semelhante ao abaixo.</p>
+<pre><code>wordle/ $
+</code></pre>
+<p>Se tudo tiver sido bem sucedido, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e ver um arquivo chamado <code>wordle.c</code>, bem como <code>5.txt</code>, <code>6.txt</code>, <code>7.txt</code> e <code>8.txt</code>. Executar <code>code wordle.c</code> deverá abrir o arquivo onde você digitará seu código para este problema. Caso não tenha sucesso, volte seus passos e veja se consegue determinar onde você errou! Se você tentar compilar o jogo agora, fará sem erros, mas quando você tentar executá-lo, verá esta mensagem de erro:</p>
+<pre><code>Error opening file 0.txt.
+</code></pre>
+<p>No entanto, isso é normal, pois você ainda não implementou parte do código necessário para fazer essa mensagem de erro desaparecer!</p>
+<h2>Background</h2>
+<p>É provável que, se você for um usuário do Facebook, pelo menos um dos seus amigos tenha postado algo parecido com isso, especialmente no início de 2022, quando era a grande tendência:</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/2/wordle50/wordle.png" alt="Wordle results" /></p>
+<p>Se sim, seu amigo jogou Wordle e está compartilhando seus resultados daquele dia! Todos os dias, uma nova &quot;palavra secreta&quot; é escolhida (a mesma para todos) e o objetivo é adivinhar qual a palavra secreta em seis tentativas. Felizmente, dado que há mais de seis palavras de cinco letras na língua inglesa, você pode ter algumas dicas ao longo do caminho, e a imagem acima, na verdade, mostra a progressão do seu amigo por suas suposições, usando essas dicas para tentar chegar a palavra correta. Usando um esquema semelhante ao jogo <a href="https://en.wikipedia.org/wiki/Mastermind_(board_game)">Mastermind</a>, se depois de você adivinhar aquela letra, ela ficar verde, isso significa não só que aquela letra está na palavra secreta daquele dia, mas também na posição correta. Se ficar amarelo, significa que a letra adivinhada aparece <em>em algum lugar</em> na palavra, mas não naquele local específico. Letras que ficam cinzas não estão na palavra e podem ser omitidas em tentativas futuras.</p>
+<p>Vamos terminar de escrever um programa chamado &quot;wordle&quot; que nos permita recriar este jogo e jogá-lo no nosso terminal. Faremos algumas pequenas mudanças no jogo (por exemplo, a maneira como ele lida com uma letra aparecendo duas vezes em uma palavra não é a mesma que o jogo real lida com isso), mas para simplificar, iremos usar texto vermelho ao invés de cinza claro para indicar as letras que não estão na palavra em absoluto. No momento em que o usuário executar o programa, eles devem decidir, fornecendo um argumento de linha de comando, qual é o comprimento da palavra que eles querem adivinhar, entre 5 e 8 letras.</p>
+<p>Aqui estão alguns exemplos de como o programa deve funcionar. Se o usuário omitir um argumento de linha de comando inteiramente:</p>
+<p>$ ./wordle
+Uso: ./wordle tamanho_da_palavra</p>
+<p>Se o usuário fornecer um argumento de linha de comando, mas não estiver na faixa correta:</p>
+<p>$ ./wordle 4
+Erro: o tamanho da palavra deve ser de 5, 6, 7 ou 8</p>
+<p>Veja como o programa pode ser utilizado quando o usuário escolhe 5:</p>
+<p>$ ./wordle 5
+This is WORDLE50
+Você tem 6 tentativas para adivinhar a palavra de 5 letras que estou pensando
+Insira uma palavra de 5 letras:</p>
+<p>Nesse ponto, o usuário deve digitar uma palavra de 5 letras. Claro, o usuário pode ser teimoso, e devemos garantir que eles estejam seguindo as regras:</p>
+<pre><code>$ ./wordle 5
+<span class="right">This is WORDLE50</span>
+Você tem 6 tentativas para adivinhar a palavra de 5 letras que estou pensando
+Insira uma palavra de 5 letras: wordle
+Insira uma palavra de 5 letras: computer
+Insira uma palavra de 5 letras: okay
+Insira uma palavra de 5 letras: games
+Tentativa 1: <span class="wrong">g</span><span class="close_">a</span><span class="wrong">m</span><span class="close_">e</span><span class="wrong">s</span>
+Insira uma palavra de 5 letras:
+</code></pre>
+<p>Observe que não contamos nenhuma dessas tentativas inválidas como tentativas. Mas assim que eles fizeram uma tentativa legítima, a contamos como uma tentativa e informamos o status da palavra. Parece que o usuário tem algumas pistas agora; eles sabem que a palavra contém um <code>a</code> e um <code>e</code> em algum lugar, mas não nos pontos exatos em que aparecem na palavra <code>games</code>. E eles sabem que <code>g</code>, <code>m</code> e <code>s</code> não aparecem na palavra em nenhum lugar, então as tentativas futuras podem omiti-los. Talvez eles tentem, digamos, <code>heart</code> a seguir! ❤️</p>
+<h2>Especificação</h2>
+<p>Projete e implemente um programa, <code>wordle</code>, que conclui a implementação do nosso clone do jogo Wordle50. Você vai notar que algumas das principais partes deste programa já foram escritas para você - você não pode modificar nenhuma dessas partes do programa. Em vez disso, seu trabalho deve ser limitado aos sete TODOS que deixamos para você preencher. Cada um desses itens resolve um problema específico e recomendamos que você os aborde na ordem de 1 a 7. Cada TODO numerado corresponde ao mesmo item na lista abaixo.</p>
+<ol>
+<li>No primeiro TODO, você deve garantir que o programa aceite um único argumento de linha de comando. Vamos chamá-lo de <code>k</code> para discutir. Se o programa não foi executado com um único argumento de linha de comando, você deve imprimir a mensagem de erro como demonstramos acima e retornar 1, encerrando o programa.</li>
+<li>No segundo TODO, você deve garantir que <code>k</code> seja um dos valores aceitáveis (5, 6, 7 ou 8), e armazenar esse valor em <code>wordsize</code>; precisaremos fazer uso disso mais tarde. Se o valor de <code>k</code> não for um desses quatro valores exatamente, você deve imprimir a mensagem de erro como demonstramos acima e retornar 1, encerrando o programa.</li>
+</ol>
+<p>Depois disso, a equipe já escreveu algum código que percorrerá e abrirá a lista de palavras para o comprimento da palavra que o usuário deseja adivinhar e selecionará aleatoriamente uma das 1000 opções disponíveis. Não se preocupe necessariamente em entender todo esse código, pois não é importante para este trabalho. Veremos algo semelhante em uma tarefa posterior, e isso fará muito mais sentido depois! Este é um bom lugar para parar e testar, antes de prosseguir para o próximo TODO, que seu código se comporta como esperado. É sempre mais fácil depurar programas se você fizer isso metodicamente!</p>
+<ol start="3">
+<li>No terceiro TODO, você deve ajudar a defender os usuários teimosos garantindo que seu palpite seja do comprimento correto. Para isso, dedicaremos nossa atenção à função <code>get_guess</code>, que você precisará implementar completamente. Um usuário deve ser solicitado (como via <code>get_string</code>) a digitar uma palavra com <code>k</code> letras (lembre-se de que esse valor é passado como parâmetro para <code>get_guess</code>) e, se fornecerem um palpite do comprimento errado, eles devem ser solicitados novamente (como em <a href="../../1/mario/less/">Mario</a>) até que forneçam exatamente o valor que você espera deles. Atualmente, o código de distribuição não faz isso, então você terá que corrigi-lo! Observe que, ao contrário do Wordle real, nós na verdade não verificamos se o palpite do usuário é uma palavra real, então nesse sentido o jogo é talvez um pouco mais fácil. Todos os palpites neste jogo devem estar em caracteres <strong>minúsculos</strong> e é aceitável supor que o usuário não será tão teimoso a ponto de fornecer algo diferente de caracteres minúsculos ao fazer um palpite. Depois que um palpite legítimo for obtido, ele poderá ser <code>retornado</code>.</li>
+<li>Em seguida, no quarto TODO, precisamos acompanhar a &quot;pontuação&quot; do usuário no jogo. Fazemos isso tanto em uma base por letra - atribuindo uma pontuação de 2 (que definimos como <code>EXACT</code>) para uma letra no lugar correto, 1 (que definimos como <code>CLOSE</code>) para uma letra que está na palavra, mas no lugar errado, ou 0 (que definimos como<code>WRONG</code>), e uma base por palavra, para nos ajudar a detectar quando potencialmente acionamos o final do jogo vencendo. Usaremos as pontuações de letra individuais quando codificarmos as cores de impressão. Para armazenar essas pontuações, precisamos de uma matriz, que chamamos de <code>status</code>. No início do jogo, sem nenhum palpite tendo sido feito, ele deve conter todos os 0s.</li>
+</ol>
+<p>Este é outro bom lugar para parar e testar seu código, especialmente no que diz respeito ao item 3, acima! Você notará que, a esse ponto, quando finalmente inserir um palpite legítimo (ou seja, aquele com o comprimento correto), seu programa provavelmente ficará parecido com o abaixo:</p>
+<pre><code>Input a 5-letter word: computer
+Input a 5-letter word: games
+Guess 1:
+Input a 5-letter word:
+</code></pre>
+<p>Isso é normal, no entanto! Implementar <code>print_word</code> é o TODO número 6, então não devemos esperar que o programa processe esse palpite neste momento. Claro, você sempre pode adicionar chamadas adicionais de <code>printf</code> (apenas certifique-se de removê-las antes de enviar) como parte de sua estratégia de depuração!</p>
+<ol start="5">
+<li>
+<p>O quinto TODO é definitivamente o maior e provavelmente o mais desafiador. Dentro da função <code>check_word</code>, cabe a você comparar cada uma das letras do <code>palpite</code> com cada uma das letras da <code>escolha</code> (que, lembre-se, é a &quot;palavra secreta&quot; para este jogo) e atribuir pontuações. Se as letras corresponderem, atribua 2 pontos <code>EXACT</code> e <code>break</code> no loop - não há necessidade de continuar o loop se você já determinou que a letra está no lugar certo. Tecnicamente, se essa letra aparecer na palavra duas vezes, isso poderá resultar em um pequeno erro, mas corrigir esse erro sobrecarrega um pouco mais esse problema do que queremos agora, por isso vamos aceitar isso como uma característica da nossa versão! Se você descobrir que a letra está na palavra, mas não está no lugar certo, pontue 1 ponto como <code>CLOSE</code>, mas não <code>break</code>! Afinal, aquela letra pode aparecer mais tarde no lugar certo na palavra <code>escolha</code> e, se <code>break</code>mos cedo demais, o usuário nunca saberia disso! Você não precisa definir explicitamente os pontos <code>WRONG</code> (0) aqui, pois você lidou com isso no Step 4. Por fim, você também deve estar somando a pontuação total da palavra quando a souber, porque é isso que essa função deve retornar. Novamente, não tenha medo de usar <code>debug50</code> e / ou <code>printf</code>s conforme necessário para ajudá-lo a descobrir quais são os valores de diferentes variáveis neste ponto - até implementar <code>print_word</code>, abaixo, o programa não oferecerá muito em termos de um checkpoint visual!</p>
+</li>
+<li>
+<p>No sexto TODO, você concluirá a implementação de <code>print_word</code>. Essa função deve verificar os valores com os quais você preencheu a matriz <code>status</code> e imprimir, letra por letra, cada letra do <code>palpite</code> com o código de cor correto. Você pode ter notado algumas (assustadoras!) definições <code>#define</code> no topo do arquivo onde fornecemos uma maneira mais simples de representar o que é chamado de um [código de cor ANSI] (https://en.wikipedia.org/wiki/ANSI_escape_code#Colors), que é basicamente um comando para alterar a cor da fonte do terminal. Você não precisa se preocupar com como implementar esses quatro valores (<code>GREEN</code>,<code> YELLOW</code>, <code>RED</code> e <code>RESET</code>, este último simplesmente retorna à fonte padrão do terminal) ou exatamente o que eles significam; em vez disso, você pode apenas usá-los (o poder da abstração!). Observe também que fornecemos um exemplo no código de distribuição onde imprimimos algum texto verde e depois redefinimos a cor, como parte da introdução do jogo. Consequentemente, você deve se sentir à vontade para usar a linha de código abaixo para se inspirar em como você pode tentar alternar as cores:</p>
+</li>
+</ol>
+<pre><code>printf(GREEN&quot;Este é o WORDLE50&quot;RESET&quot;\n&quot;);
+</code></pre>
+<p>Claro, ao contrário do nosso exemplo, você provavelmente não quer imprimir uma nova linha após cada caractere da palavra (em vez disso, você quer apenas uma nova linha no final, também redefinindo a cor da fonte!), Caso contrário, pode acabar parecendo o abaixo:</p>
+<pre><code>
+Input a 5-letter word: games
+Guess 1: <span class="wrong">g</span>
+<span class="close_">a</span>
+<span class="wrong">m</span>
+<span class="close_">e</span>
+<span class="wrong">s</span>
+Input a 5-letter word:
+</code></pre>
+<ol start="7">
+<li>Por último, o sétimo TODO é apenas uma pequena limpeza antes que o programa termine. Se o loop principal tiver terminado normalmente, porque o usuário ficou sem palpites, ou porque saímos dele por ter conseguido acertar a palavra exatamente, é hora de informar o usuário sobre o resultado do jogo. Se o usuário ganhar o jogo, um simples <code>Você ganhou!</code> é suficiente para imprimir aqui. Caso contrário, você deve imprimir uma mensagem informando ao usuário qual era a palavra-alvo, para que saibam que o jogo estava sendo honesto com eles (e para que você tenha um meio de depurar se olhar para trás e perceber que o seu código estava fornecendo pistas inadequadas ao longo do caminho!)&quot;.</li>
+</ol>
+<h2>Como Testar Seu Código</h2>
+<p>Execute o código abaixo para avaliar a correção do seu código usando <code>check50</code>. Mas certifique-se de compilá-lo e testá-lo você mesmo!</p>
+<pre><code>check50 cs50/problems/2023/x/wordle
+</code></pre>
+<p>Execute o código abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 wordle.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>No seu terminal, execute o código abaixo para submeter seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/wordle&quot;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
