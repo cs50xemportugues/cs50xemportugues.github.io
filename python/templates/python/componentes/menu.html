@@ -1,8 +1,195 @@
 <aside class="col-md" style="background-color: {{config['ASIDE_BG_COLOR']}}">
   <header>
     <h1 data-id="this-is-cs50">
-      <a href="{{ url_for('python.index') }}">Curso de Introdução à Programação com Python do CS50</a>
+      <a href="{{ url_for('python.index') }}"
+        >{{config['LANGUAGE_MENU_PYTHON'].title}}</a
+      >
     </h1>
   </header>
 
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+  <!--
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+   
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week0') }}"
+          >{{config['LANGUAGE_MENU_PYTHON'].week}} 0
+          <span class="semana-titulo"
+            >{{config['LANGUAGE_MENU_PYTHON'].week0}}</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week1') }}"
+          >{{config['LANGUAGE_MENU'].week}} 1
+          <span class="semana-titulo"
+            >{{config['LANGUAGE_MENU_PYTHON'].week1}}</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week2') }}"
+          >{{config['LANGUAGE_MENU'].week}} 2
+          <span class="semana-titulo"
+            >{{config['LANGUAGE_MENU_PYTHON'].week2}}</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week3') }}"
+          >{{config['LANGUAGE_MENU'].week}} 3
+          <span class="semana-titulo"
+            >{{config['LANGUAGE_MENU_PYTHON'].week3}}</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week4') }}"
+          >{{config['LANGUAGE_MENU'].week}} 4
+          <span class="semana-titulo"
+            >{{config['LANGUAGE_MENU_PYTHON'].week4}}</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week5') }}"
+          >{{config['LANGUAGE_MENU'].week}} 5
+          <span class="semana-titulo"
+            >{{config['LANGUAGE_MENU_PYTHON'].week5}}</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week6') }}"
+          >{{config['LANGUAGE_MENU'].week}} 6
+          <span class="semana-titulo"
+            >{{config['LANGUAGE_MENU_PYTHON'].week6}}</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week7') }}"
+          >{{config['LANGUAGE_MENU'].week}} 7
+          <span class="semana-titulo"
+            >{{config['LANGUAGE_MENU_PYTHON'].week7}}</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week8') }}"
+          >{{config['LANGUAGE_MENU'].week}} 8
+          <span class="semana-titulo"
+            >{{config['LANGUAGE_MENU_PYTHON'].week8}}</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('python.weeks.week9') }}"
+          >{{config['LANGUAGE_MENU'].week}} 9
+          <span class="semana-titulo"
+            >Et Cetera{{config['LANGUAGE_MENU_PYTHON'].week9}}</span
+          ></a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.honesty') }}"
+          >{{config['LANGUAGE_MENU'].honesty}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.certificate') }}"
+          >{{config['LANGUAGE_MENU'].certificate}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('cs50x.syllabus') }}"
+          >{{config['LANGUAGE_MENU'].syllabus}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >{{config['LANGUAGE_MENU'].sqlite_browser}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >{{config['LANGUAGE_MENU'].adminer}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >{{config['LANGUAGE_MENU'].python_documentation}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="{{ url_for('cs50x.thanks') }}"
+        >{{config['LANGUAGE_MENU'].thanks}}</a
+      >
+    </p>
+  </nav>
+-->
+
+  <footer></footer>
 </aside>

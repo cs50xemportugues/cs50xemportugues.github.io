@@ -49,7 +49,7 @@
         <a href="{{ url_for('cs50x.weeks.week2') }}"
           >{{config['LANGUAGE_MENU'].week}} 2
           <span class="semana-titulo"
-            >{{config['LANGUAGE_MENU'].week2}}</span
+            >{{config['LANGUAGE_MENU_CS50X'].week2}}</span
           ></a
         >
       </li>
@@ -59,7 +59,7 @@
         <a href="{{ url_for('cs50x.weeks.week3') }}"
           >{{config['LANGUAGE_MENU'].week}} 3
           <span class="semana-titulo"
-            >{{config['LANGUAGE_MENU'].week3}}</span
+            >{{config['LANGUAGE_MENU_CS50X'].week3}}</span
           ></a
         >
       </li>
@@ -69,7 +69,7 @@
         <a href="{{ url_for('cs50x.weeks.week4') }}"
           >{{config['LANGUAGE_MENU'].week}} 4
           <span class="semana-titulo"
-            >{{config['LANGUAGE_MENU'].week4}}</span
+            >{{config['LANGUAGE_MENU_CS50X'].week4}}</span
           ></a
         >
       </li>
@@ -79,7 +79,7 @@
         <a href="{{ url_for('cs50x.weeks.week5') }}"
           >{{config['LANGUAGE_MENU'].week}} 5
           <span class="semana-titulo"
-            >{{config['LANGUAGE_MENU'].week5}}</span
+            >{{config['LANGUAGE_MENU_CS50X'].week5}}</span
           ></a
         >
       </li>
@@ -154,6 +154,12 @@
       </li>
       <li data-marker="*">
         <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="{{ url_for('app.estilo') }}"
+          >{{config['LANGUAGE_MENU'].style}}</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
         <a href="{{ url_for('cs50x.honesty') }}"
           >{{config['LANGUAGE_MENU'].honesty}}</a
         >
@@ -168,14 +174,14 @@
       <li data-marker="*">
         <span class="fa-li"><i class="fas fa-circle"></i></span>
         <a href="{{ url_for('cs50x.faqs') }}"
-          >{{config['LANGUAGE_MENU'].faqs}}</a
+          >{{config['LANGUAGE_MENU_CS50X'].faqs}}</a
         >
       </li>
       -->
       <!--
       <li data-marker="*">
         <span class="fa-li"><i class="fas fa-circle"></i></span>
-        <a href="{{ url_for('cs50x.staff') }}">{{config['LANGUAGE_MENU'].staff}}</a>
+        <a href="{{ url_for('cs50x.staff') }}">{{config['LANGUAGE_MENU_CS50X'].staff}}</a>
       </li>-->
       <li data-marker="*">
         <span class="fa-li"><i class="fas fa-circle"></i></span>

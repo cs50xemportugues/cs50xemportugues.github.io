@@ -1,77 +1,94 @@
 menu = {
-    "title": "This is CS50x",
-    "intro": "Harvard University's computer science course",
-    "week": "Week",
-    "week2": "Arrays",
-    "week3": "Algorithms",
-    "week4": "Memory",
-    "week5": "Data Structures",
-    "cybersecurity": "Cybersecurity",
-    "seminars": "Seminars",
-    "project": "Final Project",
-    "honesty": "Academic Honesty",
-    "certificate": "CS50 Certificate",
-    "faqs": "FAQs",
+    "title": "Este é o CS50x",
+    "intro": "O curso de Ciências da Computação da Universidade de Harvard",
+    "week": "Semana",
+    "week2": "Vetores",
+    "week3": "Algoritmos",
+    "week4": "Memória",
+    "week5": "Estruturas de Dados",
+    "cybersecurity": "Cibersegurança",
+    "seminars": "Seminários",
+    "project": "Projeto Final",
+    "honesty": "Honestidade Acadêmica",
+    "certificate": "Certificado CS50",
+    "faqs": "Perguntas Frequentes",
     "gradebook": "Gradebook",
-    "staff": "Staff",
-    "syllabus": "Syllabus",
-    "office_hours": "Office Hours",
-    "psets": "Problem Sets",
-    "sections": "Sections",
-    "python_documentation": "Python Documentation",
-    "adminer": "PostgreSQL Browser",
-    "sqlite_browser": "SQLite Browser",
+    "staff": "Equipe",
+    "syllabus": "Currículo do Curso",
+    "office_hours": "Mentorias",
+    "psets": "Listas de Problemas",
+    "sections": "Seções",
+    "python_documentation": "Documentação Python",
+    "adminer": "Navegador PostgreSQL",
+    "sqlite_browser": "Navegador SQLite",
+    "manual": "Manual do Programador"
 }
 
 week_page = {
-    "week": "Week",
-    "lecture": "Lecture",
-    "audio": "Audio",
-    "notes": "Notes",
+    "week": "Semana",
+    "lecture": "Aula",
+    "audio": "Áudio",
+    "notes": "Anotações",
     "slides": "Slides",
-    "source_code": "Source Code",
-    "subtitles": "Subtitles",
-    "transcript": "Transcript",
-    "video": "Video",
-    "shorts": "Shorts",
-    "section": "Section",
-    "practice_problems": "Practice Problems",
-    "lab": "Lab",
-    "problem_set": "Problem Set",
+    "source_code": "Código Fonte",
+    "subtitles": "Legendas",
+    "transcript": "Transcrição",
+    "video": "Vídeo",
+    "shorts": "Tópicos Importantes",
+    "section": "Seção",
+    "practice_problems": "Problemas Práticos",
+    "lab": "Laboratório",
+    "problem_set": "Lista de Problemas",
+}
+
+menu_cs50x = {
+    "week0": "Functions, Variables",
+    "week1": "Conditionals",
+    "week2": "Loops",
+    "week3": "Exceptions",
+    "week4": "Libraries",
+    "week5": "Unit Tests",
+    "week6": "File I/O",
+    "week7": "Regular Expressions",
+    "week8": "Object-Oriented Programming",
+    "week9": "Et Cetera",
 }
 
 week_0 = {
     "name": "Scratch",
     "number": 0,
+    "study_guide": "https://drive.google.com/file/d/1mw1BkX7qoZRZwV8mnhdvIMinfP1BwNb0/view?usp=sharing",
+    "lecture_url": "https://www.youtube.com/watch?v=CfJYwHylIck",
+    "lecture_embed_url": "https://www.youtube.com/embed/CfJYwHylIck?si=LxCcYnvdbSmFJJnB",
+    "google_slides_link": "https://docs.google.com/presentation/d/1acUrdTo6VXEYxhN_iwES2Ruz7yVJZ3Fd-w5cn2jLcuM/edit?usp=sharing",
+    "pdf_slides_link": "https://drive.google.com/file/d/1or9fI5y5w5NMds7UfTWjgupotmAIQMMx/view"
 }
 
 week_1 = {
     "name": "C",
     "number": 1,
+    "lecture_url": "https://www.youtube.com/watch?v=Li85z0EfiUA",
+    "lecture_embed_url": "https://www.youtube.com/embed/Li85z0EfiUA?si=YAR0TrclGFTlSdvB",
+    "pdf_code_link": "https://drive.google.com/file/d/1XR6QQhIGe3zthCzQmhr8m3ykNXKQYZT1/view?usp=drive_link",
+    "zip_code_link": "https://drive.google.com/file/d/1xAC-8xjFmLJQ3c_ibfT1YhFZlZb2PkyB/view?usp=sharing",
+    "google_slides_link": "https://docs.google.com/presentation/d/1b-5xwyf5wHEIMTvWn4IE3260Mgm_8a8G9FyppU4MWyo/edit?usp=sharing",
+    "pdf_slides_link": "https://drive.google.com/file/d/1ciyAdlhWj3sNKDq6Kunvs1B4dUj2Y8Dq/view?usp=sharing",
     "shorts": {
         "data_types": {
-            "name": "Data Types",
-            "link": ""
+            "name": "Tipos de Dados",
+            "link": "https://www.youtube.com/watch?v=kyYFtm59r5Q"
         },
             "operators":{
-            "name": "Operators",
-            "link": ""
+            "name": "Operadores",
+            "link": "https://www.youtube.com/watch?v=NnVsN0RGXBs"
         },
             "conditionals": {
-            "name": "Conditional Statements",
-            "link": ""
+            "name": "Estruturas Condicionais",
+            "link": "https://www.youtube.com/watch?v=LPKqDguO4JY"
         },
             "loops": {
-            "name": "Loops",
-            "link": ""
-        },
-            "command_line": {
-            "name": "Command Line",
-            "link": ""
-        },
-            "magic_numbers": {
-            "name": "Magic Numbers",
-            "link": ""
+            "name": "Estruturas de Repetição",
+            "link": "https://www.youtube.com/watch?v=2CwCdEHU36o"
         },
     }
 }
@@ -79,14 +96,18 @@ week_1 = {
 week_2 = {
     "name": "Arrays",
     "number": 2,
+    "pdf_code_link": "https://drive.google.com/file/d/1JStUjEyXk21OqHuHRDoP0FKg0TKRGESZ/view?usp=sharing",
+    "zip_code_link": "https://drive.google.com/file/d/1f7Ba870kj1KJZtOHONrVyPNj10ZQpFLP/view?usp=sharing",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "functions": {
             "name": "Functions",
             "link": ""
         },
         "variables_and_scope": {
-            "name": "Variables and Scope",
-            "link": ""
+            "name": "Variáveis e Escopo",
+            "link": "https://www.youtube.com/watch?v=xfxa98WQXdw"
         },
         "debugging_step_through": {
             "name": "Debugging (“Step through”)",
@@ -97,12 +118,12 @@ week_2 = {
             "link": ""
         },
         "arrays": {
-            "name": "Arrays",
-            "link": ""
+            "name": "Vetores",
+            "link": "https://www.youtube.com/watch?v=WXJXqmmJATY"
         },
         "command_line_arguments": {
-            "name": "Command Line Arguments",
-            "link": ""
+            "name": "Argumentos de Linha de Comando",
+            "link": "https://www.youtube.com/watch?v=xipno6i0Z2c"
         },
     }
 }
@@ -110,26 +131,30 @@ week_2 = {
 week_3 = {
     "name": "Algorithms",
     "number": 3,
+    "pdf_code_link": "",
+    "zip_code_link": "",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "linear_search": {
-            "name": "Linear Search",
-            "link": ""
+            "name": "Pesquisa Linear",
+            "link": "https://www.youtube.com/watch?v=1gqgpqo7Ams"
         },
         "binary_search": {
             "name": "Binary Search",
             "link": ""
         },
         "bubble_sort":  {
-            "name": "Bubble Sort",
-            "link": ""
+            "name": "Ordenação por Flutuação",
+            "link": "https://www.youtube.com/watch?v=jMrWnPPZ6ZM"
         },
         "selection_sort":  {
-            "name": "Selection Sort",
-            "link": ""
+            "name": "Ordenação por Seleção",
+            "link": "https://www.youtube.com/watch?v=k2XR-vsoT5s"
         },
         "insertion_sort": {
-            "name": "",
-            "link": ""
+            "name": "Ordenação por Inserção",
+            "link": "https://www.youtube.com/watch?v=NfGIj-r4IvM"
         },
         "recursion":  {
             "name": "Recursion",
@@ -139,35 +164,43 @@ week_3 = {
             "name": "Merge Sort", 
             "link": ""
         },
+        "algorithms_summary": {
+            "name": "Resumo dos Algoritmos",
+            "link": "https://www.youtube.com/watch?v=0tmqY6K3VK8",
+        }
     }
 }
 
 week_4 = {
     "name": "Memory",
     "number": 4,
+    "pdf_code_link": "",
+    "zip_code_link": "",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
-         "hexadecimal": {
-            "name": "",
-            "link": ""
+        "hexadecimal": {
+            "name": "Sistema Hexadecimal",
+            "link": "https://www.youtube.com/watch?v=bJcp5OnZ1U0"
         },
         "pointers": {
-           "name": "",
+            "name": "Pointers",
             "link": ""
         },
         "custom_types": {
-            "name": "",
+            "name": "Defining Custom Types",
             "link": ""
         },
         "memory_allocation": {
-           "name": "",
-            "link": ""
+            "name": "Alocação de Memória Dinâmica",
+            "link": "https://www.youtube.com/watch?v=zh6p9MKynDw"
         },
         "call_stacks": {
-            "name": "",
-            "link": ""
+            "name": "Call Stacks",
+            "link": "https://www.youtube.com/watch?v=ui4C0SgplWY"
         },
         "file_pointers": {
-            "name": "",
+            "name": "File Pointers",
             "link": ""
         },
     }
@@ -176,6 +209,10 @@ week_4 = {
 week_5 = {
     "name": "Data Structures",
     "number": 5,
+    "pdf_code_link": "",
+    "zip_code_link": "",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "data_structures": {
             "name": "Data Structures",
@@ -209,6 +246,10 @@ week_5 = {
 week_6 = {
     "name": "Python",
     "number": 6,
+    "pdf_code_link": "",
+    "zip_code_link": "",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "python": {
             "name": "Python",
@@ -220,6 +261,10 @@ week_6 = {
 week_7 = {
     "name": "SQL",
     "number": 7,
+    "pdf_code_link": "",
+    "zip_code_link": "",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "sql": {
             "name": "SQL",
@@ -231,6 +276,10 @@ week_7 = {
 week_8 = {
     "name": "HTML, CSS, JavaScript",
     "number": 8,
+    "pdf_code_link": "",
+    "zip_code_link": "",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "internet_primer": {
             "name": "Internet Primer",
@@ -264,6 +313,10 @@ week_8 = {
 week_9 = {
     "name": "Flask",
     "number": 9,
+    "pdf_code_link": "",
+    "zip_code_link": "",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "shorts": {
         "flask": {
             "name": "Flask",
@@ -278,41 +331,52 @@ week_9 = {
 
 week_10 = {
     "name": "Emoji",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
     "number": 10,
 }
 
 cibersecurity = {
     "name": "Cybersecurity",
+    "google_slides_link": "",
+    "pdf_slides_link": "",
 }
 
 urls = {
-    "cybersecurity": "cybersecurity",
-    "seminars": "seminars",
-    "honesty": "honesty",
-    "certificate": "syllabus",
-    "faqs": "syllabus",
-    "staff": "syllabus",
-    "syllabus": "syllabus",
-    "project": "project",
-    "hello": "hello",
-    "mario_less": "mario/less",
-    "mario_more": "mario/more",
-    "cash": "cash",
-    "credit": "credit",
-    "readability": "readability",
-    "bulbs": "bulbs",
-    "caesar": "caesar",
-    "substitution": "substitution",
-    "plurality": "plurality",
-    "runoff": "runoff",
-    "tideman": "tideman",
-    "filter": "filter",
-    "recover": "recover",
-    "reverse": "reverse",
-    "speller": "speller",
+    "labs": "laboratorios",
+    "weeks": "semanas",
+    "notes": "anotacoes",
+    "psets": "problemas",
+    "cybersecurity": "ciberseguranca",
+    "seminars": "seminarios",
+    "honesty": "honestidade",
+    "certificate": "certificado",
+    "faqs": "perguntas_frequentes",
+    "staff": "equipe",
+    "syllabus": "curriculo",
+    "project": "projeto",
+    "hello": "ola",
+    "mario_less": "mario/menos",
+    "mario_more": "mario/mais",
+    "cash": "dinheiro",
+    "credit": "credito",
+    "readability": "legibilidade",
+    "bulbs": "bulbos",
+    "caesar": "cesar",
+    "substitution": "substituicao",
+    "wordle50": "wordle50",
+    "plurality": "pluralidade",
+    "runoff": "preferencia",
+    "tideman": "pares_ranqueados",
+    "filter": "filtrar",
+    "recover": "recuperar",
+    "reverse": "reversao",
+    "speller": "corretor",
     "dna": "dna",
-    "movies": "movies",
-    "fiftyville": "fiftyville",
-    "homepage": "homepage",
-    "finance": "finance",
+    "movies": "filmes",
+    "fiftyville": "vila50",
+    "homepage": "pagina_inicial",
+    "finance": "financas",
+    "less": "menos",
+    "more": "mais"
 }

@@ -13,7 +13,6 @@ def markdown_convert(content):
 def manual():
     return render_template(f'{os.environ["COURSE_LANGUAGE"]}/manual/index.html')
 
-f'{os.environ["COURSE_LANGUAGE"]}/manual/blank.html'
 # cs50.h
 @bp.route('/get_char')
 @bp.route('/get_char.html')

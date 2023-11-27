@@ -189,7 +189,6 @@ def week1():
         week=weeks_content["week1"]
     )
 
-
 @bp.route('/2')
 @bp.route('/2.html')
 def week2():
@@ -198,7 +197,6 @@ def week2():
         week_page=weeks_content["week_page"],
         week=weeks_content["week2"]
     )
-
 
 @bp.route('/3')
 @bp.route('/3.html')
@@ -209,7 +207,6 @@ def week3():
         week=weeks_content["week3"]
     )
 
-
 @bp.route('/4')
 @bp.route('/4.html')
 def week4():
@@ -218,7 +215,6 @@ def week4():
         week_page=weeks_content["week_page"],
         week=weeks_content["week4"]
     )
-
 
 @bp.route('/5')
 @bp.route('/5.html')
@@ -229,7 +225,6 @@ def week5():
         week=weeks_content["week5"]
     )
 
-
 @bp.route('/6')
 @bp.route('/6.html')
 def week6():
@@ -238,7 +233,6 @@ def week6():
         week_page=weeks_content["week_page"],
         week=weeks_content["week6"]
     )
-
 
 @bp.route('/7')
 @bp.route('/7.html')
@@ -249,7 +243,6 @@ def week7():
         week=weeks_content["week7"]
     )
 
-
 @bp.route('/8')
 @bp.route('/8.html')
 def week8():
@@ -258,7 +251,6 @@ def week8():
         week_page=weeks_content["week_page"],
         week=weeks_content["week8"]
     )
-
 
 @bp.route('/9')
 @bp.route('/9.html')

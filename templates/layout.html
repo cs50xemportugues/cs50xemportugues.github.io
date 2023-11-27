@@ -55,6 +55,28 @@
     <script src="{{ url_for('static', filename='js/instantsearch.production.min.js') }}"></script>
     <script src="{{ url_for('static', filename='js/jekyll-theme-cs50.js') }}"></script>
 
+    <script src="{{url_for('static', filename="highlight/highlight.min.js")}}"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='highlight/styles/atom-one-light.min.css') }}"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
     <title>CS50x em Português</title>
   </head>
 

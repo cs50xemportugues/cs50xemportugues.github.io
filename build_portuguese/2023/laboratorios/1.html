@@ -134,7 +134,7 @@
         <a href="/2023/semanas/2.html"
           >Semana 2
           <span class="semana-titulo"
-            >Loops</span
+            >Vetores</span
           ></a
         >
       </li>
@@ -144,7 +144,7 @@
         <a href="/2023/semanas/3.html"
           >Semana 3
           <span class="semana-titulo"
-            >Exceptions</span
+            >Algoritmos</span
           ></a
         >
       </li>
@@ -154,7 +154,7 @@
         <a href="/2023/semanas/4.html"
           >Semana 4
           <span class="semana-titulo"
-            >Libraries</span
+            >Memória</span
           ></a
         >
       </li>
@@ -164,7 +164,7 @@
         <a href="/2023/semanas/5.html"
           >Semana 5
           <span class="semana-titulo"
-            >Unit Tests</span
+            >Estruturas de Dados</span
           ></a
         >
       </li>
@@ -235,6 +235,12 @@
         <span class="fa-li"><i class="fas fa-circle"></i></span>
         <a href="/manual/index.html"
           >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
         >
       </li>
       <li data-marker="*">
@@ -327,7 +333,7 @@
 <h1>Lab 1: Crescimento Populacional</h1>
 <div class="alert" data-alert="warning" role="alert"><p>Você pode colaborar com um ou dois colegas nesta prática, porém espera-se igual contribuição de todos os alunos envolvidos.</p></div>
 <p>Determinar quanto tempo leva para uma população atingir um tamanho particular.</p>
-<pre><code>$ ./population
+<pre><code>$ ./populacao
 Tamanho inicial da população: 100
 Tamanho final da população: 200
 Anos: 9
@@ -339,37 +345,38 @@ Anos: 9
 <h2>Como Começar</h2>
 <p>Lembre-se de que o Visual Studio Code, ou VS Code, é um popular &quot;ambiente integrado de desenvolvimento&quot; (IDE) no qual se pode escrever código. Para não ser necessário baixar, instalar e configurar o próprio VS Code, utilizaremos uma versão baseada em nuvem que já tem tudo o que precisa pré-instalado.</p>
 <ol>
-<li>Faça login na plataforma <a href="https://code.cs50.io/">code.cs50.io</a> usando a sua conta do GitHub e siga as instruções na tela para configurar o seu próprio “codespace” para o Visual Studio Code. Uma vez carregado o seu codespace, você verá que o VS Code é dividido por default em três regiões. Na parte superior do VS Code está o “editor de texto”, no qual você escreverá todos os seus programas. Na parte inferior está a “janela de terminal”, que é a interface de linha de comando (CLI) que permite explorar os arquivos e diretórios (também conhecidos como pastas) do seu codespace, compilar o código e executar programas. E à esquerda está o explorador de arquivos, que é uma interface gráfica do usuário (GUI) por meio da qual também se pode explorar os arquivos e diretórios do your codespace.</li>
-<li>Uma vez que o seu codespace tenha carregado, feche todas as guias de <strong>Boas-vindas</strong> que possam ter sido abertas por default.</li>
+<li>Faça login na plataforma <a href="https://code.cs50.io/">code.cs50.io</a> usando a sua conta do GitHub e siga as instruções na tela para configurar o seu próprio “ambiente de desenvolvimento” para o Visual Studio Code. Uma vez carregado o seu ambiente de desenvolvimento, você verá que o VS Code é dividido por padrão em três regiões. Na parte superior do VS Code está o “editor de texto”, no qual você escreverá todos os seus programas. Na parte inferior está a “janela de terminal”, que é a interface de linha de comando (CLI) que permite explorar os arquivos e diretórios (também conhecidos como pastas) do seu ambiente de desenvolvimento, compilar o código e executar programas. E à esquerda está o explorador de arquivos, que é uma interface gráfica do usuário (GUI) por meio da qual também se pode explorar os arquivos e diretórios do seu ambiente de desenvolvimento.</li>
+<li>Uma vez que o seu ambiente de desenvolvimento tenha carregado, feche todas as guias de <strong>Boas-vindas</strong> que possam ter sido abertas por padrão.</li>
 <li>Faça login na plataforma <a href="https://submit.cs50.io">submit.cs50.io</a> usando a sua conta do GitHub e clique em <strong>Authorize cs50</strong> para ativar o <code>check50</code>.</li>
-<li>Execute o comando <code>update50</code> na janela do terminal do seu codespace para garantir que a ferramenta esteja atualizada e, se solicitado, clique em <strong>Rebuild now</strong>.</li>
+<li>Execute o comando <code>update50</code> na janela do terminal do seu ambiente de desenvolvimento para garantir que a ferramenta esteja atualizada e, se solicitado, clique em <strong>Rebuild now</strong>.</li>
 </ol>
 <p>Depois de concluído, comece clicando dentro da janela do terminal e execute o comando <code>cd</code>. Você verá que o &quot;prompt&quot; é parecido com o seguinte.</p>
-<p>$</p>
-<p>Clique dentro da janela do terminal e digite</p>
-<pre><code>mkdir population
+<pre><code>$
 </code></pre>
-<p>seguido de Enter para criar um diretório chamado <code>population</code> no seu codespace. Tome cuidado para não ignorar o espaço entre <code>mkdir</code> e <code>population</code>, nem nenhum outro caractere.</p>
+<p>Clique dentro da janela do terminal e digite</p>
+<pre><code>mkdir populacao
+</code></pre>
+<p>seguido de Enter para criar um diretório chamado <code>populacao</code> no seu ambiente de desenvolvimento. Tome cuidado para não ignorar o espaço entre <code>mkdir</code> e <code>populacao</code>, nem nenhum outro caractere.</p>
 <p>A partir de agora, executar (ou seja, rodar) um comando significa escrever o comando em uma janela do terminal e pressionar Enter. Os comandos diferenciam maiúsculas de minúsculas, portanto, tenha certeza de não escrever em maiúscula quando quiser minúscula e vice-versa.</p>
 <p>Execute agora</p>
-<pre><code>cd population
+<pre><code>cd populacao
 </code></pre>
 <p>para se mover para dentro (ou seja, abrir) esse diretório. O prompt agora deve se parecer com o seguinte.</p>
-<pre><code>population/ $
+<pre><code>populacao/ $
 </code></pre>
 <p>Clique dentro da janela do terminal e digite</p>
-<pre><code>wget http://cs50xemportugues.github.io/static/2023/laboratorios/populacao.c
+<pre><code>wget cs50xemportugues.github.io/static/2023/laboratorios/populacao.c
 </code></pre>
-<p>seguido de Enter para baixar um arquivo modelo chamado <code>population.c</code> no seu codespace. Tome cuidado para não ignorar o espaço entre <code>wget</code> e a URL seguinte, ou qualquer outro caractere. Se tudo ocorrer bem, execute</p>
+<p>seguido de Enter para baixar um arquivo modelo chamado <code>populacao.c</code> no seu ambiente de desenvolvimento. Tome cuidado para não ignorar o espaço entre <code>wget</code> e a URL seguinte, ou qualquer outro caractere. Se tudo ocorrer bem, execute</p>
 <pre><code>ls
 </code></pre>
-<p>e verifique se há um arquivo chamado <code>population.c</code>. Executar <code>code population.c</code> deve abrir o arquivo que você usará para digitar seu código nesta prática. Se isso não acontecer, volte e confira se você seguiu os passos corretamente.</p>
+<p>e verifique se há um arquivo chamado <code>populacao.c</code>. Executar <code>code populacao.c</code> deve abrir o arquivo que você usará para digitar seu código nesta prática. Se isso não acontecer, volte e confira se você seguiu os passos corretamente.</p>
 <h2>Detalhes da Implementação</h2>
-<p>Complete a implementação do <code>population.c</code>, para que ele calcule o número de anos necessários para que a população cresça do tamanho inicial para o tamanho final.</p>
+<p>Complete a implementação do <code>populacao.c</code>, para que ele calcule o número de anos necessários para que a população cresça do tamanho inicial para o tamanho final.</p>
 <ul>
 <li>
 Seu programa deve primeiro solicitar ao usuário um tamanho de população de início.<ul>
-<li>Se o usuário inserir um número menor que 9 (o tamanho populacional mínimo permitido), o usuário deve ser solicitado novamente a inserir um tamanho inicial populacional até que seja inserido um número maior ou igual a 9. (Se começarmos com menos de 9 lhamas, a população estagnar rapidamente!)</li>
+<li>Se o usuário inserir um número menor que 9 (o tamanho populacional mínimo permitido), o usuário deve ser solicitado novamente a inserir um tamanho inicial populacional até que seja inserido um número maior ou igual a 9. (Se começarmos com menos de 9 lhamas, a população estagna rapidamente!)</li>
 </ul>
 </li>
 <li>
@@ -382,10 +389,10 @@ Seu programa deve, então, solicitar ao usuário um tamanho de população final
 </ul>
 <h3>Dicas</h3>
 <ul>
-<li>Se você deseja re-pedir repetidamente ao usuário o valor de uma variável até que alguma condição seja atendida, pode ser útil usar um loop <code>do… while</code>. Por exemplo, relembre o seguinte código da aula, que solicita o usuário repetidamente até que ele digite um número inteiro positivo. <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
+<li>Se você deseja pedir repetidamente ao usuário o valor de uma variável até que alguma condição seja atendida, pode ser útil usar uma repetição <code>do… while</code>. Por exemplo, relembre o seguinte código da aula, que solicita o usuário repetidamente até que ele digite um número inteiro positivo. <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">int</span> <span class="n">n</span><span class="p">;</span>
 <span class="k">do</span>
 <span class="p">{</span>
-<span class="n">n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">&quot;Positive Integer: &quot;</span><span class="p">);</span>
+<span class="n"> n</span> <span class="o">=</span> <span class="n">get_int</span><span class="p">(</span><span class="s">&quot;Inteiro Positivo: &quot;</span><span class="p">);</span>
 <span class="p">}</span>
 <span class="k">while</span> <span class="p">(</span><span class="n">n</span> <span class="o">&lt;</span> <span class="mi">1</span><span class="p">);</span>
 </code></pre></div> </div>
@@ -397,20 +404,20 @@ Para declarar uma nova variável, certifique-se de especificar seu tipo de dados
 <li>Por exemplo, você pode querer criar uma variável para acompanhar quantos anos se passaram.</li>
 </ul>
 </li>
-<li>Para calcular quantos anos levará para a população atingir o tamanho final, outro loop pode ser útil! Dentro do loop, você provavelmente desejará atualizar o tamanho da população de acordo com a fórmula no Contexto e atualizar o número de anos que se passaram.</li>
-<li>Para imprimir um inteiro <code>n</code> no terminal, lembre-se de que você pode usar uma linha de código como <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;The number is %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
+<li>Para calcular quantos anos levará para a população atingir o tamanho final, outra repetição pode ser útil! Dentro da repetição, você provavelmente desejará atualizar o tamanho da população de acordo com a fórmula no Contexto e atualizar o número de anos que se passaram.</li>
+<li>Para imprimir um inteiro <code>n</code> no terminal, lembre-se de que você pode usar uma linha de código como <div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code> <span class="n">printf</span><span class="p">(</span><span class="s">&quot;O número é %i</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span> <span class="n">n</span><span class="p">);</span>
 </code></pre></div> </div>
 para especificar que a variável <code>n</code> deve ser preenchida no espaço reservado <code>% i</code>.</li>
 </ul>
 <h3>Como testar seu código</h3>
 <p>Seu programa deve se comportar de acordo com os exemplos abaixo.</p>
-<pre><code>$ ./population
+<pre><code>$ ./populacao
 Tamanho inicial: 1200
 Tamanho final: 1300
 Anos: 1
 
 
-$ ./population
+$ ./populacao
 Tamanho inicial: -5
 Tamanho inicial: 3
 Tamanho inicial: 9
@@ -419,7 +426,7 @@ Tamanho final: 18
 Anos: 8
 
 
-$ ./population
+$ ./populacao
 Tamanho inicial: 20
 Tamanho final: 1
 Tamanho final: 10
@@ -427,21 +434,28 @@ Tamanho final: 100
 Anos: 20
 
 
-$ ./population
+$ ./populacao
 Tamanho inicial: 100
 Tamanho final: 1000000
 Anos: 115
 </code></pre>
 <p>Execute o seguinte para avaliar a correção do código usando o <code>check50</code>. Mas verifique se você compilou e testou o código também!</p>
-<pre><code>check50 cs50/labs/2023/x/population
+<pre><code>check50 cs50xemportugues/laboratorios/2023/populacao
 </code></pre>
 <p>Execute o seguinte para avaliar o estilo do código usando o <code>style50</code>.</p>
-<pre><code>style50 population.c
+<pre><code>style50 populacao.c
 </code></pre>
+<h2>Como Adaptar seu Código</h2>
+<p>Para que seu projeto seja avaliado pelo sistema oficial do curso, você precisa mudar o nome do arquivo de <code>populacao.c</code> para <code>population.c</code>. Para isso, execute a linha abaixo dentro do diretório em que seu arquivo <code>populacao.c</code> se encontra:</p>
+<pre><code>mv populacao.c population.c
+</code></pre>
+<p>Além disso, dentro do código do seu programa, altere a mensagem <code>Anos: </code> para <code>Years: </code>.</p>
+<p>Pronto! Seu programa já está adaptado para ser enviado para o sistema do curso!</p>
 <h2>Como Enviar</h2>
 <p>No terminal, execute o seguinte para enviar seu trabalho.</p>
 <pre><code>submit50 cs50/labs/2023/x/population
 </code></pre>
+<p>Se o terminal exibir a mensagem <code>Keeping in mind the course&#x27;s policy on academic honesty, are you sure you want to submit these files (yes/no)?</code>, digite <code>yes</code> para confirmar o envio dos arquivos.</p>
 
 
         </main>
