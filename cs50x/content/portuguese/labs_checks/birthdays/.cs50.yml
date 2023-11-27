@@ -1,0 +1,13 @@
+lab50:
+  files: &lab50_files
+    - !include application.py
+    - !include birthdays.db
+    - !include static/styles.css
+    - !include templates/index.html
+
+submit50:
+  files: *lab50_files
+  style: false
+
+check50:
+  files: *lab50_files

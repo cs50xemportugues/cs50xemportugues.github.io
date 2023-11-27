@@ -4,8 +4,7 @@ venv/
 build
 __pycache__
 .env
-
 venv3.7
-cs50x/content/portuguese
-cs50x/content/french
-cs50x/content/spanish
+build_portuguese
+build_french
+build_spanish
