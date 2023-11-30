@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h1>Laboratório 5: Herança</h1>
+<div class="alert" data-alert="warning" role="alert"><p>Você pode colaborar com um ou dois colegas neste laboratório, embora seja esperado que todos os estudantes em tal grupo contribuam igualmente para o laboratório.</p></div>
+<p>Simule a herança dos tipos sanguíneos de cada membro de uma família.</p>
+<pre><code>$ ./inheritance
+Criança (Geração 0): tipo sanguíneo OO
+    Pai (Geração 1): tipo sanguíneo AO
+        Avô (Geração 2): tipo sanguíneo OA
+        Avó (Geração 2): tipo sanguíneo BO
+    Pai (Geração 1): tipo sanguíneo OB
+        Avô (Geração 2): tipo sanguíneo AO
+        Avó (Geração 2): tipo sanguíneo BO
+</code></pre>
+<h2>Contexto</h2>
+<p>O tipo sanguíneo de uma pessoa é determinado por dois alelos (ou seja, diferentes formas de um gene). Os três alelos possíveis são A, B e O, dos quais cada pessoa tem dois (possivelmente iguais, possivelmente diferentes). Cada um dos pais de uma criança passa aleatoriamente um de seus dois alelos de tipo sanguíneo para a criança. As possíveis combinações de tipo sanguíneo são: OO, OA, OB, AO, AA, AB, BO, BA e BB.</p>
+<p>Por exemplo, se um dos pais tem tipo sanguíneo AO e o outro tem tipo sanguíneo BB, então os possíveis tipos sanguíneos da criança seriam AB e OB, dependendo de qual alelo é recebido de cada pai. Da mesma forma, se um dos pais tem tipo sanguíneo AO e o outro OB, então os possíveis tipos sanguíneos da criança seriam AO, OB, AB e OO.</p>
+<h2>Iniciando</h2>
+<p>Abra o [VS Code] (https://code.cs50.io/).</p>
+<p>Comece clicando dentro da janela do seu terminal e execute <code>cd</code> sozinho. Você deve encontrar que o &quot;prompt&quot; se parece com o abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/labs/5/inheritance.zip
+</code></pre>
+<p>seguido por Enter para baixar um ZIP chamado <code>inheritance.zip</code> em seu espaço de códigos. Cuidado para não ignorar o espaço entre <code>wget</code> e a URL seguinte, ou qualquer outro caractere!</p>
+<p>Agora execute</p>
+<pre><code>unzip inheritance.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>inheritance</code>. Você não precisa mais do arquivo ZIP, então você pode executar</p>
+<pre><code>rm inheritance.zip
+</code></pre>
+<p>e responda com “y” seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd inheritance
+</code></pre>
+<p>seguido de Enter para mover-se para dentro (ou seja, abrir) esse diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>inheritance/ $
+</code></pre>
+<p>Se tudo correu bem, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e deve ver <code>inheritance.c</code>.</p>
+<p>Se você encontrar algum problema, siga essas mesmas etapas novamente e veja se pode determinar onde errou!</p>
+<h2>Entendendo</h2>
+<p>Dê uma olhada no código distribuído em <code>inheritance.c</code>.</p>
+<p>Observe a definição de um tipo chamado <code>person</code>. Cada pessoa tem um array de dois <code>parents</code>, cada um dos quais é um ponteiro para outra estrutura <code>person</code>. Cada pessoa também tem um array de dois <code>alleles</code>, cada um dos quais é um <code>char</code> (ou <code>&#x27;A&#x27;</code>, <code>&#x27;B&#x27;</code> ou <code>&#x27;O&#x27;</code>).</p>
+<p>Agora, dê uma olhada na função<code>main</code>. A função começa por &quot;seeding&quot; (ou seja, fornecendo alguma entrada inicial para) um gerador de números aleatórios, que usaremos mais tarde para gerar alelos aleatórios. A função <code>main</code>, então, chama a função <code>create_family</code> para simular a criação de structs <code>person</code> para uma família de três gerações (ou seja, uma pessoa, seus pais e seus avós). Nós, então, chamamos <code>print_family</code> para imprimir cada um desses membros da família e seus tipos sanguíneos. Finalmente, a função chama <code>free_family</code> para <code>liberar</code> qualquer memória que tenha sido previamente alocada com <code>malloc</code>.</p>
+<p>As funções <code>create_family</code> e <code>free_family</code> são deixadas a você para escrever!</p>
+<h2>Detalhes da Implementação</h2>
+<p>Complete a implementação do arquivo <code>inheritance.c</code>, para criar uma família de tamanho especificado e atribuir alelos de tipo sanguíneo a cada membro da família. A geração mais velha terá alelos atribuídos aleatoriamente a eles.</p>
+<ul>
+<li>A função <code>create_family</code> recebe um inteiro (<code>generations</code>) como entrada e deve alocar (por meio de <code>malloc</code>) uma <code>person</code> para cada membro da família desse número de gerações, retornando um ponteiro para a <code>person</code> na geração mais nova.
+* Por exemplo, <code>create_family(3)</code> deve retornar um ponteiro para uma pessoa com dois pais, onde cada pai também tem dois pais.
+* Cada <code>person</code> deve ter <code>alleles</code> atribuídos a eles. A geração mais velha deve ter alelos escolhidos aleatoriamente (por meio da função <code>random_allele</code>), e gerações mais jovens devem herdar um alelo (escolhido aleatoriamente) de cada pai.
+* Cada <code>person</code> deve ter <code>parents</code> atribuídos a eles. A geração mais velha deve ter ambos os <code>parents</code> definidos como <code>NULL</code>, e gerações mais jovens devem ter <code>parents</code> sendo uma matriz de dois ponteiros, cada um apontando para um pai diferente.</li>
+</ul>
+<p>Dividimos a função <code>create_family</code> em alguns <code>TODO</code>s para você completar.</p>
+<ul>
+<li>Primeiro, você deve alocar memória para uma nova pessoa. Lembre-se de que você pode usar <code>malloc</code> para alocar memória e <code>sizeof(person)</code> para obter o número de bytes para alocar.</li>
+<li>Em seguida, incluímos uma condição para verificar se <code>generations &gt; 1</code>.
+* Se <code>generations &gt; 1</code>, há mais gerações que ainda precisam ser alocadas. Já criamos dois novos <code>parents</code>, <code>parent0</code> e <code>parent1</code>, chamando <code>create_family</code> recursivamente. Sua função <code>create_family</code> deve definir os ponteiros dos pais da nova pessoa que você criou. Finalmente, atribua ambos os <code>alleles</code> para a nova pessoa escolhendo aleatoriamente um alelo de cada pai.
+* Caso contrário (se <code>generations == 1</code>), não haverá dados dos pais para essa pessoa. Ambos <code>parents</code> de sua nova pessoa devem ser definidos como <code>NULL</code>, e cada <code>allele</code> deve ser gerado aleatoriamente.</li>
+<li>Finalmente, sua função deve retornar um ponteiro para a <code>person</code> que foi alocada.</li>
+</ul>
+<p>A função <code>free_family</code> deve aceitar como entrada um ponteiro para uma <code>person</code>, desalocar a memória dessa pessoa e, em seguida, desalocar recursivamente a memória de todos os seus ancestrais.</p>
+<ul>
+<li>Como essa é uma função recursiva, você deve lidar primeiro com o caso base. Se a entrada para a função for <code>NULL</code>, nada precisa ser desalocado, então sua função pode retornar imediatamente.</li>
+<li>Caso contrário, você deve desalocar recursivamente ambos os pais da pessoa antes de desalocar a criança.</li>
+</ul>
+<h3>Tutorial</h3>
+<div class="alert" data-alert="primary" role="alert"><p>Este vídeo foi gravado quando o curso ainda usava o CS50 IDE para escrever código. Embora a interface possa parecer diferente do seu codespace, o comportamento dos dois ambientes deve ser semelhante!</p></div>
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/9p7ddI3ozTY"></iframe>
+<h3>Dicas</h3>
+<ul>
+<li>Você pode achar a função <code>rand()</code> útil para atribuir alelos aleatoriamente. Esta função retorna um inteiro entre <code>0</code> e <code>RAND_MAX</code>, ou <code>2147483647</code>.
+* Em particular, para gerar um número pseudoaleatório que é <code>0</code> ou <code>1</code>, você pode usar a expressão <code>rand() % 2</code>.</li>
+<li>Lembre-se de que, para alocar memória para uma pessoa específica, podemos usar <code>malloc(n)</code>, que leva um tamanho como argumento e alocará <code>n</code> bytes de memória.</li>
+<li>Lembre-se de que, para acessar uma variável por meio de um ponteiro, podemos usar a notação de seta.
+* Por exemplo, se <code>p</code> for um ponteiro para uma pessoa, então um ponteiro para o primeiro pai deste pessoa pode ser acessado por <code>p-&gt;parents[0]</code>.</li>
+</ul>
+<details><summary>Não tem certeza de como resolver?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/H7LULatPwcQ"></iframe></details>
+<h3>Como Testar Seu Código</h3>
+<p>Ao executar <code>./inheritance</code>, seu programa deve aderir às regras descritas no background. A criança deve ter dois alelos, um de cada pai. Os pais devem ter dois alelos, um de cada um de seus pais.</p>
+<p>Por exemplo, no exemplo abaixo, a criança na Geração 0 recebeu um alelo O de ambos os pais da Geração 1. O primeiro pai recebeu um A do primeiro avô e um O do segundo avô. Da mesma forma, o segundo pai recebeu um O e um B de seus avós.</p>
+<p><code>$ ./inheritance Criança (geração 0): tipo sanguíneo OO Pai (geração 1): tipo sanguíneo AO Avô (geração 2): tipo sanguíneo OA Avô (geração 2): tipo sanguíneo BO Pai (geração 1): tipo sanguíneo OB Avô (geração 2): tipo sanguíneo AO Avô (geração 2): tipo sanguíneo BO</code></p>
+<p>Execute o comando abaixo para avaliar a correção do seu código usando <code>check50</code>. Mas lembre-se de compilar e testá-lo também!</p>
+<p><code>check50 cs50/labs/2023/x/inheritance</code></p>
+<p>Execute o comando abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<p><code>style50 inheritance.c</code></p>
+<h2>Como Enviar o Trabalho</h2>
+<p>Em seu terminal, execute o comando abaixo para enviar seu trabalho.</p>
+<p><code>submit50 cs50/labs/2023/x/inheritance</code></p>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

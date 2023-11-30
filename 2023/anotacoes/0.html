@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h1>Lição 0</h1>
+<ul>
+<li><a href="#bem-vindo">Bem-vindo</a></li>
+<li><a href="#o-que-%C3%A9-ci%C3%AAncia-da-computa%C3%A7%C3%A3o">O que é ciência da computação?</a></li>
+<li><a href="#bin%C3%A1rio">Binário</a></li>
+<li><a href="#representa%C3%A7%C3%A3o-de-dados">Representação de dados</a></li>
+<li><a href="#algoritmos">Algoritmos</a></li>
+<li><a href="#pseudoc%C3%B3digo">Pseudocódigo</a></li>
+<li><a href="#scratch">Scratch</a></li>
+</ul>
+<h2 id="bem-vindo">Bem-vindo</h2>
+<ul>
+<li>
+<p>Quando David estava no primeiro ano, ele estava muito intimidado para fazer qualquer curso de ciência da computação. Quando ele era estudante de segundo ano, ele encontrou coragem para fazer o equivalente ao CS50, mas apenas como aprovação/reprovação.</p>
+</li>
+<li>
+<p>Na verdade, dois terços dos estudantes do CS50 nunca fizeram um curso de ciência da computação antes.</p>
+</li>
+<li>
+<p>E, o que é mais importante:</p>
+<blockquote>
+<p>o que realmente importa neste curso não é tanto onde você termina em relação aos seus colegas, mas onde você termina em relação a si mesmo quando começou.</p>
+</blockquote>
+</li>
+</ul>
+<h2 id="o-que-é-ciência-da-computação">O que é ciência da computação?</h2>
+<ul>
+<li>A ciência da computação é fundamentalmente a resolução de problemas.</li>
+<li>Podemos pensar na resolução de problemas como o processo de receber algum input (detalhes sobre nosso problema) e gerar algum output (a solução para nosso problema). A &quot;caixa preta&quot; no meio é a ciência da computação.<br />
+<img src="/static/portuguese/cs50x/notes/0/entrada_saida.png" alt="palavra &quot;input&quot;, seta para dentro da caixa, seta para fora da caixa, palavra &quot;output&quot;" /></li>
+<li>Precisamos de uma forma de representar inputs, de modo que possamos armazenar e trabalhar com informações de forma padronizada.</li>
+</ul>
+<h2 id="binário">Binário</h2>
+<ul>
+<li>Um computador, no nível mais baixo, armazena dados em binário, um sistema numérico que consiste em apenas dois dígitos, 0 e 1.</li>
+<li>Quando aprendemos a contar, podemos ter usado um dedo para representar uma coisa. Esse sistema é chamado de sistema unary. Quando aprendemos a escrever números com os dígitos de 0 a 9, aprendemos a usar o sistema decimal.</li>
+<li>Por exemplo, sabemos que o seguinte representa cento e vinte e três.</li>
+</ul>
+<pre><code>1 2 3
+</code></pre>
+<ul>
+<li>O <code>3</code> está na coluna das unidades, o <code>2</code> está na coluna das dezenas e o <code>1</code> está na coluna das centenas.</li>
+<li>Portanto, <code>123</code> é 100×1 + 10×2 + 1×3 = 100 + 20 + 3 = 123.</li>
+<li>Cada lugar para um dígito representa uma potência de dez, já que há dez dígitos possíveis para cada lugar.</li>
+<li>Em binário, com apenas dois dígitos, temos potências de dois para cada valor de lugar:</li>
+</ul>
+<pre>
+4 2 1
+<b>0 0 0</b>
+</pre>
+<ul>
+<li>Isso ainda equivaleria a 0.</li>
+<li>Agora, se alterarmos o valor binário para, digamos, <code>0 1 1</code>, o valor decimal seria 3.</li>
+</ul>
+<pre>
+4 2 1
+<b>0 1 1</b>
+</pre>
+<ul>
+<li>Se quiséssemos representar 8, precisaríamos de outro dígito:</li>
+</ul>
+<pre>
+8 4 2 1
+</pre>
+<ul>
+<li>E o binário faz sentido para computadores porque os alimentamos com eletricidade, que pode estar ligada ou desligada, então cada bit só precisa estar ligado ou desligado. Em um computador, existem milhões ou bilhões de interruptores chamados transistores que podem armazenar eletricidade e representar um bit estando &quot;ligado&quot; ou &quot;desligado&quot;.</li>
+<li>Com bits suficientes, ou dígitos binários, os computadores podem contar qualquer número.</li>
+<li>8 bits formam um <strong>byte</strong>.</li>
+</ul>
+<h2 id="representação-de-dados">Representação de dados</h2>
+<ul>
+<li>
+Para representar letras, tudo o que precisamos fazer é decidir como os números são mapeados para letras. Alguns humanos, muitos anos atrás, decidiram coletivamente um mapeamento padrão chamado <a href="https://en.wikipedia.org/wiki/ASCII">ASCII</a>. A letra &quot;A&quot;, por exemplo, é o número 65, e &quot;B&quot; é 66, e assim por diante. O mapeamento também inclui pontuação e outros símbolos. Outros caracteres, como letras com acentos e emojis, fazem parte de um padrão chamado <a href="https://en.wikipedia.org/wiki/Unicode">Unicode</a>, que usa mais bits do que ASCII para acomodar todos esses caracteres.<ul>
+<li>Quando recebemos um emoji, nosso computador está recebendo na verdade um número decimal como <code>128514</code> (<code>11111011000000010</code> em binário, se você puder ler isso mais facilmente) que ele, em seguida, mapeia para a imagem do emoji.</li>
+</ul>
+</li>
+<li>
+Uma imagem, também, é composta por muitos pequenos pontos quadrados, ou pixels, cada um dos quais pode ser representado em binário com um sistema chamado RGB, com valores para luz vermelha, verde e azul em cada pixel. Misturando diferentes quantidades de cada cor, podemos representar milhões de cores ​​:<br />
+<img src="/static/portuguese/cs50x/notes/0/rgb.png" alt="quadrado vermelho etiquetado com 72, quadrado verde etiquetado com 73, quadrado azul etiquetado com 33" /><ul>
+<li>Os valores de vermelho, verde e azul são combinados para obter uma cor amarelo claro:<br />
+<img src="/static/portuguese/cs50x/notes/0/rgb_combinado.png" alt="quadrado amarelo claro" /></li>
+</ul>
+</li>
+<li>Podemos ver isso em um emoji se dermos zoom o suficiente: <img src="/static/portuguese/cs50x/notes/0/emoji_ampliado.png" alt="emoji ampliado de risos com lágrimas com quadrados de pixels distinguíveis" /></li>
+<li>E programas de computador sabem, com base no contexto do seu código, se os números binários devem ser interpretados como números, ou letras, ou pixels.</li>
+<li>E vídeos são apenas muitas e muitas imagens exibidas uma após a outra, a uma certa quantidade de quadros por segundo. Música, também, pode ser representada pelas notas sendo tocadas, sua duração e seu volume.</li>
+</ul>
+<h2 id="algoritmos">Algoritmos</h2>
+<ul>
+<li>Agora podemos representar entradas e saídas. A caixa preta mostrada anteriormente contém <em>algoritmos</em>, instruções passo a passo para resolver um problema:
+<img src="/static/portuguese/cs50x/notes/0/algoritmos.png" alt="caixa com a palavra &quot;algoritmos&quot;" /></li>
+<li>
+Digamos que queremos encontrar um amigo, Mike Smith, em uma lista telefônica.<ul>
+<li>Poderíamos começar passando pelas páginas do livro uma de cada vez, até encontrarmos Mike Smith ou chegarmos ao final do livro.</li>
+<li>Também poderíamos virar duas páginas de cada vez, mas se formos longe demais, teremos que voltar uma página.</li>
+<li>Mas uma maneira ainda mais eficiente seria abrir a lista telefônica no meio, decidir se Mike estará na metade esquerda ou direita do livro (porque o livro está em ordem alfabética) e imediatamente descartar metade do problema. Podemos repetir isso, dividindo o problema pela metade a cada vez. Com 1024 páginas no início, precisaríamos apenas de 10 etapas de divisão pela metade antes de termos apenas uma página restante para verificar.</li>
+</ul>
+</li>
+<li>
+Na verdade, podemos representar a eficiência de cada um desses algoritmos com um gráfico:
+<img src="/static/portuguese/cs50x/notes/0/tempo_de_execucao.png" alt="gráfico com: &quot;tamanho do problema&quot; como eixo x; &quot;tempo para resolver&quot; como eixo y; linha reta vermelha e íngreme do início até o topo do gráfico rotulada como &quot;n&quot;; linha reta amarela e menos íngreme do início até o topo do gráfico rotulada como &quot;n/2&quot;; linha curva verde que fica cada vez menos íngreme do início até a direita do gráfico rotulada como &quot;log n&quot;" /><ul>
+<li>Nossa primeira solução, uma página de cada vez, é semelhante à linha vermelha: nosso tempo de resolução aumenta linearmente à medida que o tamanho do problema aumenta.</li>
+<li>A segunda solução, duas páginas de cada vez, é semelhante à linha amarela: nossa inclinação é menos íngreme, mas ainda linear.</li>
+<li>Nossa solução final é semelhante à linha verde: logarítmica, pois nosso tempo de resolução aumenta cada vez mais lentamente à medida que o tamanho do problema aumenta. Em outras palavras, se a lista telefônica passasse de 1000 para 2000 páginas, precisaríamos de mais uma etapa para encontrar Mike. Se o tamanho dobrasse novamente, de 2000 para 4000 páginas, ainda precisaríamos de apenas mais uma etapa.</li>
+</ul>
+</li>
+</ul>
+<h2 id="pseudocódigo">Pseudocódigo</h2>
+<ul>
+<li>
+<p>Podemos escrever <em>pseudocódigo</em>, uma sintaxe informal que é apenas uma versão mais específica do inglês (ou outra língua humana) que representa nosso algoritmo:</p>
+<pre><code>1  Pegar lista telefônica
+2  Abrir na metade da lista telefônica
+3  Olhar a página
+4  Se Smith está na página
+5      Ligar para Mike
+6  Senão, se Smith está antes no livro
+7      Abrir na metade esquerda do livro telefônico
+8      Voltar para a linha 3
+9  Senão, se Smith está depois no livro
+10     Abrir na metade direita do livro telefônico
+11     Voltar para a linha 3
+12 Senão
+13     Sair
+</code></pre>
+</li>
+<li>
+<p>Algumas dessas linhas começam com verbos, ou ações. Começaremos a chamar essas <em>funções</em>:</p>
+<pre>
+1  <b>Pegar</b> lista telefônica
+2  <b>Abrir na</b> metade da lista telefônica
+3  <b>Olhar</b> a página
+4  Se Smith está na página  
+5      <b>Ligar</b> para Mike
+6  Senão, se Smith está antes no livro
+7      <b>Abrir na</b> metade esquerda do livro telefônico
+8      Voltar para a linha 3
+9  Senão, se Smith está depois no livro
+10     <b>Abrir na</b> metade direita do livro telefônico
+11     Voltar para a linha 3
+12 Senão
+13     <b>Sair</b>
+</pre>
+</li>
+<li>
+<p>Também temos bifurcações que levam a diferentes caminhos, como em uma estrada, que chamaremos de <em>condições</em>:</p>
+<pre>
+1  Pegar lista telefônica
+2  Abrir na metade da lista telefônica
+3  Olhar a página
+4  <b>Se</b> Smith está na página
+5      Ligar para Mike
+6  <b>Senão, se</b> Smith está antes no livro
+7      Abrir na metade esquerda do livro telefônico
+8      Voltar para a linha 3
+9  <b>Senão, se</b> Smith está depois no livro
+10     Abrir na metade direita do livro telefônico
+11     Voltar para a linha 3
+12 <b>Senão</b>
+13     Sair
+</pre>
+</li>
+<li>
+<p>E as perguntas que decidem para onde vamos são chamadas de <em>expressões booleanas</em>, que eventualmente resultam em um valor verdadeiro ou falso:</p>
+<pre>
+1  Pegar lista telefônica
+2  Abrir na metade da lista telefônica
+3  Olhar a página
+4  Se <b>Smith está na página</b>
+5      Ligar para Mike
+6  Senão, se <b>Smith está antes no livro</b>
+7      Abrir na metade esquerda do livro telefônico
+8      Voltar para a linha 3
+9  Senão, se <b>Smith está depois no livro</b>
+10     Abrir na metade direita do livro telefônico
+11     Voltar para a linha 3
+12 Senão
+13     Sair
+</pre>
+</li>
+<li>
+<p>Por fim, temos palavras que levam a ciclos, onde podemos repetir partes do nosso programa, chamados de <em>loops</em>:</p>
+<pre>
+1  Pegar lista telefônica
+2  Abrir na metade da lista telefônica
+3  Olhar a página
+4  Se Smith está na página
+5      Ligar para Mike
+6  Senão, se Smith está antes no livro
+7      Abrir na metade esquerda do livro telefônico
+8      <b>Voltar para a linha 3</b>
+9  Senão, se Smith está depois no livro
+10     Abrir na metade direita do livro telefônico
+11     <b>Voltar para a linha 3</b>
+12 Senão
+13     Sair
+</pre>
+</li>
+</ul>
+<h2 id="scratch">Scratch</h2>
+<ul>
+<li>
+<p>Podemos escrever programas com os blocos de construção que acabamos de descobrir:</p>
+<ul>
+<li>funções</li>
+<li>condições</li>
+<li>expressões booleanas</li>
+<li>loops</li>
+</ul>
+</li>
+<li>
+<p>Usaremos uma linguagem de programação gráfica chamada <a href="https://scratch.mit.edu/">Scratch</a>, onde arrastamos e soltamos blocos que contêm instruções.</p>
+</li>
+<li>
+<p>Mais adiante em nosso curso, passaremos para linguagens de programação textuais como C, Python e JavaScript. Todas essas linguagens, incluindo o Scratch, possuem recursos mais poderosos como:</p>
+<ul>
+<li>
+variáveis<ul>
+<li>a capacidade de armazenar valores e alterá-los</li>
+</ul>
+</li>
+<li>
+threads<ul>
+<li>a capacidade do nosso programa de fazer várias coisas ao mesmo tempo</li>
+</ul>
+</li>
+<li>
+eventos<ul>
+<li>a capacidade de responder a mudanças em nosso programa ou entradas</li>
+</ul>
+</li>
+<li>...</li>
+</ul>
+</li>
+<li>
+<p>O ambiente de programação para o Scratch se parece com isso:<br />
+<img src="/static/portuguese/cs50x/notes/0/scratch.png" alt="captura de tela do Scratch" /></p>
+<ul>
+<li>À esquerda, temos peças de quebra-cabeça que representam funções, variáveis ou outros conceitos, que podemos arrastar e soltar em nossa área de instruções no centro.</li>
+<li>À direita, temos um palco que será mostrado pelo nosso programa para um humano, onde podemos adicionar ou alterar planos de fundo, personagens (chamados de sprites no Scratch) e muito mais.</li>
+</ul>
+</li>
+<li>
+<p>Podemos arrastar alguns blocos para fazer o Scratch dizer &quot;olá, mundo&quot;:<br />
+<img src="/static/portuguese/cs50x/notes/0/ola_mundo.png" alt="captura de tela do olá, mundo" /></p>
+<ul>
+<li>O bloco &quot;quando a bandeira verde for clicada&quot; é o início do nosso programa, e abaixo dele encaixamos um bloco &quot;dizer&quot; e digitamos &quot;olá, mundo&quot;.</li>
+</ul>
+</li>
+<li>
+<p>Também podemos arrastar o bloco &quot;perguntar e esperar&quot;, com uma pergunta como &quot;Qual é o seu nome?&quot;, e combiná-lo com um bloco &quot;dizer&quot; para a resposta:<br />
+<img src="/static/portuguese/cs50x/notes/0/resposta.png" alt="captura de tela de pergunta e resposta" /></p>
+</li>
+<li>
+<p>Mas não esperamos depois de dizer &quot;Olá&quot; com o primeiro bloco, então podemos usar o bloco &quot;dizer () por () segundos&quot;:<br />
+<img src="/static/portuguese/cs50x/notes/0/esperar.png" alt="captura de tela dos blocos com dizer durante 2 segundos" /></p>
+</li>
+<li>
+<p>Podemos usar o bloco &quot;unir&quot; para combinar duas frases para que o Scratch possa dizer &quot;olá, David&quot;:<br />
+<img src="/static/portuguese/cs50x/notes/0/junte.png" alt="captura de tela de juntar" /></p>
+<ul>
+<li>Note que podemos aninhar instruções e variáveis.</li>
+</ul>
+</li>
+<li>
+<p>Na verdade, o bloco &quot;dizer&quot; em si é como um algoritmo, onde fornecemos uma entrada de &quot;olá, mundo&quot; e ele produz a saída do Scratch (o gato) &quot;dizendo&quot; essa frase:<br />
+<img src="/static/portuguese/cs50x/notes/0/algoritmo_diga.png" alt="dizer como algoritmo com &quot;olá, mundo&quot; como entrada e gato como saída" /></p>
+</li>
+<li>
+<p>O bloco &quot;perguntar&quot; também recebe uma entrada (a pergunta que queremos fazer) e produz a saída do bloco &quot;resposta&quot;:<br />
+<img src="/static/portuguese/cs50x/notes/0/algoritmo_pergunte.png" alt="perguntar como algoritmo com &quot;Qual é o seu nome?&quot; como entrada e bloco de resposta como saída" /></p>
+</li>
+<li>
+<p>Podemos então usar o bloco &quot;resposta&quot; juntamente com nosso próprio texto, &quot;olá, &quot;, como duas entradas para o algoritmo de junção ...<br />
+<img src="/static/portuguese/cs50x/notes/0/algoritmo_junte.png" alt="junção como algoritmo com &quot;olá, &quot; e &quot;resposta&quot; como entrada e &quot;olá, David!&quot; como saída" /></p>
+</li>
+<li>
+<p>... o qual passamos como entrada novamente para o bloco &quot;dizer&quot;:<br />
+<img src="/static/portuguese/cs50x/notes/0/diga_novamente.png" alt="dizer como algoritmo com &quot;olá, David!&quot; como entrada e gato como saída" /></p>
+</li>
+<li>
+<p>Podemos tentar fazer o Scratch (o nome do gato) dizer miau:<br />
+<img src="/static/portuguese/cs50x/notes/0/sempre_miau.png" alt="blocos rotulados como &quot;para sempre&quot; com &quot;tocar som Miau até terminar&quot; aninhados dentro" /></p>
+<ul>
+<li>Mas quando clicamos na bandeira verde, ouvimos o som do miau repetidamente imediatamente. Nosso primeiro bug, ou erro! Podemos adicionar um bloco para esperar, para que os miados soem mais normais.<br />
+<img src="/static/portuguese/cs50x/notes/0/sempre_miau_esperar.png" alt="blocos rotulados como &quot;para sempre&quot; com &quot;tocar som Miau até terminar&quot; e &quot;esperar 1 segundo&quot; aninhados dentro" /></li>
+</ul>
+</li>
+<li>
+<p>Podemos fazer o Scratch apontar para o mouse e mover em sua direção:<br />
+<img src="/static/portuguese/cs50x/notes/0/aponte_para.png" alt="blocos rotulados como &quot;para sempre&quot; com &quot;apontar para o ponteiro do mouse&quot; e &quot;mover 10 passos&quot; aninhados dentro" /></p>
+</li>
+<li>
+<p>Vamos olhar para uma ovelha que sabe contar:<br />
+<img src="/static/portuguese/cs50x/notes/0/contar.png" alt="blocos rotulados como &quot;definir contador para 1&quot; e &quot;para sempre&quot; com &quot;dizer contador durante 1 segundo&quot;, &quot;esperar 1 segundo&quot; e &quot;alterar contador em 1&quot; aninhados dentro" /></p>
+<ul>
+<li>Aqui, <code>contador</code> é uma variável, cujo valor podemos definir, usar e alterar.</li>
+</ul>
+</li>
+<li>
+<p>Também podemos fazer o Scratch miar se tocarmos nele com o ponteiro do mouse:<br />
+<img src="/static/portuguese/cs50x/notes/0/acariciar0.png" alt="blocos rotulados como &quot;para sempre&quot; com &quot;se estiver tocando no ponteiro do mouse? então&quot; e &quot;tocar som Miau até terminar&quot; aninhados dentro" />'</p>
+</li>
+<li>
+<p>Alternativamente, podemos fazer com que o Scratch grite se fizermos o seguinte:<br />
+<img src="/static/portuguese/cs50x/notes/0/acariciar1.png" alt="blocos rotulados como &quot;sempre&quot; com &quot;se o ponteiro do mouse estiver tocando? então&quot; e &quot;reproduzir som rugido até terminar&quot; em aninhamento, e &quot;senão&quot;, &quot;reproduzir som miau até terminar&quot;, &quot;esperar 1 segundo&quot;" /></p>
+</li>
+<li>
+<p>Aqui, temos dois ramos diferentes, ou condições, que se repetirão para sempre. Se o mouse estiver tocando, o Scratch vai &quot;rugir&quot;, caso contrário, ele apenas vai miar.</p>
+</li>
+<li>
+<p>Podemos fazer o Scratch se mover de um lado para o outro na tela com alguns blocos adicionais que podemos descobrir olhando ao redor:<br />
+<img src="/static/portuguese/cs50x/notes/0/ai.png" alt="blocos rotulados como &quot;definir estilo de rotação esquerda-direita&quot; e &quot;sempre&quot; com &quot;mover 10 passos&quot;, &quot;se tocar a borda? então&quot; e &quot;reproduzir som ouch até terminar&quot;, &quot;girar 180 graus&quot;" /></p>
+<ul>
+<li>Podemos até gravar nosso próprio som para reproduzir.</li>
+</ul>
+</li>
+<li>
+<p>Com dois &quot;trajes&quot; diferentes, ou imagens do Scratch com as pernas em posições diferentes, podemos até simular um movimento de caminhada animado:<br />
+<img src="/static/portuguese/cs50x/notes/0/esbarrar.png" alt="blocos rotulados como &quot;definir estilo de rotação esquerda-direita&quot; e &quot;sempre&quot; com &quot;mover 10 passos&quot;, &quot;se tocar a borda? então&quot; com &quot;reproduzir som ouch até terminar&quot;, &quot;girar 180 graus&quot; aninhados, e &quot;próximo traje&quot;" /></p>
+</li>
+<li>
+<p>Olhamos para outro programa, &quot;bark&quot;, onde podemos usar a barra de espaço para silenciar um leão-marinho:<br />
+<img src="/static/portuguese/cs50x/notes/0/oioioi.png" alt="blocos rotulados como &quot;definir silenciado como falso&quot; e &quot;sempre&quot; com &quot;se a tecla espaço for pressionada? então&quot; com &quot;se silenciado = verdadeiro então&quot; e &quot;definir silenciado como falso&quot;, &quot;senão&quot; e &quot;definir silenciado como verdadeiro&quot; aninhados, e &quot;esperar 1 segundo&quot;" /></p>
+<ul>
+<li>Temos uma variável, <code>silenciado</code>, que é <code>falso</code> por padrão. E nosso programa verificará constantemente se a barra de espaço foi pressionada e definirá <code>silenciado</code> como <code>falso</code>, se for <code>true</code>, ou <code>true</code> caso contrário. Dessa forma, podemos alternar se o som será reproduzido ou não, já que nosso outro conjunto de blocos para o leão-marinho verifica a variável <code>silenciado</code>:<br />
+<img src="/static/portuguese/cs50x/notes/0/oioioi1.png" alt="blocos rotulados como &quot;sempre&quot; com &quot;se silenciado = falso então&quot; com &quot;iniciar som LeãoMarinho&quot; e &quot;pensar oi oi oi por 2 segundos&quot; aninhados, e &quot;esperar 1 segundo&quot;" /></li>
+</ul>
+</li>
+<li>
+<p>Com múltiplos sprites, ou personagens, podemos ter conjuntos diferentes de blocos para cada um deles:<br />
+<img src="/static/portuguese/cs50x/notes/0/marco.png" alt="blocos rotulados como &quot;sempre&quot; com &quot;se a tecla espaço for pressionada? então&quot; com &quot;dizer Marco! por 2 segundos&quot; e &quot;transmitir evento&quot; aninhados" /></p>
+<ul>
+<li>Para um boneco, temos esses blocos que dizem &quot;Marco!&quot;, e depois um bloco de &quot;transmitir evento&quot;. Esse &quot;evento&quot; é usado para que nossos dois sprites se comuniquem entre si, como enviar uma mensagem secreta. Assim, nosso outro boneco só precisa esperar por esse evento para dizer &quot;Polo!&quot;:<br />
+<img src="/static/portuguese/cs50x/notes/0/polo.png" alt="blocos rotulados como &quot;quando receber evento&quot;, &quot;dizer Polo! por 2 segundos&quot;" /></li>
+</ul>
+</li>
+<li>
+<p>Agora que conhecemos alguns conceitos básicos, podemos pensar no design, ou na qualidade de nossos programas. Por exemplo, podemos fazer com que o Scratch tossa três vezes repetindo alguns blocos:<br />
+<img src="/static/portuguese/cs50x/notes/0/espirrar0.png" alt="blocos rotulados como &quot;dizer tossir por 1 segundo&quot;, &quot;esperar 1 segundo&quot;, &quot;dizer tossir por 1 segundo&quot;, &quot;esperar 1 segundo&quot;, &quot;dizer tossir por 1 segundo&quot;, &quot;esperar 1 segundo&quot;" /></p>
+</li>
+<li>
+<p>Embora isso esteja correto, podemos evitar repetir blocos com um loop:<br />
+<img src="/static/portuguese/cs50x/notes/0/espirrar1.png" alt="blocos rotulados como &quot;repetir 3 vezes&quot; com &quot;dizer tossir por 1 segundo&quot;, &quot;esperar 1 segundo&quot; aninhados" /></p>
+</li>
+<li>
+<p>O próximo passo é abstrair parte do nosso código em uma função, ou torná-lo reutilizável de diferentes maneiras. Podemos criar um bloco chamado &quot;tossir&quot; e colocar alguns blocos dentro dele:<br />
+<img src="/static/portuguese/cs50x/notes/0/funcao_espirrar.png" alt="dois conjuntos de blocos. o primeiro conjunto de blocos é: &quot;definir tossir&quot;, &quot;dizer tossir por 1 segundo&quot;, &quot;esperar 1 segundo&quot;. o segundo conjunto é: &quot;quando clicar na bandeira verde&quot;, &quot;repetir 3 vezes&quot;, &quot;tossir&quot;" /></p>
+<ul>
+<li>Agora, todos os nossos sprites podem usar o mesmo bloco &quot;tossir&quot;, em quantos lugares desejarmos.</li>
+</ul>
+</li>
+<li>
+<p>Podemos até colocar um número de vezes em nossa função de tossir, para que precisemos apenas de um único bloco para tossir qualquer número de vezes:<br />
+<img src="/static/portuguese/cs50x/notes/0/funcao_espirrar_2.png" alt="dois conjuntos de blocos. o primeiro conjunto de blocos é: &quot;definir tossir n vezes&quot;, &quot;repetir n vezes&quot;, &quot;dizer tossir por 1 segundo&quot;, &quot;esperar 1 segundo&quot;. o segundo conjunto é: &quot;quando clicar na bandeira verde&quot;, &quot;tossir 3 vezes&quot;" /></p>
+</li>
+<li>
+<p>Olhamos para alguns exemplos e discutimos como podemos implementar componentes deles com diferentes sprites que seguem o cursor do mouse, ou que causam algo diferente no palco.</p>
+</li>
+<li>
+<p>Bem-vindo a bordo!</p>
+</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

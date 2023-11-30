@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h1>Guia de Estilo para C</h1>
+<p>Não há uma única maneira correta de estilizar o código. Mas definitivamente existem muitas maneiras erradas (ou, pelo menos, ruins). Mesmo assim, o CS50 pede que você siga as convenções abaixo para que possamos analisar de forma confiável o estilo do seu código. Da mesma forma, as empresas normalmente adotam suas próprias convenções corporativas para o estilo.</p>
+<h2>Comprimento da Linha</h2>
+<p>Por convenção, o comprimento máximo de uma linha de código em C é de 80 caracteres, o que está historicamente fundamentado em monitores de tamanho padrão em terminais de computadores mais antigos, que podiam exibir 24 linhas verticalmente e 80 caracteres horizontalmente. Embora a tecnologia moderna tenha tornado obsoleta a necessidade de manter linhas limitadas a 80 caracteres, ainda é uma diretriz que deve ser considerada um &quot;limite flexível&quot;, e uma linha de 100 caracteres deve ser realmente a mais longa que você escreve em C, caso contrário, os leitores geralmente precisarão rolar. Se você precisar de mais de 100 caracteres, pode ser hora de repensar os nomes de suas variáveis ou o design geral!</p>
+<pre><code>// As próximas linhas de código primeiro solicitam ao usuário que forneça dois valores inteiros e, em seguida, multiplicam esses dois valores inteiros juntos para que possam ser usados mais tarde no programa
+int primeiro_valor_inteiro_coletado_do_usuario = get_int(&quot;Digite um número inteiro: &quot;);
+int segundo_valor_inteiro_coletado_do_usuario = get_int(&quot;Mais um número inteiro, por favor: &quot;);
+int produto_dos_dois_valores_inteiros_do_usuario = primeiro_valor_inteiro_coletado_do_usuario * segundo_valor_inteiro_coletado_do_usuario;
+</code></pre>
+<p>Em outras linguagens, especialmente JavaScript, é significativamente mais difícil restringir as linhas a um comprimento máximo; lá, seu objetivo deve ser quebrar as linhas (como via <code>\n</code>) em locais que maximizem a legibilidade e a clareza.</p>
+<h2>Comentários</h2>
+<p>Os comentários tornam o código mais legível, não apenas para os outros (por exemplo, seu TF), mas também para você, especialmente quando horas, dias, semanas, meses ou anos passam entre a escrita e a leitura do seu próprio código. Comentar muito pouco é ruim. Comentar demais é ruim. Qual é o ponto ideal? Comentar a cada poucas linhas de código (ou seja, blocos interessantes) é uma diretriz razoável. Tente escrever comentários que respondam a uma ou ambas estas perguntas:</p>
+<ol>
+<li>O que este bloco faz?</li>
+<li>Por que implementei este bloco desta forma?</li>
+</ol>
+<p>Dentro das funções, use &quot;comentários embutidos&quot; e mantenha-os curtos (por exemplo, uma linha), caso contrário, fica difícil distinguir os comentários do código, mesmo com realce de sintaxe. Coloque o comentário acima da(s) linha(s) a que se aplica. Não é necessário escrever frases completas, mas faça a primeira palavra do comentário em maiúsculas (a menos que seja o nome de uma função, variável ou similar) e deixe um espaço entre <code>//</code> e o primeiro caractere do seu comentário, como em:</p>
+<pre><code>// Converter Fahrenheit para Celsius
+float c = 5.0 / 9.0 * (f - 32.0);
+</code></pre>
+<p>Em outras palavras, não faça isso:</p>
+<pre><code>//Converter Fahrenheit para Celsius
+float c = 5.0 / 9.0 * (f - 32.0);
+</code></pre>
+<p>Ou isso:</p>
+<pre><code>// converter Fahrenheit para Celsius
+float c = 5.0 / 9.0 * (f - 32.0);
+</code></pre>
+<p>Ou isso:</p>
+<pre><code>float c = 5.0 / 9.0 * (f - 32.0); // Converter Fahrenheit para Celsius
+</code></pre>
+<p>No topo de seus arquivos .c e .h, deve haver um comentário que resuma o que seu programa (ou aquele arquivo específico) faz, como em:</p>
+<pre><code>// Diz olá para o mundo
+</code></pre>
+<p>No topo de cada uma de suas funções (exceto, talvez, <code>main</code>), deve haver um comentário que resuma o que sua função está fazendo, como em:</p>
+<pre><code>// Retorna o quadrado de n
+int quadrado(int n)
+{
+    return n * n;
+}
+</code></pre>
+<h2>Cabeçalhos de Biblioteca</h2>
+<p>Quaisquer cabeçalhos de biblioteca que você incluir devem ser listados em ordem alfabética, como em:</p>
+<pre><code>#include &lt;cs50.h&gt;
+#include &lt;stdio.h&gt;
+#include &lt;string.h&gt;
+</code></pre>
+<p>Isso facilita a visualização rápida, especialmente em uma lista longa, se você incluiu um cabeçalho.</p>
+<h2>Condições</h2>
+<p>As condições devem ser estilizadas da seguinte forma:</p>
+<pre><code>if (x &gt; 0)
+{
+    printf(&quot;x é positivo\n&quot;);
+}
+else if (x &lt; 0)
+{
+    printf(&quot;x é negativo\n&quot;);
+}
+else
+{
+    printf(&quot;x é zero\n&quot;);
+}
+</code></pre>
+<p>Note como:</p>
+<ul>
+<li>as chaves se alinham bem, cada uma em sua própria linha, tornando perfeitamente claro o que está dentro do bloco;</li>
+<li>há um único espaço após cada <code>if</code>;</li>
+<li>cada chamada para <code>printf</code> é recuada com 4 espaços;</li>
+<li>existem espaços simples ao redor do <code>&gt;</code> e ao redor do <code>&lt;</code>; e</li>
+<li>não há espaço imediatamente após cada <code>(</code> ou imediatamente antes de cada <code>)</code>.</li>
+</ul>
+<p>Para economizar espaço, alguns programadores gostam de manter a primeira chave na mesma linha que a própria condição, mas não recomendamos, pois é mais difícil de ler, então não faça isso:</p>
+<pre><code>if (x &lt; 0) {
+    printf(&quot;x é negativo\n&quot;);
+} else if (x &lt; 0) {
+    printf(&quot;x é negativo\n&quot;);
+}
+</code></pre>
+<p>E definitivamente não faça isso:</p>
+<pre><code>if (x &lt; 0)
+    {
+    printf(&quot;x é negativo\n&quot;);
+    }
+else
+    {
+    printf(&quot;x é negativo\n&quot;);
+    }
+</code></pre>
+<h2>Switches</h2>
+<p>Declare um <code>switch</code> da seguinte forma:</p>
+<pre><code>switch (n)
+{
+    case -1:
+        printf(&quot;n é -1\n&quot;);
+        break;
+
+    case 1:
+        printf(&quot;n é 1\n&quot;);
+        break;
+
+    default:
+        printf(&quot;n não é nem -1 nem 1\n&quot;);
+        break;
+}
+</code></pre>
+<p>Observe como:</p>
+<ul>
+<li>cada chave é colocada em sua própria linha;</li>
+<li>há um único espaço após <code>switch</code>;</li>
+<li>não há espaço imediatamente após cada <code>(</code> ou imediatamente antes de cada <code>)</code>;</li>
+<li>os casos do <code>switch</code> são indentados com 4 espaços;</li>
+<li>os corpos dos casos são indentados ainda mais com 4 espaços; e</li>
+<li>cada <code>case</code> (incluindo o <code>default</code>) termina com um <code>break</code>.</li>
+</ul>
+<h2>Funções</h2>
+<p>De acordo com <a href="http://en.wikipedia.org/wiki/C99">C99</a>, certifique-se de declarar <code>main</code> da seguinte forma:</p>
+<pre><code>int main(void)
+{
+
+}
+</code></pre>
+<p>ou, se estiver usando a Biblioteca CS50, com:</p>
+<pre><code>#include &lt;cs50.h&gt;
+
+int main(int argc, string argv[])
+{
+
+}
+</code></pre>
+<p>ou com:</p>
+<pre><code>int main(int argc, char *argv[])
+{
+
+}
+</code></pre>
+<p>ou até com:</p>
+<pre><code>int main(int argc, char **argv)
+{
+
+}
+</code></pre>
+<p>Não declare <code>main</code> desta forma:</p>
+<pre><code>int main()
+{
+
+}
+</code></pre>
+<p>ou assim:</p>
+<pre><code>void main()
+{
+
+}
+</code></pre>
+<p>ou assim:</p>
+<pre><code>main()
+{
+
+}
+</code></pre>
+<p>Quanto às suas próprias funções, certifique-se de defini-las da mesma forma, com cada chave em sua própria linha e com o tipo de retorno na mesma linha do nome da função, assim como fizemos com <code>main</code>.</p>
+<h2>Indentação</h2>
+<p>Indente seu código quatro espaços de cada vez para deixar claro quais blocos de código estão dentro de outros. Se você usar a tecla Tab do seu teclado para fazer isso, certifique-se de que o editor de texto esteja configurado para converter tabs (<code>\t</code>) em quatro espaços, caso contrário, seu código pode não ser exibido corretamente no computador de outra pessoa, já que <code>\t</code> é renderizado de forma diferente em editores diferentes. (Se estiver usando <a href="https://ide.cs50.io/">CS50 IDE</a>, é aceitável usar Tab para indentação, em vez de pressionar repetidamente a barra de espaço do seu teclado, uma vez que nós já o configuramos para converter <code>\t</code> em quatro espaços.)</p>
+<p>Aqui está um código com uma boa indentação:</p>
+<pre><code>// Imprime argumentos da linha de comando um por linha
+printf(&quot;\n&quot;);
+for (int i = 0; i &lt; argc; i++)
+{
+    for (int j = 0, n = strlen(argv[i]); j &lt; n; j++)
+    {
+        printf(&quot;%c\n&quot;, argv[i][j]);
+    }
+    printf(&quot;\n&quot;);
+}
+</code></pre>
+<h2>Loops</h2>
+<h3>for</h3>
+<p>Sempre que precisar de variáveis temporárias para iteração, use <code>i</code>, depois <code>j</code>, depois <code>k</code>, a menos que nomes mais específicos tornem seu código mais legível:</p>
+<pre><code>for (int i = 0; i &lt; LIMIT; i++)
+{
+    for (int j = 0; j &lt; LIMIT; j++)
+    {
+        for (int k = 0; k &lt; LIMIT; k++)
+        {
+            // Faça algo
+        }
+    }
+}
+</code></pre>
+<p>Se você precisar de mais de três variáveis para iteração, pode ser hora de repensar seu design!</p>
+<h3>while</h3>
+<p>Declare loops <code>while</code> da seguinte forma:</p>
+<pre><code>while (condition)
+{
+    // Faça algo
+}
+</code></pre>
+<p>Observe como:</p>
+<ul>
+<li>cada chave é colocada em sua própria linha;</li>
+<li>há um único espaço após <code>while</code>;</li>
+<li>não há espaço imediatamente após o <code>(</code> ou imediatamente antes do <code>)</code>; e</li>
+<li>o corpo do loop (um comentário neste caso) é indentado com 4 espaços.</li>
+</ul>
+<h3>do ... while</h3>
+<p>Declare loops <code>do ... while</code> da seguinte forma:</p>
+<pre><code>do
+{
+    // Faça algo
+}
+while (condition);
+</code></pre>
+<p>Observe como:</p>
+<ul>
+<li>cada chave é colocada em sua própria linha;</li>
+<li>há um único espaço após <code>while</code>;</li>
+<li>não há espaço imediatamente após o <code>(</code> ou imediatamente antes do <code>)</code>; e</li>
+<li>o corpo do loop (um comentário neste caso) é indentado com 4 espaços.</li>
+</ul>
+<h2>Ponteiros</h2>
+<p>Ao declarar um ponteiro, escreva o <code>*</code> ao lado da variável, como em:</p>
+<pre><code>int *p;
+</code></pre>
+<p>Não o escreva ao lado do tipo, como em:</p>
+<pre><code>int* p;
+</code></pre>
+<h2>Variáveis</h2>
+<p>Porque o CS50 usa <a href="http://en.wikipedia.org/wiki/C99">C99</a>, não defina todas as suas variáveis no início das suas funções, mas sim quando e onde você realmente precisa delas. Além disso, escopo suas variáveis da maneira mais restrita possível. Por exemplo, se <code>i</code> é necessário apenas para um loop, declare <code>i</code> dentro do próprio loop:</p>
+<pre><code>for (int i = 0; i &lt; LIMIT; i++)
+{
+    printf(&quot;%i\n&quot;, i);
+}
+</code></pre>
+<p>Embora seja aceitável usar variáveis como <code>i</code>, <code>j</code> e <code>k</code> para iteração, a maioria das suas variáveis deve ter nomes mais específicos. Se você estiver somando alguns valores, por exemplo, chame sua variável de <code>sum</code>. Se o nome da sua variável exigir duas palavras (por exemplo, <code>is_ready</code>), coloque um sublinhado entre elas, uma convenção popular em C, embora não tanto em outras linguagens.</p>
+<p>Se declarar várias variáveis do mesmo tipo de uma vez, é aceitável declará-las juntas, como em:</p>
+<pre><code>int quarters, dimes, nickels, pennies;
+</code></pre>
+<p>Apenas não inicialize algumas e deixe outras não inicializadas, como em:</p>
+<pre><code>int quarters, dimes = 0, nickels = 0 , pennies;
+</code></pre>
+<p>Também tenha cuidado ao declarar ponteiros separadamente de não-ponteiros, como em:</p>
+<pre><code>int *p;
+int n;
+</code></pre>
+<p>Não declare ponteiros na mesma linha que não-ponteiros, como em:</p>
+<pre><code>int *p, n;
+</code></pre>
+<h2>Estruturas</h2>
+<p>Declare uma <code>struct</code> como um tipo da seguinte forma, com cada chave em sua própria linha e membros indentados nela, e o nome do tipo também em sua própria linha:</p>
+<pre><code>typedef struct
+{
+    string name;
+    string dorm;
+}
+student;
+</code></pre>
+<p>Se a <code>struct</code> contiver como membro um ponteiro para outra <code>struct</code> semelhante, declare a <code>struct</code> com um nome idêntico ao tipo, sem usar sublinhados:</p>
+<pre><code>typedef struct node
+{
+    int n;
+    struct node *next;
+}
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

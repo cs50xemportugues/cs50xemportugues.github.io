@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h1>Laboratório 8: Trivia</h1>
+<p>Você pode colaborar com um ou dois colegas neste laboratório, embora seja esperado que cada aluno em qualquer grupo contribua igualmente para o laboratório.</p>
+<p>Escreva uma página da web que permita aos usuários responder perguntas de trivia.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/labs/8/questions.png" alt="captura de tela de perguntas de trivia" /></p>
+<h2>Introdução</h2>
+<p>Começou o CS50x em 2021 ou antes e precisa migrar seu trabalho do CS50 IDE para o novo espaço de código VS? Certifique-se de verificar nossas instruções sobre como <a href="../../new/">migrar</a> seus arquivos!</p>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do terminal e, em seguida, execute <code>cd</code> sozinho. Verifique se sua &quot;marcação&quot; é semelhante à abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e, em seguida, execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/labs/8/trivia.zip
+</code></pre>
+<p>seguido de Enter para baixar um arquivo ZIP chamado <code>trivia.zip</code> no seu space de código. Tome cuidado para não ignorar o espaço entre <code>wget</code> e a seguinte URL, ou qualquer outro caractere!</p>
+<p>Agora, execute</p>
+<pre><code>unzip trivia.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>trivia</code>. Você não precisa mais do arquivo ZIP, então execute</p>
+<pre><code>rm trivia.zip
+</code></pre>
+<p>e responda com &quot;y&quot;, seguido de Enter na solicitação para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd trivia
+</code></pre>
+<p>seguido de Enter para mover-se para (ou seja, abrir) esse diretório. Seu prompt deve agora se parecer com o abaixo.</p>
+<pre><code>trivia/ $
+</code></pre>
+<p>Se tudo correu bem, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e deverá ver um arquivo <code>index.html</code> e um arquivo <code>styles.css</code>.</p>
+<p>Se você tiver algum problema, siga essas mesmas etapas novamente e veja se pode determinar onde errou!</p>
+<h2>Detalhes de implementação</h2>
+<p>Projete uma página da web usando HTML, CSS e JavaScript para permitir que os usuários respondam a perguntas de trivia.</p>
+<ul>
+<li>Em <code>index.html</code>, adicione abaixo de &quot;Parte 1&quot; uma pergunta de trivia de múltipla escolha de sua escolha com HTML.
+* Você deve usar um cabeçalho <code>h3</code> para o texto de sua pergunta.
+* Você deve ter um <code>botão</code> para cada uma das possíveis opções de resposta. Deve haver pelo menos três opções de resposta, das quais exatamente uma deve ser correta.</li>
+<li>Usando JavaScript, adicione lógica para que os botões mudem de cor quando um usuário clicar neles.
+* Se um usuário clicar em um botão com uma resposta incorreta, o botão deve ficar vermelho e texto deve aparecer abaixo da pergunta que diz &quot;Incorreto&quot;.
+* Se um usuário clicar em um botão com a resposta correta, o botão deve ficar verde e texto deve aparecer abaixo da pergunta que diz &quot;Correto!”.</li>
+<li>Em <code>index.html</code>, adicione abaixo de &quot;Parte 2&quot; uma pergunta de resposta livre baseada em texto de sua escolha com HTML.
+* Você deve usar um cabeçalho <code>h3</code> para o texto da sua pergunta.
+* Você deve usar um campo <code>input</code> para permitir que o usuário digite uma resposta.
+* Você deve usar um <code>botão</code> para permitir que o usuário confirme sua resposta.</li>
+<li>Usando JavaScript, adicione lógica para que o campo de texto mude de cor quando um usuário confirmar sua resposta.
+* Se o usuário digitar uma resposta incorreta e pressionar o botão de confirmação, o campo de texto deve ficar vermelho e o texto deve aparecer abaixo da pergunta que diz &quot;Incorreto&quot;.
+* Se o usuário digitar a resposta correta e pressionar o botão de confirmação, o campo de entrada deve ficar verde e o texto deve aparecer abaixo da pergunta que diz &quot;Correto!&quot;.</li>
+</ul>
+<p>Opcionalmente, você também pode:</p>
+<ul>
+<li>Editar <code>styles.css</code> para alterar o CSS da sua página da web!</li>
+<li>Adicione perguntas de trivia adicionais ao seu questionário de trivia, se desejar!</li>
+</ul>
+<h3>Passo a passo</h3>
+<p>Este vídeo foi gravado quando o curso ainda usava o CS50 IDE para escrever código. Embora a interface possa parecer diferente do seu space de código, o comportamento dos dois ambientes deve ser bastante semelhante!</p>
+<h3>Dicas</h3>
+<ul>
+<li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelector"><code>document.querySelector</code></a> para consultar um único elemento HTML.</li>
+<li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"><code>document.querySelectorAll</code></a> para consultar vários elementos HTML que correspondem a uma consulta. A função retorna uma matriz de todos os elementos correspondentes.</li>
+</ul>
+<p>Não sabe como resolver?</p>
+<h3>Testando</h3>
+<p>Não há <code>check50</code> para este laboratório, já que as implementações variam com base em suas perguntas! Mas verifique tanto as respostas incorretas quanto as corretas para cada uma de suas perguntas para garantir que sua página da web responda adequadamente.</p>
+<p>Execute <code>http-server</code> em seu terminal enquanto estiver em seu diretório <code>lab8</code> para iniciar um servidor da web que serve sua página da web.</p>
+<h2>Como enviar</h2>
+<p>Em seu terminal, execute o abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/labs/2023/x/trivia&quot;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

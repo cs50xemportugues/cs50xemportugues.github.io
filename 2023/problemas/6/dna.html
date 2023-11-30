@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h1>DNA</h1>
+<p>Implemente um programa que identifique uma pessoa baseada em seu DNA, como abaixo.</p>
+<pre><code>$ python dna.py databases/large.csv sequences/5.txt
+Lavender
+</code></pre>
+<h2>Introdução</h2>
+<p>Faça login no [code.cs50.io] (https://code.cs50.io/), clique na janela do terminal e execute <code>cd</code> isoladamente. Você deve ver que o prompt da janela do seu terminal se parece com o abaixo:</p>
+<pre><code>$
+</code></pre>
+<p>Em seguida, execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/6/dna.zip
+</code></pre>
+<p>para baixar um ZIP chamado <code>dna.zip</code> no seu espaço de códigos.</p>
+<p>Em seguida, execute</p>
+<pre><code>unzip dna.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>dna</code>. Você não precisa mais do arquivo ZIP, então você pode executar</p>
+<pre><code>rm dna.zip
+</code></pre>
+<p>e responder com &quot;y&quot; seguido por Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd dna
+</code></pre>
+<p>seguido de Enter para mover-se para dentro (ou seja, abrir) esse diretório. Seu prompt agora deve ser semelhante ao abaixo.</p>
+<pre><code>dna/ $
+</code></pre>
+<p>Execute <code>ls</code> sozinho e você deve ver alguns arquivos e pastas:</p>
+<pre><code>databases/ dna.py sequences/
+</code></pre>
+<p>Se você tiver algum problema, siga essas mesmas etapas novamente e veja se consegue determinar onde deu errado!</p>
+<h2>Background</h2>
+<p>O DNA, o portador de informações genéticas nos seres vivos, tem sido utilizado na justiça criminal por décadas. Mas como exatamente funciona o perfil de DNA? Dada uma sequência de DNA, como os investigadores forenses podem identificar a quem pertence?</p>
+<p>Bem, o DNA é realmente apenas uma sequência de moléculas chamadas nucleotídeos, organizados em uma forma particular (uma dupla hélice). Cada célula humana tem bilhões de nucleotídeos organizados em sequência. Cada nucleotídeo do DNA contém uma das quatro bases diferentes: adenina (A), citosina (C), guanina (G) ou timina (T). Algumas partes dessa sequência (ou seja, genoma) são iguais ou pelo menos muito semelhantes em quase todos os humanos, mas outras partes da sequência têm uma diversidade genética mais alta e, portanto, variam mais na população.</p>
+<p>Um lugar onde o DNA tende a ter uma alta diversidade genética é em Repetições em Tandem Curtas (STRs). Um STR é uma sequência curta de bases de DNA que tende a se repetir consecutivamente inúmeras vezes em locais específicos dentro do DNA de uma pessoa. O número de vezes que um determinado STR é repetido varia muito entre os indivíduos. Nas amostras de DNA abaixo, por exemplo, Alice tem o STR <code>AGAT</code> repetido quatro vezes em seu DNA, enquanto Bob tem o mesmo STR repetido cinco vezes.</p>
+<p><img src="https://cs50.harvard.edu/x/2023/psets/6/dna/strs.png" alt="Sample STRs" /></p>
+<p>Usar vários STRs, em vez de apenas um, pode melhorar a precisão do perfil de DNA. Se a probabilidade de duas pessoas terem o mesmo número de repetições para um único STR é de 5%, e o analista examina 10 STRs diferentes, então a probabilidade de que duas amostras de DNA correspondam por pura coincidência é de cerca de 1 em 1 quatrilhão (assumindo que todos os STRs são independentes entre si). Então, se as duas amostras de DNA tiverem o mesmo número de repetições para cada um dos STRs, o analista pode ter bastante confiança de que elas vieram da mesma pessoa. CODIS, o banco de dados de DNA do FBI, usa 20 STRs diferentes como parte de seu processo de perfil de DNA.</p>
+<p>Como seria um banco de dados de DNA? Bem, em sua forma mais simples, você poderia imaginar formatar um banco de dados de DNA como um arquivo CSV, em que cada linha corresponde a um indivíduo e cada coluna corresponde a um STR específico.</p>
+<pre><code>name,AGAT,AATG,TATC
+Alice,28,42,14
+Bob,17,22,19
+Charlie,36,18,25
+</code></pre>
+<p>Os dados do arquivo acima sugeririam que Alice tem a sequência <code>AGAT</code> repetida 28 vezes consecutivamente em algum lugar de seu DNA, a sequência <code>AATG</code> repetida 42 vezes e <code>TATC</code> repetida 14 vezes. Bob, por sua vez, tem os mesmos três STRs repetidos 17, 22 e 19 vezes, respectivamente. E Charlie tem os mesmos três STRs repetidos 36, 18 e 25 vezes, respectivamente.</p>
+<p>Então, dada uma sequência de DNA, como você poderia identificar a quem ela pertence? Bem, imagine que você procurou na sequência de DNA a sequência consecutiva mais longa de <code>AGAT</code>s repetidos e descobriu que a sequência mais longa tem 17 repetições. Se você então descobrisse que a sequência mais longa de <code>AATG</code> tem 22 repetições e a sequência mais longa de <code>TATC</code> tem 19 repetições, isso forneceria uma evidência bastante boa de que o DNA pertence a Bob. Claro, é também possível que, uma vez que você tenha as contagens para cada um dos STRs, ela não coincida com ninguém em seu banco de dados de DNA, nesse caso, não haveria correspondência.</p>
+<p>Na prática, como os analistas sabem em qual cromossomo e em qual localização do DNA um STR será encontrado, eles podem localizar sua busca apenas em uma seção estreita de DNA. Mas ignoraremos esse detalhe para este problema.</p>
+<p>Sua tarefa é escrever um programa que aceite uma sequência de DNA e um arquivo CSV contendo contagens de STR para uma lista de indivíduos e, em seguida, produza a quem pertence esse DNA (provavelmente).</p>
+<h2>Especificação</h2>
+<p>Em um arquivo chamado <code>dna.py</code>, implemente um programa que identifique a quem pertence uma sequência de DNA.</p>
+<ul>
+<li>
+O programa deve exigir como primeiro argumento na linha de comando o nome de um arquivo CSV contendo as contagens STR para uma lista de indivíduos e deve exigir como segundo argumento na linha de comando o nome de um arquivo de texto contendo a sequência de DNA a ser identificada.<ul>
+<li>Se o seu programa for executado com o número incorreto de argumentos de linha de comando, o programa deve imprimir uma mensagem de erro de sua escolha (com <code>print</code>). Se o número correto de argumentos for fornecido, você pode assumir que o primeiro argumento é de fato o nome de arquivo de um arquivo CSV válido e que o segundo argumento é o nome de arquivo de um arquivo de texto válido.</li>
+</ul>
+</li>
+<li>
+Seu programa deve abrir o arquivo CSV e ler seu conteúdo na memória.<ul>
+<li>Você pode assumir que a primeira linha do arquivo CSV será os nomes das colunas. A primeira coluna será a palavra <code>name</code> e as colunas restantes serão as próprias sequências STR.</li>
+</ul>
+</li>
+<li>Seu programa deve abrir a sequência de DNA e ler seu conteúdo na memória.</li>
+<li>Para cada um dos STRs (da primeira linha do arquivo CSV), seu programa deve calcular a sequência mais longa de repetições consecutivas do STR na sequência de DNA a ser identificada. Observe que definimos uma função auxiliar para você, <code>longest_match</code>, que fará exatamente isso!</li>
+<li>
+Se as contagens STR coincidirem exatamente com algum dos indivíduos no arquivo CSV, seu programa deve imprimir o nome do indivíduo correspondente.<ul>
+<li>Você pode assumir que as contagens STR não coincidirão com mais de um indivíduo.</li>
+<li>Se as contagens STR não coincidirem exatamente com nenhum dos indivíduos no arquivo CSV, seu programa deve imprimir <code>No match</code>.</li>
+</ul>
+</li>
+</ul>
+<h2>Visão Geral</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/j84b_EgntcQ?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<h2>Uso</h2>
+<p>Seu programa deve ter o comportamento mostrado no exemplo abaixo:</p>
+<pre>
+$ python dna.py databases/large.csv sequences/5.txt
+Lavender
+</pre>
+<pre>
+$ python dna.py
+Usage: python dna.py data.csv sequence.txt
+</pre>
+<pre>
+$ python dna.py data.csv
+Usage: python dna.py data.csv sequence.txt
+</pre>
+<h2>Dicas</h2>
+<ul>
+<li>Você pode achar o módulo <a href="https://docs.python.org/pt-br/3/library/csv.html"><code>csv</code></a> do Python útil para ler arquivos CSV na memória. Você pode querer aproveitar <a href="https://docs.python.org/pt-br/3/library/csv.html#csv.reader"><code>csv.reader</code></a> ou <a href="https://docs.python.org/pt-br/3/library/csv.html#csv.DictReader"><code>csv.DictReader</code></a>.</li>
+<li>As funções <a href="https://docs.python.org/pt-br/3.3/tutorial/inputoutput.html#reading-and-writing-files"><code>open</code></a> e <a href="https://docs.python.org/pt-br/3.3/tutorial/inputoutput.html#methods-of-file-objects"><code>read</code></a> podem ser úteis para ler arquivos de texto na memória.</li>
+<li>Considere quais estruturas de dados podem ser úteis para manter o controle da informação em seu programa. Uma <a href="https://docs.python.org/pt-br/3/tutorial/introduction.html#lists"><code>list</code></a> ou um <a href="https://docs.python.org/pt-br/3/tutorial/datastructures.html#dictionaries"><code>dict</code></a> podem ser úteis.</li>
+<li>Lembre-se de que definimos uma função (<code>longest_match</code>) que, em dado uma sequência de DNA e um STR como entrada, retorna o número máximo de vezes que o STR se repete. Você pode usar essa função em outras partes do seu programa!</li>
+</ul>
+<h2>Testando</h2>
+<p>Embora o <code>check50</code> esteja disponível para este problema, você é incentivado a testar o seu código por conta própria para cada um dos seguintes items.</p>
+<ul>
+<li>Execute o seu programa como <code>python dna.py databases/small.csv sequences/1.txt</code>. Seu programa deve produzir a saída <code>Bob</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/small.csv sequences/2.txt</code>. Seu programa deve produzir a saída <code>No match</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/small.csv sequences/3.txt</code>. Seu programa deve produzir a saída <code>No match</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/small.csv sequences/4.txt</code>. Seu programa deve produzir a saída <code>Alice</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/5.txt</code>. Seu programa deve produzir a saída <code>Lavender</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/6.txt</code>. Seu programa deve produzir a saída <code>Luna</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/7.txt</code>. Seu programa deve produzir a saída <code>Ron</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/8.txt</code>. Seu programa deve produzir a saída <code>Ginny</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/9.txt</code>. Seu programa deve produzir a saída <code>Draco</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/10.txt</code>. Seu programa deve produzir a saída <code>Albus</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/11.txt</code>. Seu programa deve produzir a saída <code>Hermione</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/12.txt</code>. Seu programa deve produzir a saída <code>Lily</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/13.txt</code>. Seu programa deve produzir a saída <code>No match</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/14.txt</code>. Seu programa deve produzir a saída <code>Severus</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/15.txt</code>. Seu programa deve produzir a saída <code>Sirius</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/16.txt</code>. Seu programa deve produzir a saída <code>No match</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/17.txt</code>. Seu programa deve produzir a saída <code>Harry</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/18.txt</code>. Seu programa deve produzir a saída <code>No match</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/19.txt</code>. Seu programa deve produzir a saída <code>Fred</code>.</li>
+<li>Execute o seu programa como <code>python dna.py databases/large.csv sequences/20.txt</code>. Seu programa deve produzir a saída <code>No match</code>.</li>
+</ul>
+<p>Execute o comando abaixo para avaliar a correção do seu código usando o <code>check50</code>. Mas não se esqueça de compilá-lo e testá-lo sozinho também!</p>
+<pre><code>check50 cs50/problems/2023/x/dna
+</code></pre>
+<p>Execute o comando abaixo para avaliar o estilo do seu código usando o <code>style50</code>.</p>
+<pre><code>style50 dna.py
+</code></pre>
+<h2>Como Submeter</h2>
+<p>No seu terminal, execute o comando abaixo para enviar o seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/dna&quot;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

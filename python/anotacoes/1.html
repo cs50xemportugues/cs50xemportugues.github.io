@@ -1,0 +1,755 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h2># Aula 1</h2>
+<ul>
+<li>
+<p><a href="#condicionais">Condicionais</a></p>
+</li>
+<li>
+<p><a href="#declara%C3%A7%C3%B5es-if">Declarações if</a></p>
+</li>
+<li>
+<p><a href="#fluxo-de-controle-elif-e-else">Fluxo de Controle, elif e else</a></p>
+</li>
+<li>
+<p><a href="#ou">ou</a></p>
+</li>
+<li>
+<p><a href="#e">e</a></p>
+</li>
+<li>
+<p><a href="#m%C3%B3dulo">Módulo</a></p>
+</li>
+<li>
+<p><a href="#criando-nossa-pr%C3%B3pria-fun%C3%A7%C3%A3o-de-paridade">Criando Nossa Própria Função de Paridade</a></p>
+</li>
+<li>
+<p><a href="#pythonico">Pythonico</a></p>
+</li>
+<li>
+<p><a href="#match"><code>match</code></a></p>
+<ul>
+<li><a href="#resumindo">Resumindo</a></li>
+</ul>
+<h2>Condicionais</h2>
+</li>
+<li>
+<p>As condicionais permitem a você, programador, permitir que seu programa tome decisões: como se o programa tivesse a escolha entre seguir pela estrada da esquerda ou da direita, com base em certas condições.</p>
+</li>
+<li>
+<p>Embutido no Python existe um conjunto de &quot;operadores&quot; que podem ser usados para fazer perguntas matemáticas.</p>
+</li>
+<li>
+<p>Os símbolos <code>&gt;</code> e <code>&lt;</code> provavelmente são bem familiares para você.</p>
+</li>
+<li>
+<p><code>&gt;=</code> indica &quot;maior do que ou igual a&quot;.</p>
+</li>
+<li>
+<p><code>&lt;=</code> indica &quot;menor do que ou igual a&quot;.</p>
+</li>
+<li>
+<p><code>==</code> indica &quot;igual, mas observe os dois sinais de igual! Um único sinal de igual atribuiria um valor. Dois sinais de igual são usados para comparar variáveis.</p>
+</li>
+<li>
+<p><code>!=</code> indica &quot;diferente de&quot;.</p>
+</li>
+<li>
+<p>As declarações condicionais comparam um termo do lado esquerdo com um termo do lado direito.## Declarações if</p>
+</li>
+<li>
+<p>Na janela do seu terminal, digite <code>code compare.py</code>. Isso irá criar um novo arquivo chamado &quot;compare&quot;.</p>
+</li>
+<li>
+<p>Na janela do editor de texto, comece com o seguinte:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+y = int(input(&quot;Qual é o valor de y? &quot;))
+
+if x &lt; y:
+    print(&quot;x é menor que y&quot;)
+</code></pre>
+<p>Observe como o programa solicita a entrada do usuário para os valores de x e y, convertendo-os em inteiros e salvando-os em suas respectivas variáveis x e y. Em seguida, a declaração <code>if</code> compara os valores de x e y. Se a condição <code>x &lt; y</code> for satisfeita, a instrução <code>print</code> será executada.</p>
+</li>
+<li>
+<p>As declarações if usam valores <code>bool</code> ou booleanos (verdadeiro ou falso) para decidir se devem ou não ser executadas. Se a declaração <code>x &gt; y</code> for verdadeira, o compilador a registrará como <code>verdadeiro</code> e executará o código.## Fluxo de controle, elif e else</p>
+</li>
+<li>
+<p>Revise ainda mais o seu código da seguinte forma:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+y = int(input(&quot;Qual é o valor de y? &quot;))
+
+if x &lt; y:
+    print(&quot;x é menor que y&quot;)
+if x &gt; y:
+    print(&quot;x é maior que y&quot;)
+if x == y:
+    print(&quot;x é igual a y&quot;)
+</code></pre>
+<p>Observe como você está fornecendo uma série de declarações <code>if</code>. Primeiro, a primeira declaração <code>if</code> é avaliada. Em seguida, a segunda declaração <code>if</code> executa sua avaliação. Por fim, a última declaração <code>if</code> executa sua avaliação. Esse fluxo de decisões é chamado de &quot;fluxo de controle&quot;.</p>
+</li>
+<li>
+<p>Nosso código pode ser representado da seguinte forma:</p>
+<pre><code>flowchart TD
+  A([início]) --&gt; B{x &lt; y}
+  B -- Verdadeiro --&gt; C[&quot;#quot;x é menor que y#quot;&quot;]
+  C --&gt; D{x &gt; y}
+  D -- Verdadeiro --&gt; E[&quot;#quot;x é maior que y#quot;&quot;]
+  E --&gt; F{x == y}
+  F -- Verdadeiro --&gt; G[&quot;#quot;x é igual a y#quot;&quot;]
+  G --&gt; H([parar])
+  B -- Falso --&gt; D
+  D -- Falso --&gt; F
+  F -- Falso --&gt; H
+</code></pre>
+</li>
+<li>
+<p>Este programa pode ser melhorado para não fazer três perguntas consecutivas. Afinal, nem todas as três perguntas podem ter um resultado verdadeiro! Revise seu programa da seguinte forma:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+y = int(input(&quot;Qual é o valor de y? &quot;))
+
+if x &lt; y:
+    print(&quot;x é menor que y&quot;)
+elif x &gt; y:
+    print(&quot;x é maior que y&quot;)
+elif x == y:
+    print(&quot;x é igual a y&quot;)
+</code></pre>
+<p>Observe como o uso de <code>elif</code> permite que o programa faça menos decisões. Primeiro, a declaração <code>if</code> é avaliada. Se essa declaração for verdadeira, todas as declarações <code>elif</code> não serão executadas. No entanto, se a declaração <code>if</code> for avaliada e for falsa, a primeira declaração <code>elif</code> será avaliada. Se isso for verdadeiro, ela não executará a avaliação final.</p>
+</li>
+<li>
+<p>Nosso código pode ser representado da seguinte forma:</p>
+<pre><code>flowchart TD
+  A([início]) --&gt; B{x &lt; y}
+  B -- Verdadeiro --&gt; C[&quot;#quot;x é menor que y#quot;&quot;]
+  B -- Falso --&gt; D{x &gt; y}
+  D -- Verdadeiro --&gt; E[&quot;#quot;x é maior que y#quot;&quot;]
+  D -- Falso --&gt; F{x == y}
+  F -- Verdadeiro --&gt; G[&quot;#quot;x é igual a y#quot;&quot;]
+  G --&gt; H([parar])
+  F -- Falso --&gt; H
+  C --&gt; H
+  E --&gt; H
+</code></pre>
+</li>
+<li>
+<p>Embora o seu computador possa não perceber uma diferença em termos de velocidade entre nosso primeiro programa e este programa revisado, considere como um servidor online que executa bilhões ou trilhões desses tipos de cálculos todos os dias pode ser impactado por uma decisão de codificação tão pequena.</p>
+</li>
+<li>
+<p>Existe uma última melhoria que podemos fazer em nosso programa. Observe como logicamente <code>elif x == y</code> não é uma avaliação necessária a ser executada. Afinal, se logicamente x não é menor que y E x não é maior que y, x DEVE ser igual a y. Portanto, não precisamos executar <code>elif x == y</code>. Podemos criar um resultado padrão, um &quot;catch-all&quot;, usando uma declaração <code>else</code>. Podemos revisar da seguinte forma:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+y = int(input(&quot;Qual é o valor de y? &quot;))
+
+if x &lt; y:
+    print(&quot;x é menor que y&quot;)
+elif x &gt; y:
+    print(&quot;x é maior que y&quot;)
+else:
+    print(&quot;x é igual a y&quot;)
+</code></pre>
+<p>Observe como a complexidade relativa deste programa diminuiu através da nossa revisão.</p>
+</li>
+<li>
+<p>Nosso código pode ser representado da seguinte forma:</p>
+<pre><code>flowchart TD
+  A([início]) --&gt; B{x &lt; y}
+  B -- Verdadeiro --&gt; C[&quot;#quot;x é menor que y#quot;&quot;]
+  B -- Falso --&gt; D{x &gt; y}
+  D -- Verdadeiro --&gt; E[&quot;#quot;x é maior que y#quot;&quot;]
+  D -- Falso --&gt; F[&quot;#quot;x é igual a y#quot;&quot;]
+  F --&gt; G([parar])
+  C --&gt; G
+  E --&gt; G## ou
+</code></pre>
+</li>
+<li>
+<p><code>ou</code> permite que o seu programa escolha entre uma ou mais alternativas. Por exemplo, podemos editar ainda mais nosso programa da seguinte forma:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+y = int(input(&quot;Qual é o valor de y? &quot;))
+
+if x &lt; y or x &gt; y:
+    print(&quot;x não é igual a y&quot;)
+else:
+    print(&quot;x é igual a y&quot;)
+</code></pre>
+<p>Note que o resultado do nosso programa é o mesmo, mas a complexidade é reduzida e a eficiência do nosso código é aumentada.</p>
+</li>
+<li>
+<p>Neste ponto, nosso código está muito bom. No entanto, é possível melhorar ainda mais o seu design? Podemos editar o código da seguinte forma:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+y = int(input(&quot;Qual é o valor de y? &quot;))
+
+if x != y:
+    print(&quot;x não é igual a y&quot;)
+else:
+    print(&quot;x é igual a y&quot;)
+</code></pre>
+<p>Note como removemos completamente o <code>ou</code> e simplesmente perguntamos &quot;x não é igual a y?&quot;. Fazemos apenas uma pergunta. Muito eficiente!</p>
+</li>
+<li>
+<p>Para fins de ilustração, também podemos alterar nosso código da seguinte forma:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+y = int(input(&quot;Qual é o valor de y? &quot;))
+
+if x == y:
+    print(&quot;x é igual a y&quot;)
+else:
+    print(&quot;x não é igual a y&quot;)
+</code></pre>
+<p>Note que o operador <code>==</code> avalia se o que está à esquerda e à direita são iguais entre si. Esse uso de dois sinais de igual é muito importante. Se você usar apenas um sinal de igual, é provável que ocorra um erro no compilador.</p>
+</li>
+<li>
+<p>Nosso código pode ser ilustrado da seguinte forma:</p>
+<pre><code>flowchart TD
+  A([início]) --&gt; B{x == y}
+  B -- Verdadeiro --&gt; C[&quot;#quot;x é igual a y#quot;&quot;]
+  B -- Falso --&gt; E[&quot;#quot;x não é igual a y#quot;&quot;]
+  C --&gt; F([fim])
+  E --&gt; F## e
+</code></pre>
+</li>
+<li>
+<p>Similar ao <code>ou</code>, <code>e</code> pode ser usado em declarações condicionais.</p>
+</li>
+<li>
+<p>Execute no terminal o comando <code>code grade.py</code>. Inicie o novo programa da seguinte forma:</p>
+<pre><code>score = int(input(&quot;Pontuação: &quot;))
+
+if score &gt;= 90 and score &lt;= 100:
+    print(&quot;Nota: A&quot;)
+elif score &gt;=80 and score &lt; 90:
+    print(&quot;Nota: B&quot;)
+elif score &gt;=70 and score &lt; 80:
+    print(&quot;Nota: C&quot;)
+elif score &gt;=60 and score &lt; 70:
+    print(&quot;Nota: D&quot;)
+else:
+    print(&quot;Nota: F&quot;)
+</code></pre>
+<p>Observe que ao executar <code>python grade.py</code>, você poderá inserir uma pontuação e obter uma nota. No entanto, observe que existem possibilidades de erros.</p>
+</li>
+<li>
+<p>Tipicamente, não queremos confiar no usuário para inserir as informações corretas. Podemos melhorar nosso código da seguinte forma:</p>
+<pre><code>  score = int(input(&quot;Pontuação: &quot;))
+
+  if 90 &lt;= score &lt;= 100:
+      print(&quot;Nota: A&quot;)
+  elif 80 &lt;= score &lt; 90:
+      print(&quot;Nota: B&quot;)
+  elif 70 &lt;= score &lt; 80:
+      print(&quot;Nota: C&quot;)
+  elif 60 &lt;= score &lt; 70:
+      print(&quot;Nota: D&quot;)
+  else:
+      print(&quot;Nota: F&quot;)
+</code></pre>
+<p>Observe como o Python permite concatenar os operadores e condições de uma forma bastante incomum em outras linguagens de programação.</p>
+</li>
+<li>
+<p>Ainda assim, podemos melhorar ainda mais nosso programa:</p>
+<pre><code>score = int(input(&quot;Pontuação: &quot;))
+
+if score &gt;= 90:
+    print(&quot;Nota: A&quot;)
+elif score &gt;= 80:
+    print(&quot;Nota: B&quot;)
+elif score &gt;= 70:
+    print(&quot;Nota: C&quot;)
+elif score &gt;= 60:
+    print(&quot;Nota: D&quot;)
+else:
+    print(&quot;Nota: F&quot;)
+</code></pre>
+<p>Observe como o programa é melhorado ao fazer menos perguntas. Isso torna nosso programa mais fácil de ler e muito mais fácil de manter no futuro.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/tutorial/controlflow.html">fluxo de controle</a>.## Módulo</p>
+</li>
+<li>
+<p>Em matemática, paridade se refere a se um número é par ou ímpar.</p>
+</li>
+<li>
+<p>O operador módulo <code>%</code> na programação permite verificar se dois números são divisíveis ou se têm um resto na divisão.</p>
+</li>
+<li>
+<p>Por exemplo, 4 % 2 resultaria em zero, pois é uma divisão exata. No entanto, 3 % 2 não é uma divisão exata e resultaria em um número diferente de zero!</p>
+</li>
+<li>
+<p>Na janela do terminal, crie um novo programa digitando <code>code parity.py</code>. Na janela do editor de texto, digite o código da seguinte forma:</p>
+<pre><code>x = int(input(&quot;Qual é o valor de x? &quot;))
+
+if x % 2 == 0:
+    print(&quot;Par&quot;)
+else:
+    print(&quot;Ímpar&quot;)
+</code></pre>
+<p>Observe como nossos usuários podem digitar qualquer número igual ou maior que 1 para verificar se ele é par ou ímpar.## Criando nossa própria função de paridade</p>
+</li>
+<li>
+<p>Como discutido na Aula 0, será útil criar uma função própria!</p>
+</li>
+<li>
+<p>Podemos criar nossa própria função para verificar se um número é par ou ímpar. Ajuste seu código da seguinte forma:</p>
+<pre><code>def main():
+    x = int(input(&quot;Qual é o valor de x? &quot;))
+    if is_even(x):
+        print(&quot;Par&quot;)
+    else:
+        print(&quot;Ímpar&quot;)
+
+
+def is_even(n):
+    if n % 2 == 0:
+        return True
+    else:
+        return False
+
+
+main()
+</code></pre>
+<p>Observe que uma razão pela qual nossa declaração <code>if</code> <code>is_even(x)</code> funciona, mesmo não havendo operador ali, é porque nossa função retorna um <code>bool</code> (ou booleano), verdadeiro ou falso, de volta para a função principal. A declaração <code>if</code> simplesmente avalia se <code>is_even</code> de <code>x</code> é verdadeiro ou falso.## Pythonico</p>
+</li>
+<li>
+<p>No mundo da programação, existem tipos de programação que são chamados de &quot;Pythonico&quot; por natureza. Ou seja, existem maneiras de programar que são às vezes vistas apenas na programação em Python. Considere a seguinte revisão do nosso programa:</p>
+<pre><code>def main():
+    x = int(input(&quot;Qual é o valor de x? &quot;))
+    if is_even(x):
+        print(&quot;Par&quot;)
+    else:
+        print(&quot;Ímpar&quot;)
+
+
+def is_even(n):
+    return True if n % 2 == 0 else False
+
+
+main()
+</code></pre>
+<p>Note que essa declaração de retorno em nosso código é quase como uma frase em inglês. Esta é uma maneira única de codificação vista apenas em Python.</p>
+</li>
+<li>
+<p>Podemos revisar ainda mais nosso código e torná-lo cada vez mais legível:</p>
+<pre><code>def main():
+    x = int(input(&quot;Qual é o valor de x? &quot;))
+    if is_even(x):
+        print(&quot;Par&quot;)
+    else:
+        print(&quot;Ímpar&quot;)
+
+
+def is_even(n):
+    return n % 2 == 0
+
+
+main()
+</code></pre>
+<p>Note que o programa avaliará o que está acontecendo dentro de <code>n % 2 == 0</code> como verdadeiro ou falso e simplesmente retornará isso para a função principal.</p>
+</li>
+</ul>
+<h1><code>match</code></h1>
+<ul>
+<li>
+<p>Semelhante às declarações <code>if</code>, <code>elif</code> e <code>else</code>, as declarações <code>match</code> podem ser usadas para executar condicionalmente o código que corresponde a determinados valores.</p>
+</li>
+<li>
+<p>Considere o seguinte programa:</p>
+<pre><code>  nome = input(&quot;Qual é o seu nome? &quot;)
+
+  if nome == &quot;Harry&quot;:
+      print(&quot;Grifinória&quot;)
+  elif nome == &quot;Hermione&quot;:
+      print(&quot;Grifinória&quot;)
+  elif nome == &quot;Ron&quot;:
+      print(&quot;Grifinória&quot;)
+  elif nome == &quot;Draco&quot;:
+      print(&quot;Sonserina&quot;)
+  else:
+      print(&quot;Quem?&quot;)
+</code></pre>
+<p>Observe que as três primeiras declarações condicionais imprimem a mesma resposta.</p>
+</li>
+<li>
+<p>Podemos melhorar esse código ligeiramente com o uso da palavra-chave <code>or</code>:</p>
+<pre><code>  nome = input(&quot;Qual é o seu nome? &quot;)
+
+  if nome == &quot;Harry&quot; or nome == &quot;Hermione&quot; or nome == &quot;Ron&quot;:
+      print(&quot;Grifinória&quot;)
+  elif nome == &quot;Draco&quot;:
+      print(&quot;Sonserina&quot;)
+  else:
+      print(&quot;Quem?&quot;)
+</code></pre>
+<p>Note que o número de declarações <code>elif</code> diminuiu, melhorando a legibilidade do nosso código.</p>
+</li>
+<li>
+<p>Alternativamente, podemos usar declarações <code>match</code> para associar nomes a casas. Considere o seguinte código:</p>
+<pre><code>  nome = input(&quot;Qual é o seu nome? &quot;)
+
+  match nome:
+      case &quot;Harry&quot;:
+          print(&quot;Grifinória&quot;)
+      case &quot;Hermione&quot;:
+          print(&quot;Grifinória&quot;)
+      case &quot;Ron&quot;:
+          print(&quot;Grifinória&quot;)
+      case &quot;Draco&quot;:
+          print(&quot;Sonserina&quot;)
+      case _:
+          print(&quot;Quem?&quot;)
+</code></pre>
+<p>Note o uso do símbolo <code>_</code> no último caso. Isso corresponderá a qualquer entrada, resultando em um comportamento semelhante a uma declaração <code>else</code>.</p>
+</li>
+<li>
+<p>Uma declaração <code>match</code> compara o valor após a palavra-chave <code>match</code> com cada um dos valores após as palavras-chave <code>case</code>. No caso de uma correspondência ser encontrada, a seção de código com indentação correspondente é executada e o programa interrompe a correspondência.</p>
+</li>
+<li>
+<p>Podemos melhorar o código:</p>
+<pre><code>  nome = input(&quot;Qual é o seu nome? &quot;)
+
+  match nome:
+      case &quot;Harry&quot; | &quot;Hermione&quot; | &quot;Ron&quot;:
+          print(&quot;Grifinória&quot;)
+      case &quot;Draco&quot;:
+          print(&quot;Sonserina&quot;)
+      case _:
+          print(&quot;Quem?&quot;)
+</code></pre>
+<p>Observe o uso da barra vertical simples <code>|</code>. Assim como a palavra-chave <code>or</code>, isso nos permite verificar vários valores na mesma declaração <code>case</code>.## Resumo</p>
+</li>
+</ul>
+<p>Agora você tem o poder dentro do Python de usar declarações condicionais para fazer perguntas e fazer com que seu programa tome ações correspondentes. Nesta palestra, discutimos...</p>
+<ul>
+<li>Condicionais;</li>
+<li>Declarações <code>if</code>;</li>
+<li>Fluxo de controle, <code>elif</code> e <code>else</code>;</li>
+<li><code>or</code>;</li>
+<li><code>and</code>;</li>
+<li>Módulo;</li>
+<li>Criando sua própria função;</li>
+<li>Codificação Pythonica;</li>
+<li>e <code>match</code>.</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

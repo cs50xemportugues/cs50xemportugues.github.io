@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h1>Plurality</h1>
+<p>Para este programa, você implementará um programa que executa uma eleição de maioria, como abaixo.</p>
+<pre><code>$ ./plurality Alice Bob Charlie
+Número de eleitores: 4
+Voto: Alice
+Voto: Bob
+Voto: Charlie
+Voto: Alice
+Alice
+</code></pre>
+<h2>Contexto</h2>
+<p>Eleições vêm em todos os tipos e tamanhos. No Reino Unido, o <a href="https://www.parliament.uk/education/about-your-parliament/general-elections/">Primeiro-Ministro</a> é oficialmente nomeado pelo monarca, que geralmente escolhe o líder do partido político que ganhou a maioria dos assentos na Câmara dos Comuns. Os Estados Unidos usam um processo de <a href="https://www.archives.gov/federal-register/electoral-college/about.html">colégio eleitoral</a> multi-etapas em que os cidadãos votam em como cada estado deve distribuir os eleitores que em seguida elegem o presidente.</p>
+<p>Talvez a forma mais simples de se realizar uma eleição seja através de um método conhecido como “voto de maioria” (ou primeiro-past-the-post ou winner take all). No voto de maioria, cada eleitor recebe um voto para um candidato. No final da eleição, o candidato com o maior número de votos é declarado o vencedor da eleição.</p>
+<h2>Começando</h2>
+<p>Acesse o <a href="https://code.cs50.io/">code.cs50.io</a>, clique na sua janela de terminal e execute o comando <code>cd</code> para verificar. Você deve verificar que o prompt da sua janela de terminal se parece com o abaixo:</p>
+<pre><code>$
+</code></pre>
+<p>Em seguida, execute o comando</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/3/plurality.zip
+</code></pre>
+<p>para baixar um arquivo ZIP chamado <code>plurality.zip</code> para o seu espaço de códigos.</p>
+<p>Em seguida, execute</p>
+<pre><code>unzip plurality.zip
+</code></pre>
+<p>para extrair um diretório chamado <code>plurality</code>. O arquivo ZIP não será mais necessário. Execute</p>
+<pre><code>rm plurality.zip
+</code></pre>
+<p>e responda com “y” seguido de Enter na solicitação para remover o arquivo ZIP que você baixou.</p>
+<p>Em seguida, digite</p>
+<pre><code>cd plurality
+</code></pre>
+<p>seguido de Enter para mover-se para o diretório. Seu prompt agora deve ser semelhante ao abaixo.</p>
+<pre><code>plurality/ $
+</code></pre>
+<p>Se tudo foi bem-sucedido, você deve digitar</p>
+<pre><code>ls
+</code></pre>
+<p>e ver um arquivo chamado <code>plurality.c</code>. Executar o comando <code>code plurality.c</code> deve abrir o arquivo onde você irá digitar o código para este problema. Caso contrário, reveja seus passos e veja se consegue descobrir onde errou!</p>
+<h2>Compreensão</h2>
+<p>Examine <code>plurality.c</code> e leia o código distribuído que foi fornecido.</p>
+<p>A linha <code>#define MAX 9</code> é uma sintaxe usada aqui para significar que <code>MAX</code> é uma constante (igual a <code>9</code>) que pode ser usada em todo o programa. Aqui, representa o número máximo de candidatos que uma eleição pode ter.</p>
+<p>O arquivo define então uma <code>struct</code> chamada <code>candidate</code>. Cada “candidate” tem dois campos: um <code>string</code> chamado <code>name</code> representando o nome do candidato e um <code>int</code> chamado <code>votes</code>, que representa o número de votos que o candidato possui. Em seguida, o arquivo define um array global de <code>candidates</code>, em que cada elemento é ele mesmo um <code>candidate</code>.</p>
+<p>Agora, dê uma olhada na própria função <code>main</code>. Veja se você consegue encontrar onde o programa define uma variável global <code>candidate_count</code> representando o número de candidatos na eleição, copia argumentos da linha de comando para o array <code>candidates</code> e pede ao usuário para digitar o número de eleitores. Em seguida, o programa permite que cada eleitor vote (veja como?), chamando a função <code>vote</code> em cada candidato votado. Finalmente, a função <code>main</code> chama a função <code>print_winner</code> para imprimir o vencedor (ou vencedores) da eleição.</p>
+<p>Mas se você olhar mais abaixo no arquivo, perceberá que as funções <code>vote</code> e <code>print_winner</code> foram deixadas em branco. Essa parte cabe a você concluir!</p>
+<h2>Especificação</h2>
+<p>Conclua a implementação de <code>plurality.c</code> de tal maneira que o programa simule uma eleição de maioria.</p>
+<ul>
+<li>
+Conclua a função <code>vote</code>.<ul>
+<li><code>vote</code> recebe um único argumento, uma <code>string</code> chamada <code>name</code>, que representa o nome do candidato que recebeu o voto.</li>
+<li>Se <code>name</code> corresponder a um dos nomes dos candidatos na eleição, atualize o total de votos desse candidato para incluir o novo voto. A função <code>vote</code>, nesse caso, deve retornar <code>true</code> para indicar uma cédula bem-sucedida.</li>
+<li>Se <code>name</code> não corresponder ao nome de nenhum dos candidatos na eleição, nenhuma contagem de votos deve ser ajustada, e a função <code>vote</code> deve retornar <code>false</code> para indicar uma cédula inválida.</li>
+<li>Você pode assumir que nenhum dois candidatos terão o mesmo nome.</li>
+</ul>
+</li>
+<li>
+Conclua a função <code>print_winner</code>.<ul>
+<li>A função deve imprimir o nome do candidato que recebeu a maioria dos votos na eleição e, em seguida, imprimir uma nova linha.</li>
+<li>É possível que a eleição possa terminar empatada se vários candidatos tiverem o mesmo número máximo de votos. Nesse caso, você deve imprimir os nomes de cada um dos candidatos vencedores, cada um em uma linha separada.</li>
+</ul>
+</li>
+</ul>
+<p>Você não deve modificar mais nada em <code>plurality.c</code> que não seja as implementações das funções <code>vote</code> e <code>print_winner</code> (e a inclusão de arquivos de cabeçalho adicionais, se desejar).</p>
+<h2>Utilização</h2>
+<p>Seu programa deve se comportar conforme os exemplos abaixo.</p>
+<pre><code>$ ./plurality Alice Bob
+Número de eleitores: 3
+Voto: Alice
+Voto: Bob
+Voto: Alice
+Alice
+
+
+$ ./plurality Alice Bob
+Número de eleitores: 3
+Voto: Alice
+Voto: Charlie
+Voto inválido.
+Voto: Alice
+Alice
+
+
+$ ./plurality Alice Bob Charlie
+Número de eleitores: 5
+Voto: Alice
+Voto: Charlie
+Voto: Bob
+Voto: Bob
+Voto: Alice
+Alice
+Bob
+</code></pre>
+<h2>Passo a Passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/ftOapzDjEb8?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<h2>Teste</h2>
+<p>Certifique-se de testar seu código para se certificar de que ele lida com...</p>
+<ul>
+<li>Uma eleição com qualquer número de candidatos (até o <code>MAX</code> de<code> 9</code>)</li>
+<li>Votação em um candidato pelo nome</li>
+<li>Votos inválidos para candidatos que não estão na cédula</li>
+<li>Imprimir o vencedor da eleição se houver apenas um</li>
+<li>Imprimir o vencedor da eleição se houver vários vencedores</li>
+</ul>
+<p>Execute o seguinte para avaliar a correção do seu código usando o <code>check50</code>. Mas certifique-se de compilá-lo e testá-lo sozinho também!</p>
+<pre><code>check50 cs50/problems/2023/x/plurality
+</code></pre>
+<p>Execute o seguinte para avaliar o estilo do seu código usando o <code>style50</code>.</p>
+<pre><code>style50 plurality.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>Em seu terminal, execute o seguinte para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/plurality
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

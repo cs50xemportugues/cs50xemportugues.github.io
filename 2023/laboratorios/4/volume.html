@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h1>Laboratório 4: Volume</h1>
+<p>Você pode colaborar com um ou dois colegas neste laboratório, embora seja esperado que cada aluno contribua igualmente para o laboratório.</p>
+<p>Escreva um programa para modificar o volume de um arquivo de áudio.</p>
+<pre><code>$ ./volume INPUT.wav OUTPUT.wav 2.0
+</code></pre>
+<p>Onde <code>INPUT.wav</code> é o nome de um arquivo de áudio original e <code>OUTPUT.wav</code> é o nome de um arquivo de áudio com um volume que foi escalonado pelo fator fornecido (por exemplo, 2.0).</p>
+<h2>Arquivos WAV</h2>
+<p><a href="https://docs.fileformat.com/audio/wav/">Arquivos WAV</a> são um formato de arquivo comum para representar áudio. Arquivos WAV armazenam áudio como uma sequência de &quot;amostras&quot;: números que representam o valor de algum sinal de áudio em um momento específico no tempo. Arquivos WAV começam com um &quot;cabeçalho&quot; de 44 bytes que contém informações sobre o próprio arquivo, incluindo o tamanho do arquivo, o número de amostras por segundo e o tamanho de cada amostra. Após o cabeçalho, o arquivo WAV contém uma sequência de amostras, cada uma um único número inteiro de 2 bytes (16 bits) que representa o sinal de áudio em um momento específico no tempo.</p>
+<p>Escalonar cada valor de amostra por um fator dado tem o efeito de mudar o volume do áudio. Multiplicar cada valor de amostra por 2.0, por exemplo, terá o efeito de dobrar o volume do áudio original. Multiplicar cada amostra por 0,5, por outro lado, terá o efeito de cortar o volume pela metade.</p>
+<h2>Tipos</h2>
+<p>Até agora, vimos vários tipos diferentes em C, incluindo <code>int</code>, <code>bool</code>, <code>char</code>, <code>double</code>, <code>float</code> e <code>long</code>. Dentro de um arquivo de cabeçalho chamado <code>stdint.h</code>, estão as declarações de vários outros tipos que nos permitem definir muito precisamente o tamanho (em bits) e o sinal (sinalizado ou não sinalizado) de um inteiro. Dois tipos em particular serão úteis para nós neste laboratório.</p>
+<ul>
+<li><code>uint8_t</code> é um tipo que armazena um inteiro não sinalizado de 8 bits (ou seja, não negativo). Podemos tratar cada byte de um cabeçalho de arquivo WAV como um valor <code>uint8_t</code>.</li>
+<li><code>int16_t</code> é um tipo que armazena um inteiro de 16 bits sinalizado (ou seja, positivo ou negativo). Podemos tratar cada amostra de áudio em um arquivo WAV como um valor <code>int16_t</code>.</li>
+</ul>
+<h2>Introdução</h2>
+<p>Abra o <a href="https://code.cs50.io/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do seu terminal e execute <code>cd</code>. Você deve ver que sua &quot;prompt&quot; se assemelha à abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro dessa janela de terminal e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/labs/4/volume.zip
+</code></pre>
+<p>seguido de Enter para baixar um arquivo ZIP chamado <code>volume.zip</code> no seu espaço de códigos. Tenha cuidado para não perder o espaço entre <code>wget</code> e a URL seguinte, ou qualquer outro caractere!</p>
+<p>Agora execute</p>
+<pre><code>unzip volume.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>volume</code>. Você não precisa mais do arquivo ZIP, então execute</p>
+<pre><code>rm volume.zip
+</code></pre>
+<p>e responda com “y” seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd volume
+</code></pre>
+<p>seguido de Enter para mover-se para dentro (ou seja, abrir) esse diretório. Sua “prompt” agora deverá se assemelhar à abaixo.</p>
+<pre><code>volume/ $
+</code></pre>
+<p>Se tudo correu bem, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e verá um arquivo <code>volume.c</code> ao lado de um arquivo <code>input.wav</code>.</p>
+<p>Se encontrar qualquer problema, siga estes mesmos passos novamente e veja se consegue determinar onde errou!</p>
+<h2>Detalhes da Implementação</h2>
+<p>Complete a implementação do <code>volume.c</code>, para que ele altere o volume de um arquivo de som por um fator dado.</p>
+<ul>
+<li>
+O programa aceita três argumentos da linha de comando: <code>input</code> representa o nome do arquivo de áudio original, <code>output</code> representa o nome do novo arquivo de áudio que deve ser gerado e <code>factor</code> é o valor pelo qual o volume do arquivo de áudio original deve ser ampliado.<ul>
+<li>Por exemplo, se o <code>factor</code> for <code>2,0</code>, então o seu programa deve dobrar o volume do arquivo de áudio em <code>input</code> e salvar o arquivo de áudio recém-gerado em <code>output</code>.</li>
+</ul>
+</li>
+<li>
+Seu programa deve primeiro ler o cabeçalho do arquivo de entrada e escrever o cabeçalho no arquivo de saída. Lembre-se de que esse cabeçalho sempre tem exatamente 44 bytes de comprimento.<ul>
+<li>Observe que <code>volume.c</code> já define uma variável para você chamada <code>HEADER_SIZE</code>, igual ao número de bytes no cabeçalho.</li>
+</ul>
+</li>
+<li>
+Seu programa deve então ler o restante dos dados do arquivo WAV, uma amostra de 16 bits (2 bytes) de cada vez. Seu programa deve multiplicar cada amostra pelo <code>factor</code> e escrever a nova amostra no arquivo de saída.<ul>
+<li>Você pode assumir que o arquivo WAV usará valores de 16 bits assinados como amostras. Na prática, arquivos WAV podem ter números variáveis de bits por amostra, mas assumiremos amostras de 16 bits para este laboratório.</li>
+</ul>
+</li>
+<li>Seu programa, se usar <code>malloc</code>, não deve vazar nenhuma memória.</li>
+</ul>
+<h3>Tutorial</h3>
+<p>Este vídeo foi gravado quando o curso ainda estava usando o CS50 IDE para escrever código. Embora a interface possa parecer diferente do seu espaço de códigos, o comportamento dos dois ambientes deve ser bastante semelhante!</p>
+<h3>Dicas</h3>
+<ul>
+<li>
+<p>É provável que você queira criar um array de bytes para armazenar os dados do cabeçalho do arquivo WAV que você lerá do arquivo de entrada. Usando o tipo <code>uint8_t</code> para representar um byte, você pode criar um array de <code>n</code> bytes para o cabeçalho com sintaxe como</p>
+<p>uint8_t header[n];</p>
+</li>
+</ul>
+<p>substituindo <code>n</code> pelo número de bytes. Você pode então usar o <code>header</code> como um argumento para <code>fread</code> ou <code>fwrite</code> para ler do ou escrever para o cabeçalho.</p>
+<ul>
+<li>
+<p>É provável que você queira criar um &quot;buffer&quot; para armazenar amostras de áudio que você lerá do arquivo WAV. Usando o tipo <code>int16_t</code> para armazenar uma amostra de áudio, você pode criar uma variável de buffer com sintaxe como</p>
+<p>int16_t buffer;</p>
+</li>
+</ul>
+<p>Você pode então usar <code>&amp;buffer</code> como argumento para <code>fread</code> ou <code>fwrite</code> para ler ou escrever a partir do buffer. (Lembre-se de que o operador <code>&amp;</code> é usado para obter o endereço da variável.)</p>
+<ul>
+<li>
+Você pode achar a documentação para <a href="https://man.cs50.io/3/fread"><code>fread</code></a> e <a href="https://man.cs50.io/3/fwrite"><code>fwrite</code></a> útil aqui.<ul>
+<li>
+Em particular, observe que ambas as funções aceitam os seguintes argumentos:<ul>
+<li><code>ptr</code>: um ponteiro para a localização na memória para armazenar dados (ao ler de um arquivo) ou de onde escrever dados (ao escrever dados em um arquivo)</li>
+<li><code>size</code>: o número de bytes em um item de dados</li>
+<li><code>nmemb</code>: o número de itens de dados (cada um com <code>size</code> bytes) para ler ou escrever</li>
+<li><code>stream</code>: o ponteiro do arquivo a ser lido ou gravado</li>
+</ul>
+</li>
+<li>Conforme sua documentação, <code>fread</code> retornará o número de itens de dados lidos com êxito. Você pode achar isso útil para verificar quando chegou ao final do arquivo!</li>
+</ul>
+</li>
+</ul>
+<p>Não sabe como resolver?</p>
+<h3>Como testar seu código</h3>
+<p>Seu programa deve se comportar conforme os exemplos abaixo.</p>
+<pre><code>$ ./volume input.wav output.wav 2.0
+</code></pre>
+<p>Quando você ouvir <code>output.wav</code> (como clicando com o botão direito em <code>output.wav</code> no navegador de arquivos, escolhendo <strong>Download</strong> e depois abrindo o arquivo em um player de áudio no seu computador), ele deve ser dobrar o volume de <code>input.wav</code>!</p>
+<pre><code>$ ./volume input.wav output.wav 0.5
+</code></pre>
+<p>Quando você ouvir <code>output.wav</code>, ele deve ter metade do volume de <code>input.wav</code>!</p>
+<p>Execute abaixo para avaliar a correção do seu código usando <code>check50</code>. Mas certifique-se de compilá-lo e testá-lo você mesmo também!</p>
+<pre><code>check50 cs50/labs/2023/x/volume
+</code></pre>
+<p>Execute abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 volume.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>No seu terminal, execute o abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/labs/2023/x/volume
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

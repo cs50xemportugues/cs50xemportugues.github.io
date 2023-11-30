@@ -1,0 +1,697 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h2># Aula 6</h2>
+<ul>
+<li><a href="#file-io">Entrada e Saída de Arquivos</a></li>
+<li><a href="#open"><code>open</code></a></li>
+<li><a href="#with"><code>with</code></a></li>
+<li><a href="#csv">CSV</a></li>
+<li><a href="#binary-files-and-pil">Arquivos Binários e <code>PIL</code></a></li>
+<li><a href="#summing-up">Resumindo</a></li>
+</ul>
+<h2>Entrada e Saída de Arquivos</h2>
+<ul>
+<li>
+<p>Até agora, tudo o que programamos armazena informações na memória. Ou seja, assim que o programa termina, todas as informações fornecidas pelo usuário ou geradas pelo programa são perdidas.</p>
+</li>
+<li>
+<p>Entrada e saída de arquivos é a capacidade de um programa de ler um arquivo como entrada ou criar um arquivo como saída.</p>
+</li>
+<li>
+<p>Para começar, no terminal, digite <code>code names.py</code> e escreva o seguinte código:</p>
+<pre><code>name = input(&quot;Qual é o seu nome?&quot;)
+print(f&quot;Olá, {name}&quot;)
+</code></pre>
+<p>Note que ao executar este código, a saída desejada é obtida. O usuário pode inserir um nome. A saída é a esperada.</p>
+</li>
+<li>
+<p>No entanto, e se quisermos permitir que vários nomes sejam inseridos? Como poderíamos fazer isso? Lembre-se de que uma <code>list</code> é uma estrutura de dados que nos permite armazenar vários valores em uma única variável. Escreva o seguinte código:</p>
+<pre><code>names = []
+
+for _ in range(3):
+    name = input(&quot;Qual é o seu nome?&quot;)
+    names.append(name)
+</code></pre>
+<p>Note que o usuário será solicitado três vezes a inserir um nome. O método <code>append</code> é usado para adicionar o <code>name</code> à nossa lista <code>names</code>.</p>
+</li>
+<li>
+<p>Este código pode ser simplificado para o seguinte:</p>
+<pre><code>names = []
+
+for _ in range(3):
+    names.append(input(&quot;Qual é o seu nome?&quot;))
+</code></pre>
+<p>Note que isso produz o mesmo resultado que o bloco de código anterior.</p>
+</li>
+<li>
+<p>Agora, vamos habilitar a capacidade de imprimir a lista de nomes como uma lista ordenada. Escreva o seguinte código:</p>
+<p>names = []</p>
+<p>for _ in range(3):
+names.append(input(&quot;Qual é o seu nome?&quot;))</p>
+<p>for name in sorted(names):
+print(f&quot;Olá, {name}&quot;)</p>
+<p>Note que uma vez que este programa seja executado, todas as informações serão perdidas. A entrada e saída de arquivos permite que o seu programa armazene essas informações para que possam ser usadas posteriormente.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação de Python sobre <a href="https://docs.python.org/3/library/functions.html#sorted">sorted</a>.</p>
+</li>
+</ul>
+<h2><code>open</code></h2>
+<ul>
+<li>
+<p><code>open</code> é uma funcionalidade incorporada no Python que permite abrir um arquivo e utilizá-lo em seu programa. A função <code>open</code> permite que você abra um arquivo para ler ou escrever nele.</p>
+</li>
+<li>
+<p>Para mostrar como habilitar a entrada e saída de arquivos em seu programa, vamos voltar um pouco e codificar da seguinte forma:</p>
+<pre><code>name = input(&quot;Qual é o seu nome? &quot;)
+
+file = open(&quot;names.txt&quot;, &quot;w&quot;)
+file.write(name)
+file.close()
+</code></pre>
+<p>Observe que a função <code>open</code> abre um arquivo chamado <code>names.txt</code> com a escrita habilitada, como indicado pelo &quot;w&quot;. O código acima atribui esse arquivo aberto a uma variável chamada <code>file</code>. A linha <code>file.write(name)</code> escreve o nome no arquivo de texto. A linha a seguir fecha o arquivo.</p>
+</li>
+<li>
+<p>Testando o código digitando <code>python names.py</code>, você pode inserir um nome e ele será salvo no arquivo de texto. No entanto, se você executar seu programa várias vezes usando nomes diferentes, perceberá que este programa irá reescrever completamente o arquivo <code>names.txt</code> a cada vez.</p>
+</li>
+<li>
+<p>Idealmente, queremos ser capazes de adicionar cada um de nossos nomes ao arquivo. Remova o arquivo de texto existente digitando <code>rm names.txt</code> na janela do terminal. Em seguida, modifique seu código da seguinte forma:</p>
+<pre><code>name = input(&quot;Qual é o seu nome? &quot;)
+
+file = open(&quot;names.txt&quot;, &quot;a&quot;)
+file.write(name)
+file.close()
+</code></pre>
+<p>Observe que a única alteração em nosso código é que o &quot;w&quot; foi alterado para &quot;a&quot;, que significa &quot;append&quot; (anexar). Ao executar este programa várias vezes, você notará que os nomes serão adicionados ao arquivo. No entanto, você notará um novo problema!</p>
+</li>
+<li>
+<p>Ao examinar seu arquivo de texto após executar seu programa várias vezes, você notará que os nomes estão sendo concatenados. Os nomes estão sendo anexados sem intervalos entre cada um. Você pode corrigir esse problema. Novamente, remova o arquivo de texto existente digitando <code>rm names.txt</code> na janela do terminal. Em seguida, modifique seu código da seguinte forma:</p>
+<pre><code>name = input(&quot;Qual é o seu nome? &quot;)
+
+file = open(&quot;names.txt&quot;, &quot;a&quot;)
+file.write(f&quot;{name}\n&quot;)
+file.close()
+</code></pre>
+<p>Observe que a linha com <code>file.write</code> foi modificada para adicionar uma quebra de linha no final de cada nome.</p>
+</li>
+<li>
+<p>Esse código está funcionando muito bem. No entanto, há maneiras de melhorar este programa. Acontece que é bastante fácil esquecer de fechar o arquivo.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Python sobre <a href="https://docs.python.org/3/library/functions.html#open">open</a>.</p>
+</li>
+</ul>
+<h2><code>with</code></h2>
+<ul>
+<li>
+<p>A palavra-chave <code>with</code> permite automatizar o fechamento de um arquivo.</p>
+</li>
+<li>
+<p>Modifique seu código da seguinte forma:</p>
+<pre><code>name = input(&quot;Qual é o seu nome? &quot;)
+
+with open(&quot;names.txt&quot;, &quot;a&quot;) as file:
+    file.write(f&quot;{name}\n&quot;)
+</code></pre>
+<p>Observe que a linha abaixo de <code>with</code> está indentada.</p>
+</li>
+<li>
+<p>Até esse ponto, estivemos escrevendo exclusivamente em um arquivo. E se quisermos ler de um arquivo? Para habilitar essa funcionalidade, modifique seu código da seguinte forma:</p>
+<pre><code>with open(&quot;names.txt&quot;, &quot;r&quot;) as file:
+    lines = file.readlines()
+
+for line in lines:
+    print(&quot;olá,&quot;, line)
+</code></pre>
+<p>Observe que <code>readlines</code> tem a habilidade especial de ler todas as linhas de um arquivo e armazená-las em uma variável chamada <code>lines</code>. Ao executar seu programa, você notará que a saída é um tanto feia. Parece haver várias quebras de linha onde deveria haver apenas uma.</p>
+</li>
+<li>
+<p>Existem várias abordagens para corrigir esse problema. No entanto, aqui está uma forma simples de corrigir esse erro em nosso código:</p>
+<pre><code>with open(&quot;names.txt&quot;, &quot;r&quot;) as file:
+    lines = file.readlines()
+
+for line in lines:
+    print(&quot;olá,&quot;, line.rstrip())
+</code></pre>
+<p>Observe que <code>rstrip</code> tem o efeito de remover a quebra de linha excedente no final de cada linha.</p>
+</li>
+<li>
+<p>Ainda assim, esse código poderia ser simplificado ainda mais:</p>
+<pre><code>with open(&quot;names.txt&quot;, &quot;r&quot;) as file:
+    for line in file:
+        print(&quot;olá,&quot;, line.rstrip())
+</code></pre>
+<p>Observe que ao executar esse código, está correto. No entanto, note que não estamos ordenando os nomes.</p>
+</li>
+<li>
+<p>Esse código pode ser aprimorado ainda mais para permitir a ordenação dos nomes:</p>
+<pre><code>names = []
+
+with open(&quot;names.txt&quot;) as file:
+    for line in file:
+        names.append(line.rstrip())
+
+for name in sorted(names):
+    print(f&quot;olá, {name}&quot;)
+</code></pre>
+<p>Observe que <code>names</code> é uma lista vazia onde podemos armazenar os nomes. Cada nome é adicionado à lista <code>names</code> em memória. Em seguida, cada nome na lista ordenada em memória é impresso. Ao executar seu código, você verá que os nomes agora estão corretamente ordenados.</p>
+</li>
+<li>
+<p>E se quisermos armazenar mais do que apenas os nomes dos estudantes? E se quisermos armazenar também a casa do estudante?</p>
+</li>
+</ul>
+<h2>CSV</h2>
+<ul>
+<li>
+<p>CSV significa &quot;valores separados por vírgula&quot;.</p>
+</li>
+<li>
+<p>Na janela do seu terminal, digite <code>code students.csv</code>. Certifique-se de que seu novo arquivo CSV fique como o seguinte:</p>
+<pre><code>Hermoine,Gryffindor
+Harry,Gryffindor
+Ron,Gryffindor
+Draco,Slytherin
+</code></pre>
+</li>
+<li>
+<p>Vamos criar um novo programa digitando <code>code students.py</code> e código da seguinte forma:</p>
+<pre><code>with open(&quot;students.csv&quot;) as file:
+    for line in file:
+        row = line.rstrip().split(&quot;,&quot;)
+        print(f&quot;{row[0]} está na {row[1]}&quot;)
+</code></pre>
+<p>Observe que <code>rstrip</code> remove o final de cada linha do nosso arquivo CSV. <code>split</code> informa ao compilador onde encontrar o final de cada um dos nossos valores no arquivo CSV. <code>row[0]</code> é o primeiro elemento em cada linha do nosso arquivo CSV. <code>row[1]</code> é o segundo elemento em cada linha do nosso arquivo CSV.</p>
+</li>
+<li>
+<p>O código acima é eficaz para dividir cada linha ou &quot;registro&quot; do nosso arquivo CSV. No entanto, é um pouco críptico de se olhar se você não está familiarizado com esse tipo de sintaxe. O Python possui a capacidade embutida que pode simplificar ainda mais esse código. Modifique o código como segue:</p>
+<pre><code>with open(&quot;students.csv&quot;) as file:
+    for line in file:
+        name, house = line.rstrip().split(&quot;,&quot;)
+        print(f&quot;{name} está na {house}&quot;)
+</code></pre>
+<p>Observe que a função <code>split</code> realmente retorna dois valores: o anterior à vírgula e o posterior à vírgula. Consequentemente, podemos usar essa funcionalidade para atribuir dois valores de uma vez em vez de um!</p>
+</li>
+<li>
+<p>Imagine que gostaríamos novamente de fornecer esta lista como uma saída ordenada. Você pode modificar o seu código da seguinte forma:</p>
+<pre><code>students = []
+
+with open(&quot;students.csv&quot;) as file:
+    for line in file:
+        name, house = line.rstrip().split(&quot;,&quot;)
+        students.append(f&quot;{name} está na {house}&quot;)
+
+for student in sorted(students):
+    print(student)
+</code></pre>
+<p>Observe que criamos uma <code>lista</code> chamada <code>students</code>. Nós adicionamos cada string a essa lista usando o comando <code>append</code>. Em seguida, nós imprimimos uma versão ordenada da nossa lista.</p>
+</li>
+<li>
+<p>Lembre-se de que o Python permite <code>dicionários</code>, nos quais uma chave pode ser associada a um valor. Este código pode ser aprimorado ainda mais:</p>
+<pre><code>students = []
+
+with open(&quot;students.csv&quot;) as file:
+    for line in file:
+        name, house = line.rstrip().split(&quot;,&quot;)
+        student = {}
+        student[&quot;name&quot;] = name
+        student[&quot;house&quot;] = house
+        students.append(student)
+
+for student in students:
+    print(f&quot;{student[&#x27;name&#x27;]} está na {student[&#x27;house&#x27;]}&quot;)
+</code></pre>
+<p>Observe que criamos um dicionário vazio chamado <code>student</code>. Adicionamos os valores para cada aluno, incluindo seu nome e casa, no dicionário <code>student</code>. Em seguida, adicionamos esse estudante à lista chamada <code>students</code>.</p>
+</li>
+<li>
+<p>Podemos melhorar nosso código da seguinte forma:</p>
+<pre><code>students = []
+
+with open(&quot;students.csv&quot;) as file:
+    for line in file:
+        name, house = line.rstrip().split(&quot;,&quot;)
+        student = {&quot;name&quot;: name, &quot;house&quot;: house}
+        students.append(student)
+
+for student in students:
+    print(f&quot;{student[&#x27;name&#x27;]} está na {student[&#x27;house&#x27;]}&quot;)
+</code></pre>
+<p>Observe que isso produz o resultado desejado, mas sem a ordenação dos estudantes.</p>
+</li>
+<li>
+<p>Infelizmente, não podemos ordenar os estudantes como antes porque cada aluno é agora um dicionário dentro de uma lista. Seria útil se o Python pudesse ordenar a lista de dicionários <code>students</code> por nome do aluno.</p>
+</li>
+<li>
+<p>Para implementar isso em nosso código, faça as seguintes alterações:</p>
+<pre><code>students = []
+
+with open(&quot;students.csv&quot;) as file:
+    for line in file:
+        name, house = line.rstrip().split(&quot;,&quot;)
+        students.append({&quot;name&quot;: name, &quot;house&quot;: house})
+
+
+def get_name(student):
+    return student[&quot;name&quot;]
+
+
+for student in sorted(students, key=get_name):
+    print(f&quot;{student[&#x27;name&#x27;]} está na {student[&#x27;house&#x27;]}&quot;)
+</code></pre>
+<p>Observe que <code>sorted</code> precisa saber como obter a chave de cada estudante. O Python permite um parâmetro chamado <code>key</code>, onde podemos definir a chave pela qual a lista de estudantes será ordenada. Portanto, a função <code>get_name</code> retorna simplesmente a chave <code>student[&quot;name&quot;]</code>. Ao executar este programa, você verá que a lista agora está ordenada por nome.</p>
+</li>
+<li>
+<p>Ainda assim, nosso código pode ser aprimorado. Acontece que, se você só vai usar uma função como <code>get_name</code> uma vez, é possível simplificar o código da seguinte forma. Modifique seu código como segue:</p>
+<pre><code>students = []
+
+with open(&quot;students.csv&quot;) as file:
+    for line in file:
+        name, house = line.rstrip().split(&quot;,&quot;)
+        students.append({&quot;name&quot;: name, &quot;house&quot;: house})
+
+for student in sorted(students, key=lambda student: student[&quot;name&quot;]):
+    print(f&quot;{student[&#x27;name&#x27;]} está na {student[&#x27;house&#x27;]}&quot;)
+</code></pre>
+<p>Observe como usamos uma função <code>lambda</code>, uma função anônima, que diz: &quot;Ei Python, aqui está uma função sem nome: Dado um <code>student</code>, acesse seu <code>name</code> e retorne-o como a chave&quot;.</p>
+</li>
+<li>
+<p>Infelizmente, nosso código está um pouco frágil. Suponha que alteramos nosso arquivo CSV de forma que indicamos onde cada estudante cresceu. Qual seria o impacto disso em nosso programa? Primeiramente, modifique seu arquivo <code>students.csv</code> da seguinte forma:</p>
+<p>Harry,&quot;Número Quatro, Vila dos Trevos&quot;
+Ron,A Toca
+Draco,Mansão Malfoy</p>
+</li>
+</ul>
+<p>Observe como rodar nosso programa agora produzirá vários erros.</p>
+<ul>
+<li>
+<p>Agora que estamos lidando com casas em vez de moradias, modifique seu código da seguinte forma:</p>
+<pre><code>students = []
+
+with open(&quot;students.csv&quot;) as file:
+    for line in file:
+        name, home = line.rstrip().split(&quot;,&quot;)
+        students.append({&quot;name&quot;: name, &quot;home&quot;: home})
+
+for student in sorted(students, key=lambda student: student[&quot;name&quot;]):
+    print(f&quot;{student[&#x27;name&#x27;]} é de {student[&#x27;home&#x27;]}&quot;)
+</code></pre>
+<p>Observe que, mesmo executando nosso programa agora, ele ainda não funciona corretamente. Você consegue adivinhar por quê?</p>
+</li>
+<li>
+<p>O erro <code>ValueError: too many values to unpack</code> produzido pelo compilador é o resultado do fato de que anteriormente criamos este programa esperando que o arquivo CSV fosse <code>split</code> usando uma <code>,</code> (vírgula). Poderíamos gastar mais tempo abordando isso, mas alguém já desenvolveu uma maneira de &quot;analisar&quot; (ou seja, ler) arquivos CSV!</p>
+</li>
+<li>
+<p>A biblioteca CSV embutida do Python vem com um objeto chamado <code>reader</code>. Como o nome sugere, podemos usar um <code>reader</code> para ler nosso arquivo CSV, apesar da vírgula extra em &quot;Número Quatro, Vila dos Trevos&quot;. Um <code>reader</code> funciona em um loop <code>for</code>, onde em cada iteração o <code>reader</code> nos fornece outra linha do nosso arquivo CSV. Essa linha em si é uma lista, onde cada valor na lista corresponde a um elemento daquela linha. <code>row[0]</code>, por exemplo, é o primeiro elemento da linha dada, enquanto <code>row[1]</code> é o segundo elemento.</p>
+<pre><code>import csv
+
+students = []
+
+with open(&quot;students.csv&quot;) as file:
+    reader = csv.reader(file)
+    for row in reader:
+        students.append({&quot;name&quot;: row[0], &quot;home&quot;: row[1]})
+
+for student in sorted(students, key=lambda student: student[&quot;name&quot;]):
+    print(f&quot;{student[&#x27;name&#x27;]} é de {student[&#x27;home&#x27;]}&quot;)
+</code></pre>
+<p>Observe que nosso programa agora funciona como esperado.</p>
+</li>
+<li>
+<p>Até agora, temos confiado em nosso programa para decidir especificamente quais partes do nosso arquivo CSV são os nomes e quais partes são os lares. No entanto, é um melhor design incluir isso diretamente em nosso arquivo CSV ao editá-lo da seguinte forma:</p>
+<pre><code>name,home
+Harry
+</code></pre>
+</li>
+</ul>
+<h2>Arquivos Binários e <code>PIL</code></h2>
+<ul>
+<li>Mais um tipo de arquivo que discutiremos hoje é um arquivo binário. Um arquivo binário é simplesmente uma coleção de uns e zeros. Esse tipo de arquivo pode armazenar qualquer coisa, incluindo dados de música e imagem.</li>
+<li>Existe uma biblioteca Python popular chamada <code>PIL</code> que funciona bem com arquivos de imagem.</li>
+<li>As GIFs animadas são um tipo popular de arquivo de imagem que contém muitos arquivos de imagem dentro delas, que são reproduzidos em sequência repetidamente, criando uma animação simples ou efeito de vídeo.</li>
+<li>Imagine que temos uma série de figurinos, ilustrados abaixo.</li>
+<li>Aqui está <code>costume1.gif</code>.</li>
+</ul>
+<p><img src="https://cdn.cs50.net/python/2022/x/lectures/6/src6/costume1.gif" alt="Gato número 1." title="costume1.gif" /></p>
+<ul>
+<li>Aqui está outro chamado <code>costume2.gif</code>. Observe como as posições das pernas são ligeiramente diferentes.</li>
+</ul>
+<p><img src="https://cdn.cs50.net/python/2022/x/lectures/6/src6/costume2.gif" alt="Gato número 2." title="costume2.gif" /></p>
+<ul>
+<li>
+<p>Antes de prosseguir, certifique-se de ter baixado os arquivos de código-fonte do site do curso. Não será possível codificar o seguinte sem ter as duas imagens acima em sua posse e armazenadas em seu IDE.</p>
+</li>
+<li>
+<p>Na janela do terminal, digite <code>code costumes.py</code> e codifique da seguinte forma:</p>
+<pre><code>import sys
+
+from PIL import Image
+
+images = []
+
+for arg in sys.argv[1:]:
+    image = Image.open(arg)
+    images.append(image)
+
+images[0].save(
+    &quot;costumes.gif&quot;, save_all=True, append_images=[images[1]], duration=200, loop=0
+)
+</code></pre>
+<p>Observe que importamos a funcionalidade <code>Image</code> do <code>PIL</code>. Observe que o primeiro loop <code>for</code> simplesmente percorre as imagens fornecidas como argumentos de linha de comando e as armazena na lista chamada <code>images</code>. O <code>1:</code> começa a fatiar <code>argv</code> em seu segundo elemento. As últimas linhas de código salvam a primeira imagem e também acrescentam uma segunda imagem a ela, criando um GIF animado. Digite <code>python costumes.py costume1.gif costume2.gif</code> no terminal. Agora, digite <code>code costumes.gif</code> na janela do terminal e você poderá ver um GIF animado.</p>
+</li>
+<li>
+<p>Você pode aprender mais na documentação do Pillow sobre o <a href="https://pillow.readthedocs.io/">PIL</a>.</p>
+</li>
+</ul>
+<h2>Resumindo</h2>
+<p>Agora, não apenas vimos que podemos escrever e ler arquivos textualmente - também podemos ler e escrever arquivos usando uns e zeros. Mal podemos esperar para ver o que você vai conseguir com essas novas habilidades a seguir.</p>
+<ul>
+<li>Entrada e saída de arquivos (File I/O)</li>
+<li><code>open</code></li>
+<li><code>with</code></li>
+<li>CSV</li>
+<li><code>PIL</code></li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,419 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h1>Crédito</h1>
+<h2>Introdução</h2>
+<p>Abra o <a href="https://code.cs50.io/pt/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do seu terminal, em seguida, execute <code>cd</code> sozinho. Você deve encontrar que seu &quot;prompt&quot; é semelhante ao abaixo.</p>
+<pre><code>$
+</code></pre>
+<p>Clique dentro da janela do terminal e execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/1/credit.zip
+</code></pre>
+<p>seguido de Enter para baixar um arquivo ZIP chamado <code>credit.zip</code> em seu codespace. Certifique-se de não ignorar o espaço entre <code>wget</code> e a seguinte URL, ou qualquer outro caractere!</p>
+<p>Agora execute</p>
+<pre><code>unzip credit.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>credit</code>. Você não precisa mais do arquivo ZIP, então execute</p>
+<pre><code>rm credit.zip
+</code></pre>
+<p>e responda com &quot;y&quot; seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd credit
+</code></pre>
+<p>seguido de Enter para se mover para (ou seja, abrir) aquele diretório. Seu prompt agora deve ser semelhante ao abaixo.</p>
+<pre><code>credit/ $
+</code></pre>
+<p>Se tudo correu bem, você deve executar</p>
+<pre><code>ls
+</code></pre>
+<p>e ver um arquivo chamado <code>credit.c</code>. Executar <code>code credit.c</code> deve abrir o arquivo onde você digitará seu código para este problema. Se não, refaça seus passos e veja se você pode determinar onde errou!</p>
+<h2>Cartões de crédito</h2>
+<p>Um cartão de crédito ou débito, é claro, é um cartão de plástico com o qual você pode pagar por bens e serviços. Impresso nesse cartão está um número que também é armazenado em um banco de dados em algum lugar, para que quando seu cartão seja usado para comprar algo, o credor saiba a quem cobrar. Há muitas pessoas com cartões de crédito neste mundo, então esses números são bastante longos: American Express usa números de 15 dígitos, MasterCard usa números de 16 dígitos e Visa usa números de 13 e 16 dígitos. E esses são números decimais (0 a 9), não binários, o que significa, por exemplo, que a American Express pode imprimir até 10^15 = 1.000.000.000.000.000 cartões únicos! (Isso é... um quatrilhão.)</p>
+<p>Na verdade, isso é um pouco de exagero, porque os números de cartão de crédito realmente têm alguma estrutura. Todos os números da American Express começam com 34 ou 37; a maioria dos números da MasterCard começa com 51, 52, 53, 54 ou 55 (eles também têm alguns outros números iniciais potenciais com os quais não nos preocuparemos para este problema); e todos os números da Visa começam com 4. Mas os números de cartão de crédito também têm um &quot;checksum&quot; embutido neles, uma relação matemática entre pelo menos um número e outros. Esse checksum permite que computadores (ou humanos que gostam de matemática) detectem erros de digitação (por exemplo, transposições), se não números fraudulentos, sem ter que consultar um banco de dados, o que pode ser lento. Claro, um matemático desonesto certamente poderia criar um número falso que, no entanto, respeite a restrição matemática, então uma consulta ao banco de dados ainda é necessária para verificações mais rigorosas.</p>
+<h2>O algoritmo de Luhn</h2>
+<p>Então, qual é a fórmula secreta? Bem, a maioria dos cartões usa um algoritmo inventado por Hans Peter Luhn da IBM. De acordo com o algoritmo de Luhn, você pode determinar se um número de cartão de crédito é válido (sintaticamente) da seguinte forma:</p>
+<ol>
+<li>Multiplique por 2 todos os outros dígitos, começando pelo segundo dígito do final do número, e então some os dígitos desses produtos juntos.</li>
+<li>Adicione a soma à soma dos dígitos que não foram multiplicados por 2.</li>
+<li>Se o último dígito do total for 0 (ou, de forma mais formal, se o resto da divisão do total por 10 for congruente a 0), o número é válido!</li>
+</ol>
+<p>Isso é meio confuso, então vamos tentar um exemplo com o Visa do David: 4003600000000014.</p>
+<ol>
+<li>
+<p>Para fins de discussão, vamos primeiro sublinhar todos os outros dígitos, começando pelo segundo dígito do final do número:</p>
+ <p><u>4</u>0<u>0</u>3<u>6</u>0<u>0</u>0<u>0</u>0<u>0</u>0<u>0</u>0<u>1</u>4</p>
+<p>Ok, vamos multiplicar cada um dos dígitos sublinhados por 2:</p>
+<p>1•2 + 0•2 + 0•2 + 0•2 + 0•2 + 6•2 + 0•2 + 4•2</p>
+<p>Isso nos dá:</p>
+<p>2 + 0 + 0 + 0 + 0 + 12 + 0 + 8</p>
+<p>Agora vamos adicionar os dígitos desses produtos (ou seja, não os próprios produtos) juntos:</p>
+<p>2 + 0 + 0 + 0 + 0 + 1 + 2 + 0 + 8 = 13</p>
+</li>
+<li>
+<p>Agora vamos adicionar essa soma (13) à soma dos dígitos que não foram multiplicados por 2 (começando pelo final):</p>
+<p>13 + 4 + 0 + 0 + 0 + 0 + 0 + 3 + 0 = 20</p>
+</li>
+<li>
+<p>Sim, o último dígito nessa soma (20) é 0, então o cartão de David é legítimo!</p>
+</li>
+</ol>
+<p>Portanto, validar números de cartão de crédito não é difícil, mas pode ficar um pouco tedioso manualmente. Vamos escrever um programa.</p>
+<h2>Detalhes da implementação</h2>
+<p>No arquivo chamado <code>credit.c</code> no diretório <code>credit</code>, escreva um programa que pede ao usuário um número de cartão de crédito e, em seguida, relata (por meio de <code>printf</code>) se é um número de cartão American Express, MasterCard ou Visa válido, de acordo com as definições de cada formato aqui. Para que possamos automatizar alguns testes do seu código, pedimos que a última linha de saída do seu programa seja <code>AMEX\n</code> ou <code>MASTERCARD\n</code> ou <code>VISA\n</code> ou <code>INVALID\n</code>, nada mais, nada menos. Para simplicidade, você pode assumir que a entrada do usuário será totalmente numérica (ou seja, sem hífens, como pode ser impresso em um cartão real) e que não terá zeros à esquerda. Mas não assuma que a entrada do usuário vai caber em um <code>int</code>! É melhor usar <code>get_long</code> da biblioteca do CS50 para obter a entrada dos usuários. (Por quê?)</p>
+<p>Considere o exemplo abaixo representativo de como seu próprio programa deve se comportar quando passado um número de cartão de crédito válido (sem hífens).</p>
+<pre><code>$ ./credit
+Number: 4003600000000014
+VISA
+</code></pre>
+<p>Agora, <code>get_long</code> por si só já rejeitará hífens (e mais):</p>
+<pre><code>$ ./credit
+Number: 4003-6000-0000-0014
+Number: foo
+Number: 4003600000000014
+VISA
+</code></pre>
+<p>Mas cabe a você detectar entradas que não são números de cartão de crédito (por exemplo, um número de telefone), mesmo que numéricas:</p>
+<pre><code>$ ./credit
+Number: 6176292929
+INVALID
+</code></pre>
+<p>Teste seu programa com uma variedade de entradas, tanto válidas quanto inválidas. (Nós certamente vamos!) Aqui estão alguns <a href="https://developer.paypal.com/api/nvp-soap/payflow/integration-guide/test-transactions/#standard-test-cards">números de cartão</a> que o PayPal recomenda para testes.</p>
+<p>Se o seu programa se comportar incorretamente em algumas entradas (ou não compilar), é hora de depurar!</p>
+<h3>Walkthrough</h3>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/dF7wNjsRBjI?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<h3>Como testar seu código</h3>
+<p>Você também pode executar o seguinte para avaliar a correção do seu código usando <code>check50</code>. Mas certifique-se de compilar e testá-lo também!</p>
+<pre><code>check50 cs50/problems/2023/x/credit
+</code></pre>
+<p>Execute o abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 credit.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>Em seu terminal, execute o abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/credit
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>

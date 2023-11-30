@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+
+<html lang="en-us">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta
+      property="og:description"
+      content="Introdução às faculdades intelectuais da ciência da computação e a arte da programação. Este curso ensina aos estudantes a como pensar algoritmicamente e a como resulver problemas eficientemente. Os tópicos incluem abstração, algoritmos, estruturas de dados, encapsulação, gerenciamento de recursos, segurança, e engenharia de software. O curso inclui as linguagens C, Python, e SQL, assim como HTML, CSS, e JavaScript. As listas de problemas são inspiradas pelas áreas das artes, humanas, ciências sociais, e ciências naturais. O curso culmina em um projeto final."
+    />
+
+    <meta property="og:image" content="" />
+    <meta property="og:title" content="CS50" />
+    <link
+      href="https://cs50.harvard.edu/summer/2020/favicon.ico?1593528821"
+      rel="icon"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/df44463090.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <link
+      href="/static/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <link
+      href="/static/css/page.css"
+      rel="stylesheet"
+    />
+
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/css/personalizado.css"
+    />
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script src="/static/highlight/highlight.min.js"></script>
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="/static/highlight/styles/atom-one-light.min.css"
+    />
+    <script>hljs.initHighlightingOnLoad();</script>
+    <style>
+      code {
+        border: 1px solid #dee2e6;
+      }
+
+      pre {
+        padding: 0 !important;
+      }
+
+      /* Don't shrink these */
+      code,
+      pre {
+        font-size: inherit;
+      }
+    </style>
+    <title>CS50x em Português</title>
+  </head>
+
+  <body>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: green">
+  <header>
+    <h1 data-id="this-is-cs50">
+      <a href="/2023/index.html"
+        >Este é o CS50x</a
+      >
+    </h1>
+
+    <p>
+      <a href="https://cs50.harvard.edu/x">O curso de Ciências da Computação da Universidade de Harvard</a
+      ><br />2023
+    </p>
+  </header>
+
+  <button
+    aria-controls="nav"
+    aria-expanded="false"
+    class="btn btn-sm collapsed d-md-none"
+    data-target="aside &gt; nav"
+    data-toggle="collapse"
+  >
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/0.html"
+          >Semana 0
+          <span class="semana-titulo"
+            >Scratch <strong class="text-white">😺</strong></span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/1.html"
+          >Semana 1
+          <span class="semana-titulo">C</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/2.html"
+          >Semana 2
+          <span class="semana-titulo"
+            >Vetores</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/3.html"
+          >Semana 3
+          <span class="semana-titulo"
+            >Algoritmos</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/4.html"
+          >Semana 4
+          <span class="semana-titulo"
+            >Memória</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/5.html"
+          >Semana 5
+          <span class="semana-titulo"
+            >Estruturas de Dados</span
+          ></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/6.html"
+          >Semana 6
+          <span class="semana-titulo">Python</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/7.html"
+          >Semana 7
+          <span class="semana-titulo">SQL</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/8.html"
+          >Semana 8
+          <span class="semana-titulo">HTML, CSS, JavaScript</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/9.html"
+          >Semana 9
+          <span class="semana-titulo">Flask</span></a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/semanas/10.html"
+          >Semana 10
+          <span class="semana-titulo">Emoji</span></a
+        >
+      </li>
+    </ul>
+
+    <ul class="fa-ul">
+      <li data-marker="*" class="small">
+        <span class="fa-li"><i class="fas fa-square"></i></span
+        ><a href="/2023/semanas/ciberseguranca.html"
+          >Cibersegurança</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+    <ul>
+      <li data-marker="*">
+        <a href="/2023/projeto_final.html"
+          >Projeto Final</a
+        >
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/manual/index.html"
+          >Manual do Programador</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/estilo.html"
+          >Guia de Estilo</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/honestidade.html"
+          >Honestidade Acadêmica</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/certificado.html"
+          >Certificado CS50</a
+        >
+      </li>
+
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="/2023/curriculo.html"
+          >Currículo do Curso</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.me/cs50x">Boletim de Notas</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <ul class="small fa-ul">
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://cs50.dev">Visual Studio Code</a>
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://sqlitebrowser.org/"
+          >Navegador SQLite</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://adminer.cs50.net/"
+          >Navegador PostgreSQL</a
+        >
+      </li>
+      <!--
+            <li data-marker="*">
+                <span class="fa-li"><i class="fas fa-circle"></i></span>
+                <a href="https://man.cs50.io/">Manual CS50</a>
+            </li>-->
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://docs.python.org/pt-br/3/search.html"
+          >Documentação Python</a
+        >
+      </li>
+      <li data-marker="*">
+        <span class="fa-li"><i class="fas fa-circle"></i></span>
+        <a href="https://pt.stackoverflow.com/">Stack Overflow</a>
+      </li>
+    </ul>
+
+    <hr />
+
+    <p style="font-size: initial">
+      <a href="/2023/obrigado.html"
+        ></a
+      >
+    </p>
+  </nav>
+
+  <footer></footer>
+</aside>
+
+        <main class="col-md markdown-body">
+          
+<h1>Recuperar</h1>
+<p>Implemente um programa que recupere JPEGs de uma imagem forense, conforme abaixo.</p>
+<pre><code>$ ./recover card.raw
+</code></pre>
+<h2>Contexto</h2>
+<p>Antecipando este problema, nos últimos dias tiramos fotos em torno do campus, todas elas foram salvas em uma câmera digital como JPEGs em um cartão de memória. Infelizmente, por algum motivo, as fotos foram todas excluídas! Felizmente, no mundo da computação, “excluído” não significa tanto assim, mas sim “esquecido”. Mesmo que a câmera insista que o cartão está em branco, temos quase certeza de que isso não é bem verdade. Na verdade, estamos esperando (ah, queremos dizer...) que você possa escrever um programa que recupere as fotos para nós!</p>
+<p>Embora JPEGs sejam mais complicados que BMPs, eles têm “assinaturas”, padrões de bytes que podem distingui-los de outros formatos de arquivo. Especificamente, os três primeiros bytes de um JPEG são </p>
+<pre><code>0xff 0xd8 0xff
+</code></pre>
+<p>do primeiro ao terceiro byte, da esquerda para a direita. Enquanto isso, o quarto byte é ou <code>0xe0</code>, <code>0xe1</code>, <code>0xe2</code>, <code>0xe3</code>, <code>0xe4</code>, <code>0xe5</code>, <code>0xe6</code>, <code>0xe7</code>, <code>0xe8</code>, <code>0xe9</code>, <code>0xea</code>, <code>0xeb</code>, <code>0xec</code>, <code>0xed</code>, <code>0xee</code>, ou <code>0xef</code>. Em outras palavras, os primeiros quatro bits do quarto byte são <code>1110</code>.</p>
+<p>Ao encontrar esse padrão de quatro bytes em um meio conhecido por armazenar fotos (por exemplo, meu cartão de memória), é provável que demarque o início de um arquivo JPEG. Justo, você pode encontrar esses padrões em algum disco puramente por acaso, então a recuperação de dados não é uma ciência exata.</p>
+<p>Felizmente, as câmeras digitais tendem a armazenar fotografias contiguamente em cartões de memória, em que cada foto é armazenada imediatamente após a foto anterior. Consequentemente, o início de um JPEG geralmente demarca o fim de outro. No entanto, as câmeras digitais geralmente inicializam cartões com um sistema de arquivo FAT cujo “tamanho de bloco” é de 512 bytes (B). A implicação é que essas câmeras escrevem apenas nesses cartões em unidades de 512 B. Uma foto de 1 MB (ou seja, 1.048.576 B), por exemplo, ocupa 1048576 ÷ 512 = 2048 “blocos” em um cartão de memória. Assim como uma foto que é um byte menor (ou seja, 1.048.575 B)! O espaço desperdiçado no disco é chamado “espaço vago”. Investigadores forenses muitas vezes olham para os espaços vazios para restos de dados suspeitos.</p>
+<p>A implicação de todos esses detalhes é que você, o investigador, provavelmente pode escrever um programa que itera sobre uma cópia do meu cartão de memória, procurando as assinaturas dos JPEGs. Cada vez que você encontrar uma assinatura, pode abrir um novo arquivo para gravar e começar a preenchê-lo com bytes do meu cartão de memória, fechando-o apenas quando encontrar outra assinatura. Além disso, em vez de ler os bytes do meu cartão de memória um por vez, você pode ler 512 de cada vez em um buffer para eficiência. Graças ao FAT, você pode confiar que as assinaturas dos JPEGs estarão “alinhadas em blocos”. Isso significa que você só precisa procurar essas assinaturas nos primeiros quatro bytes de um bloco.</p>
+<p>Note que os JPEGs podem abranger blocos contíguos. Caso contrário, nenhum JPEG poderia ser maior que 512 B. Mas o último byte de um JPEG pode não cair no final de um bloco. Lembre-se da possibilidade de espaço vago. Mas não se preocupe. Como este cartão de memória era novo quando comecei a tirar fotos, é provável que tenha sido “zerado” (ou seja, preenchido com 0s) pelo fabricante, caso em que qualquer espaço vago será preenchido com 0s. Está tudo bem se esses 0s finais acabarem nos JPEGs que você recuperar; eles ainda devem ser visualizáveis.</p>
+<p>Agora, eu tenho apenas um cartão de memória, mas há muitos de vocês! Então, eu criei uma “imagem forense” do cartão, armazenando seu conteúdo, byte a byte, em um arquivo chamado 'card.raw`. Para que você não perca tempo iterando sobre milhões de 0s desnecessariamente, eu apenas criei uma imagem dos primeiros megabytes do cartão de memória. Mas você deve encontrar que a imagem contém 50 JPEGs.</p>
+<h2>Começando</h2>
+<p>Acesse <a href="https://code.cs50.io/">code.cs50.io</a>, clique na janela do terminal e execute <code>cd</code> sozinho. Você deve encontrar que o seu prompt de janela do terminal se assemelha ao abaixo:</p>
+<pre><code>$
+</code></pre>
+<p>Em seguida, execute</p>
+<pre><code>wget https://cdn.cs50.net/2022/fall/psets/4/recover.zip
+</code></pre>
+<p>para baixar um arquivo ZIP chamado <code>recover.zip</code> no seu espaço de código.</p>
+<p>Agora, execute</p>
+<pre><code>unzip recover.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>recover</code>. Você não precisa mais do arquivo ZIP, então execute</p>
+<pre><code>rm recover.zip
+</code></pre>
+<p>e responda com um “y” seguido de Enter para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>cd recover
+</code></pre>
+<p>seguido de Enter para mover-se para dentro (ou seja, abrir) esse diretório. Seu prompt agora deve se parecer com o seguinte:</p>
+<pre><code>recuperar/ $
+</code></pre>
+<p>Execute <code>ls</code> sozinho e você deve ver dois arquivos: <code>recover.c</code> e 'cart.raw`.</p>
+<h2>Especificação</h2>
+<p>Implemente um programa chamado <code>recover</code> que recupera JPEGs de uma imagem forense.</p>
+<ul>
+<li>Implemente seu programa em um arquivo chamado <code>recover.c</code> em um diretório chamado <code>recover</code>.</li>
+<li>Seu programa deve aceitar exatamente um argumento de linha de comando, o nome de uma imagem forense da qual recuperar os JPEGs.</li>
+<li>Se o programa não for executado com exatamente um argumento de linha de comando, ele deve lembrar o usuário do uso correto e <code>main</code> deve retornar <code>1</code>.</li>
+<li>Se a imagem forense não puder ser aberta para leitura, o programa deve informar o usuário disso e <code>main</code> deve retornar <code>1</code>.</li>
+<li>Os arquivos que você gerar devem ser nomeados como <code>###.jpg</code>, onde <code>###</code> é um número decimal de três dígitos, começando com <code>000</code> para a primeira imagem e contando para cima.</li>
+<li>Se o seu programa usar <code>malloc</code>, não pode vazar memória.</li>
+</ul>
+<h2>Passo a Passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="acelerômetro; autoplay; criptografia-mídia; giroscópio; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/ooL0r_8N9ms?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+<h2>Uso</h2>
+<p>Seu programa deve se comportar conforme os exemplos abaixo.</p>
+<pre><code>$ ./recover
+Uso: ./recover IMAGEM
+</code></pre>
+<p>onde <code>IMAGEM</code> é o nome da imagem forense. Por exemplo:</p>
+<pre><code>$ ./recover card.raw
+</code></pre>
+<h2>Dicas</h2>
+<p>Lembre-se de que você pode abrir <code>card.raw</code> programaticamente com o <code>fopen</code>, como abaixo, desde que <code>argv [1]</code> exista.</p>
+<div class="language-c highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kt">ARQUIVO</span> <span class="o">*</span><span class="n">arquivo</span> <span class="o">=</span> <span class="n">fopen</span><span class="p">(</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="s">"r"</span><span class="p">);</span>
+</code></pre></div></div>
+<p>Quando executado, seu programa deve recuperar cada um dos JPEGs de <code>card.raw</code>, armazenando cada um como um arquivo separado no diretório de trabalho atual. Seu programa deve numerar os arquivos que ela produz, nomeando cada um como <code>###.jpg</code>, onde <code>###</code> é um número decimal de três dígitos a partir de <code>000</code>. Use a função <a href="https://man.cs50.io/3/sprintf"><code>sprintf</code></a> e note que ela armazena uma string formatada em uma localização na memória. Dado o formato prescrito <code>###.jpg</code> para o nome do arquivo JPEG, quantos bytes você deve alocar para essa string? (Não se esqueça do caractere NUL!)</p>
+<p>Você não precisa tentar recuperar os nomes originais dos JPEGs. Para verificar se os JPEGs que seu programa gerou estão corretos, basta clicar duas vezes e dar uma olhada! Se cada foto parecer intacta, provavelmente sua operação foi um sucesso!</p>
+<p>É provável, no entanto, que a primeira versão do código que seu programa gera não esteja correta. (Se você os abrir e não vir nada, eles provavelmente não estão corretos!) Execute o comando abaixo para excluir todos os arquivos JPEG do seu diretório de trabalho atual.</p>
+<pre><code>$ rm *.jpg
+</code></pre>
+<p>Se você não quiser ter que confirmar cada exclusão, execute o comando abaixo.</p>
+<pre><code>$ rm -f *.jpg
+</code></pre>
+<p>Tenha cuidado com a opção <code>-f</code>, porque ela força a exclusão sem pedir confirmação.</p>
+<p>Se você gostaria de criar um novo tipo para armazenar um byte de dados, você pode fazer isso usando o código abaixo, que define um novo tipo chamado <code>BYTE</code> como <code>uint8_t</code> (um tipo definido em <code>stdint.h</code>, representando um inteiro não assinado de 8 bits).</p>
+<pre><code>typedef uint8_t BYTE;
+</code></pre>
+<p>Lembre-se também de que você pode ler dados de um arquivo usando a função <a href="https://man.cs50.io/3/fread"><code>fread</code></a>, que lerá dados de um arquivo para uma localização na memória. Conforme sua <a href="https://man.cs50.io/3/fread">página do manual</a>, <code>fread</code> retorna o número de bytes que ela leu, o que significa que ela deve retornar <code>512</code> ou <code>0</code>, dado que <code>card.raw</code> contém algum número de blocos de 512 bytes. Para ler cada bloco de <code>card.raw</code>, após abri-lo com <code>fopen</code>, deve ser suficiente usar um loop como:</p>
+<pre class="highlight">
+<span class="k">while</span> (fread(buffer, <span class="mi">1</span>, BLOCK_SIZE, arquivo_raw) == BLOCK_SIZE)
+{
+
+
+}
+</pre>
+<p>Dessa forma, assim que <code>fread</code> retornar <code>0</code> (o que efetivamente é <code>false</code>), seu loop será encerrado.</p>
+<h2>Testando</h2>
+<p>Digite o código abaixo para avaliar a correção do seu código usando <code>check50</code>. Mas não se esqueça de compilá-lo, testá-lo você mesmo também!</p>
+<pre><code>check50 cs50/problems/2023/x/recover
+</code></pre>
+<p>Digite o código abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>style50 recover.c
+</code></pre>
+<h2>Como Enviar</h2>
+<p>Em seu terminal, execute o código abaixo para enviar seu trabalho.</p>
+<pre><code>submit50 cs50/problems/2023/x/recover&quot;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+</html>
