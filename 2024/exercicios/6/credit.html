@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Crédito</h1>
+<h2>Problema a resolver</h2>
+<p>Em um arquivo chamado <code>credit.py</code> em uma pasta chamada <code>sentimental-credit</code>, escreva um programa que solicite ao usuário um número de cartão de crédito e, em seguida, informe (via <code>print</code>) se é um número de cartão American Express, MasterCard ou Visa válido, exatamente como você fez no <a href="../../1/">Conjunto de problemas 1</a>. Desta vez, seu programa deve ser escrito em Python!</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-QYLr1R1RDLO9QkPF2XFODLkq4" src="https://asciinema.org/a/QYLr1R1RDLO9QkPF2XFODLkq4.js"></script>
+
+<h2>Especificação</h2>
+<ul>
+<li>Para que possamos automatizar alguns testes do seu código, pedimos que a última linha de saída do seu programa seja <code>AMEX\n</code> ou <code>MASTERCARD\n</code> ou <code>VISA\n</code> ou <code>INVALID\n</code>, nada mais, nada menos.</li>
+<li>Para simplificar, você pode assumir que a entrada do usuário será totalmente numérica (ou seja, desprovida de hífens, como pode ser impresso em um cartão real).</li>
+<li>É melhor usar <code>get_int</code> ou <code>get_string</code> da biblioteca do CS50 para obter a entrada dos usuários, dependendo de como você decidir implementar este.</li>
+</ul>
+<h2>Dicas</h2>
+<ul>
+<li>É possível usar expressões regulares para validar a entrada do usuário. Você pode usar o módulo <a href="https://docs.python.org/3/library/re.html"><code>re</code></a> do Python, por exemplo, para verificar se a entrada do usuário é realmente uma sequência de dígitos com o comprimento correto.</li>
+</ul>
+<h2>Como testar</h2>
+<p>Embora o <code>check50</code> esteja disponível para este problema, você é encorajado a testar seu código por conta própria para cada um dos seguintes.</p>
+<ul>
+<li>Execute seu programa como <code>python credit.py</code> e aguarde um prompt de entrada. Digite <code>378282246310005</code> e pressione enter. Seu programa deve gerar <code>AMEX</code>.</li>
+<li>Execute seu programa como <code>python credit.py</code> e aguarde um prompt de entrada. Digite <code>371449635398431</code> e pressione enter. Seu programa deve gerar <code>AMEX</code>.</li>
+<li>Execute seu programa como <code>python credit.py</code> e aguarde um prompt de entrada. Digite <code>5555555555554444</code> e pressione enter. Seu programa deve gerar <code>MASTERCARD</code>.</li>
+<li>Execute seu programa como <code>python credit.py</code> e aguarde um prompt de entrada. Digite <code>5105105105105100</code> e pressione enter. Seu programa deve gerar <code>MASTERCARD</code>.</li>
+<li>Execute seu programa como <code>python credit.py</code> e aguarde um prompt de entrada. Digite <code>4111111111111111</code> e pressione enter. Seu programa deve gerar <code>VISA</code>.</li>
+<li>Execute seu programa como <code>python credit.py</code> e aguarde um prompt de entrada. Digite <code>4012888888881881</code> e pressione enter. Seu programa deve gerar <code>VISA</code>.</li>
+<li>Execute seu programa como <code>python credit.py</code> e aguarde um prompt de entrada. Digite <code>1234567890</code> e pressione enter. Seu programa deve gerar <code>INVALID</code>.</li>
+</ul>
+<h3>Correção</h3>
+<pre><code>  check50 cs50/problems/2024/x/sentimental/credit
+</code></pre>
+<h3>Estilo</h3>
+<pre><code>  style50 credit.py
+</code></pre>
+<h2>Como enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/sentimental/credit
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

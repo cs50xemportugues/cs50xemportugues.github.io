@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Ordenar</h1>
+<h2>Problema a resolver</h2>
+<p>Recorde das aulas que vimos alguns algoritmos para ordenar uma sequência de números: seleção por ordenação, ordenação por bolhas e ordenação por mesclagem.</p>
+<ul>
+<li>A seleção por ordenação itera sobre as partes não ordenadas de uma lista, selecionando o menor elemento de cada vez e movendo-o para sua localização correta.</li>
+<li>A ordenação por bolhas compara pares de valores adjacentes um de cada vez e os troca se estiverem na ordem incorreta. Isso continua até que a lista seja ordenada.</li>
+<li>A ordenação por mesclagem divide recursivamente a lista em duas repetidamente e, em seguida, mescla as listas menores de volta em uma maior na ordem correta.</li>
+</ul>
+<p>Neste problema, você analisará três programas de ordenação (compilados!) para determinar quais algoritmos eles usam. Em um arquivo chamado <code>answers.txt</code> em uma pasta chamada <code>sort</code>, registre suas respostas, juntamente com uma explicação para cada programa, preenchendo os espaços em branco marcados como <code>TODO</code>.</p>
+<h2>Código de distribuição</h2>
+<p>Para este problema, você precisará de algum "código de distribuição" - ou seja, código escrito pela equipe do CS50. São fornecidos três programas C já compilados, <code>sort1</code>, <code>sort2</code> e <code>sort3</code>, bem como vários arquivos <code>.txt</code> de entrada e outro arquivo, <code>answers.txt</code>, para você gravar suas respostas. Cada um de <code>sort1</code>, <code>sort2</code> e <code>sort3</code> implementa um algoritmo de ordenação diferente: seleção por ordenação, ordenação por bolhas ou ordenação por mesclagem (embora não necessariamente nessa ordem!). Sua tarefa é determinar qual algoritmo de ordenação é usado por cada arquivo. Comece baixando esses arquivos.</p>
+<h3>Baixar arquivos de distribuição</h3>
+<p>Abra o <a href="https://cs50.dev/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do terminal e execute <code>cd</code> sozinho. Você deve descobrir que seu "prompt" se assemelha ao abaixo.</p>
+<pre><code>  $
+</code></pre>
+<p>Clique dentro da janela do terminal e execute</p>
+<pre><code>  wget https://cdn.cs50.net/2023/fall/psets/3/sort.zip
+</code></pre>
+<p>seguido por Enter para baixar um ZIP chamado <code>sort.zip</code> no seu codespace. Tome cuidado para não esquecer o espaço entre <code>wget</code> e a URL a seguir, ou qualquer outro caractere!</p>
+<p>Agora execute</p>
+<pre><code>  unzip sort.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>sort</code>. Você não precisa mais do arquivo ZIP, então você pode executar</p>
+<pre><code>  rm sort.zip
+</code></pre>
+<p>e responda com "y" seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<h2>Dicas</h2>
+<h3>Explore os arquivos <code>.txt</code></h3>
+<ul>
+<li>Vários arquivos <code>.txt</code> são fornecidos para você. Esses arquivos contêm <code>n</code> linhas de valores, invertidos, embaralhados ou classificados.<ul>
+<li>Por exemplo, <code>reversed10000.txt</code> contém 10000 linhas de números que são invertidas de <code>10000</code>, enquanto <code>random50000.txt</code> contém 50000 linhas de números que estão em ordem aleatória.</li>
+</ul>
+</li>
+<li>Os diferentes tipos de arquivos <code>.txt</code> podem ajudá-lo a determinar qual ordenação é qual. Considere como cada algoritmo é executado com uma lista já ordenada. Que tal uma lista invertida? Ou lista embaralhada? Pode ser útil trabalhar com uma lista menor de cada tipo e percorrer cada processo de ordenação.</li>
+</ul>
+<h3>Cronometre cada ordenação com entradas diferentes</h3>
+<ul>
+<li>Para executar as ordenações nos arquivos de texto, execute o seguinte no terminal: <code>./[nome_do_programa] [arquivo_de_texto.txt]</code>. Certifique-se de ter usado <code>cd</code> para mover para o diretório <code>sort</code>!<ul>
+<li>Por exemplo, para ordenar <code>reversed10000.txt</code> com <code>sort1</code>, execute <code>./sort1 reversed10000.txt</code>.</li>
+</ul>
+</li>
+<li>Pode ser útil cronometrar suas ordenações. Para fazer isso, execute <code>time ./[arquivo_de_ordenacao] [arquivo_de_texto.txt]</code>.<ul>
+<li>Por exemplo, você pode executar <code>time ./sort1 reversed10000.txt</code> para executar <code>sort1</code> em 10.000 números invertidos. No final da saída do seu terminal, você pode olhar para o tempo <code>real</code> para ver quanto tempo realmente decorreu durante a execução do programa.</li>
+</ul>
+</li>
+</ul>
+<h2>Passo a passo</h2>
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/-Bhxxw6JKKY"></iframe>
+
+<details><summary>Não sabe como resolver?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/uOYhrBs37j0"></iframe></details>
+
+<h2>Como testar</h2>
+<h3>Correção</h3>
+<pre><code>  check50 cs50/problems/2024/x/sort
+</code></pre>
+<h2>Como enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/sort
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

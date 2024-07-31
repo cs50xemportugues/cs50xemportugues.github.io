@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h2>DNA</h2>
+<h2>Problema a resolver</h2>
+<p>O DNA, o transportador de informações genéticas em seres vivos, tem sido usado na justiça criminal por décadas. Mas como exatamente funciona o perfil genético? Dada uma sequência de DNA, como os investigadores forenses podem identificar a quem ela pertence?</p>
+<p>Em um arquivo chamado <code>dna.py</code> em uma pasta chamada <code>dna</code>, implemente um programa que identifica a quem pertence uma sequência de DNA.</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-5onE9BNq1zhL2D72gfu9IbdsD" src="https://asciinema.org/a/5onE9BNq1zhL2D72gfu9IbdsD.js"></script>
+
+<h2>Código de distribuição</h2>
+<p>Para este problema, você estenderá a funcionalidade do código fornecido a você pela equipe do CS50.</p>
+<p>Faça login em <a href="https://cs50.dev/">cs50.dev</a>, clique na janela do seu terminal e execute <code>cd</code> por si só. Você deve descobrir que o prompt da janela do seu terminal se assemelha ao abaixo:</p>
+<pre><code>  $
+</code></pre>
+<p>Em seguida, execute</p>
+<pre><code>  wget https://cdn.cs50.net/2023/fall/psets/6/dna.zip
+</code></pre>
+<p>para baixar um ZIP chamado <code>dna.zip</code> em seu espaço de códigos.</p>
+<p>Em seguida, execute</p>
+<pre><code>  unzip dna.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>dna</code>. Você não precisa mais do arquivo ZIP, então você pode executar</p>
+<pre><code>  rm dna.zip
+</code></pre>
+<p>e responder com "s" seguido de Enter no prompt para remover o arquivo ZIP baixado.</p>
+<p>Agora digite</p>
+<pre><code>  cd dna
+</code></pre>
+<p>seguido de Enter para entrar (ou seja, abrir) aquele diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>  dna/ $
+</code></pre>
+<p>Execute <code>ls</code> por si só e você deverá ver alguns arquivos e pastas:</p>
+<pre><code>  databases/ dna.py sequences/
+</code></pre>
+<p>Se você encontrar algum problema, siga os mesmos passos novamente e veja se consegue determinar onde errou!</p>
+<h2>Contexto</h2>
+<p>O DNA é na verdade apenas uma sequência de moléculas chamadas nucleotídeos, organizadas em uma forma particular (uma dupla hélice). Cada célula humana tem bilhões de nucleotídeos organizados em sequência. Cada nucleotídeo de DNA contém uma das quatro bases diferentes: adenina (A), citosina (C), guanina (G) ou timina (T). Algumas partes dessa sequência (ou seja, genoma) são as mesmas, ou pelo menos muito semelhantes, em quase todos os seres humanos, mas outras partes da sequência têm uma maior diversidade genética e, portanto, variam mais na população.</p>
+<p>Um lugar onde o DNA tende a ter alta diversidade genética é nas repetições curtas em tandem (STRs). Um STR é uma sequência curta de bases de DNA que tende a se repetir consecutivamente várias vezes em locais específicos dentro do DNA de uma pessoa. O número de vezes que qualquer STR específico se repete varia muito entre os indivíduos. Nas amostras de DNA abaixo, por exemplo, Alice tem o STR <code>AGAT</code> repetido quatro vezes em seu DNA, enquanto Bob tem o mesmo STR repetido cinco vezes.</p>
+<p><img alt="STRs de exemplo" src="https://cs50.harvard.edu/x/2024/psets/6/dna/strs.png" /></p>
+<p>Usar vários STRs, em vez de apenas um, pode melhorar a precisão do perfil de DNA. Se a probabilidade de que duas pessoas tenham o mesmo número de repetições para um único STR for de 5%, e o analista observar 10 STRs diferentes, então a probabilidade de que duas amostras de DNA correspondam puramente por acaso é de cerca de 1 em 1 quatrilhão (assumindo que todos os STRs sejam independentes entre si). Portanto, se duas amostras de DNA corresponderem no número de repetições para cada um dos STRs, o analista pode estar bastante confiante de que elas vieram da mesma pessoa. CODIS, o <a href="https://www.fbi.gov/services/laboratory/biometric-analysis/codis/codis-and-ndis-fact-sheet">banco de dados de DNA</a> do FBI, usa 20 STRs diferentes como parte de seu processo de criação de perfil de DNA.</p>
+<p>Como seria esse banco de dados de DNA? Bem, em sua forma mais simples, você poderia imaginar formatar um banco de dados de DNA como um arquivo CSV, em que cada linha corresponde a um indivíduo e cada coluna corresponde a um STR específico.</p>
+<pre><code>  nome, AGAT, AATG, TATC
+  Alice, 28, 42, 14
+  Bob, 17, 22, 19
+  Charlie, 36, 18, 25
+</code></pre>
+<p>Os dados no arquivo acima sugerem que Alice tem a sequência <code>AGAT</code> repetida 28 vezes consecutivas em algum lugar em seu DNA, a sequência <code>AATG</code> repetida 42 vezes e <code>TATC</code> repetida 14 vezes. Bob, por sua vez, tem esses mesmos três STRs repetidos 17 vezes, 22 vezes e 19 vezes, respectivamente. E Charlie tem esses mesmos três STRs repetidos 36, 18 e 25 vezes, respectivamente.</p>
+<p>Então, dada uma sequência de DNA, como você pode identificar a quem ela pertence? Bem, imagine que você olhou através da sequência de DNA para a sequência consecutiva mais longa de <code>AGAT</code>s repetidos e descobriu que a sequência mais longa tinha 17 repetições. Se você então descobrisse que a sequência mais longa de <code>AATG</code> tem 22 repetições e a sequência mais longa de <code>TATC</code> tem 19 repetições, isso forneceria uma boa evidência de que o DNA era de Bob. Claro, também é possível que, depois de fazer as contagens para cada um dos STRs, elas não correspondam a ninguém no seu banco de dados de DNA, caso em que você não tenha correspondência.</p>
+<p>Na prática, como os analistas sabem em qual cromossomo e em qual local no DNA um STR será encontrado, eles podem localizar sua pesquisa em apenas uma seção estreita do DNA. Mas vamos ignorar esse detalhe para este problema.</p>
+<p>Sua tarefa é escrever um programa que receberá uma sequência de DNA e um arquivo CSV contendo contagens de STR para uma lista de indivíduos e, em seguida, produzirá a quem o DNA (provavelmente) pertence.</p>
+<h2>Especificação</h2>
+<ul>
+<li>O programa deve exigir como seu primeiro argumento de linha de comando o nome de um arquivo CSV contendo as contagens de STR para uma lista de indivíduos e deve exigir como seu segundo argumento de linha de comando o nome de um arquivo de texto contendo a sequência de DNA a ser identificada.<ul>
+<li>Se o seu programa for executado com o número incorreto de argumentos de linha de comando, o programa deverá imprimir uma mensagem de erro de sua escolha (com <code>print</code>). Se o número correto de argumentos for fornecido, você pode presumir que o primeiro argumento é realmente o nome de arquivo de um arquivo CSV válido e que o segundo argumento é o nome de arquivo de um arquivo de texto válido.</li>
+</ul>
+</li>
+<li>Seu programa deve abrir o arquivo CSV e ler seu conteúdo na memória.<ul>
+<li>Você pode assumir que a primeira linha do arquivo CSV serão os nomes das colunas. A primeira coluna será a palavra <code>nome</code> e as demais colunas serão as próprias sequências STR.</li>
+</ul>
+</li>
+<li>Seu programa deve abrir a sequência de DNA e ler seu conteúdo na memória.</li>
+<li>Para cada um dos STRs (da primeira linha do arquivo CSV), seu programa deve calcular a execução mais longa de repetições consecutivas do STR na sequência de DNA a ser identificada. Observe que definimos uma função auxiliar para você, <code>longest_match</code>, que fará exatamente isso!</li>
+<li>Se as contagens de STR corresponderem exatamente a qualquer um dos indivíduos no arquivo CSV, seu programa deve imprimir o nome do indivíduo correspondente.<ul>
+<li>Você pode assumir que as contagens de STR não corresponderão a mais de um indivíduo.</li>
+<li>Se as contagens de STR não corresponderem exatamente a qualquer um dos indivíduos no arquivo CSV, seu programa deve imprimir <code>Nenhuma correspondência</code>.</li>
+</ul>
+</li>
+</ul>
+<h2>Dicas</h2>
+<ul>
+<li>
+<p>Você pode achar o módulo <a href="https://docs.python.org/3/library/csv.html"><code>csv</code></a> do Python útil para ler arquivos CSV e salvá-los na memória. O particularmente útil pode ser <a href="https://docs.python.org/3/library/csv.html#csv.DictReader"><code>csv.DictReader</code></a>.</p>
+<ul>
+<li>
+<p>Por exemplo, se um arquivo como <code>foo.csv</code> tiver uma linha de cabeçalho, em que cada string é o nome de algum campo, veja como você pode imprimir esses <code>fieldnames</code> como uma <code>lista</code>:
+  import csv</p>
+<pre><code>    with open("foo.csv") as file:
+        reader = csv.DictReader(file)
+        print(reader.fieldnames)
+</code></pre>
+</li>
+<li>
+<p>E veja como você lê todas as (outras) linhas de um CSV em uma <code>lista</code>, em que cada elemento é um <code>dict</code> que representa essa linha:
+  import csv</p>
+<pre><code>    rows = []
+    with open("foo.csv") as file:
+        reader = csv.DictReader(file)
+        for row in reader:
+            rows.append(row)
+</code></pre>
+</li>
+</ul>
+</li>
+<li>
+<p>As funções <a href="https://docs.python.org/3/tutorial/inputoutput.html#reading-and-writing-files"><code>open</code></a> e <a href="https://docs.python.org/3/tutorial/inputoutput.html#methods-of-file-objects"><code>read</code></a> também podem ser úteis para ler arquivos de texto em sua memória.</p>
+</li>
+<li>Considere quais estruturas de dados podem ser úteis para manter o rastreamento de informações em seu programa. Uma <a href="https://docs.python.org/3/tutorial/introduction.html#lists"><code>lista</code></a> ou um <a href="https://docs.python.org/3/tutorial/datastructures.html#dictionaries"><code>dict</code></a> podem ser úteis.</li>
+<li>Lembre-se de que definimos uma função (<code>longest_match</code>) que, quando recebe uma sequência de DNA e um STR como entradas, retorna o número máximo de vezes que o STR é repetido. Você pode usar essa função em outras partes do seu programa!</li>
+</ul>
+<h2>Passo a Passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/j84b_EgntcQ?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+<h2>Como Testar</h2>
+<p>Embora o <code>check50</code> esteja disponível para este problema, é recomendável que você teste seu código em primeiro lugar em cada um dos seguintes.</p>
+<ul>
+<li>Execute seu programa como <code>python dna.py databases/small.csv sequences/1.txt</code>. Seu programa deve exibir <code>Bob</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/small.csv sequences/2.txt</code>. Seu programa deve exibir <code>Nenhuma correspondência</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/small.csv sequences/3.txt</code>. Seu programa deve exibir <code>Nenhuma correspondência</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/small.csv sequences/4.txt</code>. Seu programa deve exibir <code>Alice</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/5.txt</code>. Seu programa deve exibir <code>Lavender</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/6.txt</code>. Seu programa deve exibir <code>Luna</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/7.txt</code>. Seu programa deve exibir <code>Ron</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/8.txt</code>. Seu programa deve exibir <code>Ginny</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/9.txt</code>. Seu programa deve exibir <code>Draco</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/10.txt</code>. Seu programa deve exibir <code>Albus</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/11.txt</code>. Seu programa deve exibir <code>Hermione</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/12.txt</code>. Seu programa deve exibir <code>Lily</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/13.txt</code>. Seu programa deve exibir <code>Nenhuma correspondência</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/14.txt</code>. Seu programa deve exibir <code>Severus</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/15.txt</code>. Seu programa deve exibir <code>Sirius</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/16.txt</code>. Seu programa deve exibir <code>Nenhuma correspondência</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/17.txt</code>. Seu programa deve exibir <code>Harry</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/18.txt</code>. Seu programa deve exibir <code>Nenhuma correspondência</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/19.txt</code>. Seu programa deve exibir <code>Fred</code>.</li>
+<li>Execute seu programa como <code>python dna.py databases/large.csv sequences/20.txt</code>. Seu programa deve exibir <code>Nenhuma correspondência</code>.</li>
+</ul>
+<h3>Exatidão</h3>
+<pre><code>  check50 cs50/problems/2024/x/dna
+</code></pre>
+<h3>Estilo</h3>
+<pre><code>  style50 dna.py
+</code></pre>
+<h2>Como Enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/dna
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

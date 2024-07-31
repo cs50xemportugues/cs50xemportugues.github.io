@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Mario</h1>
+<p><img alt="captura de tela do Mario pulando na pirâmide" src="https://cs50.harvard.edu/x/2024/psets/6/mario/more/pyramids.png" /></p>
+<h2>Problema a ser resolvido</h2>
+<p>Em um arquivo chamado <code>mario.py</code> em uma pasta chamada <code>sentimental-mario-more</code>, escreva um programa que recrie uma meia-pirâmide usando cerquilhas (<code>#</code>) para blocos, exatamente como você fez no <a href="../../../1/">Conjunto de problemas 1</a>. Desta vez, seu programa deve ser escrito em Python!</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-B0CE4bjPGR19PoRKUe5ZF9VoM" src="https://asciinema.org/a/B0CE4bjPGR19PoRKUe5ZF9VoM.js"></script>
+
+<h2>Especificação</h2>
+<ul>
+<li>Para deixar as coisas mais interessantes, primeiro solicite ao usuário com <code>get_int</code> a altura da meia-pirâmide, um número inteiro positivo entre <code>1</code> e <code>8</code>, inclusive. (A altura das meias-pirâmides ilustradas acima é <code>4</code>, a largura de cada meia-pirâmide é <code>4</code>, com uma lacuna de tamanho <code>2</code> separando-as).</li>
+<li>Se o usuário não fornecer um número inteiro positivo maior que <code>8</code>, você deve solicitar o mesmo novamente.</li>
+<li>Em seguida, gere (com a ajuda de <code>print</code> e um ou mais loops) as meias-pirâmides desejadas.</li>
+<li>Tome cuidado para alinhar o canto inferior esquerdo da sua pirâmide com a borda esquerda da janela do terminal e certifique-se de que haja dois espaços entre as duas pirâmides e que não haja espaços adicionais após o último conjunto de cerquilhas em cada linha.</li>
+</ul>
+<h2>Como testar</h2>
+<p>Embora <code>check50</code> esteja disponível para este problema, você é encorajado a testar seu código por conta própria para cada um dos seguintes.</p>
+<ul>
+<li>Execute seu programa como <code>python mario.py</code> e aguarde uma solicitação de entrada. Digite <code>-1</code> e pressione Enter. Seu programa deve rejeitar essa entrada como inválida, solicitando que o usuário digite outro número.</li>
+<li>Execute seu programa como <code>python mario.py</code> e aguarde uma solicitação de entrada. Digite <code>0</code> e pressione Enter. Seu programa deve rejeitar essa entrada como inválida, solicitando que o usuário digite outro número.</li>
+<li>
+<p>Execute seu programa como <code>python mario.py</code> e aguarde uma solicitação de entrada. Digite <code>1</code> e pressione Enter. Seu programa deve gerar a saída abaixo. Certifique-se de que a pirâmide esteja alinhada com o canto inferior esquerdo do seu terminal e que não haja espaços extras no final de cada linha.</p>
+<pre><code>    #  #
+</code></pre>
+</li>
+<li>
+<p>Execute seu programa como <code>python mario.py</code> e aguarde uma solicitação de entrada. Digite <code>2</code> e pressione Enter. Seu programa deve gerar a saída abaixo. Certifique-se de que a pirâmide esteja alinhada com o canto inferior esquerdo do seu terminal e que não haja espaços extras no final de cada linha.</p>
+<pre><code>     #  #
+    ##  ##
+</code></pre>
+</li>
+<li>
+<p>Execute seu programa como <code>python mario.py</code> e aguarde uma solicitação de entrada. Digite <code>8</code> e pressione Enter. Seu programa deve gerar a saída abaixo. Certifique-se de que a pirâmide esteja alinhada com o canto inferior esquerdo do seu terminal e que não haja espaços extras no final de cada linha.</p>
+<pre><code>           #  #
+          ##  ##
+         ###  ###
+        ####  ####
+       #####  #####
+      ######  ######
+     #######  #######
+    ########  ########
+</code></pre>
+</li>
+<li>
+<p>Execute seu programa como <code>python mario.py</code> e aguarde uma solicitação de entrada. Digite <code>9</code> e pressione Enter. Seu programa deve rejeitar essa entrada como inválida, solicitando que o usuário digite outro número. Em seguida, digite <code>2</code> e pressione Enter. Seu programa deve gerar a saída abaixo. Certifique-se de que a pirâmide esteja alinhada com o canto inferior esquerdo do seu terminal e que não haja espaços extras no final de cada linha.</p>
+<pre><code>     #  #
+    ##  ##
+</code></pre>
+</li>
+<li>
+<p>Execute seu programa como <code>python mario.py</code> e aguarde uma solicitação de entrada. Digite <code>foo</code> e pressione Enter. Seu programa deve rejeitar essa entrada como inválida, solicitando que o usuário digite outro número.</p>
+</li>
+<li>Execute seu programa como <code>python mario.py</code> e aguarde uma solicitação de entrada. Não digite nada e pressione Enter. Seu programa deve rejeitar essa entrada como inválida, solicitando que o usuário digite outro número.</li>
+</ul>
+<h3>Correção</h3>
+<pre><code>  check50 cs50/problems/2024/x/sentimental/mario/more
+</code></pre>
+<h3>Estilo</h3>
+<pre><code>  style50 mario.py
+</code></pre>
+<h2>Como enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/sentimental/mario/more
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

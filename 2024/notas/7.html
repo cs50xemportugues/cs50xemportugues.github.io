@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h2>Aula 7</h2>
+<ul>
+<li><a href="#planilhas">Planilhas</a></li>
+<li><a href="#sql">SQL</a></li>
+<li><a href="#imdb">IMDb</a></li>
+<li><a href="#múltiplas-tabelas">Múltiplas tabelas</a></li>
+<li><a href="#problemas">Problemas</a></li>
+</ul>
+<h2>Planilhas</h2>
+<ul>
+<li>A maioria de nós está familiarizada com planilhas, linhas de dados, com cada coluna em uma linha tendo um dado diferente relacionado entre si de alguma forma.</li>
+<li>Um banco de dados é um aplicativo que pode armazenar dados, e podemos pensar no Google Sheets como um desses aplicativos.</li>
+<li>Por exemplo, criamos um Google Form para perguntar aos alunos sobre seu programa de TV favorito e seu gênero. Vemos nas respostas que a planilha tem três colunas: "Timestamp", "title" e "genres":<br />
+<img alt="imagem da planilha do Google Sheets com a linha 1 contendo as células &quot;Timestamp&quot;, &quot;title&quot; e &quot;genres&quot;, com a linha 2 contendo as células &quot;28/10/2019 15:03:45&quot;, &quot;Dynasty&quot;, &quot;Drama, Família&quot; e assim por diante" src="https://cs50.harvard.edu/x/2020/notes/7/spreadsheet.png" /></li>
+<li>Podemos fazer o download de um arquivo CSV da planilha com "Arquivo &gt; Baixar", fazer o upload para nosso IDE e ver que é um arquivo de texto com valores separados por vírgula correspondendo aos dados da planilha.</li>
+<li>
+<p>Vamos escrever <code>favorites.py</code>:</p>
+<pre><code>  import csv
+
+  with open("CS50 2019 - Lecture 7 - Favorite TV Shows (Responses) - Form Responses 1.csv", "r") as file:
+      reader = csv.DictReader(file)
+
+      for row in reader:
+          print(row["title"])
+</code></pre>
+<ul>
+<li>Só vamos abrir o arquivo e verificar se podemos obter o título de cada linha.</li>
+</ul>
+</li>
+<li>
+<p>Agora podemos usar um dicionário para contar a quantidade de vezes em que vimos cada título, com as chaves sendo os títulos e os valores de cada chave sendo um inteiro, rastreando a quantidade de vezes que vimos aquele título:</p>
+<pre><code>  import csv
+
+  counts = {}
+
+  with open("CS50 2019 - Lecture 7 - Favorite TV Shows (Responses) - Form Responses 1.csv", "r") as file:
+      reader = csv.DictReader(file)
+
+      for row in reader:
+          title = row["title"]
+          if title in counts:
+              counts[title] += 1
+          else:
+              counts[title] = 1
+
+  for title, count in counts.items():
+      print(title, count, sep=" | ")
+</code></pre>
+<ul>
+<li>Em cada linha podemos obter o <code>title</code> com <code>row["title"]</code>.</li>
+<li>Aqui, se já vimos o título antes (está em <code>counts</code>), podemos simplesmente adicionar 1 ao valor. Caso contrário, precisamos definir o valor inicial como 1.</li>
+<li>Por fim, podemos imprimir as chaves e os valores do nosso dicionário com um separador para que seja um pouco mais fácil de ler.</li>
+</ul>
+</li>
+<li>
+<p>Podemos mudar a maneira como iteramos para <code>for title, count in sorted(counts.items()):</code> e veremos nosso dicionário ordenado pelas chaves, em ordem alfabética.</p>
+</li>
+<li>
+<p>Mas podemos ordenar pelos pares chave-valor no dicionário com:</p>
+<pre><code>  def f(item):
+    return item[1]
+
+  for title, count in sorted(counts.items(), key=f, reverse=True):
+</code></pre>
+<ul>
+<li>Definimos uma função, <code>f</code>, que apenas retorna o valor do <code>item</code> no dicionário com <code>item[1]</code>. A função <code>sorted</code>, por sua vez, pode usar isso como a chave para classificar os itens do dicionário. E também passaremos <code>reverse=True</code> para classificar do maior para o menor, em vez de do menor para o maior.</li>
+</ul>
+</li>
+<li>
+<p>Na verdade, podemos definir nossa função na mesma linha, com esta sintaxe:</p>
+<pre><code>  for title, count in sorted(counts.items(), key=lambda item: item[1], reverse=True):
+</code></pre>
+<ul>
+<li>Passamos um lambda, ou função anônima, como a chave, que recebe o <code>item</code> e retorna <code>item[1]</code>.</li>
+</ul>
+</li>
+<li>
+<p>Por fim, podemos deixar todos os títulos em minúsculas com <code>title = row["title"].lower()</code>, para que nossas contagens possam ser um pouco mais precisas, mesmo que os nomes não tenham sido digitados exatamente da mesma maneira.</p>
+</li>
+</ul>
+<h2>SQL</h2>
+<ul>
+<li>Veremos um novo programa em nossa janela do terminal, <code>sqlite3</code>, um programa de linha de comando que nos permite usar outra linguagem, SQL (pronuncia-se como "sequel").</li>
+<li>
+<p>Executaremos alguns comandos para criar um novo banco de dados denominado <code>favorites.db</code> e importar nosso arquivo CSV para uma tabela denominada "favorites":</p>
+<pre><code>  ~/ $ sqlite3 favorites.db
+  SQLite version 3.22.0 2018-01-22 18:45:57
+  Enter ".help" for usage hints.
+  sqlite&gt; .mode csv
+  sqlite&gt; .import "CS50 2019 - Lecture 7 - Favorite TV Shows (Responses) - Form Responses 1.csv" favorites
+</code></pre>
+</li>
+<li>
+<p>Vemos um <code>favorites.db</code> no nosso IDE depois de executar isto e agora podemos usar o SQL para interagir com nossos dados:</p>
+<pre><code>  sqlite&gt; SELECT title FROM favorites;
+  title
+  Dynasty
+  The Office
+  Blindspot
+  24
+  Friends
+  psych
+  Veep
+  Survivor
+  ...
+</code></pre>
+</li>
+<li>
+<p>Podemos até mesmo classificar nossos resultados:</p>
+<pre><code>  sqlite&gt; SELECT title FROM favorites ORDER BY title;
+  title
+  /
+  24
+  9009
+  Adventure Time
+  Airplane Repo
+  Always Sunny
+  Ancient Aliens
+  ...
+</code></pre>
+</li>
+<li>
+<p>E obter uma contagem do número de vezes que cada título aparece:</p>
+<pre><code>  sqlite&gt; SELECT title, COUNT(title) FROM favorites GROUP BY title;
+  title | COUNT(title)
+  / | 1
+  24 | 1
+  9009 | 1
+  Adventure Time | 1
+  Airplane Repo | 1
+  Always Sunny | 1
+  Ancient Aliens | 1
+  ...
+</code></pre>
+</li>
+<li>
+<p>Podemos até mesmo definir a contagem de cada título para uma nova variável, <code>n</code> e encomendar os nossos resultados por isso, em ordem decrescente. Em seguida, podemos ver os 10 primeiros resultados com <code>LIMIT 10</code>:</p>
+<pre><code>  sqlite&gt; SELECT title, COUNT(title) AS n FROM favorites GROUP BY title ORDER BY n DESC LIMIT 10;
+  title | n
+  The Office | 30
+  Friends | 20
+  Game of Thrones | 20
+  Breaking Bad | 14
+  Black Mirror | 9
+  Rick and Morty | 9
+  Brooklyn Nine-Nine | 5
+  Game of thrones | 5
+  No | 5
+  Prison Break | 5
+</code></pre>
+</li>
+<li>
+<p>SQL é uma linguagem que nos permite trabalhar com um banco de dados relacional, um aplicativo que nos permite armazenar dados e trabalhar com eles mais rapidamente do que com um CSV.</p>
+</li>
+<li>
+<p>Com <code>.schema</code>, podemos ver como o formato da tabela para nossos dados é criado:</p>
+<pre><code>  sqlite&gt; .schema
+  CREATE TABLE favoritos(
+    "Timestamp" TEXT,
+    "título" TEXT,
+    "gêneros" TEXT
+  );
+</code></pre>
+</li>
+<li>
+<p>Acontece que, ao trabalhar com dados, precisamos apenas de quatro operações:</p>
+<ul>
+<li><code>CREATE</code></li>
+<li><code>READ</code></li>
+<li><code>UPDATE</code></li>
+<li><code>DELETE</code></li>
+</ul>
+</li>
+<li>Em SQL, os comandos para executar cada uma dessas operações são:<ul>
+<li><code>INSERT</code></li>
+<li><code>SELECT</code></li>
+<li><code>UPDATE</code></li>
+<li><code>DELETE</code></li>
+</ul>
+</li>
+<li>Primeiro, precisaremos inserir uma tabela com o comando <code>CREATE TABLE tabela (tipo de coluna, ...);</code>.</li>
+<li>O SQL também tem seus próprios tipos de dados para otimizar a quantidade de espaço usado para armazenar dados:<ul>
+<li><code>BLOB</code>, para "objeto binário grande", dados binários brutos que podem representar arquivos</li>
+<li><code>INTEGER</code><ul>
+<li><code>smallint</code></li>
+<li><code>integer</code></li>
+<li><code>bigint</code></li>
+</ul>
+</li>
+<li><code>NUMERIC</code><ul>
+<li><code>boolean</code></li>
+<li><code>date</code></li>
+<li><code>datetime</code></li>
+<li><code>numeric(escala, precisão)</code>, que resolve a imprecisão de ponto flutuante usando quantos bits forem necessários, para cada dígito antes e depois do ponto decimal</li>
+<li><code>time</code></li>
+<li><code>timestamp</code></li>
+</ul>
+</li>
+<li><code>REAL</code><ul>
+<li><code>real</code>, para valores de ponto flutuante</li>
+<li><code>precisão dupla</code>, com mais bits</li>
+</ul>
+</li>
+<li><code>TEXT</code><ul>
+<li><code>char(n)</code>, para um número exato de caracteres</li>
+<li><code>varchar(n)</code>, para um número variável de caracteres, até um certo limite</li>
+<li><code>text</code></li>
+</ul>
+</li>
+</ul>
+</li>
+<li>O SQLite é um aplicativo de banco de dados que suporta SQL, e há muitas empresas com aplicativos de servidor que suportam SQL, incluindo Oracle Database, MySQL, PostgreSQL, MariaDB e Microsoft Access.</li>
+<li>Depois de inserir valores, também podemos usar funções para executar cálculos:<ul>
+<li><code>AVG</code></li>
+<li><code>COUNT</code></li>
+<li><code>DISTINCT</code>, para obter valores distintos sem duplicatas</li>
+<li><code>MAX</code></li>
+<li><code>MIN</code></li>
+<li>…</li>
+</ul>
+</li>
+<li>Há também outras operações que podemos combinar conforme necessário:<ul>
+<li><code>WHERE</code>, correspondendo a alguma condição estrita</li>
+<li><code>LIKE</code>, correspondendo a substrings de texto</li>
+<li><code>LIMIT</code></li>
+<li><code>GROUP BY</code></li>
+<li><code>ORDER BY</code></li>
+<li><code>JOIN</code>, combinando dados de várias tabelas</li>
+</ul>
+</li>
+<li>Podemos atualizar dados com <code>UPDATE tabela SET coluna=valor WHERE condição;</code>, que pode incluir 0, 1 ou mais linhas, dependendo de nossa condição. Por exemplo, podemos dizer <code>UPDATE favoritos SET título = "The Office" WHERE título LIKE "%office"</code>, e isso definirá todas as linhas com o título contendo "office" como "The Office" para que possamos torná-las consistentes.</li>
+<li>E podemos remover linhas correspondentes com <code>DELETE FROM tabela WHERE condição;</code>, como em <code>DELETE FROM favoritos WHERE título = "Friends";</code>.</li>
+<li>Podemos até excluir uma tabela inteira com outro comando, <code>DROP</code>.</li>
+</ul>
+<h2>IMDb</h2>
+<ul>
+<li>O IMDb (Internet Movie Database) tem conjuntos de dados <a href="https://www.imdb.com/interfaces/">disponíveis para download</a> como arquivos TSV (valores separados por tabulação).</li>
+<li>Por exemplo, podemos baixar <code>title.basics.tsv.gz</code>, que conterá dados básicos sobre os títulos:<ul>
+<li><code>tconst</code>, um identificador único para cada título, como <code>tt4786824</code></li>
+<li><code>titleType</code>, o tipo de título, como <code>tvSeries</code></li>
+<li><code>primaryTitle</code>, o título principal usado, como <code>The Crown</code></li>
+<li><code>startYear</code>, em que ano o título foi lançado, como <code>2016</code></li>
+<li><code>genres</code>, uma lista separada por vírgulas de gêneros, como <code>Drama,História</code></li>
+</ul>
+</li>
+<li>Damos uma olhada no <code>title.basics.tsv</code> depois de descompactá-lo e vemos que as primeiras linhas são de fato os cabeçalhos que esperávamos e que cada linha tem valores separados por tabulações. Mas o arquivo tem mais de 6 milhões de linhas, então até mesmo procurar uma valor demora um pouco.</li>
+<li>Vamos baixar o arquivo em nosso IDE com <code>wget</code> e então usar <code>gunzip</code> para descompactá-lo. Mas o nosso IDE não tem espaço suficiente, então usamos o terminal do Mac.</li>
+<li>
+<p>Escreveremos <code>import.py</code> para ler o seguinte arquivo:</p>
+<pre><code>  import csv
+
+  # Abre o arquivo TSV para leitura
+  with open("title.basics.tsv", "r") as titles:
+
+      # Como o arquivo é um arquivo TSV, podemos usar o leitor de CSV e alterar
+      # o separador para uma tabulação.
+      reader = csv.DictReader(titles, delimiter="\t")
+
+      # Abre um novo arquivo CSV para escrita
+      with open("shows0.csv", "w") as shows:
+
+          # Cria o escritor
+          writer = csv.writer(shows)
+
+          # Escreve o cabeçalho das colunas que queremos
+          writer.writerow(["tconst", "primaryTitle", "startYear", "genres"])
+
+          # Itera no arquivo TSV
+          for row in reader:
+
+              # Se não for um programa de TV adulto
+              if row["titleType"] == "tvSeries" and row["isAdult"] == "0":
+
+                  # Escreve a linha
+                  writer.writerow([row["tconst"], row["primaryTitle"], row["startYear"], row["genres"]])
+</code></pre>
+</li>
+<li>
+<p>Agora, podemos abrir <code>shows0.csv</code> e ver um conjunto de dados menor. Mas, para algumas das linhas, <code>startYear</code> tem um valor de <code>\N</code>, que é um valor especial do IMDb, quando querem representar valores ausentes. Então, podermos filtrar esses valores e converter o <code>startYear</code> para um número inteiro para filtrar programas depois de 1970:</p>
+<pre><code>  ...
+  # Se o ano não for ausente (Precisamos escapar a barra invertida também)
+  if row["startYear"] != "\\N":
+
+      # Se após 1970
+      if int(row["startYear"]) &gt;= 1970:
+
+          # Escreve a linha
+          writer.writerow([row["tconst"], row["primaryTitle"], row["startYear"], row["genres"]])
+</code></pre>
+</li>
+<li>
+<p>Podemos escrever um programa para pesquisar um título em particular:</p>
+<pre><code>  import csv
+
+  # Prompts o usuário pelo título
+  title = input("Título: ")
+
+  # Abre o arquivo CSV
+  with open("shows2.csv", "r") as input:
+
+      # Cria o DictReader
+      reader = csv.DictReader(input)
+
+      # Itera pelo arquivo CSV
+      for row in reader:
+
+          # Pesquisa pelo título
+          if title.lower() == row["primaryTitle"].lower():
+              print(row["primaryTitle"], row["startYear"], row["genres"], sep=" | ")
+</code></pre>
+</li>
+<li>
+<p>Podemos executar este programa e ver nossos resultados, mas podemos ver como o SQL pode fazer um trabalho melhor.</p>
+</li>
+<li>
+<p>No Python, podemos nos conectar a um banco de dados SQL e ler nosso arquivo nele uma vez, para que possamos fazer muitas consultas sem escrever novos programas e sem ter que ler o arquivo inteiro todas as vezes.</p>
+</li>
+<li>
+<p>Vamos fazer isso mais facilmente com a biblioteca CS50:</p>
+<pre><code>  import cs50
+  import csv
+
+  # Cria um banco de dados abrindo e fechando um arquivo vazio primeiro
+  open(f"shows3.db", "w").close()
+  db = cs50.SQL("sqlite:///shows3.db")
+
+  # Cria uma tabela chamada `shows` e especifica as colunas que queremos,
+  # todas as quais serão textos, exceto `startYear`
+  db.execute("CREATE TABLE shows (tconst TEXT, primaryTitle TEXT, startYear NUMERIC, genres TEXT)")
+
+  # Abre o arquivo TSV
+  # https://datasets.imdbws.com/title.basics.tsv.gz
+  with open("title.basics.tsv", "r") as titles:
+
+      # Cria o DictReader
+      reader = csv.DictReader(titles, delimiter="\t")
+
+      # Itera pelo arquivo TSV
+      for row in reader:
+
+          # Se não for um programa de TV adulto
+          if row["titleType"] == "tvSeries" and row["isAdult"] == "0":
+
+              # Se o ano não estiver faltando
+              if row["startYear"] != "\\N":
+
+                  # Se desde 1970
+                  startYear = int(row["startYear"])
+                  if startYear &gt;= 1970:
+
+                      # Insere o programa substituindo os valores em cada espaço reservado ?
+                      db.execute("INSERT INTO shows (tconst, primaryTitle, startYear, genres) VALUES(?, ?, ?, ?)",
+                                 row["tconst"], row["primaryTitle"], startYear, genres)
+</code></pre>
+</li>
+<li>
+<p>Agora podemos executar <code>sqlite3 shows3.db</code> e executar comandos como antes, como <code>SELECT * FROM shows LIMIT 10;</code>.</p>
+</li>
+<li>Com <code>SELECT COUNT(*) FROM shows;</code> podemos ver que há mais de 150.000 programas em nossa tabela e com <code>SELECT COUNT(*) FROM shows WHERE startYear = 2019;</code>, vemos que houve mais de 6.000 este ano.</li>
+</ul>
+<h2>Várias tabelas</h2>
+<ul>
+<li>
+<p>Mas cada uma das linhas terá apenas uma coluna para gêneros e os valores são vários gêneros juntos. Portanto, podemos retornar ao nosso programa de importação e adicionar outra tabela:</p>
+<pre><code>  import cs50
+  import csv
+
+  # Criar banco de dados
+  open(f"shows4.db", "w").close()
+  db = cs50.SQL("sqlite:///shows4.db")
+
+  # Criar tabelas
+  db.execute("CREATE TABLE shows (id INT, title TEXT, year NUMERIC, PRIMARY KEY(id))")
+
+  # A tabela `genres` terá uma coluna chamada `show_id` que referencia
+  # a tabela `shows` acima
+  db.execute("CREATE TABLE genres (show_id INT, genre TEXT, FOREIGN KEY(show_id) REFERENCES shows(id))")
+
+  # Abrir arquivo TSV
+  # https://datasets.imdbws.com/title.basics.tsv.gz
+  with open("title.basics.tsv", "r") as titles:
+
+      # Criar DictReader
+      reader = csv.DictReader(titles, delimiter="\t")
+
+      # Iterar sobre o arquivo TSV
+      for row in reader:
+
+          # Se não for um programa de TV adulto
+          if row["titleType"] == "tvSeries" and row["isAdult"] == "0":
+
+              # Se o ano não estiver faltando
+              if row["startYear"] != "\\N":
+
+                  # Se for depois de 1970
+                  startYear = int(row["startYear"])
+                  if startYear &gt;= 1970:
+
+                      # Aparar prefixo da tconst
+                      id = int(row["tconst"][2:])
+
+                      # Inserir programa
+                      db.execute("INSERT INTO shows (id, title, year) VALUES(?, ?, ?)", id, row["primaryTitle"], startYear)
+
+                      # Inserir gêneros
+                      if row["genres"] != "\\N":
+                          for genre in row["genres"].split(","):
+                              db.execute("INSERT INTO genres (show_id, genre) VALUES(?, ?)", id, genre)
+</code></pre>
+<ul>
+<li>Portanto, agora, nossa tabela <code>shows</code> não tem mais uma coluna <code>genres</code>, mas, em vez disso, temos uma tabela <code>genres</code> com cada linha representando um programa e um gênero associado. Agora, um programa específico pode ter vários gêneros que podemos procurar, e podemos obter outros dados sobre o programa da tabela <code>shows</code> fornecido seu ID.</li>
+</ul>
+</li>
+<li>
+<p>De fato, podemos combinar as duas tabelas com <code>SELECT * FROM shows WHERE id IN (SELECT show_id FROM genres WHERE genre = "Comedy") AND year = 2019;</code>. Estamos filtrando nossa tabela <code>shows</code> pelos IDs nos quais o ID da tabela <code>genres</code> tem um valor "Comedy" para a coluna <code>genre</code>, e tem o valor 2019 para a coluna <code>year</code>.</p>
+</li>
+<li>Nossas tabelas são mais ou menos assim:
+  ![tabela nomeada shows com entradas id, title e year, e tabela nomeada genres com show_id e genre, e uma flecha de show_id para id]((https://cs50.harvard.edu/x/2020/notes/7/shows_table_genres_table.png)<ul>
+<li>Uma vez que o ID na tabela <code>genre</code> vem da tabela <code>shows</code>, nós o chamamos de <code>show_id</code>. E a seta indica que um único show ID pode ter muitas linhas correspondentes na tabela <code>genres</code>.</li>
+</ul>
+</li>
+<li>Vemos que alguns conjuntos de dados da IMDb, como <code>title.principals.tsv</code>, têm apenas IDs para determinadas colunas que precisaremos procurar em outras tabelas.</li>
+<li>Ao ler as descrições para cada tabela, podemos ver que todos os dados podem ser usados para construir estas tabelas:
+  <img alt="tabela nomeada people, shows, genres, ratings, stars, writers com setas indicando IDs entre as tabelas" src="https://cs50.harvard.edu/x/2020/notes/7/imdb_tables.png" /><ul>
+<li>Repare que, por exemplo, o nome de uma pessoa também poderia ser copiado para as tabelas <code>stars</code> ou <code>writers</code>, mas apenas o <code>person_id</code> é usado para vincular aos dados na tabela <code>people</code>. Desta forma, precisamos atualizar o nome em apenas um lugar se precisarmos fazer uma alteração.</li>
+</ul>
+</li>
+<li>Abriremos um banco de dados, <code>shows.db</code>, com essas tabelas para ver mais alguns exemplos.</li>
+<li>Faremos o download de um programa chamado <a href="https://sqlitebrowser.org/dl/">DB Browser for SQLite</a>, que terá uma interface gráfica de usuário para navegar em nossas tabelas e dados. Podemos usar a guia "Execute SQL" para executar o SQL diretamente no programa também.</li>
+<li>Podemos executar <code>SELECT * FROM shows JOIN genres ON show.id = genres.show_id;</code> para unir duas tabelas por IDs correspondentes em colunas que especificamos. Então, obteremos uma tabela mais ampla, com colunas de cada uma dessas duas tabelas.</li>
+<li>Podemos pegar o ID de uma pessoa e encontrá-la em shows com <code>SELECT * FROM stars WHERE person_id = 1122;</code>, mas podemos fazer uma consulta dentro de nossa consulta com <code>SELECT show_id FROM stars WHERE person_id = (SELECT id FROM people WHERE name = "Ellen DeGeneres");</code>.</li>
+<li>Isso nos devolve o <code>show_id</code>, então para obter os dados do programa podemos executar: <code>SELECT * FROM shows WHERE id IN (...);</code> com <code>...</code> sendo a consulta acima.</li>
+<li>
+<p>Podemos obter os mesmos resultados com:</p>
+<pre><code>  SELECT title FROM
+  people JOIN stars ON people.id = stars.person_id JOIN
+  shows ON stars.show_id = shows.id
+  WHERE name = "Ellen DeGeneres"
+</code></pre>
+<ul>
+<li>Unimos a tabela <code>people</code> com a tabela <code>stars</code>, e então com a tabela <code>shows</code> especificando colunas que devem corresponder entre as tabelas e, em seguida, selecionando apenas o <code>title</code> com um filtro no nome.</li>
+<li>Mas agora também podemos selecionar outros campos em nossas tabelas combinadas.</li>
+</ul>
+</li>
+<li>
+<p>Acontece que podemos especificar colunas de nossas tabelas para serem tipos especiais, tais como:</p>
+<ul>
+<li><code>PRIMARY KEY</code>, usado como o identificador primário para uma linha</li>
+<li><code>FOREIGN KEY</code>, que aponta para uma linha em outra tabela</li>
+<li><code>UNIQUE</code>, o que significa que ele precisa ser único nesta tabela</li>
+<li><code>INDEX</code>, que pede ao nosso banco de dados para criar um índice para consultar mais rapidamente com base nesta coluna. Um índice é uma estrutura de dados como uma árvore, que nos ajuda a procurar valores.</li>
+</ul>
+</li>
+<li>Podemos criar um índice com <code>CREATE INDEX person_index ON stars (person_id);</code>. Então a coluna <code>person_id</code> terá um índice chamado <code>person_index</code>. Com os índices corretos, nossa consulta de junção é centenas de vezes mais rápida.</li>
+</ul>
+<h2>Problemas</h2>
+<ul>
+<li>Um problema com bancos de dados são as <strong>condições de corrida</strong>, onde o tempo de duas ações ou eventos causa comportamento inesperado.</li>
+<li>Por exemplo, considere dois colegas de quarto e uma geladeira compartilhada em seu dormitório. O primeiro colega de quarto chega em casa e vê que não há leite na geladeira. Então, o primeiro colega de quarto vai à loja para comprar leite e, enquanto está na loja, o segundo colega de quarto chega em casa, vê que não há leite e vai a outra loja para pegar leite. Mais tarde, haverá dois jarros de leite na geladeira. Ao deixar um bilhete, podemos resolver esse problema. Podemos até trancar a geladeira para que nosso colega de quarto não possa verificar se há leite, até que voltemos.</li>
+<li>
+<p>Isso pode acontecer em nosso banco de dados se tivermos algo assim:</p>
+<pre><code>  rows = db.execute("SELECT likes FROM posts WHERE id=?", id);
+  likes = rows[0]["likes"]
+  db.execute("UPDATE posts SET likes = ?", likes + 1);
+</code></pre>
+<ul>
+<li>Primeiro, estamos obtendo o número de curtidas em uma postagem com um determinado ID. Então, definimos o número de curtidas para aquele número mais um.</li>
+<li>Mas agora, se tivermos dois servidores web diferentes tentando adicionar uma curtida, ambos podem defini-la para o mesmo valor em vez de realmente adicionar um a cada vez. Por exemplo, se houver 2 curtidas, ambos os servidores verificarão o número de curtidas, verão que há 2 e definirão o valor como 3. Uma das curtidas será então perdida.</li>
+</ul>
+</li>
+<li>
+<p>Para resolver isso, podemos usar transações, onde um conjunto de ações é garantido que aconteça junto.</p>
+</li>
+<li>Outro problema no SQL é chamado de <strong>ataque de injeção de SQL</strong>, onde um adversário pode executar seus próprios comandos em nosso banco de dados.</li>
+<li>Por exemplo, alguém pode tentar digitar <code>malan@harvard.edu'--</code> como seu e-mail. Se tivermos uma consulta SQL que é uma string formatada (sem escape ou substituição de caracteres perigosos da entrada), como <code>f"SELECT * FROM users WHERE username = '{username}' AND password = '{password}'"</code>, a consulta terminará sendo <code>f"SELECT * FROM users WHERE username = 'malan@harvard.edu'--' AND password = '{password}'"</code>, que na verdade selecionará a linha onde <code>username = 'malan@harvard.edu'</code> e transformará o resto da linha em um comentário. Para evitar isso, devemos usar os espaços reservados <code>?</code> para que nossa biblioteca SQL escape automaticamente as entradas do usuário.</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

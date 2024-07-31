@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Olá, novamente</h1>
+<h2>Problema para resolver</h2>
+<p>Em um arquivo chamado <code>hello.py</code> em uma pasta chamada <code>sentimental-hello</code>, implemente um programa que peça o nome do usuário e, em seguida, imprima <code>olá, fulano</code>, no qual <code>fulano</code> é o nome fornecido pelo usuário, exatamente como você fez no <a href="../../1/">conjunto de problemas 1</a>. Exceto que o programa deve ser escrito em Python desta vez!</p>
+<h3>Dicas</h3>
+<ul>
+<li>Lembre-se de que você pode obter uma <code>str</code> do usuário com <code>get_string</code>, que é declarada na biblioteca <code>cs50</code>.</li>
+<li>Lembre-se de que você pode imprimir uma <code>str</code> com <code>print</code>.</li>
+<li>Lembre-se de que você pode criar strings formatadas em Python adicionando <code>f</code> a uma string. Por exemplo, <code>f"{name}"</code> substituirá (interpolará) o valor da variável <code>name</code> onde você escreveu <code>{name}</code>.</li>
+</ul>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-gqi2voQFzbKlna6WkQR0G2W93" src="https://asciinema.org/a/gqi2voQFzbKlna6WkQR0G2W93.js"></script>
+
+<h2>Como testar</h2>
+<p>Embora o <code>check50</code> esteja disponível para este problema, é recomendável testar primeiro seu próprio código para cada um dos seguintes.</p>
+<ul>
+<li>Execute o programa como <code>python hello.py</code> e aguarde um prompt para a entrada. Digite <code>David</code> e pressione enter. Seu programa deve gerar <code>olá, David</code>.</li>
+<li>Execute o programa como <code>python hello.py</code> e aguarde um prompt para a entrada. Digite <code>Inno</code> e pressione enter. Seu programa deve gerar <code>olá, Inno</code>.</li>
+<li>Execute o programa como <code>python hello.py</code> e aguarde um prompt para a entrada. Digite <code>Kamryn</code> e pressione enter. Seu programa deve gerar <code>olá, Kamryn</code>.</li>
+</ul>
+<h3>Correção</h3>
+<pre><code>  check50 cs50/problems/2024/x/sentimental/hello
+</code></pre>
+<h3>Estilo</h3>
+<pre><code>  style50 hello.py
+</code></pre>
+<h2>Como enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/sentimental/hello
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

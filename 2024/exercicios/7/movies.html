@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Filmes</h1>
+<p><img alt="Logotipo do IMDb" src="https://cs50.harvard.edu/x/2024/psets/7/movies/imdb.png" /></p>
+<h2>Problema aResolver</h2>
+<p>Foi fornecido um arquivo chamado <code>movies.db</code>, um banco de dados SQLite que armazena dados do <a href="https://www.imdb.com/">IMDb</a> sobre filmes, as pessoas que os dirigiram e estrelaram e suas classificações. Escreva consultas SQL para responder a perguntas sobre esse banco de dados de filmes.</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-uPWDqSe0NjjqXLF3qxzpsMnfv" src="https://asciinema.org/a/uPWDqSe0NjjqXLF3qxzpsMnfv.js"></script>
+
+<h2>Introdução</h2>
+<p>Para este problema, você usará um banco de dados fornecido pela equipe do CS50.</p>
+<p>Faça login em <a href="https://cs50.dev/">cs50.dev</a>, clique em sua janela de terminal e execute apenas <code>cd</code>. Você deve observar que o prompt de sua janela de terminal se assemelha ao abaixo:</p>
+<pre><code>  $
+</code></pre>
+<p>Em seguida, execute</p>
+<pre><code>  wget https://cdn.cs50.net/2023/fall/psets/7/movies.zip
+</code></pre>
+<p>para baixar um ZIP chamado <code>movies.zip</code> para o seu espaço de códigos.</p>
+<p>Em seguida, execute</p>
+<pre><code>  unzip movies.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>movies</code>. Você não precisa mais do arquivo ZIP, então você pode executar</p>
+<pre><code>  rm movies.zip
+</code></pre>
+<p>e responda com "s" seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>  cd movies
+</code></pre>
+<p>seguido de Enter para se mover (ou seja, abrir) esse diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>  movies/ $
+</code></pre>
+<p>Execute <code>ls</code> sozinho e você verá 13 arquivos .sql, bem como <code>movies.db</code>.</p>
+<p>Se você tiver algum problema, siga os mesmos passos novamente e veja se consegue determinar onde errou!</p>
+<h2>Especificação</h2>
+<p>Para cada um dos problemas a seguir, você deve escrever uma única consulta SQL que gere os resultados especificados por cada problema. Sua resposta deve assumir a forma de uma única consulta SQL, embora você possa aninhar outras consultas dentro de sua consulta. Você <strong>não deve</strong> presumir nada sobre os <code>id</code>s de quaisquer filmes ou pessoas em particular: suas consultas devem ser precisas mesmo que o <code>id</code> de qualquer filme ou pessoa em particular seja diferente. Finalmente, cada consulta deve retornar apenas os dados necessários para responder à pergunta: se o problema apenas pedir que você emita os nomes dos filmes, por exemplo, então sua consulta não deve também emitir o ano de lançamento de cada filme.</p>
+<p>Você é bem-vindo para checar os resultados de suas consultas em <a href="https://www.imdb.com/">IMDb</a> em si, mas perceba que as classificações no site podem diferir daquelas em <code>movies.db</code>, pois mais votos podem ter sido emitidos desde que baixamos os dados!</p>
+<ol>
+<li>Em <code>1.sql</code>, escreva uma consulta SQL para listar os títulos de todos os filmes lançados em 2008.
+    - Sua consulta deve retornar uma tabela com uma única coluna para o título de cada filme.</li>
+<li>Em <code>2.sql</code>, escreva uma consulta SQL para determinar o ano de nascimento de Emma Stone.
+    - Sua consulta deve retornar uma tabela com uma única coluna e uma única linha (sem contar o cabeçalho) contendo o ano de nascimento de Emma Stone.
+    - Você pode presumir que haja apenas uma pessoa no banco de dados com o nome Emma Stone.</li>
+<li>Em <code>3.sql</code>, escreva uma consulta SQL para listar os títulos de todos os filmes com uma data de lançamento em ou após 2018, em ordem alfabética.
+    - Sua consulta deve retornar uma tabela com uma única coluna para o título de cada filme.
+    - Filmes lançados em 2018 devem ser incluídos, assim como filmes com datas de lançamento no futuro.</li>
+<li>Em <code>4.sql</code>, escreva uma consulta SQL para determinar o número de filmes com uma classificação do IMDb de 10,0.
+    - Sua consulta deve retornar uma tabela com uma única coluna e uma única linha (sem contar o cabeçalho) contendo o número de filmes com uma classificação de 10,0.</li>
+<li>Em <code>5.sql</code>, escreva uma consulta SQL para listar os títulos e anos de lançamento de todos os filmes de Harry Potter, em ordem cronológica.
+    - Sua consulta deve retornar uma tabela com duas colunas, uma para o título de cada filme e outra para o ano de lançamento de cada filme.
+    - Você pode presumir que o título de todos os filmes de Harry Potter começará com as palavras "Harry Potter" e que se um título de filme começar com as palavras "Harry Potter", é um filme de Harry Potter.</li>
+<li>Em <code>6.sql</code>, escreva uma consulta SQL para determinar a classificação média de todos os filmes lançados em 2012.
+    - Sua consulta deve retornar uma tabela com uma única coluna e uma única linha (sem contar o cabeçalho) contendo a classificação média.</li>
+<li>Em <code>7.sql</code>, escreva uma consulta SQL para listar todos os filmes lançados em 2010 e suas classificações, em ordem decrescente por classificação. Para filmes com a mesma classificação, ordene-os alfabeticamente por título.
+    - Sua consulta deve retornar uma tabela com duas colunas, uma para o título de cada filme e outra para a classificação de cada filme.
+    - Filmes que não possuem classificações não devem ser incluídos no resultado.</li>
+<li>Em <code>8.sql</code>, escreva uma consulta SQL para listar os nomes de todas as pessoas que estrelaram Toy Story.
+    - Sua consulta deve retornar uma tabela com uma única coluna para o nome de cada pessoa.
+    - Você pode presumir que haja apenas um filme no banco de dados com o título Toy Story.</li>
+<li>Em <code>9.sql</code>, escreva uma consulta SQL para listar os nomes de todas as pessoas que estrelaram um filme lançado em 2004, ordenados por ano de nascimento.
+    - Sua consulta deve retornar uma tabela com uma única coluna para o nome de cada pessoa.
+    - Pessoas com o mesmo ano de nascimento podem ser listadas em qualquer ordem.
+    - Não precisa se preocupar com pessoas que não têm um ano de nascimento listado, contanto que aqueles que têm um ano de nascimento sejam listados em ordem.
+    - Se uma pessoa apareceu em mais de um filme em 2004, ela só deve aparecer em seus resultados uma vez.</li>
+<li>Em <code>10.sql</code>, escreva uma consulta SQL para listar os nomes de todas as pessoas que dirigiram um filme que recebeu uma classificação de pelo menos 9,0.
+    - Sua consulta deve retornar uma tabela com uma única coluna para o nome de cada pessoa.
+    - Se uma pessoa dirigiu mais de um filme que recebeu uma classificação de pelo menos 9,0, ela só deve aparecer em seus resultados uma vez.</li>
+<li>Em <code>11.sql</code>, escreva uma consulta SQL para listar os títulos dos cinco filmes mais bem avaliados (em ordem) que Chadwick Boseman estrelou, começando com o mais bem avaliado.
+    - Sua consulta deve retornar uma tabela com uma única coluna para o título de cada filme.
+    - Você pode presumir que haja apenas uma pessoa no banco de dados com o nome Chadwick Boseman.</li>
+<li>Em <code>12.sql</code>, escreva uma consulta SQL para listar os títulos de todos os filmes em que Bradley Cooper e Jennifer Lawrence estrelaram.
+    - Sua consulta deve retornar uma tabela com uma única coluna para o título de cada filme.
+    - Você pode presumir que haja apenas uma pessoa no banco de dados com o nome Bradley Cooper.
+    - Você pode presumir que haja apenas uma pessoa no banco de dados com o nome Jennifer Lawrence.</li>
+<li>Em <code>13.sql</code>, escreva uma consulta SQL para listar os nomes de todas as pessoas que estrelaram um filme em que Kevin Bacon também estrelou.
+    - Sua consulta deve retornar uma tabela com uma única coluna para o nome de cada pessoa.
+    - Pode haver várias pessoas chamadas Kevin Bacon no banco de dados. Certifique-se de selecionar apenas o Kevin Bacon nascido em 1958.
+    - O próprio Kevin Bacon não deve ser incluído na lista resultante.</li>
+</ol>
+<h2>Dicas</h2>
+<h3>Entenda o esquema de <code>movies.db</code></h3>
+<p>Sempre que você se envolve com um novo banco de dados, é melhor entender primeiro seu <em>esquema</em>. Em uma janela de terminal, execute <code>sqlite3 movies.db</code> para que você possa começar a executar consultas no banco de dados.</p>
+<p>Primeiro, quando <code>sqlite3</code> solicitar que você forneça uma consulta, digite <code>.schema</code> e pressione enter. Isso irá gerar as instruções <code>CREATE TABLE</code> que foram usadas para gerar cada uma das tabelas no banco de dados. Ao examinar essas instruções, você pode identificar as colunas presentes em cada tabela.</p>
+<p>Observe que a tabela <code>movies</code> tem uma coluna <code>id</code> que identifica exclusivamente cada filme, bem como colunas para o <code>title</code> do filme e o <code>year</code> em que o filme foi lançado. A tabela <code>people</code> também tem uma coluna <code>id</code> e também tem colunas para o <code>name</code> e o ano de <code>birth</code> de cada pessoa.</p>
+<p>As classificações de filmes são armazenadas na tabela <code>ratings</code>. A primeira coluna da tabela é <code>movie_id</code>: uma chave estrangeira que referencia o <code>id</code> da tabela <code>movies</code>. O restante da linha contém dados sobre a <code>rating</code> de cada filme e o número de <code>votes</code> que o filme recebeu no IMDb.</p>
+<p>Finalmente, as tabelas <code>stars</code> e <code>directors</code> fazem a correspondência entre pessoas e filmes nos quais elas atuaram ou dirigiram. (Somente <a href="https://www.imdb.com/interfaces/">principais</a> estrelas e diretores estão incluídos.) Cada tabela possui apenas duas colunas: <code>movie_id</code> e <code>person_id</code>, que fazem referência a um filme e pessoa específicos, respectivamente.</p>
+<p>O desafio à sua frente é escrever consultas SQL para responder a uma variedade de diferentes perguntas selecionando dados de uma ou mais dessas tabelas.</p>
+<h3>Estilos consistentes de consultas</h3>
+<p>Veja <a href="https://www.sqlstyle.guide/">sqlstyle.guide</a> para dicas sobre bom estilo em SQL, especialmente à medida que suas consultas ficam mais complexas!</p>
+<h3>Liste os títulos de todos os filmes lançados em 2008</h3>
+<p>Lembre-se de que você pode selecionar uma (ou mais) colunas de um banco de dados usando <code>SELECT</code>, de acordo com o exemplo a seguir,</p>
+<pre><code>  SELECT coluna0, coluna1 FROM tabela;
+</code></pre>
+<p>onde <code>coluna0</code> é o título de uma coluna e <code>coluna1</code> é o título de outra.</p>
+<p>E lembre-se de que você pode filtrar as linhas retornadas em uma consulta com a palavra-chave <code>WHERE</code>, seguida por uma condição. Você pode usar <code>=</code>, <code>&gt;</code>, <code>&lt;</code> e <a href="https://www.w3schools.com/sql/sql_operators.asp">outros operadores</a> também.</p>
+<pre><code>  SELECT coluna FROM tabela
+  WHERE condição;
+</code></pre>
+<p>Veja <a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">esta referência de palavras-chave SQL</a> para alguma sintaxe SQL que pode ser útil!</p>
+<h3>Determine o ano de nascimento de Emma Stone</h3>
+<p>Lembre-se de que uma cláusula <code>WHERE</code> pode avaliar condições não apenas com números, mas com strings.</p>
+<h3>Liste os títulos de todos os filmes com data de lançamento em ou após 2018, em ordem alfabética</h3>
+<p>Tente dividir esta consulta em duas etapas. Primeiro, encontre os filmes com uma data de lançamento em ou após 2018. Em seguida, coloque os títulos desses filmes em ordem alfabética.</p>
+<p>Para encontrar os filmes com uma data de lançamento em ou após 2018, lembre-se de que uma condição em SQL oferece suporte ao uso de muitos <a href="https://www.w3schools.com/sql/sql_operators.asp">operadores de comparação</a> comuns, incluindo <code>&gt;=</code> para "maior ou igual a". Verifique se sua consulta retorna o número correto de filmes, de acordo com <a href="#como-testar">Como testar</a>.</p>
+<p>Finalmente, classifique os resultados da consulta em ordem alfabética por título. Lembre-se de que <code>ORDER BY</code> pode classificar dados por uma coluna em seus resultados, de acordo com o exemplo a seguir.</p>
+<pre><code>  ...
+  ORDER BY coluna;
+</code></pre>
+<h3>Determine o número de filmes com uma classificação do IMDb de 10.0</h3>
+<p>Observe que esta pergunta não lhe pede filmes <em>individuais</em> com uma classificação de 10.0, mas sim o <em>número</em> de filmes com essa classificação. Em outras palavras, você deve coletar (“agregar”) os resultados de sua consulta em um único número (o número de linhas). Lembre-se de que o SQL oferece suporte a uma “função de agregação” chamada <code>COUNT</code>, que você pode usar em uma coluna de acordo com o exemplo abaixo.</p>
+<pre><code>  SELECT COUNT(coluna)
+  FROM tabela;
+</code></pre>
+<h3>Liste os títulos e os anos de lançamento de todos os filmes de Harry Potter, em ordem cronológica</h3>
+<p>Para esta consulta, você provavelmente vai querer usar a palavra-chave <code>LIKE</code> do SQL. Lembre-se de que <code>LIKE</code> pode fazer uso dos chamados “caracteres curinga”, como <code>%</code>, que corresponderá a qualquer caractere (ou sequência deles).</p>
+<pre><code>  SELECT coluna0, coluna1
+  FROM tabela
+  WHERE coluna1 LIKE padrão;
+</code></pre>
+<h3>Determine a classificação média de todos os filmes lançados em 2012</h3>
+<p>Aqui está outro exemplo de consulta na qual você precisará agregar dados. Considere a função de agregação <code>AVG</code> do SQL para calcular uma média.</p>
+<p>Considere também que esta consulta faz uso de dados armazenados em duas tabelas separadas: <code>ratings</code> e <code>movies</code>. Lembre-se de que, desde que uma tabela tenha uma chave estrangeira que corresponda a uma coluna em outra tabela, você pode combinar duas tabelas usando a palavra-chave <code>JOIN</code> do SQL. Para usar a palavra-chave <code>JOIN</code>, você deve especificar a tabela à qual gostaria de fazer a junção e a coluna pela qual fazer isso.</p>
+<pre><code>  SELECT coluna0
+  FROM tabela0
+  JOIN tabela1 ON tabela0.coluna1 = tabela1.coluna2
+</code></pre>
+<h3>Liste todos os filmes lançados em 2010 e suas classificações, em ordem decrescente por classificação</h3>
+<p>Lembre-se de que <code>ORDER BY</code> não precisa sempre classificar em ordem crescente. Você pode especificar que seus resultados sejam classificados em ordem <em>decrescente</em> anexando <code>DESC</code>.</p>
+<pre><code>  ...
+  ORDER BY coluna DESC;
+</code></pre>
+<h3>Liste os nomes de todas as pessoas que estrelaram em Toy Story</h3>
+<p>Quando você vê uma consulta mais complexa como essa, é melhor dividi-la em partes menores. No final das contas, sua consulta deve chegar a uma lista de nomes, conforme abaixo.</p>
+<pre><code>  -- Selecione nomes
+  SELECT name
+  FROM people
+  WHERE ...
+</code></pre>
+<p>Mas qual é a melhor maneira de chegar aos nomes daqueles que estrelaram em Toy Story? Considere que a tabela <code>people</code> sozinha não tem essa informação (mas a tabela <code>stars</code> pode ter!). Na verdade, a tabela <code>stars</code> combina duas colunas, <code>person_id</code> e <code>movie_id</code>: qualquer pessoa com um <code>person_id</code> associado ao <code>movie_id</code> de Toy Story estrelaram em Toy Story.</p>
+<pre><code>  -- Selecione nomes
+  SELECT name
+  FROM people
+  WHERE ...
+
+  -- Selecione IDs de pessoa
+  SELECT person_id
+  FROM stars
+  WHERE movie_id = ...
+</code></pre>
+<p>Um próximo passo natural, então, é encontrar o ID do filme Toy Story.</p>
+<pre><code>  -- Selecione nomes
+  SELECT name
+  FROM people
+  WHERE ...
+
+  -- Selecione IDs de pessoa
+  SELECT person_id
+  FROM stars
+  WHERE movie_id = ...
+
+  -- Encontre o ID do Toy Story
+  SELECT id
+  FROM movies
+  WHERE title = 'Toy Story';
+</code></pre>
+<p>Claro, você atualmente escreveu três consultas <em>separadas</em>. Mas observe que algumas consultas (as duas primeiras) seriam completas incluindo os resultados da consulta diretamente abaixo delas. O processo de fazer uma consulta que depende dos resultados de uma "subconsulta" é chamado de consultas de "aninhamento". É uma dica e tanto, mas aqui está uma maneira de aninhar as consultas acima!</p>
+<pre><code>  -- Selecione nomes
+  SELECT name
+  FROM people
+  WHERE id IN
+  (
+      -- Selecione IDs de pessoa
+      SELECT person_id
+      FROM stars
+      WHERE movie_id = (
+
+          -- Selecione o ID do Toy Story
+          SELECT id
+          FROM movies
+          WHERE title = 'Toy Story'
+      )
+  );
+</code></pre>
+<h3>Liste os nomes de todas as pessoas que estrelaram em um filme lançado em 2004, ordenado por ano de nascimento</h3>
+<p>Observe que esta consulta, como a anterior, requer que você use dados de várias tabelas. Lembre-se de que você pode "aninhamento" de consultas em SQL, o que permite dividir uma consulta maior em outras menores. Talvez você possa escrever consultas para…</p>
+<ol>
+<li>Encontre os IDs dos filmes lançados em 2004</li>
+<li>Encontre os IDs das pessoas que estrelaram esses filmes</li>
+<li>Encontre os nomes das pessoas com esses IDs</li>
+</ol>
+<p>Em seguida, tente aninhar essas consultas para chegar a uma única consulta que retorne todas as pessoas que estrelaram um filme lançado em 2004. Considere como você pode ordenar os resultados de sua consulta.</p>
+<h3>Liste os nomes de todas as pessoas que dirigiram um filme que recebeu uma classificação de pelo menos 9,0</h3>
+<p>Observe que esta consulta, como a anterior, requer que você use dados de várias tabelas. Lembre-se de que você pode "aninhamento" de consultas em SQL, o que permite dividir uma consulta maior em outras menores. Talvez você possa escrever consultas para…</p>
+<ol>
+<li>Encontre os IDs dos filmes com pelo menos 9,0 de classificação</li>
+<li>Encontre os IDs das pessoas que dirigiram esses filmes</li>
+<li>Encontre os nomes das pessoas com esses IDs</li>
+</ol>
+<p>Em seguida, tente aninhar essas consultas para chegar a uma única consulta que retorne os nomes de todas as pessoas que dirigiram um filme que recebeu uma classificação de pelo menos 9,0.</p>
+<h3>Liste os títulos dos cinco filmes com maior classificação (em ordem) que Chadwick Boseman estrelou, começando com o de maior classificação</h3>
+<p>Observe que esta consulta, como a anterior, requer que você use dados de várias tabelas. Lembre-se de que você pode "aninhamento" de consultas em SQL, o que permite dividir uma consulta maior em outras menores. Talvez você possa escrever consultas para…</p>
+<ol>
+<li>Encontre o ID de Chadwick Boseman</li>
+<li>Encontre os IDs dos filmes associados ao ID de Chadwick Boseman</li>
+<li>Encontre os títulos dos filmes com esses IDs de filme</li>
+</ol>
+<p>Em seguida, tente aninhar essas consultas para chegar a uma única consulta que retorne os títulos dos filmes de Chadwick Boseman.</p>
+<p>A partir daí, você precisará determinar as classificações desses títulos e classificá-los em ordem decrescente. Considere como você pode combinar uma tabela relevante (provavelmente <code>classificações</code>!) e ordenar os resultados por uma coluna relevante.</p>
+<p>Finalmente, leia sobre a palavra-chave <a href="https://www.sqlitetutorial.net/sqlite-limit/"><code>LIMIT</code></a> do SQL, que retornará as \(n\) linhas principais em uma consulta.</p>
+<h3>Listar os títulos de todos os filmes em que tanto Bradley Cooper quanto Jennifer Lawrence estrelaram</h3>
+<p>Note que esta consulta, assim como a anterior, requer que você use dados de diversas tabelas. Lembre-se que você pode "aninha" consultas em SQL, o que permite que você divida uma consulta maior em consultas menores. Talvez você possa escrever consultas para...</p>
+<ol>
+<li>Encontrar o ID de Bradley Cooper</li>
+<li>Encontrar o ID de Jennifer Lawrence</li>
+<li>Encontrar os IDs dos filmes associados ao ID de Bradley Cooper</li>
+<li>Encontrar os IDs dos filmes associados ao ID de Jennifer Lawrence</li>
+<li>Encontrar os títulos dos filmes dos IDs dos filmes associados <em>tanto</em> com Bradley Cooper quanto com Jennifer Lawrence</li>
+</ol>
+<p>Então, tente aninhar essas consultas para chegar em uma única consulta que retorne os filmes em que tanto Bradley Cooper quanto Jennifer Lawrence estrelaram.</p>
+<p>Lembre-se que você pode construir condições compostas em SQL usando <code>AND</code> ou <code>OR</code>.</p>
+<h3>Listar os nomes de todas as pessoas que estrelaram um filme em que Kevin Bacon também estrelou</h3>
+<p>Note que esta consulta, assim como a anterior, requer que você use dados de diversas tabelas. Lembre-se que você pode "aninha" consultas em SQL, o que permite que você divida uma consulta maior em consultas menores. Talvez você possa escrever consultas para...</p>
+<ol>
+<li>Encontrar o ID de Kevin Bacon (aquele que nasceu em 1958!)</li>
+<li>Encontrar os IDs dos filmes associados ao ID de Kevin Bacon</li>
+<li>Encontrar os IDs das pessoas associadas a esses IDs de filmes</li>
+<li>Encontrar os nomes das pessoas com esses IDs de pessoas</li>
+</ol>
+<p>Então, tente aninhar essas consultas para chegar em uma única consulta que retorne os nomes de todas as pessoas que estrelaram um filme em que Kevin Bacon também estrelou. <strong>Tenha em mente que você vai querer excluir o próprio Kevin Bacon dos resultados!</strong></p>
+<h2>Passo a passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/v5_A3giDlQs?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+<h2>Uso</h2>
+<p>Para testar suas consultas no VS Code, você pode consultar o banco de dados executando</p>
+<pre><code>  $ cat filename.sql | sqlite3 movies.db
+</code></pre>
+<p>onde <code>filename.sql</code> é o arquivo contendo sua consulta SQL.</p>
+<p>Você também pode executar</p>
+<pre><code>  $ cat filename.sql | sqlite3 movies.db &gt; output.txt
+</code></pre>
+<p>para redirecionar a saída da consulta para um arquivo de texto chamado <code>output.txt</code>. (Isso pode ser útil para verificar quantas linhas são retornadas pela sua consulta!)</p>
+<h2>Como testar</h2>
+<p>Apesar de <code>check50</code> estar disponível para este problema, é recomendado que você teste seu código sozinho para cada um dos seguintes. Você pode executar <code>sqlite3 movies.db</code> para executar consultas adicionais no banco de dados para garantir que seu resultado esteja correto.</p>
+<p>Se você estiver usando o banco de dados <code>movies.db</code> fornecido neste conjunto de problemas, você verá que</p>
+<ul>
+<li>Executar <code>1.sql</code> resulta em uma tabela com 1 coluna e 10.276 linhas.</li>
+<li>Executar <code>2.sql</code> resulta em uma tabela com 1 coluna e 1 linha.</li>
+<li>Executar <code>3.sql</code> resulta em uma tabela com 1 coluna e 110.014 linhas.</li>
+<li>Executar <code>4.sql</code> resulta em uma tabela com 1 coluna e 1 linha.</li>
+<li>Executar <code>5.sql</code> resulta em uma tabela com 2 colunas e 11 linhas.</li>
+<li>Executar <code>6.sql</code> resulta em uma tabela com 1 coluna e 1 linha.</li>
+<li>Executar <code>7.sql</code> resulta em uma tabela com 2 colunas e 7.192 linhas.</li>
+<li>Executar <code>8.sql</code> resulta em uma tabela com 1 coluna e 4 linhas.</li>
+<li>Executar <code>9.sql</code> resulta em uma tabela com 1 coluna e 19.325 linhas.</li>
+<li>Executar <code>10.sql</code> resulta em uma tabela com 1 coluna e 3.854 linhas.</li>
+<li>Executar <code>11.sql</code> resulta em uma tabela com 1 coluna e 5 linhas.</li>
+<li>Executar <code>12.sql</code> resulta em uma tabela com 1 coluna e 4 linhas.</li>
+<li>Executar <code>13.sql</code> resulta em uma tabela com 1 coluna e 182 linhas.</li>
+</ul>
+<p>Observe que as contagens de linhas não incluem linhas de cabeçalho que mostram apenas nomes de colunas.</p>
+<p>Se sua consulta retornar um número de linhas ligeiramente diferente da saída esperada, certifique-se de que você está tratando as duplicatas corretamente! Para consultas que pedem uma lista de nomes, nenhuma pessoa deve ser listada duas vezes, mas duas pessoas diferentes com o mesmo nome devem ser listadas.</p>
+<h3>Correção</h3>
+<pre><code>  check50 cs50/problems/2024/x/movies
+</code></pre>
+<h2>Como enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/movies
+</code></pre>
+<h2>Agradecimentos</h2>
+<p>Informações cedidas por cortesia da IMDb (<a href="https://www.imdb.com">imdb.com</a>). Usada com permissão.</p>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

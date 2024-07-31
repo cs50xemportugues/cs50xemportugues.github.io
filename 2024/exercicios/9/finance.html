@@ -1,0 +1,461 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <div class="alert alert-warning" data-alert="warning" role="alert"><p>Se você usou <code class="language-plaintext highlighter-rouge">wget</code> para baixar <code class="language-plaintext highlighter-rouge">finance.zip</code> antes das <a data-local="2024-04-10T08:30:00-04:00" href="https://time.cs50.io/20240410T083000-0400">2024-04-10T08:30:00-04:00</a>, certifique-se de copiar, colar e executar este comando <em>dentro do seu diretório <code>finance</code></em> para baixar uma versão mais recente de <code class="language-plaintext highlighter-rouge">helpers.py</code>:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>[ -f helpers.py ] &amp;&amp; curl -O https://cdn.cs50.net/2024/x/psets/9/finance/helpers.py
+</code></pre></div></div></div>
+
+<h1>C$50 Finanças</h1>
+<p>Implemente um site no qual usuários podem "comprar" e "vender" ações, como abaixo.</p>
+<p><img alt="C$50 Finanças" src="https://cs50.harvard.edu/x/2024/psets/9/finance/finance_2024.png" /></p>
+<h2>Histórico</h2>
+<p>Se você não tem certeza sobre o que significa comprar e vender ações (por ex., as porcentagens de uma empresa), vá <a href="https://www.investopedia.com/articles/basics/06/invest1000.asp">aqui</a> para um tutorial.</p>
+<p>Você está prestes a implementar o C$50 Finanças, um aplicativo web no qual você pode gerenciar portfólios de ações. Essa ferramenta não só permitirá que você confira os preços reais das ações e os valores dos portfólios, como também permitirá que você compre (ok, "compre") e venda (ok, "venda") ações consultando os preços das ações.</p>
+<p>De fato, existem ferramentas (uma é conhecida como IEX) que permitem que você baixe cotações de ações pela API (interface de programação de aplicativos) usando URLs como <code>https://api.iex.cloud/v1/data/core/quote/nflx?token=API_KEY</code>. Observe como o símbolo da Netflix (NFLX) está embutido neste URL; é assim que o IEX sabe de quem deve retornar os dados. Esse link não retornará nenhum dado porque o IEX exige que você use uma chave de API, mas se retornasse, você veria uma resposta no formato JSON (JavaScript Object Notation) como este:</p>
+<pre><code>  {
+    "avgTotalVolume":6787785,
+    "calculationPrice":"tops",
+    "change":1.46,
+    "changePercent":0.00336,
+    "close":null,
+    "closeSource":"official",
+    "closeTime":null,
+    "companyName":"Netflix Inc.",
+    "currency":"USD",
+    "delayedPrice":null,
+    "delayedPriceTime":null,
+    "extendedChange":null,
+    "extendedChangePercent":null,
+    "extendedPrice":null,
+    "extendedPriceTime":null,
+    "high":null,
+    "highSource":"IEX real time price",
+    "highTime":1699626600947,
+    "iexAskPrice":460.87,
+    "iexAskSize":123,
+    "iexBidPrice":435,
+    "iexBidSize":100,
+    "iexClose":436.61,
+    "iexCloseTime":1699626704609,
+    "iexLastUpdated":1699626704609,
+    "iexMarketPercent":0.00864679844447232,
+    "iexOpen":437.37,
+    "iexOpenTime":1699626600859,
+    "iexRealtimePrice":436.61,
+    "iexRealtimeSize":5,
+    "iexVolume":965,
+    "lastTradeTime":1699626704609,
+    "latestPrice":436.61,
+    "latestSource":"IEX real time price",
+    "latestTime":"9:31:44 AM",
+    "latestUpdate":1699626704609,
+    "latestVolume":null,
+    "low":null,
+    "lowSource":"IEX real time price",
+    "lowTime":1699626634509,
+    "marketCap":192892118443,
+    "oddLotDelayedPrice":null,
+    "oddLotDelayedPriceTime":null,
+    "open":null,
+    "openTime":null,
+    "openSource":"official",
+    "peRatio":43.57,
+    "previousClose":435.15,
+    "previousVolume":2735507,
+    "primaryExchange":"NASDAQ",
+    "symbol":"NFLX",
+    "volume":null,
+    "week52High":485,
+    "week52Low":271.56,
+    "ytdChange":0.4790450244167119,
+    "isUSMarketOpen":true
+  }
+</code></pre>
+<p>Observe como, entre as chaves, há uma lista separada por vírgulas de pares chave-valor, com dois pontos separando cada chave do seu valor. Faremos algo muito parecido, com o Yahoo Finance.</p>
+<p>Vamos nos concentrar agora em obter o código de distribuição deste problema!</p>
+<h2>Começando</h2>
+<p>Faça login em <a href="https://cs50.dev/">cs50.dev</a>, clique na sua janela de terminal e execute <code>cd</code> por si só. Você deve descobrir que o prompt da janela de terminal se parece com o abaixo:</p>
+<pre><code>  $
+</code></pre>
+<p>Em seguida, execute</p>
+<pre><code>  wget https://cdn.cs50.net/2024/x/psets/9/finance.zip
+</code></pre>
+<p>para baixar um ZIP chamado <code>finance.zip</code> no seu espaço de código.</p>
+<p>Então execute</p>
+<pre><code>  unzip finance.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>finance</code>. Você não precisará mais do arquivo ZIP, então você pode executar</p>
+<pre><code>  rm finance.zip
+</code></pre>
+<p>e responder com "y" seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>  cd finance
+</code></pre>
+<p>seguido de Enter para ir para (por ex., abrir) esse diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>  finance/ $
+</code></pre>
+<p>Execute <code>ls</code> por si só e você verá alguns arquivos e pastas:</p>
+<pre><code>  app.py  finance.db  helpers.py  requirements.txt  static/  templates/
+</code></pre>
+<p>Se você tiver algum problema, siga estes mesmos passos novamente e veja se consegue determinar onde errou!</p>
+<h3>Execução</h3>
+<p>Inicie o servidor web integrado ao Flask (dentro de <code>finance/</code>):</p>
+<pre><code>  $ flask run
+</code></pre>
+<p>Visite a URL exibida por <code>flask</code> para ver o código de distribuição em ação. Você não conseguirá fazer login ou se registrar por enquanto!</p>
+<p>Dentro de <code>finance/</code>, execute <code>sqlite3 finance.db</code> para abrir <code>finance.db</code> com o <code>sqlite3</code>. Se você executar <code>.schema</code> no prompt do SQLite, observe como <code>finance.db</code> vem com uma tabela chamada <code>users</code> (usuários). Dê uma olhada em sua estrutura (por ex., esquema). Observe como, por padrão, os novos usuários receberão US$ 10.000 em dinheiro. Mas se você executar <code>SELECT * FROM users;</code>, não haverá (ainda!) usuários (por ex., linhas) lá para navegar.</p>
+<p>Outra forma de visualizar <code>finance.db</code> é com um programa chamado phpLiteAdmin. Clique em <code>finance.db</code> no navegador de arquivos do seu espaço de código e, em seguida, clique no link mostrado abaixo do texto "Please visit the following link to authorize GitHub Preview". Você deverá ver informações sobre o próprio banco de dados, bem como uma tabela, <code>users</code>, assim como viu no prompt <code>sqlite3</code> com <code>.schema</code>.</p>
+<h3>Entendimento</h3>
+<h4><code>app.py</code></h4>
+<p>Abra <code>app.py</code>. No início do arquivo há várias importações, entre elas o módulo SQL da CS50 e algumas funções auxiliares. Mais sobre elas em breve.</p>
+<p>Depois de configurar o <a href="https://flask.pocoo.org/">Flask</a>, observe como esse arquivo desabilita o cache das respostas (desde que você esteja no modo de depuração, o que é ativado por padrão no seu código no Code50), para que você não faça uma alteração em algum arquivo e o seu navegador não perceba. Observe em seguida como ele configura o <a href="https://jinja.palletsprojects.com/en/3.1.x/">Jinja</a> com um "filtro" personalizado, <code>usd</code>, uma função (definida em <code>helpers.py</code>) que facilitará a formatação dos valores como dólares americanos (USD). Ele configura ainda o Flask para armazenar <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#sessions">sessões</a> no sistema de arquivos local (ou seja, disco) em vez de armazená-las dentro de cookies (assinalados digitalmente), que é o padrão do Flask. O arquivo então configura o módulo SQL da CS50 para usar o <code>finance.db</code>.</p>
+<p>Depois disso, há várias rotas, das quais somente duas estão totalmente implementadas: <code>login</code> e <code>logout</code>. Leia a implementação de <code>login</code> primeiro. Observe como ele usa <code>db.execute</code> (da biblioteca da CS50) para consultar <code>finance.db</code>. E observe como ele usa <code>check_password_hash</code> para comparar hashes das senhas dos usuários. Observe também como <code>login</code> "lembra" que um usuário está conectado armazenando seu <code>user_id</code>, um INTEIRO, em <code>session</code>. Dessa forma, qualquer uma das rotas desse arquivo pode verificar qual usuário, se houver, está conectado. Finalmente, observe como, depois que o usuário tiver conectado com sucesso, <code>login</code> redirecionará para <code>"/", levando o usuário para sua página inicial. Enquanto isso, observe como</code>logout<code>simplesmente limpa</code>session`, efetivamente desconectando o usuário.</p>
+<p>Observe como a maioria das rotas são "decoradas" com <code>@login_required</code> (uma função também definida em <code>helpers.py</code>). Esse decorador garante que, se um usuário tentar visitar qualquer uma dessas rotas, ele será primeiro redirecionado para <code>login</code> para se conectar.</p>
+<p>Observe também como a maioria das rotas suporta GET e POST. No entanto, a maioria delas (por enquanto!) simplesmente retorna um "pedido de desculpas", já que ainda não foram implementadas.</p>
+<h4><code>helpers.py</code></h4>
+<p>Em seguida, dê uma olhada em <code>helpers.py</code>. Ah, aí está a implementação de <code>apology</code>. Observe como ela acaba renderizando um template, <code>apology.html</code>. Por acaso ela também define internamente outra função, <code>escape</code>, que ela simplesmente usa para substituir caracteres especiais em pedidos de desculpas. Ao definir <code>escape</code> dentro de <code>apology</code>, nós escopaamos a primeira apenas para a segunda; nenhuma outra função conseguirá (ou precisará) chamá-la.</p>
+<p>O próximo no arquivo é <code>login_required</code>. Não se preocupe se ela for um pouco críptica, mas se você já se perguntou como uma função pode retornar outra função, aqui está um exemplo!</p>
+<p>Depois dela vem <code>lookup</code>, uma função que, dado um <code>símbolo</code> (ex.: NFLX), retorna uma cotação de ações para uma empresa na forma de um <code>dict</code> com duas chaves: <code>price</code>, cujo valor é um <code>float</code>; e <code>symbol</code>, cujo valor é uma <code>str</code>, uma versão padronizada (em caixa alta) do símbolo de uma ação, independentemente de como aquele símbolo foi escrito em caixa alta ou baixa quando passado para <code>lookup</code>.</p>
+<div class="alert alert-warning" data-alert="warning" role="alert"><p>Observação.  Se você começou esse problema em 2023, observe que <code class="language-plaintext highlighter-rouge">lookup</code> não retorna mais uma chave de <code class="language-plaintext highlighter-rouge">name</code>, portanto, remova-a de qualquer consulta que a espere. Nenhum nome precisa ser exibido em nenhuma página.</p></div>
+
+<p>O último no arquivo é <code>usd</code>, uma função curta que simplesmente formata um <code>float</code> como USD (ex.: <code>1234.56</code> é formatado como <code>$1,234.56</code>).</p>
+<h4><code>requirements.txt</code></h4>
+<p>Agora dê uma olhada rápida em <code>requirements.txt</code>. Esse arquivo simplesmente prescreve os pacotes dos quais esse aplicativo dependerá.</p>
+<h4><code>static/</code></h4>
+<p>Dê uma olhada também em <code>static/</code>, dentro do qual está <code>styles.css</code>. É lá que fica parte do CSS inicial. Fique à vontade para alterá-lo como quiser.</p>
+<h4><code>templates/</code></h4>
+<p>Agora olhe em <code>templates/</code>. Em <code>login.html</code> há, essencialmente, um formulário HTML, estilizado com <a href="https://getbootstrap.com/">Bootstrap</a>. Enquanto isso, em <code>apology.html</code>, há um template para um pedido de desculpas. Lembre-se de que <code>apology</code> em <code>helpers.py</code> recebeu dois argumentos: <code>message</code>, que foi passado para <code>render_template</code> como o valor de <code>bottom</code>, e, opcionalmente, <code>code</code>, que foi passado para <code>render_template</code> como o valor de <code>top</code>. Observe em <code>apology.html</code> como esses valores são usados no final! E <a href="https://github.com/jacebrowning/memegen">aqui está o motivo</a> 0:-)</p>
+<p>Por último, vem <code>layout.html</code>. Ele é um pouco maior do que o normal, mas isso ocorre principalmente porque ele vem com uma "navbar" (barra de navegação) sofisticada e otimizada para dispositivos móveis, também baseada no Bootstrap. Observe como ele define um bloco, <code>main</code>, dentro do qual os templates (incluindo <code>apology.html</code> e <code>login.html</code>) devem ir. Ele também inclui suporte para o <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/#message-flashing">message flashing</a> do Flask, para que você possa transmitir mensagens de uma rota para outra para que o usuário as veja.</p>
+<h2>Especificação</h2>
+<h3><code>register</code></h3>
+<p>Conclua a implementação de <code>register</code> de forma que permita que um usuário se cadastre para uma conta por meio de um formulário.</p>
+<ul>
+<li>Exija que o usuário insira um nome de usuário, implementado como um campo de texto cujo <code>name</code> é <code>username</code>. Renderize um pedido de desculpas se a entrada do usuário estiver em branco ou se o nome de usuário já existir.<ul>
+<li>Observe que <a href="https://cs50.readthedocs.io/libraries/cs50/python/#cs50.SQL"><code>cs50.SQL.execute</code></a> lançará uma exceção <code>ValueError</code> se você tentar <code>INSERT</code> um nome de usuário duplicado porque criamos um <code>UNIQUE INDEX</code> em <code>users.username</code>. Portanto, certifique-se de usar <code>try</code> e <code>except</code> para determinar se o nome de usuário já existe.</li>
+</ul>
+</li>
+<li>Exija que o usuário insira uma senha, implementada como um campo de texto cujo <code>name</code> é <code>password</code>, e em seguida a mesma senha novamente, implementada como um campo de texto cujo <code>name</code> é <code>confirmation</code>. Renderize um pedido de desculpas se uma das entradas estiver em branco ou se as senhas não corresponderem.</li>
+<li>Envie a entrada do usuário via <code>POST</code> para <code>/register</code>.</li>
+<li><code>INSERT</code> o novo usuário em <code>users</code>, armazenando um hash da senha do usuário, não a senha em si. Criptografe a senha do usuário com <a href="https://werkzeug.palletsprojects.com/en/2.3.x/utils/#werkzeug.security.generate_password_hash"><code>generate_password_hash</code></a> Provavelmente você vai querer criar um novo template (ex.: <code>register.html</code>) que seja bem semelhante a <code>login.html</code>.</li>
+</ul>
+<p>Depois de implementar <code>register</code> corretamente, você deve conseguir se cadastrar para obter uma conta e conectar-se (já que <code>login</code> e <code>logout</code> já funcionam)! E você deve conseguir ver suas linhas pelo phpLiteAdmin ou <code>sqlite3</code>.</p>
+<h3><code>quote</code></h3>
+<p>Conclua a implementação de <code>quote</code> de forma que permita que um usuário procure o preço atual de uma ação.</p>
+<ul>
+<li>Exija que o usuário insira o símbolo de uma ação, implementado como um campo de texto cujo <code>name</code> é <code>symbol</code>.</li>
+<li>Envie a entrada do usuário via <code>POST</code> para <code>/quote</code>.</li>
+<li>Provavelmente você vai querer criar dois novos templates (ex.: <code>quote.html</code> e <code>quoted.html</code>). Quando um usuário visita <code>/quote</code> via GET, renderize um desses templates, dentro do qual deve haver um formulário HTML que envia para <code>/quote</code> via POST. Em resposta a um POST, <code>quote</code> pode renderizar esse segundo template, incorporando a ele um ou mais valores de <code>lookup</code>.</li>
+</ul>
+<h3><code>buy</code></h3>
+<p>Complete a implementação de <code>buy</code> de forma que permita que o usuário compre ações.</p>
+<ul>
+<li>Exija que o usuário informe um símbolo de ação, implementado como um campo de texto cujo <code>name</code> seja <code>symbol</code>. Renderize um pedido de desculpas se a entrada estiver em branco ou o símbolo não existir (de acordo com o valor de retorno de <code>lookup</code>).</li>
+<li>Exija que o usuário insira um número de ações, implementado como um campo de texto cujo <code>name</code> seja <code>shares</code>. Renderize um pedido de desculpas se a entrada não for um número inteiro positivo.</li>
+<li>Envie a entrada do usuário via <code>POST</code> para <code>/buy</code>.</li>
+<li>Após a conclusão, redirecione o usuário para a página inicial.</li>
+<li>Provavelmente, você desejará chamar <code>lookup</code> para consultar o preço atual de uma ação.</li>
+<li>Provavelmente, você desejará <code>SELECIONAR</code> quanto dinheiro o usuário tem atualmente em <code>users</code>.</li>
+<li>Adicione uma ou mais tabelas novas ao <code>finance.db</code> para manter o controle da compra. Armazene informações suficientes para saber quem comprou o quê, a que preço e quando.<ul>
+<li>Use tipos SQLite apropriados.</li>
+<li>Defina índices <code>UNIQUE</code> em quaisquer campos que devem ser exclusivos.</li>
+<li>Defina índices (não <code>UNIQUE</code>) em quaisquer campos pelos quais você pesquisará (como por meio de <code>SELECT</code> com <code>WHERE</code>).</li>
+</ul>
+</li>
+<li>Renderize um pedido de desculpas, sem concluir a compra, se o usuário não puder comprar o número de ações ao preço atual.</li>
+<li>Você não precisa se preocupar com condições de corrida (ou usar transações).</li>
+</ul>
+<p>Depois de implementar <code>buy</code> corretamente, você poderá ver as compras dos usuários em suas novas tabelas no phpLiteAdmin ou <code>sqlite3</code>.</p>
+<h3><code>index</code></h3>
+<p>Complete a implementação de <code>index</code> de forma que exiba uma tabela HTML resumindo, para o usuário atualmente conectado, quais ações o usuário possui, o número de ações possuídas, o preço atual de cada ação e o valor total de cada participação (ou seja, ações vezes preço). Exiba também o saldo atual de caixa do usuário e o total geral (ou seja, valor total das ações mais o dinheiro).</p>
+<ul>
+<li>Provavelmente, você desejará executar vários <code>SELECT</code>s. Dependendo de como você implementar sua(s) tabela(s), você poderá encontrar <a href="https://www.google.com/search?q=SQLite+GROUP+BY,">GROUP BY</a> <a href="https://www.google.com/search?q=SQLite+HAVING,">HAVING</a> <a href="https://www.google.com/search?q=SQLite+SUM,">SUM</a> e/ou <a href="https://www.google.com/search?q=SQLite+WHERE">WHERE</a> de seu interesse.</li>
+<li>Provavelmente, você desejará chamar <code>lookup</code> para cada ação.</li>
+</ul>
+<h3><code>sell</code></h3>
+<p>Complete a implementação de <code>sell</code> para que permita que o usuário venda ações de uma ação (que ele possui).</p>
+<ul>
+<li>Requeira que o usuário insira um símbolo de ação, implementado como um menu <code>select</code> cujo <code>name</code> seja <code>symbol</code>. Renderize um pedido de desculpas se o usuário não selecionar uma ação ou se (de alguma forma, depois de enviar) o usuário não possuir nenhuma ação daquela ação.</li>
+<li>Exija que o usuário insira um número de ações, implementado como um campo de texto cujo <code>name</code> seja <code>shares</code>. Renderize um pedido de desculpas se a entrada não for um número inteiro positivo ou se o usuário não possuir tantas ações da ação.</li>
+<li>Envie a entrada do usuário via <code>POST</code> para <code>/sell</code>.</li>
+<li>Após a conclusão, redirecione o usuário para a página inicial.</li>
+<li>Você não precisa se preocupar com condições de corrida (ou usar transações).</li>
+</ul>
+<h3><code>history</code></h3>
+<p>Complete a implementação de <code>history</code> de forma que exiba uma tabela HTML resumindo todas as transações de um usuário, listando linha por linha cada compra e venda.</p>
+<ul>
+<li>Para cada linha, deixe claro se uma ação foi comprada ou vendida e inclua o símbolo da ação, o preço (de compra ou venda), o número de ações compradas ou vendidas e a data e hora em que a transação ocorreu.</li>
+<li>Talvez seja necessário alterar a tabela criada para <code>buy</code> ou complementá-la com uma tabela adicional. Tente minimizar redundâncias.</li>
+</ul>
+<h3>Toque pessoal</h3>
+<p>Implemente pelo menos um toque pessoal de sua escolha:</p>
+<ul>
+<li>Permita que os usuários alterem suas senhas.</li>
+<li>Permita que os usuários adicionem dinheiro extra à sua conta.</li>
+<li>Permita que os usuários comprem mais ações ou vendam ações que já possuem no próprio <code>index</code>, sem precisar digitar os símbolos das ações manualmente.</li>
+<li>Implemente algum outro recurso de escopo comparável.</li>
+</ul>
+<h2>Passo a passo</h2>
+<div class="alert alert-info" data-alert="info" role="alert"><p>Observe que Brian menciona que <code class="language-plaintext highlighter-rouge">lookup</code> retornará o nome da ação. Conforme acima, agora ele retorna apenas o preço e o símbolo.</p></div>
+
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/7wPTAwT-6bA?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+<h2>Testes</h2>
+<p>Certifique-se de testar seu aplicativo da web manualmente, como</p>
+<ul>
+<li>registrando um novo usuário e verificando se a página do portfólio é carregada com as informações corretas,</li>
+<li>solicitando uma cotação usando um símbolo de ação válido,</li>
+<li>comprando uma ação várias vezes, verificando se o portfólio exibe totais corretos,</li>
+<li>vendendo todas ou algumas ações, verificando o portfólio novamente e</li>
+<li>verificando se a página do histórico mostra todas as transações do usuário conectado.</li>
+</ul>
+<p>Também teste alguns usos inesperados, como</p>
+<ul>
+<li>inserindo strings alfabéticas em formulários quando apenas números são esperados,</li>
+<li>inserindo zero ou números negativos em formulários quando apenas números positivos são esperados,</li>
+<li>inserindo valores de pontos flutuantes em formulários quando apenas inteiros são esperados,</li>
+<li>tentando gastar mais dinheiro do que o usuário tem,</li>
+<li>tentando vender mais ações do que o usuário tem,</li>
+<li>inserindo um símbolo de ação inválido e</li>
+<li>incluindo caracteres potencialmente perigosos, como <code>'</code> e <code>;</code> em consultas SQL.</li>
+</ul>
+<p>Você também pode verificar a validade do HTML clicando no botão <strong>I ♥ VALIDATOR</strong> no rodapé de cada uma das suas páginas, que enviará seu HTML para <a href="https://validator.w3.org/">validator.w3.org</a>.</p>
+<p>Após a satisfação, para testar seu código com <code>check50</code>, execute o abaixo.</p>
+<pre><code>  check50 cs50/problems/2024/x/finance
+</code></pre>
+<div class="alert alert-warning" data-alert="warning" role="alert"><p>Esteja ciente de que <code class="language-plaintext highlighter-rouge">check50</code> testará todo o seu programa como um todo. Se você o executar <strong>antes</strong> de concluir todas as funções necessárias, ele poderá relatar erros em funções que são realmente corretas, mas dependem de outras funções.</p></div>
+
+<h2>Estilo</h2>
+<pre><code>  style50 app.py
+</code></pre>
+<h2>Solução do corpo docente</h2>
+<p>Você é bem-vindo para estilizar seu próprio aplicativo de forma diferente, mas é assim que a solução do corpo docente se parece!</p>
+<p><a href="https://finance.cs50.net/">https://finance.cs50.net/</a></p>
+<p>Sinta-se à vontade para se registrar para obter uma conta e brincar com o app. <strong>Não</strong> use uma senha que você usa em outros sites.</p>
+<p>É <strong>razoável</strong> olhar para o HTML e CSS do corpo docente.</p>
+<h2>Dicas</h2>
+<ul>
+<li>Para formatar um valor como um valor em dólar dos EUA (com centavos listados em duas casas decimais), você pode usar o filtro <code>usd</code> em seus modelos Jinja (imprimindo valores como <code>{{ value | usd }}</code> em vez de <code>{{ value }}</code>.</li>
+<li>Dentro de <code>cs50.SQL</code> há um método <code>execute</code> cujo primeiro argumento deve ser uma <code>str</code> de SQL. Se essa <code>str</code> contiver parâmetros de ponto de interrogação aos quais valores devem ser vinculados, esses valores podem ser fornecidos como parâmetros nomeados adicionais para <code>execute</code>. Veja a implementação de <code>login</code> para um exemplo. O valor de retorno de <code>execute</code> é o seguinte:<ul>
+<li>Se <code>str</code> for um <code>SELECT</code>, então <code>execute</code> retornará uma <code>list</code> de zero ou mais objetos <code>dict</code>, dentro dos quais estão chaves e valores representando campos de uma tabela e células, respectivamente.</li>
+<li>Se <code>str</code> for um <code>INSERT</code>, e a tabela na qual os dados foram inseridos contiver uma <code>PRIMARY KEY</code> de autoincremento, então <code>execute</code> retornará o valor da chave primária da linha recém-inserida.</li>
+<li>Se <code>str</code> for um <code>DELETE</code> ou um <code>UPDATE</code>, então <code>execute</code> retornará o número de linhas excluídas ou atualizadas por <code>str</code>.</li>
+</ul>
+</li>
+<li>Lembre-se que <code>cs50.SQL</code> registrará em sua janela de terminal todas as consultas que você executar via <code>execute</code> (para que você possa confirmar se elas estão conforme o esperado).</li>
+<li>Certifique-se de usar parâmetros vinculados a ponto de interrogação (ou seja, um <a href="https://www.python.org/dev/peps/pep-0249/#paramstyle">paramstyle</a> de <code>named</code>) ao chamar o método <code>execute</code> do CS50, à la <code>WHERE ?</code>. <strong>Não</strong> use f-strings, <a href="https://docs.python.org/3.6/library/functions.html#format,"><code>format</code></a> ou <code>+</code> (ou seja, concatenação), para que você não corra o risco de um ataque de injeção de SQL.</li>
+<li>Se (e somente se) já estiver confortável com SQL, você pode usar <a href="https://docs.sqlalchemy.org/en/latest/index.html">SQLAlchemy Core</a> ou <a href="https://flask-sqlalchemy.pocoo.org/">Flask-SQLAlchemy</a> (ou seja, <a href="https://docs.sqlalchemy.org/en/latest/index.html">SQLAlchemy ORM</a>) em vez de <code>cs50.SQL</code>.</li>
+<li>Você pode adicionar arquivos estáticos adicionais em <code>static/</code>.</li>
+<li>Provavelmente você desejará consultar a <a href="https://jinja.palletsprojects.com/en/3.1.x/">documentação do Jinja</a> ao implementar seus modelos.</li>
+<li>É <strong>razoável</strong> pedir a outras pessoas para testar (e tentar acionar erros em) seu site.</li>
+<li>Você pode alterar a estética dos sites, como via<ul>
+<li><a href="https://bootswatch.com/">bootswatch.com</a>,</li>
+<li><a href="https://getbootstrap.com/docs/5.1/content/">getbootstrap.com/docs/5.1/content</a>,</li>
+<li><a href="https://getbootstrap.com/docs/5.1/components/">getbootstrap.com/docs/5.1/components</a>, e/ou</li>
+<li><a href="https://memegen.link/">memegen.link</a>.</li>
+</ul>
+</li>
+<li>Você pode achar a <a href="https://flask.palletsprojects.com/en/1.1.x/quickstart/">documentação do Flask</a> e a <a href="https://jinja.palletsprojects.com/en/2.11.x/templates/">documentação do Jinja</a> úteis!</li>
+</ul>
+<h2>FAQs</h2>
+<h3>ImportError: No module named ‘application’</h3>
+<p>Por padrão, <code>flask</code> procura um arquivo chamado <code>app.py</code> em seu diretório de trabalho atual (porque configuramos o valor de <code>FLASK_APP</code>, uma variável de ambiente, para ser <code>app.py</code>). Se ver este erro, provavelmente você executou <code>flask</code> no diretório errado!</p>
+<h3>OSError: [Errno 98] Address already in use</h3>
+<p>Se, ao executar <code>flask</code>, você vir este erro, provavelmente (ainda) tem <code>flask</code> sendo executado em outra aba. Certifique-se de encerrar aquele outro processo, como com ctrl-c, antes de iniciar <code>flask</code> novamente. Se você não tiver nenhuma outra aba, execute <code>fuser -k 8080/tcp</code> para encerrar quaisquer processos que (ainda) estejam escutando na porta TCP 8080.</p>
+<h2>Como enviar</h2>
+<p>Em seu terminal, execute o abaixo para enviar seu trabalho.</p>
+<pre><code>  submit50 cs50/problems/2024/x/finance
+</code></pre>
+<div class="alert alert-danger" data-alert="danger" role="alert"><h3 id="why-does-my-submission-pass-check50-but-shows-no-results-in-my-gradebook-after-running-submit50">Por que minha submissão passa pelo check50, mas mostra "Sem resultados" em meu Gradebook após executar submit50?</h3>
+
+<p>Em alguns casos, <code class="language-plaintext highlighter-rouge">submit50</code> pode não avaliar a atribuição devido a (1) formatação inconsistente em seu arquivo <code class="language-plaintext highlighter-rouge">app.py</code> e/ou (2) arquivos adicionais desnecessários sendo enviados com o conjunto de problemas. Para corrigir esses problemas, execute <code class="language-plaintext highlighter-rouge">black app.py</code> na pasta <code class="language-plaintext highlighter-rouge">finance</code>. Resolva quaisquer problemas que sejam revelados. Em seguida, examine o conteúdo de sua pasta <code class="language-plaintext highlighter-rouge">finance</code>. Exclua arquivos estranhos, como sessões do flask ou outros arquivos que não fazem parte de sua implementação do conjunto de problemas. Além disso, execute <code class="language-plaintext highlighter-rouge">check50</code> novamente para garantir que sua submissão ainda funcione. Por fim, execute o comando <code class="language-plaintext highlighter-rouge">submit50</code> acima novamente. Seu resultado aparecerá em seu <a href="https://cs50.me/cs50x">Gradebook</a> em alguns minutos.</p>
+
+<p>Observe que se houver uma pontuação numérica ao lado de sua submissão de finanças na área <code class="language-plaintext highlighter-rouge">submissions</code> do seu <a href="https://cs50.me/cs50x">Gradebook</a>, o procedimento discutido acima não se aplica a você. Provavelmente, você não atendeu totalmente aos requisitos do conjunto de problemas e deve confiar no <code class="language-plaintext highlighter-rouge">check50</code> para obter pistas sobre que trabalho resta.</p></div>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

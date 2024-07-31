@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Dinheiro</h1>
+<p><img alt="Moedas dos EUA" src="https://cs50.harvard.edu/x/2024/psets/1/cash/coins.jpg" /></p>
+<h2>Problema a Resolver</h2>
+<p>Suponha que você trabalhe em uma loja e um cliente lhe dê US$1,00 (100 centavos) por um doce que custa US$0,50 (50 centavos). Você precisará pagar o "troco" a ele, a quantia que sobrar após pagar pelo custo do doce. Ao calcular o troco, é provável que você queira minimizar o número de moedas que está entregando para cada cliente, para não ficar sem (ou irritar o cliente!). Em um arquivo chamado <code>cash.c</code> em uma pasta chamada <code>cash</code>, implemente um programa em C que imprima o mínimo de moedas necessárias para fazer a determinada quantia do troco, em centavos, como abaixo:</p>
+<pre><code>  Troco devido: 25
+  1
+</code></pre>
+<p>Mas peça ao usuário um número inteiro maior que 0, para que o programa funcione para qualquer valor de troco:</p>
+<pre><code>  Troco devido: 70
+  4
+</code></pre>
+<p>Pergunte novamente ao usuário, quantas vezes for necessário, se a entrada não for maior ou igual a 0 (ou se a entrada não for um número inteiro!).</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="80" data-loop="1" data-rows="12" id="asciicast-p6PlFqQgSWNWn4ggpIIaBOvIq" src="https://asciinema.org/a/p6PlFqQgSWNWn4ggpIIaBOvIq.js"></script>
+
+<h2>Algoritmos Gulosos</h2>
+<p>Felizmente, a ciência da computação deu aos caixas de todo lugar maneiras de minimizar o número de moedas devidas: algoritmos gulosos.</p>
+<p>De acordo com o National Institute of Standards and Technology (NIST), um algoritmo guloso é aquele "que sempre pega a melhor solução imediata ou local ao encontrar uma resposta. Algoritmos gulosos encontram a solução geral ou globalmente ideal para alguns problemas de otimização, mas podem encontrar soluções abaixo do ideal para alguns casos de outros problemas".</p>
+<p>O que isso significa? Bem, suponha que um caixa deva dar algum troco a um cliente e que na gaveta desse caixa haja moedas de 25 centavos, 10 centavos, 5 centavos e 1 centavo. O problema a ser resolvido é decidir quais moedas e quantas de cada uma entregar ao cliente. Pense em um caixa "guloso" como aquele que deseja tirar o maior pedaço possível desse problema a cada moeda que tira da gaveta. Por exemplo, se algum cliente receber 41 centavos, o maior pedaço inicial (ou seja, a melhor solução imediata ou local) que pode ser tirado é de 25 centavos. (Esse pedaço é "melhor" na medida em que nos aproxima de 0 centavos mais rápido do que qualquer outra moeda faria.) Observe que um pedaço desse tamanho reduziria o que era um problema de 41 centavos para um problema de 16 centavos, já que 41 - 25 = 16. Ou seja, o restante é um problema semelhante, mas menor. Nem é preciso dizer que outro pedaço de 25 centavos seria muito grande (assumindo que o caixa prefira não perder dinheiro) e, portanto, nosso caixa guloso passaria para um pedaço de 10 centavos, deixando-o com um problema de 6 centavos. Nesse ponto, a ganância pede uma mordida de 5 centavos seguida de uma mordida de 1 centavo, e o problema é resolvido. O cliente recebe uma moeda de 25 centavos, uma de 10 centavos, uma de 5 centavos e uma de 1 centavo: quatro moedas no total.</p>
+<p>Acontece que essa abordagem gulosa (ou seja, algoritmo) não é apenas localmente ideal, mas também globalmente para a moeda dos Estados Unidos (e também da União Europeia). Ou seja, contanto que um caixa tenha moedas suficientes de cada tipo, essa abordagem da maior para a menor gerará o menor número possível de moedas. Quão pouco? Bem, você nos diga!</p>
+<h2>Conselhos</h2>
+<h3>Escreva algum código que você sabe que será compilado</h3>
+<p>Mesmo que este programa não faça nada, ele deve pelo menos ser compilado com <code>make</code>!</p>
+<pre><code>  #include &lt;cs50.h&gt;
+  #include &lt;stdio.h&gt;
+
+  int main(void)
+  {
+
+  }
+</code></pre>
+<p>Observe que você agora incluiu <code>cs50.h</code> e <code>stdio.h</code>, dois "arquivos de cabeçalho" que lhe darão acesso a funções que podem ajudá-lo a resolver este problema.</p>
+<h3>Escreva algum pseudocódigo antes de escrever mais código</h3>
+<p>Se não tiver certeza de como resolver o problema em si, divida-o em problemas menores que você provavelmente pode resolver primeiro. Por exemplo, este problema é realmente apenas um punhado de problemas:</p>
+<ol>
+<li>Peça ao usuário o troco devido, em centavos.</li>
+<li>Calcule quantas moedas de <em>vinte e cinco centavos</em> você deve dar ao cliente. Subtraia o valor dessas moedas de vinte e cinco centavos dos centavos.</li>
+<li>Calcule quantas moedas de <em>dez centavos</em> você deve dar ao cliente. Subtraia o valor dessas moedas de dez centavos dos centavos restantes.</li>
+<li>Calcule quantas moedas de <em>cinco centavos</em> você deve dar ao cliente. Subtraia o valor dessas moedas de cinco centavos dos centavos restantes.</li>
+<li>Calcule quantas moedas de <em>um centavo</em> você deve dar ao cliente. Subtraia o valor dessas moedas de um centavo dos centavos restantes.</li>
+<li>some o número de moedas de vinte e cinco centavos, dez centavos, cinco centavos e um centavo usadas.</li>
+<li>Imprima essa soma.</li>
+</ol>
+<p>Este é o algoritmo guloso que você pode usar para resolver este problema, então vamos escrever alguns pseudocódigos como comentários para lembrá-lo de fazer exatamente isso:</p>
+<pre><code>  #include &lt;cs50.h&gt;
+  #include &lt;stdio.h&gt;
+
+  int main(void)
+  {
+      // Peça ao usuário o troco devido, em centavos
+
+      // Calcule quantas moedas de vinte e cinco centavos você deve dar ao cliente
+      // Subtraia o valor dessas moedas de vinte e cinco centavos dos centavos
+
+      // Calcule quantas moedas de dez centavos você deve dar ao cliente
+      // Subtraia o valor dessas moedas de dez centavos dos centavos restantes
+
+      // Calcule quantas moedas de cinco centavos você deve dar ao cliente
+      // Subtraia o valor dessas moedas de cinco centavos dos centavos restantes
+
+      // Calcule quantas moedas de um centavo você deve dar ao cliente
+      // Subtraia o valor dessas moedas de um centavo dos centavos restantes
+
+      // Some o número de moedas de vinte e cinco centavos, dez centavos, cinco centavos e um centavo usadas
+      // Imprima essa soma
+  }
+</code></pre>
+<h3>Converta o pseudocódigo em código</h3>
+<p>Primeiro, considere como você pode perguntar ao usuário os centavos que lhe devem. Lembre-se de que um loop <code>do while</code> é útil quando você quer fazer algo pelo menos uma vez e possivelmente de novo e de novo, como abaixo:</p>
+<p>```C</p>
+<h1>include <cs50.h></h1>
+<h1>include <stdio.h></h1>
+<p>int main(void)
+{
+    // Pergunta ao usuário o troco devido em centavos
+    int cents;
+    do
+    {
+        cents = get_int("Troco devido: ");
+    }
+    while (cents &lt; 0);
+}
+```</p>
+<p>É aconselhável parar aqui e <code>make</code> o seu programa. Teste para ter certeza que o seu programa compila e que ele pergunta novamente se você digitar menos de 0 centavos (ou se você digitar uma entrada como “cat”).</p>
+<p>Em seguida, considere como calcular quantos quarters você deve dar ao cliente. Como estamos usando um algoritmo ganancioso, esta questão se torna “qual é o <em>maior</em> número de quarters que você poderia dar a eles?”. Você <em>poderia</em> escrever uma solução para este problema na sua função <code>main</code>. Mas poderia clarear o seu pensamento escrever uma nova função: uma chamada <code>calculate_quarters</code>. Assim você pode se concentrar melhor na lógica para calcular quarters. Mais tarde, você pode integrar esta função em sua solução maior.</p>
+<p><code>C
+int calculate_quarters(int cents)
+{
+    // Calcula quantos quarters você deve dar ao cliente
+}</code></p>
+<p>Perceba que esta função é realmente chamada de <code>calculate_quarters</code>. Por <code>int cents</code> em parênteses, ela pega um <code>int</code> chamado <code>cents</code> como entrada. E, por <code>int</code> na frente do seu nome, ela também deve “retornar” um <code>int</code>. Ou seja, a saída desta função é um número inteiro: o número de quarters que cabem em cents. Se estiver curioso sobre esta ideia, lembre-se de que há vários programas de amostra no <a href="https://github.com/cs50/lectures/tree/2023/fall/1/src1">Código Fonte</a> da Semana 1 que ilustram como funções podem retornar um valor.</p>
+<p>Agora considere esta forma de implementar <code>calculate_quarters</code> adicionando ao número de quarters até acabarmos os centavos para converter em quarters:</p>
+<p><code>C
+int calculate_quarters(int cents)
+{
+    // Calcula quantos quarters você deve dar ao cliente
+    int quarters = 0;
+    while (cents &gt;= 25)
+    {
+        quarters++;
+        cents = cents - 25;
+    }
+    return quarters;
+}</code></p>
+<p>Claro, há pelo menos uma maneira mais simples de resolver este problema <code>calculate_quarters</code>. Mas vamos deixar você descobrir isso!</p>
+<p>Com <code>calculate_quarters</code> funcionando como pretendido, você pode integrar esta função em seu programa. Declare a “assinatura” da função (ou seja, <code>int calculate_quarters(int cents)</code>) acima da sua função <code>main</code>, para que você possa realmente usar <code>calculate_quarters</code> lá enquanto define depois, abaixo de <code>main</code>.</p>
+<p>```C</p>
+<h1>include <cs50.h></h1>
+<h1>include <stdio.h></h1>
+<p>int calculate_quarters(int cents);</p>
+<p>int main(void)
+{
+    // Pergunta ao usuário o troco devido em centavos
+    int cents;
+    do
+    {
+        cents = get_int("Troco devido: ");
+    }
+    while (cents &lt; 0);</p>
+<pre><code>  // Calcula quantos quarters você deve dar ao cliente
+  int quarters = calculate_quarters(cents);
+
+  // Subtrai o valor desses quarters de cents
+  cents = cents - (quarters * 25);
+</code></pre>
+<p>}</p>
+<p>int calculate_quarters(int cents)
+{
+    // Calcula quantos quarters você deve dar ao cliente
+    int quarters = 0;
+    while (cents &gt;= 25)
+    {
+        quarters++;
+        cents = cents - 25;
+    }
+    return quarters;
+}
+```</p>
+<p>Poucos problemas resolvidos e mais alguns para resolver! Percebeu um padrão que você poderia reutilizar aqui?</p>
+<h2>Como testar</h2>
+<p>Para este programa, tente testar seu código manualmente. É uma boa prática:</p>
+<ul>
+<li>Se você digitar <code>-1</code>, o seu programa pergunta novamente?</li>
+<li>Se você digitar <code>0</code>, o seu programa imprime <code>0</code>?</li>
+<li>Se você digitar <code>1</code>, o seu programa imprime <code>1</code> (ou seja, um centavo)?</li>
+<li>Se você digitar <code>4</code>, o seu programa imprime <code>4</code> (ou seja, quatro centavos)?</li>
+<li>Se você digitar <code>5</code>, o seu programa imprime <code>1</code> (ou seja, um níquel)?</li>
+<li>Se você digitar <code>24</code>, o seu programa imprime <code>6</code> (ou seja, duas moedas de dez centavos e quatro centavos)?</li>
+<li>Se você digitar <code>25</code>, o seu programa imprime <code>1</code> (ou seja, um quarter)?</li>
+<li>Se você digitar <code>26</code>, o seu programa imprime <code>2</code> (ou seja, um quarter e um centavo)?</li>
+<li>Se você digitar <code>99</code>, o seu programa imprime <code>9</code> (ou seja, três quarters, duas moedas de dez centavos e quatro centavos)?</li>
+</ul>
+<h3>Correção</h3>
+<p>No seu terminal, execute o comando abaixo para verificar a correção do seu trabalho.</p>
+<p><code>check50 cs50/problems/2024/x/cash</code></p>
+<h3>Estilo</h3>
+<p>Execute o comando abaixo para avaliar o estilo do seu código usando o <code>style50</code>.</p>
+<p><code>style50 cash.c</code></p>
+<h2>Como enviar</h2>
+<p>No seu terminal, execute o comando abaixo para enviar o seu trabalho.</p>
+<p><code>submit50 cs50/problems/2024/x/cash</code></p>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

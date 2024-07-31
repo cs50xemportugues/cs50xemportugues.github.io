@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Legibilidade</h1>
+<h2>Problema a ser resolvido</h2>
+<p>Escreva, em um arquivo chamado <code>readability.py</code> em uma pasta chamada <code>sentimental-readability</code>, um programa que primeiro pede ao usuário para digitar algum texto e então exibe o nível para o texto, de acordo com a fórmula de Coleman-Liau, exatamente como você fez no <a href="../../2/">Conjunto de Problemas 2</a>, exceto que dessa vez seu programa deve ser escrito em Python.</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-WnE6pZNnDkDm8NtuxrTqY1Nu4" src="https://asciinema.org/a/WnE6pZNnDkDm8NtuxrTqY1Nu4.js"></script>
+
+<h2>Especificação</h2>
+<ul>
+<li>Lembre-se de que o índice de Coleman-Liau é calculado como <code>0,0588 * L - 0,296 * S - 15,8</code>, onde <code>L</code> é o número médio de letras por 100 palavras no texto, e <code>S</code> é o número médio de frases por 100 palavras no texto.</li>
+<li>Use <code>get_string</code> da Biblioteca CS50 para obter a entrada do usuário, e <code>print</code> para exibir sua resposta.</li>
+<li>Seu programa deve contar o número de letras, palavras e frases no texto. Você pode assumir que uma letra é qualquer caractere minúsculo de <code>a</code> a <code>z</code> ou qualquer caractere maiúsculo de <code>A</code> a <code>Z</code>, qualquer sequência de caracteres separados por espaços deve contar como uma palavra, e que qualquer ocorrência de um ponto, ponto de exclamação ou ponto de interrogação indica o final de uma frase.</li>
+<li>Seu programa deve imprimir como saída <code>"Ano X"</code> onde <code>X</code> é o nível do ano calculado pela fórmula de Coleman-Liau, arredondado para o inteiro mais próximo.</li>
+<li>Se o número do índice resultante for 16 ou superior (equivalente ou maior que o nível de leitura de graduação sênior), seu programa deve exibir <code>"Ano 16+"</code> ao invés de fornecer o número exato do índice. Se o número do índice for menor que 1, seu programa deve exibir <code>"Antes do Ano 1"</code>.</li>
+</ul>
+<h2>Como testar</h2>
+<p>Embora <code>check50</code> esteja disponível para esse problema, você é incentivado a testar seu código por conta própria para cada um dos seguintes itens.</p>
+<ul>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>One fish. Two fish. Red fish. Blue fish.</code> e pressione enter. Seu programa deve exibir <code>Before Grade 1</code> (Antes do Ano 1).</li>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>Would you like them here or there? I would not like them here or there. I would not like them anywhere.</code> e pressione enter. Seu programa deve exibir <code>Grade 2</code> (Ano 2).</li>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>Congratulations! Today is your day. You're off to Great Places! You're off and away!</code> e pressione enter. Seu programa deve exibir <code>Grade 3</code> (Ano 3).</li>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>Harry Potter was a highly unusual boy in many ways. For one thing, he hated the summer holidays more than any other time of year. For another, he really wanted to do his homework, but was forced to do it in secret, in the dead of the night. And he also happened to be a wizard.</code> e pressione enter. Seu programa deve exibir <code>Grade 5</code> (Ano 5).</li>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>In my younger and more vulnerable years my father gave me some advice that I've been turning over in my mind ever since.</code> e pressione enter. Seu programa deve exibir <code>Grade 7</code> (Ano 7).</li>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>Alice was beginning to get very tired of sitting by her sister on the bank, and of having nothing to do: once or twice she had peeped into the book her sister was reading, but it had no pictures or conversations in it, "and what is the use of a book," thought Alice "without pictures or conversation?"</code> e pressione enter. Seu programa deve exibir <code>Grade 8</code> (Ano 8).</li>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>When he was nearly thirteen, my brother Jem got his arm badly broken at the elbow. When it healed, and Jem's fears of never being able to play football were assuaged, he was seldom self-conscious about his injury. His left arm was somewhat shorter than his right; when he stood or walked, the back of his hand was at right angles to his body, his thumb parallel to his thigh.</code> e pressione enter. Seu programa deve exibir <code>Grade 8</code> (Ano 8).</li>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>There are more things in Heaven and Earth, Horatio, than are dreamt of in your philosophy.</code> e pressione enter. Seu programa deve exibir <code>Grade 9</code> (Ano 9).</li>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>It was a bright cold day in April, and the clocks were striking thirteen. Winston Smith, his chin nuzzled into his breast in an effort to escape the vile wind, slipped quickly through the glass doors of Victory Mansions, though not quickly enough to prevent a swirl of gritty dust from entering along with him.</code> e pressione enter. Seu programa deve exibir <code>Grade 10</code> (Ano 10).</li>
+<li>Execute seu programa como <code>python readability.py</code> e aguarde um prompt para entrada. Digite <code>A large class of computational problems involve the determination of properties of graphs, digraphs, integers, arrays of integers, finite families of finite sets, boolean formulas and elements of other countable domains.</code> e pressione enter. Seu programa deve exibir <code>Grade 16+</code> (Ano 16+).</li>
+</ul>
+<h3>Correção</h3>
+<pre><code>  check50 cs50/problems/2024/x/sentimental/readability
+</code></pre>
+<h3>Estilo</h3>
+<pre><code>  style50 readability.py
+</code></pre>
+<h2>Como enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/sentimental/readability
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

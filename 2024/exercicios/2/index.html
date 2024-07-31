@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+  <h1 id="problem-set-2">Conjunto de problemas 2</h1>
+
+  <div class="alert alert-warning" data-alert="warning" role="alert">
+    <p>As colaborações em conjuntos de problemas não são permitidas, exceto na medida em que você possa pedir ajuda a colegas de classe e outras pessoas, desde que essa ajuda não se reduza a outros fazendo seu trabalho para você, de acordo com a política do curso sobre
+      <a href="/2024/honestidade.html">honestidade acadêmica</a>.</p>
+
+    <p>A equipe realiza auditorias aleatórias de envios para o CS50x. Os alunos que violarem esta política serão removidos do curso. Os alunos que já concluíram o CS50x, se forem pegos violando, terão seu Certificado CS50 revogado permanentemente.</p>
+  </div>
+
+  <h2 id="what-to-do">O que fazer</h2>
+
+  <ol>
+    <li>Faça login em
+      <a href="https://cs50.dev">cs50.dev</a>
+      usando sua conta do GitHub
+      <strong>usando Chrome, Edge ou Safari</strong>, não Firefox</li>
+    <li>Execute
+      <code class="language-plaintext highlighter-rouge">update50</code>
+      na janela do terminal do seu codespace para garantir que ele esteja atualizado e, quando solicitado, clique em
+      <strong>Reconstruir agora</strong>
+    </li>
+    <li>Envie
+      <a href="/2024/exercicios/2/scrabble.html">Scrabble</a>
+    </li>
+    <li>Envie
+      <a href="/2024/exercicios/2/readability.html">Legibilidade</a>
+    </li>
+    <li>Envie um dos seguintes:
+      <ul>
+        <li data-marker="*">
+          <a href="/2024/exercicios/2/caesar.html">Cesar</a>, se você se sentir menos confortável</li>
+        <li data-marker="*">
+          <a href="/2024/exercicios/2/substitution.html">Substituição</a>, se você se sentir mais confortável</li>
+      </ul>
+    </li>
+  </ol>
+
+  <p>Se você enviar tanto o César quanto a Substituição, nós registraremos a maior das suas duas pontuações.</p>
+
+  <h2 id="when-to-do-it">Quando fazer isso</h2>
+
+  <p>Até
+    <a data-local="2024-12-31T23:59:00-05:00" href="https://time.cs50.io/20241231T235900-0500">2024-12-31T23:59:00-05:00</a>.</p>
+
+  <h2 id="advice">Conselhos</h2>
+
+  <ul>
+    <li data-marker="*">Experimente qualquer um dos programas do David da aula por meio dos
+      <a href="/2024/semanas/2.html">exemplos da Semana 2</a>.</li>
+    <li data-marker="*">Para ver as páginas do manual para funções C, visite
+      <a href="https://manual.cs50.io/">manual.cs50.io</a>.</li>
+    <li data-marker="*">Se você vir algum erro ao compilar seu código com
+      <code class="language-plaintext highlighter-rouge">make</code>, concentre-se primeiro em corrigir o primeiro erro que você vir, rolando para cima conforme necessário. Se não tiver certeza do que isso significa, tente pedir
+      <code class="language-plaintext highlighter-rouge">help50</code>
+      para obter ajuda. Por exemplo, se você tentar compilar
+      <code class="language-plaintext highlighter-rouge">readability</code>, e
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>make readability
+</code></pre>
+        </div>
+      </div>
+      <p>está gerando erros, tente executar</p>
+      <div class="language-plaintext highlighter-rouge">
+        <div class="highlight">
+          <pre class="highlight"><code>help50 make readability
+</code></pre>
+        </div>
+      </div>
+      <p>ao invés!</p>
+    </li>
+  </ul>
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

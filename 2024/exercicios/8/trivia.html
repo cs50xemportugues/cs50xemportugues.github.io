@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Trivia</h1>
+<p>Escreva uma página da web que permita que os usuários respondam a perguntas triviais.</p>
+<p><img alt="Captura de tela de perguntas triviais" src="https://cs50.harvard.edu/x/2024/psets/8/trivia/questions.png" /></p>
+<h2>Introdução</h2>
+<p>Abra o <a href="https://cs50.dev/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do terminal e, em seguida, execute <code>cd</code> sozinho. Você deve descobrir que seu "prompt" se assemelha ao exemplo abaixo.</p>
+<pre><code>  $
+</code></pre>
+<p>Clique dentro da janela do terminal e, em seguida, execute</p>
+<pre><code>  wget https://cdn.cs50.net/2023/fall/psets/8/trivia.zip
+</code></pre>
+<p>seguido por Enter para baixar um ZIP chamado <code>trivia.zip</code> no seu espaço de codificação. Tome cuidado para não ignorar o espaço entre <code>wget</code> e a URL a seguir ou qualquer outro caractere!</p>
+<p>Agora execute</p>
+<pre><code>  unzip trivia.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>trivia</code>. Você não precisa mais do arquivo ZIP, então você pode executar</p>
+<pre><code>  rm trivia.zip
+</code></pre>
+<p>e responda com "y" seguido de Enter no prompt para remover o arquivo ZIP baixado.</p>
+<p>Agora digite</p>
+<pre><code>  cd trivia
+</code></pre>
+<p>seguido por Enter para se mover (ou seja, abrir) o diretório. Seu prompt agora deve se parecer com o exemplo abaixo.</p>
+<pre><code>  trivia/ $
+</code></pre>
+<p>Se tudo foi bem-sucedido, você deve executar</p>
+<pre><code>  ls
+</code></pre>
+<p>e você deverá ver um arquivo <code>index.html</code> e um arquivo <code>styles.css</code>.</p>
+<p>Se você tiver algum problema, siga essas mesmas etapas novamente e veja se consegue determinar onde errou!</p>
+<h2>Detalhes de implementação</h2>
+<p>Crie uma página da web usando HTML, CSS e JavaScript para permitir que os usuários respondam a perguntas triviais.</p>
+<ul>
+<li>Em <code>index.html</code>, adicione abaixo de "Parte 1" uma pergunta trivial de múltipla escolha de sua escolha com HTML.<ul>
+<li>Você deve usar um cabeçalho <code>h3</code> para o texto da sua pergunta.</li>
+<li>Você deve ter um <code>button</code> para cada uma das opções de resposta possíveis. Deve haver pelo menos três opções de resposta, das quais exatamente uma deve estar correta.</li>
+</ul>
+</li>
+<li>Usando JavaScript, adicione lógica para que os botões mudem de cor quando um usuário clicar neles.<ul>
+<li>Se um usuário clicar em um botão com uma resposta incorreta, o botão deve ficar vermelho e um texto deve aparecer abaixo da pergunta dizendo "Incorreto".</li>
+<li>Se um usuário clicar em um botão com a resposta correta, o botão deve ficar verde e um texto deve aparecer abaixo da pergunta dizendo "Correto!".</li>
+</ul>
+</li>
+<li>Em <code>index.html</code>, adicione abaixo de "Parte 2" uma pergunta de resposta livre baseada em texto de sua escolha com HTML.<ul>
+<li>Você deve usar um cabeçalho <code>h3</code> para o texto da sua pergunta.</li>
+<li>Você deve usar um campo <code>input</code> para permitir que o usuário digite uma resposta.</li>
+<li>Você deve usar um <code>button</code> para permitir que o usuário confirme sua resposta.</li>
+</ul>
+</li>
+<li>Usando JavaScript, adicione lógica para que o campo de texto mude de cor quando um usuário confirmar sua resposta.<ul>
+<li>Se o usuário digitar uma resposta incorreta e pressionar o botão de confirmação, o campo de texto deve ficar vermelho e um texto deve aparecer abaixo da pergunta dizendo "Incorreto".</li>
+<li>Se o usuário digitar a resposta correta e pressionar o botão de confirmação, o campo de entrada deve ficar verde e um texto deve aparecer abaixo da pergunta dizendo "Correto!".</li>
+</ul>
+</li>
+</ul>
+<p>Opcionalmente, você também pode:</p>
+<ul>
+<li>Editar <code>styles.css</code> para alterar o CSS da sua página da web!</li>
+<li>Adicione perguntas triviais adicionais ao seu teste se desejar!</li>
+</ul>
+<h3>Passo a passo</h3>
+<div class="alert alert-primary" data-alert="primary" role="alert"><p>Este vídeo foi gravado quando o curso ainda usava o CS50 IDE para escrever código. Embora a interface possa parecer diferente do seu espaço de codificação, o comportamento dos dois ambientes deve ser bastante semelhante!</p></div>
+
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/WGd0Jx7rxUo"></iframe>
+
+<h3>Dicas</h3>
+<ul>
+<li>Use <a href="https://developer.mozilla.org/pt-BR/docs/Web/API/Document/querySelector"><code>document.querySelector</code></a> para consultar um único elemento HTML.</li>
+<li>Use <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"><code>document.querySelectorAll</code></a> para consultar vários elementos HTML que correspondem a uma consulta. A função retorna uma matriz de todos os elementos correspondentes.</li>
+</ul>
+<details><summary>Não tem certeza de como resolver?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/FLlI7rSSV_M"></iframe></details>
+
+<h3>Teste</h3>
+<p>Sem <code>check50</code> para este, pois as implementações variam com base nas suas perguntas! Mas certifique-se de testar respostas incorretas e corretas para cada uma de suas perguntas para garantir que sua página da web responda adequadamente.</p>
+<p>Execute <code>http-server</code> em seu terminal enquanto estiver em seu diretório <code>trivia</code> para iniciar um servidor da web que atende sua página da web.</p>
+<h2>Como enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/trivia
+</code></pre>
+<p><strong>Criando ouvintes de evento com JavaScript</strong></p>
+<pre><code>  &lt;!DOCTYPE html&gt;
+
+  &lt;html lang="en"&gt;
+      &lt;head&gt;
+          &lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;display=swap" rel="stylesheet"&gt;
+          &lt;link href="styles.css" rel="stylesheet"&gt;
+          &lt;title&gt;Trivia!&lt;/title&gt;
+          &lt;script&gt;
+
+              // Aguarde o carregamento do conteúdo do DOM
+              document.addEventListener('DOMContentLoaded', function() {
+
+                  // Obter todos os elementos com classe "correto"
+                  let corrects = document.querySelectorAll('.correct');
+
+                  // Adicionar ouvintes de evento a cada botão correto
+                  for (let i = 0; i &lt; corrects.length; i++) {
+                      corrects[i].addEventListener('click', function() {
+
+                          // Definir cor de fundo como verde
+                          corrects[i].style.backgroundColor = 'Green';
+
+                          // Vá para o elemento pai do botão correto e encontre o primeiro elemento com classe "feedback" que tenha esse pai
+                          corrects[i].parentElement.querySelector('.feedback').innerHTML = 'Correto!';
+                      });
+                  }
+
+                  // Quando qualquer resposta incorreta for clicada, altere a cor para vermelho.
+                  let incorrects = document.querySelectorAll(".incorrect");
+                  for (let i = 0; i &lt; incorrects.length; i++) {
+                      incorrects[i].addEventListener('click', function() {
+
+                          // Definir cor de fundo como vermelho
+                          incorrects[i].style.backgroundColor = 'Red';
+
+                          // Vá para o elemento pai do botão correto e encontre o primeiro elemento com classe "feedback" que tenha esse pai
+                          incorrects[i].parentElement.querySelector('.feedback').innerHTML = 'Incorreto';
+                      });
+                  }
+
+                  // Verificar envio de resposta livre
+                  document.querySelector('#check').addEventListener('click', function() {
+                      let input = document.querySelector('input');
+                      if (input.value === 'Suiça') {
+                          input.style.backgroundColor = 'green';
+                          input.parentElement.querySelector('.feedback').innerHTML = 'Correto!';
+                      }
+                      else {
+                          input.style.backgroundColor = 'red';
+                          input.parentElement.querySelector('.feedback').innerHTML = 'Incorreto';
+                      }
+                  });
+              });
+          &lt;/script&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+          &lt;div class="header"&gt;
+              &lt;h1&gt;Trivia!&lt;/h1&gt;
+          &lt;/div&gt;
+
+          &lt;div class="container"&gt;
+              &lt;div class="section"&gt;
+                  &lt;h2&gt;Parte 1: Escolha múltipla &lt;/h2&gt;
+                  &lt;hr&gt;
+                  &lt;h3&gt;Qual é a proporção aproximada de pessoas por ovelha na Nova Zelândia?&lt;/h3&gt;
+                  &lt;button class="incorrect"&gt;6 pessoas por 1 ovelha&lt;/button&gt;
+                  &lt;button class="incorrect"&gt;3 pessoas por 1 ovelha&lt;/button&gt;
+                  &lt;button class="incorrect"&gt;1 pessoa por 1 ovelha&lt;/button&gt;
+                  &lt;button class="incorrect"&gt;1 pessoa por 3 ovelhas&lt;/button&gt;
+                  &lt;button class="correct"&gt;1 pessoa por 6 ovelhas&lt;/button&gt;
+                  &lt;p class="feedback"&gt;&lt;/p&gt;
+              &lt;/div&gt;
+
+              &lt;div class="section"&gt;
+                  &lt;h2&gt;Parte 2: Resposta livre&lt;/h2&gt;
+                  &lt;hr&gt;
+                  &lt;h3&gt;Em que país é ilegal ter apenas uma cobaia, pois uma cobaia solitária pode ficar sozinha?&lt;/h3&gt;
+                  &lt;input type="text"&gt;&lt;/input&gt;
+                  &lt;button id="check"&gt;Verificar Resposta&lt;/button&gt;
+                  &lt;p class="feedback"&gt;&lt;/p&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre>
+<p><strong>Criando ouvintes de evento com HTML</strong></p>
+<pre><code>  &lt;!DOCTYPE html&gt;
+
+  &lt;html lang="en"&gt;
+      &lt;head&gt;
+          &lt;link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&amp;display=swap" rel="stylesheet"&gt;
+          &lt;link href="styles.css" rel="stylesheet"&gt;
+          &lt;title&gt;Trivia!&lt;/title&gt;
+          &lt;script&gt;
+              function checkMultiChoice(event) {
+
+                  // Obter o elemento que acionou o evento
+                  let button = event.target;
+
+                  // Verificar se o HTML interno do elemento corresponde à resposta esperada
+                  if (button.innerHTML == '1 pessoa por 6 ovelhas') {
+                      button.style.backgroundColor = 'Green';
+                      button.parentElement.querySelector('.feedback').innerHTML = 'Correto!';
+                  }
+                  else {
+                      button.style.backgroundColor = 'Red';
+                      button.parentElement.querySelector('.feedback').innerHTML = 'Incorreto';
+                  }
+              }
+
+              function checkFreeResponse(event) {
+
+                  // Obter o elemento que acionou o evento
+                  let button = event.target;
+
+                  // Obter o elemento de entrada correspondente ao botão
+                  let input = button.parentElement.querySelector('input');
+
+                  // Verificar a resposta correta
+                  if (input.value === 'Suíça') {
+                      input.style.backgroundColor = 'Green';
+                      input.parentElement.querySelector('.feedback').innerHTML = 'Correto!';
+                  }
+                  else {
+                      input.style.backgroundColor = 'Red';
+                      input.parentElement.querySelector('.feedback').innerHTML = 'Incorreto';
+                  }
+              }
+          &lt;/script&gt;
+      &lt;/head&gt;
+      &lt;body&gt;
+          &lt;div class="header"&gt;
+              &lt;h1&gt;Trivia!&lt;/h1&gt;
+          &lt;/div&gt;
+
+          &lt;div class="container"&gt;
+              &lt;div class="section"&gt;
+                  &lt;h2&gt;Parte 1: Escolha múltipla &lt;/h2&gt;
+                  &lt;hr&gt;
+                  &lt;h3&gt;Qual é a proporção aproximada de pessoas por ovelha na Nova Zelândia?&lt;/h3&gt;
+                  &lt;button onclick="checkMultiChoice(event)"&gt;6 pessoas por 1 ovelha&lt;/button&gt;
+                  &lt;button onclick="checkMultiChoice(event)"&gt;3 pessoas por 1 ovelha&lt;/button&gt;
+                  &lt;button onclick="checkMultiChoice(event)"&gt;1 pessoa por 1 ovelha&lt;/button&gt;
+                  &lt;button onclick="checkMultiChoice(event)"&gt;1 pessoa por 3 ovelhas&lt;/button&gt;
+                  &lt;button onclick="checkMultiChoice(event)"&gt;1 pessoa por 6 ovelhas&lt;/button&gt;
+                  &lt;p class="feedback"&gt;&lt;/p&gt;
+              &lt;/div&gt;
+
+              &lt;div class="section"&gt;
+                  &lt;h2&gt;Parte 2: Resposta livre&lt;/h2&gt;
+                  &lt;hr&gt;
+                  &lt;h3&gt;Em que país é ilegal ter apenas uma cobaia, pois uma cobaia solitária pode ficar sozinha?&lt;/h3&gt;
+                  &lt;input type="text"&gt;&lt;/input&gt;
+                  &lt;button onclick="checkFreeResponse(event)"&gt;Verificar Resposta&lt;/button&gt;
+                  &lt;p class="feedback"&gt;&lt;/p&gt;
+              &lt;/div&gt;
+          &lt;/div&gt;
+      &lt;/body&gt;
+  &lt;/html&gt;
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

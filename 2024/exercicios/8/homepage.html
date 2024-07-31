@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Homepage</h1>
+<p>Crie uma página inicial simples usando HTML, CSS e JavaScript.</p>
+<h2>Introdução</h2>
+<p>A internet possibilitou coisas incríveis: podemos usar um mecanismo de pesquisa para pesquisar qualquer coisa imaginável, nos comunicar com amigos e familiares ao redor do mundo, jogar, fazer cursos e muito mais. Mas acontece que quase todas as páginas que podemos visitar são construídas em três linguagens essenciais, cada uma das quais serve a um propósito ligeiramente diferente:</p>
+<ol>
+<li>HTML ou <em>HyperText Markup Language</em>, que é usada para descrever o conteúdo dos sites;</li>
+<li>CSS, <em>Cascading Style Sheets</em>, que é usada para descrever a estética dos sites; e</li>
+<li>JavaScript, que é usado para tornar os sites interativos e dinâmicos.</li>
+</ol>
+<p>Crie uma página inicial simples que apresente você, seu hobby favorito ou atividade extracurricular ou qualquer outra coisa que seja do seu interesse.</p>
+<h2>Começando</h2>
+<p>Faça login em <a href="https://cs50.dev/">cs50.dev</a>, clique na janela do terminal e execute apenas <code>cd</code>. Você deve descobrir que o prompt da janela do terminal se assemelha ao seguinte:</p>
+<pre><code>  $
+</code></pre>
+<p>Em seguida, execute</p>
+<pre><code>  wget https://cdn.cs50.net/2023/fall/psets/8/homepage.zip
+</code></pre>
+<p>para baixar um ZIP chamado <code>homepage.zip</code> em seu codespace.</p>
+<p>Em seguida, execute</p>
+<pre><code>  unzip homepage.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>homepage</code>. Você não precisa mais do arquivo ZIP, então pode executar</p>
+<pre><code>  rm homepage.zip
+</code></pre>
+<p>e responda com "y" seguido de Enter no prompt para remover o arquivo ZIP que você baixou.</p>
+<p>Agora digite</p>
+<pre><code>  cd homepage
+</code></pre>
+<p>seguido de Enter para entrar (ou seja, abrir) o diretório. Seu prompt agora deve se parecer com o abaixo.</p>
+<pre><code>  homepage/ $
+</code></pre>
+<p>Execute <code>ls</code> sozinho e você verá alguns arquivos:</p>
+<pre><code>  index.html  styles.css
+</code></pre>
+<p>Se você tiver algum problema, siga os mesmos passos novamente e veja se consegue determinar onde errou! Você pode iniciar imediatamente um servidor para visualizar seu site executando</p>
+<pre><code>  http-server
+</code></pre>
+<p>na janela do terminal. Em seguida, clique no comando (se estiver no Mac) ou clique com o botão direito (se estiver no PC) no primeiro link que aparecer:</p>
+<pre><code>  http-server running on LINK
+</code></pre>
+<p>Onde LINK é o endereço do seu servidor.</p>
+<h2>Especificação</h2>
+<p>Implemente em seu diretório <code>homepage</code> um site que deve:</p>
+<ul>
+<li>Conter pelo menos quatro páginas <code>.html</code> diferentes, sendo que pelo menos uma delas é <code>index.html</code> (a página principal do seu site), e deve ser possível acessar qualquer página do seu site de qualquer outra página seguindo um ou mais hiperlinks.</li>
+<li>Usar pelo menos dez (10) tags HTML distintas além de <code>&lt;html&gt;</code>, <code>&lt;head&gt;</code>, <code>&lt;body&gt;</code> e <code>&lt;title&gt;</code>. Usar alguma tag (por exemplo, <code>&lt;p&gt;</code>) várias vezes ainda conta como apenas uma (1) dessas dez!</li>
+<li>Integrar um ou mais recursos do Bootstrap em seu site. O Bootstrap é uma biblioteca popular (que vem com muitas classes CSS e muito mais) por meio da qual você pode embelezar seu site. Consulte a <a href="https://getbootstrap.com/docs/5.2/">documentação do Bootstrap</a> para começar. Em particular, você pode achar alguns dos <a href="https://getbootstrap.com/docs/5.2/components/">componentes do Bootstrap</a> interessantes. Para adicionar o Bootstrap ao seu site, basta incluir<pre><code>    &lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous"&gt;
+    &lt;script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"&gt;&lt;/script&gt;
+    &lt;script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"&gt;&lt;/script&gt;
+
+no `&lt;head&gt;` das suas páginas, abaixo do qual você também pode incluir
+
+    &lt;link href="styles.css" rel="stylesheet"&gt;
+
+para vincular seu próprio CSS.
+</code></pre>
+<ul>
+<li>Ter pelo menos um arquivo de folha de estilo de sua própria criação, <code>styles.css</code>, que use pelo menos cinco (5) seletores CSS diferentes (por exemplo, tag (<code>example</code>), classe (<code>.example</code>) ou ID (<code>#example</code>)) e dentro do qual você use um total de pelo menos cinco (5) propriedades CSS diferentes, como <code>font-size</code> ou <code>margin</code>; e</li>
+<li>Integrar um ou mais recursos do JavaScript em seu site para tornar seu site mais interativo. Por exemplo, você pode usar JavaScript para adicionar alertas, para ter um efeito em um intervalo recorrente ou para adicionar interatividade a botões, menus suspensos ou formulários. Sinta-se à vontade para ser criativo!</li>
+<li>Certifique-se de que seu site tenha uma boa aparência em navegadores em dispositivos móveis, bem como em laptops e desktops.</li>
+</ul>
+</li>
+</ul>
+<p>Você também deve criar um arquivo de texto, <code>specification.txt</code>, que liste as 10 tags HTML e 5 propriedades CSS que você usou, bem como uma breve descrição (de uma frase) de como você escolheu usar JavaScript e Bootstrap.</p>
+<h2>Testando</h2>
+<p>Se quiser ver a aparência do seu site enquanto trabalha nele, você pode executar <code>http-server</code>. Clique com o botão direito do mouse ou o botão direito do mouse no primeiro link apresentado pelo http-server, que deve abrir sua página da web em uma nova guia. Você poderá então atualizar a guia que contém sua página da web para ver suas últimas alterações.</p>
+<p>Lembre-se também que, abrindo o Developer Tools no Google Chrome, você pode <em>simular</em> a visita à sua página em um dispositivo móvel clicando no ícone em forma de telefone à esquerda de <strong>Elements</strong> na janela do Developer Tools ou, depois de abrir o Developer Tools guia já foi aberta, digitando <code>Ctrl</code>+<code>Shift</code>+<code>M</code> em um PC ou <code>Cmd</code>+<code>Shift</code>+<code>M</code> em um Mac, em vez de precisar visitar seu site separadamente em um dispositivo móvel!</p>
+<h2>Avaliação</h2>
+<p>Sem <code>check50</code> para esta tarefa! Em vez disso, a exatidão do seu site será avaliada com base se você atende aos requisitos da especificação conforme descrito acima e se o seu HTML está bem formado e válido. Para garantir que suas páginas estejam, você pode usar este <a href="https://validator.w3.org/#validate_by_input">serviço de validação de marcação</a>, copiando e colando seu HTML diretamente na caixa de texto fornecida. Tome cuidado para eliminar quaisquer avisos ou erros sugeridos pelo validador antes de enviar!</p>
+<p>Considere também:</p>
+<ul>
+<li>se a estética do seu site é tal que é intuitiva e direta para um usuário navegar;</li>
+<li>se o seu CSS foi fatorado em um ou mais arquivos CSS separados; e</li>
+<li>se você evitou repetição e redundância ao "cascatear" as propriedades de estilo das tags pai.</li>
+</ul>
+<p>O <code>style50</code> não suporta arquivos HTML, portanto, é sua responsabilidade indenizar e alinhar as tags HTML de forma organizada. Saiba também que você pode criar um comentário HTML com:</p>
+<pre><code>  &lt;!-- Comment goes here --&gt;
+</code></pre>
+<p>mas comentar seu código HTML não é tão imperativo quanto comentar código em, digamos, C ou Python. Você também pode comentar seu CSS, em arquivos CSS, com:</p>
+<pre><code>  /* Comment goes here */
+</code></pre>
+<h2>Dicas</h2>
+<p>Para guias bastante abrangentes sobre as linguagens apresentadas neste problema, confira estes tutoriais:</p>
+<ul>
+<li><a href="https://www.w3schools.com/html/">HTML</a></li>
+<li><a href="https://www.w3schools.com/css/">CSS</a></li>
+<li><a href="https://www.w3schools.com/js/">JavaScript</a></li>
+</ul>
+<h2>Como Enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/homepage
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Começando do zero</h1>
+<p>É hora de escolher sua própria aventura! Sua tarefa, simplesmente, é implementar no Scratch, em <a href="https://scratch.mit.edu">scratch.mit.edu</a>, qualquer projeto de sua escolha, seja uma história interativa, um jogo, animação ou qualquer outra coisa, sujeito apenas aos seguintes requisitos:</p>
+<ul>
+<li>Seu projeto deve usar pelo menos dois sprites, e pelo menos um deles não pode ser um gato.</li>
+<li>Seu projeto deve ter pelo menos três scripts no total (não necessariamente três por sprite).</li>
+<li>Seu projeto deve usar pelo menos uma condicional, um loop e uma variável.</li>
+<li>Seu projeto deve usar pelo menos um bloco personalizado feito por você (via <strong>Make a Block</strong>), que deve receber pelo menos uma entrada.</li>
+<li>Seu projeto deve ser mais complexo do que a maioria daqueles demonstrados na aula (muitos dos quais, embora instrutivos, eram bem curtos), mas pode ser menos complexo do que <a href="https://scratch.mit.edu/projects/277537196">Oscartime</a> e <a href="https://scratch.mit.edu/projects/326129433">Ivy’s Hardest Game</a>.</li>
+</ul>
+<p>Para atender a esses requisitos, seu projeto provavelmente deve usar algumas dúzias de peças de quebra-cabeça no geral. E seu código deve, idealmente, não só estar correto, mas também bem projetado. Se um dos seus scripts estiver ficando um pouco longo, tente dividi-lo em vários scripts (cada um fazendo algo específico). E tente aproveitar a "abstração" sempre que possível: se você consegue imaginar dando um nome descritivo a uma sequência de blocos (por exemplo, <strong>miau</strong>), eles provavelmente podem ser movidos para um bloco personalizado!</p>
+<p>Se você quiser alguma inspiração de alunos anteriores, aqui estão alguns:</p>
+<ul>
+<li><a href="https://scratch.mit.edu/projects/37412/">It’s Raining Men</a>, da aula</li>
+<li><a href="https://scratch.mit.edu/projects/37413/">Soccer</a>, um jogo</li>
+<li><a href="https://scratch.mit.edu/projects/26329196/">Cookie Love Story</a>, uma animação</li>
+<li><a href="https://scratch.mit.edu/projects/277536784/">Gingerbread tales</a>, uma história interativa</li>
+<li><a href="https://scratch.mit.edu/projects/75390754/">Intersection</a>, um jogo</li>
+<li><a href="https://scratch.mit.edu/projects/422258685">Hogwarts</a>, um jogo</li>
+</ul>
+<p>Você pode achar estes <a href="https://scratch.mit.edu/projects/editor/?tutorial=all">tutoriais</a> ou <a href="https://scratch.mit.edu/starter-projects">projetos iniciais</a> úteis. E sinta-se à vontade para explorar <a href="https://scratch.mit.edu/explore/projects/all">scratch.mit.edu</a> para se inspirar. Mas tente pensar em uma ideia por conta própria e, em seguida, comece a implementá-la. No entanto, não tente implementar a totalidade do seu projeto de uma só vez: aborde uma peça por vez, assim como fizemos na aula. Em outras palavras, dê passos pequenos: escreva um pouco de código (ou seja, arraste e solte algumas peças do quebra-cabeça), teste, escreva um pouco mais, teste e assim por diante. E selecione <strong>Arquivo &gt; Salvar agora</strong> a cada poucos minutos para não perder nenhum trabalho!</p>
+<p>Se, ao longo do caminho, você achar muito difícil implementar algum recurso, tente não se preocupar; altere seu design ou contorne o problema. Se você começar a implementar uma ideia que acha divertida, é provável que não seja muito difícil satisfazer os requisitos acima.</p>
+<p>Tudo bem, lá vai você. Nos deixe orgulhosos!</p>
+<p>Depois de concluir seu projeto, selecione <strong>Arquivo &gt; Salvar agora</strong> uma última vez. Em seguida, selecione <strong>Arquivo &gt; Salvar no seu computador</strong> e mantenha esse arquivo para que possa enviá-lo. Se o seu computador solicitar para <strong>Abrir</strong> ou <strong>Salvar</strong> o arquivo, certifique-se de <strong>Salvar</strong>.</p>
+<div class="alert alert-info" data-alert="info" role="alert"><p>Para este problema, é <strong>razoável</strong> enviar um projeto Scratch que você enviou anteriormente para outro curso do CS50, desde que atenda aos requisitos acima.</p></div>
+
+<h2>Olá, mundo</h2>
+<p>Basta dizer que é um pouco mais difícil conhecer colegas de turma ao fazer um curso online. Mas, graças à tecnologia, todos podem pelo menos dizer olá!</p>
+<p>Se você tem um telefone (ou câmera digital) e gostaria de dizer olá aos colegas, grave um vídeo de 1 a 2 minutos se apresentando, talvez dizendo onde no mundo você está, por que está fazendo o CS50x e algo interessante sobre você! Tente começar seu vídeo dizendo "olá, mundo" e terminá-lo com "meu nome é... e este é o CS50". Mas, em última análise, depende totalmente de você.</p>
+<p>Se você gravar um vídeo, envie-o para o YouTube (a menos que seja bloqueado em seu país, caso em que você pode enviá-lo para outro lugar) para que você possa nos fornecer seu URL quando enviar!</p>
+<h2>Como enviar</h2>
+<div class="alert alert-warning" data-alert="warning" role="alert"><p>Certifique-se de concluir <strong>ambas</strong> as etapas abaixo, em ordem!</p></div>
+
+<h3>Etapa 1 de 2</h3>
+<p>Envie <a href="https://forms.cs50.io/afc127b8-dc14-4395-a2d9-ac9a922dc17b">este formulário</a>.</p>
+<h3>Etapa 2 de 2</h3>
+<p>Esta etapa assume que você baixou seu projeto Scratch como um arquivo cujo nome termina em <code>.sb3</code>. E esta etapa também assume que você se inscreveu em uma conta do GitHub, de acordo com o formulário acima.</p>
+<ol>
+<li>Visite <a href="https://submit.cs50.io/invites/9770b67479384c4d8c37790779e466d9">este link</a>, faça o login com sua conta do GitHub e clique em <strong>Autorizar cs50</strong>.</li>
+<li>Marque a caixa indicando que você gostaria de conceder acesso da equipe do curso aos seus envios e clique em <strong>Entrar no curso</strong>.</li>
+<li>Vá para <a href="https://submit.cs50.io/upload/cs50/problems/2024/x/scratch">submit.cs50.io/upload/cs50/problems/2024/x/scratch</a>.</li>
+<li>Clique em "Escolher arquivo" e escolha seu arquivo <code>.sb3</code>. Clique em <strong>Enviar</strong>.</li>
+</ol>
+<div class="alert alert-warning" data-alert="warning" role="alert"><p>Se você encontrar o erro “Nenhum arquivo neste diretório é esperado por cs50/problems/2024/x/scratch”, certifique-se de que o nome do arquivo do seu projeto Scratch realmente termine com <code class="language-plaintext highlighter-rouge">.sb3</code>!</p></div>
+
+<p>É isso! Assim que seu envio for carregado, você deve ser redirecionado para a página de envio. Clique no link de envio e, em seguida, no link <strong>check50</strong> para ver quais requisitos seu projeto atendeu. Você pode reenviar quantas vezes quiser (antes do prazo)! Observe que se você enviar um arquivo cujo tamanho seja maior que 10 MB (o que é muito grande para um projeto Scratch), <code>check50</code> pode ter dificuldades para processá-lo. É melhor garantir que seu arquivo seja menor do que esse limite.</p>
+<p>Para ver seu progresso atual no curso, visite o boletim de notas do curso em <a href="https://cs50.me/cs50x">cs50.me/cs50x</a>!</p>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

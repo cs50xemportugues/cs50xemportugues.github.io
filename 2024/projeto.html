@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Projeto Final</h1>
+<p>O ponto alto deste curso é o projeto final. O projeto final é a sua oportunidade de colocar seu conhecimento de programação recém-adquirido em prática e desenvolver sua própria peça de software. Contanto que seu projeto recorra às lições deste curso, a natureza do seu projeto depende inteiramente de você. Você pode implementar seu projeto em qualquer idioma. Você pode utilizar infraestrutura diferente do CS50 Codespace. Tudo o que pedimos é que você construa algo de seu interesse, resolva um problema real, cause impacto na sua comunidade ou mude o mundo. Esforce-se para criar algo que sobreviva a este curso.</p>
+<p>Como o desenvolvimento de software raramente é um esforço de uma pessoa só, você tem a oportunidade de colaborar com um ou dois colegas de classe neste projeto final. É desnecessário dizer que espera-se que cada aluno em tal grupo contribua igualmente para o design e implementação do projeto do grupo. Além disso, espera-se que o escopo de um projeto de grupo de duas ou três pessoas seja, respectivamente, duas ou três vezes maior que o de um projeto típico de uma pessoa. Um projeto de uma pessoa, lembre-se, deve exigir mais tempo e esforço do que o exigido por cada um dos conjuntos de problemas do curso.</p>
+<div class="alert alert-warning" data-alert="warning" role="alert"><p>Observe que a equipe do CS50 audita as inscrições para o CS50x, incluindo este projeto final. Alunos que violem <a href="../syllabus/#academic-honesty">a política de honestidade acadêmica</a> serão removidos do curso e considerados inelegíveis para um certificado. Os alunos que já concluíram o CS50x, se forem considerados violadores, terão seu Certificado CS50 (e Certificado edX, se aplicável) revogado.</p></div>
+
+<h2>Ideias</h2>
+<ul>
+<li>um aplicativo baseado na web usando JavaScript, Python e SQL</li>
+<li>um aplicativo iOS usando Swift</li>
+<li>um jogo usando Lua com LÖVE</li>
+<li>um aplicativo Android usando Java</li>
+<li>uma extensão do Chrome usando JavaScript</li>
+<li>um programa de linha de comando usando C</li>
+<li>um aplicativo baseado em hardware para o qual você programa algum dispositivo</li>
+<li>…</li>
+</ul>
+<h2>Introdução</h2>
+<p>Criar um projeto inteiro pode parecer assustador. Aqui estão algumas perguntas que você deve pensar ao começar:</p>
+<ul>
+<li>O que seu software fará? Quais recursos ele terá? Como será executado?</li>
+<li>Quais novas habilidades você precisará adquirir? Quais tópicos você precisará pesquisar?</li>
+<li>Se estiver trabalhando com um ou dois colegas de classe, quem fará o quê?</li>
+<li>No mundo do software, quase tudo leva mais tempo para implementar do que você espera. E por isso não é incomum realizar menos em um determinado período do que você esperava. O que você pode considerar um bom resultado para o seu projeto? Um resultado melhor? O melhor resultado?</li>
+</ul>
+<p>Considere definir metas para mantê-lo no caminho certo.</p>
+<p>Se estiver usando o CS50 Codespace, crie um diretório chamado <code>project</code> para armazenar o código-fonte do seu projeto e outros arquivos. Você pode desenvolver seu projeto fora do CS50 Codespace.</p>
+<div class="alert alert-primary" data-alert="primary" role="alert"><p>Para o seu projeto final (e somente para o seu projeto final!), é razoável usar software baseado em IA diferente do próprio CS50 (por exemplo, ChatGPT, GitHub Copilot, Bing Chat, et al.), mas a essência do trabalho ainda deve ser sua. Você aprendeu bastante para usar tais ferramentas como ajudantes. Trate essas ferramentas como ampliadoras, não substituindo, sua produtividade. Mas você ainda deve citar qualquer uso de tais ferramentas nos comentários do seu código.</p></div>
+
+<h2>Como Enviar</h2>
+<div class="alert alert-primary" data-alert="primary" role="alert"><p><strong>Você deve completar todas as três etapas!</strong></p></div>
+
+<h4>Etapa 1 de 3</h4>
+<p>Crie um pequeno vídeo (com no máximo 3 minutos) no qual você apresenta seu projeto ao mundo. Seu vídeo <strong>deve</strong> começar com uma seção de abertura que mostra:</p>
+<ul>
+<li>o título do seu projeto;</li>
+<li>seu nome;</li>
+<li>seus nomes de usuário do GitHub e do edX;</li>
+<li>sua cidade e país;</li>
+<li>e a data em que você gravou esse vídeo.</li>
+</ul>
+<p>Ele deve então prosseguir demonstrando seu projeto em ação, com slides, capturas de tela, narração e/ou ação ao vivo. Consulte <a href="https://www.howtogeek.com/205742/how-to-record-your-windows-mac-linux-android-or-ios-screen/">howtogeek.com/205742/how-to-record-your-windows-mac-linux-android-or-ios-screen</a> para obter dicas sobre como fazer uma "captura de tela", embora você possa usar uma câmera verdadeira. Envie seu vídeo para o YouTube (ou, se bloqueado em seu país, um site semelhante) e anote sua URL; não há problema em sinalizá-lo como "não listado", mas não o sinalize como "privado".</p>
+<p>Envie <a href="https://forms.cs50.io/d5009db5-ee7d-43f1-8214-87cebc1a554f">este formulário</a>!</p>
+<h4>Etapa 2 de 3</h4>
+<p>Crie um arquivo de texto <code>README.md</code> (com esse nome exato!) em sua pasta <code>project</code> que explique seu projeto. Este arquivo deve incluir o Título do Projeto, a URL do seu vídeo (criado na etapa 1 acima) e uma descrição do seu projeto. Você pode usar o modelo abaixo.</p>
+<pre><code>  # TÍTULO DO SEU PROJETO
+  #### Demonstração de vídeo:  &lt;URL AQUI&gt;
+  #### Descrição:
+  TODO
+</code></pre>
+<p>Se não estiver familiarizado com a sintaxe Markdown, você pode encontrar a <a href="https://docs.github.com/en/free-pro-team@latest/github/writing-on-github/basic-writing-and-formatting-syntax">Sintaxe Básica de Escrita e Formatação</a> do GitHub útil. Você também pode visualizar seu arquivo <code>.md</code> clicando no ícone "visualizar" conforme explicado aqui: <a href="https://code.visualstudio.com/docs/languages/markdown#_markdown-preview">Visualização de Markdown no vscode</a>. Os <code>README</code>s de projetos de software padrão geralmente têm milhares ou dezenas de milhares de palavras; o seu não precisa ser tão longo, mas deve ter pelo menos algumas centenas de palavras descrevendo as coisas em detalhes!</p>
+<div class="alert alert-warning" data-alert="warning" role="alert"><p>O seu arquivo <code class="language-plaintext highlighter-rouge">README.md</code> deve ter pelo menos vários parágrafos e deve explicar o que é o seu projeto, o que cada um dos arquivos que você escreveu para o projeto contém e faz, e se você debateu certas opções de design, explicando por que as fez. Certifique-se de alocar tempo e energia suficientes para escrever um <code class="language-plaintext highlighter-rouge">README.md</code> que documente seu projeto completamente. Tenha orgulho disso! Um <code class="language-plaintext highlighter-rouge">README.md</code> em torno de 750 palavras provavelmente será suficiente para descrever seu projeto e todos os aspectos de sua funcionalidade. Se não conseguir atingir esse limite, isso provavelmente significa que seu projeto não é suficientemente complexo.</p></div>
+
+<p>Execute o comando <code>submit50</code> abaixo dentro do seu diretório <code>project</code> (ou de qualquer diretório que contenha o arquivo <code>README.md</code> e o código do seu projeto, que também deve ser enviado), fazendo login com seu nome de usuário e senha do GitHub quando solicitado. Por segurança, você verá asteriscos em vez dos caracteres reais em sua senha.</p>
+<pre><code>  submit50 cs50/problems/2024/x/project
+</code></pre>
+<details><summary>Problemas ao Enviar?</summary><p>Se você encontrar problemas porque seu projeto for muito grande, tente compactar todo o conteúdo desse diretório (exceto <code class="language-plaintext highlighter-rouge">README.md</code>) e envie isso. Se ainda assim for muito grande, tente remover certos arquivos de configuração, reduzindo o tamanho do seu envio para menos de 100 MB, ou tente enviar diretamente <a href="https://docs.github.com/en/free-pro-team@latest/github/managing-files-in-a-repository/adding-a-file-to-a-repository">usando a interface da web do GitHub</a> visitando <a href="https://github.com/me50/USERNAME">github.com/me50/USERNAME</a> (onde <code class="language-plaintext highlighter-rouge">USERNAME</code> é o seu próprio nome de usuário do GitHub) e arrastando e soltando manualmente as pastas, garantindo que, ao enviar, você esteja fazendo isso para o seu branch <code class="language-plaintext highlighter-rouge">cs50/problems/2024/x/project</code>, caso contrário, o sistema não poderá verificá-lo!</p></details>
+
+<h4>Etapa 3 de 3</h4>
+<p>Certifique-se de visitar sua carteirinha em <a href="https://cs50.me/cs50x">cs50.me/cs50x</a> alguns minutos depois de enviar. É somente carregando sua Carteirinha que o sistema pode verificar se você concluiu o curso, e é isso também que aciona a (instantânea) geração do seu Certificado CS50 gratuito e a (dentro de 30 dias) geração do Certificado Verificado da edX, se você tiver concluído todas as outras atribuições. Certifique-se de reivindicar seu certificado gratuito (seguindo o link no topo de sua carteirinha) antes de 1º de janeiro de 2025.</p>
+<div class="alert alert-danger" data-alert="danger" role="alert"><p>Não pule a etapa acima! O curso não é considerado concluído até que você faça o acima e veja o banner verde dizendo que você concluiu o curso. Se você não fizer o acima antes de 1º de janeiro de 2025, seu status no curso estará sujeito às <a href="../faqs/#deadlines" class="alert-link">regras de transferência</a> no FAQ. A equipe não fará nenhuma correção manual no início de 2025 com base na omissão disso!</p></div>
+
+<p>É isso! Seu projeto deve ser avaliado dentro de alguns minutos. Se você não vir nenhum resultado em sua carteirinha, é melhor reenviar (executando o comando <code>submit50</code> acima) com apenas seu arquivo README.md desta vez. Não há necessidade de reenviar seu formulário.</p>
+<p>Este foi o CS50x!</p>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

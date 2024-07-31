@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h2>Aula 5</h2>
+<ul>
+<li><a href="#pointers">Ponteiros</a></li>
+<li><a href="#resizing-arrays">Redimensionar matrizes</a></li>
+<li><a href="#data-structures">Estruturas de dados</a></li>
+<li><a href="#linked-lists">Listas vinculadas</a></li>
+<li><a href="#more-data-structures">Mais estruturas de dados</a></li>
+</ul>
+<h2>Ponteiros</h2>
+<ul>
+<li>Da última vez, aprendemos sobre ponteiros, <code>malloc</code> e outras ferramentas úteis para trabalhar com memória.</li>
+<li>
+<p>Vamos rever este trecho de código:</p>
+<pre><code>  int main(void)
+  {
+      int *x;
+      int *y;
+
+      x = malloc(sizeof(int));
+
+      *x = 42;
+      *y = 13;
+  }
+</code></pre>
+<ul>
+<li>Aqui, as primeiras duas linhas de código em nossa função <code>main</code> estão declarando dois ponteiros, <code>x</code> e <code>y</code>. Então, alocamos memória suficiente para um <code>int</code> com <code>malloc</code> e armazenamos o endereço retornado por <code>malloc</code> em <code>x</code>.</li>
+<li>Com <code>*x = 42;</code>, vamos ao endereço apontado por <code>x</code> e armazenamos o valor <code>42</code> nesse local.</li>
+<li>
+<p>A linha final, porém, é bugada, pois não sabemos qual é o valor de <code>y</code>, já que nunca definimos um valor para ele. Em vez disso, podemos escrever:</p>
+<pre><code>  y = x;
+  *y = 13;
+</code></pre>
+<ul>
+<li>E isso irá definir <code>y</code> para apontar para o mesmo local que <code>x</code> faz, e então definir esse valor como <code>13</code>.</li>
+</ul>
+</li>
+</ul>
+</li>
+<li>
+<p>Damos uma olhada em um clipe curto, <a href="https://www.youtube.com/watch?v=3uLKjb973HU">Diversão com Ponteiros com Binky</a>, que também explica este trecho de uma forma animada!</p>
+</li>
+</ul>
+<h2>Redimensionando arrays</h2>
+<ul>
+<li>Na semana 2, aprendemos sobre arrays, onde poderíamos armazenar o mesmo tipo de valor em uma lista lado a lado. Mas precisamos declarar o tamanho dos arrays quando os criamos e, quando quisermos aumentar o tamanho do array, a memória ao redor dele poderá ser ocupada por outros dados.</li>
+<li>Uma solução pode ser alocar mais memória em uma área maior que esteja livre e mover nosso array para lá, onde há mais espaço. Mas precisamos copiar nosso array, o que se torna uma operação com tempo de execução <em>O</em>(<em>n</em>), uma vez que precisamos copiar cada um dos <em>n</em> elementos em um array.</li>
+<li>
+<p>Podemos escrever um programa como o seguinte para fazer isso em código:</p>
+<pre><code>  #include &lt;stdio.h&gt;
+  #include &lt;stdlib.h&gt;
+
+  int main(void)
+  {
+      // Aqui, alocamos memória suficiente para três inteiros, e nossa variável
+      // list apontará para o primeiro inteiro.
+      int *list = malloc(3 * sizeof(int));
+      // Devemos verificar se alocamos a memória corretamente, pois o malloc pode
+      // falhar ao obter memória livre suficiente.
+      if (list == NULL)
+      {
+          return 1;
+      }
+
+      // Com esta sintaxe, o compilador fará aritmética de ponteiro para nós e
+      // calculará o byte na memória que list[0], list[1] e list[2] mapeia,
+      // já que os inteiros têm 4 bytes de tamanho.
+      list[0] = 1;
+      list[1] = 2;
+      list[2] = 3;
+
+      // Agora, se quisermos redimensionar nosso array para 4 inteiros, tentaremos alocar
+      // memória suficiente para eles e usar temporariamente tmp para apontar para o primeiro:
+      int *tmp = malloc(4 * sizeof(int));
+      if (tmp == NULL)
+      {
+          return 1;
+      }
+
+      // Agora, copiamos inteiros do array antigo para o novo array ...
+      for (int i = 0; i &lt; 3; i++)
+      {
+          tmp[i] = list[i];
+      }
+
+      // ... e adicionamos o quarto inteiro:
+      tmp[3] = 4;
+
+      // Devemos liberar a memória original para list, por isso precisamos de
+      // uma variável temporária para apontar para o novo array ...
+      free(list);
+
+      // ... e agora podemos definir nossa variável list para apontar para o novo array que
+      // tmp aponta:
+      list = tmp;
+
+      // Agora, podemos imprimir o novo array:
+      for (int i = 0; i &lt; 4; i++)
+      {
+          printf("%i\n", list[i]);
+      }
+
+      // E finalmente, liberar a memória para o novo array.
+      free(list);
+  }
+</code></pre>
+</li>
+<li>
+<p>Acontece que na verdade há uma função útil, <code>realloc</code>, que realocará alguma memória:</p>
+<pre><code>  #include &lt;stdio.h&gt;
+  #include &lt;stdlib.h&gt;
+
+  int main(void)
+  {
+      int *list = malloc(3 * sizeof(int));
+      if (list == NULL)
+      {
+          return 1;
+      }
+
+      list[0] = 1;
+      list[1] = 2;
+      list[2] = 3;
+
+      // Aqui, fornecemos ao realloc nosso array original que list aponta, e ele
+      // retornará um novo endereço para um novo array, com os dados antigos copiados:
+      int *tmp = realloc(list, 4 * sizeof(int));
+      if (tmp == NULL)
+      {
+          return 1;
+      }
+      // Agora, tudo o que precisamos fazer é lembrar o local do novo array:
+      list = tmp;
+
+      list[3] = 4;
+
+      for (int i = 0; i &lt; 4; i++)
+      {
+          printf("%i\n", list[i]);
+      }
+
+      free(list);
+  }
+</code></pre>
+</li>
+</ul>
+<h2>Estruturas de dados</h2>
+<ul>
+<li><strong>Estruturas de dados</strong> são construções de programação que nos permitem armazenar informações em diferentes layouts na memória do nosso computador.</li>
+<li>Para construir uma estrutura de dados, precisaremos de algumas ferramentas que já vimos:<ul>
+<li><code>struct</code> para criar tipos de dados personalizados</li>
+<li><code>.</code> para acessar propriedades em uma estrutura</li>
+<li><code>*</code> para ir para um endereço na memória apontado por um ponteiro</li>
+</ul>
+</li>
+</ul>
+<h2>Listas Vinculadas</h2>
+<ul>
+<li>Com uma <strong>lista vinculada</strong>, podemos armazenar uma lista de valores que pode ser facilmente aumentada armazenando valores em partes diferentes da memória:<br />
+<img alt="Grade representando memória, com três das caixas rotuladas com caixas vazias entre elas, cada uma rotulada como 1 0x123, 2 0x456 e 3 0x789" src="https://cs50.harvard.edu/x/2020/notes/5/linked_list.png" /><ul>
+<li>Isso é diferente de uma matriz, pois nossos valores não estão mais próximos uns dos outros na memória.</li>
+</ul>
+</li>
+<li>Podemos vincular nossa lista alocando, para cada elemento, memória suficiente para o valor que desejamos armazenar e o endereço do próximo elemento:<br />
+<img alt="Três caixas, cada uma dividida em duas e rotulada como (1 0x123 e 0x456), (2 0x456 e 0x789) e (3 0x789 e NULL)" src="https://cs50.harvard.edu/x/2020/notes/5/linked_list_with_addresses.png" /><ul>
+<li>A propósito, <code>NUL</code> se refere a <code>\0</code>, um caractere que encerra uma string, e <code>NULL</code> se refere a um endereço todo zero ou um ponteiro nulo que podemos considerar como não apontando para lugar nenhum.</li>
+</ul>
+</li>
+<li>Ao contrário dos arrays, não acessamos mais elementos aleatoriamente em uma lista vinculada. Por exemplo, não podemos mais acessar o quinto elemento da lista calculando onde ele está, em tempo constante. (Como sabemos que os arrays armazenam elementos consecutivos, podemos adicionar 1 ou 4 ou o tamanho do nosso elemento para calcular endereços.) Em vez disso, temos que seguir o ponteiro de cada elemento, um de cada vez. E precisamos alocar o dobro de memória do que precisávamos antes para cada elemento.</li>
+<li>
+<p>No código, podemos criar nossa própria struct chamada <code>node</code> (como um nó de um gráfico em matemática) e precisamos armazenar um <code>int</code> e um ponteiro para o próximo <code>node</code> chamado <code>next</code>:</p>
+<pre><code>  typedef struct node
+  {
+      int number;
+      struct node *next;
+  }
+  node;
+</code></pre>
+<ul>
+<li>Iniciamos esta struct com <code>typedef struct node</code> para que possamos nos referir a um <code>node</code> dentro de nossa struct.</li>
+</ul>
+</li>
+<li>
+<p>Podemos construir uma lista vinculada no código começando com nossa struct. Primeiro, queremos lembrar uma lista vazia para que possamos usar o ponteiro nulo: <code>node *list = NULL;</code>.</p>
+</li>
+<li>
+<p>Para adicionar um elemento, primeiro precisamos alocar um pouco de memória para um nó e definir seus valores:</p>
+<pre><code>  node *n = malloc(sizeof(node));
+  // Queremos ter certeza de que o malloc conseguiu obter memória para nós:
+  if (n != NULL)
+  {
+      // Isso é equivalente a (*n).number, onde primeiro vamos ao nó apontado
+      // por n e então definimos a propriedade number. Em C, também podemos usar essa
+      // notação de seta:
+      n-&gt;number = 2;
+      // Então precisamos armazenar um ponteiro para o próximo nó em nossa lista, mas o
+      // novo nó não apontará para nada (por enquanto):
+      n-&gt;next = NULL;
+  }
+</code></pre>
+</li>
+<li>
+<p>Agora nossa lista pode apontar para este nó: <code>list = n;</code>:<br />
+<img alt="Uma caixa rotulada como lista com uma seta para fora apontando para duas caixas conectadas, uma com 2 e uma vazia)" src="https://cs50.harvard.edu/x/2020/notes/5/list_with_one_node.png" /></p>
+</li>
+<li>Para adicionar à lista, criaremos um novo nó da mesma forma, talvez com o valor 4. Mas agora precisamos atualizar o ponteiro em nosso primeiro nó para apontar para ele.</li>
+<li>
+<p>Como nosso ponteiro <code>list</code> aponta apenas para o primeiro nó (e não podemos ter certeza de que a lista tem apenas um nó), precisamos "seguir as migalhas de pão" e seguir o ponteiro next de cada nó:</p>
+<pre><code>  // Cria um ponteiro temporário para onde list está apontando
+  node *tmp = list;
+  // Enquanto o nó tiver um ponteiro next ...
+  while (tmp-&gt;next != NULL)
+  {
+      // ... defina o temporário para o próximo nó
+      tmp = tmp-&gt;next;
+  }
+  // Agora, tmp aponta para o último nó em nossa lista, e podemos atualizar seu próximo
+  // ponteiro para apontar para nosso novo nó.
+</code></pre>
+</li>
+<li>
+<p>Se quisermos inserir um nó na frente de nossa lista vinculada, precisaremos atualizar cuidadosamente nosso nó para apontar para aquele que o segue, antes de atualizar a lista. Caso contrário, perderemos o resto da nossa lista:</p>
+<pre><code>  // Aqui, estamos inserindo um nó na frente da lista, então queremos seu
+  // próximo ponteiro para apontar para a lista original, antes de apontar a lista para
+  // n:
+  n-&gt;next = list;
+  list = n;
+</code></pre>
+</li>
+<li>
+<p>E para inserir um nó no meio de nossa lista, podemos percorrer a lista, seguindo cada elemento um de cada vez, comparando seus valores e alterando os ponteiros <code>next</code> cuidadosamente também.</p>
+</li>
+<li>
+<p>Com alguns voluntários no palco, simulamos uma lista, com cada voluntário atuando como a variável <code>list</code> ou um nó. À medida que inserimos nós na lista, precisamos de um ponteiro temporário para seguir a lista e garantir que não perdamos nenhuma parte dela. Nossa lista vinculada aponta apenas para o primeiro nó em nossa lista, então só podemos olhar para um nó por vez, mas podemos alocar dinamicamente mais memória conforme precisamos para aumentar nossa lista.</p>
+</li>
+<li>
+<p>Agora, mesmo que nossa lista ligada seja ordenada, o tempo de execução de sua pesquisa será <em>O</em>(<em>n</em>), pois temos que seguir cada nó para verificar seus valores e não sabemos onde será o meio da nossa lista.</p>
+</li>
+<li>Podemos combinar todos os nossos trechos de código em um programa completo:<pre><code>  #include&lt;stdio.h&gt;
+  #include&lt;stdlib.h&gt;
+
+  // Representa um nó
+  typedef struct node
+  {
+      int number;
+      struct node *next;
+  }
+  node;
+
+  int main(void)
+  {
+      // Lista de tamanho 0, inicialmente não aponta para nada
+      node *list = NULL;
+
+      // Adicionar número à lista
+      node *n = malloc(sizeof(node));
+      if (n == NULL)
+      {
+          return 1;
+      }
+      n-&gt;number = 1;
+      n-&gt;next = NULL;
+      // Criamos nosso primeiro nó, armazenamos o valor 1 nele e deixamos o próximo
+      // ponteiro para apontar para nada. Então, nossa variável de lista pode apontar para ele.
+      list = n;
+
+      // Adicionar número à lista
+      n = malloc(sizeof(node));
+      if (n == NULL)
+      {
+          return 1;
+      }
+      n-&gt;number = 2;
+      n-&gt;next = NULL;
+      // Agora, vamos ao nosso primeiro nó para o qual list aponta e definimos o próximo ponteiro
+      // nele para apontar para nosso novo nó, adicionando-o ao final da lista:
+      list-&gt;next = n;
+
+      // Adicionar número à lista
+      n = malloc(sizeof(node));
+      if (n == NULL)
+      {
+          return 1;
+      }
+      n-&gt;number = 3;
+      n-&gt;next = NULL;
+      // Podemos seguir vários nós com esta sintaxe, usando o next ponteiro
+      // repetidamente, para adicionar nosso terceiro novo nó ao final da lista:
+      list-&gt;next-&gt;next = n;
+      // Normalmente, porém, queremos um loop e uma variável temporária para adicionar
+      // um novo nó à nossa lista.
+
+      // Imprimir lista
+      // Aqui podemos iterar sobre todos os nós em nossa lista com um temporário
+      // variável. Primeiro, temos um ponteiro temporário, tmp, que aponta para o
+      // lista. Então, nossa condição para continuar é que tmp não seja NULL, e
+      // finalmente, atualizamos tmp para o próximo ponteiro dele mesmo.
+      for (node *tmp = list; tmp != NULL; tmp = tmp-&gt;next)
+      {
+          // Dentro do nó, vamos apenas imprimir o número armazenado:
+          printf("%i\n", tmp-&gt;number);
+      }
+
+      // Lista livre
+      // Como estamos liberando cada nó à medida que avançamos, usaremos um loop while
+      // e siga o próximo ponteiro de cada nó antes de liberá-lo, mas veremos
+      // isso com mais detalhes no Problema definido 5.
+      while (list != NULL)
+      {
+          node *tmp = list-&gt;next;
+          free(list);
+          list = tmp;
+      }
+  }
+</code></pre>
+</li>
+</ul>
+<h2>Mais estruturas de dados</h2>
+<ul>
+<li>Uma <strong>árvore</strong> é outra estrutura de dados em que cada nó aponta para dois outros nós, um à esquerda (com um valor menor) e outro à direita (com um valor maior):
+  <img alt="árvore com o nó 4 no centro superior, seta para a esquerda para 3 abaixo, seta para a direita para 6 abaixo; 2 tem seta para a esquerda para 1 abaixo, seta para a direita para 3 abaixo; 6 tem seta para a esquerda para 5 abaixo, seta para a direita para 7 abaixo" src="https://cs50.harvard.edu/x/2020/notes/5/binary_search_tree.png" /><ul>
+<li>Observe que agora há duas dimensões nesta estrutura de dados, em que alguns nós estão em "níveis" diferentes de outros. E podemos imaginar a implementação disso com uma versão mais complexa de um nó em uma lista vinculada, em que cada nó não tem um, mas dois ponteiros, um para o valor no "meio da metade esquerda" e outro para o valor no "meio da metade direita". E todos os elementos à esquerda de um nó são menores, e todos os elementos à direita são maiores.</li>
+<li>Isso é chamado de árvore de pesquisa binária porque cada nó tem no máximo dois filhos, ou nós para os quais está apontando, e uma árvore de pesquisa porque é classificada de uma forma que nos permite pesquisar corretamente.</li>
+<li>E como uma lista vinculada, queremos manter um ponteiro apenas para o início da lista, mas neste caso queremos apontar para a raiz, ou nó do topo central da árvore (o 4).</li>
+</ul>
+</li>
+<li>
+<p>Agora, podemos facilmente fazer uma pesquisa binária e, como cada nó está apontando para outro, também podemos inserir nós na árvore sem precisar mover todos eles, como teríamos que fazer em um array. Pesquisar recursivamente nesta árvore se parece com algo como:</p>
+<pre><code>  typedef struct node
+  {
+      int number;
+      struct node *left;
+      struct node *right;
+  } node;
+
+  // Aqui, *tree é um ponteiro para a raiz da nossa árvore.
+  bool search(node *tree)
+  {
+      // Precisamos de um caso base, se a árvore atual (ou parte da árvore) for NULL,
+      // para retornar falso:
+      if (tree == NULL)
+      {
+          return false;
+      }
+      // Agora, dependendo se o número no nó atual é maior ou menor,
+      // podemos apenas olhar para o lado esquerdo ou direito da árvore:
+      else if (50 &lt; tree-&gt;number)
+      {
+          return search(tree-&gt;left);
+      }
+      else if (50 &gt; tree-&gt;number)
+      {
+          return search(tree-&gt;right);
+      }
+      // Caso contrário, o número deve ser igual ao que estamos procurando:
+      else {
+          return true;
+      }
+  }
+</code></pre>
+</li>
+<li>
+<p>O tempo de execução de busca em árvore é <em>O</em>(log <em>n</em>), e inserir nós e manter a árvore balanceada também é <em>O</em>(log <em>n</em>). Gastando um pouco mais de memória e tempo para manter a árvore, nós obtemos agora uma busca mais rápida do que em uma lista ligada simples.</p>
+</li>
+<li>Uma estrutura de dados com tempo de execução de busca quase constante é uma <strong>tabela de hash</strong>, que é uma combinação de uma matriz e uma lista ligada. Nós temos uma matriz de listas ligadas, e cada lista ligada na matriz possui elementos de uma certa categoria. Por exemplo, no mundo real, nós podemos ter muitas etiquetas de nomes e podemos classificá-las em 26 blocos, cada um rotulado com uma letra do alfabeto, então podemos encontrar etiquetas de nomes verificando apenas um bloco.</li>
+<li>Nós podemos implementar isto em uma tabela de hash com uma matriz de 26 ponteiros, cada um dos quais aponta para uma lista ligada para uma letra do alfabeto:<br />
+<img alt="matriz vertical com 26 caixas, a primeira com uma seta apontando para um bloco rotulado Albus, a segunda vazia, a terceira com uma seta apontando para um bloco rotulado Cedric ... a sétima com uma seta apontando para um bloco rotulado Ginny com uma seta desse bloco apontando para um bloco rotulado George..." src="https://cs50.harvard.edu/x/2020/notes/5/hash_table.png" /></li>
+<li>Como nós temos acesso aleatório com matrizes, podemos adicionar elementos rapidamente, e também indexar rapidamente em um bloco.</li>
+<li>Um bloco pode ter múltiplos valores correspondentes, então nós vamos usar uma lista ligada para armazenar todos eles horizontalmente. (Nós chamamos isso de colisão, quando dois valores correspondem de alguma forma.)</li>
+<li>Isto é chamado de tabela de hash porque nós usamos uma função de hash, que pega uma entrada e a mapeia para um bloco em que ela deve ir. No nosso exemplo, a função de hash está apenas verificando a primeira letra do nome, então ela pode retornar <code>0</code> para “Albus” e <code>25</code> para “Zacharias”.</li>
+<li>Mas no pior caso, todos os nomes podem começar com a mesma letra, então nós podemos acabar com o equivalente de uma única lista ligada novamente. Nós podemos verificar as primeiras duas letras, e alocar blocos suficientes para 26*26 possíveis valores de hash, ou até mesmo as primeiras três letras, e agora vamos precisar de 26*26*26 blocos. Mas nós ainda podemos ter um pior caso onde todos os nossos valores começam com os mesmos três caracteres, então o tempo de execução para busca é <em>O</em>(<em>n</em>). Na prática, entretanto, nós podemos chegar mais perto de <em>O</em>(1) se nós tivermos tantos blocos quanto valores possíveis, especialmente se nós tivermos uma função de hash ideal, onde nós podemos classificar nossas entradas em blocos únicos.</li>
+<li>Nós podemos usar outra estrutura de dados chamada de <strong>trie</strong> (pronunciada como “try”, abreviação de “recuperação”):<br />
+<img alt="matriz com letras de A-Z em 26 elementos, com H apontando para outra matriz com todas as 26 letras. A matriz A e E de cada um apontam para mais duas matrizes de todas as 26 letras, e isso continua em uma árvore até que as matrizes mais baixas tenham apenas uma letra marcada como válida" src="https://cs50.harvard.edu/x/2020/notes/5/trie.png" /><ul>
+<li>Imagine que nós queremos armazenar um dicionário de palavras eficientemente, e ser capaz de acessar cada uma em tempo constante. Uma trie é como uma árvore, mas cada nó é uma matriz. Cada matriz terá cada letra, A-Z, armazenada. Para cada palavra, a primeira letra apontará para uma matriz, onde a próxima letra válida apontará para outra matriz, e assim por diante, até que cheguemos a algo indicando o final de uma palavra válida. Se a nossa palavra não estiver na trie, então uma das matrizes não terá um ponteiro ou um caractere de término para a nossa palavra. Agora, mesmo que nossa estrutura de dados tenha muitas palavras, o tempo de busca será apenas o comprimento da palavra que estamos procurando, e este pode ser um máximo fixo, então nós temos <em>O</em>(1) para busca e inserção. O custo para isso, no entanto, é 26 vezes mais memória do que precisamos para cada caractere.</li>
+</ul>
+</li>
+<li>Há construções de nível ainda mais alto, <strong>estruturas de dados abstratas</strong>, onde nós usamos nossos blocos de construção de matrizes, listas ligadas, tabelas de hash e tries para implementar uma solução para algum problema.</li>
+<li>Por exemplo, uma estrutura de dados abstrata é uma <strong>fila</strong>, onde nós queremos adicionar e remover valores de forma “primeiro a entrar, primeiro a sair” (FIFO). Para adicionar um valor, nós podemos enfileirá-lo, e para remover um valor, nós vamos desenfileirá-lo. E nós podemos implementar isso com uma matriz que redimensionamos conforme adicionamos itens, ou uma lista ligada onde nós acrescentamos valores ao final.</li>
+<li>Uma estrutura de dados “oposta” seria uma <strong>pilha</strong>, onde itens adicionados mais recentemente (empurrados) são removidos (retirados) primeiro, de forma “último a entrar, primeiro a sair” (LIFO). Nossa caixa de entrada de e-mail é uma pilha, onde nossos e-mails mais recentes estão no topo.</li>
+<li>Outro exemplo é um <strong>dicionário</strong>, onde nós podemos mapear chaves a valores, ou strings a valores, e podemos implementar um com uma tabela de hash onde uma palavra vem com algumas outras informações (como sua definição ou significado).</li>
+<li>Nós vamos assistir a <a href="https://www.youtube.com/watch?v=2wM6_PuBIxY">“Jack aprende os fatos sobre filas e pilhas”</a>, uma animação sobre essas estruturas de dados.</li>
+</ul>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

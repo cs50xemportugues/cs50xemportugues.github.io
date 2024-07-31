@@ -1,0 +1,366 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h2>Canções</h2>
+<p><img alt="Logotipo do Spotify Wrapped '22" src="https://cs50.harvard.edu/x/2024/psets/7/songs/wrapped.png" /></p>
+<h2>Problema a resolver</h2>
+<p>Escreva consultas SQL para responder a perguntas sobre um banco de dados das 100 músicas mais transmitidas no <a href="https://en.wikipedia.org/wiki/Spotify">Spotify</a> em 2018.</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-DsiNSGFrMq2J6t9aDYhIQUQHy" src="https://asciinema.org/a/DsiNSGFrMq2J6t9aDYhIQUQHy.js"></script>
+
+<h2>Introdução</h2>
+<p>Para este problema, você usará um banco de dados fornecido pela equipe do CS50.</p>
+<p>Abra o <a href="https://cs50.dev/">VS Code</a>.</p>
+<p>Comece clicando dentro da janela do terminal e execute <code>cd</code> sozinho. Você verá que o "prompt" é semelhante ao abaixo.</p>
+<pre><code>  $
+</code></pre>
+<p>Clique dentro da janela do terminal e execute</p>
+<pre><code>  wget https://cdn.cs50.net/2023/fall/psets/7/songs.zip
+</code></pre>
+<p>seguido por Enter para baixar um ZIP chamado <code>songs.zip</code> no seu codespace. Tome cuidado para não ignorar o espaço entre <code>wget</code> e a URL a seguir, ou qualquer outro caractere!</p>
+<p>Agora execute</p>
+<pre><code>  unzip songs.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>songs</code>. Você não precisa mais do arquivo ZIP, então pode executar</p>
+<pre><code>  rm songs.zip
+</code></pre>
+<p>e responder com "y" seguido por Enter no prompt para remover o arquivo ZIP baixado.</p>
+<p>Agora digite</p>
+<pre><code>  cd songs
+</code></pre>
+<p>seguido por Enter para se mover (ou seja, abrir) para esse diretório. Seu prompt agora deve ser semelhante ao abaixo.</p>
+<pre><code>  songs/ $
+</code></pre>
+<p>Se tudo foi bem-sucedido, você deve executar</p>
+<pre><code>  ls
+</code></pre>
+<p>e verá 8 arquivos .sql, <code>songs.db</code> e <code>answers.txt</code>.</p>
+<p>Se você tiver algum problema, siga os mesmos passos novamente e veja se consegue determinar onde errou!</p>
+<h2>Compreensão</h2>
+<p>Há um arquivo chamado <code>songs.db</code>, um banco de dados SQLite que armazena dados do <a href="https://developer.spotify.com/documentation/web-api/">Spotify</a> sobre músicas e seus artistas. Este conjunto de dados contém as 100 músicas mais transmitidas no Spotify em 2018. Em uma janela de terminal, execute <code>sqlite3 songs.db</code> para começar a executar consultas no banco de dados.</p>
+<p>Primeiro, quando o <code>sqlite3</code> solicitar que você forneça uma consulta, digite <code>.schema</code> e pressione Enter. Isso exibirá as instruções <code>CREATE TABLE</code> usadas para gerar cada uma das tabelas no banco de dados. Ao examinar essas instruções, você pode identificar as colunas presentes em cada tabela.</p>
+<p>Observe que cada <code>artist</code> tem um <code>id</code> e um <code>name</code>. Observe também que cada música tem um <code>name</code>, um <code>artist_id</code> (correspondente ao <code>id</code> do artista da música), bem como valores para a capacidade de dança, energia, tecla, volume, fala (presença de palavras faladas em uma faixa), valência, andamento e duração da música (medida em milissegundos).</p>
+<p>O desafio à sua frente é escrever consultas SQL para responder a uma variedade de perguntas diferentes selecionando dados de uma ou mais dessas tabelas. Depois de fazer isso, você refletirá sobre as maneiras pelas quais o Spotify pode usar esses mesmos dados em sua campanha anual <a href="https://en.wikipedia.org/wiki/Spotify_Wrapped">Spotify Wrapped</a> para caracterizar os hábitos dos ouvintes.</p>
+<h2>Detalhes de implementação</h2>
+<p>Para cada um dos problemas a seguir, você deve escrever uma única consulta SQL que gere os resultados especificados por cada problema. Sua resposta deve assumir a forma de uma única consulta SQL, embora você possa aninhar outras consultas dentro dela. Você <strong>não deve</strong> presumir nada sobre os <code>id</code>s de nenhuma música ou artista em particular: suas consultas devem ser precisas, mesmo que o <code>id</code> de alguma música ou pessoa em particular seja diferente. Finalmente, cada consulta deve retornar apenas os dados necessários para responder à pergunta: se o problema apenas solicitar que você exiba os nomes das músicas, por exemplo, sua consulta não deve exibir também o andamento de cada música.</p>
+<ol>
+<li>No <code>1.sql</code>, escreva uma consulta SQL para listar os nomes de todas as músicas no banco de dados.
+    - Sua consulta deve gerar uma tabela com uma única coluna para o nome de cada música.</li>
+<li>No <code>2.sql</code>, escreva uma consulta SQL para listar os nomes de todas as músicas em ordem crescente de andamento.
+    - Sua consulta deve gerar uma tabela com uma única coluna para o nome de cada música.</li>
+<li>No <code>3.sql</code>, escreva uma consulta SQL para listar os nomes das 5 músicas mais longas, em ordem decrescente de duração.
+    - Sua consulta deve gerar uma tabela com uma única coluna para o nome de cada música.</li>
+<li>No <code>4.sql</code>, escreva uma consulta SQL que liste os nomes de todas as músicas com capacidade de dança, energia e valência superiores a 0,75.
+    - Sua consulta deve gerar uma tabela com uma única coluna para o nome de cada música.</li>
+<li>No <code>5.sql</code>, escreva uma consulta SQL que retorne a energia média de todas as músicas.
+    - Sua consulta deve gerar uma tabela com uma única coluna e uma única linha contendo a energia média.</li>
+<li>No <code>6.sql</code>, escreva uma consulta SQL que liste os nomes das músicas que são de Post Malone.
+    - Sua consulta deve gerar uma tabela com uma única coluna para o nome de cada música.
+    - Você não deve fazer suposições sobre o <code>artist_id</code> de Post Malone.</li>
+<li>No <code>7.sql</code>, escreva uma consulta SQL que retorne a energia média das músicas de Drake.
+    - Sua consulta deve gerar uma tabela com uma única coluna e uma única linha contendo a energia média.
+    - Você não deve fazer suposições sobre o <code>artist_id</code> de Drake.</li>
+<li>No <code>8.sql</code>, escreva uma consulta SQL que liste os nomes das músicas que apresentam outros artistas.
+    - Músicas que apresentam outros artistas incluirão "feat." no nome da música.
+    - Sua consulta deve gerar uma tabela com uma única coluna para o nome de cada música.</li>
+</ol>
+<h2>Dicas</h2>
+<p>Veja <a href="https://www.w3schools.com/sql/sql_ref_keywords.asp">esta referência de palavras-chave SQL</a> para algumas sintaxes SQL que podem ser úteis!</p>
+<p>Clique nos botões abaixo para ler alguns conselhos!</p>
+<h3>Liste os nomes de todas as músicas no banco de dados</h3>
+<p>Lembre-se de que, para selecionar todos os valores na coluna de uma tabela, você pode usar a palavra-chave <code>SELECT</code> do SQL. <code>SELECT</code> é seguido pela coluna (ou colunas) que você deseja selecionar, que por sua vez é seguida por <code>FROM table</code> onde <code>table</code> é o nome da tabela da qual você deseja selecionar.</p>
+<p>No <code>1.sql</code>, então, tente escrever o seguinte:</p>
+<pre><code>  -- Todas as músicas no banco de dados.
+  SELECT name
+  FROM songs;
+</code></pre>
+<h3>Liste os nomes de todas as músicas em ordem crescente de andamento</h3>
+<p>Lembre-se de que o SQL tem uma palavra-chave <code>ORDER BY</code>, pela qual você pode ordenar os resultados de sua consulta pelo valor em uma determinada coluna. Por exemplo, <code>ORDER BY tempo</code> ordenará os resultados pela coluna <code>tempo</code>.</p>
+<p>No <code>2.sql</code>, então, tente escrever o seguinte:</p>
+<pre><code>  -- Todas as músicas em ordem crescente de andamento.
+  SELECT name
+  FROM songs
+  ORDER BY tempo;
+</code></pre>
+<h3>Liste os nomes das 5 músicas mais longas, em ordem decrescente de duração</h3>
+<p>Lembre-se de que <code>ORDER BY</code> nem sempre precisa classificar em ordem crescente. Você pode especificar que seus resultados sejam classificados em ordem <em>decrescente</em> anexando <code>DESC</code>. Por exemplo, <code>ORDER BY duration_ms DESC</code> listará os resultados em ordem decrescente, por duração.</p>
+<p>E lembre-se também que <code>LIMIT n</code> pode especificar que você deseja apenas as primeiras \(n\) linhas que correspondem a uma consulta específica. Por exemplo, <code>LIMIT 5</code> retornará apenas os cinco primeiros resultados da consulta.</p>
+<p>No <code>3.sql</code>, então, tente escrever o seguinte:</p>
+<pre><code>  -- Os nomes das 5 músicas mais longas, em ordem decrescente de duração.
+  SELECT name
+  FROM songs
+  ORDER BY duration_ms DESC
+  LIMIT 5;
+</code></pre>
+<h3>Liste os nomes de todas as músicas que têm uma capacidade de dança, energia e valência maiores que 0,75</h3>
+<p>Lembre-se de que você pode filtrar resultados em SQL com cláusulas <code>WHERE</code>, que são seguidas por alguma condição que normalmente testa os valores nas colunas de uma linha.</p>
+<p>Lembre-se também de que os operadores da SQL funcionam da mesma forma que os da C. Por exemplo, <code>&gt;</code> avalia como "verdadeiro" quando o valor à esquerda é maior que o valor à direita. Você pode encadear essas expressões junto, usando <code>AND</code> ou <code>OR</code>, para formar uma condição maior.</p>
+<p>No <code>4.sql</code>, então, tente escrever o seguinte:</p>
+<pre><code>  -- Os nomes de todas as músicas que têm capacidade de dança, energia e valência maiores que 0,75.
+  SELECT nome
+  FROM musicas
+  WHERE capacidade_danca &gt; 0,75 AND energia &gt; 0,75 AND valência &gt; 0,75;
+</code></pre>
+<h3>Encontre a energia média de todas as músicas</h3>
+<p>Lembre-se de que o SQL suporta palavras-chaves não apenas para selecionar linhas específicas, mas também para <em>agregar</em> os dados nessas linhas. Em particular, você pode achar a palavra-chave <code>AVG</code> (para calcular médias) útil. Para agregar os resultados de uma coluna, basta aplicar a função de agregação a essa coluna. Por exemplo, <code>SELECT AVG(energia)</code> encontrará a média dos valores na coluna de energia para a consulta fornecida.</p>
+<p>No <code>5.sql</code>, então, tente escrever o seguinte:</p>
+<pre><code>  -- A energia média de todas as músicas.
+  SELECT AVG(energia)
+  FROM musicas;
+</code></pre>
+<h3>Liste os nomes das músicas que são do Post Malone</h3>
+<p>Observe que, se você executar <code>.schema musicas</code> no seu prompt do sqlite, a tabela <code>musicas</code> tem nomes de músicas, mas não o nome do artista! Em vez disso, <code>musicas</code> tem uma coluna <code>id_artista</code>. Para listar os nomes de músicas do Post Malone, você primeiro precisa identificar o id do artista do Post Malone.</p>
+<pre><code>  -- Identifique o id do artista do Post Malone
+  SELECT id
+  FROM artistas
+  WHERE nome = 'Post Malone';
+</code></pre>
+<p>Esta consulta retorna 54. Agora, você pode consultar a tabela <code>musicas</code> para qualquer música com o id do Post Malone.</p>
+<pre><code>  SELECT nome
+  FROM musicas
+  WHERE id_artista = 54;
+</code></pre>
+<p>Mas, de acordo com a especificação, você deve estar atento para não assumir conhecimento de nenhum id. Você pode melhorar o design desta consulta <em>aninhado</em> duas consultas.</p>
+<p>No <code>6.sql</code>, então, tente escrever o seguinte:</p>
+<pre><code>  -- Os nomes das músicas que são do Post Malone.
+  SELECT nome
+  FROM musicas
+  WHERE id_artista =
+  (
+      SELECT id
+      FROM artistas
+      WHERE nome = 'Post Malone'
+  );
+</code></pre>
+<h3>Encontre a energia média das músicas que são do Drake</h3>
+<p>Observe que, semelhante à consulta anterior, você precisará combinar várias tabelas para executar esta consulta com êxito. Você pode usar novamente subconsultas aninhadas, mas considere também outra abordagem!</p>
+<p>Lembre-se de que você pode usar a palavra-chave <code>JOIN</code> da SQL para combinar várias tabelas em uma, desde que você especifique quais colunas entre essas tabelas devem corresponder em última análise. Por exemplo, a consulta a seguir une as tabelas <code>musicas</code> e <code>artistas</code>, indicando que a coluna <code>id_artista</code> na tabela <code>musicas</code> e a coluna <code>id</code> na tabela <code>artistas</code> devem corresponder:</p>
+<pre><code>  SELECT *
+  FROM musicas
+  JOIN artistas ON musicas.id_artista = artistas.id
+</code></pre>
+<p>Com essas duas tabelas combinadas, é apenas uma questão de filtrar sua seleção para encontrar a energia média das músicas do Drake.</p>
+<p>No <code>7.sql</code>, então, tente escrever o seguinte:</p>
+<pre><code>  -- A energia média das músicas que são do Drake
+  SELECT AVG(energia)
+  FROM musicas
+  JOIN artistas ON musicas.id_artista = artistas.id
+  WHERE artistas.nome = 'Drake';
+</code></pre>
+<h3>Liste os nomes das músicas que apresentam outros artistas</h3>
+<p>Para esta consulta, observe que músicas que apresentam outros artistas normalmente têm alguma menção de “feat.” no título. Lembre-se de que a palavra-chave <code>LIKE</code> da SQL pode ser usada para corresponder strings com certas frases (como “feat.”!). Para fazer isso, você pode usar <code>%</code>: um caractere curinga que corresponde a qualquer sequência de caracteres.</p>
+<p>No <code>8.sql</code>, então, tente escrever o seguinte:</p>
+<pre><code>  -- Os nomes das músicas que apresentam outros artistas.
+  SELECT nome
+  FROM musicas
+  WHERE nome LIKE '%feat.%';
+</code></pre>
+<h2>Passo a passo</h2>
+<iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/wgKPUd_95AA"></iframe>
+
+<details><summary>Não sabe como resolver?</summary><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://video.cs50.io/7hydPL9ZswE"></iframe></details>
+
+<h2>Spotify Wrapped</h2>
+<p><a href="https://en.wikipedia.org/wiki/Spotify_Wrapped">Spotify Wrapped</a> é um recurso que apresenta aos usuários do Spotify suas 100 músicas mais tocadas no ano passado. Em 2021, o Spotify Wrapped calculou uma <a href="https://newsroom.spotify.com/2021-12-01/learn-more-about-the-audio-aura-in-your-spotify-2021-wrapped-with-aura-reader-mystic-michaela/">“Aura Áudio”</a> para cada usuário, uma “leitura de [seus] dois humores mais proeminentes ditados por [suas] principais músicas e artistas do ano.” Suponha que o Spotify determine uma aura de áudio observando a energia média, a valência e a capacidade de dança das 100 melhores músicas de uma pessoa no ano passado. No <code>answers.txt</code>, reflita sobre as seguintes questões:</p>
+<ul>
+<li>Se <code>musicas.db</code> contém as 100 melhores músicas de um ouvinte de 2018, como você caracterizaria sua aura de áudio?</li>
+<li>Suponha sobre por que o jeito que você calculou essa aura pode <em>não</em> ser muito representativo do ouvinte. Que outras formas de calcular essa aura você propõe?</li>
+</ul>
+<p>Certifique-se de enviar <code>answers.txt</code> junto com cada um dos seus arquivos <code>.sql</code>!</p>
+<h2>Como testar</h2>
+<h3>Correção</h3>
+<pre><code>  check50 cs50/problems/2024/x/musicas
+</code></pre>
+<h2>Como enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/musicas
+</code></pre>
+<h2>Reconhecimentos</h2>
+<p>Conjunto de dados do <a href="https://www.kaggle.com/nadintamer/top-spotify-tracks-of-2018">Kaggle</a>.</p>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

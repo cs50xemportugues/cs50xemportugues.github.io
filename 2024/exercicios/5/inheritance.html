@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Herança</h1>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/xfZhb6lmxjk?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+<h2>Problema a ser resolvido</h2>
+<p>O tipo sanguíneo de uma pessoa é determinado por dois alelos (ou seja, formas diferentes de um gene). Os três alelos possíveis são A, B e O, dos quais cada pessoa possui dois (possivelmente iguais, possivelmente diferentes). Cada um dos pais de uma criança passa aleatoriamente um de seus dois alelos de tipo sanguíneo para seu filho. As possíveis combinações de tipos sanguíneos, portanto, são: OO, OA, OB, AO, AA, AB, BO, BA e BB.</p>
+<p>Por exemplo, se um dos pais tem tipo sanguíneo AO e o outro pai tem tipo sanguíneo BB, então os possíveis tipos sanguíneos da criança seriam AB e OB, dependendo de qual alelo é recebido de cada pai. Da mesma forma, se um pai tem tipo sanguíneo AO e o outro OB, então os possíveis tipos sanguíneos da criança seriam AO, OB, AB e OO.</p>
+<p>Em um arquivo chamado <code>inheritance.c</code> em uma pasta chamada <code>inheritance</code>, simule a herança de tipos sanguíneos para cada membro de uma família.</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-J9DnbdokgIAjWUbzC2CBqP22N" src="https://asciinema.org/a/J9DnbdokgIAjWUbzC2CBqP22N.js"></script>
+
+<h2>Código de distribuição</h2>
+<p>Para esse problema, você estenderá a funcionalidade do código fornecido pela equipe do CS50.</p>
+<p>Faça login em <a href="https://cs50.dev/">cs50.dev</a>, clique na janela do terminal e execute <code>cd</code> sozinho. Você verá que o prompt da janela do terminal se assemelha ao seguinte:</p>
+<pre><code>  $
+</code></pre>
+<p>Em seguida, execute</p>
+<pre><code>  wget https://cdn.cs50.net/2023/fall/psets/5/inheritance.zip
+</code></pre>
+<p>para baixar um ZIP chamado <code>inheritance.zip</code> em seu código-espaço.</p>
+<p>Em seguida, execute</p>
+<pre><code>  unzip inheritance.zip
+</code></pre>
+<p>para criar uma pasta chamada <code>inheritance</code>. Você não precisa mais do arquivo ZIP; portanto, você pode executar</p>
+<pre><code>  rm inheritance.zip
+</code></pre>
+<p>e responda com "y" seguido de Enter no prompt para remover o arquivo ZIP baixado.</p>
+<p>Agora digite</p>
+<pre><code>  cd inheritance
+</code></pre>
+<p>seguido de Enter para mover para (ou seja, abrir) esse diretório. Seu prompt agora deve se parecer com o seguinte:</p>
+<pre><code>  inheritance/ $
+</code></pre>
+<p>Execute <code>ls</code> sozinho e você deverá ver um arquivo chamado <code>inheritance.c</code>.</p>
+<p>Se você tiver algum problema, siga esses mesmos passos novamente e veja se consegue descobrir onde errou!</p>
+<h2>Detalhes de implementação</h2>
+<p>Conclua a implementação de <code>inheritance.c</code>, de modo que crie uma família com um tamanho de geração especificado e atribua alelos de tipo sanguíneo a cada membro da família. A geração mais antiga terá alelos atribuídos aleatoriamente a eles.</p>
+<ul>
+<li>A função <code>create_family</code> recebe um número inteiro (<code>gerações</code>) como entrada e deve alocar (via <code>malloc</code>) uma <code>pessoa</code> para cada membro da família com esse número de gerações, retornando um ponteiro para a <code>pessoa</code> na geração mais jovem.<ul>
+<li>Por exemplo, <code>create_family(3)</code> deve retornar um ponteiro para uma pessoa com dois pais, onde cada pai também tem dois pais.</li>
+<li>Cada <code>pessoa</code> deve ter <code>alelos</code> atribuídos a ela. A geração mais antiga deve ter alelos escolhidos aleatoriamente (como chamando a função <code>random_allele</code>), e as gerações mais jovens devem herdar um alelo (escolhido aleatoriamente) de cada pai.</li>
+<li>Cada <code>pessoa</code> deve ter <code>pais</code> atribuídos a ela. A geração mais antiga deve ter ambos os <code>pais</code> definidos como <code>NULL</code>, e as gerações mais jovens devem ter <code>pais</code> como um array de dois ponteiros, cada um apontando para uma estrutura <code>pessoa</code> diferente.</li>
+</ul>
+</li>
+</ul>
+<h2>Dicas</h2>
+<h3>Entenda o código em <code>inheritance.c</code></h3>
+<p>Dê uma olhada no código de distribuição em <code>inheritance.c</code>.</p>
+<p>Observe a definição de um tipo chamado <code>pessoa</code>. Cada pessoa tem uma matriz de dois <code>pais</code>, cada um dos quais é um ponteiro para outra estrutura <code>pessoa</code>. Cada pessoa também tem uma matriz de dois <code>alelos</code>, cada um dos quais é um <code>char</code> (ou seja, <code>'A'</code>, <code>'B'</code> ou <code>'O'</code>).</p>
+<pre><code>  // Cada pessoa tem dois pais e dois alelos
+  typedef struct person
+  {
+      struct person *parents[2];
+      char alleles[2];
+  }
+  person;
+</code></pre>
+<p>Agora, dê uma olhada na função <code>main</code>. A função começa "semeando" (ou seja, fornecendo alguma entrada inicial para) um gerador de números aleatórios que usaremos posteriormente para gerar alelos aleatórios.</p>
+<pre><code>  // Inicializa o gerador de números aleatórios
+  srand(time(0));
+</code></pre>
+<p>A função <code>main</code> chama então a função <code>create_family</code> para simular a criação de estruturas <code>pessoa</code> para uma família de 3 gerações (ou seja, uma pessoa, seus pais e seus avós).</p>
+<pre><code>  // Cria uma nova família com três gerações
+  person *p = create_family(GENERATIONS);
+</code></pre>
+<p>Chamamos então <code>print_family</code> para imprimir cada um desses membros da família e seus tipos sanguíneos.</p>
+<pre><code>  // Imprime a árvore genealógica de tipos sanguíneos
+  print_family(p, 0);
+</code></pre>
+<p>Finalmente, a função chama <code>free_family</code> para <code>liberar</code> qualquer memória que foi alocada anteriormente com <code>malloc</code>.</p>
+<pre><code>  // Libera a memória
+  free_family(p);
+</code></pre>
+<p>As funções <code>create_family</code> e <code>free_family</code> estão a seu cargo para escrever!</p>
+<h3>Conclua a função <code>create_family</code></h3>
+<p>A função <code>create_family</code> deve retornar um ponteiro para uma <code>pessoa</code> que herdou seu tipo sanguíneo da quantidade de <code>gerações</code> fornecida como entrada.</p>
+<ul>
+<li>Primeiro, observe que este problema é uma boa oportunidade para recursão.<ul>
+<li>Para determinar o tipo sanguíneo da pessoa atual, você primeiro precisa determinar os tipos sanguíneos de seus pais.</li>
+<li>Para determinar esses tipos sanguíneos dos pais, você primeiro deve determinar <em>os tipos sanguíneos de seus</em> pais. E assim por diante até chegar à última geração que deseja simular.</li>
+</ul>
+</li>
+</ul>
+<p>Para resolver este problema, você encontrará vários TODOs no código de distribuição.</p>
+<p>Primeiro, você deve alocar memória para uma nova pessoa. Lembre-se de que você pode usar <code>malloc</code> para alocar memória e <code>sizeof(pessoa)</code> para obter o número de bytes a serem alocados.</p>
+<pre><code>  // Aloque memória para uma nova pessoa
+  person *new_person = malloc(sizeof(person));
+</code></pre>
+<p>Em seguida, você deve verificar se ainda há gerações para criar, ou seja, se <code>gerações &gt; 1</code>.</p>
+<p>Se <code>gerações &gt; 1</code>, então há mais gerações que ainda precisam ser alocadas. Já criamos dois novos pais, <code>parent0</code> e <code>parent1</code>, chamando recursivamente <code>create_family</code>. Sua função <code>create_family</code> deve então definir os ponteiros dos pais da nova pessoa que você criou. Finalmente, atribua os dois <code>alelos</code> para a nova pessoa escolhendo aleatoriamente um alelo de cada pai.</p>
+<ul>
+<li>Lembre-se, para acessar uma variável por meio de um ponteiro, você pode usar a notação de seta. Por exemplo, se <code>p</code> é um ponteiro para uma pessoa, então um ponteiro para o primeiro pai dessa pessoa pode ser acessado por <code>p-&gt;parents[0]</code>.</li>
+<li>
+<p>Você pode achar a função <code>rand()</code> útil para atribuir aleatoriamente alelos. Esta função retorna um número inteiro entre <code>0</code> e <code>RAND_MAX</code> ou <code>32767</code>. Em particular, para gerar um número pseudoaleatório que seja <code>0</code> ou <code>1</code>, você pode usar a expressão <code>rand() % 2</code>.</p>
+<p>// Crie dois novos pais para a pessoa atual chamando create_family recursivamente
+person <em>parent0 = create_family(generations - 1);
+person </em>parent1 = create_family(generations - 1);</p>
+<p>// Defina ponteiros dos pais para a pessoa atual
+new_person-&gt;parents[0] = parent0;
+new_person-&gt;parents[1] = parent1;</p>
+<p>// Atribua aleatoriamente os alelos da pessoa atual com base nos alelos de seus pais
+new_person-&gt;alleles[0] = parent0-&gt;alleles[rand() % 2];
+new_person-&gt;alleles[1] = parent1-&gt;alleles[rand() % 2];</p>
+</li>
+</ul>
+<p>Digamos que não haja mais gerações para simular. Isto é, <code>gerações == 1</code>. Nesse caso, não haverá dados dos pais para esta pessoa. Ambos os pais de sua nova pessoa devem ser definidos como <code>NULL</code> e cada <code>alelo</code> deve ser gerado aleatoriamente.</p>
+<pre><code>  // Defina ponteiros dos pais como NULL
+  new_person-&gt;parents[0] = NULL;
+  new_person-&gt;parents[1] = NULL;
+
+  // Atribua alelos aleatoriamente
+  new_person-&gt;alleles[0] = random_allele();
+  new_person-&gt;alleles[1] = random_allele();
+</code></pre>
+<p>Finalmente, sua função deve retornar um ponteiro para a <code>pessoa</code> que foi alocada.</p>
+<pre><code>  // Retorne a pessoa recém-criada
+  return new_person;
+</code></pre>
+<h3>Conclua a função <code>free_family</code></h3>
+<p>A função <code>free_family</code> deve aceitar como entrada um ponteiro para uma <code>pessoa</code>, liberar memória para essa pessoa e, em seguida, liberar recursivamente memória para todos os seus ancestrais.</p>
+<ul>
+<li>Como esta é uma função recursiva, você deve primeiro lidar com o caso base. Se a entrada para a função for <code>NULL</code>, então não há nada para liberar, então sua função pode retornar imediatamente.</li>
+<li>Caso contrário, você deve <code>free</code> recursivamente os dois pais da pessoa antes de <code>free</code> a criança.</li>
+</ul>
+<p>O que está abaixo é uma dica, mas é como fazer isso!</p>
+<pre><code>  // Liberte `p` e todos os ancestrais de `p`.
+  void free_family(person *p)
+  {
+      // Trate do caso base
+      if (p == NULL)
+      {
+          return;
+      }
+
+      // Liberte pais recursivamente
+      free_family(p-&gt;parents[0]);
+      free_family(p-&gt;parents[1]);
+
+      // Liberte filho
+      free(p);
+  }
+</code></pre>
+<h3>Passo a passo</h3>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/9p7ddI3ozTY?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+<details><summary>Não sabe como resolver?</summary><div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/H7LULatPwcQ?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div></details>
+
+<h2>Como testar</h2>
+<p>Ao executar <code>./inheritance</code>, seu programa deve aderir às regras descritas no contexto. A criança deve ter dois alelos, um de cada pai. Cada um dos pais deve ter dois alelos, um de cada um de seus pais.</p>
+<p>Por exemplo, no exemplo abaixo, a criança na Geração 0 recebeu um alelo O de ambos os pais da Geração 1. O primeiro pai recebeu um A do primeiro avô e um O do segundo avô. Da mesma forma, o segundo pai recebeu um O e um B de seus avós.</p>
+<pre><code>  $ ./inheritance
+  Filho (Geração 0): tipo sanguíneo OO
+      Pai (Geração 1): tipo sanguíneo AO
+          Avô (Geração 2): tipo sanguíneo OA
+          Avó (Geração 2): tipo sanguíneo BO
+      Mãe (Geração 1): tipo sanguíneo OB
+          Avô (Geração 2): tipo sanguíneo AO
+          Avó (Geração 2): tipo sanguíneo BO
+</code></pre>
+<h3>Correção</h3>
+<pre><code>  check50 cs50/problems/2024/x/inheritance
+</code></pre>
+<h3>Estilo</h3>
+<pre><code>  style50 inheritance.c
+</code></pre>
+<h2>Como enviar</h2>
+<pre><code>  submit50 cs50/problems/2024/x/inheritance
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

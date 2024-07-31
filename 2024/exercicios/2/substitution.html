@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>Substituição</h1>
+<h2>Problema a resolver</h2>
+<p>Em uma cifra de substituição, nós "criptografamos" (ou seja, ocultamos de forma reversível) uma mensagem, substituindo cada letra por outra letra. Para fazer isso, nós usamos uma <em>chave</em>: neste caso, um mapeamento de cada uma das letras do alfabeto à letra à qual ela deve corresponder quando criptografamos. Para "descriptografar" a mensagem, o receptor da mensagem precisará saber a chave, para que ele possa reverter o processo: traduzindo o texto criptografado (chamado geralmente de <em>texto cifrado</em>) de volta para a mensagem original (chamada geralmente de <em>texto claro</em>).</p>
+<p>Uma chave, por exemplo, pode ser a string <code>NQXPOMAFTRHLZGECYJIUWSKDVB</code>. Esta chave de 26 caracteres significa que <code>A</code> (a primeira letra do alfabeto) deve ser convertida em <code>N</code> (o primeiro caractere da chave), <code>B</code> (a segunda letra do alfabeto) deve ser convertida em <code>Q</code> (o segundo caractere da chave) e assim por diante.</p>
+<p>Uma mensagem como <code>HELLO</code>, então, seria criptografada como <code>FOLLE</code>, substituindo cada uma das letras de acordo com o mapeamento determinado pela chave.</p>
+<p>Em um arquivo chamado <code>substitution.c</code> em uma pasta chamada <code>substitution</code>, crie um programa que permite que você criptografe mensagens usando uma cifra de substituição. No momento em que o usuário executa o programa, ele deve decidir, fornecendo um argumento de linha de comando, qual deve ser a chave na mensagem secreta que ele fornecerá em tempo de execução.</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-HWzT4fngSv4KtdNFgfgpdLxZY" src="https://asciinema.org/a/HWzT4fngSv4KtdNFgfgpdLxZY.js"></script>
+
+<h2>Especificação</h2>
+<p>Projete e implemente um programa, <code>substitution</code>, que criptografa mensagens usando uma cifra de substituição.</p>
+<ul>
+<li>Implemente seu programa em um arquivo chamado <code>substitution.c</code> em um diretório chamado <code>substitution</code>.</li>
+<li>Seu programa deve aceitar um único argumento de linha de comando, a chave a ser usada para a substituição. A chave em si deve ser insensível a maiúsculas e minúsculas, portanto, qualquer caractere na chave ser maiúsculo ou minúsculo não deve afetar o comportamento do seu programa.</li>
+<li>Se o seu programa for executado sem nenhum argumento de linha de comando ou com mais de um argumento de linha de comando, seu programa deve imprimir uma mensagem de erro de sua escolha (com <code>printf</code>) e retornar de <code>main</code> um valor de <code>1</code> (que tende a significar um erro) imediatamente.</li>
+<li>Se a chave for inválida (por não conter 26 caracteres, conter qualquer caractere que não seja um caractere alfabético ou não conter cada letra exatamente uma vez), seu programa deve imprimir uma mensagem de erro de sua escolha (com <code>printf</code>) e retornar da função <code>main</code> um valor de <code>1</code> imediatamente.</li>
+<li>Seu programa deve emitir <code>texto claro:</code> (sem uma quebra de linha) e, em seguida, solicitar ao usuário uma <code>string</code> de texto claro (usando <code>get_string</code>).</li>
+<li>Seu programa deve emitir <code>texto cifrado:</code> (sem uma quebra de linha) seguido pelo texto cifrado correspondente ao texto claro, com cada caractere alfabético no texto claro substituído pelo caractere correspondente no texto cifrado; caracteres não alfabéticos devem ser emitidos inalterados.</li>
+<li>Seu programa deve preservar as maiúsculas e minúsculas: letras maiúsculas devem permanecer maiúsculas; letras minúsculas devem permanecer minúsculas.</li>
+<li>Depois de imprimir o texto cifrado, você deve imprimir uma nova linha. Seu programa então deve sair retornando <code>0</code> de <code>main</code>.</li>
+</ul>
+<p>Você pode achar uma ou mais funções declaradas em <code>ctype.h</code> úteis, conforme <a href="https://manual.cs50.io/">manual.cs50.io</a>.</p>
+<h2>Passo a passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/cXAoZAsgxJ4?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+<h2>Como testar</h2>
+<h3>Correção</h3>
+<p>Em seu terminal, execute o comando abaixo para verificar a correção do seu trabalho.</p>
+<pre><code>  check50 cs50/problems/2024/x/substitution
+</code></pre>
+<h4>Como usar <code>debug50</code></h4>
+<p>Deseja executar <code>debug50</code>? Você pode fazer isso da seguinte forma, depois de compilar seu código com sucesso com <code>make</code>:</p>
+<pre><code>  debug50 ./substitution KEY
+</code></pre>
+<p>em que <code>KEY</code> é a chave que você fornece como um argumento de linha de comando para seu programa. Observe que a execução de</p>
+<pre><code>  debug50 ./substitution
+</code></pre>
+<p>irá (de preferência!) fazer com que seu programa termine solicitando ao usuário uma chave.</p>
+<h3>Estilo</h3>
+<p>Execute o código abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>  style50 substitution.c
+</code></pre>
+<h2>Como enviar</h2>
+<p>Em seu terminal, execute o comando abaixo para enviar seu trabalho.</p>
+<pre><code>  submit50 cs50/problems/2024/x/substitution
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>

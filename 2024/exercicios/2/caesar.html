@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>CS50x em Português</title>
+
+    <!-- http://getbootstrap.com/docs/4.5/getting-started/introduction/ -->
+    <script src="/static/js/jquery.min.js"></script>
+    <script src="/static/js/popper.min.js"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+
+    <!-- https://momentjs.com/, https://momentjs.com/timezone/ -->
+    <script src="/static/js/moment.min.js"></script>
+    <script src="/static/js/moment-timezone-with-data.min.js"></script>
+    <script src="/static/js/luxon.min.js"></script>
+
+    <!-- https://www.algolia.com/doc/guides/building-search-ui/installation/js/ -->
+    <script src="/static/js/algoliasearchLite.min.js"></script>
+    <script src="/static/js/instantsearch.production.min.js"></script>
+    <script src="/static/js/jekyll-theme-cs50.js"></script>
+
+    <script id="MathJax-script" async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script src="/static/highlight/highlight.min.js"></script>
+    <script>
+      hljs.initHighlightingOnLoad();
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/mermaid@10.8.0/dist/mermaid.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="/static/highlight/styles/vs.min.css"/>
+    <link rel="stylesheet" href="/static/css/page.css">
+
+    <style>
+      code {
+        color: black;
+        border: 1px solid #dee2e6;
+      }
+
+      pre > code {
+        padding: 0 !important;
+      }
+
+      pre {
+        border: 1px solid #dee2e6;
+      }
+
+      .mermaid {
+        background-color: white !important;
+        border: none !important;
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Markdown Flux Diagrams -->
+    <script type="module">
+      mermaid.initialize({startOnLoad: true});
+    </script>
+    <div class="container-fluid">
+      <div class="row">
+        <aside class="col-md" style="background-color: darkgreen">
+  <header>
+    <h1>
+      <a href="">CS50x em Português</a>
+    </h1>
+
+    <p>
+      <a target="_blank" href=""></a>
+      <br/>
+      2024
+    </p>
+  </header>
+
+  <button class="btn btn-sm collapsed d-md-none" aria-controls="nav" aria-expanded="false" data-target="aside &gt; nav" data-toggle="collapse">
+    Menu
+  </button>
+
+  <nav class="collapse d-md-block" id="nav">
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/semanas/0.html">Semana
+          0</a>
+        Scratch 😺
+      </li>
+      <li>
+        <a href="/2024/semanas/1.html">Semana
+          1</a>
+        C
+      </li>
+      <li>
+        <a href="/2024/semanas/2.html">Semana
+          2</a>
+        Arrays
+      </li>
+      <li>
+        <a href="/2024/semanas/3.html">Semana
+          3</a>
+        Algoritmos
+      </li>
+      <li>
+        <a href="/2024/semanas/4.html">Semana
+          4</a>
+        Memória
+      </li>
+      <li>
+        <a href="/2024/semanas/5.html">Semana
+          5</a>
+        Estruturas de Dados
+      </li>
+      <li>
+        <a href="/2024/semanas/6.html">Semana
+          6</a>
+        Python
+      </li>
+      <li>
+        <a href="/2024/semanas/7.html">Semana
+          7</a>
+        SQL
+      </li>
+      <li>
+        <a href="/2024/semanas/8.html">Semana
+          8</a>
+        HTML, CSS, JavaScript
+      </li>
+      <li>
+        <a href="/2024/semanas/9.html">Semana
+          9</a>
+        Flask
+      </li>
+      <li>
+        <a href="/2024/semanas/10.html">Semana
+          10</a>
+        Segurança Cibernética
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/projeto.html">Projeto Final</a>
+      </li>
+    </ul>
+
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/2024/honestidade.html">Honestidade Acadêmica</a>
+      </li>
+      <li>
+        <a href="/2024/certificado.html">Certificado CS50</a>
+      </li>
+      <li>
+        <a href="/2024/perguntas-frequentes.html">Perguntas Frequentes</a>
+      </li>
+      <li>
+        <a href="https://cs50.me/cs50x">Livro de Notas</a>
+      </li>
+      <li>
+        <a href="/2024/equipe.html">Equipe</a>
+      </li>
+      <li>
+        <a href="/2024/plano-de-curso.html">Plano de Curso</a>
+      </li>
+    </ul>
+    <hr/>
+
+    <ul>
+      <li>
+        <a href="/manual/index.html">Páginas do Manual</a>
+      </li>
+      <li>
+        <a href="/2024/estilo.html">Guia de Estilo</a>
+      </li>
+    </ul>
+  </nav>
+</aside>
+        <main class="col-md markdown-body">
+          
+
+  <h1>César</h1>
+<p><img alt="Criptografia de César" src="https://cs50.harvard.edu/x/2024/psets/2/caesar/cipher.jpg" /></p>
+<h2>Problema a resolver</h2>
+<p>Supostamente, César (sim, aquele César) costumava "criptografar" (ou seja, ocultar de forma reversível) mensagens confidenciais mudando cada letra por alguns lugares. Por exemplo, ele poderia escrever A como B, B como C, C como D, ..., e, voltando ao começo do alfabeto, Z como A. Então, para dizer OLÁ para alguém, César poderia escrever IFMMP. Ao receberem essas mensagens de César, os destinatários precisariam "descriptografá-las" mudando as letras na direção oposta pelo mesmo número de lugares.</p>
+<p>A segurança desse "criptossistema" dependia apenas de César e dos destinatários conhecerem um segredo, o número de lugares em que César havia mudado suas letras (por exemplo, 1). Não é particularmente seguro para os padrões modernos, mas, ei, se você é talvez o primeiro no mundo a fazê-lo, é bem seguro!</p>
+<p>O texto não criptografado é geralmente chamado de <em>texto simples</em>. O texto criptografado é geralmente chamado de <em>texto cifrado</em>. E o segredo usado é chamado de <em>chave</em>.</p>
+<p>Para esclarecer, aqui está como criptografar <code>OLÁ</code> com uma chave de \(1\) resulta em <code>IFMMP</code>:</p>
+<table>
+<thead>
+<tr>
+<th>texto simples</th>
+<th><code>H</code></th>
+<th><code>E</code></th>
+<th><code>L</code></th>
+<th><code>L</code></th>
+<th><code>O</code></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>+ chave</td>
+<td>\(1\)</td>
+<td>\(1\)</td>
+<td>\(1\)</td>
+<td>\(1\)</td>
+<td>\(1\)</td>
+</tr>
+<tr>
+<td>= texto cifrado</td>
+<td><code>I</code></td>
+<td><code>F</code></td>
+<td><code>M</code></td>
+<td><code>M</code></td>
+<td><code>P</code></td>
+</tr>
+</tbody>
+</table>
+<p>Mais formalmente, o algoritmo de César (ou seja, criptografia) criptografa mensagens "girando" cada letra em \(k\) posições. Mais formalmente, se \(p\) for um texto claro (ou seja, uma mensagem não criptografada), \(p_i\) for o \(i^{th}\) caractere em \(p\) e \(k\) for uma chave secreta (ou seja, um inteiro não negativo), então cada letra, \(c_i\), no texto cifrado, \(c\), é calculada como</p>
+<p>\[c_i = (p_i + k)\space\%\space26\]</p>
+<p>em que \(\%\space26\) aqui significa "resto da divisão por 26." Essa fórmula talvez faça a criptografia parecer mais complicada do que é, mas é realmente apenas uma maneira concisa de expressar o algoritmo com precisão. Na verdade, para fins de discussão, pense em A (ou a) como \(0\), B (ou b) como \(1\), ... H (ou h) como \(7\), I (ou i) como \(8\), ... e Z (ou z) como \(25\). Suponha que César queira apenas dizer <code>Oi</code> para alguém confidencialmente usando, desta vez, uma chave, \(k\), de 3. Então, seu texto simples, \(p\), é <code>Oi</code>, caso em que o primeiro caractere do seu texto simples, \(p_0\), é <code>H</code> (também conhecido como 7), e o segundo caractere do seu texto simples, \(p_1\), é <code>i</code> (também conhecido como 8). O primeiro caractere do seu texto cifrado, \(c_0\), é, portanto, <code>K</code>, e o segundo caractere do seu texto cifrado, \(c_1\), é, portanto, <code>L</code>. Faz sentido?</p>
+<p>Em um arquivo chamado <code>caesar.c</code> em uma pasta chamada <code>caesar</code>, escreva um programa que permita criptografar mensagens usando a criptografia de César. No momento em que o usuário executa o programa, ele deve decidir, fornecendo um argumento de linha de comando, qual deve ser a chave na mensagem secreta que ele fornecerá em tempo de execução. Não podemos necessariamente presumir que a chave do usuário será um número; embora você possa supor que, se for um número, será um inteiro positivo.</p>
+<h2>Demonstração</h2>
+<script async="" data-autoplay="1" data-cols="100" data-loop="1" data-rows="12" id="asciicast-JnlhDTjc264WfGSoNxc0hsjEY" src="https://asciinema.org/a/JnlhDTjc264WfGSoNxc0hsjEY.js"></script>
+
+<h2>Especificação</h2>
+<p>Projete e implemente um programa, <code>caesar</code>, que criptografe mensagens usando a criptografia de César.</p>
+<ul>
+<li>Implemente seu programa em um arquivo chamado <code>caesar.c</code> em um diretório chamado <code>caesar</code>.</li>
+<li>Seu programa deve aceitar um único argumento de linha de comando, um inteiro não negativo. Vamos chamá-lo de \(k\) para fins de discussão.</li>
+<li>Se o seu programa for executado sem nenhum argumento de linha de comando ou com mais de um argumento de linha de comando, o seu programa deve imprimir uma mensagem de erro de sua escolha (com <code>printf</code>) e retornar de <code>main</code> um valor de <code>1</code> (que tende a significar um erro) imediatamente.</li>
+<li>Se algum dos caracteres do argumento da linha de comando não for um dígito decimal, seu programa deve imprimir a mensagem <code>Uso: ./caesar chave</code> e retornar de <code>main</code> um valor de <code>1</code>.</li>
+<li>Não presuma que \(k\) será menor ou igual a 26. Seu programa deve funcionar para todos os valores inteiros não negativos de \(k\) menores que \(2^{31} - 26\). Em outras palavras, você não precisa se preocupar se o seu programa eventualmente quebrará se o usuário escolher um valor para \(k\) muito grande ou quase muito grande para caber em um <code>int</code>. (Lembre-se de que um <code>int</code> pode transbordar.) Mas, mesmo que \(k\) seja maior que \(26\), os caracteres alfabéticos na entrada do seu programa devem permanecer caracteres alfabéticos na saída do seu programa. Por exemplo, se \(k\) for \(27\), <code>A</code> não deve se tornar <code>\</code> mesmo que <code>\</code> esteja em \(27\) posições de distância de <code>A</code> em ASCII, de acordo com <a href="https://www.asciitable.com/">asciitable.com</a>; <code>A</code> deve se tornar <code>B</code>, uma vez que <code>B</code> está em \(27\) posições de distância de <code>A</code>, desde que você alterne de <code>Z</code> para <code>A</code>.</li>
+<li>Seu programa deve produzir <code>texto simples:</code> (com dois espaços mas sem uma nova linha) e, em seguida, solicitar ao usuário uma <code>string</code> de texto simples (usando <code>get_string</code>).</li>
+<li>Seu programa deve produzir <code>texto cifrado:</code> (com um espaço mas sem uma nova linha) seguido pelo texto cifrado correspondente ao texto simples, com cada caractere alfabético no texto simples "girado" em <em>k</em> posições; caracteres não alfabéticos devem ser produzidos inalterados.</li>
+<li>Seu programa deve preservar o caso: letras maiúsculas, embora giradas, devem permanecer letras maiúsculas; letras minúsculas, embora giradas, devem permanecer letras minúsculas.</li>
+<li>Depois de gerar o texto cifrado, você deve imprimir uma nova linha. Seu programa deve então sair retornando <code>0</code> de <code>main</code>.</li>
+</ul>
+<h2>Conselhos</h2>
+<p>Como começar? Vamos abordar esse problema um passo de cada vez.</p>
+<h3>Pseudocódigo</h3>
+<p>Primeiro escreva, tente escrever uma função <code>main</code> em <code>caesar.c</code> que implementa o programa usando apenas pseudocódigo, mesmo que (ainda!) não tenha certeza de como escrevê-la no código real.</p>
+<p>Há mais de uma maneira de fazer isso, então aqui está apenas uma!</p>
+<pre><code>  int main(int argc, string argv[])
+  {
+      // Verifique se o programa foi executado com apenas um argumento de linha de comando
+
+      // Verifique se cada caractere em argv[1] é um dígito
+
+      // Converta argv[1] de uma `string` para uma `int`
+
+      // Solicite ao usuário o texto simples
+
+      // Para cada caractere no texto simples:
+
+          // Gire o caractere se for uma letra
+  }
+</code></pre>
+<p>Tudo bem editar seu próprio pseudocódigo depois de ver o nosso aqui, mas não simplesmente copie/cole o nosso no seu!</p>
+<h3>Como contar argumentos da linha de comando</h3>
+<p>Seja qual for seu pseudocódigo, vamos primeiro escrever somente o código C que verifica se o programa foi executado com um único argumento da linha de comando antes de adicionar funcionalidade adicional.</p>
+<p>Especificamente, modifique <code>main</code> em <code>caesar.c</code> de tal forma que, caso o usuário não forneça nenhum argumento da linha de comando, ou dois ou mais, a função imprima <code>"Uso: ./caesar key\n"</code> e retorne <code>1</code>, efetivamente saindo do programa. Caso o usuário forneça exatamente um argumento da linha de comando, o programa não deve imprimir nada e simplesmente retornar <code>0</code>. O programa deve, portanto, se comportar como abaixo.</p>
+<pre><code>  $ ./caesar
+  Uso: ./caesar key
+
+
+  $ ./caesar 1 2 3
+  Uso: ./caesar key
+
+
+  $ ./caesar 1
+</code></pre>
+<h4>Dicas</h4>
+<ul>
+<li>Lembre-se de que você pode imprimir com <code>printf</code>.</li>
+<li>Lembre-se de que uma função pode retornar um valor com <code>return</code>.</li>
+<li>Lembre-se de que <code>argc</code> contém o número de argumentos da linha de comando passados para um programa, além do nome do próprio programa.</li>
+</ul>
+<h3>Verificando a chave</h3>
+<p>Agora que seu programa (esperamos!) está aceitando entrada conforme prescrito, é hora de uma outra etapa.</p>
+<p>Adicione em <code>caesar.c</code>, abaixo de <code>main</code>, uma função chamada, por exemplo, <code>only_digits</code> que recebe uma <code>string</code> como argumento e retorna <code>true</code> se a <code>string</code> contiver apenas dígitos, de <code>0</code> a <code>9</code>, caso contrário, retorna <code>false</code>. Lembre-se de adicionar o protótipo da função acima de <code>main</code> também.</p>
+<h4>Dicas</h4>
+<ul>
+<li>
+<p>Parece que você vai precisar de um protótipo como:
+  bool only_digits(string s);</p>
+<p>E não se esqueça de incluir <code>cs50.h</code> no início do arquivo, para que o compilador reconheça <code>string</code> (e <code>bool</code>).</p>
+</li>
+<li>
+<p>Lembre-se de que uma <code>string</code> é apenas um array de <code>char</code>s.</p>
+</li>
+<li>Lembre-se de que <code>strlen</code>, declarada em <code>string.h</code>, calcula o tamanho de uma <code>string</code>.</li>
+<li>Você pode considerar útil usar <code>isdigit</code>, declarada em <code>ctype.h</code>, conforme <a href="https://manual.cs50.io/">manual.cs50.io</a>. Mas observe que ela verifica apenas um <code>char</code> por vez!</li>
+</ul>
+<p>Em seguida, modifique <code>main</code> de tal forma que chame <code>only_digits</code> em <code>argv[1]</code>. Se a função retornar <code>false</code>, então <code>main</code> deve imprimir <code>"Uso: ./caesar key\n"</code> e retornar <code>1</code>. Caso contrário, <code>main</code> deve simplesmente retornar <code>0</code>. O programa deve, portanto, se comportar como abaixo:</p>
+<pre><code>  $ ./caesar 42
+
+
+  $ ./caesar banana
+  Uso: ./caesar key
+</code></pre>
+<h3>Usando a chave</h3>
+<p>Agora modifique <code>main</code> de tal forma que converta <code>argv[1]</code> para um <code>int</code>. Você pode considerar útil usar <code>atoi</code>, declarado em <code>stdlib.h</code>, conforme <a href="https://manual.cs50.io/">manual.cs50.io</a>. Em seguida, use <code>get_string</code> para solicitar ao usuário algum plaintext com <code>"plaintext: "</code>.</p>
+<p>Em seguida, implemente uma função chamada, por exemplo, <code>rotate</code>, que recebe um <code>char</code> como entrada e também um <code>int</code>, e roda o <code>char</code> por tantas posições quanto o <code>int</code>, se for uma letra (ou seja, alfabética), retornando de volta de <code>Z</code> para <code>A</code> (e de <code>z</code> para <code>a</code>) conforme necessário. Se o <code>char</code> não for uma letra, a função deve retornar o mesmo <code>char</code> inalterado.</p>
+<h4>Dicas</h4>
+<ul>
+<li>
+<p>Parece que você vai precisar de um protótipo como:
+  char rotate(char c, int n);</p>
+<p>Uma chamada de função como
+rotate('A', 1)</p>
+<p>ou até
+rotate('A', 27)</p>
+<p>deve retornar <code>'B'</code>. E uma chamada de função como
+rotate('!', 13)</p>
+<p>deve retornar <code>'!'</code>.</p>
+</li>
+<li>
+<p>Lembre-se de que você pode converter explicitamente um <code>char</code> para um <code>int</code> com <code>(int)</code> ou um <code>int</code> para um <code>char</code> com <code>(char)</code>. Ou você pode fazer isso implicitamente simplesmente tratando um como o outro.</p>
+</li>
+<li>Parece que você vai precisar subtrair o valor ASCII de <code>'A'</code> de todas as letras maiúsculas, de forma a tratar <code>'A'</code> como <code>0</code>, <code>'B'</code> como <code>1</code> e assim por diante, enquanto executa operações aritméticas. E depois adicionar o valor novamente quando terminar.</li>
+<li>Parece que você vai precisar subtrair o valor ASCII de <code>'a'</code> de todas as letras minúsculas, de forma a tratar <code>'a'</code> como <code>0</code>, <code>'b'</code> como <code>1</code> e assim por diante, enquanto executa operações aritméticas. E depois adicionar o valor novamente quando terminar.</li>
+<li>Você pode considerar útil usar algumas outras funções declaradas em <code>ctype.h</code>, conforme <a href="https://manual.cs50.io/">manual.cs50.io</a>.</li>
+<li>Parece que você vai considerar <code>%</code> útil ao "retornar a zero" aritmeticamente de um valor como <code>25</code> para <code>0</code>.</li>
+</ul>
+<p>Em seguida, modifique <code>main</code> de tal forma que imprima <code>"ciphertext: "</code> e então itere sobre cada <code>char</code> no plaintext do usuário, chamando <code>rotate</code> em cada um e imprimindo o valor de retorno.</p>
+<h4>Dicas</h4>
+<ul>
+<li>Lembre-se de que <code>printf</code> pode imprimir um <code>char</code> usando <code>%c</code>.</li>
+<li>Se você não estiver vendo nenhuma saída quando chamar <code>printf</code>, provavelmente é porque você está imprimindo caracteres fora do intervalo ASCII válido de 0 a 127. Experimente imprimir caracteres temporariamente como números (usando <code>%i</code> em vez de <code>%c</code>) para ver quais valores você está imprimindo!</li>
+</ul>
+<h2>Passo a passo</h2>
+<div class="ratio ratio-16x9" data-video=""><iframe allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="" class="border" data-video="" src="https://www.youtube.com/embed/V2uusmv2wxI?modestbranding=0&amp;rel=0&amp;showinfo=0"></iframe></div>
+
+<h2>Como testar</h2>
+<h3>Exatidão</h3>
+<p>Em seu terminal, execute o comando abaixo para verificar a exatidão do seu trabalho.</p>
+<pre><code>  check50 cs50/problems/2024/x/caesar
+</code></pre>
+<h4>Como usar <code>debug50</code></h4>
+<p>Quer executar <code>debug50</code>? Você pode fazer isso, após compilar seu código com sucesso com <code>make</code>, executando o comando:</p>
+<pre><code>  debug50 ./caesar KEY
+</code></pre>
+<p>onde <code>KEY</code> é a chave que você fornece como um argumento da linha de comando para seu programa. Observe que a execução de</p>
+<pre><code>  debug50 ./caesar
+</code></pre>
+<p>irá (idealmente!) encerrar seu programa solicitando uma chave ao usuário.</p>
+<h3>Estilo</h3>
+<p>Execute o comando abaixo para avaliar o estilo do seu código usando <code>style50</code>.</p>
+<pre><code>  style50 caesar.c
+</code></pre>
+<h2>Como enviar</h2>
+<p>Em seu terminal, execute o comando abaixo para enviar seu trabalho.</p>
+<pre><code>  submit50 cs50/problems/2024/x/caesar
+</code></pre>
+
+
+        </main>
+      </div>
+    </div>
+  </body>
+
+</html>
